@@ -1,0 +1,19 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.1.1 Quizz (3 questions)'
+$CATEGORY: $course$/Quiz Bank '1.1.1 Quizz (3 questions)'
+
+
+// question: 227  name: 1.1.1 Quizz (Q2/3)
+::1.1.1 Quizz (Q2/3)::[html]Que signifie "numérisation" ?]]>{
+	=L’opération qui consiste à représenter sous forme de nombres une information quelle qu’elle soit.]]>#Oui ! Votre réponse est correcte. ]]>
+	~L’opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).]]>#Non, citer tous les nombres c’est compter... Votre réponse est incorrecte. ]]>
+	####La numérisation est l’opération qui consiste à représenter sous forme de nombres une information, quelle qu’elle soit. ]]>
+}
+
+
+// question: 226  name: 1.1.1. Quizz (Q1/3)
+::1.1.1. Quizz (Q1/3)::[html]Pourquoi faut-il représenter les textes, images, son, etc.  par des nombres dans un ordinateur ?]]>{
+	~C'est un choix industriel.]]>#Non, les industriels n'avaient pas le choix. Votre réponse est incorrecte. ]]>
+	~Les ordinateurs ont été inventés par des mathématiciens.]]>#Non, les mathématiciens savent manipuler autre-chose que des nombres, et les ordinateurs sont le fruit de l'interaction entre de nombreuses sciences. Votre réponse est incorrecte. ]]>
+	=Tout ordinateur est fondamentalement une machine qui calcule avec des nombres.]]>#Oui, comme un ordinateur ne manipule que des nombres, tout doit être représenté sous forme de nombres pour qu'un ordinateur puisse le manipuler. Votre réponse est correcte. ]]>
+	####Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler. ]]>
+}

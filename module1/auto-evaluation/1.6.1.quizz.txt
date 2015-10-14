@@ -1,0 +1,15 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.6.1 Quizz (3 questions)'
+$CATEGORY: $course$/Quiz Bank '1.6.1 Quizz (3 questions)'
+
+
+// question: 238  name: 1.6.1 Quizz (Q3/3)
+::1.6.1 Quizz (Q3/3)::[html]Pour utiliser le wifi à Lille 3 je dois \:]]>{
+	=Avoir un compte Lille 3 ou un compte dans une autre université.]]>#Exact ! Votre réponse est correcte. ]]> 
+	~Payer un abonnement.]]>#Absolument pas, c'est gratuit. Votre réponse est incorrecte. ]]> 
+	~Aller en cours.]]>#Aucun rapport ! Votre réponse est incorrecte. ]]> 
+	~Utiliser un smartphone produit en France.]]>#Aucun rapport ! Votre réponse est incorrecte. ]]> 
+	~Signer la charte graphique de Lille 3.]]>#Non mais signer la charte informatique Lille 3 est obligatoire... Votre réponse est incorrecte. ]]> 
+	####Avoir un compte Lille 3 ou un compte dans une autre université. ]]> 
+}
+
+

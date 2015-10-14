@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Moodle 2 Common Cartridge generator-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lomimscc="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="M_61284EA9" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_imscp_v1p2_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lommanifest_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd">
+  <metadata>
+    <schema>IMS Common Cartridge</schema>
+    <schemaversion>1.1.0</schemaversion>
+    <lomimscc:lom>
+      <lomimscc:general>
+        <lomimscc:title>
+          <lomimscc:string language="en">CN S3 - Le web</lomimscc:string>
+        </lomimscc:title>
+        <lomimscc:language>en</lomimscc:language>
+        <lomimscc:description>
+          <lomimscc:string language="en"/>
+        </lomimscc:description>
+        <lomimscc:identifier>
+          <lomimscc:catalog>category</lomimscc:catalog>
+          <lomimscc:entry>CN-S2-S3-S4</lomimscc:entry>
+        </lomimscc:identifier>
+      </lomimscc:general>
+    </lomimscc:lom>
+  </metadata>
+  <organizations>
+    <organization identifier="O_97ACAA60" structure="rooted-hierarchy">
+      <item identifier="root">
+        <item identifier="I_0C4B2B55">
+          <title> </title>
+          <item identifier="I_6EC06933">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_5DA2029A">
+            <title>- LE WEB -</title>
+          </item>
+          <item identifier="I_CB3D5A62">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_C404E458">
+            <title></title>
+            <item identifier="I_86EE3732" identifierref="I_7249226D_R">
+              <title>Objectifs et fonctionnement du cours "Culture numérique"</title>
+            </item>
+          </item>
+          <item identifier="I_AB36DBA2">
+            <title></title>
+            <item identifier="I_39E6EF09" identifierref="I_486F9AEB_R">
+              <title>Comment répondre aux tests de compréhension ?</title>
+            </item>
+          </item>
+          <item identifier="I_911F2C4E">
+            <title></title>
+            <item identifier="I_F272D4CA" identifierref="I_B93C1760_R">
+              <title>Comment répondre aux exercices d'approfondissement ?</title>
+            </item>
+          </item>
+          <item identifier="I_F2A1CDB0">
+            <title></title>
+            <item identifier="I_92538F1E" identifierref="I_1220CAF7_R">
+              <title>Comment savoir si j'ai bien terminé le cours ?</title>
+            </item>
+          </item>
+          <item identifier="I_4A73ED8E">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_FB1B3298">
+            <title></title>
+            <item identifier="I_8B220B73" identifierref="I_4788B15D_R">
+              <title>FORUM DE QUESTIONS</title>
+            </item>
+          </item>
+        </item>
+        <item identifier="I_15D09F98">
+          <title>LE WEB</title>
+          <item identifier="I_70283B95">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_02913175">
+          <title>1. Introduction</title>
+          <item identifier="I_6F7B0E92">
+            <title></title>
+            <item identifier="I_0FCF9933">
+              <title>Étiquette</title>
+            </item>
+          </item>
+          <item identifier="I_7C0F4C3B">
+            <title></title>
+            <item identifier="I_4A07CF55" identifierref="I_4E20D0E3_R">
+              <title>1.1 Introduction (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_8F15810E">
+            <title></title>
+            <item identifier="I_C7DE1D43">
+              <title>Étiquette</title>
+            </item>
+          </item>
+          <item identifier="I_3CA20836">
+            <title></title>
+            <item identifier="I_A024A11D" identifierref="I_FAD47546_R">
+              <title>1.2 Introduction, suite (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_9477F8B5">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_24F44A37">
+            <title></title>
+            <item identifier="I_A29FEC94" identifierref="I_25CACB7E_R">
+              <title>1.1.1 Quizz (3 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_9CA5C965">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_D4776786">
+            <title></title>
+          </item>
+          <item identifier="I_3833B893">
+            <title></title>
+            <item identifier="I_0E2ECC5C" identifierref="I_81F1C83C_R">
+              <title>1.1.2 Tim Berners-Lee - Correction</title>
+            </item>
+          </item>
+          <item identifier="I_09808E60">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_46AA1922">
+            <title></title>
+          </item>
+          <item identifier="I_08783D2C">
+            <title></title>
+            <item identifier="I_043B0A86" identifierref="I_1DC95E04_R">
+              <title>1.1.3 Qui dirige le web ? - Correction</title>
+            </item>
+          </item>
+          <item identifier="I_D9AA95CE">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_46CEBAA8">
+          <title>2. Clients et serveurs</title>
+          <item identifier="I_6088EF62">
+            <title></title>
+            <item identifier="I_009A23A3">
+              <title>Étiquette</title>
+            </item>
+          </item>
+          <item identifier="I_A4BAB1B1">
+            <title></title>
+            <item identifier="I_E1104EA3" identifierref="I_EF82B9DE_R">
+              <title>2.1 Clients / Serveurs (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_F5DEAFEA">
+            <title></title>
+            <item identifier="I_33F855FD">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_D560BE30">
+            <title></title>
+            <item identifier="I_CED1DC33" identifierref="I_81E7DF81_R">
+              <title>2.2 Les clients (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_AEA1A169">
+            <title></title>
+            <item identifier="I_918803D5">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_BFC90447">
+            <title></title>
+            <item identifier="I_001C4191" identifierref="I_D3E17F3E_R">
+              <title>2.3 Les serveurs (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_18F562AF">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_B94089BA">
+            <title></title>
+            <item identifier="I_43C69172" identifierref="I_E7569E0F_R">
+              <title>2.3.1 Quizz (6 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_87E9146F">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_D8B42A8C">
+          <title>3. Exemple et récapitulatif</title>
+          <item identifier="I_48CD233E">
+            <title></title>
+            <item identifier="I_CE880BB9">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_DE0745AF">
+            <title></title>
+            <item identifier="I_7AD11C55" identifierref="I_892F2971_R">
+              <title>3.1 Exemple et récapitulatif (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_E4E352C9">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_0DA04079">
+            <title></title>
+            <item identifier="I_1390F480" identifierref="I_D87A97FF_R">
+              <title>3.1.1 Quizz (6 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_9F5F06C4">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_477F200A">
+          <title>4. HTML</title>
+          <item identifier="I_C19374C8">
+            <title></title>
+            <item identifier="I_AAE3DD5B">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_32ECE63A">
+            <title></title>
+            <item identifier="I_AF842D5C" identifierref="I_5CDA87D8_R">
+              <title>4.1 HTML : contenus, structure, liens (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_6A012F3E">
+            <title></title>
+            <item identifier="I_6BAF2897">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_2B088F8B">
+            <title></title>
+            <item identifier="I_F3E09C76" identifierref="I_D34D7ED0_R">
+              <title>4.2 Rassembler les ressources (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_BEEC5A07">
+            <title></title>
+            <item identifier="I_34030F6B">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_0C89D12E">
+            <title></title>
+            <item identifier="I_70B3228D" identifierref="I_41503C71_R">
+              <title>4.3 Mise en forme (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_C1AAACC2">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_0827168C">
+            <title></title>
+            <item identifier="I_CE2AF023">
+              <title></title>
+              <item identifier="I_6E0A4B0C">
+                <title>4.3.1 Rendez-vous sur la page http://culturenumeri...</title>
+              </item>
+            </item>
+          </item>
+          <item identifier="I_6CB6D2B0">
+            <title></title>
+            <item identifier="I_4968332E" identifierref="I_EDAB4268_R">
+              <title>4.3.2 Quizz (9 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_31FFED85">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_5D4BFCF7">
+            <title></title>
+          </item>
+          <item identifier="I_87795947">
+            <title></title>
+            <item identifier="I_30D01EB7" identifierref="I_7F2F0CF8_R">
+              <title>4.3.3 Petit exercice sur les URLs et les serveurs - Correction</title>
+            </item>
+          </item>
+          <item identifier="I_0100F68A">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_F2DC33E8">
+          <title>5. Les cookies</title>
+          <item identifier="I_748785DE">
+            <title></title>
+            <item identifier="I_7E185830">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_7736EF82">
+            <title></title>
+            <item identifier="I_ECB7F3A0" identifierref="I_BDB08AF7_R">
+              <title>5.1 Les cookies (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_5746D82F">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_61D173A8">
+            <title></title>
+            <item identifier="I_A9381C68" identifierref="I_DD9C64DF_R">
+              <title>5.1.1 Quizz (3 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_B4AE00CF">
+            <title></title>
+            <item identifier="I_37B5A52D">
+              <title></title>
+              <item identifier="I_B00B7DC3">
+                <title>
+5.1.2 Rendez-vous sur les pages suivantes, lisez...</title>
+              </item>
+            </item>
+          </item>
+          <item identifier="I_132AC71A">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_4B640BBB">
+            <title></title>
+            <item identifier="I_E46B30B0">
+              <title></title>
+              <item identifier="I_28DEB045">
+                <title>5.2 Lisez ce texte et répondez aux questions suiva...</title>
+              </item>
+            </item>
+          </item>
+          <item identifier="I_8ED73509">
+            <title></title>
+            <item identifier="I_0FB7FAA6" identifierref="I_491E57B7_R">
+              <title>5.2.1 Quizz (2 questions)</title>
+            </item>
+          </item>
+          <item identifier="I_6DEE05ED">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_888E2F99">
+          <title>6. Profils et réseaux sociaux</title>
+          <item identifier="I_C05D5413">
+            <title></title>
+            <item identifier="I_38EE151B">
+              <title>6.1 Lisez ce texte puis répondez aux questions du ...</title>
+            </item>
+          </item>
+          <item identifier="I_54547D59">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_5798B7AF">
+            <title></title>
+            <item identifier="I_39B626D6" identifierref="I_63B3BC15_R">
+              <title>6.1.1 Quizz (1 question)</title>
+            </item>
+          </item>
+          <item identifier="I_17EC02DF">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_50D706E5">
+            <title></title>
+            <item identifier="I_00DBEF3C" identifierref="I_7E92F5BF_R">
+              <title>6.1.2 À vous ! (3 questions ouvertes)</title>
+            </item>
+          </item>
+          <item identifier="I_9C85B499">
+            <title></title>
+            <item identifier="I_DA99EEF8">
+              <title>6.2 Écoutez l'enregistrement "Quand nos smartphone...</title>
+            </item>
+          </item>
+          <item identifier="I_38D616B0">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_6FEE58CE">
+            <title></title>
+            <item identifier="I_B7ACA65C" identifierref="I_F6D34DF6_R">
+              <title>6.2.1 Question de loyauté</title>
+            </item>
+          </item>
+          <item identifier="I_513CD94F">
+            <title>Étiquette</title>
+          </item>
+        </item>
+        <item identifier="I_FCF13909">
+          <title>7. Moteurs de recherche</title>
+          <item identifier="I_2C77F1BD">
+            <title>7.1 Lisez ce texte et répondez aux questions suiva...</title>
+          </item>
+          <item identifier="I_78E8BC88">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_276FC0BD" identifierref="I_792038DE_R">
+            <title>7.1.1 Quizz (3 questions)</title>
+          </item>
+          <item identifier="I_2DA6C4ED">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_A6E15464" identifierref="I_2CDE35D1_R">
+            <title>7.2.1 Questions de recherche et réflexion (3 questions ouvertes)</title>
+          </item>
+          <item identifier="I_4DF03CE5" identifierref="I_AF8320FC_R">
+            <title>7.2.2 Attention, l'abus de Google est dangereux pour la planète !</title>
+          </item>
+          <item identifier="I_3CE3021D" identifierref="I_183112C7_R">
+            <title>7.2.3 Des moteurs de recherche moins intrusifs...</title>
+          </item>
+        </item>
+        <item identifier="I_01DB87E3">
+          <title>8. Autres informations sensibles et bilan</title>
+          <item identifier="I_D5C9C775">
+            <title></title>
+            <item identifier="I_484E2626">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_251AC4BC">
+            <title></title>
+            <item identifier="I_40386F80" identifierref="I_2FF61973_R">
+              <title>8.1 Autres informations sensibles (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_527A3A65">
+            <title></title>
+            <item identifier="I_19DD66A5">
+              <title>
+</title>
+            </item>
+          </item>
+          <item identifier="I_251C5514">
+            <title></title>
+            <item identifier="I_1F651077" identifierref="I_2594AE0E_R">
+              <title>8.2 Bilan, du pour et du contre... (version texte)</title>
+            </item>
+          </item>
+          <item identifier="I_3EBC29C0">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_AE7B6D2D">
+            <title></title>
+            <item identifier="I_21B12906" identifierref="I_2B7C3212_R">
+              <title>8.2.1 Quizz (1 question)</title>
+            </item>
+          </item>
+          <item identifier="I_D7940655">
+            <title>Étiquette</title>
+          </item>
+          <item identifier="I_7FAF5318">
+            <title></title>
+          </item>
+          <item identifier="I_497056E9">
+            <title></title>
+            <item identifier="I_0A138C79" identifierref="I_6DBBEF3B_R">
+              <title>8.2.2 Vider le cache et l'historique - Correction</title>
+            </item>
+          </item>
+          <item identifier="I_636B8B90">
+            <title></title>
+            <item identifier="I_BA513D4A" identifierref="I_BAF67F6A_R">
+              <title>8.2.3 Enfin pour terminer...</title>
+            </item>
+          </item>
+          <item identifier="I_72B919E5">
+            <title></title>
+            <item identifier="I_3F0AF9B7" identifierref="I_DF6593BC_R">
+              <title>8.2.4 Votre analyse</title>
+            </item>
+          </item>
+          <item identifier="I_461BCBF8">
+            <title>Étiquette</title>
+          </item>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="I_63E81CDE_R" type="webcontent">
+      <file href="i_07a03dd9/logo_final_seulrond_nb-01.png"/>
+    </resource>
+    <resource identifier="I_96414E21_R" type="webcontent">
+      <file href="i_07a03dd9/logo_final_plat_nb-01.png"/>
+    </resource>
+    <resource identifier="I_32E2385D_R" type="webcontent">
+      <file href="i_07a03dd9/logo_cult-num.png"/>
+    </resource>
+    <resource identifier="I_C1F35AAE_R" type="webcontent">
+      <file href="i_07a03dd9/logo_web-01.png"/>
+    </resource>
+    <resource identifier="I_7249226D_R" type="webcontent">
+      <file href="i_07a03dd9/cn_mode_emploi_2015-2016_s3.pdf"/>
+    </resource>
+    <resource identifier="I_97377E7C_R" type="webcontent">
+      <file href="i_07a03dd9/achevement01.png"/>
+    </resource>
+    <resource identifier="I_F32DDC79_R" type="webcontent">
+      <file href="i_07a03dd9/achevement03.png"/>
+    </resource>
+    <resource identifier="I_77E4FB52_R" type="webcontent">
+      <file href="i_07a03dd9/achevement01_corr.png"/>
+    </resource>
+    <resource identifier="I_CE7B5ABB_R" type="webcontent">
+      <file href="i_07a03dd9/achevement03-corr.png"/>
+    </resource>
+    <resource identifier="I_D11FAC90_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_forum-01.png"/>
+    </resource>
+    <resource identifier="I_944BE445_R" type="webcontent">
+      <file href="i_07a03dd9/illu_1.jpg"/>
+    </resource>
+    <resource identifier="I_A7E8C967_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_haut-01.png"/>
+    </resource>
+    <resource identifier="I_F4C12100_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_test_decomprehension-01.png"/>
+    </resource>
+    <resource identifier="I_0E13FAF2_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_exercices_dapprofondissement-01.png"/>
+    </resource>
+    <resource identifier="I_6E8CF277_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_tests_decomprehension-01.png"/>
+    </resource>
+    <resource identifier="I_93E1057A_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_exercice_dapprofondissement-01.png"/>
+    </resource>
+    <resource identifier="I_8CACA7CA_R" type="webcontent">
+      <file href="i_07a03dd9/mailweb.pdf"/>
+    </resource>
+    <resource identifier="I_25B8A55C_R" type="webcontent">
+      <file href="i_07a03dd9/profils.pdf"/>
+    </resource>
+    <resource identifier="I_0BBBAAED_R" type="webcontent">
+      <file href="i_07a03dd9/moteurrecherche.pdf"/>
+    </resource>
+    <resource identifier="I_C3AC4817_R" type="webcontent">
+      <file href="i_07a03dd9/possibilité_1.png"/>
+    </resource>
+    <resource identifier="I_B810644C_R" type="webcontent">
+      <file href="i_07a03dd9/possibilité_2.png"/>
+    </resource>
+    <resource identifier="I_C884E0D4_R" type="webcontent">
+      <file href="i_07a03dd9/separateur_bas-01.png"/>
+    </resource>
+    <resource identifier="I_486F9AEB_R" type="webcontent" href="i_77115aca/comment_répondre_aux_tests_de_compréhension_?.html">
+      <file href="i_77115aca/comment_répondre_aux_tests_de_compréhension_?.html"/>
+    </resource>
+    <resource identifier="I_B93C1760_R" type="webcontent" href="i_bb5ba168/comment_répondre_aux_exercices_dapprofondissement_?.html">
+      <file href="i_bb5ba168/comment_répondre_aux_exercices_dapprofondissement_?.html"/>
+    </resource>
+    <resource identifier="I_1220CAF7_R" type="webcontent" href="i_62a7267c/comment_savoir_si_jai_bien_terminé_le_cours_?.html">
+      <file href="i_62a7267c/comment_savoir_si_jai_bien_terminé_le_cours_?.html"/>
+      <file href="i_07a03dd9/achevement03-corr.png"/>
+      <dependency identifierref="I_77E4FB52_R"/>
+      <dependency identifierref="I_CE7B5ABB_R"/>
+    </resource>
+    <resource identifier="I_4788B15D_R" type="imsdt_xmlv1p1">
+      <file href="i_63fefbd2/discussion.xml"/>
+    </resource>
+    <resource identifier="I_4E20D0E3_R" type="webcontent" href="i_9dd8fd49/1.1_introduction_(version_texte).html">
+      <file href="i_9dd8fd49/1.1_introduction_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_FAD47546_R" type="webcontent" href="i_bd7eb0c5/1.2_introduction,_suite_(version_texte).html">
+      <file href="i_bd7eb0c5/1.2_introduction,_suite_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_25CACB7E_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_b1b2f54a/assesment.xml"/>
+    </resource>
+    <resource identifier="I_81F1C83C_R" type="webcontent" href="i_586aff3d/1.1.2_tim_berners-lee_-_correction.html">
+      <file href="i_586aff3d/1.1.2_tim_berners-lee_-_correction.html"/>
+    </resource>
+    <resource identifier="I_1DC95E04_R" type="webcontent" href="i_0c07b128/1.1.3_qui_dirige_le_web_?_-_correction.html">
+      <file href="i_0c07b128/1.1.3_qui_dirige_le_web_?_-_correction.html"/>
+    </resource>
+    <resource identifier="I_EF82B9DE_R" type="webcontent" href="i_74d80de7/2.1_clients__serveurs_(version_texte).html">
+      <file href="i_74d80de7/2.1_clients__serveurs_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_81E7DF81_R" type="webcontent" href="i_9bff2fa0/2.2_les_clients_(version_texte).html">
+      <file href="i_9bff2fa0/2.2_les_clients_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_D3E17F3E_R" type="webcontent" href="i_44e078c2/2.3_les_serveurs_(version_texte).html">
+      <file href="i_44e078c2/2.3_les_serveurs_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_E7569E0F_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_d4c19558/assesment.xml"/>
+    </resource>
+    <resource identifier="I_892F2971_R" type="webcontent" href="i_144e338e/3.1_exemple_et_récapitulatif_(version_texte).html">
+      <file href="i_144e338e/3.1_exemple_et_récapitulatif_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_D87A97FF_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_d5fc444f/assesment.xml"/>
+    </resource>
+    <resource identifier="I_5CDA87D8_R" type="webcontent" href="i_7c45d149/4.1_html__contenus,_structure,_liens_(version_texte).html">
+      <file href="i_7c45d149/4.1_html__contenus,_structure,_liens_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_D34D7ED0_R" type="webcontent" href="i_bcd7b757/4.2_rassembler_les_ressources_(version_texte).html">
+      <file href="i_bcd7b757/4.2_rassembler_les_ressources_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_41503C71_R" type="webcontent" href="i_7ce43ecb/4.3_mise_en_forme_(version_texte).html">
+      <file href="i_7ce43ecb/4.3_mise_en_forme_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_EDAB4268_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_2c883ba4/assesment.xml"/>
+    </resource>
+    <resource identifier="I_7F2F0CF8_R" type="webcontent" href="i_edad5af6/4.3.3_petit_exercice_sur_les_urls_et_les_serveurs_-_correction.html">
+      <file href="i_edad5af6/4.3.3_petit_exercice_sur_les_urls_et_les_serveurs_-_correction.html"/>
+    </resource>
+    <resource identifier="I_BDB08AF7_R" type="webcontent" href="i_694747d7/5.1_les_cookies_(version_texte).html">
+      <file href="i_694747d7/5.1_les_cookies_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_DD9C64DF_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_ba232d3d/assesment.xml"/>
+    </resource>
+    <resource identifier="I_491E57B7_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_483a7baa/assesment.xml"/>
+    </resource>
+    <resource identifier="I_63B3BC15_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_b96dd45a/assesment.xml"/>
+    </resource>
+    <resource identifier="I_7E92F5BF_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_6a2ef97b/assesment.xml"/>
+    </resource>
+    <resource identifier="I_F6D34DF6_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_a4771d03/assesment.xml"/>
+    </resource>
+    <resource identifier="I_792038DE_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_f79d17cb/assesment.xml"/>
+    </resource>
+    <resource identifier="I_2CDE35D1_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_e1af11d5/assesment.xml"/>
+    </resource>
+    <resource identifier="I_AF8320FC_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_9052e2f1/assesment.xml"/>
+    </resource>
+    <resource identifier="I_183112C7_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_157e2209/assesment.xml"/>
+    </resource>
+    <resource identifier="I_2FF61973_R" type="webcontent" href="i_0b87ed4e/8.1_autres_informations_sensibles_(version_texte).html">
+      <file href="i_0b87ed4e/8.1_autres_informations_sensibles_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_2594AE0E_R" type="webcontent" href="i_65233f4a/8.2_bilan,_du_pour_et_du_contre..._(version_texte).html">
+      <file href="i_65233f4a/8.2_bilan,_du_pour_et_du_contre..._(version_texte).html"/>
+    </resource>
+    <resource identifier="I_2B7C3212_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_2e4d26e9/assesment.xml"/>
+    </resource>
+    <resource identifier="I_6DBBEF3B_R" type="webcontent" href="i_3c549cc2/8.2.2_vider_le_cache_et_lhistorique_-_correction.html">
+      <file href="i_3c549cc2/8.2.2_vider_le_cache_et_lhistorique_-_correction.html"/>
+      <file href="i_07a03dd9/possibilité_2.png"/>
+      <dependency identifierref="I_C3AC4817_R"/>
+      <dependency identifierref="I_B810644C_R"/>
+    </resource>
+    <resource identifier="I_BAF67F6A_R" type="webcontent" href="i_57fd856c/8.2.3_enfin_pour_terminer....html">
+      <file href="i_57fd856c/8.2.3_enfin_pour_terminer....html"/>
+    </resource>
+    <resource identifier="I_DF6593BC_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="i_2c062d53/assesment.xml"/>
+    </resource>
+  </resources>
+</manifest>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="QDB_3AFCDCF6" title="1.3.1 Quizz (3 questions)">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <rubric>
+      <material label="Summary">
+        <mattext texttype="text/html"></mattext>
+      </material>
+    </rubric>
+    <section ident="I_2A7AE18C">
+      <item ident="I_A8ACE22B" title="1.3.1 Quizz (Q1/3)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.3.1 Quizz (3 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">Quelle est la date de la cr&#233;ation d'internet ? (date la plus proche)]]&gt;</mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_42F9B71D">
+            <render_choice shuffle="No">
+              <response_label ident="I_5E0C7E7B">
+                <material>
+                  <mattext texttype="text/html">1789]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_0EA9BB47">
+                <material>
+                  <mattext texttype="text/html">1918]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_AFD86755">
+                <material>
+                  <mattext texttype="text/html">1945]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_F7CC85AD">
+                <material>
+                  <mattext texttype="text/html">1970]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_501B611F">
+                <material>
+                  <mattext texttype="text/html">1990]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_1EF8EC6C">
+                <material>
+                  <mattext texttype="text/html">2005]]&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"></decvar>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other></other>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"></displayfeedback>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_F7CC85AD</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_F7CC85AD_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_5E0C7E7B</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_5E0C7E7B_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_0EA9BB47</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_0EA9BB47_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_AFD86755</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_AFD86755_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_501B611F</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_501B611F_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_42F9B71D">I_1EF8EC6C</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_1EF8EC6C_fb"></displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_5E0C7E7B_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Vraiment ? <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_0EA9BB47_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">N'est-ce pas un peu t&#244;t ? <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_AFD86755_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">N'est-ce pas un peu t&#244;t ? <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_F7CC85AD_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Oui, c'est cela. <p>Votre r&#233;ponse est correcte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_501B611F_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Non, c'est trop r&#233;cent... <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_1EF8EC6C_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Aussi tard ? <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">C'est aux environs de <strong>1970</strong> qu'a &#233;t&#233; cr&#233;&#233; internet. ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="I_A54B8726" title="1.3.1 (Q2/3)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.3.1 Quizz (3 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">Que signifie internet ?]]&gt;</mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_30A07275">
+            <render_choice shuffle="No">
+              <response_label ident="I_BFF0331E">
+                <material>
+                  <mattext texttype="text/html">Il s'agit de la contraction des mots anglais : "<em>international</em>" et "<em>network</em>" (r&#233;seau international).]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_8D871C64">
+                <material>
+                  <mattext texttype="text/html">Il s'agit de la contraction des mots "<em>interconnection</em>" et "<em>networks</em>" (interconnexion de r&#233;seaux).]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_F1E25B97">
+                <material>
+                  <mattext texttype="text/html">&#160;Les lettres du mot I.N.T.E.R.N.E.T sont les initiales des noms de ses 8 fondateurs.]]&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"></decvar>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other></other>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"></displayfeedback>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_30A07275">I_8D871C64</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_8D871C64_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_30A07275">I_BFF0331E</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_BFF0331E_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_30A07275">I_F1E25B97</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_F1E25B97_fb"></displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_BFF0331E_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">&#199;a aurait pu, mais non ! <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_8D871C64_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Exactement ! <p>Votre r&#233;ponse est correcte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_F1E25B97_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Pas du tout ! <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Internet est la contraction des deux mots anglais "interconnection" et "networks", qui signifie "interconnexion de r&#233;seaux". ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="I_42CFDE47" title="1.3.1 Quizz (Q3/3)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.3.1 Quizz (3 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">Pourquoi internet est-il qualifi&#233; de r&#233;seau robuste ou tol&#233;rant aux pannes ?]]&gt;</mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_75B9BE05">
+            <render_choice shuffle="No">
+              <response_label ident="I_1116B9EE">
+                <material>
+                  <mattext texttype="text/html">Parce qu&#8217;il est fabriqu&#233; avec des mat&#233;riaux tr&#232;s r&#233;sistants.]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_10283190">
+                <material>
+                  <mattext texttype="text/html">Parce que beaucoup de salari&#233;s sont &#224; sa disposition pour le r&#233;parer rapidement si n&#233;cessaire.]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_51725165">
+                <material>
+                  <mattext texttype="text/html">Parce que, de par sa conception, il peut fonctionner en mode &#8220;d&#233;grad&#233;&#8221;, c&#8217;est &#224; dire que m&#234;me si des lignes ou des machines sont en panne, d&#8217;autres chemins peuvent &#234;tre utilis&#233;s pour v&#233;hiculer les informations.]]&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"></decvar>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other></other>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"></displayfeedback>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_75B9BE05">I_51725165</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_51725165_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_75B9BE05">I_1116B9EE</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_1116B9EE_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_75B9BE05">I_10283190</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_10283190_fb"></displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_1116B9EE_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Et non, ce n'est pas uniforme... <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_10283190_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Vous &#234;tes s&#251;r ? <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_51725165_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Tout &#224; fait ! <p>Votre r&#233;ponse est correcte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Parce qu'il peut fonctionner en mode "d&#233;grad&#233;"... ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

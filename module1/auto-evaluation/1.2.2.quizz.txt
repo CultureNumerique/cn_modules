@@ -1,0 +1,25 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.2.2 Quizz (2 questions)'
+$CATEGORY: $course$/Quiz Bank '1.2.2 Quizz (2 questions)'
+
+
+// question: 230  name: 1.2.2 Quizz (Q1/2)
+::1.2.2 Quizz (Q1/2)::[html]<p>Entre mon ordinateur et l’ordinateur de mon père qui ont 12 ans d’écart, quelle est la différence de puissance à laquelle on peut s’attendre ?</p>{
+	~<p>Ils sont tous les deux aussi puissants, ça n’a pas changé en 12 ans.</p>#<p>Il faut revoir la vidéo !</p> <p>Revoyez la vidéo...</p>  
+	~<p>Mon ordinateur est environ 20 fois plus puissant.</p>#<p>Bien plus que ça...</p> <p>Revoyez la vidéo...</p>  
+	=<p>Mon ordinateur est environ 60 fois plus puissant</p>#<p>Tout à fait !</p> <p>Exact !</p>  
+	~<p>Mon ordinateur est environ 150 fois plus puissant.</p>#<p>Quand même pas tant que ça !</p> <p>Revoyez la vidéo...</p>  
+	####<p>2 ans \: x 2<br />4 ans \: x 4<br />6 ans \: x 8<br />8 ans \: x1 6<br />10 ans \: x 32 <br /><strong>12 ans \: x 64</strong></p><p>En d’autres mots un traitement qui prenait <strong>30 min</strong> avec l’ordinateur de mon père s’effectue en <strong>28 s</strong> sur le mien !</p>  
+}
+
+
+// question: 231  name: 1.2.2 Quizz (Q2/2)
+::1.2.2 Quizz (Q2/2)::[html]<p>D'où vient le mot "bug" ?<br></br>Il est malheureusement courant d’être confronté à des programmes “bugués”, c'est à dire des programmes qui ne font pas ce qu’ils sont sensés faire.<br></br>Mais savez-vous d’où vient le terme “bug” ?<br></br><br></br></p>{
+	=<p>En anglais, “bug” signifie insecte. Un insecte s’était glissé dans le mécanisme d’un des premiers ordinateurs, ce qui avait fait griller un relais et provoqué une panne.</p>#<p><span style\="color\: \#000000;">En effet, il s'agissait d'une mite.<br /></span></p> <p>Oui !</p>  
+	~<p>“Bug” était le surnom d’un des premiers programmeurs chez Microsoft, il était réputé pour commettre beaucoup d’erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p>  
+	~<p>“Bug” est la version en verlan de “GUB” (Grande Unité Binaire), un projet d’ordinateur qui n’a jamais fonctionné.</p>#<p>Non, cherchez bien, c'est sur le web !</p>  
+	~<p>“Bug” est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de Microsoft. Cette voiture serait tombée 13 fois en panne en un an…</p>#<p>Non, cherchez bien, c'est sur le web !</p>  
+	~<p>L’équipe des fondateurs d’Apple étaient des fans du dessin animé “Bugs Bunny”. Ils avaient pris l’habitude d’appeler “Bugs” leurs erreurs de programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>  
+	####<p><span style\="color\: \#000000;">Le premier bug a été causé par une mite \:</span></p><p><span style\="color\: \#000000;"><img src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg" alt\="premier bug" width\="300" height\="213" /></span></p><p><span style\="color\: \#000000;"> </span></p>  
+}
+
+

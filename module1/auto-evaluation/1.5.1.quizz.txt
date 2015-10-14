@@ -1,0 +1,11 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.5.1 Quizz (2 questions)'
+$CATEGORY: $course$/Quiz Bank '1.5.1 Quizz (2 questions)'
+
+
+// question: 237  name: 1.5.1 Quizz (Q2/2)
+::1.5.1 Quizz (Q2/2)::[html]Pourquoi la machine qui assure l’interconnexion avec les autres réseaux d’internet (le routeur) est-elle une place de choix pour y installer des fonctions de filtrage ?]]>{
+	=Parce que toutes les informations passent par là.]]>#C'est exact ! Votre réponse est correcte. ]]>
+	~Parce que c'est la machine la plus puissante.]]>#Et bien, non. Votre réponse est incorrecte. ]]>
+	~Parce qu’elle est en général bien cachée.]]>#Pas du tout... Votre réponse est incorrecte. ]]>
+	####Parce que toutes les informations transitent par elle. ]]>
+}

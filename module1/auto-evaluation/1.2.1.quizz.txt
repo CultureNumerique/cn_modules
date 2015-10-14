@@ -1,0 +1,23 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.2.1 Quizz (2 questions)'
+$CATEGORY: $course$/Quiz Bank '1.2.1 Quizz (2 questions)'
+
+
+// question: 228  name: 1.2.1 Quizz (Q1/2)
+::1.2.1 Quizz (Q1/2)::[html]De quand datent les premiers ordinateurs ?]]>{
+	~Au XVIIe siècle]]>
+	~Juste avant la Révolution française]]>
+	=A la fin de la seconde guerre mondiale]]>#Exact ! ]]> 
+	~Dans les années 1980]]>
+	~Avant la première guerre mondiale]]>
+	####C'est à la fin de la seconde guerre mondiale que les premiers ordinateurs sont apparus. ]]> 
+}
+
+
+// question: 229  name: 1.2.1 Quizz (Q2/2)
+::1.2.1 Quizz (Q2/2)::[html]Que dit la loi de Moore ?]]>{
+	~Que s'il existe au moins deux façons de faire quelque chose et qu'au moins l'une de ces façons peut entraîner une catastrophe, il se trouvera forcément quelqu'un quelque part pour emprunter cette voie.]]>#Non, ça c'est la loi de Murphy. Votre réponse est incorrecte. ]]> 
+	=Que la puissance d'un ordinateur double tous les 2 ans environ.]]>#Exact ! Votre réponse est correcte. ]]> 
+	####La puissance d'un ordinateur double environ tous les 2 ans. ]]> 
+}
+
+

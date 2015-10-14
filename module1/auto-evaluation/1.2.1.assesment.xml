@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="QDB_F1F08B38" title="1.2.1 Quizz (2 questions)">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <rubric>
+      <material label="Summary">
+        <mattext texttype="text/html"></mattext>
+      </material>
+    </rubric>
+    <section ident="I_807ADDA2">
+      <item ident="I_E2D0AB14" title="1.2.1 Quizz (Q1/2)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.2.1 Quizz (2 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">De quand datent les premiers ordinateurs ?]]&gt;</mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_16BE96F0">
+            <render_choice shuffle="No">
+              <response_label ident="I_4742421A">
+                <material>
+                  <mattext texttype="text/html">Au XVIIe si&#232;cle]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_F9F40EEA">
+                <material>
+                  <mattext texttype="text/html">Juste avant la R&#233;volution fran&#231;aise]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_C25948EB">
+                <material>
+                  <mattext texttype="text/html">A la fin de la seconde guerre mondiale]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_8678F3E5">
+                <material>
+                  <mattext texttype="text/html">Dans les ann&#233;es 1980]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_F06B2A72">
+                <material>
+                  <mattext texttype="text/html">Avant la premi&#232;re guerre mondiale]]&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"></decvar>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other></other>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"></displayfeedback>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_16BE96F0">I_C25948EB</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_C25948EB_fb"></displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_C25948EB_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Exact ! ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">C'est &#224; la fin de la seconde guerre mondiale que les premiers ordinateurs sont apparus. ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="I_03F7F06E" title="1.2.1 Quizz (Q2/2)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.2.1 Quizz (2 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">Que dit la loi de Moore ?]]&gt;</mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_8C732C77">
+            <render_choice shuffle="No">
+              <response_label ident="I_99EB7C3C">
+                <material>
+                  <mattext texttype="text/html">Que s'il existe au moins deux fa&#231;ons de faire quelque chose et qu'au moins l'une de ces fa&#231;ons peut entra&#238;ner une catastrophe, il se trouvera forc&#233;ment quelqu'un quelque part pour emprunter cette voie.]]&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_938E3D39">
+                <material>
+                  <mattext texttype="text/html">Que la puissance d'un ordinateur double tous les 2 ans environ.]]&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"></decvar>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other></other>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"></displayfeedback>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_8C732C77">I_938E3D39</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_938E3D39_fb"></displayfeedback>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_8C732C77">I_99EB7C3C</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_99EB7C3C_fb"></displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_99EB7C3C_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Non, &#231;a c'est la loi de Murphy. <p>Votre r&#233;ponse est incorrecte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_938E3D39_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">Exact ! <p>Votre r&#233;ponse est correcte.</p> ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">La puissance d'un ordinateur double environ tous les 2 ans. ]]&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

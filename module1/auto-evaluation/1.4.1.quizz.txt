@@ -1,0 +1,22 @@
+// question: 0  name: Switch category to $course$/Quiz Bank '1.4.1 Quizz (3 questions)'
+$CATEGORY: $course$/Quiz Bank '1.4.1 Quizz (3 questions)'
+
+
+// question: 235  name: 1.4.1 Quizz (Q1/3)
+::1.4.1 Quizz (Q1/3)::[html]A quoi sert une adresse IP ?]]>{
+	=À identifier les machines connectées de façon unique.]]>#Oui ! Votre réponse est correcte. ]]> 
+	~À différencier les gros ordinateurs et les plus petits.]]>#Comment ça ? Votre réponse est incorrecte. ]]> 
+	~À envoyer des mails automatiquement.]]>#Pas du tout... Votre réponse est incorrecte. ]]> 
+	####Une adresse IP (Internet Protocol) sert à identifier de façon unique les machines connectées. ]]> 
+}
+
+
+// question: 236  name: 1.4.1 Quizz (Q3/3)
+::1.4.1 Quizz (Q3/3)::[html]Qu'est-ce qu'un serveur de noms ?]]>{
+	~Un site web qui aide à choisir un prénom pour ses enfants.]]>#C'est une blague ! Votre réponse est incorrecte. ]]> 
+	~Un logiciel (pirate) qui permet de trouver les mots de passe d’autres utilisateurs.]]>#Pas vraiment... Votre réponse est incorrecte. ]]> 
+	=Une machine qui contient une table d’équivalence entre des noms de machines et leur adresse IP.]]>#Oui, c'est exact ! Votre réponse est correcte. ]]> 
+	####Un serveur de noms est une machine qui contient une table d’équivalence entre des noms de machines et leur adresse IP. ]]> 
+}
+
+
