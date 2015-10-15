@@ -224,39 +224,80 @@
                 "type":"devoirs"
                 },
                 {
-                "title":"1.6.2 Wifi ou Données mobiles",
-                "source_file":"devoirs/1-6-2-wifi-ou-donnees-mobiles.html",
-                "type":"devoirs"
-                },
-                {
-                "title":"1.6.3. Les débits",
-                "source_file":"devoirs/1-6-3-les-debits.html",
+                "title":"6.2.1 Question de loyauté",
+                "source_file":"devoirs/6.2.1Question_de_loyaute_devoir_.html",
                 "type":"devoirs"
                 }
             ]
         },{
-            "title":"1.7 Société : qui décide sur Internet?",
+            "title":"7 Moteurs de recherche",
             "source_file":"",
             "subsections":[
                 {
                 "title":"Cours",
-                "source_file":"",
-                "videos":[
-                        {
-                        "video_embed_src":"videos/1.8_societe_qui_decide_sur_internet__version_video_.html",
-                        "video_text_src":"webcontent/1.8_societe__qui_decide_sur_internet_?_version_texte.html"
-                        }
-                ],
+                "source_file":"webcontent/7.1.cours.html",
                 "type":"webcontent"
                 },
                 {
-                "title":"1.7.2 Le saviez-vous? Comment la Chine censure Internet?",
-                "source_file":"webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html",
-				"type":"webcontent"
+                "title":"7.2.1 Questions de recherche et réflexion (3 questions ouvertes)",
+                "source_file":"devoirs/7.2.1Questions_de_recherche_et_reflexion_(3_questions_ouvertes)_devoir_.html",
+                "type":"devoirs"
                 },
                 {
-                "title":"1.7.3 L’ICANN et la CNIL",
-                "source_file":"devoirs/1-8-3-licann-et-la-cnil.html",
+                "title":"7.2.2 Attention, l'abus de Google est dangereux pour la planète !",
+                "source_file":"devoirs/7.2.2Attention_labus_de_Google_est_dangereux_pour_la_planete_!_devoir_.html",
+                "type":"devoirs"
+                },
+                {
+                "title":"7.2.3 Des moteurs de recherche moins intrusifs...",
+                "source_file":"devoirs/7.2.3Des_moteurs_de_recherche_moins_intrusifs..._devoir_.html",
+                "type":"devoirs"
+                }
+            ]
+        },{
+            "title":"8. Autres informations sensibles et bilan",
+            "source_file":"",
+            "subsections":[
+                {
+                "title":"8.1 Autres informations sensibles",
+                "source_file":"",
+                "type":"webcontent",
+                "videos":[
+                        {
+                        "video_embed_src":"videos/8.1_autres_informations_sensibles_version_video.html",
+                        "video_text_src":"webcontent/8.1_autres_informations_sensibles_version_texte.html"
+                        }
+                    ]
+                },
+                {
+                "title":"8.2 Bilan, du pour et du contre...",
+                "source_file":"",
+                "type":"webcontent",
+                "videos":[
+                        {
+                        "video_embed_src":"videos/8.2_bilan_du_pour_et_du_contre_version_video.html",
+                        "video_text_src":"webcontent/8.2_bilan,_du_pour_et_du_contre_version_texte.html"
+                        }
+                    ]
+                },
+                {
+                "title":"8.1.1 Quizz (1 question)",
+                "source_file":"auto-evaluation/8.1.1.quizz.html",
+                "type":"auto-evaluation"
+                },
+                {
+                "title":"8.2.2 Vider le cache et l'historique",
+                "source_file":"devoirs/8.2.2.devoir.html",
+                "type":"devoirs"
+                },
+                {
+                "title":"8.2.3 Enfin pour terminer...",
+                "source_file":"devoirs/8.2.3_enfin_pour_terminer.html",
+                "type":"devoirs"
+                },
+                {
+                "title":"8.2.4 Votre analyse",
+                "source_file":"devoirs/8.2.4Votre_analyse_devoir_.html",
                 "type":"devoirs"
                 }
             ]
