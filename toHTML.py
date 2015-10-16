@@ -20,7 +20,7 @@ HEADER = """
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <link rel="icon" href="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/favicon.png" />
-    <link rel="stylesheet" href="style.css" media="screen"/>
+    <link rel="stylesheet" href="css/style.css" media="screen"/>
     <script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
 
@@ -157,9 +157,10 @@ def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
     return link.replace("__BASE__/", '')
 
-def parse_content(href):
+def parse_content(href, module=False):
     """ open file and replace ../img with img and src to data_src for iframes """
-
+    if not module:
+        module = ""
     myparser = etree.HTMLParser(encoding="utf-8")
     with open(href, 'r') as file:
         htmltext = file.read()
@@ -180,6 +181,7 @@ def parse_content(href):
         imgs = tree.xpath('//img')#we get a list of elements
         for img in imgs:
             new_src = img.get('src').replace('../img', 'img')
+            new_src = img.get('src').replace('../media', module+'/media')
             img.set('src', new_src)
     except Exception as e:
         pass
@@ -195,9 +197,8 @@ def parse_content(href):
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
 
-def generateIndexHtml(data):
+def generateModuleIndexHtml(data, module_folder=False):
     """ parse data from config file 'toIMSconfig.json' and recreate imsmanifest.xml """
-    # FIXME: use same config file as for IMS archive ?
 
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
@@ -252,8 +253,7 @@ def generateIndexHtml(data):
                                 with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
                                     text(data["sections"][idA]["subsections"][idB]["title"])
 
-    #print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
-
+    # Print main content
     doc.asis('<!--  MAIN CONTENT -->')
     with tag('main', klass="content"):
         # Loop through sections
@@ -265,7 +265,7 @@ def generateIndexHtml(data):
             else:
                 display = "none"
             try:
-                href = data["sections"][idA]["source_file"]
+                href = module_folder+'/'+data["sections"][idA]["source_file"]
                 with tag('section', id=section_id, style=("display:"+display)):
                     doc.asis(parse_content(href))
             except:
@@ -275,7 +275,7 @@ def generateIndexHtml(data):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                 with tag('section', id=subsection_id, style="display:none"):
                     try:
-                        href = data["sections"][idA]["subsections"][idB]["source_file"]
+                        href = module_folder+'/'+data["sections"][idA]["subsections"][idB]["source_file"]
                     except:
                         href = ""
                         text("")
@@ -292,11 +292,11 @@ def generateIndexHtml(data):
                                 doc.asis('<br />')
                             print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
                             try:
-                                embed_src = video["video_embed_src"]
+                                embed_src = module_folder+'/'+video["video_embed_src"]
                                 doc.asis(parse_content(embed_src))
                                 doc.asis("\n\n")
                                 # add text in fancybox lightbox
-                                text_src =  video["video_text_src"]
+                                text_src =  module_folder+'/'+video["video_text_src"]
                                 text_id = subsection_id+"_"+str(idVid)
                                 with tag('div', klass="inline fancybox", href="#"+text_id):
                                     text('Version Texte')
@@ -316,7 +316,8 @@ def generateIndexHtml(data):
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
     doc.asis(SCRIPTS)
     doc.asis(FOOTER)
-    indexHtml = open('index.html', 'w')
+    index_file_name = module_folder+'.index.html'
+    indexHtml = open(index_file_name, 'w')
     indexHtml.write(indent(doc.getvalue()))
     indexHtml.close()
     return True
@@ -326,35 +327,21 @@ def main(argv):
     """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
     if len(sys.argv) != 2:
         usage()
-
+    # filein is a global config file that gives each modules parameters
     filein = sys.argv[1]
-    # fileout = sys.argv[2]
-    # add .zip if not there
-    # if fileout.rsplit('.', 1)[1] != 'zip':
-    #     fileout += '.zip'
-
-    # load data from filin
     print ("Arguments : filein %s " % (filein))
-    with open(filein, encoding='utf-8') as data_file:
-        data = json.load(data_file)
+    with open(filein, encoding='utf-8') as global_config:
+        # load module data from filin
+        global_data = json.load(global_config)
+    for module in global_data["modules"]:
+        mod_config = module["config"]
+        with open(mod_config, encoding='utf-8') as mod_data_file:
+            # load module data from filin
+            mod_data = json.load(mod_data_file)
 
-    # print(" Data loaded \n %s" % (data) )
-    # parse data and generate imsmanifest.xml
-    generateIndexHtml(data)
+        # print(" Data loaded \n %s" % (data) )
+        generateModuleIndexHtml(mod_data, module["folder"])
     print (" index.html saved. Compressing archive in %s " % (os.getcwd()))
-
-    # Compress relevant files
-    # zipf = zipfile.ZipFile(fileout, 'w')
-    # zipf.write(os.getcwd()+'/imsmanifest.xml')
-    # for dir_name in data['directories_to_ims']:
-    #     for file in os.listdir(dir_name):
-    #         filepath = os.path.join(os.getcwd(), dir_name)
-    #         filepath = os.path.join(filepath, file)
-    #         print (" Adding %s to archive " % (filepath))
-    #         zipf.write(filepath)
-    #
-    # zipf.close()
-
 
 ############### main ################
 if __name__ == "__main__":

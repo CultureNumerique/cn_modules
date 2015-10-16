@@ -41,15 +41,14 @@
                 },
                 {
                 "title":"1.1.2 Tim Berners-Lee",
-                "source_file":"devoirs/1-1-2-le-numerique-dans-tous-les-domaines.html",
+                "source_file":"devoirs/1.1.2.tim_berners_lee.html",
                 "type":"devoirs"
                 },
                 {
                 "title":"1.1.3 Qui dirige le Web ?",
                 "source_file":"devoirs/1.1.3_Qui_dirige_le_Web.html",
                 "type":"devoirs"
-                },
-
+                }
             ]
         },{
             "title":"2. Clients et serveurs",
@@ -71,8 +70,8 @@
                 "source_file":"",
                 "videos":[
                         {
-                        "video_embed_src":"videos/2.2_les_clients_version_texte.html",
-                        "video_text_src":"webcontent/2.2_les_clients_version_video.html"
+                        "video_embed_src":"videos/2.2_les_clients_version_video.html",
+                        "video_text_src":"webcontent/2.2_les_clients_version_texte.html"
                         }
                 ],
                 "type":"webcontent"
@@ -82,12 +81,12 @@
                 "source_file":"",
                 "videos":[
                         {
-                        "video_embed_src":"videos/2.3_les_serveurs_version_texte.html",
-                        "video_text_src":"webcontent/2.3_les_serveurs_version_video.html"
+                        "video_embed_src":"videos/2.3_les_serveurs_version_video.html",
+                        "video_text_src":"webcontent/2.3_les_serveurs_version_texte.html"
                         }
                 ],
                 "type":"webcontent"
-                }
+                },
                 {
                 "title":"2.3.1 Quizz (6 questions)",
                 "source_file":"auto-evaluation/2.3.1.quizz.html",
@@ -111,7 +110,7 @@
                 },
                 {
                 "title":"3.1.1 Quizz (6 questions)",
-                "source_file":"auto-evauation/3.1.1.quizz.html",
+                "source_file":"auto-evaluation/3.1.1.quizz.html",
                 "type":"auto-evaluation"
                 }
             ]
@@ -159,7 +158,7 @@
                 },
                 {
                 "title":"4.3.2 Quizz (9 questions)",
-                "source_file":"auto-evauation/4.3.2.quizz.html",
+                "source_file":"auto-evaluation/4.3.2.quizz.html",
 				"type":"auto-evauation"
                 },
                 {
@@ -195,7 +194,7 @@
                 },
                 {
                 "title":"5.2 Exercice d'approfondissement",
-                "source_file":"devoirs/1-5-3-la-charte-informatique-de-luniversite.html",
+                "source_file":"devoirs/5.2.devoir.html",
                 "type":"devoirs"
                 },
                 {
