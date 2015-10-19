@@ -1,6 +1,11 @@
 {
     "modules" : [
     {
+        "folder" : "module1",
+        "title" : "Internet",
+        "config" : "module1/m1.toHTMLconfig.json"
+    },
+    {
         "folder" : "module2",
         "title" : "Le Web",
         "config" : "module2/m2.toHTMLconfig.json"

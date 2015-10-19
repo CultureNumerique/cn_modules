@@ -197,31 +197,31 @@ def parse_content(href, module=False):
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
 
-def generateModuleIndexHtml(data, module_folder=False):
-    """ parse data from config file 'toIMSconfig.json' and recreate imsmanifest.xml """
+def generateModuleHtml(data, module_folder=False):
+    """ parse data from config file 'toIMSconfig.json' and generate a module html file """
 
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
 
-    doc.asis(HEADER)
-    # Print the rest of the header
-    with tag('title'):
-        text(data["lom_metadata"]["title"])
-    doc.asis('</head>\n')
-    doc.asis('<body>\n')
-    doc.asis('<!--  HEADER -->')
-    doc.asis('<div id="container">')
-    with tag('header'):
-        with tag('h1'):
-            with tag('a', klass="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
-                text('Culture Numérique')
-        with tag('h2'):
-            text(data["lom_metadata"]["title"])
+        #doc.asis(HEADER)
+        # Print the rest of the header
+        # with tag('title'):
+        #     text(data["lom_metadata"]["title"])
+        # doc.asis('</head>\n')
+        # doc.asis('<body>\n')
+        # doc.asis('<!--  HEADER -->')
+        # doc.asis('<div id="container">')
+        # with tag('header'):
+        #     with tag('h1'):
+        #         with tag('a', klass="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
+        #             text('Culture Numérique')
+        #     with tag('h2'):
+        #         text(data["lom_metadata"]["title"])
 
     doc.asis('<!--  NAVIGATION MENU -->')
     with tag('nav', klass="menu accordion"):
         with tag('h3'):
-            text('Navigation')
+            text(data["lom_metadata"]["title"])
         with tag('ul'):
             # looping through sections
             for idA, section in enumerate(data["sections"]):
@@ -314,9 +314,9 @@ def generateModuleIndexHtml(data, module_folder=False):
 
 
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
-    doc.asis(SCRIPTS)
-    doc.asis(FOOTER)
-    index_file_name = module_folder+'.index.html'
+    #doc.asis(SCRIPTS)
+    #doc.asis(FOOTER)
+    index_file_name = module_folder+'.html'
     indexHtml = open(index_file_name, 'w')
     indexHtml.write(indent(doc.getvalue()))
     indexHtml.close()
@@ -340,7 +340,7 @@ def main(argv):
             mod_data = json.load(mod_data_file)
 
         # print(" Data loaded \n %s" % (data) )
-        generateModuleIndexHtml(mod_data, module["folder"])
+        generateModuleHtml(mod_data, module["folder"])
     print (" index.html saved. Compressing archive in %s " % (os.getcwd()))
 
 ############### main ################
