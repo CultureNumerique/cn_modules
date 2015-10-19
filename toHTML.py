@@ -12,6 +12,7 @@ from lxml import html
 from pprint import pprint
 from yattag import indent
 from yattag import Doc
+from lxml.html.clean import Cleaner
 
 HEADER = """
 <!DOCTYPE html>
@@ -161,12 +162,11 @@ def parse_content(href, module=False):
     """ open file and replace ../img with img and src to data_src for iframes """
     if not module:
         module = ""
+
     myparser = etree.HTMLParser(encoding="utf-8")
     with open(href, 'r') as file:
         htmltext = file.read()
-
     tree = etree.HTML(htmltext, parser=myparser)
-    # = html.fromstring(filein)
 
     # removing "Retour au cours" links
     try:
@@ -186,13 +186,13 @@ def parse_content(href, module=False):
     except Exception as e:
         pass
     # For all iframes, rename 'src' attribute to 'data-src'
-    # try:
-    #     iframes = tree.xpath('//iframe')
-    #     for iframe in iframes:
-    #         iframe.attrib['data-src'] = iframe.attrib['src']
-    #         etree.strip_attributes(iframe, 'src')
-    # except Exception as e:
-    #     pass
+    try:
+        iframes = tree.xpath('//iframe')
+        for iframe in iframes:
+            iframe.attrib['data-src'] = iframe.attrib['src']
+            etree.strip_attributes(iframe, 'src')
+    except Exception as e:
+        pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
