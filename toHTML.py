@@ -186,13 +186,13 @@ def parse_content(href, module=False):
     except Exception as e:
         pass
     # For all iframes, rename 'src' attribute to 'data-src'
-    try:
-        iframes = tree.xpath('//iframe')
-        for iframe in iframes:
-            iframe.attrib['data-src'] = iframe.attrib['src']
-            etree.strip_attributes(iframe, 'src')
-    except Exception as e:
-        pass
+    # try:
+    #     iframes = tree.xpath('//iframe')
+    #     for iframe in iframes:
+    #         iframe.attrib['data-src'] = iframe.attrib['src']
+    #         etree.strip_attributes(iframe, 'src')
+    # except Exception as e:
+    #     pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 

@@ -1,0 +1,8 @@
+regex
+
+Clean quizz questions:
+F : class\=\"questiontext\"><p>(.*)<\/p><\/p>
+R : class\=\"questiontext\">$1</p>
+
+F: value=".*/><p>(.*)</p></li>
+R : />$1</li>
