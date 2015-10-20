@@ -175,16 +175,18 @@ def parse_content(href, module=False):
         for l in links:
             l.getparent().remove(l)
     except:
+        print("Exception with moodle courses links")
         pass
     # Adapt img links to direct path to img instead of ../img
     try:
         imgs = tree.xpath('//img')#we get a list of elements
         for img in imgs:
-            new_src = img.get('src').replace('../img', 'img')
+            #new_src = img.get('src').replace('../img', 'img')
             new_src = img.get('src').replace('../media', module+'/media')
             img.set('src', new_src)
-    except Exception as e:
         pass
+    except Exception as e:
+        print("Exception with img links")
     # For all iframes, rename 'src' attribute to 'data-src'
     try:
         iframes = tree.xpath('//iframe')
@@ -192,6 +194,7 @@ def parse_content(href, module=False):
             iframe.attrib['data-src'] = iframe.attrib['src']
             etree.strip_attributes(iframe, 'src')
     except Exception as e:
+        print("Exception with iframe src")
         pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
@@ -267,7 +270,7 @@ def generateModuleHtml(data, module_folder=False):
             try:
                 href = module_folder+'/'+data["sections"][idA]["source_file"]
                 with tag('section', id=section_id, style=("display:"+display)):
-                    doc.asis(parse_content(href))
+                    doc.asis(parse_content(href, module_folder))
             except:
                 print (" ---- no content for section %s" % (section_id))
             # Loop through subsections
@@ -281,7 +284,7 @@ def generateModuleHtml(data, module_folder=False):
                         text("")
                     if href.endswith(".html"):
                             try:
-                                doc.asis(parse_content(href))
+                                doc.asis(parse_content(href, module_folder))
                             except:
                                 print (" ---- no web content for subsection %s" % (subsection_id))
                                 text("")
@@ -293,7 +296,7 @@ def generateModuleHtml(data, module_folder=False):
                             print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
                             try:
                                 embed_src = module_folder+'/'+video["video_embed_src"]
-                                doc.asis(parse_content(embed_src))
+                                doc.asis(parse_content(embed_src, module_folder))
                                 doc.asis("\n\n")
                                 # add text in fancybox lightbox
                                 text_src =  module_folder+'/'+video["video_text_src"]
@@ -301,10 +304,10 @@ def generateModuleHtml(data, module_folder=False):
                                 with tag('div', klass="inline fancybox", href="#"+text_id):
                                     text('Version Texte')
                                     with tag('div', klass="mini-text"):
-                                        doc.asis(parse_content(text_src))
+                                        doc.asis(parse_content(text_src, module_folder))
                                 with tag('div', style="display:none"):
                                     with tag('div', id=text_id, klass="fancy-text"):
-                                        doc.asis(parse_content(text_src))
+                                        doc.asis(parse_content(text_src, module_folder))
                             except:
                                 print (" ---- error while processsing video content for subsection %s" % (subsection_id))
                                 text("")

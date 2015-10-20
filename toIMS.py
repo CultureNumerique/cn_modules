@@ -33,7 +33,7 @@ Usage:
 
 
 def replaceLink(link):
-    """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
+    """ Replace __BASE__ in urls with base given in config file toIMSconfig.json """
     return link.replace("__BASE__/", '')
 
 
