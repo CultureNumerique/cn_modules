@@ -9,7 +9,7 @@
     <script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
     <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-    <title>Présentations des modules de cours</title>
+    <title>Culture Numérique | Présentation des modules de cours</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <h1>
                 <a title="Culture Numérique" class="maintitle" href="http://culturenumerique.univ-lille3.fr">Culture Numérique</a>
             </h1>
-            <h2>Présentations des modules de cours</h2>
+            <h2>Site vitrine de présentation des modules de cours</h2>
         </header>
         <!-- Module Menu -->
         <nav class="module_menu">
@@ -37,9 +37,7 @@
       </div>
       <!-- SCRIPTs  -->
       <script type="text/javascript">
-
-
-        // ## control of Navigation and sections loading ##
+        // ## control of Navigation and sections/subsections toggling ##
         function navigation(){
             console.log(" loading navigation ???");
             $(".accordion ul li a").click(function(e){
@@ -49,17 +47,19 @@
                 var selector = current_node.attr('data_sec_id');
                 console.log('selector ='+selector+';');
                 if (selector.length == 0) {
-                    //go to 1st subsection
+                    //go to 1st subsection if selected section is empty
                     current_node = current_node.next().find('a.subsection')[0];
                     selector = $(current_node).attr('data_sec_id');
-                    console.log("skipped to next subsection ", current_node)
                 }
-
+                // turn selected subsection active, if any
                 if ($(current_node).hasClass('subsection')){
                     $('a.subsection').removeClass('active');
                     $(current_node).addClass('active');
                 }
+                // toggle selected section or subsection (they all use 'section' tag)
                 $('section').hide();
+                $('#'+selector).show();
+                // if an iframe is in selected sec or subsec, rename attribute data-src to src
                 var iframes = $('#'+selector).find('iframe');
                 console.log("found iframes ?", iframes);
                 iframes.each(function(idx){
@@ -68,11 +68,8 @@
                         console.log("this src = ", $(this).attr('src'))
                         }
                 })
-                $('#'+selector).show();
-
-                //}
             });
-            // ## nav stays on top while scrolling ##
+            // ## nav stays fixed on top when scroll pos > header height ##
             $(document).scroll(function(){
                 var header_height = $('header').outerHeight();
                 if (window.scrollY > header_height) {
@@ -83,34 +80,32 @@
                 }
             });
         };
-        // Accordion menu
+        // ## Accordion menu: control folding and unfolding of selected sections (see above for content loading) ##
         function accordion(){
             (function ($) {
                 console.log(" loading accordion ???");
-                // adapt main content height to menu height
+                // adapt main content height to menu height to avoid overlap with footer
                 var nav_height = $('nav.menu').outerHeight();
                 $('main.content').attr('style', 'min-height:'+nav_height+'px;')
-
+                // folding/unfolding mechanism
                 $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-
                 $('.accordion a.section').click(function(j) {
-                    console.log("accordéon ====");
+                    console.log("accordéon ====", $(this));
                     var dropDown = $(this).closest('li').find('p');
                     $(this).closest('.accordion').find('p').not(dropDown).slideUp();
 
                     if ($(this).hasClass('active')) {
                         $(this).removeClass('active');
                     } else {
-                        $(this).closest('.accordion').find('a.active').removeClass('active');
+                        $(this).closest('.accordion').find('a.section.active').removeClass('active');
                         $(this).addClass('active');
                     }
-
                     dropDown.stop(false, true).slideToggle();
                     j.preventDefault();
                 });
             })(jQuery);
         }
-        // ## Fancybox ##
+        // ## Fancybox : used for video texts when clicking on text vignets ##
         function load_fancybox(){
             console.log(" loading Fancy box ???");
             $(".fancybox").fancybox({
@@ -139,12 +134,14 @@
                             });
                         };
 
-        // ## control of module navigation ##
+        // ## control of main modules navigation : load selected module and toggle tab-like navigation ##
         $(function(){
             // load accueil on start
             $('.module_content').load("accueil.html");
             $(".module_menu ul li a").click(function(e){
                 e.preventDefault()
+                $('.module_menu ul li a').removeClass('active');
+                $(this).addClass('active');
                 $('.module_content').load($(this).attr('href'), function(){
                     console.log("module loaded !");
                     navigation();
