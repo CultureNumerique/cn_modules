@@ -156,37 +156,47 @@ Usage:
 
 def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
-    return link.replace("__BASE__/", '')
+    return link.replace("../media", "/media")
 
 def parse_content(href, module=False):
     """ open file and replace ../img with img and src to data_src for iframes """
     if not module:
         module = ""
 
-    myparser = etree.HTMLParser(encoding="utf-8")
     with open(href, 'r') as file:
         htmltext = file.read()
-    tree = etree.HTML(htmltext, parser=myparser)
+    #myparser = etree.HTMLParser(encoding="utf-8")
+    # tree = etree.HTML(htmltext, parser=myparser)
+
+    tree = html.fromstring(htmltext)
+
+    try:
+        for element, attribute, link, pos in tree.iterlinks():
+            newlink = link.replace("../media", module+"/media")
+            element.set(attribute, newlink)
+            if 'COURSEVIEWBYID' in link:
+                link.getparent().remove(link)
+    except Exception as e:
+        print("Exception rewriting/removing links %s" % (e))
 
     # removing "Retour au cours" links
-    try:
-        links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
-        print (" ----- found links %s" % str(links))
-        for l in links:
-            l.getparent().remove(l)
-    except:
-        print("Exception with moodle courses links")
-        pass
-    # Adapt img links to direct path to img instead of ../img
-    try:
-        imgs = tree.xpath('//img')#we get a list of elements
-        for img in imgs:
-            #new_src = img.get('src').replace('../img', 'img')
-            new_src = img.get('src').replace('../media', module+'/media')
-            img.set('src', new_src)
-        pass
-    except Exception as e:
-        print("Exception with img links")
+    # try:
+    #     links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
+    #     print (" ----- found links %s" % str(links))
+    #     for l in links:
+    #         l.getparent().remove(l)
+    # except:
+    #     print("Exception with moodle courses links")
+    #     pass
+    # Adapt img links to direct path to [module_dir]/media/ instead of ../media
+    # try:
+    #     imgs = tree.xpath('//img')#we get a list of elements
+    #     for img in imgs:
+    #         new_src = img.get('src').replace('../media', module+'/media')
+    #         img.set('src', new_src)
+    #     pass
+    # except Exception as e:
+    #     print("Exception with img links")
     # For all iframes, rename 'src' attribute to 'data-src'
     try:
         iframes = tree.xpath('//iframe')
