@@ -384,6 +384,8 @@ table, th, td {
 	margin-left: 21.75em;
 	margin-bottom:7.5em; /* Height of the footer */
 	display: block;
+	width: 60%;
+	text-align: justify;
 }
 
 
