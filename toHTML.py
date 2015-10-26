@@ -316,10 +316,10 @@ def generateModuleHtml(data, module_folder=False):
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
     #doc.asis(SCRIPTS)
     #doc.asis(FOOTER)
-    index_file_name = module_folder+'.html'
-    indexHtml = open(index_file_name, 'w')
-    indexHtml.write(indent(doc.getvalue()))
-    indexHtml.close()
+    module_file_name = module_folder+'/'+module_folder+'.html'
+    moduleHtml = open(module_file_name, 'w')
+    moduleHtml.write(indent(doc.getvalue()))
+    moduleHtml.close()
     return True
 
 
