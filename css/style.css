@@ -155,8 +155,7 @@ nav.module_menu li a:hover {
 
 .accordion {
     position:relative;
-	/*position: fixed;
-	top:130px;*/
+	margin-top: -54px;
 	z-index: 100; /* Keep it above to avoid overlap by footer*/
 	float:left;
 	width: 17.75em;

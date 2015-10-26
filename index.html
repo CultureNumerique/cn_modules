@@ -59,6 +59,7 @@
                 // toggle selected section or subsection (they all use 'section' tag)
                 $('section').hide();
                 $('#'+selector).show();
+                $(document).scrollTop(0);
                 // if an iframe is in selected sec or subsec, rename attribute data-src to src
                 var iframes = $('#'+selector).find('iframe');
                 console.log("found iframes ?", iframes);
