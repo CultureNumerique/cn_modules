@@ -74,7 +74,7 @@
             $(document).scroll(function(){
                 var header_height = $('header').outerHeight();
                 if (window.scrollY > header_height) {
-                    $('nav.accordion').attr('style', 'position:fixed;top:0;');
+                    $('nav.accordion').attr('style', 'position:fixed;top:0;margin-top:0;');
                 }
                 else {
                     $('nav.accordion').attr('style', '');
