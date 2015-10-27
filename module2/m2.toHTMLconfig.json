@@ -3,7 +3,7 @@
     "base_url": "https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/",
     "module_order":2,
     "lom_metadata": {
-        "title": "Le Web, la protection des données privées",
+        "title": "2. Le Web, la protection des données privées",
         "language": "en",
         "category": "Divers"
     },
@@ -94,7 +94,7 @@
                 }
             ]
         },{
-            "title":"3 Exemple et récapitulatif",
+            "title":"3. Exemple et récapitulatif",
             "source_file":"",
             "subsections":[
                 {
@@ -115,7 +115,7 @@
                 }
             ]
         },{
-            "title":"4 HTML",
+            "title":"4. HTML",
             "source_file":"",
             "subsections":[
                 {
@@ -168,7 +168,7 @@
                 }
             ]
         },{
-            "title":"5 Les Cookies",
+            "title":"5. Les Cookies",
             "source_file":"",
             "subsections":[
                 {
@@ -204,12 +204,12 @@
                 }
             ]
         },{
-            "title":"6 Profils et réseaux sociaux",
+            "title":"6. Profils et réseaux sociaux",
             "source_file":"",
             "subsections":[
                 {
                 "title":"Cours",
-                "source_file":"webcontent/6.1.cours.html",
+                "source_file":"webcontent/6.1.profils.html",
                 "type":"webcontent"
                 },
                 {
@@ -229,7 +229,7 @@
                 }
             ]
         },{
-            "title":"7 Moteurs de recherche",
+            "title":"7. Moteurs de recherche",
             "source_file":"",
             "subsections":[
                 {

@@ -156,38 +156,35 @@ Usage:
 
 def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
-    return link.replace("__BASE__/", '')
+    return link.replace("../media", "/media")
 
 def parse_content(href, module=False):
     """ open file and replace ../img with img and src to data_src for iframes """
     if not module:
         module = ""
 
-    myparser = etree.HTMLParser(encoding="utf-8")
     with open(href, 'r') as file:
         htmltext = file.read()
-    tree = etree.HTML(htmltext, parser=myparser)
+
+    tree = html.fromstring(htmltext)
+
+    try:
+        for element, attribute, link, pos in tree.iterlinks():
+            newlink = link.replace("../media", module+"/media")
+            element.set(attribute, newlink)
+    except Exception as e:
+        print("Exception rewriting/removing links %s" % (e))
 
     # removing "Retour au cours" links
     try:
         links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
-        print (" ----- found links %s" % str(links))
         for l in links:
             l.getparent().remove(l)
     except:
         print("Exception with moodle courses links")
         pass
-    # Adapt img links to direct path to img instead of ../img
-    try:
-        imgs = tree.xpath('//img')#we get a list of elements
-        for img in imgs:
-            #new_src = img.get('src').replace('../img', 'img')
-            new_src = img.get('src').replace('../media', module+'/media')
-            img.set('src', new_src)
-        pass
-    except Exception as e:
-        print("Exception with img links")
-    # For all iframes, rename 'src' attribute to 'data-src'
+
+    # rename iframe attribute to prevent loading all iframes at once
     try:
         iframes = tree.xpath('//iframe')
         for iframe in iframes:
@@ -319,10 +316,10 @@ def generateModuleHtml(data, module_folder=False):
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
     #doc.asis(SCRIPTS)
     #doc.asis(FOOTER)
-    index_file_name = module_folder+'.html'
-    indexHtml = open(index_file_name, 'w')
-    indexHtml.write(indent(doc.getvalue()))
-    indexHtml.close()
+    module_file_name = module_folder+'/'+module_folder+'.html'
+    moduleHtml = open(module_file_name, 'w')
+    moduleHtml.write(indent(doc.getvalue()))
+    moduleHtml.close()
     return True
 
 

@@ -25,8 +25,8 @@
         <nav class="module_menu">
             <ul id="static-nav">
                 <li><a class="active" href="accueil.html">Accueil</a></li>
-                <li><a href="module1.html">Internet</a></li>
-                <li><a href="module2.html">Le Web</a></li>
+                <li><a href="module1/module1.html">1. Internet</a></li>
+                <li><a href="module2/module2.html">2. Le Web</a></li>
             </ul>
         </nav>
 
@@ -59,6 +59,7 @@
                 // toggle selected section or subsection (they all use 'section' tag)
                 $('section').hide();
                 $('#'+selector).show();
+                $(document).scrollTop(0);
                 // if an iframe is in selected sec or subsec, rename attribute data-src to src
                 var iframes = $('#'+selector).find('iframe');
                 console.log("found iframes ?", iframes);
@@ -73,7 +74,7 @@
             $(document).scroll(function(){
                 var header_height = $('header').outerHeight();
                 if (window.scrollY > header_height) {
-                    $('nav.accordion').attr('style', 'position:fixed;top:0;');
+                    $('nav.accordion').attr('style', 'position:fixed;top:0;margin-top:0;');
                 }
                 else {
                     $('nav.accordion').attr('style', '');
