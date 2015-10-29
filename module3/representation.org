@@ -58,15 +58,14 @@ information peut être enrichie pour faciliter les traitements relatifs
 à de telles tâches.
 
 *************** Animation
-Ici on illustre que dans le codage on ajoute des
-  meta-données.  
+Ici on illustre que dans le codage on ajoute des meta-données.  
 *************** END
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
 documents. 
 
 Par exemple comment faire en sorte que votre smartphone reconnaisse un
-morceau de musique chantonné ? À l'aide d'un logiciel transformants
+morceau de musique chantonné ? À l'aide d'un logiciel transformant
 les sons en un codage astucieux, votre voix est numérisée, puis la
 représentation numérique qui a été produite est envoyée à un service
 possédant un très grand nombre de morceaux de musique représentés avec
@@ -109,19 +108,37 @@ l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
 *************** Activité
+::Il n'existe qu'une façon de représenter numériquement une image:: 
+{F# représenter une information est le résultat de nombreux choix}
+
+::Représentation des données et traitement informatique sont-ils liés ?::{T}
+
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+# Le genre, la date de création, ...
+}
+
+::Donnez quelques exemples de critères qui peuvent gouverner le choix d'une représentation numérique d'une information.::
+{
+# la concision, la pertinence (permettre des traitements voulus), l'efficacité (traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...
+} 
+*************** END
+
+
+*************** Activité avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-[html]<p>En vous rendant sur le site http://www.w3c.org/html répondez aux questions suivantes </p>
+[html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
 <ul>
-<li> Depuis quand le consortium du W3C travaille-t-il sur la normalisation du langage HTML ? </li>
-<li> Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
-<li> Quelles sont les numéros des versions de HTML et CSS les plus récentes ? </li>
+<li>Qui développe le format =html=</li>
+<li>Depuis quand ce travail sur ce langage HTML existe-t-il ? </li>
+<li>Quels sont les objectifs de cette numérisation ?</li>
+<li>Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
+<li>Quelle est la version la plus récente de HTML ? </li>
 </ul>
-{Off web, je n'ai pas les réponses !!! }
-*************** END
-*************** À discuter
-Faire réfléchir sur les évolutions récentes de html ? Web
-des données, knowledge graph, réseaux sociaux ?  
-*************** END
+{
+# Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
+}
+
+
 * Analyse d'un document : plusieurs vues complémentaires
 ** intro
 Dans cette section, nous analysons ce qu'est un document textuel pour
@@ -165,6 +182,8 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 <li>Un traitement de textes. Les exemples seront donnés dans ce cours avec =libreoffice=. 
 </ul>
 <p>Les versions en ligne de traitement de textes ??? framaxxx et onlyoffice ? </p>
+{}
+
 ::Éditeur de textes:: 
 [html]<p>Lancer un éditeur de textes et en faire une capture
   d'écran à déposer en réponse à ce quizz.</p>
@@ -774,9 +793,10 @@ Nous vous donnons donc les conseils suivants :
 
 Une autre distinction que vous pouvez également retenir c'est celle entre logiciel et donnée. Parfois très liés à cause de formats propriétaires, on en arrive de temps à autres à les confondre, mais bien-sûr la donnée doit pouvoir exister, suivre son cycle de développement et d'utilisation en dehors du logiciel qui l'a créé. 
 
-Par les formats de données libres et ouverts ou propriétaires ou fermés, vous voyez également une illustration de la rencontre entre le numérique et le droit. Le droit ne s'applique pas qu'aux formats, mais aux également aux contenus et aux logiciels. Le domaine du droit du numérique sort du périmètre de ce cours, mais sachez tout de même que l'idée de la liberté ou de l'ouverture s'applique aux contenus par le biais des licences *creative commons*, et aux logiciels par le biais des licences *GPL* et *CECILL*.
 
-Cette philosophie du libre dans le numérique est née dans les années 80 à propos des logiciels. Elle s'est étendue depuis et devient un mouvement qui impacte aujourd'hui toute la société numérique.
+Par les formats de données libres et ouverts ou propriétaires ou fermés, vous voyez également une illustration de la rencontre entre le numérique et le droit. Le droit ne s'applique pas qu'aux formats, mais aux également aux contenus et aux logiciels. Le domaine du droit du numérique sort du périmètre de ce cours mais vous devez toujours vous poser la question du droit dès que vous utilisez une ressource pour la publier.
+
+Enfin, sachez que l'idée de la liberté ou de l'ouverture s'applique aux contenus par le biais des licences *creative commons* et aux logiciels par le biais des licences *GPL* et *CECILL* en précisant comment vous pouvez utiliser ces contenus et ces logiciels. La philosophie du libre dans le numérique est née dans les années 80 à propos des logiciels. Elle s'est étendue depuis et devient un mouvement qui impacte aujourd'hui toute la société numérique. 
 
 *************** Activité
 ::Le libre::
@@ -785,6 +805,12 @@ Cette philosophie du libre dans le numérique est née dans les années 80 à pr
 <li>Quelles sont les différentes variantes de creative commons?</li>
 <li>Quels sont les 4 principes du logiciel libre (voir le site de l'april : http://www.april.org) ? </li>
 </ul>
+*************** END
+
+
+*************** À discuter
+Faire réfléchir sur les évolutions récentes de html ? Web
+des données, knowledge graph, réseaux sociaux ?  
 *************** END
 
 * Footnotes
