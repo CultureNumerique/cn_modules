@@ -2,10 +2,11 @@
 #+LANGUAGE: fr
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+#+LaTeX_CLASS_OPTIONS: [hidelinks]
 #+LATEX_HEADER: \usepackage{geometry,lmodern,xcolor}
 #+LATEX_HEADER: \usepackage[french]{babel}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://culturenumerique.univ-lille3.fr/css/base.css" />
-#+OPTIONS: inline:t 
+#+OPTIONS: inline:nil 
 
 #+TITLE:     Représentation numérique de l'information : les documents
 #+AUTHOR:    Culture numérique
@@ -137,16 +138,17 @@ numérique multimédia.
 {
 # Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
 }
+*************** END
 
 
 * Analyse d'un document : plusieurs vues complémentaires
-** intro
+** Introduction
 Dans cette section, nous analysons ce qu'est un document textuel pour
 déterminer les critères amenant à une bonne représentation numérique.
 Le cours sur le Web a déjà introduit un exemple de représentation
 numérique de document dont une caractéristique essentielle est de
-représenter contenu et structure d'un côté dans le langage HTML et
-présentation d'un autre côté avec une feuille de style CSS. Cette
+représenter contenu et structure d'un côté dans le langage =html= et
+présentation d'un autre côté avec une feuille de style =CSS=. Cette
 représentation facilite les traitements et la transmission à travers
 les réseaux et permet l'affichage sur tout type d'écran. Cette
 distinction entre structure, contenu et présentation est plus générale
@@ -155,18 +157,6 @@ et résulte de l'analyse de ce qu'est un document textuel.
 L'analyse des documents textuels met en évidence *quatre vues
 complémentaires* : les vues séquentielle, structurée, qualifiée et de
 présentation.
-
-** Le contenu, une vue séquentielle
-
-Le premier constat évident est qu'un document textuel est une suite de
-symboles. C'est la *vue séquentielle* du document.  L'ordre est
-important et le parcours naturel est de commencer par le début, passer
-d'un symbole au symbole suivant jusqu'à la fin.
-
-Grâce à cette organisation séquentielle, il est déjà possible
-d'imaginer des traitements : rechercher, remplacer, couper, copier,
-coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
-...
 
 *************** Activité
 ::Installer des logiciels:: 
@@ -183,6 +173,22 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 </ul>
 {}
 
+*************** END
+
+
+** Le contenu, une vue séquentielle
+
+Le premier constat évident est qu'un document textuel est une suite de
+symboles. C'est la *vue séquentielle* du document.  L'ordre est
+important et le parcours naturel est de commencer par le début, passer
+d'un symbole au symbole suivant jusqu'à la fin.
+
+Grâce à cette organisation séquentielle, il est déjà possible
+d'imaginer des traitements : rechercher, remplacer, couper, copier,
+coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
+...
+
+*************** Activité
 ::Éditeur de textes:: 
 [html]<p>Lancer un éditeur de textes et en faire une capture
   d'écran à déposer en réponse à ce quizz.</p>
@@ -192,25 +198,14 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 [html]<p>Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
 </p>
 {
-~%25%copier/couper/coller
-# tous les éditeurs le permettent
-~%25%rechercher et remplacer
-# très souvent disponible
-~%25%avancer de mots en mots
-# souvent par la conjonction CRTL-flèches
-~%25%corriger l'orthographe
-# certains le font
-~%-100%mettre en gras
-# l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+~%25%copier/couper/coller#tous les éditeurs le permettent
+~%25%rechercher et remplacer#très souvent disponible
+~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+~%25%corriger l'orthographe#certains le font
+~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
 }
 *************** END
 
-*************** À discuter
-éditeur de texte: la notion de paragraphe définie par la fin de
-ligne 8-). Montrer que la ligne (vue à l'écran) n'est pas un élément
-de structure en faisant varier la taille de la fenêtre éditeur. Le
-mot et les ponctuations ? 
-*************** END
 ** La structure, une vue arborescente
 
 Les mots, phrases et paragraphes définissent une première
@@ -233,32 +228,33 @@ table des matières, ...
 
 *************** Activité
 ::La structure d'un document:: 
-[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec <code>libreoffice</code></p>
+[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec <code>libreoffice</code>: http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt</p>
 <ul>
-<li>Ouvrez le /navigateur/ (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document. </li>
+<li>Ouvrez le <em>navigateur</em> (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document. </li>
 <li>Rendre une capture de cette fenêtre de navigateur</li>
 </ul>
 {}
 
 ::La structure d'une page web::
 <ul>
-<li> à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr.</li>
+<li> à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html/.</li>
 <li>pressez les touches <code>CTRL-MAJ-C</code>. La fenêtre de l'inspecteur de code
   <code>html</code> s'ouvre.</li>
-<li> observez la structure du document <code>html</code>. Utilisez les petites
-  flèches pour découvrir ou cacher les parties de code <code>html</code> incluses
-  les unes dans les autres.</li>
-<li> retrouvez la ligne de code correspondant au texte XXX</li>
-<li> Recopiez la dans la zone de réponse à ce quizz.</li>
-{}
+<li>observez la structure du document <code>html</code>. Utilisez les petites
+  flèches pour découvrir ou cacher les parties de code <code>html</code> incluses les unes dans les autres.</li>
+<li>Sur quelles petites flèches devez-vous cliquer pour arriver au texte <em>Vous pouvez changer la taille...</em>? 
+<li>La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code <code>html</code>. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.</li>
+{#html/body/section/ul/li}
 
 *************** END
-*************** À discuter
-Montrer que une organisation hiérarchique se
-retrouve souvent. Montrer la structure d'un livre avec un docbook
-simplifié. Montrer la structure d'une BD xml de gestion d'une
-bibliothèque.  
+
+*************** Activité avancée
+::Réorganiser la structure d'un document::
+Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du <em>navigateur</em> (touche <code>F5</code>). Rendez une capture d'écran de la structure obtenue visible dans le <em>navigateur</em>.
+{}
 *************** END
+
+
 ** Les méta-donnnées, une vue qualifiée
 
 Une troisième vue découle des besoins lorsqu'on manipule des
@@ -284,12 +280,10 @@ auteur, rechercher par titre, ordonner des versions par date, ...
 
 *************** Activité 
 ::La vue qualifiée:: 
-[html]<p>Dans le traitement de texte, regarder les propriétés du
-document suivant : http://ggggg.ggg/ggg/g
+Dans le traitement de texte, regarder les propriétés du
+document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
 <ul>
-  <li>Quel est le titre, les mots clef et le
-résumé ? Faites une capture d'écran de la fenêtre où vous avez trouvé
-ces meta-données.  
+  <li>Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  
   </li>
 </ul>
 {}
@@ -312,7 +306,7 @@ présentation ou forme* du document. Cette forme va s'appliquer au
 contenu en s'aidant de la structure mais il est important de bien
 distinguer la /présentation/ et le /contenu structuré/. En effet,
 comme vous l'avez vu dans le cours sur le Web, la séparation entre
-contenu et structure dans un fichier html et présentation dans une
+contenu et structure dans un fichier =html= et présentation dans une
 feuille de style css permet d'afficher un même contenu avec
 différentes formes mais aussi de faciliter certains traitements.
 Enfin, soyez vigilants car les traitements de textes entretiennent la
@@ -821,8 +815,15 @@ Enfin, sachez que l'idée de la liberté ou de l'ouverture s'applique aux conten
 
 
 *************** À discuter
-Faire réfléchir sur les évolutions récentes de html ? Web
-des données, knowledge graph, réseaux sociaux ?  
+- Faire réfléchir sur les évolutions récentes de html ? Web
+  des données, knowledge graph, réseaux sociaux ?  
+- éditeur de texte: la notion de paragraphe définie par la fin de
+  ligne 8-). Montrer que la ligne (vue à l'écran) n'est pas un élément
+  de structure en faisant varier la taille de la fenêtre éditeur. Le
+  mot et les ponctuations ? 
+- Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
+bibliothèque.  
+
 *************** END
 
 * Footnotes
