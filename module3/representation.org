@@ -174,30 +174,37 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 <ul>
 <li>Un éditeur de textes : Nous vous recommandons :
  <ul>
-   <li>Sous linux : =gedit=  (installé par défaut) ou =xxx= le clone libre de sublime ?</li>
-   <li>Sous Windows : =notepad= (installé par défaut) ou =xxx= </li>
-   <li>Sous Mac</li> : =yyy= (installé par défaut) ou  =xxx=</li>
-   <li>Une solution alternative est d'utiliser l'éditeur de texte  intégré dans =owncloud=.</li>
+   <li>Sous linux : <code>gedit</code>  (installé par défaut) ou <code>atom</code> (https://atom.io)</li>
+   <li>Sous Windows : <code>notepad</code> (installé par défaut) ou <code>atom</code>((https://atom.io)</li>
+   <li>Sous Mac</li> : <code>yyy</code> (installé par défaut) ou  <code>atom</code>((https://atom.io)</li>
+   <li>Une solution alternative est d'utiliser l'éditeur de texte  intégré dans <code>owncloud</code>.</li>
  </ul>
-<li>Un traitement de textes. Les exemples seront donnés dans ce cours avec =libreoffice=. 
+<li>Un traitement de textes. Les exemples seront donnés dans ce cours avec <code>libreoffice</code>. 
 </ul>
-<p>Les versions en ligne de traitement de textes ??? framaxxx et onlyoffice ? </p>
 {}
 
 ::Éditeur de textes:: 
 [html]<p>Lancer un éditeur de textes et en faire une capture
   d'écran à déposer en réponse à ce quizz.</p>
+{}
+
 ::Fonctionnalités d'un éditeur de textes::
 [html]<p>Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
 </p>
-<ul>
-<li>copier/couper/coller</li>
-<li>rechercher et remplacer</li>
-<li>avancer de mots en mots</li>
-<li>corriger l'orthographe</li>
-<li>mettre en gras</li>
-</ul>
+{
+~%25%copier/couper/coller
+# tous les éditeurs le permettent
+~%25%rechercher et remplacer
+# très souvent disponible
+~%25%avancer de mots en mots
+# souvent par la conjonction CRTL-flèches
+~%25%corriger l'orthographe
+# certains le font
+~%-100%mettre en gras
+# l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+}
 *************** END
+
 *************** À discuter
 éditeur de texte: la notion de paragraphe définie par la fin de
 ligne 8-). Montrer que la ligne (vue à l'écran) n'est pas un élément
@@ -226,21 +233,25 @@ table des matières, ...
 
 *************** Activité
 ::La structure d'un document:: 
-[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec libreoffice</p>
+[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec <code>libreoffice</code></p>
 <ul>
 <li>Ouvrez le /navigateur/ (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document. </li>
 <li>Rendre une capture de cette fenêtre de navigateur</li>
 </ul>
+{}
+
 ::La structure d'une page web::
 <ul>
 <li> à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr.</li>
-<li>pressez les touches CTRL-MAJ-C. La fenêtre de l'inspecteur de code
-  =html= s'ouvre.</li>
-<li> observez la structure du document =html=. Utilisez les petites
-  flèches pour découvrir ou cacher les parties de code =html= incluses
+<li>pressez les touches <code>CTRL-MAJ-C</code>. La fenêtre de l'inspecteur de code
+  <code>html</code> s'ouvre.</li>
+<li> observez la structure du document <code>html</code>. Utilisez les petites
+  flèches pour découvrir ou cacher les parties de code <code>html</code> incluses
   les unes dans les autres.</li>
 <li> retrouvez la ligne de code correspondant au texte XXX</li>
 <li> Recopiez la dans la zone de réponse à ce quizz.</li>
+{}
+
 *************** END
 *************** À discuter
 Montrer que une organisation hiérarchique se
@@ -281,16 +292,17 @@ résumé ? Faites une capture d'écran de la fenêtre où vous avez trouvé
 ces meta-données.  
   </li>
 </ul>
+{}
 *************** END
 *************** Activité : plus loin
 ::Uniquement des méta-données::
 [html]<p>Pour certaines applications, un  document un document 
 textuel peut se résumer uniquement à ses méta-données. C'est le cas des notices bibliographiques où la plus grande partie des fonds n'est pas numérisée et donc pour lesquelles le contenu des livres n'est pas représenté numériquement. </p>
-
 <p>Rendez-vous sur le site de la bibliothèque de l'université dans l'interface de recherche de livres.</p>
 <ul>
 <li>Indiquez sur quels critères vous pouvez effectuer une recherche</li>
 </ul>.  
+{}
 *************** END
 ** La présentation, une vue pas uniquement graphique
 
