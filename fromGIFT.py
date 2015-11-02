@@ -97,33 +97,31 @@ def process_questions(questions_src):
 
         #3. Process answers
         ## TRUEFALSE questions
-        if q_answers in ['T','F','TRUE','FALSE']:
+        if q_answers.startswith('T','F','TRUE','FALSE'):
             q_obj['type'] = 'TRUEFALSE'
+            #FIXME : retrieve possible feedback
             pass
-
-        ## MULTICHOICE
-        ### split answers
-        answers = []
-        new_answer = {}
-        for answer_raw in re.split('(=|~)',q_answers):
-            if answer_raw == '':
-                pass
-            else if answer_raw == '=':
-                new_answer['is_right'] = True
-            else if answer_raw == '~':
-                new_answer['is_right'] = False
-            else:
-                ### get text and create new answer object
-                new_answer['answer_text'] = answer_raw
-                answers.append(new_answer)
-                new_answer = {}
-
-        ### Process each answer
-
-
-
-
-
         ## NUMERIC questions
-        if q_answers.startswith('#'):
+        else if q_answers.startswith('#'):
             q_obj['type'] = 'NUMERIC'
+            # FIXME: for NUMERIC questions with a single anwser, get possible value and range #3.1415:0.0005
+
+        ## MULTICHOICE / MULTIANSWERS
+        ### split answers
+        q_obj['answers'] = []
+        for answer_raw in re.findall('([~=][^~=]*)', q_answers):
+            new_answer = {}
+            if answer_raw.startswith('='):
+                new_answer['is_right'] = True
+            else if answer_raw.startswith('~'):
+                new_answer['is_right'] = False
+            else if len(answer_raw) > 0:
+                ### get text and create new answer object
+                # FIXME : matching questions have answers like "=subquestion1 -> subanswer1"
+                # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
+                # FIXME : retrieve also global feedback with "####un feedback => test with below RE if appended to the end "
+                m = re.match('(?P<credit>\%\d+\%)*(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer)
+                new_answer['credit'] = m.group('credit')
+                new_answer['answer_text'] = m.group('answer').lstrip('~=')
+                new_answer['feedback'] = m.group('feedback')
+                q_obj['answers'].append(new_answer)
