@@ -27,6 +27,34 @@ Cela représente des enjeux de société très importants. le numérique a ouver
 
 Pour que ces questions ne restent pas dans les mains des informaticiens, il est nécessaire que chacun fasse l'effort de comprendre les bases, les fondements de ces technologies qui nous entourent. Le citoyen du XXIème siècle a besoin d'une véritable culture numérique qui ne se limite pas à l'utilisation de FaceBook ou d'un traitement de texte. C'est ce que nous allons développer dans ces cours...
 
+*************** Activité
+// question: 165003  name: 1.1.1. Quizz (Q1/3)
+::1.1.1. Quizz (Q1/3)::[html]<p>Pourquoi faut-il représenter les textes, images, son, etc.  par des nombres dans un ordinateur ?</p>{
+	~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
+	~<p>Les ordinateurs ont été inventés par des mathématiciens.</p>#<p>Non, les mathématiciens savent manipuler autre-chose que des nombres, et les ordinateurs sont le fruit de l'interaction entre de nombreuses sciences.</p>
+	=<p>Tout ordinateur est fondamentalement une machine qui calcule avec des nombres.</p>#<p>Oui, comme un ordinateur ne manipule que des nombres, tout doit être représenté sous forme de nombres pour qu'un ordinateur puisse le manipuler.</p>
+	####<p>Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler.</p>
+}
+
+// question: 165004  name: 1.1.1 Quizz (Q2/3)
+::1.1.1 Quizz (Q2/3)::[html]<p>Que signifie "<em>numérisation</em>" ?</p>{
+	=<p>L'opération qui consiste à représenter sous forme de nombres une information quelle qu'elle soit.</p>#<p>Oui !</p>
+	~<p>L'opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer tous les nombres c'est compter...</p>
+	####<p>La numérisation est l'opération qui consiste à représenter sous forme de nombres une information, quelle qu'elle soit.</p>
+}
+
+// question: 165005  name: 1.1.1 Quizz (Q3/3)
+::1.1.1 Quizz (Q3/3)::[html]<p>Parmi ces objets, quels sont ceux équipés de processeur(s) \:</p>{
+	~%16.66667%<p>tablettes</p>
+	~%16.66667%<p>smartphones</p>
+	~%16.66667%<p>box ADSL</p>
+	~%16.66667%<p>lecteur mp3</p>
+	~%16.66667%<p>ordinateur</p>
+	~%16.66667%<p>calculatrice</p>
+	~<p>aucun</p>#<p>Tous !</p>
+	####<p>Tous ces objets sont équipés de micro-processeurs !</p>
+}
+*************** END
 * Historique informatique
   :PROPERTIES:
   :video:    https://player.vimeo.com/video/122104231
@@ -48,6 +76,47 @@ Gordon Moore est également connu pour avoir énoncé une prédiction sur ce pro
 
 Ce qui signifie en pratique que lorsque vous achetez un ordinateur, moins de 2 ans après vous pouvez trouver un autre modèle 2 fois plus puissant au même prix.
 
+*************** Activité
+// question: 164998  name: 1.2.1 Quizz (Q1/2)
+::1.2.1 Quizz (Q1/2)::[html]<p>De quand datent les premiers ordinateurs ?</p>{
+	~<p>Au XVIIe siècle</p>
+	~<p>Juste avant la Révolution française</p>
+	=<p>A la fin de la seconde guerre mondiale</p>
+	~<p>Dans les années 1980</p>
+	~<p>Avant la première guerre mondiale</p>
+	####<p>C'est à la fin de la seconde guerre mondiale que les premiers ordinateurs sont apparus.</p>
+}
+
+
+// question: 164999  name: 1.2.1 Quizz (Q2/2)
+::1.2.1 Quizz (Q2/2)::[html]<p>Que dit la loi de Moore ?</p>{
+	~<p>Que s'il existe au moins deux façons de faire quelque chose et qu'au moins l'une de ces façons peut entraîner une catastrophe, il se trouvera forcément quelqu'un quelque part pour emprunter cette voie.</p>#<p>Non, ça c'est la loi de Murphy.</p>
+	=<p>Que la puissance d'un ordinateur double tous les 2 ans environ.</p>#<p>Exact !</p>
+	####<p>La puissance d'un ordinateur double environ tous les 2 ans.</p>
+}
+*************** END
+
+*************** Activité
+// question: 165000  name: 1.2.2 Quizz (Q1/2)
+::1.2.2 Quizz (Q1/2)::[html]<p>Entre mon ordinateur et l'ordinateur de mon père qui ont 12 ans d'écart, quelle est la différence de puissance à laquelle on peut s'attendre ?</p>{
+	~<p>Ils sont tous les deux aussi puissants, ça n'a pas changé en 12 ans.</p>#<p>Il faut revoir la vidéo !</p>
+	~<p>Mon ordinateur est environ 20 fois plus puissant.</p>#<p>Bien plus que ça...</p>
+	=<p>Mon ordinateur est environ 60 fois plus puissant</p>#<p>Tout à fait !</p>
+	~<p>Mon ordinateur est environ 150 fois plus puissant.</p>#<p>Quand même pas tant que ça !</p>
+	####<p>2 ans \: x 2<br />4 ans \: x 4<br />6 ans \: x 8<br />8 ans \: x1 6<br />10 ans \: x 32 <br /><strong>12 ans \: x 64</strong></p>\n<p>En d'autres mots un traitement qui prenait <strong>30 min</strong> avec l'ordinateur de mon père s'effectue en <strong>28 s</strong> sur le mien !</p>
+}
+
+
+// question: 165001  name: 1.2.2 Quizz (Q2/2)
+::1.2.2 Quizz (Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement courant d'être confronté à des programmes “bugués”, c'est à dire des programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais savez-vous d'où vient le terme “bug” ?<br /><br /></p>{
+	=<p>En anglais, “bug” signifie insecte. Un insecte s'était glissé dans le mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un relais et provoqué une panne.</p>#<p><span style\="color\: \#000000;">En effet, il s'agissait d'une mite.<br /></span></p>
+	~<p>“Bug” était le surnom d'un des premiers programmeurs chez Microsoft, il était réputé pour commettre beaucoup d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
+	~<p>“Bug” est la version en verlan de “GUB” (Grande Unité Binaire), un projet d'ordinateur qui n'a jamais fonctionné.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
+	~<p>“Bug” est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de Microsoft. Cette voiture serait tombée 13 fois en panne en un an…</p>#<p>Non, cherchez bien, c'est sur le web !</p>
+	~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé “Bugs Bunny”. Ils avaient pris l'habitude d'appeler “Bugs” leurs erreurs de programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
+	####<p><span style\="color\: \#000000;">Le premier bug a été causé par une mite \:</span></p>\n<p><span style\="color\: \#000000;"><img src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg" alt\="premier bug" width\="300" height\="213" /></span></p>\n<p><span style\="color\: \#000000;"> </span></p>
+}
+*************** END
 * Naissance d'Internet
   :PROPERTIES:
   :video:    https://player.vimeo.com/video/122104260
@@ -61,6 +130,37 @@ L'idée a été de multiplier les centres et d'interconnecter les réseaux de ch
 Ce système a tout de suite rencontré un grand succès. Il a ensuite évolué vers INTERNET, nom qu'on lui a donné au début des années 80 pour signifier qu'il s'agit d'une interconnexion de réseaux.
 
 Selon le vieil adage /tous les chemins mènent à Rome/, le système de communication permet d'échanger des données entre 2 points en passant par n'importe quel chemin à l'intérieur d'internet.
+*************** Activité
+// question: 165014  name: 1.3.1 (Q2/3)
+::1.3.1 (Q2/3)::[html]<p>Que signifie internet ?</p>{
+	~<p>Il s'agit de la contraction des mots anglais \: "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p>
+	=<p>Il s'agit de la contraction des mots "<em>interconnection</em>" et "<em>networks</em>" (interconnexion de réseaux).</p>#<p>Exactement !</p>
+	~<p> Les lettres du mot I.N.T.E.R.N.E.T sont les initiales des noms de ses 8 fondateurs.</p>#<p>Pas du tout !</p>
+	####<p>Internet est la contraction des deux mots anglais "interconnection" et "networks", qui signifie "interconnexion de réseaux".</p>
+}
+
+
+// question: 165013  name: 1.3.1 Quizz (Q1/3)
+::1.3.1 Quizz (Q1/3)::[html]<p>Quelle est la date de la création d'internet ? (date la plus proche)</p>{
+	~<p>1789</p>#<p>Vraiment ?</p>
+	~<p>1918</p>#<p>N'est-ce pas un peu tôt ?</p>
+	~<p>1945</p>#<p>N'est-ce pas un peu tôt ?</p>
+	=<p>1970</p>#<p>Oui, c'est cela.</p>
+	~<p>1990</p>#<p>Non, c'est trop récent...</p>
+	~<p>2005</p>#<p>Aussi tard ?</p>
+	####<p>C'est aux environs de <strong>1970</strong> qu'a été créé internet.</p>
+}
+
+
+// question: 165015  name: 1.3.1 Quizz (Q3/3)
+::1.3.1 Quizz (Q3/3)::[html]<p>Pourquoi internet est-il qualifié de réseau robuste ou tolérant aux pannes ?</p>{
+	~<p>Parce qu'il est fabriqué avec des matériaux très résistants.</p>#<p>Et non, ce n'est pas uniforme...</p>
+	~<p>Parce que beaucoup de salariés sont à sa disposition pour le réparer rapidement si nécessaire.</p>#<p>Vous êtes sûr ?</p>
+	=<p>Parce que, de par sa conception, il peut fonctionner en mode “dégradé”, c'est à dire que même si des lignes ou des machines sont en panne, d'autres chemins peuvent être utilisés pour véhiculer les informations.</p>#<p>Tout à fait !</p>
+	####<p>Parce qu'il peut fonctionner en mode "dégradé"...</p>
+}
+*************** END
+
 * Comment ça marche?
   :PROPERTIES:
   :video:    https://player.vimeo.com/video/122104315
@@ -81,6 +181,33 @@ En effet, ce sont des femmes et des hommes qui utilisent ces machines. Pour dés
 
 Très concrètement, regardons par exemple ce qui se passe lorsque je veux consulter la page d'accueil de Lille 3.
 tout d'abord, je clique sur un lien vers le site de l'université. Ce lien contient le nom de la machine capable de me fournir la page d'accueil : =www.univ-lille3.fr=. Mon ordinateur va donc contacter un serveur de noms pour connaître l'adresse =IP= de cette machine. Une fois que cette adresse =IP= est connue, il peut communiquer avec =www.univ-lille3.fr= et envoyer à cette machine un message qui demande le contenu de cette page d'accueil. Le message contient bien entendu l'adresse =IP= de mon ordinateur, ainsi la machine peut me répondre en renvoyant le contenu qui m'intéresse. Il ne reste plus alors à mon ordinateur qu'à afficher ce contenu.
+*************** Activité
+// question: 165016  name: 1.4.1 Quizz (Q1/3)
+::1.4.1 Quizz (Q1/3)::[html]<p>A quoi sert une adresse IP ?</p>{
+	=<p>À identifier les machines connectées de façon unique.</p>#<p>Oui !</p>
+	~<p>À différencier les gros ordinateurs et les plus petits.</p>#<p>Comment ça ?</p>
+	~<p>À envoyer des mails automatiquement.</p>#<p>Pas du tout...</p>
+	####<p>Une adresse IP (Internet Protocol) sert à identifier de façon unique les machines connectées.</p>
+}
+
+
+// question: 165027  name: 1.4.1 Quizz (Q2/3)_NEW
+::1.4.1 Quizz (Q2/3)_NEW::[html]<p>A l'aide de quel équipement réalise-t-on l'interconnexion de réseaux ?</p>{
+	~<p>Une adresse IP</p>#<p>Vous devriez revoir la vidéo !</p>
+	~<p>Un serveur de noms</p>#<p>Non, il ne s'agit d'un serveur de noms.</p>
+	=<p>Un routeur</p>#<p>Exact !</p>
+	####<p>C'est à l'aide d'un routeur, encore nommé passerelle qu'on réalise l'interconnexion de réseaux.</p>
+}
+
+
+// question: 165018  name: 1.4.1 Quizz (Q3/3)
+::1.4.1 Quizz (Q3/3)::[html]<p>Qu'est-ce qu'un serveur de noms ?</p>{
+	~<p>Un site web qui aide à choisir un prénom pour ses enfants.</p>#<p>C'est une blague !</p>
+	~<p>Un logiciel (pirate) qui permet de trouver les mots de passe d'autres utilisateurs.</p>#<p>Pas vraiment...</p>
+	=<p>Une machine qui contient une table d'équivalence entre des noms de machines et leur adresse IP.</p>#<p>Oui, c'est exact !</p>
+	####<p>Un serveur de noms est une machine qui contient une table d'équivalence entre des noms de machines et leur adresse IP.</p>
+}
+*************** END
 * Que se passe-t-il quand on se connecte à Internet?
   :PROPERTIES:
   :video:    https://player.vimeo.com/video/122104376
@@ -103,6 +230,28 @@ Une autre conséquence du fonctionnement d'internet, est que des filtres peuvent
 La dernière remarque porte sur l'emploi trompeur du mot /envoi/. Lorsqu'une machine /envoie/ un message, elle réalise en réalité une copie du message sur le réseau. Libre alors à elle de supprimer ou conserver la version originelle du message. C'est une situation que l'on rencontre régulièrement dans le monde /numérique/ et qui rend difficile la lutte contre les copies illicites. Mais nous aurons l'occasion d'en reparler plus tard.
 
 Mais finalement, pourquoi avoir conçu et suivi cette organisation complexe d'interconnexion de réseaux? En fait, un très grand réseau où toutes les machines seraient directement reliées est impossible à concevoir. Il faudrait multiplier les câbles et même dans une solution sans fil, à l'image d'une discussion à plusieurs personnes, au delà d'une certaine limite les discussions des uns couvrent inévitablement celle des autres à tel point qu'on ne peut plus discuter! Les réseaux locaux avec des discussions locales ne peuvent donc fonctionner que jusqu'à une certaine taille au delà de laquelle une structuration par interconnexion devient obligatoire.
+
+*************** Activité
+// question: 165019  name: 1.5.1 Quizz (Q1/2)
+::1.5.1 Quizz (Q1/2)::[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il obtenir pour rejoindre internet ?</p>{
+	~%33.33333%<p>Une adresse IP.</p>#<p>Oui, entre autres...</p>
+	~<p>Un nom de code.</p>#<p>Et non...</p>
+	~<p>Une autorisation de l'État ?</p>#<p>Vraiment ?</p>
+	~%33.33333%<p>L'adresse d'un serveur de noms.</p>#<p>C'est bien l'un des éléments.</p>
+	~%33.33333%<p>L'adresse d'un routeur.</p>#<p>Oui, mais pas seulement.</p>
+	~<p>L'accès à un moteur de recherche.</p>#<p>Pas du tout.</p>
+	####<p>En fait, il doit obtenir 3 éléments \: une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur.</p>
+}
+
+
+// question: 165020  name: 1.5.1 Quizz (Q2/2)
+::1.5.1 Quizz (Q2/2)::[html]<p>Pourquoi la machine qui assure l'interconnexion avec les autres réseaux d'internet (le routeur) est-elle une place de choix pour y installer des fonctions de filtrage ?</p>{
+	=<p>Parce que toutes les informations passent par là.</p>#<p>C'est exact !</p>
+	~<p>Parce que c'est la machine la plus puissante.</p>#<p>Et bien, non.</p>
+	~<p>Parce qu'elle est en général bien cachée.</p>#<p>Pas du tout...</p>
+	####<p>Parce que toutes les informations transitent par elle.</p>
+}
+*************** END
 
 * Les supports physiques de transmission de l'information
   :PROPERTIES:
@@ -156,6 +305,40 @@ Toutefois, la qualité du lien qui relie votre appareil électronique au réseau
 
 Ainsi, il est très fréquent de constater que la vitesse de transmission des données varie dans le temps ; varie selon les endroits ou les moyens avec lesquels on se connecte à Internet ou encore varie selon les sites que l'on visite ou les services que l'on demande. Comme nous venons de le voir, la vitesse d'une connexion dépend de nombreux facteurs. Difficile donc de savoir d'où vient un ralentissement quand il intervient. Mais parfois, le simple changement du mode de connexion utilisé peut faire des miracles. Soyez agiles !!!
 
+*************** Activité
+// question: 165021  name: 1.6.1 Quizz (Q1/3)
+::1.6.1 Quizz (Q1/3)::[html]<p>Quels supports sont utilisés pour la transmission de données et qui peut donc servir pour une connexion internet ?</p>{
+	~<p>L'eau dans un tuyau.</p>#<p>Pas à notre connaissance, mais pourquoi pas ?</p>
+	~%20%<p>L'électricité dans les câbles téléphonique.</p>#<p>Oui, l'ADSL</p>
+	~%20%<p>L'électricité dans les câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des prises électriques (Voir \: http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)</p>
+	~%20%<p>La lumière dans les fibres optiques.</p>#<p>Oui, aussi.</p>
+	~%20%<p>Les ondes électromagnétiques dans l'air.</p>#<p>Oui, Wifi, bluetooth, réseau téléphonique 2G, 3G, 4G, etc.</p>
+	~%20%<p>L'électricité dans les câbles des prises électriques.</p>#<p>Oui, voir \: http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
+	####<p>Tout, sauf l'eau, évidemment !</p>
+}
+
+
+// question: 165022  name: 1.6.1 Quizz (Q2/3)
+::1.6.1 Quizz (Q2/3)::[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion ?</p>{
+	~%25%<p>Le débit maximal admissible du lien qui me raccorde au réseau local.</p>#<p>Oui, c'est l'un des paramètres.</p>
+	~%25%<p>Le nombre d'utilisateurs de ce lien.</p>#<p>Exact, c'est l'un des paramètres.</p>
+	~%25%<p>Le nombre de messages qui passent par les mêmes routeurs que les miens.</p>#<p>Oui, c'est un paramètre.</p>
+	~%25%<p>Le nombre de requêtes arrivant sur la machine avec qui je désire échanger des messages.</p>#<p>Oui.</p>
+	~<p>L'âge de l'utilisateur.</p>#<p>Sans commentaire !</p>
+	####<p>Le débit maximal admissible du lien, le nombre d'utilisateurs de ce lien, le nombre de requêtes mais aussi le nombre de messages qui passent par les mêmes routeurs que les miens.</p>
+}
+
+
+// question: 165023  name: 1.6.1 Quizz (Q3/3)
+::1.6.1 Quizz (Q3/3)::[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>{
+	=<p>Avoir un compte Lille 3 ou un compte dans une autre université.</p>#<p>Exact !</p>
+	~<p>Payer un abonnement.</p>#<p>Absolument pas, c'est gratuit.</p>
+	~<p>Aller en cours.</p>#<p>Aucun rapport !</p>
+	~<p>Utiliser un smartphone produit en France.</p>#<p>Aucun rapport !</p>
+	~<p>Signer la charte graphique de Lille 3.</p>#<p>Non mais signer la charte <em><strong>informatique</strong> </em>Lille 3 est obligatoire...</p>
+	####<p>Avoir un compte Lille 3 ou un compte dans une autre université.</p>
+}
+*************** END
 * Société : qui décide sur Internet?
   :PROPERTIES:
   :video:    https://player.vimeo.com/video/122104174
@@ -198,3 +381,26 @@ Et les routeurs dont nous avons parlé sont très souvent fabriqués par l'entre
 Nous avons vu que les informations que nous communiquons passent par des routeurs. Ceux-ci peuvent assurer des fonctions de filtrage des contenus et de journalisation (ou mémorisation de l'historique des échanges). En France, les fournisseurs d'accès à internet, dont l'université, sont tenus de pouvoir répondre à des enquêtes provenant de juges : qui a consulté ce site tel jour à telle heure ? Donc, à l'université, au travail ou chez vous, une mémorisation est faite.
 
 Toutefois mémorisation ne signifie pas systématiquement surveillance ou espionnage. La CNIL par exemple, et bien sûr la justice, doivent protéger les citoyens contre ces abus. Mais leurs moyens ne sont pas toujours à la hauteur de leurs missions... Et les affaires comme PRISM ont montré que cette question dépasse largement le cadre Français.
+*************** Activité
+// question: 165024  name: 1.8.1 (Q1/3)
+::1.8.1 (Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de domaine et les adresses IP ?</p>{
+	=<p>Au niveau mondial \:</p> -> ICANN
+	=<p>Au niveau de la France \:</p> -> AFNIC
+	= -> CNIL
+	####<p>ICANN pour le niveau mondial et l'AFNIC pour la France.</p>
+}
+
+// question: 165028  name: 1.8.1 (Q2/3)_NEW
+::1.8.1 (Q2/3)_NEW::[html]<p>L'ISO est l'organisation internationale de normalisation.</p>{TRUE#<p>Il faut revoir la vidéo...</p>#<p>Exact !</p>####<p>Vrai, l'ISO est bien l'organisation internationale de normalisation (International Organization for Standardization).<br /><br /></p>}
+
+// question: 165029  name: 1.8.1 (Q3/3) Noms pleinement qualifiés_NEW
+::1.8.1 (Q3/3) Noms pleinement qualifiés_NEW::[html]<p>Comment s'écrit le nom d'une machine C, située dans un domaine B, lui même dans un domaine général A ?</p>{
+	~<p>ABC</p>
+	~<p>ACB</p>
+	=<p>CBA</p>
+	~<p>CAB</p>
+	~<p>BAC</p>
+	~<p>BCA</p>
+	####<p>C.B.A \: le nom de la machine, puis le nom du domaine de 1er niveau et enfin le nom du domaine général.</p>
+}
+*************** END
