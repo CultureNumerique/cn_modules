@@ -171,11 +171,14 @@ def process_questions(questions_src):
 
         # 2. Process q_prestate
         #pprint(" Trying to process prestate = %s" % (q_prestate))
-        r0 = re.compile('::(?P<title>.*)::(\[(?P<text_format>\w*)\])*(?P<text>.*)')
+        r0 = re.compile('(::(?P<title>.*)::){0,1}(\[(?P<text_format>\w*)\])*(?P<text>.*)')
         m0 = r0.search(q_prestate)
-        q_obj.title = m0.group('title')
-        q_obj.text_format = m0.group('text_format')
-        q_obj.text = m0.group('text')
+        if m0.group('title'):
+            q_obj.title = m0.group('title')
+        if m0.group('text_format'):
+            q_obj.text_format = m0.group('text_format')
+        if m0.group('text'):
+            q_obj.text = m0.group('text')
 
         # 3. Process answers
         ## Retrieve global feedback, if any, and remove it for simpler further processing
