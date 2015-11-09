@@ -51,13 +51,16 @@ class GiftQuestion():
         self.text = ''
         self.text_format = 'moodle' # possible values = html, moodle, plain and markdown
         self.answers = []
+        self.poststate = ''
+        self.global_feedback = ''
 
     def to_html(self):
         """ From a question object, write HTML representation """
 
         doc, tag, text = Doc().tagtext()
-        doc.asis('\n')
         # FIXME : add comment line here ?
+        doc.asis('\n')
+        doc.asis('<!-- New question -->')
         with tag('div', klass='question'):
             with tag('h3'):
                 text(self.title)
@@ -81,8 +84,10 @@ class GiftQuestion():
                             doc.stag('input', type='radio')
                             text(choice)
 
-        doc.asis('\n<br />\n\n')
-        return(indent(doc.getvalue()))
+        doc.asis('\n')
+        doc.asis('<!-- Globlal feedback :'+self.global_feedback+' -->')
+        doc.asis('\n')
+        return(indent(doc.getvalue(), newline='\n'))
 
 
 def extract_questions(some_text):
@@ -96,7 +101,6 @@ def extract_questions(some_text):
         if line == '' or line.isspace():
             if new_question:
                 if len(new_question) > 0:
-                    # FIXME clean new_question with this RE <(span|strong)[^>]*>|</(strong|span)>
                     new_question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', new_question)
                     questions_src.append(new_question)
             new_question = ""
@@ -149,7 +153,7 @@ def process_questions(questions_src):
         q_obj.text = m.group('text')
 
         # 3. Process answers
-        ## Retrieve global feedback, if any
+        ## Retrieve global feedback, if any, and remove it for simpler further processing
         
         ## Then, process the remaining types
         if q_answers == '':
