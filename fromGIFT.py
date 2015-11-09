@@ -14,7 +14,20 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
+HEADER = """
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+</head>
+<body>
+"""
 
+FOOTER = """
+</body>
+</html>
+"""
 # GIFT model (from http://search.cpan.org/~casiano/Gift-0.6/lib/Gift.pm):
 # * Questions separated by new line
 # * Question made of 3 parts:
@@ -50,9 +63,12 @@ class GiftQuestion():
         self.title = ''
         self.text = ''
         self.text_format = 'moodle' # possible values = html, moodle, plain and markdown
-        self.answers = []
-        self.poststate = ''
+        self.answers = [] # a list of possible answers objects
+        self.poststate = '' # bit of text possibly added in case of MISSINGWORD questions
+        self.question_is_true = True # for TRUEFALSE questions, by default considered TRUE
         self.global_feedback = ''
+        self.feedback_for_right = '' # for TRUEFALSE questions, given when giving the right answer
+        self.feedback_for_wrong = '' # for TRUEFALSE questions, given when giving the wrong answer
 
     def to_html(self):
         """ From a question object, write HTML representation """
@@ -99,13 +115,20 @@ def extract_questions(some_text):
     for line in some_text.splitlines():
         # if blank line (or line with only spaces), starts a new question
         if line == '' or line.isspace():
-            if new_question:
+            if new_question is not None:
                 if len(new_question) > 0:
                     new_question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', new_question)
+                    new_question = re.sub('\\\\n', '', new_question) # remove \\n in src txt
+                    new_question = re.sub('\\\:', '', new_question) # remove \: in src txt
                     questions_src.append(new_question)
-            new_question = ""
+                    pprint(" !=!=!=!=!=! appending new question =%s=" % (new_question))
+                    new_question = "" # we start over a new question
+                else:
+                    pass
+            else:
+                new_question = ""
         # if starts with '//' it's a comment
-        elif '//' in line:
+        elif line.startswith('//'):
             # FIXME get question number from pattern " question: xxxx "
             pass
         elif '$CATEGORY' in line:
@@ -113,10 +136,12 @@ def extract_questions(some_text):
             pass
         # else,  line should be aggregated to the current question; for one-liners, this is a new question in its own
         else:
-            if not new_question:
+            if new_question is None:
                 new_question = ""
             new_question+=line
 
+
+    pprint (" ^^^^^^^^^^^^  Extracted  %d questions " % (len(questions_src)))
     return questions_src
 
 
@@ -128,7 +153,7 @@ def process_questions(questions_src):
     question_objects = []
 
     for q_src in questions_src:
-        pprint(" ++++++  Processing new question src = %s" % (q_src))
+        #pprint(" ++++++  Processing new question src = %s" % (q_src))
         q_obj = GiftQuestion()
         q_prestate = ""
         # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
@@ -138,31 +163,41 @@ def process_questions(questions_src):
             q_answers = tmp.split('}', maxsplit=1)[0]
             q_poststate = tmp.split('}', maxsplit=1)[1]
         except:
-            # description type
+            # description type with no {}
             q_obj.text = q_src
             q_obj.type = 'DESCRIPTION'
             question_objects.append(q_obj)
             pass
 
         # 2. Process q_prestate
-        pprint(" Trying to process prestate = %s" % (q_prestate))
-        p = re.compile('::(?P<title>.*)::(\[(?P<text_format>\w*)\])*(?P<text>.*)')
-        m = p.match(q_prestate)
-        q_obj.title = m.group('title')
-        q_obj.text_format = m.group('text_format')
-        q_obj.text = m.group('text')
+        #pprint(" Trying to process prestate = %s" % (q_prestate))
+        r0 = re.compile('::(?P<title>.*)::(\[(?P<text_format>\w*)\])*(?P<text>.*)')
+        m0 = r0.search(q_prestate)
+        q_obj.title = m0.group('title')
+        q_obj.text_format = m0.group('text_format')
+        q_obj.text = m0.group('text')
 
         # 3. Process answers
         ## Retrieve global feedback, if any, and remove it for simpler further processing
-        
+        r1 = re.compile('####(?P<global_fb>.*)')
+        m1 = r1.search(q_answers)
+        if m1 is not None:
+            q_obj.global_feedback = m1.group('global_fb')
+            q_answers = r1.sub('', q_answers)
         ## Then, process the remaining types
+        print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
         if q_answers == '':
             q_obj.type = 'ESSAY'
         ## TRUEFALSE questions
         elif q_answers.startswith(('T','F','TRUE','FALSE')):
             q_obj.type = 'TRUEFALSE'
-            #FIXME : retrieve possible feedback
-            pass
+            r2 = re.compile('#(?P<wrong_fb>[^#]*)#(?P<right_fb>[^#]*)')
+            m2 = r2.search(q_answers)
+            if m2 is not None:
+                q_obj.feedback_for_wrong = m2.group('wrong_fb')
+                q_obj.feedback_for_right = m2.group('right_fb')
+            if q_answers.startswith(('F','FALSE')):
+                q_obj.question_is_true = False # default is True
         ## NUMERIC questions
         elif q_answers.startswith('#'):
             q_obj.type = 'NUMERIC'
@@ -172,9 +207,10 @@ def process_questions(questions_src):
         ### split answers
         right_answer_count = 0
         false_answer_count = 0
+
         for answer_raw in re.findall('([~=][^~=]*)', q_answers):
             new_answer = {}
-            # MULTIANSWERS <=> right_answer_count = 0
+            # MULTIANSWERS <=> right_answer_count =  AND false_answer_count > 0
             if answer_raw.startswith('='):
                 new_answer['is_right'] = True
                 right_answer_count+=1
@@ -185,17 +221,16 @@ def process_questions(questions_src):
                 ### get text and create new answer object
                 # FIXME : MATCHING questions have answers like "=subquestion1 -> subanswer1"
                 # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
-                # FIXME : retrieve also global feedback with "####un feedback => test with below RE if appended to the end "
                 # FIXME : deal with newlines included in answer or question text
-                m = re.match('(?P<credit>\%\d+\%)*(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
+                m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
                 new_answer['credit'] = m.group('credit')
-                new_answer['answer_text'] = m.group('answer').lstrip('~=')
+                new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
                 new_answer['feedback'] = m.group('feedback')
                 q_obj.answers.append(new_answer)
 
-        if right_answer_count == 0 :
+        if right_answer_count == 0 and false_answer_count > 0:
             q_obj.type = 'MULTIANSWER'
-        else:
+        elif false_answer_count > 0:
             q_obj.type = 'MULTICHOICE'
         question_objects.append(q_obj)
 
@@ -220,9 +255,10 @@ def main(argv):
     # Write them in HTML
     filename = filein+'.html'
     fileout = open(filename, 'w')
+    fileout.write(HEADER)
     for question in questions:
         fileout.write(question.to_html())
-
+    fileout.write(FOOTER)
     fileout.close()
 
 ############### main ################
