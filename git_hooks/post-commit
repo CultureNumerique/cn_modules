@@ -1,0 +1,3 @@
+git checkout -B gh-pages
+git rebase master
+git checkout master
