@@ -16,7 +16,55 @@ import sys
 import re
 import json
 
-from PyOrgMode import PyOrgMode
+def process_org(org_src):
+    """ from org text, parse line by line and split out in different folders:
+        - /auto-evaluation for short quizz (Activité)
+        - /devoirs for assignments (Activité avancée)
+        - /videos for animations (Animation)
+        - /webcontent for course material (all the remaining org-text)
+
+        return config object
+    """
+
+    config = {
+        'lom_metadata':{
+            'title': '',
+            'language':'en'
+        },
+    }
+    sections = []
+    new_section = {
+        'title':'',
+        'source_file':'',
+        'subsections':[]
+    }
+    new_sub_section = {
+        'title':'',
+        'source_file':'',
+        'type':'' # from webcontent / devoirs / auto-evaluation
+        'videos':[]
+    }
+    new_video = {
+        'video_text_src:'',
+        'video_embed_src':''
+    }
+    for line in org_src.splitlines():
+        if line.startswith('#'):
+        # first line starting with # are for parameters where we look for title and lang
+            reg1 = re.search('#\+TITLE:(?P<title>.*)', line)
+            if reg1:
+                config['lom_metadata']['title'] = reg1.group('title')
+            reg2 = re.search('#\+LANGUAGE:(?P<lang>.*)', line)
+            if reg2:
+                config['lom_metadata']['language'] = reg2.group('lang')
+        else if line.startswith('*'):
+            # it can be
+            #   - section *
+            #   - subsection **
+            #   - special content *{15x} + [Activité / Activité avancé / Animation]
+            reg3 = re.search('^\*{1}\s(?P<sec_title>.*)')
+            reg4 = re.search('^\*{2}\s(?P<subsec_title>.*)')
+            reg5 = re.search('^\*{15}\s(?P<special>.*)')
 
 
 def main(argv):
@@ -33,9 +81,12 @@ def main(argv):
         print(" file has to be an org mode file, ending with '.org'")
         return false
 
-    # load .org file
-    base = PyOrgMode.OrgDataStructure()
-    base.load_from_file(filein)
+    with open(filein, encoding='utf-8') as org_file:
+        org_src = org_file.read()
+
+
+
+    process_org(org_src)
 
     # with open(filein, encoding='utf-8') as org_file:
     #     # load module data from filein
