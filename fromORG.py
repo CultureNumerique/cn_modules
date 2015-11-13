@@ -39,127 +39,76 @@ def process_org(org_src):
         },
         'sections':[]
     }
-    # new_section = {
-    #     'title':'',
-    #     'source_file':'',
-    #     'subsections':[]
-    # }
-    # new_sub_section = {
-    #     'title':'', # by default named 'Cours' when not explicitely declared in org-mode syntax
-    #     'source_file':'',
-    #     'type':'' # from webcontent / devoirs / auto-evaluation
-    #     'videos':[]
-    # }
-    # new_video = {
-    #     'video_text_src:'',
-    #     'video_embed_src':''
-    # }
-    # current = {
-    #     'src':'',
-    #     'type':'webcontent' # from webcontent / devoirs / auto-evaluation
-    # }
+
+    ##  A. split sections
+    sections_split = re.split('^\*{1}\s(.*)', org_src, flags=re.M)
+    # first, look for global parameters
+    params = sections_split[0]
+    reg1 = re.search('#\+TITLE:(?P<title>.*)', params)
+    if reg1:
+        config['lom_metadata']['title'] = reg1.group('title')
+    reg2 = re.search('#\+LANGUAGE:(?P<lang>.*)', params)
+    if reg2:
+        config['lom_metadata']['language'] = reg2.group('lang')
+
     sections = []
     new_subsection = None
     new_section = None
-    filling_subsection = True
-    for line_number, line in enumerate(org_src.splitlines()):
-        try:
-            if line.startswith('#'):
-            # first line starting with # are for parameters where we look for title and lang
-                reg1 = re.search('#\+TITLE:(?P<title>.*)', line)
-                if reg1:
-                    config['lom_metadata']['title'] = reg1.group('title')
-                reg2 = re.search('#\+LANGUAGE:(?P<lang>.*)', line)
-                if reg2:
-                    config['lom_metadata']['language'] = reg2.group('lang')
-
-            elif line.startswith('*'):
-                # it can be
-                #   - section *
-                #   - subsection **
-                #   - special content *{15x} + [Activité / Activité avancé / Animation]
-                # Starts new sec
-                reg_sec = re.match('^\*{1}\s(?P<sec_title>.*)', line)
-                if reg_sec:
-                    # end current section AND subsection
-                    if new_subsection:
-                        new_section['subsections'].append(new_subsection)
-                    if new_section:
-                        sections.append(new_section)
-                    # starts new section and new subsec (in case subsec is omitted)
-                    new_section = {
-                        'title':reg_sec.group('sec_title'),
-                        'subsections':[]
-                    }
-                    new_subsection = {
-                        'txt':'',
-                        'title':'Cours',
-                        'videos':[],
-                        'type':'webcontent' # for explicitely declared subsections, they are rendered as course material
-                    }
-                #  Starts new subsec
-                reg_sub = re.match('^\*{2}\s(?P<subsec_title>.*)', line)
-                if reg_sub:
-                    # end current  and starts a new  FIXME FACTOR
-                    if new_subsection:
-                        new_section['subsections'].append(new_subsection)
-                    new_subsection = {
-                        'txt':'',
-                        'title':reg_sub.group('subsec_title'),
-                        'videos':[],
-                        'type':'webcontent' # for explicitely declared subsections, they are rendered as course material
-                    }
-
-                # Starts new activité, and hence subsec
-                # reg = re.findall('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND', s, flags=re.S+re.M)
-                # WRONG reg = re.split('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND|^\*{2}\s(.*)', s, flags=re.S+re.M)
-                reg_activite = re.match('^\*{15}\sActivité(?P<act_avancee>\savancée){0,1}', line)
-                if reg_activite:
-                    newtype = 'auto-evaluation'
-                    if reg_activite.group('act_avancee'):
-                        newtype = 'devoirs'
-                    # end current subsec, starts new one FIXME FACTOR
-                    if new_subsection:
-                        new_section['subsections'].append(new_subsection)
-                    new_subsection = {
-                        'txt':'',
-                        'title':,
-                        'videos':[],
-                        'type':newtype
-                    }
-                # check wether special object
-                reg_special = re.match('^\*{15}\s(?P<special>.*)', line)
-                if reg_special:
-                    current_type = reg_special.group('special')
-
-                    if 'END' in current_type:
-                        # ending current object, save it to a file
-                        print(" got new special object =%s=" % (str(new_current)))
-                        filling_subsection = True
-                    else:
-                        # Case "Activité" / "Activité avancée"
-                        if 'Activité' in new_current['type']:
-                            # end current subsection, starts a new one FIXME FACTOR
-
-                        # Case "Animation" => add it to current subsections
-                        # Case "Activité avancée" => create a new file, add it to "devoirs"
-                        new_current = {
-                            'src': '',
-                            'type': current_type
-                        }
-                        filling_subsection = False # toggle
-
-
-            # general case : just add line to current special object or current subsection
-            else:
-                if filling_subsection:
-                    new_subsection['txt'].append(line)
+    # B. split subsections
+    new_section_title = ''
+    for idx, section in enumerate(sections_split):
+        if idx == 0:
+            pass
+        # section's content starts always with a newline
+        if section.startswith('\n'):
+            new_section = {
+                'title':new_section_title,
+                'subsections':[]
+            }
+            # regex for spliting in subsections
+            subsec_split = re.split('^\*{2}\s(.*)', section, flags=re.M)
+            subsections = []
+            new_subsection_title = ''
+            for split in subsec_split:
+                # subsec content always starts with \n
+                if split.startswith('\n') and len(split) > 1:
+                    if len(new_subsection_title) == 0:
+                        new_subsection_title = 'Cours'
+                    # regex for spliting again with "***** Activité [avancée]"
+                    activites = re.split('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND', split, flags=re.S+re.M)
+                    next_type = 'webcontent' # default type for subsections
+                    for activite_split in activites:
+                        # if 'None' or 'avancée' => next item is an activite node
+                        if activite_split == None:
+                            next_type = 'auto-evaluation'
+                            new_subsection_title = 'Quizz'
+                            pass
+                        elif activite_split == 'avancée':
+                            new_subsection_title = "Exercice d'approdissement"
+                            next_type = 'devoirs'
+                            pass
+                        elif not activite_split.isspace(): # normal web content type subsection
+                            new_subsection = {
+                                'title':new_subsection_title,
+                                'type':next_type,
+                                'sub_src':activite_split,
+                            }
+                            subsections.append(new_subsection)
+                # title comes before the content of a subsection
                 else:
-                    current['src'].append(line)
+                    new_subsection_title = split
+            # add subsections to list
+            new_section['subsections'] = subsections
+            sections.append(new_section)
+        # section's title precedes section content
+        else:
+            new_section_title = section
 
-        except:
-            print ("Error parsing line n°%d" % (line_number))
-            raise
+    # C. split again subsec with Activité [avancée]
+    # reg = re.findall('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND', s, flags=re.S+re.M)
+
+
+
 
     config['sections'] = sections
     return config
@@ -181,26 +130,11 @@ def main(argv):
     with open(filein, encoding='utf-8') as org_file:
         org_src = org_file.read()
 
-
-
     config = process_org(org_src)
     print ("end result = %s " % str(config))
-    # with open(filein, encoding='utf-8') as org_file:
-    #     # load module data from filein
-    #     org_src = org_file.read()
-    #
-    # # Extract raw Gift questions in a *list*
-    # raw_gift_questions = extract_questions(gift_src)
-    # # Process them and store them in a *list of objects*
-    # questions = process_questions(raw_gift_questions)
-    # # Write them in HTML
-    # filename = filein+'.html'
-    # fileout = open(filename, 'w')
-    # fileout.write(HEADER)
-    # for question in questions:
-    #     fileout.write(question.to_html())
-    # fileout.write(FOOTER)
-    # fileout.close()
+    with open('module_config.json', 'w') as outfile:
+        json.dump(config, outfile)
+
 
 ############### main ################
 if __name__ == "__main__":
