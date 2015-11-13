@@ -86,15 +86,21 @@ def process_org(org_src):
                         new_section['subsections'].append(new_subsection)
                     if new_section:
                         sections.append(new_section)
-                    # starts new section
+                    # starts new section and new subsec (in case subsec is omitted)
                     new_section = {
                         'title':reg_sec.group('sec_title'),
                         'subsections':[]
                     }
+                    new_subsection = {
+                        'txt':'',
+                        'title':'Cours',
+                        'videos':[],
+                        'type':'webcontent' # for explicitely declared subsections, they are rendered as course material
+                    }
                 #  Starts new subsec
                 reg_sub = re.match('^\*{2}\s(?P<subsec_title>.*)', line)
                 if reg_sub:
-                    # end current  and starts a new one
+                    # end current  and starts a new  FIXME FACTOR
                     if new_subsection:
                         new_section['subsections'].append(new_subsection)
                     new_subsection = {
@@ -104,6 +110,23 @@ def process_org(org_src):
                         'type':'webcontent' # for explicitely declared subsections, they are rendered as course material
                     }
 
+                # Starts new activité, and hence subsec
+                # reg = re.findall('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND', s, flags=re.S+re.M)
+                # WRONG reg = re.split('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND|^\*{2}\s(.*)', s, flags=re.S+re.M)
+                reg_activite = re.match('^\*{15}\sActivité(?P<act_avancee>\savancée){0,1}', line)
+                if reg_activite:
+                    newtype = 'auto-evaluation'
+                    if reg_activite.group('act_avancee'):
+                        newtype = 'devoirs'
+                    # end current subsec, starts new one FIXME FACTOR
+                    if new_subsection:
+                        new_section['subsections'].append(new_subsection)
+                    new_subsection = {
+                        'txt':'',
+                        'title':,
+                        'videos':[],
+                        'type':newtype
+                    }
                 # check wether special object
                 reg_special = re.match('^\*{15}\s(?P<special>.*)', line)
                 if reg_special:
@@ -113,13 +136,13 @@ def process_org(org_src):
                         # ending current object, save it to a file
                         print(" got new special object =%s=" % (str(new_current)))
                         filling_subsection = True
+                    else:
                         # Case "Activité" / "Activité avancée"
-                        #if 'Activité' in new_current['type']:
-                            # end current subsection, starts a new one
-                        #    new_subsection['']
+                        if 'Activité' in new_current['type']:
+                            # end current subsection, starts a new one FIXME FACTOR
+
                         # Case "Animation" => add it to current subsections
                         # Case "Activité avancée" => create a new file, add it to "devoirs"
-                    else:
                         new_current = {
                             'src': '',
                             'type': current_type
