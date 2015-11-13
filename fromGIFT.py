@@ -166,6 +166,7 @@ def process_questions(questions_src):
             # description type with no {}
             q_obj.text = q_src
             q_obj.type = 'DESCRIPTION'
+            q_answers = ''
             question_objects.append(q_obj)
             pass
 

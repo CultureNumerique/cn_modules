@@ -16,7 +16,27 @@ import sys
 import re
 import json
 
-def process_org(org_src):
+from fromGIFT import extract_questions, process_questions
+from slugify import slugify
+
+def write_file(src, current_dir, target_folder, name):
+    """
+        given a "src" source string, write a file with "name" located in
+        "current_dir"/"target_folder"
+    """
+    filename = os.path.join(current_dir, target_folder, name)
+    try:
+        with open(filename, 'w') as outfile:
+            outfile.write(src)
+    except:
+        print (" Error writing file %s" % filename)
+        return False
+
+    # if successful
+    return True
+
+
+def process_org(org_src, current_dir):
     """ from org text, parses line by line and split out in different folders:
         - /auto-evaluation for short quizz (Activité)
         - /devoirs for assignments (Activité avancée)
@@ -92,8 +112,12 @@ def process_org(org_src):
                                 'title':new_subsection_title,
                                 'type':next_type,
                                 'sub_src':activite_split,
+                                'source_file':''
                             }
                             subsections.append(new_subsection)
+                            # reset to default
+                            next_type = 'webcontent'
+                            new_subsection_title = 'Cours'
                 # title comes before the content of a subsection
                 else:
                     new_subsection_title = split
@@ -104,25 +128,40 @@ def process_org(org_src):
         else:
             new_section_title = section
 
-    # C. split again subsec with Activité [avancée]
-    # reg = re.findall('^\*{15}\sActivité\s(avancée){0,1}(?P<txt>.*?)^\*{15}\sEND', s, flags=re.S+re.M)
+    # Loop again through subsections to create files and finish up module config file
+    for idsec, section in enumerate(sections):
+        for idsub, subsection in enumerate(section['subsections']):
+            target_folder = subsection['type']
+            filename = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])+'_'+subsection['type']+'.html'
+            subsection['source_file'] = subsection['type']+'/'+filename
+            # if type = webcontent, as is in webcontent folder
+            if subsection['type'] == 'webcontent':
+                # FIXME : should convert from org text to html
+                src = '<p>'+subsection['sub_src']+'</p>'
+            elif subsection['type'] in (('auto-evaluation', 'devoirs')):
+                raw_questions = extract_questions(subsection['sub_src'])
+                src = ''
+                for question in  process_questions(raw_questions):
+                    src+=question.to_html()
+                if src == '': # fallback when question is not yet properly formated 
+                    src = '<p>'+subsection['sub_src']+'</p>'
 
-
-
+            write_file(src, current_dir, target_folder, filename)
 
     config['sections'] = sections
     return config
 
 def main(argv):
     """
-        fromORG : take org mode file 'filein' and turn it into config json file +
+        fromORG : take org mode file 'filein' + 'module_folder' and turn it into config json file +
         html and gift files for further export to HTML or IMSCC moodle archive
 
     """
-    if len(sys.argv) != 2:
-        print(" requires 1 argument (file in)")
-        return false
+    if len(sys.argv) != 3:
+        print(" requires 2 arguments (file in + module_folder)")
+        return False
     filein = sys.argv[1]
+    module_folder = sys.argv[2]
     if '.org' not in filein:
         print(" file has to be an org mode file, ending with '.org'")
         return false
@@ -130,9 +169,19 @@ def main(argv):
     with open(filein, encoding='utf-8') as org_file:
         org_src = org_file.read()
 
-    config = process_org(org_src)
-    print ("end result = %s " % str(config))
-    with open('module_config.json', 'w') as outfile:
+    current_dir = os.path.join(os.getcwd(), module_folder)
+
+    # create folders
+    for folder in ['auto-evaluation', 'devoirs', 'webcontent']:
+        new_folder = os.path.join(current_dir, folder)
+        os.makedirs(new_folder, exist_ok=True)
+
+    config = process_org(org_src, current_dir)
+
+    print ("current working dir %s" % (os.getcwd()))
+    #print ("end result = %s " % str(config))
+    config_file_name = os.path.join(current_dir, module_folder+'.toHTMLconfig.json')
+    with open(config_file_name, 'w') as outfile:
         json.dump(config, outfile)
 
 

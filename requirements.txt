@@ -1,2 +1,3 @@
 PyOrgMode
 yattag
+python-slugify

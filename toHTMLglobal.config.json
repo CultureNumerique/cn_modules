@@ -9,5 +9,10 @@
         "folder" : "module2",
         "title" : "Le Web",
         "config" : "module2/m2.toHTMLconfig.json"
+    },
+    {
+        "folder" : "module3",
+        "title" : "Représentation numérique de l'information : les documents",
+        "config" : "module3/module3.toHTMLconfig.json"
     }]
 }
