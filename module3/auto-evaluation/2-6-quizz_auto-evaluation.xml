@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
-    <assessment ident='1_6_exercice-dapprodissement' title='1.6 Exercice d'approdissement'>
+    <assessment ident="1_5_2-6-quizz" title="2.6 Quizz">
 
     <!--  Metadata  -->
     <qtimetadata>

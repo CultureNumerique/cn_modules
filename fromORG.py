@@ -64,7 +64,7 @@ def create_empty_ims_test(id, title):
 
     src = ""
     src+=header
-    src+="<assessment ident='"+id+"' title='"+title+"'>\n"
+    src+='<assessment ident="'+id+'" title="'+title+'">\n'
     src+=metadata
     src+="</assessment></questestinterop>\n"
 
@@ -107,7 +107,8 @@ def process_org(org_src, current_dir):
     config = {
         'lom_metadata':{
             'title': '',
-            'language':'en'
+            'language':'en',
+            'category':'Divers'
         },
         'sections':[]
     }
@@ -156,7 +157,7 @@ def process_org(org_src, current_dir):
                             new_subsection_title = 'Quizz'
                             pass
                         elif activite_split == 'avancée':
-                            new_subsection_title = "Exercice d'approdissement"
+                            new_subsection_title = "Exercice d'approfondissement"
                             next_type = 'devoirs'
                             pass
                         elif not activite_split.isspace(): # normal web content type subsection
@@ -184,8 +185,9 @@ def process_org(org_src, current_dir):
     questions_bank = "" # is a text resource with all questions with a category / used for import into moodle
     for idsec, section in enumerate(sections):
         for idsub, subsection in enumerate(section['subsections']):
+            subsection['title'] = str(idsec+1)+'.'+str(idsub+1)+' '+subsection['title']
             target_folder = subsection['type']
-            filename = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])+'_'+subsection['type']+'.html'
+            filename = slugify(subsection['title'])+'_'+subsection['type']+'.html'
             subsection['source_file'] = subsection['type']+'/'+filename
             # if type = webcontent, as is in webcontent folder
             if subsection['type'] == 'webcontent':
@@ -201,7 +203,7 @@ def process_org(org_src, current_dir):
                     if src == '': # fallback when question is not yet properly formated
                         src = '<p>'+subsection['sub_src']+'</p>'
                 # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
-                test_title = str(idsec)+'.'+str(idsub)+' '+subsection['title']
+                test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
                 xml_src = create_empty_ims_test(test_id, test_title)
                 xml_filename = filename.replace('html', 'xml')

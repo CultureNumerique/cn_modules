@@ -86,7 +86,7 @@ def generateIMSManifest(data):
                             href = data["sections"][idA]["subsections"][idB]["source_file"]
                             # FIXME: when adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
                             if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
-                                href.replace('html', 'xml')
+                                href = href.replace('html', 'xml')
                             filename = href.rsplit('/',1)[1]
                             resources.append(filename)
                             with tag('item', identifier=("subsec_"+str(idA)+"_"+str(idB)), identifierref=("doc_"+str(idA)+"_"+str(idB))):
@@ -119,7 +119,7 @@ def generateIMSManifest(data):
                 # When adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
                 href = data["sections"][idA]["subsections"][idB]["source_file"]
                 if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
-                    href.replace('html', 'xml')
+                    href = href.replace('html', 'xml')
                 with tag('resource', identifier=doc_id, type=file_type, href=href):
                      doc.stag('file', href=href)
                      # add dependency if needed (html only)

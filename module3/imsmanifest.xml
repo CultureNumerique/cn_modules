@@ -25,127 +25,127 @@
         <item identifier="sec_0">
           <title>0</title>
           <item identifierref="doc_0_0" identifier="subsec_0_0">
-            <title>Cours</title>
+            <title>1.1 Cours</title>
           </item>
           <item identifierref="doc_0_1" identifier="subsec_0_1">
-            <title>Quizz</title>
+            <title>1.2 Quizz</title>
           </item>
           <item identifierref="doc_0_2" identifier="subsec_0_2">
-            <title>Exercice d'approdissement</title>
+            <title>1.3 Exercice d'approfondissement</title>
           </item>
         </item>
         <item identifier="sec_1">
           <title>1</title>
           <item identifierref="doc_1_0" identifier="subsec_1_0">
-            <title>Introduction</title>
+            <title>2.1 Introduction</title>
           </item>
           <item identifierref="doc_1_1" identifier="subsec_1_1">
-            <title>Quizz</title>
+            <title>2.2 Quizz</title>
           </item>
           <item identifierref="doc_1_2" identifier="subsec_1_2">
-            <title>Le contenu, une vue séquentielle</title>
+            <title>2.3 Le contenu, une vue séquentielle</title>
           </item>
           <item identifierref="doc_1_3" identifier="subsec_1_3">
-            <title>Quizz</title>
+            <title>2.4 Quizz</title>
           </item>
           <item identifierref="doc_1_4" identifier="subsec_1_4">
-            <title>La structure, une vue arborescente</title>
+            <title>2.5 La structure, une vue arborescente</title>
           </item>
           <item identifierref="doc_1_5" identifier="subsec_1_5">
-            <title>Quizz</title>
+            <title>2.6 Quizz</title>
           </item>
           <item identifierref="doc_1_6" identifier="subsec_1_6">
-            <title>Exercice d'approdissement</title>
+            <title>2.7 Exercice d'approfondissement</title>
           </item>
           <item identifierref="doc_1_7" identifier="subsec_1_7">
-            <title>Les méta-donnnées, une vue qualifiée</title>
+            <title>2.8 Les méta-donnnées, une vue qualifiée</title>
           </item>
           <item identifierref="doc_1_8" identifier="subsec_1_8">
-            <title>Quizz</title>
+            <title>2.9 Quizz</title>
           </item>
           <item identifierref="doc_1_9" identifier="subsec_1_9">
-            <title>Quizz</title>
+            <title>2.10 Quizz</title>
           </item>
           <item identifierref="doc_1_10" identifier="subsec_1_10">
-            <title>La présentation, une vue pas uniquement graphique</title>
+            <title>2.11 La présentation, une vue pas uniquement graphique</title>
           </item>
           <item identifierref="doc_1_11" identifier="subsec_1_11">
-            <title>Quizz</title>
+            <title>2.12 Quizz</title>
           </item>
           <item identifierref="doc_1_12" identifier="subsec_1_12">
-            <title>Un point d'étape </title>
+            <title>2.13 Un point d'étape </title>
           </item>
         </item>
         <item identifier="sec_2">
           <title>2</title>
           <item identifierref="doc_2_0" identifier="subsec_2_0">
-            <title>Cours</title>
+            <title>3.1 Cours</title>
           </item>
           <item identifierref="doc_2_1" identifier="subsec_2_1">
-            <title>Différents formats pour différents usages</title>
+            <title>3.2 Différents formats pour différents usages</title>
           </item>
           <item identifierref="doc_2_2" identifier="subsec_2_2">
-            <title>Formats et logiciels</title>
+            <title>3.3 Formats et logiciels</title>
           </item>
           <item identifierref="doc_2_3" identifier="subsec_2_3">
-            <title>Ouvert ou propriétaire</title>
+            <title>3.4 Ouvert ou propriétaire</title>
           </item>
           <item identifierref="doc_2_4" identifier="subsec_2_4">
-            <title>Quizz</title>
+            <title>3.5 Quizz</title>
           </item>
           <item identifierref="doc_2_5" identifier="subsec_2_5">
-            <title>Une minute citoyenne</title>
+            <title>3.6 Une minute citoyenne</title>
           </item>
         </item>
         <item identifier="sec_3">
           <title>3</title>
           <item identifierref="doc_3_0" identifier="subsec_3_0">
-            <title>Cours</title>
+            <title>4.1 Cours</title>
           </item>
           <item identifierref="doc_3_1" identifier="subsec_3_1">
-            <title>Représentation numérique des caractères</title>
+            <title>4.2 Représentation numérique des caractères</title>
           </item>
           <item identifierref="doc_3_2" identifier="subsec_3_2">
-            <title>Quizz</title>
+            <title>4.3 Quizz</title>
           </item>
           <item identifierref="doc_3_3" identifier="subsec_3_3">
-            <title>Textes "simples"</title>
+            <title>4.4 Textes "simples"</title>
           </item>
           <item identifierref="doc_3_4" identifier="subsec_3_4">
-            <title>Quizz</title>
+            <title>4.5 Quizz</title>
           </item>
           <item identifierref="doc_3_5" identifier="subsec_3_5">
-            <title>Des langages et des logiciels</title>
+            <title>4.6 Des langages et des logiciels</title>
           </item>
           <item identifierref="doc_3_6" identifier="subsec_3_6">
-            <title>Textes structurés pour décrire des documents textuels</title>
+            <title>4.7 Textes structurés pour décrire des documents textuels</title>
           </item>
           <item identifierref="doc_3_7" identifier="subsec_3_7">
-            <title>Quizz</title>
+            <title>4.8 Quizz</title>
           </item>
           <item identifierref="doc_3_8" identifier="subsec_3_8">
-            <title>Traitement de textes</title>
+            <title>4.9 Traitement de textes</title>
           </item>
           <item identifierref="doc_3_9" identifier="subsec_3_9">
-            <title>Quizz</title>
+            <title>4.10 Quizz</title>
           </item>
         </item>
         <item identifier="sec_4">
           <title>4</title>
           <item identifierref="doc_4_0" identifier="subsec_4_0">
-            <title>Cours</title>
+            <title>5.1 Cours</title>
           </item>
           <item identifierref="doc_4_1" identifier="subsec_4_1">
-            <title>Quizz</title>
+            <title>5.2 Quizz</title>
           </item>
           <item identifierref="doc_4_2" identifier="subsec_4_2">
-            <title>Cours</title>
+            <title>5.3 Cours</title>
           </item>
         </item>
         <item identifier="sec_5">
           <title>5</title>
           <item identifierref="doc_5_0" identifier="subsec_5_0">
-            <title>Cours</title>
+            <title>6.1 Cours</title>
           </item>
         </item>
       </item>
@@ -154,113 +154,113 @@
   <resources>
     <!-- Media -->
     <!-- Webcontent -->
-    <resource identifier="doc_0_0" type="webcontent" href="webcontent/0_0_cours_webcontent.html">
-      <file href="webcontent/0_0_cours_webcontent.html" />
+    <resource identifier="doc_0_0" href="webcontent/1-1-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/1-1-cours_webcontent.html" />
     </resource>
-    <resource identifier="doc_0_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/0_1_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/0_1_quizz_auto-evaluation.html" />
+    <resource identifier="doc_0_1" href="auto-evaluation/1-2-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/1-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_0_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/0_2_exercice-dapprodissement_devoirs.html">
-      <file href="devoirs/0_2_exercice-dapprodissement_devoirs.html" />
+    <resource identifier="doc_0_2" href="devoirs/1-3-exercice-dapprofondissement_devoirs.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="devoirs/1-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource identifier="doc_1_0" type="webcontent" href="webcontent/1_0_introduction_webcontent.html">
-      <file href="webcontent/1_0_introduction_webcontent.html" />
+    <resource identifier="doc_1_0" href="webcontent/2-1-introduction_webcontent.html" type="webcontent">
+      <file href="webcontent/2-1-introduction_webcontent.html" />
     </resource>
-    <resource identifier="doc_1_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_1_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_1_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_1" href="auto-evaluation/2-2-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_2" type="webcontent" href="webcontent/1_2_le-contenu-une-vue-sequentielle_webcontent.html">
-      <file href="webcontent/1_2_le-contenu-une-vue-sequentielle_webcontent.html" />
+    <resource identifier="doc_1_2" href="webcontent/2-3-le-contenu-une-vue-sequentielle_webcontent.html" type="webcontent">
+      <file href="webcontent/2-3-le-contenu-une-vue-sequentielle_webcontent.html" />
     </resource>
-    <resource identifier="doc_1_3" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_3_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_3_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_3" href="auto-evaluation/2-4-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-4-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_4" type="webcontent" href="webcontent/1_4_la-structure-une-vue-arborescente_webcontent.html">
-      <file href="webcontent/1_4_la-structure-une-vue-arborescente_webcontent.html" />
+    <resource identifier="doc_1_4" href="webcontent/2-5-la-structure-une-vue-arborescente_webcontent.html" type="webcontent">
+      <file href="webcontent/2-5-la-structure-une-vue-arborescente_webcontent.html" />
     </resource>
-    <resource identifier="doc_1_5" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_5_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_5_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_5" href="auto-evaluation/2-6-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-6-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_6" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/1_6_exercice-dapprodissement_devoirs.html">
-      <file href="devoirs/1_6_exercice-dapprodissement_devoirs.html" />
+    <resource identifier="doc_1_6" href="devoirs/2-7-exercice-dapprofondissement_devoirs.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="devoirs/2-7-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource identifier="doc_1_7" type="webcontent" href="webcontent/1_7_les-meta-donnnees-une-vue-qualifiee_webcontent.html">
-      <file href="webcontent/1_7_les-meta-donnnees-une-vue-qualifiee_webcontent.html" />
+    <resource identifier="doc_1_7" href="webcontent/2-8-les-meta-donnnees-une-vue-qualifiee_webcontent.html" type="webcontent">
+      <file href="webcontent/2-8-les-meta-donnnees-une-vue-qualifiee_webcontent.html" />
     </resource>
-    <resource identifier="doc_1_8" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_8_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_8_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_8" href="auto-evaluation/2-9-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-9-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_9" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_9_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_9_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_9" href="auto-evaluation/2-10-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-10-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_10" type="webcontent" href="webcontent/1_10_la-presentation-une-vue-pas-uniquement-graphique_webcontent.html">
-      <file href="webcontent/1_10_la-presentation-une-vue-pas-uniquement-graphique_webcontent.html" />
+    <resource identifier="doc_1_10" href="webcontent/2-11-la-presentation-une-vue-pas-uniquement-graphique_webcontent.html" type="webcontent">
+      <file href="webcontent/2-11-la-presentation-une-vue-pas-uniquement-graphique_webcontent.html" />
     </resource>
-    <resource identifier="doc_1_11" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1_11_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/1_11_quizz_auto-evaluation.html" />
+    <resource identifier="doc_1_11" href="auto-evaluation/2-12-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/2-12-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_1_12" type="webcontent" href="webcontent/1_12_un-point-detape_webcontent.html">
-      <file href="webcontent/1_12_un-point-detape_webcontent.html" />
+    <resource identifier="doc_1_12" href="webcontent/2-13-un-point-detape_webcontent.html" type="webcontent">
+      <file href="webcontent/2-13-un-point-detape_webcontent.html" />
     </resource>
-    <resource identifier="doc_2_0" type="webcontent" href="webcontent/2_0_cours_webcontent.html">
-      <file href="webcontent/2_0_cours_webcontent.html" />
+    <resource identifier="doc_2_0" href="webcontent/3-1-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/3-1-cours_webcontent.html" />
     </resource>
-    <resource identifier="doc_2_1" type="webcontent" href="webcontent/2_1_differents-formats-pour-differents-usages_webcontent.html">
-      <file href="webcontent/2_1_differents-formats-pour-differents-usages_webcontent.html" />
+    <resource identifier="doc_2_1" href="webcontent/3-2-differents-formats-pour-differents-usages_webcontent.html" type="webcontent">
+      <file href="webcontent/3-2-differents-formats-pour-differents-usages_webcontent.html" />
     </resource>
-    <resource identifier="doc_2_2" type="webcontent" href="webcontent/2_2_formats-et-logiciels_webcontent.html">
-      <file href="webcontent/2_2_formats-et-logiciels_webcontent.html" />
+    <resource identifier="doc_2_2" href="webcontent/3-3-formats-et-logiciels_webcontent.html" type="webcontent">
+      <file href="webcontent/3-3-formats-et-logiciels_webcontent.html" />
     </resource>
-    <resource identifier="doc_2_3" type="webcontent" href="webcontent/2_3_ouvert-ou-proprietaire_webcontent.html">
-      <file href="webcontent/2_3_ouvert-ou-proprietaire_webcontent.html" />
+    <resource identifier="doc_2_3" href="webcontent/3-4-ouvert-ou-proprietaire_webcontent.html" type="webcontent">
+      <file href="webcontent/3-4-ouvert-ou-proprietaire_webcontent.html" />
     </resource>
-    <resource identifier="doc_2_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/2_4_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/2_4_quizz_auto-evaluation.html" />
+    <resource identifier="doc_2_4" href="auto-evaluation/3-5-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/3-5-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_2_5" type="webcontent" href="webcontent/2_5_une-minute-citoyenne_webcontent.html">
-      <file href="webcontent/2_5_une-minute-citoyenne_webcontent.html" />
+    <resource identifier="doc_2_5" href="webcontent/3-6-une-minute-citoyenne_webcontent.html" type="webcontent">
+      <file href="webcontent/3-6-une-minute-citoyenne_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_0" type="webcontent" href="webcontent/3_0_cours_webcontent.html">
-      <file href="webcontent/3_0_cours_webcontent.html" />
+    <resource identifier="doc_3_0" href="webcontent/4-1-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/4-1-cours_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_1" type="webcontent" href="webcontent/3_1_representation-numerique-des-caracteres_webcontent.html">
-      <file href="webcontent/3_1_representation-numerique-des-caracteres_webcontent.html" />
+    <resource identifier="doc_3_1" href="webcontent/4-2-representation-numerique-des-caracteres_webcontent.html" type="webcontent">
+      <file href="webcontent/4-2-representation-numerique-des-caracteres_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/3_2_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/3_2_quizz_auto-evaluation.html" />
+    <resource identifier="doc_3_2" href="auto-evaluation/4-3-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/4-3-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_3_3" type="webcontent" href="webcontent/3_3_textes-simples_webcontent.html">
-      <file href="webcontent/3_3_textes-simples_webcontent.html" />
+    <resource identifier="doc_3_3" href="webcontent/4-4-textes-simples_webcontent.html" type="webcontent">
+      <file href="webcontent/4-4-textes-simples_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/3_4_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/3_4_quizz_auto-evaluation.html" />
+    <resource identifier="doc_3_4" href="auto-evaluation/4-5-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/4-5-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_3_5" type="webcontent" href="webcontent/3_5_des-langages-et-des-logiciels_webcontent.html">
-      <file href="webcontent/3_5_des-langages-et-des-logiciels_webcontent.html" />
+    <resource identifier="doc_3_5" href="webcontent/4-6-des-langages-et-des-logiciels_webcontent.html" type="webcontent">
+      <file href="webcontent/4-6-des-langages-et-des-logiciels_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_6" type="webcontent" href="webcontent/3_6_textes-structures-pour-decrire-des-documents-textuels_webcontent.html">
-      <file href="webcontent/3_6_textes-structures-pour-decrire-des-documents-textuels_webcontent.html" />
+    <resource identifier="doc_3_6" href="webcontent/4-7-textes-structures-pour-decrire-des-documents-textuels_webcontent.html" type="webcontent">
+      <file href="webcontent/4-7-textes-structures-pour-decrire-des-documents-textuels_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_7" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/3_7_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/3_7_quizz_auto-evaluation.html" />
+    <resource identifier="doc_3_7" href="auto-evaluation/4-8-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/4-8-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_3_8" type="webcontent" href="webcontent/3_8_traitement-de-textes_webcontent.html">
-      <file href="webcontent/3_8_traitement-de-textes_webcontent.html" />
+    <resource identifier="doc_3_8" href="webcontent/4-9-traitement-de-textes_webcontent.html" type="webcontent">
+      <file href="webcontent/4-9-traitement-de-textes_webcontent.html" />
     </resource>
-    <resource identifier="doc_3_9" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/3_9_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/3_9_quizz_auto-evaluation.html" />
+    <resource identifier="doc_3_9" href="auto-evaluation/4-10-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/4-10-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_4_0" type="webcontent" href="webcontent/4_0_cours_webcontent.html">
-      <file href="webcontent/4_0_cours_webcontent.html" />
+    <resource identifier="doc_4_0" href="webcontent/5-1-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/5-1-cours_webcontent.html" />
     </resource>
-    <resource identifier="doc_4_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/4_1_quizz_auto-evaluation.html">
-      <file href="auto-evaluation/4_1_quizz_auto-evaluation.html" />
+    <resource identifier="doc_4_1" href="auto-evaluation/5-2-quizz_auto-evaluation.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="auto-evaluation/5-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource identifier="doc_4_2" type="webcontent" href="webcontent/4_2_cours_webcontent.html">
-      <file href="webcontent/4_2_cours_webcontent.html" />
+    <resource identifier="doc_4_2" href="webcontent/5-3-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/5-3-cours_webcontent.html" />
     </resource>
-    <resource identifier="doc_5_0" type="webcontent" href="webcontent/5_0_cours_webcontent.html">
-      <file href="webcontent/5_0_cours_webcontent.html" />
+    <resource identifier="doc_5_0" href="webcontent/6-1-cours_webcontent.html" type="webcontent">
+      <file href="webcontent/6-1-cours_webcontent.html" />
     </resource>
   </resources>
 </manifest>
