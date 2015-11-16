@@ -841,27 +841,42 @@ couleur.
 Les formats d'image vectoriels permettent de "décrire" des formes
 complexes par combinaison de formes simples. La puissance des
 formalismes mathématiques peuvent produire des images d'une grande
-complexité. Un avantage très important des images vectorielle réside
-en leur capacité à les afficher à n'importe quelle échelle sans aucune
-perte de qualité. L'affichage est /recalculé/ quel que soit le niveau
-de zoom. Elles peuvent évidemment contenir du texte et sont
-particulièrement adaptées pour représenter des visuels tels que des logos
-ou des dessins *Introduire des exemples* Les images vectorielles sont
-le plus souvent créées à partir de logiciels spécialisés ( /logiciels
-de dessin vectoriels/ ). 
-Notons également que le même type de représentation est utilisée pour
-représenter des objets en 3 dimensions dans les logiciels spécialisés
-de design 3D.
-****************** activité
-Qui est Pierre Bézier ?
+complexité. 
+
+Les différents objets qui constituent l'image sont décrits dans un
+langage adéquat qui précise pour chacun d'eux, la forme, la dimension, la
+couleur, la position, etc. 
+
+Les logiciels qui affichent ces images /comprennent/ et /interprêtent/
+les descriptions, c'est-à-dire calculent le résultat
+visuel. Contrairement aux manipulations des photos, il est
+donc très facile de modifier un élément de l'image indépendemment des
+autres.  
+
+Un avantage très important des images vectorielle réside en leur
+capacité à les afficher à n'importe quelle échelle sans aucune perte
+de qualité. L'affichage est /recalculé/ quel que soit le niveau de
+zoom. 
+
+Elles peuvent évidemment contenir du texte et sont particulièrement
+adaptées pour représenter des visuels tels que des logos ou des
+dessins *Introduire des exemples* Les images vectorielles sont le plus
+souvent créées à partir de logiciels spécialisés ( /logiciels de
+dessin vectoriels/ ).  Notons également que le même type de
+représentation est utilisée pour représenter des objets en 3
+dimensions dans les logiciels spécialisés de design 3D.
+****************** activités
+- Qui est Pierre Bézier ?
 ****************** END
 
-Ce type d'image n'est pas adapté à la
-représentation de photo, la complexité de la réalité ne peut pas
-facilement être représentée par des formules mathématiques.
+Ce type d'image n'est pas adapté à la représentation de photo, la
+complexité de la réalité ne peut pas facilement être représentée par
+des formules mathématiques.
 *************** Activités approfondies 
+- manipulations images svg :
 http://www.w3schools.com/svg/svg_text.asp
 *************** END
+
 ** les images matricielles
 À l'inverse, les images matricielles sont particulièrement bien
 adaptées pour représenter les photos. Issues de scanner ou d'appareils
@@ -952,6 +967,17 @@ Mais on peut aussi effectuer une opération de zoom qui
 
 
 *** les images CMJN
+Un autre modèle de couleur est utilisé dans le monde de l'édition, il
+s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
+au modèle RVB, il s'agit de décrire une couleur par combinaison de
+plusieurs couleurs primaires. Mais alors que le RVB correspond aux
+technologies des écrans, le CMJN est adapté au monde de
+l'impression. Cyan, Magenta, Jaune et noir étant les couleurs
+primaires utilisées pour l'impression. 
+
+Une même image peut donc avoir plusieurs représentations dans des
+modèles différents, le choix du codage dépendra de l'utilisation
+désirée.
 
 * Footnotes
 
