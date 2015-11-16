@@ -141,9 +141,9 @@ def process_org(org_src, current_dir):
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
                 raw_questions = extract_questions(subsection['sub_src'])
                 src = ''
-                for question in  process_questions(raw_questions):
+            for question in  process_questions(raw_questions):
                     src+=question.to_html()
-                if src == '': # fallback when question is not yet properly formated 
+                if src == '': # fallback when question is not yet properly formated
                     src = '<p>'+subsection['sub_src']+'</p>'
 
             write_file(src, current_dir, target_folder, filename)

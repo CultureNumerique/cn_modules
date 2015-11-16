@@ -26,7 +26,7 @@ def usage():
 Usage:
    exporte les fichiers depuis l'arborescence git pour les comprimer dans une archive .imscc.
 
-   toIMS config_filein fileout
+   toIMS module_dir config_filein
 """
     print (str)
     exit(1)
@@ -83,16 +83,19 @@ def generateIMSManifest(data):
     # Print resources
     with tag('resources'):
         # retrieve images and add dependency when needed
-        doc.asis("<!-- Images -->")
+        doc.asis("<!-- Media -->")
+        media_dir = "media"
+        if data["media_dir"]:
+            media_dir = data["media_dir"]
         images = {}
-        for idx, filename in enumerate(os.listdir(os.getcwd()+'/img')):
+        for idx, filename in enumerate(os.listdir(os.path.join(os.getcwd(), media_dir))):
             if filename in resources:
                 pass # avoid duplicating resources
             else:
-                doc_id = "img_"+str(idx)
+                doc_id = media_dir+"_"+str(idx)
                 images[filename] = doc_id # store img id for further reference
-                with tag('resource', identifier=doc_id, type="webcontent", href="img/"+filename):
-                    doc.stag('file', href="img/"+filename)
+                with tag('resource', identifier=doc_id, type="webcontent", href=media_dir+"/"+filename):
+                    doc.stag('file', href=media_dir+"/"+filename)
 
         doc.asis("<!-- Webcontent -->")
         for idA, section in enumerate(data["sections"]):
@@ -131,14 +134,15 @@ def main(argv):
         usage()
 
     filein = sys.argv[1]
-    fileout = sys.argv[2]
-    # add .zip if not there
-    if fileout.rsplit('.', 1)[1] != 'zip':
-        fileout += '.zip'
+    module_dir = sys.argv[2]
+    fileout = module_dir+'.zip'
 
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
+    # change directory
+    os.chdir(module_dir)
+
     # parse data and generate imsmanifest.xml
     generateIMSManifest(data)
     print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
@@ -147,11 +151,12 @@ def main(argv):
     zipf = zipfile.ZipFile(fileout, 'w')
     zipf.write(os.getcwd()+'/imsmanifest.xml')
     for dir_name in data['directories_to_ims']:
-        for file in os.listdir(dir_name):
-            filepath = os.path.join(os.getcwd(), dir_name)
-            filepath = os.path.join(filepath, file)
-            print (" Adding %s to archive " % (filepath))
-            zipf.write(filepath)
+        if os.listdir(dir_name):
+            for file in os.listdir(dir_name):
+                filepath = os.path.join(os.getcwd(), dir_name)
+                filepath = os.path.join(filepath, file)
+                print (" Adding %s to archive " % (filepath))
+                zipf.write(filepath)
 
     zipf.close()
 
