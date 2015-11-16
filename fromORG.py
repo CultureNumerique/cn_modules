@@ -199,6 +199,7 @@ def process_org(org_src, current_dir):
                 raw_questions = extract_questions(subsection['sub_src'])
                 src = ''
                 for question in  process_questions(raw_questions):
+                    print(">>>>>>>>>>> writing question in HTML %s" % (question.to_html()))
                     src+=question.to_html()
                     if src == '': # fallback when question is not yet properly formated
                         src = '<p>'+subsection['sub_src']+'</p>'

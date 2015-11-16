@@ -13,6 +13,6 @@
     {
         "folder" : "module3",
         "title" : "Représentation numérique de l'information : les documents",
-        "config" : "module3/module3.toHTMLconfig.json"
+        "config" : "module3/module3.config.json"
     }]
 }
