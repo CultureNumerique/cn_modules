@@ -826,7 +826,136 @@ bibliothèque.
 
 *************** END
 
+* Les images
+Nous avons détaillé le cas des documents textuels comme exemple
+générique. Regardons maintenant les différents modes de représentation
+des images. Là aussi de nombreux *formats* sont possibles et la notion
+de *norme* est essentielle pour les mêmes raisons de compatibilité
+et d'interopérabilité. En premier lieu, il convient de différentier les
+images vectorielles qui sont représentées sous forme d'une suite
+d'objets géométriques eux-même représentés à l'aide d'équations
+mathématiques,  des images matricielles qui sont représentées comme
+une suite de points (les /pixels/), chacun d'eux étant décrits par une
+couleur.
+** les images vectorielles
+Les formats d'image vectoriels permettent de "décrire" des formes
+complexes par combinaison de formes simples. La puissance des
+formalismes mathématiques peuvent produire des images d'une grande
+complexité. Un avantage très important des images vectorielle réside
+en leur capacité à les afficher à n'importe quelle échelle sans aucune
+perte de qualité. L'affichage est /recalculé/ quel que soit le niveau
+de zoom. Elles peuvent évidemment contenir du texte et sont
+particulièrement adaptées pour représenter des visuels tels que des logos
+ou des dessins *Introduire des exemples* Les images vectorielles sont
+le plus souvent créées à partir de logiciels spécialisés ( /logiciels
+de dessin vectoriels/ ). 
+Notons également que le même type de représentation est utilisée pour
+représenter des objets en 3 dimensions dans les logiciels spécialisés
+de design 3D.
+****************** activité
+Qui est Pierre Bézier ?
+****************** END
+
+Ce type d'image n'est pas adapté à la
+représentation de photo, la complexité de la réalité ne peut pas
+facilement être représentée par des formules mathématiques.
+*************** Activités approfondies 
+http://www.w3schools.com/svg/svg_text.asp
+*************** END
+** les images matricielles
+À l'inverse, les images matricielles sont particulièrement bien
+adaptées pour représenter les photos. Issues de scanner ou d'appareils
+photos numériques, leur représentation se fait sous la forme d'une
+suite de points (*pixels*[fn:1]) eux-mêmes représentés par une valeur
+de couleur.  L'organisation des pixels est assez simple, ils sont
+ordonnés en ligne et en colonne sous la forme d'une matrice (d'où le
+nom /images matricielles/), ce qui signifie simplement que toutes les
+lignes et toutes les colonnes ont le même nombre de points. 
+
+En revanche le codage des valeurs de couleur doit une nouvelle fois
+faire l'objet de normes. En effet, il existe de très nombreuses façons
+de représenter la couleur. Ainsi depuis longtemps les peintres ont
+tenté de /créer/ des nuances en mélangeant des couleurs dites
+primaires. Ce procédé est comparable à celui utilisé pour coder les
+couleurs des pixels d'une image numérique.
+
+*** les images RVB
+le modèle le plus répandu est le modèle RVB pour Rouge Vert
+Bleu. Chaque pixel est décrit par un triplet, chacune des 3 valeurs
+représentant respectivement la proportion de rouge, de vert et de bleu.
+La couleur finale étant la combinaison de ces trois valeurs.
+Le modèle RVB est directement issu des de la technologie, en effet,
+les écrans (télévision, ordinateur, tablettes, ainsi que les capteurs
+des appareils photos numériques ou les scanners utilisent tous ce mode
+de représentation de la couleur. 
+Dans le modèle RVB, la couleur (O, O, O) correspond au noir, alors que
+lorsque les 3 composantes sont au maximum, cela donne du blanc. 
+
+
+*** les formats
+Si le codage de la couleur a été normalisé, il existe de nombreux
+formats d'images
+- compression
+- transparence
+
+*** les méta-données
+Comme pour tous les documents, des méta-données peuvent être associées
+à la représentation brute des images (la suite des valeurs de couleur
+de couleur associées à chaque pixel). La plupart des appareils photos
+numériques ajoutent ces méta-données à chaque prise de vue. Elles
+peuvent décrire les caractéristiques techniques de la prise de vue
+(valeur de la focale, vitesse d'obturation, ouverture du
+diaphragme,...) mais aussi des informations plus personnelles comme
+les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
+utilisé, ainsi que l'heure et la date de la pride vue.
+
+*** la taille des images
+Ce vocabulaire de taille peut recouvrir 3 notions bien distinctes :
+- la taille du fichier contenant la représentation numérique de
+  l'image
+- la *résolution* (on dit aussi la /définition/) de l'image,
+  c'est-à-dire le nombre de pixels qui la constituent.
+- les dimensions en cm de l'image affichée sur un écran ou imprimée
+  sur un support.
+
+Les deux premières notions sont évidemment liées et proportionnelles,
+chaque couleur (chaque pixel) étant codée avec un certains nombre de
+bits, une image découpées en 50 000 pixels prendra une place 50 fois
+supérieure à une image de 1 000 pixels (ou prendra 50 fois plus de
+temps à être télécharger sur le réseau).
+
+La troisième notion est plus délicate et les liens avec la résolution
+des images sont souvent mal compris. Il faut d'abord comprendre qu'un
+pixel n'a pas de taille fixe, 
+
+Les écrans peuvent être vus comme des images numériques matricielles,
+ils sont eux aussi découpés en pixels organisés en ligne et
+colonne. D'ailleurs, lorsqu'on fait une /copie d'écran/, cela génère
+une image matricielle contenant exactement le même nombre de pixels
+que l'écran.
+
+Les images matricielle affichée à l'écran peuvent être affichées en
+faisant correspondre un pixel de l'image avec un pixel de
+l'écran. Les dimensions (en cm) de l'image affichée dépendent alors du
+paramétrage de l'écran (un même écran peut être configurée selon
+plusieurs résolutions) et de la taille physique de l'écran. 
+Certains smartphones ont des résolutions identiques aux
+grands écrans de bureau, les pixels sont alors beaucoup plus petits.
+
+Lors de l'impression, on retrouve les mêmes caractéristiques, les
+images peuvent être imprimées en /serrant/ beaucoup les pixels c'est à
+dire en mettant beaucoup de pixel par unité de longueur soit en
+imprimant de plus gros pixels, ce qui 
+
+
+Mais on peut aussi effectuer une opération de zoom qui 
+
+
+*** les images CMJN
+
 * Footnotes
 
 
 [fn:9] Pas trop convaincu par la BU...
+
+[fn:1] pixel est la contraction des mots /picture element/ 
