@@ -19,6 +19,58 @@ import json
 from fromGIFT import extract_questions, process_questions
 from slugify import slugify
 
+def create_empty_ims_test(id, title):
+    """
+        create empty imsc test source code
+    """
+
+    header = """<?xml version="1.0" encoding="UTF-8"?>
+    <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+    """
+
+    metadata = """
+    <!--  Metadata  -->
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    """
+
+    src = ""
+    src+=header
+    src+="<assessment ident='"+id+"' title='"+title+"'>\n"
+    src+=metadata
+    src+="</assessment></questestinterop>\n"
+
+    return src
+
+
 def write_file(src, current_dir, target_folder, name):
     """
         given a "src" source string, write a file with "name" located in
@@ -129,6 +181,7 @@ def process_org(org_src, current_dir):
             new_section_title = section
 
     # Loop again through subsections to create files and finish up module config file
+    questions_bank = "" # is a text resource with all questions with a category / used for import into moodle
     for idsec, section in enumerate(sections):
         for idsub, subsection in enumerate(section['subsections']):
             target_folder = subsection['type']
@@ -138,15 +191,34 @@ def process_org(org_src, current_dir):
             if subsection['type'] == 'webcontent':
                 # FIXME : should convert from org text to html
                 src = '<p>'+subsection['sub_src']+'</p>'
+            # else, process questions from GIFT source
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
+                # a) parses to HTML source code
                 raw_questions = extract_questions(subsection['sub_src'])
                 src = ''
-            for question in  process_questions(raw_questions):
+                for question in  process_questions(raw_questions):
                     src+=question.to_html()
-                if src == '': # fallback when question is not yet properly formated
-                    src = '<p>'+subsection['sub_src']+'</p>'
+                    if src == '': # fallback when question is not yet properly formated
+                        src = '<p>'+subsection['sub_src']+'</p>'
+                # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
+                test_title = str(idsec)+'.'+str(idsub)+' '+subsection['title']
+                test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
+                xml_src = create_empty_ims_test(test_id, test_title)
+                xml_filename = filename.replace('html', 'xml')
+                #   write xml file at same location
+                write_file(xml_src, current_dir, target_folder, xml_filename)
+                # c) append raw questions to question bank file, adding test title as category
+                category = "$CATEGORY: $course$/Quiz Bank '"+test_title+"'\n\n"
+                questions_bank+= category
+                questions_bank+= subsection['sub_src'] + '\n\n'
 
+
+
+            # write html file
             write_file(src, current_dir, target_folder, filename)
+
+    # write questions bank file
+    write_file(questions_bank, current_dir, '', 'questions_bank.gift.txt')
 
     config['sections'] = sections
     return config
@@ -172,17 +244,20 @@ def main(argv):
     current_dir = os.path.join(os.getcwd(), module_folder)
 
     # create folders
-    for folder in ['auto-evaluation', 'devoirs', 'webcontent']:
+    config = {
+        "directories_to_ims":['auto-evaluation', 'devoirs', 'webcontent', 'videos', 'media']
+    }
+    for folder in config['directories_to_ims']:
         new_folder = os.path.join(current_dir, folder)
         os.makedirs(new_folder, exist_ok=True)
 
-    config = process_org(org_src, current_dir)
-
+    config.update(process_org(org_src, current_dir))
     print ("current working dir %s" % (os.getcwd()))
     #print ("end result = %s " % str(config))
-    config_file_name = os.path.join(current_dir, module_folder+'.toHTMLconfig.json')
+    config_file_name = os.path.join(current_dir, module_folder+'.config.json')
     with open(config_file_name, 'w') as outfile:
-        json.dump(config, outfile)
+        json.dump(config, outfile, sort_keys=True,
+                        indent=4, separators=(',', ': '))
 
 
 ############### main ################

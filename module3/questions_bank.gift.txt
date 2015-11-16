@@ -1,0 +1,236 @@
+$CATEGORY: $course$/Quiz Bank '0.1 Quizz'
+
+::Il n'existe qu'une façon de représenter numériquement une image:: 
+{F# représenter une information est le résultat de nombreux choix}
+
+::Représentation des données et traitement informatique sont-ils liés ?::{T}
+
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+# Le genre, la date de création, ...
+}
+
+::Donnez quelques exemples de critères qui peuvent gouverner le choix d'une représentation numérique d'une information.::
+{
+# la concision, la pertinence (permettre des traitements voulus), l'efficacité (traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...
+} 
+
+
+$CATEGORY: $course$/Quiz Bank '0.2 Exercice d'approdissement'
+
+
+::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
+[html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
+<ul>
+<li>Qui développe le format =html=</li>
+<li>Depuis quand ce travail sur ce langage HTML existe-t-il ? </li>
+<li>Quels sont les objectifs de cette numérisation ?</li>
+<li>Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
+<li>Quelle est la version la plus récente de HTML ? </li>
+</ul>
+{
+# Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
+}
+
+
+$CATEGORY: $course$/Quiz Bank '1.1 Quizz'
+
+::Installer des logiciels:: 
+[html]<p>Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants</p>
+<ul>
+<li>Un éditeur de textes : Nous vous recommandons :
+ <ul>
+   <li>Sous linux : <code>gedit</code>  (installé par défaut) ou <code>atom</code> (https://atom.io)</li>
+   <li>Sous Windows : <code>notepad</code> (installé par défaut) ou <code>atom</code>((https://atom.io)</li>
+   <li>Sous Mac</li> : <code>yyy</code> (installé par défaut) ou  <code>atom</code>((https://atom.io)</li>
+   <li>Une solution alternative est d'utiliser l'éditeur de texte  intégré dans <code>owncloud</code>.</li>
+ </ul>
+<li>Un traitement de textes. Les exemples seront donnés dans ce cours avec <code>libreoffice</code>. 
+</ul>
+{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '1.3 Quizz'
+
+::Éditeur de textes:: 
+[html]<p>Lancer un éditeur de textes et en faire une capture
+  d'écran à déposer en réponse à ce quizz.</p>
+{}
+
+::Fonctionnalités d'un éditeur de textes::
+[html]<p>Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
+</p>
+{
+~%25%copier/couper/coller#tous les éditeurs le permettent
+~%25%rechercher et remplacer#très souvent disponible
+~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+~%25%corriger l'orthographe#certains le font
+~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+}
+
+
+$CATEGORY: $course$/Quiz Bank '1.5 Quizz'
+
+::La structure d'un document:: 
+[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec <code>libreoffice</code>: http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt</p>
+<ul>
+<li>Ouvrez le <em>navigateur</em> (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document. </li>
+<li>Rendre une capture de cette fenêtre de navigateur</li>
+</ul>
+{}
+
+::La structure d'une page web::
+<ul>
+<li> à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html/.</li>
+<li>pressez les touches <code>CTRL-MAJ-C</code>. La fenêtre de l'inspecteur de code
+  <code>html</code> s'ouvre.</li>
+<li>observez la structure du document <code>html</code>. Utilisez les petites
+  flèches pour découvrir ou cacher les parties de code <code>html</code> incluses les unes dans les autres.</li>
+<li>Sur quelles petites flèches devez-vous cliquer pour arriver au texte <em>Vous pouvez changer la taille...</em>? 
+<li>La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code <code>html</code>. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.</li>
+{#html/body/section/ul/li}
+
+
+
+$CATEGORY: $course$/Quiz Bank '1.6 Exercice d'approdissement'
+
+
+::Réorganiser la structure d'un document::
+Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du <em>navigateur</em> (touche <code>F5</code>). Rendez une capture d'écran de la structure obtenue visible dans le <em>navigateur</em>.
+{}
+
+
+$CATEGORY: $course$/Quiz Bank '1.8 Quizz'
+
+
+::La vue qualifiée:: 
+Dans le traitement de texte, regarder les propriétés du
+document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
+<ul>
+  <li>Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  
+  </li>
+</ul>
+{}
+
+
+$CATEGORY: $course$/Quiz Bank '1.9 Quizz'
+
+: plus loin
+::Uniquement des méta-données::
+[html]<p>Pour certaines applications, un  document un document 
+textuel peut se résumer uniquement à ses méta-données. C'est le cas des notices bibliographiques où la plus grande partie des fonds n'est pas numérisée et donc pour lesquelles le contenu des livres n'est pas représenté numériquement. </p>
+<p>Rendez-vous sur le site de la bibliothèque de l'université dans l'interface de recherche de livres.</p>
+<ul>
+<li>Indiquez sur quels critères vous pouvez effectuer une recherche</li>
+</ul>.  
+{}
+
+
+$CATEGORY: $course$/Quiz Bank '1.11 Quizz'
+
+on peut remettre une couche html et css. On peut
+montrer des documents du Web sous différentes formes. On peut montrer
+un document Latex et faire découvrir sa structure, puis montrer le pdf
+correspondant. On peut ajouter twocolumn et montrer le résultat. La
+même chose avec document OpenOffice et deux styles (cf après mais par
+expérience ce n'est pas facile)
+
+une activité qui montre que forme n'est pas structure.
+- fournir 2 fichiers .odt identiques dans la forme, l'un mis en forme
+  avec le formatage direct (représentation séquentielle) sans aucune
+  structure ni description, l'autre à l'aide de styles (représentation
+  structurée).
+- faire chercher le nombre de mots, de car, un mot particulier,
+  rech/rempl dans les 2 docs: résultat et facilité identique
+- faire chercher, le nom de l'auteur, l'adresse de l'auteur, le titre,
+  la date de création, les mots clés, le résumé, l'un des 2 avec des
+  métadonnées renseignées l'autre pas
+- passer en mode navigation, demander de modifier la structure (par ex
+  des niveaux)
+- générer une TDM
+- changer le style de tous les parag (taille de typo par ex)
+
+
+$CATEGORY: $course$/Quiz Bank '2.4 Quizz'
+
+::Les fichiers d'extension Doc::
+[html] <p>Lisez la page Wikipedia suivante : https://fr.wikipedia.org/wiki/Doc_%28informatique%29 et répondez aux questions suivantes</p>
+<ol>
+  <li>Est-ce que les fichiers avec l'extension <code>doc</code> désignent  une chose unique ? </li>
+  <li>Est-ce que ce format est ouvert ?</li>
+  <li>Est-ce que ce format est toujours développé ?</li>
+  <li>Est-ce un format adapté à de grands documents ?</li>
+</ol>
+::Les documents au format PDF::
+[html]<p>Lisez la page Wikipedia suivante : https://fr.wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes</p>
+<ol>
+ <li>Est-ce un format ouvert ?</li>
+ <li>Peut-on lire et écrire du <code>pdf</code> avec des logiciels différents ?</li>
+ <li>Que signifie portable ? </li>
+ <li>Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?</li>
+</ol>
+
+
+$CATEGORY: $course$/Quiz Bank '3.2 Quizz'
+
+
+- Représenter et normaliser est une tache complexe :
+  l'exemple du codage des caractères. Le site montre bien le qui est
+  dans le consortium et que c'est une structure complexe mais organisée
+  qui gère tout cela. A des relations avec W3C et ISO.
+- Montrer la ligne avec codage des caractères dans une source
+  html. Sur le Web, 85% des docts sont en UTF-8
+- Trouver le point de codage de caractères
+  français, et de caractères de différentes langues.  
+- Les codages ont évolué au cours du temps. Une activité
+  autour de ASCII et Latin1 ?
+- Les codages sont nombreux. Vous avez déja vu des problèmes
+  d'affichage dans des mails ou des pages web, ils sont souvent dus à
+  des erreurs de codage. Montrer des exemples ?
+- Envoyer sur des documents décrivant UTF8 et UTF16 et poser
+  des questions sur ces codages. 
+- *avancée* on peut faire réfléchir au
+  décodage et demander un algorithme de décodage d'un texte en UTF 16,
+  puis en UTF8
+
+
+$CATEGORY: $course$/Quiz Bank '3.4 Quizz'
+
+- Activité ou demo sur éditeur de textes et ses fonctionnalités
+- Méta-données sur textes simples. Notez que le compte de
+  mots est souvent différent selon le logiciel (gedit vs linux)
+- Montrer que la ligne d'affichage n'est pas un élément de
+  structure. Par contre, la ligne ou paragraphe correspondant à un appui
+  sur touche Entrée en est un.
+- Sur la notion de mot. On peut montrer que deux logiciels
+  différents vont compter les mots de façon différente. On peut envoyer
+  sur la page wikipedia mot et montrer que selon le point de vue le mot
+  peut être défini de façon différente.
+
+
+$CATEGORY: $course$/Quiz Bank '3.7 Quizz'
+
+- Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
+- Éditeur de texte et LateX. Coloration syntaxique. Comprendre et montrer le pdf correspondant. On peut montrer un site LateX en ligne.
+- On peut refaire html et css. Par exemple sur html montrer corps et entête. Montrer les méta-données de l'entête.
+- On doit respecter certaines règles typographiques lorsqu'on décrit un document. Cf document Marc.
+
+
+$CATEGORY: $course$/Quiz Bank '3.9 Quizz'
+
+- installer grammalecte sur son LO et jouer avec, on peut
+  donner un texte avec plein d'erreurs et demander combien ont été
+  corrigées par l'outil (typo, grammaire, conjugaison, style).
+- Marc a un texte sur la typographie
+
+
+$CATEGORY: $course$/Quiz Bank '4.1 Quizz'
+
+::Le libre::
+<ul>
+<li>Les personnages: Qui est Richard Stallman ? Qui est Laurence Lessig ?</li>
+<li>Quelles sont les différentes variantes de creative commons?</li>
+<li>Quels sont les 4 principes du logiciel libre (voir le site de l'april : http://www.april.org) ? </li>
+</ul>
+
+
