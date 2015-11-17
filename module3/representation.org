@@ -853,7 +853,7 @@ visuel. Contrairement aux manipulations des photos, il est
 donc très facile de modifier un élément de l'image indépendemment des
 autres.  
 
-Un avantage très important des images vectorielle réside en leur
+Un avantage très important des images vectorielles réside en leur
 capacité à les afficher à n'importe quelle échelle sans aucune perte
 de qualité. L'affichage est /recalculé/ quel que soit le niveau de
 zoom. 
