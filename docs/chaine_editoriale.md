@@ -1,9 +1,6 @@
 # Comment les éléments de cours "Culture Numérique" sont-ils produits ?
 
 Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.  
-
-## Rédaction du document "maître" en MarkDown
-
 Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le MarkDown, que nous avons étendus pour nos besoins spécifiques. Ces ajouts consistent en des conventions et l'usage d'extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions). 
 
 ### Structure globale d'un cours Culture Numérique
@@ -25,7 +22,7 @@ qui produit le HTML suivant:
 
 Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe`
 
-##### Commentaires invisibles
+#### Commentaires invisibles
 TODO
 
 ### Elément de cours avec animations vidéo
@@ -33,7 +30,7 @@ Ici il y a 2 étapes:
 - a) avant la réalisation des vidéos, on ajoute des blocs 'Idéee animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
 - b) une fois la vidéo réalisé, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
 
-** a) Notes pour idées d'animation **
+####a) Notes pour idées d'animation
 On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code. Nous y ajoutons ici un mot clé *à la ligne* juste après les 3 premiers backtick comme suit  
 
     ```
@@ -48,7 +45,7 @@ Ce qui produit le bloc suivant:
     qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
 
 
-**b) Lien vers une vidéo d'animation**  
+####b) Lien vers une vidéo d'animation
 Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo aen spécifiant la classe `lien_video`:  
 
     [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
