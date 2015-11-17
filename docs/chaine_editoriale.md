@@ -6,7 +6,7 @@ Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le c
 ### Structure globale d'un cours Culture Numérique
 Un cours se décompose en sections et sous-sections. Chaque sous-section peut être de la forme suivante:  
 1. élément de cours simple (texte + images)  
-2. élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode "zen"
+2. élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode "zen" 
 3. auto-évaluation sous forme de quiz 
 4. exercice d'approfondissement incluant un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre
 
