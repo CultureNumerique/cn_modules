@@ -14,146 +14,6 @@ from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
 
-HEADER = """
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-    <link rel="icon" href="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" media="screen"/>
-    <script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
-
-    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-"""
-
-FOOTER = """
-
-<footer>
-    <a href="https://www.univ-lille3.fr/"><img src="svg/logo_lille3.svg" title="" alt="Lille 3" /></a>
-    <p><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015</p>
-</footer>
-</div> <!-- End of container-->
-</body>
-</html>
-"""
-
-SCRIPTS = """
-    \n<!-- SCRIPTs  -->
-    <script type="text/javascript">
-        $(".fancybox").fancybox({
-                            padding : '1em',
-                            maxWidth : '70%',
-                            maxHeight : '90%',
-                            fitToView : false,
-                            width : '60%',
-                            height : '80%',
-                            autoSize : false,
-                            closeClick : false,
-                            openEffect : 'none',
-                            closeEffect : 'none',
-                            tpl: {
-                                    next : '<a title="Next" class="fancybox-nav fancybox-next fancybox-wb-next" href="javascript:;"></a>',
-                                    prev : '<a title="Previous" class="fancybox-nav fancybox-prev fancybox-wb-prev" href="javascript:;"></a>',
-                                    closeBtn: '<a title="Close" class="fancybox-item fancybox-close fancybox-wb-close" href="javascript:;"></a>'
-                            },
-                            helpers : {
-                                    overlay : {
-                                        css : {
-                                            'background' : 'rgba(255, 255, 255, 0.8)'
-                                        }
-                                    }
-                            }
-                            });
-        // nav stays on top while scrolling
-        $(document).scroll(function(){
-            var header_height = $('header').outerHeight();
-            console.log(" -- Scrolling !! --", window.scrollY);
-            console.log(" -- header_height --", header_height);
-
-            if (window.scrollY > header_height) {
-                console.log(" -- ABOVE limit --", header_height);
-
-                $('nav.accordion').attr('style', 'position:fixed;top:0;');
-            }
-            else {
-                console.log(" -- UNDER limit --", header_height);
-                $('nav.accordion').attr('style', '');
-
-            }
-
-        });
-        // control of Navigation and sections loading
-        $(function(){
-            $(".accordion ul li a").click(function(e){
-                e.preventDefault();
-                current_node = $(this);
-                var selector = current_node.attr('data_sec_id');
-                console.log('selector', selector);
-                if (selector.length == 0) {
-                    //go to 1st subsection
-                    current_node = current_node.next().find('a.subsection')[0];
-                    selector = $(current_node).attr('data_sec_id');
-                }
-                //else {
-                if ($(current_node).hasClass('subsection')){
-                    $('a.subsection').removeClass('active');
-                    $(current_node).addClass('active');
-                }
-                $('section').hide();
-                var iframes = $('#'+selector).find('iframe');
-                console.log("found iframes ?", iframes);
-                iframes.each(function(idx){
-                    if ($(this).data('src')){ // only do it once per iframe
-                        $(this).prop('src', $(this).data('src')).data('src', false);
-                        console.log("this src = ", $(this).attr('src'))
-                        }
-                })
-                $('#'+selector).show();
-
-                //}
-                });
-        });
-        // Accordion menu
-        (function($) {
-            // adapt main content height to menu height
-            var nav_height = $('nav.menu').outerHeight();
-            $('main.content').attr('style', 'min-height:'+nav_height+'px;')
-
-            $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-
-            $('.accordion a.section').click(function(j) {
-                console.log("accordéon ====");
-                var dropDown = $(this).closest('li').find('p');
-                $(this).closest('.accordion').find('p').not(dropDown).slideUp();
-
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                } else {
-                    $(this).closest('.accordion').find('a.active').removeClass('active');
-                    $(this).addClass('active');
-                }
-
-                dropDown.stop(false, true).slideToggle();
-                j.preventDefault();
-            });
-        })(jQuery);
-    </script>\n\n
-"""
-
-def usage():
-    str = """
-Usage:
-   exporte les fichiers depuis l'arborescence git + fichier de config pour en faire un fichier HTML index.html
-   puis comprimer les resources dans une archive /fileout/ exploitable sur un server Web
-
-   toIMS config_filein
-"""
-    print (str)
-    exit(1)
-
-
 def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
     return link.replace("../media", "/media")
@@ -322,12 +182,25 @@ def generateModuleHtml(data, module_folder=False):
     moduleHtml.close()
     return True
 
+def usage():
+    str = """
+        Usage:
+           toHTML.py config_filein
+
+           exporte les fichiers depuis l'arborescence git + fichier de config pour en
+           faire un fichier HTML module.html pour chaque [module] défini en config
+    """
+    print (str)
+    exit(1)
 
 def main(argv):
-    """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
+    """
+        toHTML is a utility to help building HTML export of course material
+        given a config file with sections structure + some other parameters
+    """
     if len(sys.argv) != 2:
         usage()
-    # filein is a global config file that gives each modules parameters
+    # filein is a global config file that gives each module's parameters
     filein = sys.argv[1]
     print ("Arguments : filein %s " % (filein))
     with open(filein, encoding='utf-8') as global_config:

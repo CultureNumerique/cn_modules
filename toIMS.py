@@ -17,16 +17,21 @@ FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
     'discussions' : 'imsdt_xmlv1p1',
     'auto-evaluation' : 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
+    'devoirs': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
     'webcontent' : 'webcontent',
+    'correction' : 'webcontent',
 }
 
 
 def usage():
     str = """
 Usage:
-   exporte les fichiers depuis l'arborescence git pour les comprimer dans une archive .imscc.
+   toIMS module_dir config_filein
 
-   toIMS config_filein fileout
+   exporte les fichiers depuis l'arborescence git située dans [module_dir] en
+    suivant les paramètres du fichier de config [config_filein] pour les
+     comprimer dans une archive [module_dir].imscc.zip
+
 """
     print (str)
     exit(1)
@@ -62,7 +67,11 @@ def generateIMSManifest(data):
                     with tag('lomimscc:catalog'):
                         text('category')
                     with tag('lomimscc:entry'):
-                        text(data["lom_metadata"]["category"])
+                        cat = data["lom_metadata"]["category"]
+                        if cat:
+                            text(cat)
+                        else:
+                            text('D')
     # Print organization
     resources = []
     with tag('organizations'):
@@ -75,6 +84,9 @@ def generateIMSManifest(data):
                             text(str(idA))
                         for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                             href = data["sections"][idA]["subsections"][idB]["source_file"]
+                            # FIXME: when adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
+                            if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
+                                href = href.replace('html', 'xml')
                             filename = href.rsplit('/',1)[1]
                             resources.append(filename)
                             with tag('item', identifier=("subsec_"+str(idA)+"_"+str(idB)), identifierref=("doc_"+str(idA)+"_"+str(idB))):
@@ -83,23 +95,31 @@ def generateIMSManifest(data):
     # Print resources
     with tag('resources'):
         # retrieve images and add dependency when needed
-        doc.asis("<!-- Images -->")
+        doc.asis("<!-- Media -->")
+        try:
+            media_dir = data["media_dir"]
+        except:
+            media_dir = "media"
+
         images = {}
-        for idx, filename in enumerate(os.listdir(os.getcwd()+'/img')):
+        for idx, filename in enumerate(os.listdir(os.path.join(os.getcwd(), media_dir))):
             if filename in resources:
                 pass # avoid duplicating resources
             else:
-                doc_id = "img_"+str(idx)
+                doc_id = media_dir+"_"+str(idx)
                 images[filename] = doc_id # store img id for further reference
-                with tag('resource', identifier=doc_id, type="webcontent", href="img/"+filename):
-                    doc.stag('file', href="img/"+filename)
+                with tag('resource', identifier=doc_id, type="webcontent", href=media_dir+"/"+filename):
+                    doc.stag('file', href=media_dir+"/"+filename)
 
         doc.asis("<!-- Webcontent -->")
         for idA, section in enumerate(data["sections"]):
             for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                 doc_id = "doc_"+str(idA)+"_"+str(idB)
                 file_type = FILETYPES[data["sections"][idA]["subsections"][idB]["type"]]
+                # When adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
                 href = data["sections"][idA]["subsections"][idB]["source_file"]
+                if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
+                    href = href.replace('html', 'xml')
                 with tag('resource', identifier=doc_id, type=file_type, href=href):
                      doc.stag('file', href=href)
                      # add dependency if needed (html only)
@@ -111,12 +131,6 @@ def generateIMSManifest(data):
                              if img in images:
                                  # add dependency
                                  doc.stag('dependency', identifierref=images[img])
-                        # rewrite absolute href links
-                        #  body = html_doc.find('body')
-                        #  body.rewrite_links(replaceLink)
-                        #  f = open(href,"wb")
-                        #  f.write(html.tostring(body))
-                        #  f.close()
 
     doc.asis("</manifest>")
     imsfile = open('imsmanifest.xml', 'w')
@@ -131,14 +145,15 @@ def main(argv):
         usage()
 
     filein = sys.argv[1]
-    fileout = sys.argv[2]
-    # add .zip if not there
-    if fileout.rsplit('.', 1)[1] != 'zip':
-        fileout += '.zip'
+    module_dir = sys.argv[2]
+    fileout = module_dir+'.imscc.zip'
 
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
+    # change directory
+    os.chdir(module_dir)
+
     # parse data and generate imsmanifest.xml
     generateIMSManifest(data)
     print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
@@ -147,11 +162,12 @@ def main(argv):
     zipf = zipfile.ZipFile(fileout, 'w')
     zipf.write(os.getcwd()+'/imsmanifest.xml')
     for dir_name in data['directories_to_ims']:
-        for file in os.listdir(dir_name):
-            filepath = os.path.join(os.getcwd(), dir_name)
-            filepath = os.path.join(filepath, file)
-            print (" Adding %s to archive " % (filepath))
-            zipf.write(filepath)
+        if os.listdir(dir_name):
+            for file in os.listdir(dir_name):
+                filepath = os.path.join(os.getcwd(), dir_name)
+                filepath = os.path.join(filepath, file)
+                print (" Adding %s to archive " % (filepath))
+                zipf.write(filepath)
 
     zipf.close()
 

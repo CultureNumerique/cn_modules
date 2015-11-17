@@ -1,5 +1,6 @@
 {
-    "directories_to_ims": ["auto-evaluation", "devoirs", "discussions", "img", "webcontent", "weblinks", "videos"],
+    "directories_to_ims": ["auto-evaluation", "devoirs",  "media", "webcontent", "videos"],
+    "media_dir":"media",
 
     "base_url": "https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/",
 
@@ -15,7 +16,7 @@
             "subsections":[
                 {
                 "title":"Objectifs et fonctionnement du cours Culture numérique",
-                "source_file":"img/culture-numerique_mode_emploi-v04.pdf",
+                "source_file":"media/culture-numerique_mode_emploi-v04.pdf",
                 "type":"webcontent"
                 },
                 {
@@ -27,16 +28,6 @@
                 "title":"Comment répondre aux exercices d'approfondissement ?",
                 "source_file":"webcontent/comment_repondre_aux_exercices_d_approfondissement_.html",
                 "type":"webcontent"
-                },
-                {
-                "title":"FORUM DE QUESTIONS",
-                "source_file":"discussions/FORUM_DE_QUESTIONS.discussion.xml",
-                "type":"discussions"
-                },
-                {
-                "title":"Forum des nouvelles",
-                "source_file":"discussions/FORUM_DES_NOUVELLES.discussion.xml",
-                "type":"discussions"
                 }
             ]
         },{
@@ -345,11 +336,6 @@
                 "title":"1.8.3 L’ICANN et la CNIL - correction",
                 "source_file":"webcontent/1.8.3_l_icann_et_la_cnil-_correction.html",
 				"type":"webcontent"
-                },
-                {
-                "title":"ENQUÊTE DE FIN DE COURS (environ 10 min)",
-                "source_file":"weblinks/ENQUETE_DE_FIN_DE_COURS.weblink.xml",
-                "type":"weblink"
                 }
             ]
         }

@@ -105,6 +105,12 @@ class GiftQuestion():
         doc.asis('\n')
         return(indent(doc.getvalue(), newline='\n'))
 
+def clean_question_src(question):
+    question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
+    question = re.sub('\\\\n', '', question) # remove \\n in src txt
+    question = re.sub('\\\:', '', question) # remove \: in src txt
+
+    return question
 
 def extract_questions(some_text):
     """ From a piece of text, extract and return a list of single line strings with GIFT formated questions """
@@ -117,11 +123,8 @@ def extract_questions(some_text):
         if line == '' or line.isspace():
             if new_question is not None:
                 if len(new_question) > 0:
-                    new_question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', new_question)
-                    new_question = re.sub('\\\\n', '', new_question) # remove \\n in src txt
-                    new_question = re.sub('\\\:', '', new_question) # remove \: in src txt
+                    new_question = clean_question_src(new_question)
                     questions_src.append(new_question)
-                    pprint(" !=!=!=!=!=! appending new question =%s=" % (new_question))
                     new_question = "" # we start over a new question
                 else:
                     pass
@@ -140,8 +143,13 @@ def extract_questions(some_text):
                 new_question = ""
             new_question+=line
 
+    # for txt src with only 1 question and no blank lines:
+    if new_question is not None:
+        if len(new_question) > 0:
+            new_question = clean_question_src(new_question)
+            questions_src.append(new_question)
 
-    pprint (" ^^^^^^^^^^^^  Extracted  %d questions " % (len(questions_src)))
+    pprint (" ^^^^^^^^^^^^  Extracted  %d questions / dump = %s" % (len(questions_src), some_text))
     return questions_src
 
 
@@ -153,22 +161,25 @@ def process_questions(questions_src):
     question_objects = []
 
     for q_src in questions_src:
-        #pprint(" ++++++  Processing new question src = %s" % (q_src))
+        pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
         q_prestate = ""
         # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
-        try:
-            q_prestate = q_src.split('{', maxsplit=1)[0]
-            tmp = q_src.split('{', maxsplit=1)[1]
-            q_answers = tmp.split('}', maxsplit=1)[0]
-            q_poststate = tmp.split('}', maxsplit=1)[1]
-        except:
+        split_1 = q_src.split('{', maxsplit=1)
+        q_prestate = split_1[0]
+        if len(split_1) <= 1:
             # description type with no {}
             q_obj.text = q_src
             q_obj.type = 'DESCRIPTION'
             q_answers = ''
-            question_objects.append(q_obj)
-            pass
+            # question_objects.append(q_obj)
+            # continue
+        else:
+            tmp = split_1[1]
+            split_2 = tmp.split('}', maxsplit=1)
+            q_answers = tmp.split('}', maxsplit=1)[0]
+            if len(split_2) > 1:
+                q_poststate = tmp.split('}', maxsplit=1)[1]
 
         # 2. Process q_prestate
         #pprint(" Trying to process prestate = %s" % (q_prestate))
@@ -237,6 +248,7 @@ def process_questions(questions_src):
         elif false_answer_count > 0:
             q_obj.type = 'MULTICHOICE'
         question_objects.append(q_obj)
+
 
     return question_objects
 
