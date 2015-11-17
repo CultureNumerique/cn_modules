@@ -75,22 +75,25 @@ Les activités peuvent être de 2 types et sont représentées par une classe de
 - Exercices d'approfondissement: `activite-avancee`
 On utilise ici les "fenced code blocks" en spécifiant la syntaxe juste à côté des backticks:
 
-        ```auto-evaluation
+        ```activite
         ```
 
 Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. Exemple:
 
-        ```activite
-        ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-        [html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
-        <ul>
-        <li>Qui développe le format =html=</li>
-        <li>Depuis quand ce travail sur ce langage HTML existe-t-il ? </li>
-        <li>Quels sont les objectifs de cette numérisation ?</li>
-        <li>Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
-        <li>Quelle est la version la plus récente de HTML ? </li>
-        </ul>
+        ```activite-avance
+        
+        ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
+        #### Le genre, la date de création, ...
+        }
+        
+        ::Fonctionnalités d'un éditeur de textes::
+        [html]<p>Parmi les  fonctionnalités suivantes, lesquelles sont possibles ?
+        </p>
         {
-        #### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
+        ~%25%copier/couper/coller#tous les éditeurs le permettent
+        ~%25%rechercher et remplacer#très souvent disponible
+        ~%25%avancer de mots en mots#souvent par la conjonction CRTL-flèches
+        ~%25%corriger l'orthographe#certains le font
+        ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
         }
         ```
