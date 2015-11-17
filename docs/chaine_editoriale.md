@@ -15,13 +15,16 @@ Un cours se décompose en sections et sous-sections. Chaque sous-sections peut �
 
 ### Elément de cours simple
 Rédigé en MarkDown avec les extensions Python suivantes
-**ajouter des classes CSS**  
+####ajouter des classes CSS 
 
 Avec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
 Un exemple pour ajouter un attribut en ligne à un lien:  
 `[link](http://example.com){: class="foo bar" title="Some title!" }`  
 qui produit le HTML suivant:  
 `<p><a href="http://example.com" class="foo bar" title="Some title!">link</a></p>`  
+
+##### Commentaires invisibles
+TODO
 
 ### Elément de cours avec animations vidéo
 Ici il y a 2 étapes:  
@@ -30,20 +33,35 @@ Ici il y a 2 étapes:
 
 ** a) Notes pour idées d'animation **
 On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code. Nous y ajoutons ici un mot clé *à la ligne* juste après les 3 premiers backtick comme suit  
-  
+
     ```
-    [Animation]
+    [Animation]  
+    ```
 
 Ce qui produit le bloc suivant:  
 
-```
-[Animation]
-Peut être des lettres simples en suite de 0 et de 1, et des
-compositions en mots/composition de suites de 0 et 1...  est-ce
-qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
-```
+    [Animation]
+    Peut être des lettres simples en suite de 0 et de 1, et des
+    compositions en mots/composition de suites de 0 et 1...  est-ce
+    qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+
 
 **b) Lien vers une vidéo d'animation**  
-Sur le même principe, on spécifie qu'il s'agit d'un lien vers une vidéo censé être intégré dans une iframe:
+Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo avec un attribut
 
-**Commentaires, non rendus**  
+    [Introduction au web](https://player.vimeo.com/video/138623497){: lien_video } 
+
+Pour déterminer le texte associé à la vidéo, on regarde l'emplacement par rapport au début d'une section ou d'une sous-section. Si le lien est placé sur la ligne juste après le titre de section, alors c'est tout le texte de cette section qui sera associée à la vidéo; idem pour le cas d'une sous-section.  
+Exemple:
+```
+# Le web et internet
+## Le web
+[Introduction au web](https://player.vimeo.com/video/138623497){: lien_video } 
+```
+Dans ce cas, tout le texte de la sous-section sera associé à la vidéo.
+
+
+
+###  auto-évaluation sous forme de quiz
+
+### Exercices d'approfondissement
