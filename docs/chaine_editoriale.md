@@ -1,12 +1,12 @@
 # Comment les éléments de cours "Culture Numérique" sont-ils produits ?
 
 Nous détaillons ici la chaine éditoriale adoptée pour la production des modules mis à dispositions sur ce dépôt.  
-Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le MarkDown, que nous avons étendus pour nos besoins spécifiques. Ces ajouts consistent en des conventions et l'usage d'extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions). 
+Nous utilisons un fichier dit "maitre" comme matrice de base pour générer le cours. La syntaxe employée est basée sur le format MarkDown, que nous avons étendu pour nos besoins spécifiques. Ces ajouts consistent en des conventions et l'usage d'extensions proposées par la [librairie Python de MarkDown](https://pythonhosted.org/Markdown/extensions). 
 
 ### Structure globale d'un cours Culture Numérique
-Un cours se décompose en sections et sous-sections. Chaque sous-sections peut être de la forme suivante:  
+Un cours se décompose en sections et sous-sections. Chaque sous-section peut être de la forme suivante:  
 1. élément de cours simple (texte + images)  
-2. élément de cour incluant une ou plusieurs animations (video) accompagnée à chaque fois par la version texte lisible en mode "zen"
+2. élément de cours incluant une ou plusieurs animations (vidéo) accompagnées à chaque fois par la version texte lisible en mode "zen"
 3. auto-évaluation sous forme de quiz 
 4. exercice d'approfondissement incluant un énoncé (texte riche) et un espace pour fournir une réponse sous forme de texte libre
 
@@ -27,8 +27,8 @@ TODO
 
 ### Elément de cours avec animations vidéo
 Ici il y a 2 étapes:  
-- a) avant la réalisation des vidéos, on ajoute des blocs 'Idéee animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
-- b) une fois la vidéo réalisé, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
+- a) avant la réalisation des vidéos, on ajoute des blocs 'Idée animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
+- b) une fois la vidéo réalisée, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
 
 ####a) Notes pour idées d'animation
 On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code. Nous y ajoutons ici un mot clé *à la ligne* juste après les 3 premiers backtick comme suit  
