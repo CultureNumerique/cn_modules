@@ -15,30 +15,35 @@ Un cours se décompose en sections et sous-sections. Chaque sous-sections peut �
 
 ### Elément de cours simple
 Rédigé en MarkDown avec les extensions Python suivantes
-**ajouter des classes CSS**
+**ajouter des classes CSS**  
+
 Avec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
-Un exemple pour ajouter un attribut en ligne à un lien:
-`[link](http://example.com){: class="foo bar" title="Some title!" }`
-qui produit le HTML suivant:
-`<p><a href="http://example.com" class="foo bar" title="Some title!">link</a></p>`
+Un exemple pour ajouter un attribut en ligne à un lien:  
+`[link](http://example.com){: class="foo bar" title="Some title!" }`  
+qui produit le HTML suivant:  
+`<p><a href="http://example.com" class="foo bar" title="Some title!">link</a></p>`  
 
 ### Elément de cours avec animations vidéo
 Ici il y a 2 étapes:  
 - a) avant la réalisation des vidéos, on ajoute des blocs 'Idéee animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
 - b) une fois la vidéo réalisé, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
+
 ** a) Notes pour idées d'animation **
-On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code comme suit:
+On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code. Nous y ajoutons ici un mot clé *à la ligne* juste après les 3 premiers backtick comme suit  
+  
+    ```
+    [Animation]
+
+Ce qui produit le bloc suivant:  
+
 ```
-$ git commit -am 'un nouveau commit'
-```
-Nous ajoutons ici un mot clé juste après les 3 premiers backtick comme suit ````Animation`
-pour repérer ces blocks spéciaux:
-```Animation
+[Animation]
 Peut être des lettres simples en suite de 0 et de 1, et des
 compositions en mots/composition de suites de 0 et 1...  est-ce
 qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
 ```
-** b) Lien vers une vidéo d'animation **
+
+**b) Lien vers une vidéo d'animation**  
 Sur le même principe, on spécifie qu'il s'agit d'un lien vers une vidéo censé être intégré dans une iframe:
 
-** Commentaires, non rendus **
+**Commentaires, non rendus**  
