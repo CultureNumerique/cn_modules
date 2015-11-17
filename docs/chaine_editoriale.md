@@ -19,9 +19,11 @@ Rédigé en MarkDown avec les extensions Python suivantes
 
 Avec des [Attribute list](https://pythonhosted.org/Markdown/extensions/attr_list.html): Pour permettre d'ajouter des classes CSS à une image ou à un bloc de texte, pour permettre une mise en page enrichie.
 Un exemple pour ajouter un attribut en ligne à un lien:  
-`[link](http://example.com){: class="foo bar" title="Some title!" }`  
+`[link](http://example.com){: class="foo bar" .titre title="Some title!" }`  
 qui produit le HTML suivant:  
-`<p><a href="http://example.com" class="foo bar" title="Some title!">link</a></p>`  
+`<p><a href="http://example.com" class="foo bar titre" title="Some title!">link</a></p>`  
+
+Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe`
 
 ##### Commentaires invisibles
 TODO
@@ -47,10 +49,14 @@ Ce qui produit le bloc suivant:
 
 
 **b) Lien vers une vidéo d'animation**  
-Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo avec un attribut
+Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo aen spécifiant la classe `lien_video`:  
 
-    [Introduction au web](https://player.vimeo.com/video/138623497){: lien_video } 
+    [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
 
+ou  
+
+    [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
+    
 Pour déterminer le texte associé à la vidéo, on regarde l'emplacement par rapport au début d'une section ou d'une sous-section. Si le lien est placé sur la ligne juste après le titre de section, alors c'est tout le texte de cette section qui sera associée à la vidéo; idem pour le cas d'une sous-section.  
 Exemple:
 ```
@@ -62,6 +68,29 @@ Dans ce cas, tout le texte de la sous-section sera associé à la vidéo.
 
 
 
-###  auto-évaluation sous forme de quiz
+###  Activités
 
-### Exercices d'approfondissement
+Les activités peuvent être de 2 types et sont représentées par une classe de bloc de code:
+- auto-évaluation: `activite`
+- Exercices d'approfondissement: `activite-avancee`
+On utilise ici les "fenced code blocks" en spécifiant la syntaxe juste à côté des backticks:
+
+        ```auto-evaluation
+        ```
+
+Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. Exemple:
+
+        ```activite
+        ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
+        [html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
+        <ul>
+        <li>Qui développe le format =html=</li>
+        <li>Depuis quand ce travail sur ce langage HTML existe-t-il ? </li>
+        <li>Quels sont les objectifs de cette numérisation ?</li>
+        <li>Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
+        <li>Quelle est la version la plus récente de HTML ? </li>
+        </ul>
+        {
+        #### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
+        }
+        ```
