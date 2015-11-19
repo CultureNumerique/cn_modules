@@ -21,10 +21,15 @@ Un exemple pour ajouter un attribut en ligne à un lien:
 qui produit le HTML suivant:  
 `<p><a href="http://example.com" class="foo bar titre" title="Some title!">link</a></p>`  
 
-Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe`
+Notez que pour ajouter des classes on peut soit spécifier `.une_classe` ou `class='une_classe``
 
 #### Commentaires invisibles
-TODO
+En utilisant simplement les commentaires HTML:
+    
+        <!-- On pourrait aussi mentionner les lol cats dans cette section non ? -->
+
+Le commentaire suivant ne sera donc pas visible dans le rendu HTML final.
+<!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs animés -->        
 
 ### Elément de cours avec animations vidéo
 Ici il y a 2 étapes:  
