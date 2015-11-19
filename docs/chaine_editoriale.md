@@ -37,19 +37,19 @@ Ici il y a 2 étapes:
 - b) une fois la vidéo réalisée, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
 
 ####a) Notes pour idées d'animation
-On se base ici sur la syntaxe des 3 backticks initialement proposée par l'extension GitHub de Markdown et supportée par les [Fenced Code blocks de l'extension Python](https://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html): en utilisant 3 backticks ````` en début et ````` à la fin du block, on génère un bloc code. Nous y ajoutons ici un mot clé *à la ligne* juste après les 3 premiers backtick comme suit  
+On utilise ici le principe natif de block quote Markdown avec un `>` en début de paragraphe:
+```    
+> [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
+```
+Qui produira ce résultat:
 
-    ```
-    [Animation]  
-    ```
+> [Animation] Peut être des lettres simples en suite de 0 et de 1, et des
+compositions en mots/composition de suites de 0 et 1...  est-ce
+qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
 
-Ce qui produit le bloc suivant:  
-
-    [Animation]
-    Peut être des lettres simples en suite de 0 et de 1, et des
-    compositions en mots/composition de suites de 0 et 1...  est-ce
-    qu'on fait passer l'idée de coder/décoder et sa contraction en codec?  
-
+**NB** Si le mot clé `[Animation]` n'est pas inclu, le bloc sera toujours interprété comme bloc idée d'animation.
 
 ####b) Lien vers une vidéo d'animation
 Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo aen spécifiant la classe `lien_video`:  
