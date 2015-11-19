@@ -5,6 +5,7 @@ import os
 import sys
 import re
 import json
+import markdown
 import zipfile
 import random
 
@@ -28,7 +29,7 @@ FOOTER = """
 </body>
 </html>
 """
-# GIFT model (from http://search.cpan.org/~casiano/Gift-0.6/lib/Gift.pm):
+# GIFT syntax (from https://docs.moodle.org/28/en/GIFT_format):
 # * Questions separated by new line
 # * Question made of 3 parts:
 #      prefix-statement { answer section } post-statement
@@ -41,16 +42,16 @@ FOOTER = """
 # * The POSTSTATE is the remaining text after answer section *only* in fill-in-the-blank questions
 # * ANSWERS : describe possible answers for a question and depends on the type of question:
 
-    # MULTIANSWER for multiple choice questions where two or more answers must be selected in order to obtain full credit
-    # MULTICHOICE for Multiple Choice questions
-    # TRUEFALSE for True-false questions
-    # ESSAY == empty answers section
-    # DESCRIPTION for question with no answer part at all
-    # NUMERIC for the two types of numeric questions (range and threshold)
+#    MULTIANSWER for multiple choice questions where two or more answers must be selected in order to obtain full credit
+#    MULTICHOICE for Multiple Choice questions
+#    TRUEFALSE for True-false questions
+#    ESSAY == empty answers section
+#    DESCRIPTION for question with no answer part at all
+#    NUMERIC for the two types of numeric questions (range and threshold)
 # Not covered yet :
-    # SHORTANSWER for Short Answer questions
-    # MISSINGWORD for fill-in-the-blank
-    # MATCH for Matching questions
+#    SHORTANSWER for Short Answer questions
+#    MISSINGWORD for fill-in-the-blank
+#    MATCH for Matching questions
 
 class GiftQuestion():
     """
@@ -81,11 +82,12 @@ class GiftQuestion():
             with tag('p', klass='questiontitle'):
                 text(self.title)
             with tag('p', klass='questiontext'):
-                if self.text_format == 'html':
+                if self.text_format == 'markdown':
+                    print ("printing Markdown/ source = %s " % (self.text))
+                    html_text = markdown.markdown(self.text, ['markdown.extensions.extra', 'markdown.extensions.nl2br'])
+                    doc.asis(html_text)
+                else:
                     doc.asis(self.text)
-                elif self.text_format == 'markdown':
-                    print(" ! Mardown text ! %s" % (self.text))
-                    # FIXME convert from MD to HTML
             # If type MULTICHOICE, MULTIANSWER give choices
             if self.type in ['MULTICHOICE', 'MULTIANSWER']:
                 with tag('ul', klass=self.type.lower()):
@@ -111,18 +113,18 @@ class GiftQuestion():
 
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
-    question = re.sub('\\\\n', '', question) # remove \\n in src txt
+    #question = re.sub('\\\\n', '', question) # remove \\n in src txt
     question = re.sub('\\\:', '', question) # remove \: in src txt
 
     return question
 
 def extract_questions(some_text):
-    """ From a piece of text, extract and return a list of single line strings with GIFT formated questions """
+    """ From a piece of text, extract and returns a list of single line strings with GIFT formated questions """
 
     questions_src = []
     new_question = None
 
-    for line in some_text.splitlines():
+    for line in some_text.splitlines(True):
         # if blank line (or line with only spaces), starts a new question
         if line == '' or line.isspace():
             if new_question is not None:
@@ -153,7 +155,7 @@ def extract_questions(some_text):
             new_question = clean_question_src(new_question)
             questions_src.append(new_question)
 
-    pprint (" ^^^^^^^^^^^^  Extracted  %d questions / dump = %s" % (len(questions_src), some_text))
+    pprint (" ^^^^^^^^^^^^  Extracted  %d questions" % (len(questions_src)))
     return questions_src
 
 
