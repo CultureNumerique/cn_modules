@@ -1,0 +1,36 @@
+<p>Pour définir un document textuel, on peut décrire les différentes vues
+sur ce document. On parle alors de composition de document en mode
+<em>WYSIWYM</em> pour "What You See Is What You Mean", en français <em>ce que
+vous voyez est ce que vous vous représentez</em>. Pour cela, on va décrire
+le document par un texte dans un langage de description.  Dans ce
+langage certains caractères ou certaines suites de caractères ont un
+sens particulier. Les éditeurs de texte servent à écrire directement
+dans le langage de description, et des logiciels spécifiques sont
+ensuite utilisés pour <em>calculer</em> une vue de présentation du document à
+partir de sa description.</p>
+<ul>
+<li><em>Les langages Wiki</em> ont été utilisés principalement pour composer
+  des pages Web dans un langage simplifié. On utilise des conventions
+  comme : une ligne qui commence par * est un titre, ** pour un
+  sous-titre. Une ligne blanche sépare les paragraphes. Un programme
+  de calcul peut construire une page Web à partir d'une description
+  textuelle en langage Wiki.</li>
+<li><em>Le langage LateX</em> utilisé pour la composition de documents dans le
+  monde scientifique (articles, rapports, thèses, livres). Dans ce
+  langage, le texte structuré décrit le contenu et la structure avec,
+  par exemple, une section commence par la séquence de caractères
+  <code>\section{titredesection}</code>. La forme est définie par les règles
+  externes de l'édition scientifique. Un programme de calcul prend en
+  entrée le document texte décrivant le document et produit en sortie
+  un document lisible et imprimable au format <code>pdf</code> respectant ces
+  règles d'édition.</li>
+<li><em>Le langage html</em> utilise des caractères particuliers comme &lt;, &gt; et</li>
+<li>pour définir des balises. Par exemple, les balises <code>&lt;section&gt;</code> et
+  <code>&lt;/section&gt;</code> permettent de définir une section. Le corps du document
+  <code>html</code> contient le contenu et la structure. L'entête du document
+  contient des méta données comme le codage des caractères utilisé par
+  le navigateur pour un affichage correct de la page, mais aussi des
+  mots clés à destination des robots pour une bonne indexation du
+  document. Enfin, la forme est définie dans un fichier texte
+  structuré (une feuille de style) dans <em>le langage css</em>.</li>
+</ul>

@@ -1,0 +1,92 @@
+<h2>Textes "simples"</h2>
+<p>Un document textuel peut être réduit à la seule vue séquentielle,
+c'est-à-dire une simple séquence de caractères. Dans ce cas, le format
+de représentation privilégié est celui communément appelé <em>texte
+simple</em>, dont l'extension principale est <code>txt</code> et le logiciel
+principal pour le manipuler est un <em>éditeur de textes</em>. Pour
+l'utilisateur, il existe cependant un niveau implicite de structure :</p>
+<ul>
+<li>un <em>mot</em> est une suite de caractères séparés par des espaces ou des
+  caractères de ponctuation ;</li>
+<li>une <em>phrase</em> est une suite de mots dont le premier commence par une
+  lettre capitale et qui se termine par un point ;</li>
+<li>un <em>paragraphe</em> est une suite de mots séparés par des fins de
+  paragraphes.</li>
+</ul>
+<p>Ce niveau de structure n'est pas explicitement représenté. Par
+exemple, il n'existe pas de codage de la notion de fin de mot. La
+notion de mot est le résultat d'un traitement par la machine dépendant
+des choix des concepteurs des logiciels qui peuvent reposer sur la
+langue, de la définition des symboles de ponctuation. </p>
+<pre><code>[Animation]
+- Activité ou demo sur éditeur de textes et ses fonctionnalités
+- Méta-données sur textes simples. Notez que le compte de
+  mots est souvent différent selon le logiciel (gedit vs linux)
+- Montrer que la ligne d'affichage n'est pas un élément de
+  structure. Par contre, la ligne ou paragraphe correspondant à un appui
+  sur touche Entrée en est un.
+- Sur la notion de mot. On peut montrer que deux logiciels
+  différents vont compter les mots de façon différente. On peut envoyer
+  sur la page wikipedia mot et montrer que selon le point de vue le mot
+  peut être défini de façon différente.
+</code></pre>
+
+<h2>Des langages et des logiciels</h2>
+<p>Au delà de cette structure informelle ou naturelle (les mots, les
+phrases et les paragraphes), nous avons vu qu'il était important de
+structurer un document de manière plus explicite et plus précise en
+déclarant des parties, sections, sous-sections, listes, etc.  La
+définition de cette structure est exclusivement sous la responsabilité
+humaine. C'est le concepteur du document qui sait quelle organisation,
+quelle structure associer à son contenu.  Il existe 2 grandes méthodes
+pour interagir avec la machine, soit utilisant un langage spécifique
+qui à l'aide de mots et de symboles permet de décrire la structure
+comme avec le langage <code>html</code> dont nous avons déjà parlé, soit en
+utilisant les fonctions prédéfinies d'un traitement de texte.
+Étudions ces deux options un peu plus en détail.</p>
+<blockquote>
+<p>Alors comment définir cette structure de façon explicite ?
+L'interaction, par le biais d'un langage commun entre l'homme et la
+machine joue alors un rôle essentiel. Ce langage d'interaction peut se
+traduire par un texte écrit et formel qui décrit un document comme par
+exemple le <code>html</code> dont nous avons déjà parlé.  Mais, ce langage peut
+prendre la forme d'une suite d'actions dans un logiciel de traitement
+de textes.</p>
+</blockquote>
+<h2>Textes structurés pour décrire des documents textuels</h2>
+<p>Pour définir un document textuel, on peut décrire les différentes vues
+sur ce document. On parle alors de composition de document en mode
+<em>WYSIWYM</em> pour "What You See Is What You Mean", en français <em>ce que
+vous voyez est ce que vous vous représentez</em>. Pour cela, on va décrire
+le document par un texte dans un langage de description.  Dans ce
+langage certains caractères ou certaines suites de caractères ont un
+sens particulier. Les éditeurs de texte servent à écrire directement
+dans le langage de description, et des logiciels spécifiques sont
+ensuite utilisés pour <em>calculer</em> une vue de présentation du document à
+partir de sa description.</p>
+<ul>
+<li><em>Les langages Wiki</em> ont été utilisés principalement pour composer
+  des pages Web dans un langage simplifié. On utilise des conventions
+  comme : une ligne qui commence par * est un titre, ** pour un
+  sous-titre. Une ligne blanche sépare les paragraphes. Un programme
+  de calcul peut construire une page Web à partir d'une description
+  textuelle en langage Wiki.</li>
+<li><em>Le langage LateX</em> utilisé pour la composition de documents dans le
+  monde scientifique (articles, rapports, thèses, livres). Dans ce
+  langage, le texte structuré décrit le contenu et la structure avec,
+  par exemple, une section commence par la séquence de caractères
+  <code>\section{titredesection}</code>. La forme est définie par les règles
+  externes de l'édition scientifique. Un programme de calcul prend en
+  entrée le document texte décrivant le document et produit en sortie
+  un document lisible et imprimable au format <code>pdf</code> respectant ces
+  règles d'édition.</li>
+<li><em>Le langage html</em> utilise des caractères particuliers comme &lt;, &gt; et</li>
+<li>pour définir des balises. Par exemple, les balises <code>&lt;section&gt;</code> et
+  <code>&lt;/section&gt;</code> permettent de définir une section. Le corps du document
+  <code>html</code> contient le contenu et la structure. L'entête du document
+  contient des méta données comme le codage des caractères utilisé par
+  le navigateur pour un affichage correct de la page, mais aussi des
+  mots clés à destination des robots pour une bonne indexation du
+  document. Enfin, la forme est définie dans un fichier texte
+  structuré (une feuille de style) dans <em>le langage css</em>.</li>
+</ul>

@@ -3,7 +3,7 @@
 #
 ######################################################################################
 #
-#    fromORG is a python lib that allows to parse an ORG mode file following the
+#    fromMD is a python lib that allows to parse a markdown file following the
 #    Culture Numérique guidelines. The output is a
 #       - JSON config file used to create HTML view or IMSCC archive for further
 #       export to Moodle. (Open EDX coming soon)
@@ -15,6 +15,7 @@ import os
 import sys
 import re
 import json
+import markdown
 
 from fromGIFT import extract_questions, process_questions
 from slugify import slugify
@@ -119,10 +120,10 @@ def process_md(md_src, current_dir):
     params = sections_split[0]
     # FIXME METADATA with Markdown
     # see metadata extension 
-    reg1 = re.search('#\+TITLE:(?P<title>.*)', params)
+    reg1 = re.search('TITLE:\s*(?P<title>.*)', params)
     if reg1:
         config['lom_metadata']['title'] = reg1.group('title')
-    reg2 = re.search('#\+LANGUAGE:(?P<lang>.*)', params)
+    reg2 = re.search('LANGUAGE:\s*(?P<lang>.*)', params)
     if reg2:
         config['lom_metadata']['language'] = reg2.group('lang')
 
@@ -141,7 +142,7 @@ def process_md(md_src, current_dir):
                 'subsections':[]
             }
             # regex for spliting in subsections
-            subsec_split = re.split('^##{2}\s(.*)', section, flags=re.M)
+            subsec_split = re.split('^#{2}\s(.*)', section, flags=re.M)
             subsections = []
             new_subsection_title = ''
             for split in subsec_split:
@@ -150,7 +151,7 @@ def process_md(md_src, current_dir):
                     if len(new_subsection_title) == 0:
                         new_subsection_title = 'Cours'
                     # regex for spliting again with "***** Activité [avancée]"
-                    activites = re.split('^`{3}activite(-avancee){0,1}(?P<txt>.*?)^`{3}', split, flags=re.S+re.M)
+                    activites = re.split('^`{3}activité(-avancée){0,1}(?P<txt>.*?)^`{3}', split, flags=re.S+re.M)
                     next_type = 'webcontent' # default type for subsections
                     for activite_split in activites:
                         # if 'None' or 'avancée' => next item is an activite node
@@ -158,7 +159,7 @@ def process_md(md_src, current_dir):
                             next_type = 'auto-evaluation'
                             new_subsection_title = 'Quizz'
                             pass
-                        elif activite_split == '-avancee':
+                        elif activite_split == '-avancée':
                             new_subsection_title = "Exercice d'approfondissement"
                             next_type = 'devoirs'
                             pass
@@ -193,8 +194,7 @@ def process_md(md_src, current_dir):
             subsection['source_file'] = subsection['type']+'/'+filename
             # if type = webcontent, as is in webcontent folder
             if subsection['type'] == 'webcontent':
-                # FIXME : should convert from org text to html
-                src = '<p>'+subsection['sub_src']+'</p>'
+                src = markdown.markdown(subsection['sub_src'], ['markdown.extensions.extra'])
             # else, process questions from GIFT source
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
                 # a) parses to HTML source code

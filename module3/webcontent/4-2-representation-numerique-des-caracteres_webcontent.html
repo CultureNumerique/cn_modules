@@ -1,45 +1,38 @@
-<p>
-
-Un document textuel est construit avec des caractères et une séquence
+<p>Un document textuel est construit avec des caractères et une séquence
  de caractères correspond souvent à un texte intelligible par l'homme.
  Nous présentons donc, dans un premier temps, comment sont représentés
- en machine les *caractères*.
-
-Précisons d'abord la notion de caractère en prenant l'exemple de la
+ en machine les <em>caractères</em>.</p>
+<p>Précisons d'abord la notion de caractère en prenant l'exemple de la
 langue française. Les caractères sont les minuscules, les majuscules,
 les lettres accentuées, les chiffres, l'espace et les symboles de
 ponctuation.  On peut aussi considérer des caractères comme le
-caractère "e dans l'o" ou les symboles monétaires...
-
-Mais avec l'internationalisation et la numérisation de textes anciens,
+caractère "e dans l'o" ou les symboles monétaires...</p>
+<p>Mais avec l'internationalisation et la numérisation de textes anciens,
 il faut être également capable de représenter tous les caractères de
-toutes les langues, vivantes ou mortes.
-
-Ce travail d'inventaire est long et complexe. Fort heureusement, il
+toutes les langues, vivantes ou mortes.</p>
+<p>Ce travail d'inventaire est long et complexe. Fort heureusement, il
 existe des groupes internationaux qui ont pour mission d'établir des
 normes pour la représentation numérique des caractères. C'est le cas
-du consortium international *Unicode* fondé il y a plus de 20
-ans. Il définit en premier lieu le *quoi*, c'est-à-dire quels
+du consortium international <em>Unicode</em> fondé il y a plus de 20
+ans. Il définit en premier lieu le <em>quoi</em>, c'est-à-dire quels
 caractères ou symboles faut-il coder. À l'heure actuelle, la plupart
 des caractères et symboles de la très grande majorité des langues sont
 codés. Mais le consortium introduit régulièrement des nouvelles
-langues rares ou anciennes ou même des langages comme les Emoji.
-
-Dans ces normes comme Unicode, ce ne sont pas les dessins qui sont
+langues rares ou anciennes ou même des langages comme les Emoji.</p>
+<p>Dans ces normes comme Unicode, ce ne sont pas les dessins qui sont
 répertoriés mais les caractères eux-même. Cette distinction est
 parfois assez subtile : majuscules et minuscules sont des caractères
-différents mais un *a* minuscule en gras ou italique en écriture
+différents mais un <em>a</em> minuscule en gras ou italique en écriture
 attachée ou en script est toujours le même caractère. À ces
 caractères, s'ajoutent des caractères particuliers, dits caractères de
 contrôle souvent invisibles. C'est par exemple, le caractère qui
 signifie la fin d'un fichier texte. D'autres proviennent même de
 l'époque des machines à écrire comme la tabulation, le retour à la
-ligne ou même le /retour chariot/ qui permettait à la tête d'écriture
-de revenir en début de ligne.
-
-Le consortium unicode définit en second lieu le *comment*. Il s'agit
+ligne ou même le <em>retour chariot</em> qui permettait à la tête d'écriture
+de revenir en début de ligne.</p>
+<p>Le consortium unicode définit en second lieu le <em>comment</em>. Il s'agit
 d'associer à tout caractère pris en charge par Unicode, un nom et un
-numéro appelé /point de codage/.  Par exemple, A a pour nom "Latin
+numéro appelé <em>point de codage</em>.  Par exemple, A a pour nom "Latin
 Capital Letter A" et pour numéro 65, * a pour nom "Asterisk" et pour
 numéro 42. Ces choix ont une histoire et ont été faits de façon
 astucieuse pour faciliter certains traitements. Par exemple, pour
@@ -48,12 +41,9 @@ correspondante, il suffit d'ajouter 32 à son numéro. Avec Unicode,
 tout caractère a donc un numéro, il reste à préciser comment ce numéro
 est représenté comme une suite de 0 et de 1. Il existe
 différents codages, le plus répandu et le plus économe en place est
-=UTF-8=.
-
-*************** Animation
+<code>UTF-8</code>.</p>
+<pre><code>[Animation]
 bien montrer le double encodage : car vers nombre vers
 binaire. On peut le faire avec des caractères divers français, arabe,
 chinois, et même Emoji.
-*************** END
-
-</p>
+</code></pre>

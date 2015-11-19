@@ -1,3 +1,7 @@
+LANGUAGE:   FR
+TITLE:   Représentation numérique de l'information : les documents
+AUTHOR:     Culture numérique
+
 # Introduction : Représenter c'est choisir...
 
 Pourquoi représenter l'information sous format numérique ? En premier
@@ -72,6 +76,7 @@ numérique d'une information est un processus conçu par l'homme,
 reposant sur des choix conceptuels, organisationnels et scientifiques
 et assurant la possibilité de traitements numériques.  Divers critères
 vont gouverner le choix d'une telle représentation :
+
 - la pertinence : modélise-t-elle bien l'information et permet-elle de
   réaliser les traitements souhaités ?
 - l'économie : est-elle économe en taille pour permettre un stockage
@@ -107,12 +112,12 @@ numérique multimédia.
 ::Représentation des données et traitement informatique sont-ils liés ?::{T}
 
 ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
-# Le genre, la date de création, ...
+#### Le genre, la date de création, ...
 }
 
 ::Donnez quelques exemples de critères qui peuvent gouverner le choix d'une représentation numérique d'une information.::
 {
-# la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...
+#la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...
 } 
 ```
 
@@ -127,7 +132,7 @@ numérique multimédia.
 <li>Quelle est la version la plus récente de HTML ? </li>
 </ul>
 {
-# Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
+#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
 }
 ``` 
 
@@ -163,7 +168,6 @@ présentation.
 <li>Un traitement de textes. Les exemples seront donnés dans ce cours avec <code>libreoffice</code>. 
 </ul>
 {}
-
 ```
 
 
@@ -283,7 +287,6 @@ document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/re
 ```
 
 ```activité
-plus loin 
 ::Uniquement des méta-données:: 
 [html]
 <p>Pour certaines applications, un document un document textuel peut se
@@ -322,7 +325,8 @@ pour impression et lecture diffère de la forme d'un document pour
 affichage sur écran. La forme peut dépendre de l'objectif de
 communication visé.
 
-``` activité
+``` 
+[idée activité]
 on peut remettre une couche html et css. On peut
 montrer des documents du Web sous différentes formes. On peut montrer
 un document Latex et faire découvrir sa structure, puis montrer le pdf
@@ -347,6 +351,7 @@ une activité qui montre que forme n'est pas structure.
 ```
 
 ## Un point d'étape 
+
 
 ```
 [Animation]
@@ -457,7 +462,7 @@ format. On facilite ainsi l'interopérabilité. Par exemple, le format
 `html` est utilisé par de nombreux logiciels et même au delà du Web.
 
 On parle de **format fermé** ou propriétaire lorsque des restrictions
-d'accès et/**ou d'utilisation s'appliquent. Être propriétaire d'un
+d'accès et/ou d'utilisation s'appliquent. Être propriétaire d'un
 format très répandu donne une puissance économique très importante
 dans notre monde numérique et une position dominante. En effet, la
 conversion étant impossible, une mise en concurrence est rendue très
@@ -477,6 +482,7 @@ peut-être même pas.
   <li>Est-ce que ce format est toujours développé ?</li>
   <li>Est-ce un format adapté à de grands documents ?</li>
 </ol>
+
 ::Les documents au format PDF::
 [html]<p>Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes</p>
 <ol>
@@ -539,6 +545,7 @@ Nous avons analysé ce qu'est un document textuel.  Nous avons mis en
 qualifiée. Nous avons discuté des formats de document. Nous allons
 maintenant étudier comment peuvent être saisis des documents
 numériques textuels. Nous allons voir deux approches :
+
 - l'une dans laquelle on décrit les différentes vues sur le document
   dans un texte structuré,
 - l'autre qui repose sur une approche plus orientée vers le rendu
@@ -634,6 +641,7 @@ de représentation privilégié est celui communément appelé *texte
 simple*, dont l'extension principale est `txt` et le logiciel
 principal pour le manipuler est un *éditeur de textes*. Pour
 l'utilisateur, il existe cependant un niveau implicite de structure :
+
 - un *mot* est une suite de caractères séparés par des espaces ou des
   caractères de ponctuation ;
 - une *phrase* est une suite de mots dont le premier commence par une
@@ -927,7 +935,6 @@ dimensions dans les logiciels spécialisés de design 3D.
 ```activité
 
 ::Pierre Bézier::
-	
 - Qui est **Pierre Bézier** ?
 {}
 ```
