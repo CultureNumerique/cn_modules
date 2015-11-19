@@ -78,7 +78,7 @@ class GiftQuestion():
         doc.asis('\n')
         doc.asis('<!-- New question -->')
         with tag('div', klass='question'):
-            with tag('h3'):
+            with tag('p', klass='questiontitle'):
                 text(self.title)
             with tag('p', klass='questiontext'):
                 doc.asis(self.text)
