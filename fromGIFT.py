@@ -81,7 +81,11 @@ class GiftQuestion():
             with tag('p', klass='questiontitle'):
                 text(self.title)
             with tag('p', klass='questiontext'):
-                doc.asis(self.text)
+                if self.text_format == 'html':
+                    doc.asis(self.text)
+                elif self.text_format == 'markdown':
+                    print(" ! Mardown text ! %s" % (self.text))
+                    # FIXME convert from MD to HTML
             # If type MULTICHOICE, MULTIANSWER give choices
             if self.type in ['MULTICHOICE', 'MULTIANSWER']:
                 with tag('ul', klass=self.type.lower()):
@@ -183,7 +187,7 @@ def process_questions(questions_src):
 
         # 2. Process q_prestate
         #pprint(" Trying to process prestate = %s" % (q_prestate))
-        r0 = re.compile('(::(?P<title>.*)::){0,1}(\[(?P<text_format>\w*)\])*(?P<text>.*)')
+        r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>.*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
         m0 = r0.search(q_prestate)
         if m0.group('title'):
             q_obj.title = m0.group('title')
