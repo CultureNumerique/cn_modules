@@ -32,9 +32,9 @@ Le commentaire suivant ne sera donc pas visible dans le rendu HTML final.
 <!-- Il faudrait vraiment enrichir cette documentation de quelques Gifs animés -->        
 
 ### Elément de cours avec animations vidéo
-Ici il y a 2 étapes:  
+Ces éléments de cours consistent en des sous-sections pouvant inclure 1 ou plusieurs vidéos d'animations. Ici il y a 2 étapes:  
 - a) avant la réalisation des vidéos, on ajoute des blocs 'Idée animation' pour décrire ce que pourrait contenir l'animation qui sera intégrée par la suite
-- b) une fois la vidéo réalisée, on intègre le lien vers la vidéo qui sera ensuite intégrée via une iframe
+- b) une fois la vidéo réalisée, on intègre le lien de la vidéo qui sera ensuite intégrée via une iframe dans la sous-section de cours
 
 ####a) Notes pour idées d'animation
 On utilise ici le principe natif de block quote Markdown avec un `>` en début de paragraphe:
@@ -52,20 +52,28 @@ qu'on fait passer l'idée de coder/décoder et sa contraction en codec?
 **NB** Si le mot clé `[Animation]` n'est pas inclu, le bloc sera toujours interprété comme bloc idée d'animation.
 
 ####b) Lien vers une vidéo d'animation
-Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo aen spécifiant la classe `lien_video`:  
+Sur le même principe que les *attribute lists*, on spécifie qu'il s'agit d'un lien vers une vidéo en spécifiant la classe `lien_video`:  
 
     [Introduction au web](https://player.vimeo.com/video/138623497){: .lien_video } 
 
 ou  
 
     [Introduction au web](https://player.vimeo.com/video/138623497){: class="lien_video" } 
-    
-Pour déterminer le texte associé à la vidéo, on regarde l'emplacement par rapport au début d'une section ou d'une sous-section. Si le lien est placé sur la ligne juste après le titre de section, alors c'est tout le texte de cette section qui sera associée à la vidéo; idem pour le cas d'une sous-section.  
-Exemple:
+
+#### Association du texte à la vidéo
+Il s'agit ici de déterminer le texte associé à chaque vidéo. La convention adoptée est qu'il suffit de placer le lien sur la ligne juste après le titre de sous-section. Si on n'insère qu'une seule vidéo, alors c'est tout le texte de la sous-section qui sera associée à la vidéo. Si on insère 2 vidéos, c'est le texte juste en dessous du lien jusqu'au:
+
++ prochain lien vidéo
++ OU jusqu'au prochain titre de section ou de sous-section  
+
+Exemple 1, 1 vidéo:
 ```
 # Le web et internet
 ## Le web
 [Introduction au web](https://player.vimeo.com/video/138623497){: lien_video } 
+
+
+
 ```
 Dans ce cas, tout le texte de la sous-section sera associé à la vidéo.
 
