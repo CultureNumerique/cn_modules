@@ -12,12 +12,8 @@ donc représenter le roman comme une suite de 0 et de 1 et inversement
 passer de cette suite de 0 et 1 en un texte lisible.
 
 
-```
-[Animation]
-Peut être des lettres simples en suite de 0 et de 1, et des
-compositions en mots*composition de suites de 0 et 1...  est-ce
-qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?  
-```
+>[Animation] Peut être des lettres simples en suite de 0 et de 1, et des compositions en mots*composition de suites de 0 et 1...  est-ce qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?  
+
 
 Il faut aussi pouvoir échanger. Plutôt que de se prêter un roman sur
 support papier, c'est sa représentation numérique qui sera copiée à
@@ -25,23 +21,20 @@ travers le réseau. Il est donc nécessaire que l'émetteur et le
 récepteur (en l'occurrence les logiciels utilisés par chacun d'eux)
 soient d'accord sur la façon de représenter l'ouvrage.
 
-```
-[Animation]
+
+>[Animation]
 Ce serait bien de voir différents choix possibles et un
 accord entre deux protagonistes. Donc l'idée de choix et ensuite
 d'accord entre parties.  
-```
 
 Retrouver le titre et l'auteur du roman est une tâche qui vous semble
 évidente. Elle sera rendue plus facile et sûre pour une machine si la
 représentation choisie contient explicitement la désignation du titre
 et de l'auteur.
 
-```
-[Animation]
- ex d'un roman dont le titre est un nom (Harry Potter vs
-  J.K. Rolling).  
-``` 
+>[Animation]
+ ex d'un roman dont le titre est un nom (Harry Potter vs J.K. Rolling).  
+  
 De même, considérons la classification du roman dans les catégories
 policier, historique ou libertin.  Cette tâche est difficile pour une
 machine sauf à spécifier dans la représentation la catégorie définie
@@ -53,10 +46,10 @@ complémentaires. Par conséquent, la représentation numérique d'une
 information peut être enrichie pour faciliter les traitements relatifs
 à de telles tâches.
 
-```
-[Animation]
+
+>[Animation]
 Ici on illustre que dans le codage on ajoute des meta-données.  
-``` 
+
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
 documents. 
@@ -213,10 +206,9 @@ est souvent hiérarchique ou arborescente car il y a des relations
 d'inclusion : un paragraphe dans une sous-section dans une section
 dans le document.
 
-``` 
-[Animation]
+>[Animation]
 illustrer hiérarchie et arbre 
-```
+
 Grâce à cette organisation structurelle, de nouveaux traitements sont
 disponibles : extraire le résumé, numéroter les sections, construire
 une table des matières, réordonner des sections avec mise à jour de la
@@ -265,11 +257,10 @@ souvent ces informations sont mémorisées sous la forme de propriétés
 ce document vaut `Culture numérique`, la propriété **datecréation** de
 ce document vaut `10 septembre 2015`, etc...
 
-``` 
-[Animation]
+>[Animation]
 je verrais bien en anim des docs papier qu'on range dans une
 pochette avec les meta données qu'on écrit sur la pochette.
-```
+
 
 Grâce à cette vue qualifiée et ces méta-données, les traitements sur
 des ensembles de documents sont facilités : on peut classer par
@@ -353,8 +344,7 @@ une activité qui montre que forme n'est pas structure.
 ## Un point d'étape 
 
 
-```
-[Animation]
+>[Animation]
 Peut-être une anim de rappel
 1. Le contenu brut : la suite de caractères
 2. La structure : identification des paragraphes, des titres, des
@@ -364,7 +354,7 @@ Peut-être une anim de rappel
 4. Les méta-données : informations à propos du document, non
    nécessairement affichées ou imprimées mais utiles pour sa gestion,
    son traitement.  
-```
+
    
 Chacune des vues contenu, structure, qualifiée et de présentation est
 importante.  Elles contribuent toutes, à des degrés divers, à des
@@ -605,12 +595,11 @@ est représenté comme une suite de 0 et de 1. Il existe
 différents codages, le plus répandu et le plus économe en place est
 `UTF-8`.
 
-```
-[Animation]
+>[Animation]
 bien montrer le double encodage : car vers nombre vers
 binaire. On peut le faire avec des caractères divers français, arabe,
 chinois, et même Emoji.
-```
+
 
 ```activité 
 - Représenter et normaliser est une tache complexe :
@@ -656,8 +645,7 @@ des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
 
-```
-[Animation]
+>[Animation]
 - Activité ou demo sur éditeur de textes et ses fonctionnalités
 - Méta-données sur textes simples. Notez que le compte de
   mots est souvent différent selon le logiciel (gedit vs linux)
@@ -668,7 +656,7 @@ langue, de la définition des symboles de ponctuation.
   différents vont compter les mots de façon différente. On peut envoyer
   sur la page wikipedia mot et montrer que selon le point de vue le mot
   peut être défini de façon différente.
-```
+
   
 ## Des langages et des logiciels
 

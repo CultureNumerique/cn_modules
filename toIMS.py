@@ -124,13 +124,17 @@ def generateIMSManifest(data):
                      doc.stag('file', href=href)
                      # add dependency if needed (html only)
                      if file_type == "webcontent":
-                         html_doc = html.parse(href)
-                         img_sources = html_doc.xpath('//@src')
-                         for img in img_sources:
-                             img = img.rsplit('/', 1)[1]
-                             if img in images:
-                                 # add dependency
-                                 doc.stag('dependency', identifierref=images[img])
+                        try:
+                            html_doc = html.parse(href)
+                            img_sources = html_doc.xpath('//@src')
+                            for img in img_sources:
+                                img = img.rsplit('/', 1)[1]
+                                if img in images:
+                                    # add dependency
+                                    doc.stag('dependency', identifierref=images[img])
+                        except:
+                            pprint(" Error while parsing doc: %s" % (href))
+                            continue
 
     doc.asis("</manifest>")
     imsfile = open('imsmanifest.xml', 'w')
