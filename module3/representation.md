@@ -3,7 +3,7 @@ TITLE:   Représentation numérique de l'information : les documents
 AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
-# Introduction : Représenter c'est choisir...
+# Représenter c'est choisir...
 
 Pourquoi représenter l'information sous format numérique ? En premier
 lieu, c'est un changement de support. Par exemple pour un roman, il
