@@ -1,7 +1,7 @@
 LANGUAGE:   FR
 TITLE:   Représentation numérique de l'information : les documents
 AUTHOR:     Culture numérique
-CSS: 
+CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Introduction : Représenter c'est choisir...
 
