@@ -1,3 +1,4 @@
+echo "rebase gh-pages branch with master"
 git checkout -B gh-pages
 git rebase master
 git checkout master
