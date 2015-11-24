@@ -53,10 +53,9 @@ d'un traitement de texte. C'est ce que nous allons développer dans ces
 cours...
 
 ```Activité
-// question: 165003 name: 1.1.1. Quizz (Q1/3) 
 
-::1.1.1. Quizz
-(Q1/3)::[html]<p>Pourquoi faut-il représenter les textes, images, son,
+::Pourquoi représenter avec des nombres ?::
+[html]<p>Pourquoi faut-il représenter les textes, images, son,
 etc.  par des nombres dans un ordinateur ?</p>
 {
  ~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
@@ -73,8 +72,8 @@ puisse le manipuler.</p>
 nombres, tout doit donc être représenté sous forme de nombres pour
 qu'il puisse le manipuler.</p> }
 
-// question: 165004 name: 1.1.1 Quizz (Q2/3) ::1.1.1 Quizz
-(Q2/3)::[html]<p>Que signifie "<em>numérisation</em>" ?</p>{
+::Numérisation)::
+[html]<p>Que signifie "<em>numérisation</em>" ?</p>{
 =<p>L'opération qui consiste à représenter sous forme de nombres une
 information quelle qu'elle soit.</p>#<p>Oui !</p> ~<p>L'opération qui
 consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer
@@ -82,8 +81,8 @@ tous les nombres c'est compter...</p> ####<p>La numérisation est
 l'opération qui consiste à représenter sous forme de nombres une
 information, quelle qu'elle soit.</p> }
 
-// question: 165005 name: 1.1.1 Quizz (Q3/3) ::1.1.1 Quizz
-(Q3/3)::[html]<p>Parmi ces objets, quels sont ceux équipés de
+::Où sont les processeurs ?::
+[html]<p>Parmi ces objets, quels sont ceux équipés de
 processeur(s) \:</p>{ ~%16.66667%<p>tablettes</p>
 ~%16.66667%<p>smartphones</p> ~%16.66667%<p>box ADSL</p>
 ~%16.66667%<p>lecteur mp3</p> ~%16.66667%<p>ordinateur</p>
@@ -112,6 +111,81 @@ des sites sur lesquels vous avez trouvé ces informations.
 La liste est non exhaustive et vous pouvez vous intéresser à d'autres
 domaines...
 ```
+## Le numérique concerne tout le monde [correction]
+
+Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n’est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
+S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** (/digital humanities/ en anglais). 
+
+Voici quelques exemples que nous vous proposons :
+
+* Dans les **médias** : nouveau sous-métier de journalisme : les **data-journalistes**
+ * [data-visualisation](http://www.lemonde.fr/data-visualisation/)
+ * [journalisme de données](http://fr.wikipedia.org/wiki/Journalisme_de_données)
+* Dans la **santé** : (imagerie, dossier numérique du patient, ...)
+  * [simulation](https://interstices.info/jcms/c_21525/simulation-de-loperation-de-la-cataracte)
+* En **histoire, sociologie, linguistique** : *fouille de données*
+   * [fouille de données](http://www.youtube.com/watch?feature=player_embedded&v=tp4y-_VoXdA)
+* En **art et culture** :
+	* [exple L3](http://)
+* Dans l’**enseignement** : (outils numérique d’accompagnement scolaire, MOOC,...)
+   * [FUN](https://www.france-universite-numerique-mooc.fr/cours/)  
+* En fouille archéologique :  une réalisation prestigieuse réalisée à Lille3 : 
+ * [vase qui parle](http://)
+
+N’hésitez pas à proposer d’autres exemples dans le forum de discussion.
+
+```activité-avancée
+::Le numérique au quotidien::
+Du numérique partout autour de nous, tous les jours ...
+Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
+    - Domotique
+    - Transports
+    - Vêtements
+    - Médical / paramédical
+Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
+```
+
+## le numérique au quotidien [correction]
+Quelques exemples que nous vous proposons au cas où vous n'auriez rien trouvé, ...
+
+La **domotique** est un domaine en pleine expansion qui vise à équiper numériquement notre maison :
+
+- [nest](https://nest.com/fr/)
+- [domotique](http://fr.wikipedia.org/wiki/Domotique)
+
+Pour les **transports**, on peut s'intéresser aux voitures, les ordinateurs de bord sont depuis longtemps présents dans les autos, de plus en plus ils sont responsables de notre sécurité :
+
+- [electrostabilisateur]( http://fr.wikipedia.org/wiki/electrostabilisateur_programmé)
+- [ordinateur de bord](http://fr.wikipedia.org/wiki/Ordinateur_de_bord)
+
+Les **chaussures** : gadget ou réelle innovation ? Ce genre d’objet est de plus en plus présents dans nos vies :
+
+ - [chaussures](http://www.linternaute.com/science/technologie/deja-demain/07/chaussure-intelligente/chaussure-intelligente.shtml)
+
+Les **lentilles pour la vue** ?
+
+ - [lentilles](http://www.zdnet.fr/actualites/google-apres-les-lunettes-connectees-les-lentilles-pour-le-diabete-39797148.htm)
+
+ ```activité-avancée
+::Le numérique dans la société::
+[markdown]
+Le numérique, un enjeu pour les **citoyens du XXIème siècle** ...
+Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités** des applications développées. Nous vous invitons à vous **documenter** et à réfléchir aux questions suivantes :
+ - Dans la **gestion de l‘énergie**: qu’est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
+- En **politique et média** : Qu’est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l’a rendu possible / facile ?
+- En **citoyenneté** : Que signifie **vote électronique** et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un *avantage* et un *inconvénient*.
+Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
+{####[markdown]
+Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
+ - À propos de la troisième révolution industrielle :
+  - [3eme revolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
+  - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
+ - En **politique et média** : Qu’est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l’a rendu possible / facile ?
+  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)   
+ - En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.     
+  - [arguments] http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
+}
+ ```
 
 # Historique informatique
 
