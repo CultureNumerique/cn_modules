@@ -10,7 +10,79 @@ AUTHOR: Culture Numérique
 Le web, c'est sans doute l'application informatique qui a rencontré le plus grand succès.
 
 C'est une utilisation particulière  d'internet. Il a été inventé par Tim Berners Lee au début des années 90. C'est d'abord un moyen de communication entre personnes qui permet de s'échanger des informations décrites dans des documents . Il est fréquent de constater une confusion entre Internet et le Web. Or, si le web utilise Internet, il n'est pas la seule application à le faire, le mail par exemple est un autre service qui utilise Internet. Socialement, le web a pris une place considérable dans nos vies. Sur cette application au départ très simple se sont bâties d'autres applications dans tous les domaines d'activités : pour le commerce, le marketing, la recherche d'emploi, le travail à distance et la collaboration... C'est un vecteur important de développement économique aujourd'hui. C'est aussi par des applications web que l'état et les administrations offrent leurs services aux citoyens. C'est encore par les applications sociales du web que nous communiquons dans notre vie privée. Maîtriser les technologies du web est important pour comprendre les enjeux, saisir des opportunités, éviter des pièges... Naviguer sur le web fait aujourd'hui partie du quotidien de chacun d'entre nous. Ce chapitre propose d'en expliquer le fonctionnement pour nous permettre d'avoir des comportements responsables et de garder la maîtrise de ce que nous faisons.
+
+## Cours 2/2
+[video]( https://player.vimeo.com/video/138623515 ){: .lien_video } 
+
+Alors, qu'est-ce réellement  que le web ? Le Web est avant tout un service qui permet de s'échanger des ressources. Celles-ci peuvent être très variées et prendre de nombreuses formes. Dans un premier temps, nous considérerons pour simplifier que ce sont uniquement des documents qui contiennent soit du texte soit des images.
+Le succès du web est sans doute lié à la notion de document hypertexte. C'est à dire la possibilité d'intégrer à l'intérieur d'un document des liens, qui sont des parties de texte cliquables permettant d'accéder à d'autres ressources.
+Cela a été rendu possible grâce à l'utilisation du fameux langage HTML - Hyper Text Markup Language - inventé par Tim Berners Lee en 1991.
+L'ensemble des documents ainsi que les liens qui les relient forment alors un réseau de documents. Cette multitude de liens a fait naître l'image bien connue de la toile d'araignée. En anglais : le web
+
+```activité
+// question: 159977  name: La toile et ses fils
+::La toile et ses fils::[html]<p>Dans l'image du web représentée par une toile d'araignée, les fils sont \:</p>{
+	=<p>des liens</p>
+	~<p><strong id\="docs-internal-guid-566566e9-d108-1f1b-8d6f-529e33dacd53" style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des câbles du réseau internet</span></strong></p>
+}
+
+
+// question: 159978  name: La toile et ses noeuds
+::La toile et ses noeuds::[html]<p>Dans l'image du web représentée par une toile d'araignée, les nœuds sont \:</p>{
+	=<p>des ressources</p>
+	~<p><span style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des ordinateurs</span></span></p>
+}
+
+// question: 159983  name: Les échanges sur le web
+::Les échanges sur le web::[html]<p>Que s'échangent les ordinateurs sur le Web ?</p>{
+	~%33.33333%<p>Des ressources</p>
+	~%33.33333%<p>Des images</p>
+	~%33.33333%<p>Des textes</p>
+	####<p>Les trois !</p>\n<p>Dans ce contexte du web, le mot ressource désigne à la fois des textes, des images, des sons, ... C'est ce mot qu'on retrouve dans la signification de l'acronyme URL \: Uniform Resource Locator</p>
+}
+```
+
+```activité-avancée
+::Tim Berners-Lee::[html]<div>
+	<p dir="ltr">En vous aidant par exemple de cette ressource :</p>
+	<p dir="ltr">
+	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
+	</p>
+	<p dir="ltr">Faites quelques recherches sur <b>Tim Berners-Lee</b> et l'origine du web et répondez aux questions suivantes :
+</p>
+      <ol>
+        <li>Quelle était la spécialité professionnelle de Tim Berners-Lee ?</li>
+        <li>Que contenait le premier site web ?</li>
+        <li>En quelle année a-t-il été créé ?</li>
+      </ol>
+    </div>
+{####<p>Contrairement à ce qu'on pourrait imaginer, Tim Berners-Lee n'était pas informaticien mais <b>physicien</b>. Il était chercheur en physique nucléaire au CERN dans les années 80. Son objectif était de faciliter le transfert de connaissance dans la communauté scientifique internationale.</p><p>Le premier site réellement opérationnel décrivait les principales caractéristiques du web et expliquait comment accéder aux documents d'autres personnes et comment configurer son propre serveur.</p><p>Les travaux ont démarré en 1989, le premier site a été mis en ligne en <b>1991</b> mais c'est en 1993 que le premier navigateur au sens ou nous les manipulons aujourd'hui est apparu.</p>}
+```
  
+
+```activité-avancée
+::Qui dirige le Web ?::[html]
+<p>Le 30 avril 1993, le CERN annonce que le « World Wide Web » sera <b>libre d'utilisation</b> pour tout le monde.</p>
+<div class="editor-indent" style="margin-left: 30px;"><i>Ressources :<br /></i></div>
+<ul>
+<li><a target="_blank" href="http://fr.wikipedia.org/wiki/Site_web">http://fr.wikipedia.org/wiki/Site_web</a>,</li>
+<li><a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web/licensing-web">http://home.web.cern.ch/fr/topics/birth-web/licensing-web</a></li>
+</ul>
+<p>Le web n'appartient à personne, en revanche chaque site est sous la responsabilité d'un auteur (le rédacteur des pages) et d'un hébergeur (le propriétaire du serveur). Les seules lois qui le régissent sont les lois sur la diffusion de contenu dans des média, comme par exemple dans la presse ou l'audiovisuel. <br />Si des contenus inappropriés, insultants, diffamants, ... font l'objet d'une plainte, l'auteur est responsable et l'hébergeur est tenu de les effacer. Aucun contenu ne se retrouve donc <i>a priori</i> sans responsable, il se trouve toujours hébergé sur un serveur avec un numéro IP officiel et donc une identité physique répertoriée. <br />Évidemment, dans la pratique, certains serveurs peuvent être physiquement dans des pays où les autorités sont très laxistes, et les contenus s'en trouvent quasi intouchables. Le web n'a pas de frontière, la localisation géographique d'un serveur n'a aucune conséquence sur son accessibilité, les internautes que nous sommes n'avons en général pas conscience du lieu où est hébergé le site que nous consultons, pourtant les lois en vigueur ne sont pas les mêmes dans tous les pays. <br />Par exemple <b>Wikileaks</b> est interdit d'hébergement sur des serveurs américains, mais a trouvé des pays qui acceptent de l'héberger.</p>
+<div class="editor-indent" style="margin-left: 30px;"><i><b>Questions</b></i></div>
+<ol>
+<li>Qu'est-ce que Wikileaks ?</li>
+<li>Qui en est le fondateur ?</li>
+<li>Exprimez-vous en quelques lignes sur votre position citoyenne (intérêt, légalité, ...) de ce genre de sites.</li>
+</ol>
+{####<p dir="ltr" id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span>association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
+<p dir="ltr">( ref : <a target="_blank" href="https://fr.wikipedia.org/wiki/WikiLeaks">https://fr.wikipedia.org/wiki/WikiLeaks</a>)</p>
+<p dir="ltr"></p>
+<p dir="ltr">Le fondateur est <b>Julian Assange.</b></p>
+  </body>}
+
+```
+
 # Clients et serveurs
 
 ## Le modèle client/serveur

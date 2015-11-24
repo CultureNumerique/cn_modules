@@ -162,6 +162,7 @@ def process_md(md_src, current_dir):
                         elif activite_split == '-avancée':
                             new_subsection_title = "Exercice d'approfondissement"
                             next_type = 'devoirs'
+                            # FIXME : try to fetch a title within Gift source
                             pass
                         elif not activite_split.isspace(): # normal web content type subsection
                             new_subsection = {
