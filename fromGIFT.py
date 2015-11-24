@@ -68,6 +68,7 @@ class GiftQuestion():
         self.poststate = '' # bit of text possibly added in case of MISSINGWORD questions
         self.question_is_true = True # for TRUEFALSE questions, by default considered TRUE
         self.global_feedback = ''
+        self.global_feedback_format = '[markdown]'
         self.feedback_for_right = '' # for TRUEFALSE questions, given when giving the right answer
         self.feedback_for_wrong = '' # for TRUEFALSE questions, given when giving the wrong answer
 
@@ -200,10 +201,11 @@ def process_questions(questions_src):
 
         # 3. Process answers
         ## Retrieve global feedback, if any, and remove it for simpler further processing
-        r1 = re.compile('####(?P<global_fb>.*)')
+        r1 = re.compile('####(?P<fb_format>\[.*\]){0,1}(?P<global_fb>.*)', flags=re.M+re.S)
         m1 = r1.search(q_answers)
         if m1 is not None:
             q_obj.global_feedback = m1.group('global_fb')
+            q_obj.global_feedback_format = m1.group('fb_format')
             q_answers = r1.sub('', q_answers)
         ## Then, process the remaining types
         print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
@@ -242,7 +244,6 @@ def process_questions(questions_src):
                 ### get text and create new answer object
                 # FIXME : MATCHING questions have answers like "=subquestion1 -> subanswer1"
                 # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
-                # FIXME : deal with newlines included in answer or question text
                 m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
                 new_answer['credit'] = m.group('credit')
                 new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')

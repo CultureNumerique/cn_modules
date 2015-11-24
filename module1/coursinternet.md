@@ -1,6 +1,6 @@
 # Informatique et numérique
 
-[Informatique et numérique](https://player.vimeo.com/video/122104210)
+[Informatique et numérique](https://player.vimeo.com/video/122104210){: .lien_video }
 
 À l'origine, les ordinateurs étaient réservés aux informaticiens, ou
 plutôt comme cette discipline naissait à peine, aux mathématiciens et
@@ -189,7 +189,7 @@ Voici quelques liens que nous vous proposons mais que vous avez sûrement trouv�
 
 # Historique informatique
 
-  [Historique](https://player.vimeo.com/video/122104231)
+  [Historique](https://player.vimeo.com/video/122104231){: .lien_video }
 
 
 Les premiers ordinateurs ont été conçus et réalisés vers la fin de la
@@ -313,7 +313,7 @@ style\="color\: \#000000;"> </span></p> }
 ```
 # Naissance d'Internet
 
-  [Naissance d'internet](https://player.vimeo.com/video/122104260)
+  [Naissance d'internet](https://player.vimeo.com/video/122104260){: .lien_video }
 
 Dans les années soixante, il existait aux États-Unis de gros centres
 de calcul abritant de très gros ordinateurs. Ceux-ci étaient reliés
@@ -341,9 +341,10 @@ pour signifier qu'il s'agit d'une interconnexion de réseaux.
 
 Selon le vieil adage *tous les chemins mènent à Rome/, le système de
 communication permet d'échanger des données entre 2 points en passant
-par n'importe quel chemin à l'intérieur d'internet.
+par n'importe quel chemin à l'intérieur d'internet.*
 
-```Activité
+
+```activité
 // question: 165014 name: 1.3.1 (Q2/3) ::1.3.1 (Q2/3)::[html]<p>Que
 signifie internet ?</p>{ ~<p>Il s'agit de la contraction des mots
 anglais \: "<em>international</em>" et "<em>network</em>" (réseau
@@ -377,11 +378,12 @@ c'est à dire que même si des lignes ou des machines sont en panne,
 d'autres chemins peuvent être utilisés pour véhiculer les
 informations.</p>#<p>Tout à fait !</p> ####<p>Parce qu'il peut
 fonctionner en mode "dégradé"...</p> }
+
 ```
 
 # Comment ça marche?
 
-  [Comment ça marche ?](https://player.vimeo.com/video/122104315)
+  [Comment ça marche ?](https://player.vimeo.com/video/122104315){: .lien_video }
 
 Regardons un peu plus précisément comment fonctionne internet. Trois
 ingrédients importants interviennent dans le système ; le premier est
@@ -471,18 +473,19 @@ entre des noms de machines et leur adresse IP.</p> }
 ```
 # Que se passe-t-il quand on se connecte à Internet?
 
-  [Se connecter à Internet](https://player.vimeo.com/video/122104376)
+## Cours
+  [Se connecter à Internet](https://player.vimeo.com/video/122104376){: .lien_video }
 
 Examinons les conséquences de l'organisation d'Internet lorsqu'on veut
 s'y connecter ...
 
-## Rejoindre un réseau local
+### Rejoindre un réseau local
 L'ordinateur, le smartphone ou la tablette qui doit accéder à Internet
 doit d'abord rejoindre un réseau. Nous verrons un peu plus loin les
 différents moyens de se connecter à un réseau que ce soit par le wifi,
 un câble ou le réseau de téléphonie mobile.
 
-## Obtenir les 3 informations nécessaires
+### Obtenir les 3 informations nécessaires
 De plus, nous avons vu que pour communiquer avec d'autres machines,
 notre ordinateur a besoin de trois informations importantes : le
 numéro `IP`, l'adresse du routeur qui relie ce réseau à Internet, et
@@ -496,7 +499,7 @@ ordinateur presque comme les autres, reçoit ces 3 informations de
 votre fournisseur d'accès à Internet (FAI) quand elle démarre. Avec la
 4G c'est une machine chez votre opérateur mobile qui est sollicitée…
 
-## Pas de garantie de confidentialité
+### Pas de garantie de confidentialité
 Autre remarque importante, le principe d'internet repose sur un envoi
 de proche en proche des messages transmis entre émetteur et
 destinataire à travers les ordinateurs (routeurs) qui réalisent
@@ -510,7 +513,7 @@ transmises. Par exemple, pour transmettre des mots de passe ou des
 numéros de carte bleue, il est nécessaire de crypter les messages pour
 les rendre indéchiffrables par des curieux.
 
-## Filtrage et suivi possible
+### Filtrage et suivi possible
 Une autre conséquence du fonctionnement d'internet, est que des
 filtres peuvent être mis en place sur des routeurs pour empêcher
 certains messages d'être transmis. Ces filtres peuvent se limiter à
@@ -524,13 +527,13 @@ organisations emploient aussi cette possibilité pour garder les traces
 des connexions et répondre ainsi à la contrainte légale de pouvoir
 retrouver les protagonistes d'un échange illicite.
 
-## Impossibilité d'éviter la copie
+### Impossibilité d'éviter la copie
 La dernière remarque porte sur l'emploi trompeur du mot
 /envoi/. Lorsqu'une machine *envoie* un message, elle réalise en
 réalité une copie du message sur le réseau. Libre alors à elle de
 supprimer ou conserver la version originelle du message. C'est une
 situation que l'on rencontre régulièrement dans le monde *numérique/
-et qui rend difficile la lutte contre les copies illicites. Mais nous
+et qui rend difficile la lutte contre les copies illicites.* Mais nous
 aurons l'occasion d'en reparler plus tard.
 
 Mais finalement, pourquoi avoir conçu et suivi cette organisation
@@ -571,6 +574,7 @@ elle.</p> }
 
 # Les supports physiques de transmission de l'information
 
+## Cours
   [Les supports physiques](https://player.vimeo.com/video/122104443)
 
 
@@ -582,7 +586,7 @@ comme le Wifi, le bluetooth ou les réseaux de téléphonie mobiles. Nous
 allons voir qu'une connaissance minimale de ces technologies va nous
 permettre de mieux comprendre les enjeux qu'ils cachent.
 
-## Le débit
+### Le débit
 Tout d'abord nous devons introduire la notion de débit. Si on prend
 l'image d'un robinet d'eau, on voit bien qu'un robinet avec un gros
 tuyau me permettra de remplir mon seau beaucoup plus vite qu'avec un
@@ -599,7 +603,7 @@ dizaine de pages se code avec quelques kbits, un fichier mp3 de
 musique de quelques minutes se compte en Mbits alors qu'un film d'une
 heure correspond à plusieurs Gbits.
 
-## Les supports et les normes relatives à leur utilisation
+### Les supports et les normes relatives à leur utilisation
 Nous allons dans la suite présenter les différents supports utilisés
 dans les réseaux. Ils ont connu de fortes évolutions depuis les débuts
 d'internet. Parfois cette évolution est purement matérielle comme
@@ -610,7 +614,7 @@ qui tous deux utilisent le support des ondes. Aussi la présentation
 suivante s'appuie à la fois sur les deux notions de norme et de
 support.
 
-## Les câbles
+### Les câbles
 S'agissant des câbles on distingue les câbles électriques et les
 fibres optiques qui transportent la lumière. Ces dernières sont
 évidemment beaucoup plus rapides et sont utilisées prioritairement
@@ -640,7 +644,7 @@ territoire, seules les grandes agglomérations sont couvertes par
 l'équipement en fibres optiques. Cela représente un grand facteur
 d'inégalité...
 
-## Les ondes
+### Les ondes
 Depuis le XIXème siècle, les hommes ont réussi à s'échanger des
 informations via les ondes électromagnétiques. La radio puis la
 télévision ont copieusement utilisé ce principe qui utilise un système
@@ -655,9 +659,9 @@ smartphones. Fondamentalement, elles permettent toutes la même chose,
 c'est à dire un accès complet à Internet.
 
  
-## Les connexions nomades
+[Connexions nomades](https://player.vimeo.com/video/122104499)
+### Les connexions nomades
 
-  [Connexions nomades](https://player.vimeo.com/video/122104499)
 
 On se retrouve régulièrement à devoir choisir parmi plusieurs moyens
 pour se connecter à internet avec nos appareils nomades. Les arguments
@@ -686,7 +690,7 @@ musique dans des temps raisonnables. Nous en sommes à la quatrième
 génération de la technologie, la 4G offre maintenant des débits qui
 dépassent parfois ceux des connexions wifi.
 
-## La rapidité du réseau
+### La rapidité du réseau
 Toutefois, la qualité du lien qui relie votre appareil électronique au
 réseau n'est pas le seul responsable du débit. Réfléchissons à ce qui
 fait que ma liaison est lente ou rapide. Tout d'abord il faut se
@@ -759,9 +763,10 @@ université.</p> }
 ```
 # Société : qui décide sur Internet?
 
-  [Internet : Qui décide ?](https://player.vimeo.com/video/122104174)
+## Cours
+[Internet : Qui décide ?](https://player.vimeo.com/video/122104174)
 
-## Les normes et instituts de normes
+### Les normes et instituts de normes
 Pouvons-nous communiquer si nous ne comprenons pas la même langue?
 Non, sauf bien sûr si nous avons la chance d'avoir un interprète et
 dans ce dernier cas la communication n'est pas aussi simple. La même
@@ -784,7 +789,7 @@ du Web dont nous parlerons bientôt. L'existence de ces normes est une
 raison majeure du succès planétaire du web. Sans elles, le web serait
 sans doute un archipel d'îles isolées plutôt qu'une toile.
 
-## Pressions
+### Pressions
 Mais imaginez maintenant un standard industriel breveté et protégé par
 une unique société à la place d'une norme mondiale libre et
 ouverte. Cette société aurait un pouvoir considérable. Évidemment, les
@@ -799,7 +804,7 @@ sur les mouvements de défense des libertés sur internet, apparus en
 réaction à la régulation croissante du web :
 https://www.youtube.com/watch?v=tztUb=IP=b5oQ&feature=youtu.be
 
-## Les structures politiques
+### Les structures politiques
 Au niveau d'internet, en plus des normes qui régissent les moyens de
 communiquer les informations à travers le réseau, il faut également
 contrôler l'organisation du réseau. Nous pouvons illustrer cela en
@@ -831,7 +836,7 @@ de nommage plus grand, `univ-lille3.fr`, qui comprend également
 L'université gère les noms dans son domaine alors que l'AFNIC gère
 tous les noms en `.fr`.
 
-## À qui appartient internet ?
+### À qui appartient internet ?
 La structure politique que nous venons de décrire a son miroir
 technologique. En effet, l'ensemble machines qui assurent le service
 d'associer noms et adresses forme également une hiérarchie. Comme nous
@@ -858,7 +863,7 @@ l'entreprise Cisco, une entreprise américaine....
 elles, le risque de perdre des libertés pour l'usager : liberté de
 choix, liberté de communiquer.
 
-## Une société de surveillance généralisée
+### Une société de surveillance généralisée
 Nous avons vu que les informations que nous communiquons passent par
 des routeurs. Ceux-ci peuvent assurer des fonctions de filtrage des
 contenus et de journalisation (ou mémorisation de l'historique des
