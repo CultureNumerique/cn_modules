@@ -575,7 +575,7 @@ elle.</p> }
 # Les supports physiques de transmission de l'information
 
 ## Cours
-  [Les supports physiques](https://player.vimeo.com/video/122104443)
+  [Les supports physiques](https://player.vimeo.com/video/122104443){: .lien_video }
 
 
 Internet et plus généralement les réseaux informatiques peuvent
@@ -659,7 +659,7 @@ smartphones. Fondamentalement, elles permettent toutes la même chose,
 c'est à dire un accès complet à Internet.
 
  
-[Connexions nomades](https://player.vimeo.com/video/122104499)
+[Connexions nomades](https://player.vimeo.com/video/122104499){: .lien_video }
 ### Les connexions nomades
 
 
@@ -764,7 +764,7 @@ université.</p> }
 # Société : qui décide sur Internet?
 
 ## Cours
-[Internet : Qui décide ?](https://player.vimeo.com/video/122104174)
+[Internet : Qui décide ?](https://player.vimeo.com/video/122104174){: .lien_video }
 
 ### Les normes et instituts de normes
 Pouvons-nous communiquer si nous ne comprenons pas la même langue?
@@ -878,7 +878,7 @@ protéger les citoyens contre ces abus. Mais leurs moyens ne sont pas
 toujours à la hauteur de leurs missions... Et les affaires comme PRISM
 ont montré que cette question dépasse largement le cadre Français.
 
-``` activité
+```activité
 // question: 165024 name: 1.8.1 (Q1/3) ::1.8.1
 (Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de
 domaine et les adresses IP ?</p>{ =<p>Au niveau mondial \:</p> ->

@@ -145,14 +145,14 @@ def process_md(md_src, current_dir):
             subsec_split = re.split('^#{2}\s(.*)', section, flags=re.M)
             subsections = []
             new_subsection_title = ''
+            next_type = 'webcontent' # default type for subsections
             for split in subsec_split:
                 # subsec content always starts with \n
                 if split.startswith('\n') and len(split) > 1:
                     if len(new_subsection_title) == 0:
                         new_subsection_title = 'Cours'
-                    # regex for spliting again with "***** Activité [avancée]"
-                    activites = re.split('^`{3}activité(-avancée){0,1}(?P<txt>.*?)^`{3}', split, flags=re.S+re.M)
-                    next_type = 'webcontent' # default type for subsections
+                    # regex for spliting again with "```activité[-avancée]"
+                    activites = re.split('^`{3}\s*activité(-avancée){0,1}(?P<txt>.*?)^`{3}', split, flags=re.S+re.M+re.I)
                     for activite_split in activites:
                         # if 'None' or 'avancée' => next item is an activite node
                         if activite_split == None:
@@ -171,13 +171,16 @@ def process_md(md_src, current_dir):
                                 'sub_src':activite_split,
                                 'source_file':''
                             }
-                            subsections.append(new_subsection)
                             # reset to default
                             next_type = 'webcontent'
                             new_subsection_title = 'Cours'
+                            subsections.append(new_subsection)
                 # title comes before the content of a subsection
                 else:
                     new_subsection_title = split
+                    # regex for detecting subsec of type "correction"
+                    if '[correction]' in split:
+                        next_type = 'correction'
             # add subsections to list
             new_section['subsections'] = subsections
             sections.append(new_section)
