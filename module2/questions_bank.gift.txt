@@ -1,0 +1,465 @@
+$CATEGORY: $course$/Quiz Bank '1.3 Quizz'
+
+
+// question: 159977  name: La toile et ses fils
+::La toile et ses fils::[html]<p>Dans l'image du web représentée par une toile d'araignée, les fils sont \:</p>{
+	=<p>des liens</p>
+	~<p><strong id\="docs-internal-guid-566566e9-d108-1f1b-8d6f-529e33dacd53" style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des câbles du réseau internet</span></strong></p>
+}
+
+
+// question: 159978  name: La toile et ses noeuds
+::La toile et ses noeuds::[html]<p>Dans l'image du web représentée par une toile d'araignée, les nœuds sont \:</p>{
+	=<p>des ressources</p>
+	~<p><span style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des ordinateurs</span></span></p>
+}
+
+// question: 159983  name: Les échanges sur le web
+::Les échanges sur le web::[html]<p>Que s'échangent les ordinateurs sur le Web ?</p>{
+	~%33.33333%<p>Des ressources</p>
+	~%33.33333%<p>Des images</p>
+	~%33.33333%<p>Des textes</p>
+	####<p>Les trois !</p>\n<p>Dans ce contexte du web, le mot ressource désigne à la fois des textes, des images, des sons, ... C'est ce mot qu'on retrouve dans la signification de l'acronyme URL \: Uniform Resource Locator</p>
+}
+
+
+$CATEGORY: $course$/Quiz Bank '1.4 Exercice d'approfondissement'
+
+
+::Tim Berners-Lee::[html]<div>
+	<p dir="ltr">En vous aidant par exemple de cette ressource :</p>
+	<p dir="ltr">
+	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
+	</p>
+	<p dir="ltr">Faites quelques recherches sur <b>Tim Berners-Lee</b> et l'origine du web et répondez aux questions suivantes :
+</p>
+      <ol>
+        <li>Quelle était la spécialité professionnelle de Tim Berners-Lee ?</li>
+        <li>Que contenait le premier site web ?</li>
+        <li>En quelle année a-t-il été créé ?</li>
+      </ol>
+    </div>
+{####<p>Contrairement à ce qu'on pourrait imaginer, Tim Berners-Lee n'était pas informaticien mais <b>physicien</b>. Il était chercheur en physique nucléaire au CERN dans les années 80. Son objectif était de faciliter le transfert de connaissance dans la communauté scientifique internationale.</p><p>Le premier site réellement opérationnel décrivait les principales caractéristiques du web et expliquait comment accéder aux documents d'autres personnes et comment configurer son propre serveur.</p><p>Les travaux ont démarré en 1989, le premier site a été mis en ligne en <b>1991</b> mais c'est en 1993 que le premier navigateur au sens ou nous les manipulons aujourd'hui est apparu.</p>}
+
+
+$CATEGORY: $course$/Quiz Bank '1.5 Exercice d'approfondissement'
+
+
+::Qui dirige le Web ?::[html]
+<p>Le 30 avril 1993, le CERN annonce que le « World Wide Web » sera <b>libre d'utilisation</b> pour tout le monde.</p>
+<div class="editor-indent" style="margin-left: 30px;"><i>Ressources :<br /></i></div>
+<ul>
+<li><a target="_blank" href="http://fr.wikipedia.org/wiki/Site_web">http://fr.wikipedia.org/wiki/Site_web</a>,</li>
+<li><a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web/licensing-web">http://home.web.cern.ch/fr/topics/birth-web/licensing-web</a></li>
+</ul>
+<p>Le web n'appartient à personne, en revanche chaque site est sous la responsabilité d'un auteur (le rédacteur des pages) et d'un hébergeur (le propriétaire du serveur). Les seules lois qui le régissent sont les lois sur la diffusion de contenu dans des média, comme par exemple dans la presse ou l'audiovisuel. <br />Si des contenus inappropriés, insultants, diffamants, ... font l'objet d'une plainte, l'auteur est responsable et l'hébergeur est tenu de les effacer. Aucun contenu ne se retrouve donc <i>a priori</i> sans responsable, il se trouve toujours hébergé sur un serveur avec un numéro IP officiel et donc une identité physique répertoriée. <br />Évidemment, dans la pratique, certains serveurs peuvent être physiquement dans des pays où les autorités sont très laxistes, et les contenus s'en trouvent quasi intouchables. Le web n'a pas de frontière, la localisation géographique d'un serveur n'a aucune conséquence sur son accessibilité, les internautes que nous sommes n'avons en général pas conscience du lieu où est hébergé le site que nous consultons, pourtant les lois en vigueur ne sont pas les mêmes dans tous les pays. <br />Par exemple <b>Wikileaks</b> est interdit d'hébergement sur des serveurs américains, mais a trouvé des pays qui acceptent de l'héberger.</p>
+<div class="editor-indent" style="margin-left: 30px;"><i><b>Questions</b></i></div>
+<ol>
+<li>Qu'est-ce que Wikileaks ?</li>
+<li>Qui en est le fondateur ?</li>
+<li>Exprimez-vous en quelques lignes sur votre position citoyenne (intérêt, légalité, ...) de ce genre de sites.</li>
+</ol>
+{####<p dir="ltr" id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span>association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
+<p dir="ltr">( ref : <a target="_blank" href="https://fr.wikipedia.org/wiki/WikiLeaks">https://fr.wikipedia.org/wiki/WikiLeaks</a>)</p>
+<p dir="ltr"></p>
+<p dir="ltr">Le fondateur est <b>Julian Assange.</b></p>
+  </body>}
+
+
+
+$CATEGORY: $course$/Quiz Bank '2.4 Quizz'
+
+
+// question: 268  name: Erreur 404!
+::Erreur 404!::[html]<p>Que signifie le code d'erreur 404 dans le protocole HTTP</p>{
+	~<p>La ressource a été déplacée sur un autre serveur</p>
+	=<p>La ressource n’existe pas sur le serveur</p>#<p>Votre réponse est correcte.</p> 
+	~<p>Le client de peut pas communiquer avec le serveur</p>
+	####<p>L'erreur 404 apparaît lorsque la ressource demandée n'existe pas sur le serveur. Cela se produit en général lorsqu'il y a une 'faute' dans l'url ou lorsque le gestionnaire du site a déplacé, supprimé ou renommé une ressource. L'url devient alors invalide.</p> 
+}
+
+
+// question: 270  name: le meilleur Navigateur
+::le meilleur Navigateur::[html]<p>Avec quel navigateur peut-on accéder au plus grand nombre de sites ?</p>{
+	~<p>Firefox</p>
+	~<p>Internet Explorer</p>
+	~<p>Chrome</p>
+	~<p>Safari</p>
+	=<p>Tous</p>#<p>Votre réponse est correcte.</p> 
+	####<p>Tous les navigateurs sont équivalents de ce point de vue, seuls leur rapidité, leurs fonctionnalités avancées ou leur ergonomie les différencient.</p> 
+}
+
+
+// question: 273  name: Les clients
+::Les clients::[html]<p>Qu'est-ce qu'un client web ?</p>{
+	~%33.33333%<p>Tout logiciel qui demande des ressources à un serveur web</p>
+	~%33.33333%<p>un navigateur</p>
+	~%33.33333%<p>un robot de moteur de recherche</p>
+	~<p>une page HTML</p>
+}
+
+
+// question: 271  name: Les logs c'est quoi ?
+::Les logs c'est quoi ?::[html]<p>Qu'est-ce qu'un fichier de logs d'un serveur web ?</p>{
+	~la liste des noms des gens qui ont consulté le site hébergé sur le serveur#non, sur la plupart des sites nous n'envoyons pas nos noms, les logs conservent les traces des requêtes effectuées par les clients repérés par leur adresse IP ainsi que toutes les activités du serveur dans un journal 
+	=un journal des activités du serveur#Oui, bravo 
+	~la liste de toutes les ressources stockées sur ce serveur#Non, les logs conservent le journal des activités du serveur 
+	####<p>Voici ci dessous quelques lignes extraites d'un journal (log) d'un serveur Web. Chaque ligne correspond à une requête d'un client. Les lignes ont été "anonymisées" \: nous avons remplacé les adresses IP des clients par 127.0.0.1.  </p><p> </p><p>Sur cette ligne vous avez l'adresse IP (anonymisée) du client, suivi de la date et l'heure de la requête et entre guillemets la requête adressée ("GET /polys/...") qui signifie " donne-moi la ressource "/poly/...etc". On voit également le code 200 signalant que la requête a bien été traitée sans erreur et aussi les caractéristiques du client \:  C'est ici le robot du moteur de recherche bing.</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:48 +0200] "GET /polys/access-1997/node66.html HTTP/1.1" 200 2257 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http\://www.bing.com/bingbot.htm)"</code></p><p> </p><p>L'exemple suivant est intéressant car il montre une suite de 5 requêtes. La première est un celle d'un document contenant des liens vers d'autres ressources (feuilles de style CSS et images au format PNG). Les 5 requêtes sont enchaînées car le navigateur (ici Safari) a immédiatement demandé au serveur les ressources nécessaires pour afficher une page web complète.</p><p>    <br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Football/Confrontations/Ajaccio-Clermont.php HTTP/1.1" 200 4836 "https\://www.google.fr/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" </code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-v3.css HTTP/1.1" 200 6692 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-print-v3.css HTTP/1.1" 200 2231 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/valid-html5.png HTTP/1.1" 200 1723 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/FabienTorre.png HTTP/1.1" 200 478 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code></p><p>Un dernier petit exemple pour les hackers \:-). On peut lire avec un peu d'expérience ou de sagacité que la ressource (ici /FAQ-LaTeX/12.3.html) a été demandée depuis une page web (indiquée après le code de succès 200 et la taille de 7444 de cette ressource) qui est une adresse sur les serveurs de Google. En regardant mieux encore, on peut même lire que c'est à la suite d'une recherche à propos de "FAQ-LaTeX"... C'est en partie grâce à cette indication de provenance qu'on peut rémunérer les sites qui font de la publicité vers d'autres sites...</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:30 +0200] "GET /FAQ-LaTeX/12.3.html HTTP/1.1" 200 7444 "http\://www.google.fr/url?sa\=t&rct\=j&q\=&esrc\=s&source\=web&cd\=1&ved\=0CCQQFjAAahUKEwjo6IWtgIrIAhVFOxQKHdjEDfw&url\=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2FFAQ-LaTeX%2F12.3.html&usg\=AFQjCNEtHaKlFbotxdHj6bxRzpkDN3NwkA" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv\:24.0) Gecko/20100101 Firefox/24.0"</code><br /><br /></p> 
+}
+
+
+// question: 269  name: Les protocoles
+::Les protocoles::[html]<p>Par quel protocole les clients et serveurs dialoguent-ils ? <br></br></p>{
+	~<p>HTML<br></p>
+	=<p><span style\="font-weight\:normal;"><span style\="font-size\:14.666666666666666px;font-family\:Arial;color\:\#434343;background-color\:transparent;font-weight\:400;font-style\:normal;font-variant\:normal;text-decoration\:none;vertical-align\:baseline;white-space\:pre-wrap;">HTTP</span></span></p>#Votre réponse est correcte. 
+}
+
+
+// question: 272  name: La distribution
+::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l’ait rendue avant de la distribuer à un autre client.</p>{TRUE####<p>Cette notion de  "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
+
+
+
+
+$CATEGORY: $course$/Quiz Bank '3.2 Quizz'
+
+
+// question: 274  name: Composition d'une URL
+::Composition d'une URL::[html]<p>Quelles informations sont indiquées dans une URL ?</p>{
+	~%33.33333%<p>le nom du serveur</p>
+	~%33.33333%<p>le nom d'une ressource</p>
+	~%33.33333%<p>le protocole utilisé</p>
+	~<p>si la ressource est une image ou un texte</p>
+	~<p>l’adresse du client</p>
+	####<p>URL \: Unified Ressource Locator, soit en français \: l'adresse d'une ressource. Elle contient évidemment \:</p><ul><li>le non du serveur sur laquelle elle est stockée</li><li>le nom de la ressource \: le nom du fichier et le 'chemin' (dossier/sousdossier/) pour y accéder</li><li>le protocole utilisé, pour le Web \: http\:// ou https\://</li></ul><p>Elle ne précise pas le type de la ressource et elle est évidemment indépendante de l'adresse des éventuels clients qui feraient une requête...</p> 
+}
+
+
+// question: 275  name: HTTP vs HTTPS
+::HTTP vs HTTPS::[html]<p>Quelle est la différence entre HTTP et HTTPS ? Grâce à HTTPS \:</p>{
+	~<p>mes communications avec le serveur sont cachées</p>
+	~%50%<p>le contenu de mes communications avec le serveur est crypté</p>
+	~%50%<p>je peux m’assurer que le serveur est celui auquel je veux m’adresser</p>
+	####<p>Le protocole https a 2 fonctions majeures. Il permet \:</p><ul><li>de crypter les échanges (requêtes/réponses) par exemple des mots de passe ou des codes de Carte Banquaire, seul le destinataire pourra les décrypter</li><li>d'authentifier les serveurs, par exemple pour éviter qu'un site pirate cherche à se faire passer pour le site d'une banque</li></ul> 
+}
+
+
+// question: 276  name: Les balises HTML
+::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
+	~%50%<p>de délimiter des parties de texte</p>
+	~%50%<p>de décrire la structure des documents</p>
+	~<p>de signaler aux internautes des pages dangereuses</p>
+	~<p>d'accélérer internet</p>
+}
+
+
+// question: 277  name: Les informations échangées entre clients et serveurs
+::Les informations échangées entre clients et serveurs::[html]<p>Quelles autres informations que l’URL peuvent être échangées dans un échange entre un client et un serveur Web ?</p>{
+	~%33.33333%<p>l’adresse IP du client</p>
+	~%33.33333%<p>le nom du navigateur web \: firefox, opera, internet explorer, ….</p>
+	~%33.33333%<p>la page présentée dans le navigateur au moment où la requête est effectuée</p>
+	####<p>l’IP est toujours nécessaire pour indiquer au destinataire à qui il doit répondre. Mais potentiellement les 3 informations peuvent être échangées, et bien d'autres encore !</p> 
+}
+
+
+// question: 278  name: Une page web
+::Une page web::[html]<p>Quand on regarde une page web, toutes les informations viennent du même serveur.</p>{
+	~<p>oui</p><p> </p>
+	=<p>non</p>#<p>Votre réponse est correcte.</p> 
+	####<p>Une page Web est souvent constituée de plusieurs ressources. Chaque ressource fait l'objet d'un échange entre le client et un serveur, pas forcément toujours le même !</p> 
+}
+
+
+// question: 279  name: Une URL
+::Une URL::[html]<p>Qu'est-ce qu'une URL ?</p>{
+	~<p>une ressource</p>
+	=<p>l'adresse d'une ressource</p>#<p>Votre réponse est correcte.</p> 
+	~<p>un fichier</p>
+}
+
+
+
+
+$CATEGORY: $course$/Quiz Bank '4.4 Quizz'
+
+
+
+// Question vide de type description (sans {}) pour présenter le support des questions suivantes
+::Exercice::[html]
+<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant </p>
+
+
+// question: 283  name: Au delà du contenu
+::Au delà du contenu::[html]<p>Pourquoi peut-on créer facilement une table des matières ou construire la liste des liens d’un document HTML ?</p>{}
+
+
+// question: 282  name: Comprendre les balises
+::Comprendre les balises::[html]<p>Nous vous avons expliqué que les balises <section>... </section> servaient à délimiter les parties, les balises <h1> ... </h1> délimitent les titres de premier niveaux, à votre avis que signifient les balises <p> ... </p> ?</p>{}
+
+
+// question: 280  name: Repérer la feuille de styles
+::Repérer la feuille de styles::[html]<p>Comparez les codes sources des 2 premières pages, seule une ligne supplémentaire a été insérée, elle précise l'utilisation d'une feuille de styles pour l'affichage du contenu. Indiquez le numéro de la ligne qui a changé et recopiez-la également.</p>{}
+
+
+// question: 284  name: Décrire un document
+::Décrire un document::[html]<p>Pourquoi s’échanger une description de document plutôt qu’un document lui-même est plus adéquat au Web ?</p>{
+	~%33.33333%<p>tous les clients n’ont pas la même capacité d’affichage</p>
+	~%33.33333%<p>la description contient plus d’informations \: structure + contenu</p>
+	~%33.33333%<p>la structure permet d'ajouter du sens (ceci est un titre, etc...) explicitement.</p>
+}
+
+
+// question: 281  name: Exemple de mise en forme
+::Exemple de mise en forme::[html]<p>Observez la mise en forme du titre principal dans la deuxième version et indiquez les caractéristiques d'affichage qui ont été choisies dans cette feuille de styles (ce qui change par rapport à la première version).</p>{
+	~%25%la typo (la police de caractères)
+	~l'ordre des mots a été changé
+	~%25%la couleur des caractères
+	~%25%l'alignement du paragraphe
+	~%25%les caractères ont été transformés en majuscule
+	~l'orthographe a été modifié
+	####<p>Une feuille de styles ne peut pas changer l'ordre des mots ou l'orthographe, cela reviendrait à changer le contenu, seules les caractéristiques graphiques sont possibles, ici la police, la couleur, l'alignement et la 'casse' des caractères (ils sont affichés en majuscule).</p> 
+}
+
+
+// question: 286  name: Les feuilles de style
+::Les feuilles de style::[html]<p>Une feuille de style...</p>{
+	~<p>décrit le contenu d'un document HTML</p>
+	~%50%<p>permet de décrire la présentation graphique d'un document</p>
+	~%50%<p>décrit par exemple la couleur du texte, la taille des marges</p>
+	~<p>coordonne automatiquement les couleurs d'une page web</p>
+	~<p>contrôle si on écrit comme Flaubert ou Blazac</p>
+}
+
+
+// question: 285  name: Structure et contenu
+::Structure et contenu::[html]<p>Le langage HTML permet de décrire des documents en indiquant leur structure et leur contenu. Comment la structure est-elle décrite ?</p>{
+	=<p>Par un balisage du texte</p>#Votre réponse est correcte. 
+	~<p>Par des couleurs et du gras ou la taille des caractères</p>
+}
+
+
+// question: 288  name: Une page Web
+::Une page Web::[html]<p>Pour qu’un client affiche une page Web,...</p><p></p>{
+	~<p>une seule requête vers un unique serveur suffit toujours</p>
+	~<p>parfois plusieurs requêtes sont nécessaires mais toujours vers le même serveur</p>
+	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>#Votre réponse est correcte. 
+}
+
+
+// question: 287  name: Expressivité de HTML
+::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image. Les images sont représentées dans un format qui leur est propre. Elles sont soit <a href\="https\://fr.wikipedia.org/wiki/Image_matricielle" target\="_blank">matricielles</a> ou <a href\="https\://fr.wikipedia.org/wiki/Image_vectorielle" target\="_blank">vectorielles</a>. </p>\n<ul>\n<li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href\="https\://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target\="_blank">GIF</a>, le <a href\="https\://fr.wikipedia.org/wiki/Portable_Network_Graphics" target\="_blank">PNG</a>, le <a href\="https\://fr.wikipedia.org/wiki/JPEG" target\="_blank">JPEG</a>.</li>\n<li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href\="https\://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target\="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li>\n</ul> #<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image. Les images sont représentées dans un format qui leur est propre. Elles sont soit <a href\="https\://fr.wikipedia.org/wiki/Image_matricielle" target\="_blank">matricielles</a> ou <a href\="https\://fr.wikipedia.org/wiki/Image_vectorielle" target\="_blank">vectorielles</a>. </p>\n<ul>\n<li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href\="https\://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target\="_blank">GIF</a>, le <a href\="https\://fr.wikipedia.org/wiki/Portable_Network_Graphics" target\="_blank">PNG</a>, le <a href\="https\://fr.wikipedia.org/wiki/JPEG" target\="_blank">JPEG</a>.</li>\n<li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href\="https\://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target\="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li>\n</ul> }
+
+
+$CATEGORY: $course$/Quiz Bank '4.5 Exercice d'approfondissement'
+
+
+::Activité sur les serveurs::[markdown]
+Rendez-vous sur la page :
+http://culturenumerique.univ-lille3.fr/activitesWeb/html/pageServeurs.html
+Lisez, observez et répondez aux questions posées...
+{}
+
+
+$CATEGORY: $course$/Quiz Bank '5.2 Quizz'
+
+
+// question: 289  name: Cookie tiers
+::Cookie tiers::[html]<p>Un cookie tiers c'est ...</p>{
+	~<p>est un cookie découpé en 3 parties</p>
+	~<p>un cookie partagé entre trois sites</p>
+	=<p>un cookie déposé à la demande d'un serveur qui n'est pas celui de la page web visitée</p>#<p>Votre réponse est correcte.</p> 
+	####<p>Un cookie tiers est bien un cookie qui est déposé sur notre machine par un serveur qui n'est pas celui de la page Web que l'on visite. C'est une technique très souvent utilisée pour l'affichage de publicité ciblée.</p> 
+}
+
+
+// question: 290  name: Possible ou impossible
+::Possible ou impossible::[html]<p>Cochez toutes les affirmations vraies ou possibles. Certaines questions peuvent demander une petite recherche sur Internet. <br></br></p>{
+	~%20%<p>on peut supprimer tous les cookies stockés sur sa machine</p>
+	~%20%<p>on peut refuser tous les cookies</p>
+	~%20%<p>on peut refuser les cookies de certains sites</p>
+	~%20%<p>on peut refuser les cookies tiers</p>
+	~<p>un serveur A peut voir les cookies déposés par un serveur B différent de A</p>
+	~%20%<p>les cookies peuvent servir à constituer des profils à l'insu des internautes</p>
+	~<p>les cookies ne servent qu'à la publicité</p>
+	~<p>il n'y a pas de cookies sur les smartphones</p>
+}
+
+
+// question: 291  name: Un cookie
+::Un cookie::[html]<p>Un cookie  est une information<br></br></p>{
+	~<p>stockée sur un serveur web à la demande d'un client</p>
+	=<p>stockée sur un client à la demande d'un serveur</p>#Votre réponse est correcte. 
+}
+
+
+
+$CATEGORY: $course$/Quiz Bank '5.3 Exercice d'approfondissement'
+
+
+
+[html]<p>Rendez-vous sur les pages suivantes, lisez et effectuez les manipulations demandées :</p>
+<ul><li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php</a></li>
+<li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html</a></li></ul>
+{}
+
+
+$CATEGORY: $course$/Quiz Bank '5.5 Quizz'
+
+
+// question: 292  name: La messagerie électronique et HTML
+::La messagerie électronique et HTML::[html]<p>Sélectionnez les affirmations vraies.</p>{
+	~<p>les messages électroniques sont toujours écrits en HTML</p>
+	~<p>les messages comprenant des pièces jointes sont écrits en HTML</p>
+	~%50%<p>les messages écrits en rose sont en HTML</p>
+	~%50%<p>les messages avec des images dans le texte (pas en pièce jointe) ou dans la signature sont en HTML.</p>
+	####<p>Par défaut, les messages électroniques (email) sont écrits en 'texte simple', donc pas en html. Des pièces jointes peuvent être ajoutés au texte. En revanche, dès que le texte est mis en forme (couleur, style, alignement, etc. ) ou qu'une image est insérée dans le corps du message, cela signifie que le mail est en html avec toutes les conséquences vues dans le cours.</p><p>On peut toujours paramétrer son client mail pour ne pas afficher le contenu HTML, évidemment les mises en page seront perdues, ...</p> 
+}
+
+
+// question: 293  name: Messagerie électronique et cookies
+::Messagerie électronique et cookies::[html]<p>Sélectionnez la bonne réponse ...</p>{
+	~<p>la lecture d'un message écrit en HTML provoque toujours l'envoi de cookies</p>
+	~<p>la lecture de messages en texte (non HTML) peut provoquer l'envoi de cookies</p>
+	~<p>si la lecture d'un message provoque l'envoi de cookies, c'est uniquement vers l'expéditeur du message</p>
+	=<p>Tout est faux</p>#<p>Votre réponse est correcte.</p> 
+	####<p>Tout est faux \: </p><ul><li>la lecture d'un message écrit en HTML peut provoquer l'envoi de cookies ; </li><li>la lecture de messages en texte ne provoque pas l'envoi de cookies, mais il est parfois difficile de discerner un message en simple texte et un message en HTML ! ; </li><li>un expéditeur de message n'est pas un serveur web (même si l'adresse peut être associée un serveur web) et de plus, si la lecture d'un message provoque l'envoi de cookies, ce cookie peut être un cookie tiers et envoyé à n'importe qui.</li></ul> 
+}
+
+
+$CATEGORY: $course$/Quiz Bank '6.2 Quizz'
+
+
+// question: 294  name: Les profils
+::Les profils::[html]<p>Vrai ou faux ? Pour chaque affirmation ci-dessous cochez la case correspondante pour indiquer qu'elle est vraie.<br></br></p>{
+	=<p>une partie de l'économie du web repose sur la collecte de données personnelles</p>
+	~<p>quand un service sur le web est gratuit alors il se finance par la collecte de données personnelles</p>
+	~<p>Les cookies et cookies tiers sont les seuls outils de la création de profils</p>
+}
+
+
+
+$CATEGORY: $course$/Quiz Bank '6.3 Exercice d'approfondissement'
+
+
+
+::A vous !::Attention, vous n'avez droit qu'à une seule tentative. Pour les questions ouvertes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
+
+// question: 296  name: Cookies tiers or not cookies tiers ?
+::Cookies tiers or not cookies tiers ?::[html]<p>Les navigateurs doivent-ils par défaut autoriser les cookies tiers ?</p>{}
+
+
+// question: 297  name: J'aime ou j'aime pas ?
+::J'aime ou j'aime pas ?::[html]<p>Un webmaster doit-il prévenir les internautes lorsqu'il décide d'inclure sur sa page un bouton associé à un script qui collecte des informations pour un tiers ?</p>{}
+
+
+// question: 295  name: Pister or not pister ?
+::Pister or not pister ?::[html]<p>Trouvez-vous normal qu'un réseau social piste ses adhérents sans les prévenir ?</p>{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '6.4 Exercice d'approfondissement'
+
+
+::Question de loyauté::[html]<p>Écoutez l'enregistrement "Quand nos smartphones sont espionnés" depuis
+<a href="https://interstices.info/jcms/p_83464/quand-nos-smartphones-sont-espionnes">cette page</a>
+puis répondez à la question qui suit.</p>
+
+// question: 298  name: Exemple d'application qui ne respecte pas la loyauté
+::Exemple d'application qui ne respecte pas la loyauté::[html]<p>Donnez un exemple d'application citée dans l'enregistrement qui ne respecte pas les principes de base de loyauté entre éditeur d'application et utilisateur.</p>{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '7.2 Quizz'
+
+
+// question: 299  name: Combien de sites Web ?
+::Combien de sites Web ?::[html]<p>Quelle est l'estimation actuelle du nombre de sites Web dans le monde ?</p><p>Faites quelques recherches pour trouver un ordre de grandeur.</p>{}
+
+
+// question: 300  name: Recherche avancée 1
+::Recherche avancée 1::[html]<p>Faites une recherche Google avec les deux mots \:</p><p><em>université Lille</em></p><p>Notez le nombre de pages trouvées.</p><p>Faites maintenant une recherche avec \:</p><p><em>"université Lille" <br></br></em></p><p>(en incluant les guillemets)</p><p>Avez vous autant de résultats ? Décrivez-les.</p>{}
+
+
+// question: 301  name: Recherche avancée 2
+::Recherche avancée 2::[html]<p>Faites une recherche avec \:</p><p><em>"université lille" -3 -2 -1. </em></p><p>Que se passe-t-il ?</p>{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '7.3 Exercice d'approfondissement'
+
+
+
+::Activité de recherche et réflexion::Attention, vous n'avez droit qu'à une seule tentative. Pour les questions ouvertes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
+
+
+// question: 302  name: neutralité 1
+::neutralité 1::[html]<p>Consultez l'interview suivante et expliquez en quoi il est important pour un moteur de recherche de donner une réponse neutre. <a href\="http\://www.inria.fr/actualite/actualites-inria/la-neutralite-ne-suffit-pas" target\="_blank">http\://www.inria.fr/actualite/actualites-inria/la-neutralite-ne-suffit-pas</a></p>{}
+
+
+// question: 303  name: neutralité 2
+::neutralité 2::[html]<p>Le gouvernement français travaille sur un projet de loi "<em>pour une République numérique</em>", consultable sur <a href\="https\://www.republique-numerique.fr" target\="_blank">https\://www.republique-numerique.fr</a><br></br>Nous vous invitons à enrichir vos connaissances en consultant ce site en détail.</p><p>Expliquez en quoi l'article consultable <a href\="https\://www.republique-numerique.fr/consultations/projet-de-loi-numerique/consultation/consultation/opinions/section-3-loyaute-des-plateformes/article-13-principe-de-loyaute-vis-a-vis-des-consommateurs" target\="_blank">ici</a> répond au moins en partie à ce que souligne Serge Abiteboul dans son <a href\="http\://www.inria.fr/actualite/actualites-inria/la-neutralite-ne-suffit-pas" target\="_blank">interview</a> à la question sur la neutralité des moteurs de recherche. Pour cela recopiez une phrase de l'interview et une phrase de l'explication de l'article de loi. </p>{}
+
+
+// question: 304  name: neutralité 3
+::neutralité 3::[html]<p>Le gouvernement français travaille sur un projet de loi "<em>pour une République numérique</em>", consultable sur <a href\="https\://www.republique-numerique.fr" target\="_blank">https\://www.republique-numerique.fr</a><br></br>Nous vous invitons à enrichir vos connaissances en consultant ce site en détail.</p><p>Testez vos connaissances en répondant aux 14 questions du quizz (<a href\="http\://www.gouvernement.fr/quiz-le-projet-de-loi-numerique" target\="_blank">http\://www.gouvernement.fr/quiz-le-projet-de-loi-numerique</a>) et répondez ci-dessous à la question suivante \: <strong>quelles sont les deux questions dont les réponses vous ont le plus surpris ?</strong></p>{}
+
+
+
+
+$CATEGORY: $course$/Quiz Bank '7.4 Exercice d'approfondissement'
+
+
+
+::Attention, l'abus de Google est dangereux pour la planète !::Attention, vous n'avez droit qu'à une seule tentative. Répondez d'abord dans un document séparé, puis collez les réponses dans la zone prévue une fois votre travail terminé.
+
+
+// question: 305  name: Conséquences d'une recherche
+::Conséquences d'une recherche::[html]<p>Comparez ces deux usages\:</p><p>1. Dans la barre de recherche (ou barre d'URL) je saisis \:<br></br><em>université de lille 3</em><br></br>et ensuite dans la page de résultats affichée je clique sur le lien vers l'université (lien vers http\://www.univ-lille3.fr)</p><p>2. Dans la barre d'URL (attention de ne pas confondre avec la barre de recherche !), je saisis \:<br></br><em>http\://www.univ-lille3.fr</em>.</p><p><strong>Questions</strong>\: Quelles sont les incidences de ces actions dans chacun des cas. Existe-t-il une différence en terme de consommation énergétique, ou de préservation de la vie privée ?</p>{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '7.5 Exercice d'approfondissement'
+
+
+::Des moteurs de recherche moins intrusifs...::Attention, vous n'avez droit qu'à une seule tentative. Répondez d'abord dans un document séparé, puis collez les réponses dans la zone prévue une fois votre travail terminé.
+
+
+// question: 306  name: DuckDuckGo
+::DuckDuckGo::[html]<p>Utilisez maintenant un nouveau moteur de recherche <a href\="https\://duckduckgo.com/" target\="_blank">https\://duckduckgo.com/</a>, testez-le \:</p><p>Qu'obtenez vous avec le mot \: Go</p><p>Qu'obtenez vous avec le mot \: Go!wfr</p><p>Qu'obtenez vous avec le mot \: Go!gfr</p><p>Décrivez les réponses obtenues et après quelques recherches personnelles, expliquez ce qu'est DuckDuckGo et pourquoi certains utilisateurs préfèrent l'utiliser.</p>{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '8.3 Quizz'
+
+
+// question: 307  name: Les données locales
+::Les données locales::[html]<p>Cochez les bonnes affirmations dans cette liste<br></br></p>{
+	~%25%<p>le cache permet d'accélérer l'affichage des pages web déjà visitées</p>
+	~<p>le cache permet de naviguer sur le web icognito</p>
+	~%25%<p>Si quelqu'un accède à mon ordinateur, il a techniquement la possibilité de connaître les sites web que j'ai récemment visités</p>
+	~%25%<p>Grâce à l'historique vous pouvez retrouver la liste des sites que vous avez visités récemment</p>
+	~<p>Grâce à l'historique vous pouvez revoir le contenu exact des pages que vous avez visitées récemment</p>
+	~%25%<p>Grâce à l'historique vous pouvez, ré-ouvrir une fenêtre ou un onglet du navigateur récemment fermé</p>
+	~<p>Si une page est dans l'historique, vous pouvez la retrouver dans le cache</p>
+	####<ul><li>Le cache permet d'accélérer l'affichage des pages web  ;</li><li>Si quelqu'un accède à mon ordinateur, il a techniquement la possibilité de connaître les sites web que j'ai récemment visités en regardant le cache et l'historique<br></li><li>Vous pouvez retrouver la liste des sites que vous avez visités récemment dans l'historique. Dans le cache c'est techniquement possible de retrouver de telles informations également.<br></li><li>L'historique permet de ré-ouvrir une fenêtre ou un onglet du navigateur récemment fermé, mais vous ne pouvez pas toujours revoir le contenu exact des pages que vous avez visitées récemment car des données qui s'y trouvent peuvent être calculées en fonction de nombreux paramètres (date, autres visiteurs, etc...) ; <br></li><li>Il est possible qu'une adresse se trouve dans l'historique sans que la page soit stockée dans le cache</li></ul> 
+}
+
+
+
+$CATEGORY: $course$/Quiz Bank '8.4 Exercice d'approfondissement'
+
+
+::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Déposez-la dans ce devoir.{}
+
+
+
+$CATEGORY: $course$/Quiz Bank '8.5 Exercice d'approfondissement'
+
+
+::L'intermédiation: votre analyse::[html]
+<p>Pour terminer ce cours, nous vous proposons de regarder une vidéo d'une présentation par Stéphane Grumbach qui explique les impacts du web et des données numériques d'un point de vue sociétal.</p>
+<p><a target="_blank" class="moz-txt-link-freetext" href="https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation">https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation</a> (1h11mn).</p>
+<p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>(Attention, vous n'avez droit qu'à une seule tentative. Cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.)</em></p>
+{}
+
+

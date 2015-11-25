@@ -1,0 +1,114 @@
+<h3>Des ressources qui n'existent que quand on les demande...</h3>
+<p>Prenons l'exemple de l'URL suivante :</p>
+<p><code>http://www.univ-lille3.fr/etudes/orientation-emploi/.</code></p>
+<p>Rappelons que la partie <code>etudes/orientation-emploi</code> désigne une<br />
+ ressource sur le serveur web <code>www.univ-lille3.fr</code>.  Il est possible<br />
+ que ce soit un document composé par une personne du service des études<br />
+ puis enregistré sur les disques durs de ce serveur web pour le mettre<br />
+ à disposition des internautes. Mais à vrai dire, c'est un processus de<br />
+ conception à la mise en ligne de ressources aujourd'hui de plus en<br />
+ plus rare.  Dans le web moderne, de plus en plus souvent, ces<br />
+ ressources sont composées par des programmes informatiques, à partir<br />
+ d'éléments pris dans de nombreuses sources de données. Ces programmes<br />
+ sont par exemple des outils de publication web, systèmes de gestion de<br />
+ contenu (CMS en anglais), des wiki, des moteurs de blogs...</p>
+<p>Mais un autre exemple évident de la génération automatique de<br />
+ ressources est celui des moteurs de recherche. Lorsque vous appuyez<br />
+ sur le bouton de recherche après avoir saisi vos mots clefs, le<br />
+ document qui apparaît dans votre navigateur a évidemment été construit<br />
+ juste pour vous, au moment de votre demande.</p>
+<h3>Un annuaire de toutes les ressources</h3>
+<p>Le web est un immense ensemble de ressources reliées entre<br />
+ elles. On pouvait imaginer à ses débuts parcourir cet ensemble et<br />
+ trouver son chemin vers la ressource souhaitée. On a donc commencé à<br />
+ construire des annuaires et des répertoires à l'image de ce qui peut<br />
+ se faire dans des bibliothèques. Tim Berners Lee, inventeur du web, a<br />
+ même maintenu une liste de serveurs web à cette époque. Mais cet idéal<br />
+ a rapidement été abandonné.  La taille du web a grandi tellement vite<br />
+ qu'il est devenu impossible de consigner les adresses de toutes les<br />
+ ressources, ou même seulement les plus importantes. C'est alors que<br />
+ sont entrés en jeu les moteurs de recherche. </p>
+<h3>Comment fonctionne un moteur de recherche aujourd'hui</h3>
+<p>Comment fonctionne un moteur de recherche ? C'est à la fois simple<br />
+ dans certains principes généraux et complexe pour de nombreux détails<br />
+ importants. C'est à la fois connu dans sa généralité et bien caché<br />
+ dans ses détails. Nous nous contentons ici de simples généralités. </p>
+<p>Les moteurs de recherche construisent constamment, car le web évolue<br />
+ sans cesse, un index. L'index, c'est comme dans un livre, un moyen<br />
+ d'aller directement à une page à partir d'un mot. Pour construire un<br />
+ tel index, il faut avoir lu toutes les pages du livre et consigné pour<br />
+ tous les mots, la liste des pages où ils se trouvent. Les moteurs de<br />
+ recherche téléchargent toutes les ressources du web en permanence pour<br />
+ extraire la liste des mots qu'on y trouve et garder l'énorme liste des<br />
+ URLs où ces mots se trouvent. Ce ne sont pas des hommes qui parcourent<br />
+ le web pour eux, mais des programmes, appelés des robots. Les robots<br />
+ sont les clients des serveurs web les plus nombreux et réguliers... et<br />
+ de loin!</p>
+<p>Mais afficher simplement la liste de ces ressources quand l'internaute<br />
+ saisit quelques mots dans le formulaire de recherche n'est pas<br />
+ satisfaisant. La liste est bien trop longue. Le deuxième ingrédient du<br />
+ moteur de recherche est le programme qui permet d'interroger cet<br />
+ index, simplement en lui donnant quelques mots, et qui construit une<br />
+ liste, présentée par ordre d'importance, d'URLs désignant les<br />
+ ressources où ces mots se trouvent.</p>
+<p>La magie des moteurs de recherche tient dans les détails qui<br />
+ permettent à l'ensemble de fonctionner tels que l'existence d'un index<br />
+ à jour, la forme de l'index qui permet d'y retrouver extrêmement<br />
+ rapidement les pages associées à un mot, ou encore l'ordre<br />
+ d'importance dans lequel les résultats de l'interrogation de l'index<br />
+ apparaissent.</p>
+<p>L'avance technologique des grands moteurs de recherche se cache dans<br />
+ les détails de la construction de l'index mais surtout du programme<br />
+ qui permet de l'interroger et de la détermination de l'ordre des URLs<br />
+ affichées en retour. Ces détails sont protégés par de nombreux secrets<br />
+ industriels. </p>
+<h3>Collecte de données d'usage</h3>
+<p>Mais un avantage qui rend la mise en concurrence des grands moteurs de<br />
+ recherche actuels presque impossible tient à un dernier<br />
+ paramètre. C'est la disponibilité d'énormes quantités de données<br />
+ d'usage, parfois personnalisées. En effet le résultat (l'ordre<br />
+ d'apparition des ressources) des requêtes au moteur dépend aujourd'hui<br />
+ fortement de ce qu'ont fait leurs utilisateurs : sur quels liens<br />
+ ont-ils cliqué ? À l'inverse des ressources du Web derrière les URLs,<br />
+ ces données d'usage ne sont pas publiques, mais sont tout aussi<br />
+ cruciales pour générer des réponses aux requêtes dans un ordre pertinent.</p>
+<p>En conséquence, les moteurs de recherche collectent sans cesse des<br />
+ données à propos de vos recherche. La tendance actuelle est de rendre<br />
+ les réponses personnalisées, ce qui entraîne une collecte de données<br />
+ personnelles rendue possible à la fois par les techniques de cookies<br />
+ et l'utilisation de comptes chez ces opérateurs de recherche. </p>
+<h3>Modèle économique du moteur de recherche</h3>
+<p>Pour une institution qui veut être visible sur internet, if faut<br />
+ assurer sa présence dans l'index. Mais cela n'est pas suffisant : il<br />
+ faut être en haut de la liste et donc apparaître important aux yeux du<br />
+ moteur de recherche. </p>
+<p>De bonnes pratiques en matière de conception de pages web peut y<br />
+ contribuer. Puisque toute la chaîne de traitement est automatique, les<br />
+ ressources que le moteur analyse et indexe doivent être parfaitement<br />
+ intelligibles par la machine. Il est donc très important d'écrire<br />
+ correctement ses pages web dans ce but de traitement automatisé autant<br />
+ que dans le but de se faire comprendre de ses lecteurs<br />
+ humains. Parfois des conseillers un peu charlatans tentent de se faire<br />
+ passer pour des gourous qui vont propulser des sites en première page<br />
+ des résultats de recherche. </p>
+<p>Il faut s'en méfier car pour le moteur de recherche, une des premières<br />
+ sources de revenu est de vendre ces places. Cela se traduit<br />
+ littéralement par des /ventes de mots/. Une deuxième source de revenu<br />
+ est liée à la collecte des données personnelles des<br />
+ utilisateurs. Tirer des informations à l'insu ou non de ses usagers<br />
+ n'est pas une pratique réservée aux moteurs de recherche. De nombreux<br />
+ autres acteurs du web fonctionnent sur ce même principe.</p>
+<h3>Aller plus loin</h3>
+<p>Cette petite introduction des moteurs de recherche est volontairement<br />
+ très succinte et parcellaire. Des éléments techniques essentiels ne<br />
+ sont pas mentionnés comme <br />
+ - les pré-traitements des textes et la sélection du vocabulaire, le<br />
+   traitement des majuscules, des accents etc... <br />
+ - le calcul du score de pertinence sur lequel repose cet ordre<br />
+   d'affichage des réponses, et bien-sûr<br />
+ - l'un des algorithmes les plus connus qu'est PageRank utilisé par<br />
+   Google. </p>
+<p>Nous vous invitons à suivre les cours d'option transversale en<br />
+ licence, les options de master sur les humanités numériques, ou les<br />
+ prochains cours de culture numérique qui aborderont sans doute ces<br />
+ questions beaucoup plus précisément. </p>

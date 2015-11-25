@@ -11,7 +11,7 @@
 #
 ######################################################################################
 
-import os
+import os, shutil
 import sys
 import re
 import json
@@ -19,6 +19,9 @@ import markdown
 
 from fromGIFT import extract_questions, process_questions
 from slugify import slugify
+
+# Folders created for exporting course elements in a directory corresponding to its type
+FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
 
 def create_empty_ims_test(id, title):
     """
@@ -159,7 +162,7 @@ def process_md(md_src, current_dir):
                             next_type = 'auto-evaluation'
                             new_subsection_title = 'Quizz'
                             pass
-                        elif activite_split == '-avancée':
+                        elif '-avancée' in activite_split:
                             new_subsection_title = "Exercice d'approfondissement"
                             next_type = 'devoirs'
                             # FIXME : try to fetch a title within Gift source
@@ -169,7 +172,8 @@ def process_md(md_src, current_dir):
                                 'title':new_subsection_title,
                                 'type':next_type,
                                 'sub_src':activite_split,
-                                'source_file':''
+                                'source_file':'',
+                                'videos':[]
                             }
                             # reset to default
                             next_type = 'webcontent'
@@ -196,9 +200,23 @@ def process_md(md_src, current_dir):
             target_folder = subsection['type']
             filename = slugify(subsection['title'])+'_'+subsection['type']+'.html'
             subsection['source_file'] = subsection['type']+'/'+filename
-            # if type = webcontent, as is in webcontent folder
-            if subsection['type'] == 'webcontent':
-                src = markdown.markdown(subsection['sub_src'], ['markdown.extensions.extra'])
+            # if type = webcontent or correction, text pasted as is in webcontent folder
+            if subsection['type'] in (('webcontent', 'correction')):
+                src = markdown.markdown(subsection['sub_src'], ['markdown.extensions.extra', 'markdown.extensions.nl2br'])
+                # Detect video links
+                videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
+                for video_match in videos_findall:
+                    try:
+                        # FIXME fetch image from vimeo
+                        pass
+                    except:
+                        pass
+                    new_video = {
+                        'video_title':video_match[0],
+                        'video_link':video_match[1]
+                    }
+                    subsection['videos'].append(new_video)
+                        
             # else, process questions from GIFT source
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
                 # a) parses to HTML source code
@@ -217,8 +235,7 @@ def process_md(md_src, current_dir):
                 #   write xml file at same location
                 write_file(xml_src, current_dir, target_folder, xml_filename)
                 # c) append raw questions to question bank file, adding test title as category
-                category = "$CATEGORY: $course$/Quiz Bank '"+test_title+"'\n\n"
-                questions_bank+= category
+                questions_bank+= "$CATEGORY: $course$/Quiz Bank '"+test_title+"'\n\n"
                 questions_bank+= subsection['sub_src'] + '\n\n'
 
 
@@ -254,11 +271,20 @@ def main(argv):
 
     # create folders
     config = {
-        "directories_to_ims":['auto-evaluation', 'devoirs', 'webcontent', 'videos', 'media']
+        "directories_to_ims":FOLDERS
     }
     for folder in config['directories_to_ims']:
         new_folder = os.path.join(current_dir, folder)
-        os.makedirs(new_folder, exist_ok=True)
+        if 'media' not in folder:
+            # create and overwrite
+            try:
+                os.makedirs(new_folder, exist_ok=False)
+            except OSError:
+                # remove then create
+                shutil.rmtree(new_folder, ignore_errors=True)
+                os.makedirs(new_folder, exist_ok=False)
+        else:
+            os.makedirs(new_folder, exist_ok=True)
 
     config.update(process_md(md_src, current_dir))
     print ("current working dir %s" % (os.getcwd()))

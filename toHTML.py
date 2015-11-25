@@ -58,7 +58,7 @@ def parse_content(href, module=False):
 
 
 def generateModuleHtml(data, module_folder=False):
-    """ parse data from config file 'toIMSconfig.json' and generate a module html file """
+    """ parse data from config file 'moduleX.config.json' and generate a moduleX html file """
 
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
