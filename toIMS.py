@@ -13,6 +13,7 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
+# Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
     'discussions' : 'imsdt_xmlv1p1',
@@ -20,6 +21,7 @@ FILETYPES = {
     'devoirs': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
     'webcontent' : 'webcontent',
     'correction' : 'webcontent',
+    'cours' : 'webcontent',
 }
 
 

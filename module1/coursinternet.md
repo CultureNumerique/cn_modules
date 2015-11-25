@@ -602,7 +602,7 @@ entre des noms de machines et leur adresse IP.</p> }
 # Que se passe-t-il quand on se connecte à Internet?
 
 ## Cours
-  [Se connecter à Internet](https://player.vimeo.com/video/122104376){: .lien_video }
+  [Se connecter à Internet] ( https://player.vimeo.com/video/122104376 ){:.lien_video}
 
 Examinons les conséquences de l'organisation d'Internet lorsqu'on veut
 s'y connecter ...

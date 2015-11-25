@@ -172,9 +172,9 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 # Exemple et récapitulatif
 
+
 ## Cours
 [video]( https://player.vimeo.com/video/138623678 ){: .lien_video } 
-
 ### Exemple
 
 Commençons par un exemple très simple pour comprendre le mécanisme de base. Si à l'aide d'un client web tel que Firefox, je saisis l'adresse :
