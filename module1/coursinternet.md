@@ -889,28 +889,94 @@ jusqu'à une certaine taille au delà de laquelle une structuration par
 interconnexion devient obligatoire.
 
 ```Activité
-// question: 165019 name: 1.5.1 Quizz (Q1/2) ::1.5.1 Quizz
-::(Q1/2)::[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il
-obtenir pour rejoindre internet ?</p>{ ~%33.33333%<p>Une adresse
-IP.</p>#<p>Oui, entre autres...</p> ~<p>Un nom de code.</p>#<p>Et
-non...</p> ~<p>Une autorisation de l'État ?</p>#<p>Vraiment ?</p>
+::rejoindre le réseau::
+[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il
+obtenir pour rejoindre internet ?</p>{ 
+~%33.33333%<p>Une adresseIP.</p>#<p>Oui, entre autres...</p> 
+~<p>Un nom de code.</p>#<p>Et non...</p> ~<p>Une autorisation de l'État ?</p>#<p>Vraiment ?</p>
 ~%33.33333%<p>L'adresse d'un serveur de noms.</p>#<p>C'est bien l'un
-des éléments.</p> ~%33.33333%<p>L'adresse d'un routeur.</p>#<p>Oui,
-mais pas seulement.</p> ~<p>L'accès à un moteur de
-recherche.</p>#<p>Pas du tout.</p> ####<p>En fait, il doit obtenir 3
-éléments \: une adresse IP, l'adresse d'un serveur de noms et
-l'adresse d'un routeur.</p> }
+des éléments.</p> 
+~%33.33333%<p>L'adresse d'un routeur.</p>#<p>Oui, mais pas seulement.</p> ~<p>L'accès à un moteur de recherche.</p>#<p>Pas du tout.</p> 
+####<p>En fait, il doit obtenir 3 éléments \: une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur.</p> }
 
-
-// question: 165020 name: 1.5.1 Quizz (Q2/2) ::1.5.1 Quizz
-::(Q2/2)::[html]<p>Pourquoi la machine qui assure l'interconnexion avec
+::le routeur::
+[html]<p>Pourquoi la machine qui assure l'interconnexion avec
 les autres réseaux d'internet (le routeur) est-elle une place de choix
-pour y installer des fonctions de filtrage ?</p>{ =<p>Parce que toutes
-les informations passent par là.</p>#<p>C'est exact !</p> ~<p>Parce
-que c'est la machine la plus puissante.</p>#<p>Et bien, non.</p>
+pour y installer des fonctions de filtrage ?</p>{ 
+=<p>Parce que toutes les informations passent par là.</p>#<p>C'est exact !</p> 
+~<p>Parce que c'est la machine la plus puissante.</p>#<p>Et bien, non.</p>
 ~<p>Parce qu'elle est en général bien cachée.</p>#<p>Pas du
-tout...</p> ####<p>Parce que toutes les informations transitent par
-elle.</p> }
+tout...</p> 
+####<p>Parce que toutes les informations transitent par elle.</p> }
+```
+``` activité-avancée
+::Utiliser les serveurs de noms::
+[markdown]
+Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s’il est possible de les utiliser directement, ils sont assez techniques.
+Nous vous proposons d’utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
+Selon ce site ;
+  - quelle est votre adresse IP ?
+  - où vous trouvez-vous ?
+D’après ce site, où se trouvent les machines suivantes :
+  - [www.wikipedia.org](www.wikipedia.org)
+  - [www.facebook.com](www.facebook.com)
+  - [www.google.com](www.google.com)
+Quelle est l’adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
+**Copiez** l’adresse IP que vous venez de  trouver dans la **barre d’adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d’adresse.
+- Que constatez vous ?
+Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...
+{}
+```
+
+## Utiliser les serveurs de noms [Correction]
+### Votre propre IP
+
+Grâce à [http://www.monip.fr](http://www.monip.fr) vous avez trouvé votre adresse IP, elle est évidemment différente pour chacun d'entre nous.
+
+Si vous recommencez depuis une autre machine ou avec la même machine connectée différemment (wifi domicile ou wifi eduroam, connexion filaire à l'université ou eduroam université, connexion wifi ou connexion 3G/4G) vous obtiendrez à chaque fois un résultat **différent**.
+
+Pour ce qui est de la **localisation**, vous avez sûrement obtenu une adresse géographiquement proche de la votre, celle-ci est en fait l'*adresse du  routeur du fournisseur d'accès* du réseau auquel vous êtes connecté.
+
+Vous pouvez également constater que vos informations personnelles telles que :
+
+- le navigateur que vous utilisez,
+- la langue utilisée,
+- la taille de votre écran, ... 
+
+ont été **repérés** par le site www.monip.fr et vous sont renvoyés dans la liste des informations.
+
+### Wikipedia, facebook et google
+
+Vous avez dû trouver que la localisation de wikipedia est aux *Pays-Bas*, près *d'Amsterdam*. C'est en effet là que se trouve la copie la plus proche.
+
+D'autres répliques de la célèbre encyclopédie existent également en *Floride* et en *Corée du  Sud*.
+
+`Facebook` est hébergé à *Kensington*, dans *l'Ohio* aux *États-Unis*, c'est là que les *données* de tous les utilisateurs sont stockées.
+Alors que `Google` se trouve à *Mountain View* en *Californie*.
+
+Toutes les **lois** concernant la sécurisation de nos données et les respect de **notre vie privée** pour ces 2 sites sont donc des lois **américaines**.
+
+### www.monip.fr
+et oui, ce site est une version traduite en français d'un site Allemand.
+
+### www.grappa.univ-lille3.fr
+l'adresse **IP** de l'équipe de recherche Grappa est : `194.254.132.190`
+
+Si vous copiez cette adresse dans dans la barre d’adresse de votre navigateur, vous tombez exactement sur la **même page** que si vous allez sur [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr).
+Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence.
+
+```
+::La charte informatique de l'université::
+[markdown]
+Pour utiliser les *services numériques* de l'université, vous avez signé une **charte informatique** lors de votre inscription :
+Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du suivi des informations des utilisateurs.
+Si vous vous connectez avec la **4G** depuis l’université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
+{#### 1/ Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du filtrage et du suivi ?
+*Les engagements de l'Université*
+`Réglementairement, l'Université recueille et conserve les informations sur les accès à ses services numériques. L'Université peut être obligée de fournir ces informations lors d'une enquête judiciaire.`
+2/ Si vous vous connectez avec la **4G** depuis l’université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
+OUI et OUI, les services numériques en particulier ceux accessibles depuis **l’ENT** sont soumis à cette charte **quel que soit le mode de connexion**. En revanche, si vous vous connectez en 4G à d’autres sites que ceux de l’université tout en étant physiquement dans les batiments de l’établissement, aucune information ne sera collectée par l’université.
+}
 ```
 
 # Les supports physiques de transmission de l'information
