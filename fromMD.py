@@ -195,6 +195,7 @@ def process_md(md_src, current_dir):
     # Loop again through subsections to create files and finish up module config file
     questions_bank = "" # is a text resource with all questions with a category / used for import into moodle
     for idsec, section in enumerate(sections):
+        section["title"] = str(idsec+1)+' '+section['title']
         for idsub, subsection in enumerate(section['subsections']):
             subsection['title'] = str(idsec+1)+'.'+str(idsub+1)+' '+subsection['title']
             target_folder = subsection['type']

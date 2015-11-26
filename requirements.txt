@@ -2,3 +2,4 @@ PyOrgMode
 yattag
 python-slugify
 markdown
+MarkdownSuperscript

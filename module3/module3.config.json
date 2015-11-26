@@ -38,7 +38,7 @@
                     "videos": []
                 }
             ],
-            "title": "Repr\u00e9senter c'est choisir..."
+            "title": "1 Repr\u00e9senter c'est choisir..."
         },
         {
             "subsections": [
@@ -127,7 +127,7 @@
                     "videos": []
                 }
             ],
-            "title": "Analyse d'un document : plusieurs vues compl\u00e9mentaires"
+            "title": "2 Analyse d'un document : plusieurs vues compl\u00e9mentaires"
         },
         {
             "subsections": [
@@ -174,7 +174,7 @@
                     "videos": []
                 }
             ],
-            "title": "Documents num\u00e9riques - formats et normes"
+            "title": "3 Documents num\u00e9riques - formats et normes"
         },
         {
             "subsections": [
@@ -242,7 +242,7 @@
                     "videos": []
                 }
             ],
-            "title": "Documents num\u00e9riques textuels"
+            "title": "4 Documents num\u00e9riques textuels"
         },
         {
             "subsections": [
@@ -268,7 +268,7 @@
                     "videos": []
                 }
             ],
-            "title": "Ouverture, interop\u00e9rabilit\u00e9, licences, ... et libert\u00e9 "
+            "title": "5 Ouverture, interop\u00e9rabilit\u00e9, licences, ... et libert\u00e9 "
         },
         {
             "subsections": [
@@ -315,7 +315,7 @@
                     "videos": []
                 }
             ],
-            "title": "Les images"
+            "title": "6 Les images"
         },
         {
             "subsections": [
@@ -327,7 +327,7 @@
                     "videos": []
                 }
             ],
-            "title": "Footnotes"
+            "title": "7 Footnotes"
         }
     ]
 }

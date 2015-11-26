@@ -1,3 +1,6 @@
+TITLE: Internet: technologies, usages, société
+
+
 # Informatique et numérique
 
 [Informatique et numérique](https://player.vimeo.com/video/122104210){: .lien_video }

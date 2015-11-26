@@ -123,6 +123,12 @@ def generateModuleHtml(data, module_folder=False):
             for idB, subsection in enumerate(section["subsections"]):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                 with tag('section', id=subsection_id, style="display:none"):
+                    try:
+                        href = module_folder+'/'+subsection["source_file"]
+                        subsec_text = parse_content(href, module_folder)
+                    except:
+                        href = ""
+                        subsec_text = ""
                     # If there are videos, rendering differs, as we put subsection text in a fancybox reader along with video iframes  
                     if len(subsection["videos"]) > 0:
                         for idVid, video in  enumerate(subsection["videos"]):
@@ -135,10 +141,7 @@ def generateModuleHtml(data, module_folder=False):
                             # add text only 1st time
                             if idVid == 0:
                                 # add text in fancybox lightbox
-                                try:
-                                    subsec_text = parse_content(text_src, module_folder)
-                                except:
-                                    subsec_text = ""
+                                
                                 text_id = subsection_id+"_"+str(idVid)
                                 with tag('div', klass="inline fancybox", href="#"+text_id):
                                     text('Version Texte du cours')
@@ -148,17 +151,8 @@ def generateModuleHtml(data, module_folder=False):
                                     with tag('div', id=text_id, klass="fancy-text"):
                                         doc.asis(subsec_text)
                     else: # print subsection text asis                        
-                        try:
-                            href = module_folder+'/'+subsection["source_file"]
-                        except:
-                            href = ""
-                            text("")
                         if href.endswith(".html"):
-                            try:
-                                doc.asis(parse_content(href, module_folder))
-                            except:
-                                print (" ---- no web content for subsection %s" % (subsection_id))
-                                text("")
+                            doc.asis(subsec_text)
 
 
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))

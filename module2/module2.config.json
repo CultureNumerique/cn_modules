@@ -62,7 +62,7 @@
                     "videos": []
                 }
             ],
-            "title": "Introduction"
+            "title": "1 Introduction"
         },
         {
             "subsections": [
@@ -110,7 +110,7 @@
                     "videos": []
                 }
             ],
-            "title": "Clients et serveurs"
+            "title": "2 Clients et serveurs"
         },
         {
             "subsections": [
@@ -134,7 +134,7 @@
                     "videos": []
                 }
             ],
-            "title": "Exemple et r\u00e9capitulatif"
+            "title": "3 Exemple et r\u00e9capitulatif"
         },
         {
             "subsections": [
@@ -189,7 +189,7 @@
                     "videos": []
                 }
             ],
-            "title": "HTML"
+            "title": "4 HTML"
         },
         {
             "subsections": [
@@ -234,7 +234,7 @@
                     "videos": []
                 }
             ],
-            "title": "Les Cookies"
+            "title": "5 Les Cookies"
         },
         {
             "subsections": [
@@ -267,7 +267,7 @@
                     "videos": []
                 }
             ],
-            "title": "Profils et r\u00e9seaux sociaux"
+            "title": "6 Profils et r\u00e9seaux sociaux"
         },
         {
             "subsections": [
@@ -307,7 +307,7 @@
                     "videos": []
                 }
             ],
-            "title": "Moteurs de recherche"
+            "title": "7 Moteurs de recherche"
         },
         {
             "subsections": [
@@ -357,7 +357,7 @@
                     "videos": []
                 }
             ],
-            "title": "Autres informations sensibles et bilan"
+            "title": "8 Autres informations sensibles et bilan"
         }
     ]
 }
