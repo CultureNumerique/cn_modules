@@ -18,6 +18,10 @@ def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
     return link.replace("../media", "/media")
 
+def write_iframe_code(video_link):
+    return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="'+video_link+'"></iframe></p>'
+    
+
 def parse_content(href, module=False):
     """ open file and replace ../img with img and src to data_src for iframes """
     if not module:
@@ -62,21 +66,6 @@ def generateModuleHtml(data, module_folder=False):
 
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
-
-        #doc.asis(HEADER)
-        # Print the rest of the header
-        # with tag('title'):
-        #     text(data["lom_metadata"]["title"])
-        # doc.asis('</head>\n')
-        # doc.asis('<body>\n')
-        # doc.asis('<!--  HEADER -->')
-        # doc.asis('<div id="container">')
-        # with tag('header'):
-        #     with tag('h1'):
-        #         with tag('a', klass="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
-        #             text('Culture Numérique')
-        #     with tag('h2'):
-        #         text(data["lom_metadata"]["title"])
 
     doc.asis('<!--  NAVIGATION MENU -->')
     with tag('nav', klass="menu accordion"):
@@ -125,52 +114,51 @@ def generateModuleHtml(data, module_folder=False):
             else:
                 display = "none"
             try:
-                href = module_folder+'/'+data["sections"][idA]["source_file"]
+                href = module_folder+'/'+section["source_file"]
                 with tag('section', id=section_id, style=("display:"+display)):
                     doc.asis(parse_content(href, module_folder))
             except:
                 print (" ---- no content for section %s" % (section_id))
             # Loop through subsections
-            for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
+            for idB, subsection in enumerate(section["subsections"]):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                 with tag('section', id=subsection_id, style="display:none"):
-                    try:
-                        href = module_folder+'/'+data["sections"][idA]["subsections"][idB]["source_file"]
-                    except:
-                        href = ""
-                        text("")
-                    if href.endswith(".html"):
+                    # If there are videos, rendering differs, as we put subsection text in a fancybox reader along with video iframes  
+                    if len(subsection["videos"]) > 0:
+                        for idVid, video in  enumerate(subsection["videos"]):
+                            # go now line for each video after 1st video
+                            if idVid > 0:
+                                doc.asis('<br />')
+                            # add iframe code
+                            doc.asis(write_iframe_code(video['video_link']))
+                            doc.asis("\n\n")
+                            # add text only 1st time
+                            if idVid == 0:
+                                # add text in fancybox lightbox
+                                try:
+                                    subsec_text = parse_content(text_src, module_folder)
+                                except:
+                                    subsec_text = ""
+                                text_id = subsection_id+"_"+str(idVid)
+                                with tag('div', klass="inline fancybox", href="#"+text_id):
+                                    text('Version Texte du cours')
+                                    with tag('div', klass="mini-text"):
+                                        doc.asis(subsec_text)
+                                with tag('div', style="display:none"):
+                                    with tag('div', id=text_id, klass="fancy-text"):
+                                        doc.asis(subsec_text)
+                    else: # print subsection text asis                        
+                        try:
+                            href = module_folder+'/'+subsection["source_file"]
+                        except:
+                            href = ""
+                            text("")
+                        if href.endswith(".html"):
                             try:
                                 doc.asis(parse_content(href, module_folder))
                             except:
                                 print (" ---- no web content for subsection %s" % (subsection_id))
                                 text("")
-                    try:
-                        videos = data["sections"][idA]["subsections"][idB]["videos"]
-                        for idVid, video in  enumerate(videos):
-                            if idVid > 0:
-                                doc.asis('<br />')
-                            print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
-                            try:
-                                embed_src = module_folder+'/'+video["video_embed_src"]
-                                doc.asis(parse_content(embed_src, module_folder))
-                                doc.asis("\n\n")
-                                # add text in fancybox lightbox
-                                text_src =  module_folder+'/'+video["video_text_src"]
-                                text_id = subsection_id+"_"+str(idVid)
-                                with tag('div', klass="inline fancybox", href="#"+text_id):
-                                    text('Version Texte')
-                                    with tag('div', klass="mini-text"):
-                                        doc.asis(parse_content(text_src, module_folder))
-                                with tag('div', style="display:none"):
-                                    with tag('div', id=text_id, klass="fancy-text"):
-                                        doc.asis(parse_content(text_src, module_folder))
-                            except:
-                                print (" ---- error while processsing video content for subsection %s" % (subsection_id))
-                                text("")
-                    except:
-                        print (" ---- NO video content for subsection %s" % (subsection_id))
-                        videos = []
 
 
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))

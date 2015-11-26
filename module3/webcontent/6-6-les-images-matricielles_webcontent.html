@@ -1,88 +1,88 @@
-<p>À l'inverse, les images matricielles sont particulièrement bien
-adaptées pour représenter les photos. Issues de scanner ou d'appareils
-photos numériques, leur représentation se fait sous la forme d'une
-suite de points (<em>pixels</em>[fn:1]) eux-mêmes représentés par une valeur
-de couleur.  L'organisation des pixels est assez simple, ils sont
-ordonnés en ligne et en colonne sous la forme d'une matrice (d'où le
-nom <em>images matricielles</em>), ce qui signifie simplement que toutes les
+<p>À l'inverse, les images matricielles sont particulièrement bien<br />
+adaptées pour représenter les photos. Issues de scanner ou d'appareils<br />
+photos numériques, leur représentation se fait sous la forme d'une<br />
+suite de points (<em>pixels</em>[fn:1]) eux-mêmes représentés par une valeur<br />
+de couleur.  L'organisation des pixels est assez simple, ils sont<br />
+ordonnés en ligne et en colonne sous la forme d'une matrice (d'où le<br />
+nom <em>images matricielles</em>), ce qui signifie simplement que toutes les<br />
 lignes et toutes les colonnes ont le même nombre de points. </p>
-<p>En revanche le codage des valeurs de couleur doit une nouvelle fois
-faire l'objet de normes. En effet, il existe de très nombreuses façons
-de représenter la couleur. Ainsi depuis longtemps les peintres ont
-tenté de <em>créer</em> des nuances en mélangeant des couleurs dites
-primaires. Ce procédé est comparable à celui utilisé pour coder les
+<p>En revanche le codage des valeurs de couleur doit une nouvelle fois<br />
+faire l'objet de normes. En effet, il existe de très nombreuses façons<br />
+de représenter la couleur. Ainsi depuis longtemps les peintres ont<br />
+tenté de <em>créer</em> des nuances en mélangeant des couleurs dites<br />
+primaires. Ce procédé est comparable à celui utilisé pour coder les<br />
 couleurs des pixels d'une image numérique.</p>
 <h3>les images RVB</h3>
-<p>le modèle le plus répandu est le modèle RVB pour Rouge Vert
-Bleu. Chaque pixel est décrit par un triplet, chacune des 3 valeurs
-représentant respectivement la proportion de rouge, de vert et de bleu.
-La couleur finale étant la combinaison de ces trois valeurs.
-Le modèle RVB est directement issu des de la technologie, en effet,
-les écrans (télévision, ordinateur, tablettes, ainsi que les capteurs
-des appareils photos numériques ou les scanners utilisent tous ce mode
-de représentation de la couleur. 
-Dans le modèle RVB, la couleur (O, O, O) correspond au noir, alors que
+<p>le modèle le plus répandu est le modèle RVB pour Rouge Vert<br />
+Bleu. Chaque pixel est décrit par un triplet, chacune des 3 valeurs<br />
+représentant respectivement la proportion de rouge, de vert et de bleu.<br />
+La couleur finale étant la combinaison de ces trois valeurs.<br />
+Le modèle RVB est directement issu des de la technologie, en effet,<br />
+les écrans (télévision, ordinateur, tablettes, ainsi que les capteurs<br />
+des appareils photos numériques ou les scanners utilisent tous ce mode<br />
+de représentation de la couleur. <br />
+Dans le modèle RVB, la couleur (O, O, O) correspond au noir, alors que<br />
 lorsque les 3 composantes sont au maximum, cela donne du blanc. </p>
 <h3>les formats</h3>
-<p>Si le codage de la couleur a été normalisé, il existe de nombreux
+<p>Si le codage de la couleur a été normalisé, il existe de nombreux<br />
 formats d'images :</p>
 <ul>
 <li>compression</li>
 <li>transparence</li>
 </ul>
 <h3>les méta-données</h3>
-<p>Comme pour tous les documents, des méta-données peuvent être associées
-à la représentation brute des images (la suite des valeurs de couleur
-de couleur associées à chaque pixel). La plupart des appareils photos
-numériques ajoutent ces méta-données à chaque prise de vue. Elles
-peuvent décrire les caractéristiques techniques de la prise de vue
-(valeur de la focale, vitesse d'obturation, ouverture du
-diaphragme,...) mais aussi des informations plus personnelles comme
-les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
+<p>Comme pour tous les documents, des méta-données peuvent être associées<br />
+à la représentation brute des images (la suite des valeurs de couleur<br />
+de couleur associées à chaque pixel). La plupart des appareils photos<br />
+numériques ajoutent ces méta-données à chaque prise de vue. Elles<br />
+peuvent décrire les caractéristiques techniques de la prise de vue<br />
+(valeur de la focale, vitesse d'obturation, ouverture du<br />
+diaphragme,...) mais aussi des informations plus personnelles comme<br />
+les coordonnées GPS quand elles sont disponibles, le modèle d'appareil<br />
 utilisé, ainsi que l'heure et la date de la pride vue.</p>
 <h3>la taille des images</h3>
 <p>Ce vocabulaire de taille peut recouvrir 3 notions bien distinctes :</p>
 <ul>
-<li>la taille du fichier contenant la représentation numérique de
+<li>la taille du fichier contenant la représentation numérique de<br />
   l'image</li>
-<li>la <em>résolution</em> (on dit aussi la <em>définition</em>) de l'image,
+<li>la <em>résolution</em> (on dit aussi la <em>définition</em>) de l'image,<br />
   c'est-à-dire le nombre de pixels qui la constituent.</li>
-<li>les dimensions en cm de l'image affichée sur un écran ou imprimée
+<li>les dimensions en cm de l'image affichée sur un écran ou imprimée<br />
   sur un support.</li>
 </ul>
-<p>Les deux premières notions sont évidemment liées et proportionnelles,
-chaque couleur (chaque pixel) étant codée avec un certains nombre de
-bits, une image découpées en 50 000 pixels prendra une place 50 fois
-supérieure à une image de 1 000 pixels (ou prendra 50 fois plus de
+<p>Les deux premières notions sont évidemment liées et proportionnelles,<br />
+chaque couleur (chaque pixel) étant codée avec un certains nombre de<br />
+bits, une image découpées en 50 000 pixels prendra une place 50 fois<br />
+supérieure à une image de 1 000 pixels (ou prendra 50 fois plus de<br />
 temps à être télécharger sur le réseau).</p>
-<p>La troisième notion est plus délicate et les liens avec la résolution
-des images sont souvent mal compris. Il faut d'abord comprendre qu'un
+<p>La troisième notion est plus délicate et les liens avec la résolution<br />
+des images sont souvent mal compris. Il faut d'abord comprendre qu'un<br />
 pixel n'a pas de taille fixe, </p>
-<p>Les écrans peuvent être vus comme des images numériques matricielles,
-ils sont eux aussi découpés en pixels organisés en ligne et
-colonne. D'ailleurs, lorsqu'on fait une <em>copie d'écran</em>, cela génère
-une image matricielle contenant exactement le même nombre de pixels
+<p>Les écrans peuvent être vus comme des images numériques matricielles,<br />
+ils sont eux aussi découpés en pixels organisés en ligne et<br />
+colonne. D'ailleurs, lorsqu'on fait une <em>copie d'écran</em>, cela génère<br />
+une image matricielle contenant exactement le même nombre de pixels<br />
 que l'écran.</p>
-<p>Les images matricielle affichée à l'écran peuvent être affichées en
-faisant correspondre un pixel de l'image avec un pixel de
-l'écran. Les dimensions (en cm) de l'image affichée dépendent alors du
-paramétrage de l'écran (un même écran peut être configurée selon
-plusieurs résolutions) et de la taille physique de l'écran. 
-Certains smartphones ont des résolutions identiques aux
+<p>Les images matricielle affichée à l'écran peuvent être affichées en<br />
+faisant correspondre un pixel de l'image avec un pixel de<br />
+l'écran. Les dimensions (en cm) de l'image affichée dépendent alors du<br />
+paramétrage de l'écran (un même écran peut être configurée selon<br />
+plusieurs résolutions) et de la taille physique de l'écran. <br />
+Certains smartphones ont des résolutions identiques aux<br />
 grands écrans de bureau, les pixels sont alors beaucoup plus petits.</p>
-<p>Lors de l'impression, on retrouve les mêmes caractéristiques, les
-images peuvent être imprimées en <em>serrant</em> beaucoup les pixels c'est à
-dire en mettant beaucoup de pixel par unité de longueur soit en
+<p>Lors de l'impression, on retrouve les mêmes caractéristiques, les<br />
+images peuvent être imprimées en <em>serrant</em> beaucoup les pixels c'est à<br />
+dire en mettant beaucoup de pixel par unité de longueur soit en<br />
 imprimant de plus gros pixels, ce qui </p>
 <p>Mais on peut aussi effectuer une opération de zoom qui </p>
 <h3>les images CMJN</h3>
-<p>Un autre modèle de couleur est utilisé dans le monde de l'édition, il
-s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
-au modèle RVB, il s'agit de décrire une couleur par combinaison de
-plusieurs couleurs primaires. Mais alors que le RVB correspond aux
-technologies des écrans, le CMJN est adapté au monde de
-l'impression. Cyan, Magenta, Jaune et noir étant les couleurs
+<p>Un autre modèle de couleur est utilisé dans le monde de l'édition, il<br />
+s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire<br />
+au modèle RVB, il s'agit de décrire une couleur par combinaison de<br />
+plusieurs couleurs primaires. Mais alors que le RVB correspond aux<br />
+technologies des écrans, le CMJN est adapté au monde de<br />
+l'impression. Cyan, Magenta, Jaune et noir étant les couleurs<br />
 primaires utilisées pour l'impression. </p>
-<p>Une même image peut donc avoir plusieurs représentations dans des
-modèles différents, le choix du codage dépendra de l'utilisation
+<p>Une même image peut donc avoir plusieurs représentations dans des<br />
+modèles différents, le choix du codage dépendra de l'utilisation<br />
 désirée.</p>

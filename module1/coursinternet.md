@@ -248,17 +248,14 @@ moins de 2 ans après vous pouvez trouver un autre modèle 2 fois plus
 puissant au même prix.
 
 ```Activité
-// question: 164998 name: 1.2.1 Quizz (Q1/2) ::1.2.1 Quizz
-(Q1/2)::[html]<p>De quand datent les premiers ordinateurs ?</p>{
+::(Q1/2)::[html]<p>De quand datent les premiers ordinateurs ?</p>{
 ~<p>Au XVIIe siècle</p> ~<p>Juste avant la Révolution française</p>
 =<p>A la fin de la seconde guerre mondiale</p> ~<p>Dans les années
 1980</p> ~<p>Avant la première guerre mondiale</p> ####<p>C'est à la
 fin de la seconde guerre mondiale que les premiers ordinateurs sont
 apparus.</p> }
 
-
-// question: 164999 name: 1.2.1 Quizz (Q2/2) ::1.2.1 Quizz
-(Q2/2)::[html]<p>Que dit la loi de Moore ?</p>{ ~<p>Que s'il existe au
+::(Q2/2)::[html]<p>Que dit la loi de Moore ?</p>{ ~<p>Que s'il existe au
 moins deux façons de faire quelque chose et qu'au moins l'une de ces
 façons peut entraîner une catastrophe, il se trouvera forcément
 quelqu'un quelque part pour emprunter cette voie.</p>#<p>Non, ça c'est
@@ -269,7 +266,7 @@ ordinateur double environ tous les 2 ans.</p> }
 
 ```Activité
 // question: 165000 name: 1.2.2 Quizz (Q1/2) ::1.2.2 Quizz
-(Q1/2)::[html]<p>Entre mon ordinateur et l'ordinateur de mon père qui
+::(Q1/2)::[html]<p>Entre mon ordinateur et l'ordinateur de mon père qui
 ont 12 ans d'écart, quelle est la différence de puissance à laquelle
 on peut s'attendre ?</p>{ ~<p>Ils sont tous les deux aussi puissants,
 ça n'a pas changé en 12 ans.</p>#<p>Il faut revoir la vidéo !</p>
@@ -285,7 +282,7 @@ mien !</p> }
 
 
 // question: 165001 name: 1.2.2 Quizz (Q2/2) ::1.2.2 Quizz
-(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
+::(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
 courant d'être confronté à des programmes “bugués”, c'est à dire des
 programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais
 savez-vous d'où vient le terme “bug” ?<br /><br /></p>{ =<p>En
@@ -345,7 +342,8 @@ par n'importe quel chemin à l'intérieur d'internet.*
 
 
 ```activité
-// question: 165014 name: 1.3.1 (Q2/3) ::1.3.1 (Q2/3)::[html]<p>Que
+// question: 165014 name: 1.3.1 (Q2/3) ::1.3.1 
+::(Q2/3)::[html]<p>Que
 signifie internet ?</p>{ ~<p>Il s'agit de la contraction des mots
 anglais \: "<em>international</em>" et "<em>network</em>" (réseau
 international).</p>#<p>Ça aurait pu, mais non !</p> =<p>Il s'agit de
@@ -358,7 +356,7 @@ qui signifie "interconnexion de réseaux".</p> }
 
 
 // question: 165013 name: 1.3.1 Quizz (Q1/3) ::1.3.1 Quizz
-(Q1/3)::[html]<p>Quelle est la date de la création d'internet ? (date
+::(Q1/3)::[html]<p>Quelle est la date de la création d'internet ? (date
 la plus proche)</p>{ ~<p>1789</p>#<p>Vraiment ?</p>
 ~<p>1918</p>#<p>N'est-ce pas un peu tôt ?</p> ~<p>1945</p>#<p>N'est-ce
 pas un peu tôt ?</p> =<p>1970</p>#<p>Oui, c'est cela.</p>
@@ -368,7 +366,7 @@ créé internet.</p> }
 
 
 // question: 165015 name: 1.3.1 Quizz (Q3/3) ::1.3.1 Quizz
-(Q3/3)::[html]<p>Pourquoi internet est-il qualifié de réseau robuste
+::(Q3/3)::[html]<p>Pourquoi internet est-il qualifié de réseau robuste
 ou tolérant aux pannes ?</p>{ ~<p>Parce qu'il est fabriqué avec des
 matériaux très résistants.</p>#<p>Et non, ce n'est pas uniforme...</p>
 ~<p>Parce que beaucoup de salariés sont à sa disposition pour le
@@ -444,7 +442,7 @@ ordinateur qu'à afficher ce contenu.
 
 ```Activité
 // question: 165016 name: 1.4.1 Quizz (Q1/3) ::1.4.1 Quizz
-(Q1/3)::[html]<p>A quoi sert une adresse IP ?</p>{ =<p>À identifier
+::(Q1/3)::[html]<p>A quoi sert une adresse IP ?</p>{ =<p>À identifier
 les machines connectées de façon unique.</p>#<p>Oui !</p> ~<p>À
 différencier les gros ordinateurs et les plus petits.</p>#<p>Comment
 ça ?</p> ~<p>À envoyer des mails automatiquement.</p>#<p>Pas du
@@ -453,7 +451,7 @@ identifier de façon unique les machines connectées.</p> }
 
 
 // question: 165027 name: 1.4.1 Quizz (Q2/3)_NEW ::1.4.1 Quizz
-(Q2/3)_NEW::[html]<p>A l'aide de quel équipement réalise-t-on
+::(Q2/3)::[html]<p>A l'aide de quel équipement réalise-t-on
 l'interconnexion de réseaux ?</p>{ ~<p>Une adresse IP</p>#<p>Vous
 devriez revoir la vidéo !</p> ~<p>Un serveur de noms</p>#<p>Non, il ne
 s'agit d'un serveur de noms.</p> =<p>Un routeur</p>#<p>Exact !</p>
@@ -462,7 +460,7 @@ réalise l'interconnexion de réseaux.</p> }
 
 
 // question: 165018 name: 1.4.1 Quizz (Q3/3) ::1.4.1 Quizz
-(Q3/3)::[html]<p>Qu'est-ce qu'un serveur de noms ?</p>{ ~<p>Un site
+::(Q3/3)::[html]<p>Qu'est-ce qu'un serveur de noms ?</p>{ ~<p>Un site
 web qui aide à choisir un prénom pour ses enfants.</p>#<p>C'est une
 blague !</p> ~<p>Un logiciel (pirate) qui permet de trouver les mots
 de passe d'autres utilisateurs.</p>#<p>Pas vraiment...</p> =<p>Une
@@ -549,7 +547,7 @@ interconnexion devient obligatoire.
 
 ```Activité
 // question: 165019 name: 1.5.1 Quizz (Q1/2) ::1.5.1 Quizz
-(Q1/2)::[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il
+::(Q1/2)::[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il
 obtenir pour rejoindre internet ?</p>{ ~%33.33333%<p>Une adresse
 IP.</p>#<p>Oui, entre autres...</p> ~<p>Un nom de code.</p>#<p>Et
 non...</p> ~<p>Une autorisation de l'État ?</p>#<p>Vraiment ?</p>
@@ -562,7 +560,7 @@ l'adresse d'un routeur.</p> }
 
 
 // question: 165020 name: 1.5.1 Quizz (Q2/2) ::1.5.1 Quizz
-(Q2/2)::[html]<p>Pourquoi la machine qui assure l'interconnexion avec
+::(Q2/2)::[html]<p>Pourquoi la machine qui assure l'interconnexion avec
 les autres réseaux d'internet (le routeur) est-elle une place de choix
 pour y installer des fonctions de filtrage ?</p>{ =<p>Parce que toutes
 les informations passent par là.</p>#<p>C'est exact !</p> ~<p>Parce
@@ -575,8 +573,10 @@ elle.</p> }
 # Les supports physiques de transmission de l'information
 
 ## Cours
-  [Les supports physiques](https://player.vimeo.com/video/122104443){: .lien_video }
 
+    [Les supports physiques](https://player.vimeo.com/video/122104443){: .lien_video }
+    
+    [Connexions nomades](https://player.vimeo.com/video/122104499){: .lien_video }
 
 Internet et plus généralement les réseaux informatiques peuvent
 utiliser plusieurs types de supports pour transporter l'information
@@ -659,7 +659,6 @@ smartphones. Fondamentalement, elles permettent toutes la même chose,
 c'est à dire un accès complet à Internet.
 
  
-[Connexions nomades](https://player.vimeo.com/video/122104499){: .lien_video }
 ### Les connexions nomades
 
 
@@ -717,7 +716,7 @@ du mode de connexion utilisé peut faire des miracles. Soyez agiles !!!
 
 ```Activité
 // question: 165021 name: 1.6.1 Quizz (Q1/3) ::1.6.1 Quizz
-(Q1/3)::[html]<p>Quels supports sont utilisés pour la transmission de
+::(Q1/3)::[html]<p>Quels supports sont utilisés pour la transmission de
 données et qui peut donc servir pour une connexion internet ?</p>{
 ~<p>L'eau dans un tuyau.</p>#<p>Pas à notre connaissance, mais
 pourquoi pas ?</p> ~%20%<p>L'électricité dans les câbles
@@ -735,7 +734,7 @@ http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
 
 
 // question: 165022 name: 1.6.1 Quizz (Q2/3) ::1.6.1 Quizz
-(Q2/3)::[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion
+::(Q2/3)::[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion
 ?</p>{ ~%25%<p>Le débit maximal admissible du lien qui me raccorde au
 réseau local.</p>#<p>Oui, c'est l'un des paramètres.</p> ~%25%<p>Le
 nombre d'utilisateurs de ce lien.</p>#<p>Exact, c'est l'un des
@@ -750,7 +749,7 @@ routeurs que les miens.</p> }
 
 
 // question: 165023 name: 1.6.1 Quizz (Q3/3) ::1.6.1 Quizz
-(Q3/3)::[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>{
+::(Q3/3)::[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>{
 =<p>Avoir un compte Lille 3 ou un compte dans une autre
 université.</p>#<p>Exact !</p> ~<p>Payer un
 abonnement.</p>#<p>Absolument pas, c'est gratuit.</p> ~<p>Aller en
@@ -880,20 +879,20 @@ ont montré que cette question dépasse largement le cadre Français.
 
 ```activité
 // question: 165024 name: 1.8.1 (Q1/3) ::1.8.1
-(Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de
+::(Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de
 domaine et les adresses IP ?</p>{ =<p>Au niveau mondial \:</p> ->
 ICANN =<p>Au niveau de la France \:</p> -> AFNIC = -> CNIL
 ####<p>ICANN pour le niveau mondial et l'AFNIC pour la France.</p> }
 
 // question: 165028 name: 1.8.1 (Q2/3)_NEW ::1.8.1
-(Q2/3)_NEW::[html]<p>L'ISO est l'organisation internationale de
+::(Q2/3)_NEW::[html]<p>L'ISO est l'organisation internationale de
 normalisation.</p>{TRUE#<p>Il faut revoir la vidéo...</p>#<p>Exact
 !</p>####<p>Vrai, l'ISO est bien l'organisation internationale de
 normalisation (International Organization for Standardization).<br
 /><br /></p>}
 
 // question: 165029 name: 1.8.1 (Q3/3) Noms pleinement qualifiés_NEW
-::1.8.1 (Q3/3) Noms pleinement qualifiés_NEW::[html]<p>Comment s'écrit
+::(Q3/3) Noms pleinement qualifiés_NEW::[html]<p>Comment s'écrit
 le nom d'une machine C, située dans un domaine B, lui même dans un
 domaine général A ?</p>{ ~<p>ABC</p> ~<p>ACB</p> =<p>CBA</p>
 ~<p>CAB</p> ~<p>BAC</p> ~<p>BCA</p> ####<p>C.B.A \: le nom de la
