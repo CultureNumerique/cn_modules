@@ -52,8 +52,7 @@ culture numérique qui ne se limite pas à l'utilisation de FaceBook ou
 d'un traitement de texte. C'est ce que nous allons développer dans ces
 cours...
 
-```Activité
-
+``` activité
 ::Pourquoi représenter avec des nombres ?::
 [html]<p>Pourquoi faut-il représenter les textes, images, son,
 etc.  par des nombres dans un ordinateur ?</p>
@@ -72,7 +71,7 @@ puisse le manipuler.</p>
 nombres, tout doit donc être représenté sous forme de nombres pour
 qu'il puisse le manipuler.</p> }
 
-::Numérisation)::
+::Numérisation::
 [html]<p>Que signifie "<em>numérisation</em>" ?</p>{
 =<p>L'opération qui consiste à représenter sous forme de nombres une
 information quelle qu'elle soit.</p>#<p>Oui !</p> ~<p>L'opération qui
@@ -91,7 +90,7 @@ ces objets sont équipés de micro-processeurs !</p> }
 ```
 
 ``` activité-avancée
-::Le numérique dans tous les domaines:: 
+::Le numérique concerne tout le monde:: 
 Quels étudiants sont concernés par
 le numérique ?
 Le numérique concerne évidemment les étudiants en informatique et plus
@@ -100,21 +99,19 @@ généralement les étudiants des filières scientifiques.  Mais vous qui
 êtes-vous concerné ?
 Choisissez au moins 3 des domaines suivants et faites des recherches
 pour voir en quoi ils sont impactés par le numérique.
-    dans les médias, dans la santé, en histoire, en sociologie, en
-    linguistique, en art et culture, dans l’enseignement, en
-    archéologie.
-
+- dans les médias, dans la santé, en histoire, en sociologie, en
+- linguistique, en art et culture, dans l’enseignement, en
+- archéologie.
 Faites une synthèse en quelques lignes de vos recherches en précisant
 les domaines auxquels vous vous êtes intéressés. Indiquez les liens
 des sites sur lesquels vous avez trouvé ces informations.
-
 La liste est non exhaustive et vous pouvez vous intéresser à d'autres
 domaines...
 ```
 ## Le numérique concerne tout le monde [correction]
 
 Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n’est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
-S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** (/digital humanities/ en anglais). 
+S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** ( *digital humanities* en anglais). 
 
 Voici quelques exemples que nous vous proposons :
 
@@ -166,7 +163,7 @@ Les **lentilles pour la vue** ?
 
  - [lentilles](http://www.zdnet.fr/actualites/google-apres-les-lunettes-connectees-les-lentilles-pour-le-diabete-39797148.htm)
 
- ```activité-avancée
+``` activité-avancée
 ::Le numérique dans la société::
 [markdown]
 Le numérique, un enjeu pour les **citoyens du XXIème siècle** ...
@@ -177,15 +174,15 @@ Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles cho
 Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
 {####[markdown]
 Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
- - À propos de la troisième révolution industrielle :
+- À propos de la troisième révolution industrielle :
   - [3eme revolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
   - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
- - En **politique et média** : Qu’est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l’a rendu possible / facile ?
+- En **politique et média** : Qu’est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l’a rendu possible / facile ?
   - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)   
- - En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.     
-  - [arguments] http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
+- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.     
+  - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
 }
- ```
+```
 
 # Historique informatique
 
@@ -285,21 +282,20 @@ mien !</p> }
 ::(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
 courant d'être confronté à des programmes “bugués”, c'est à dire des
 programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais
-savez-vous d'où vient le terme “bug” ?<br /><br /></p>{ =<p>En
-anglais, “bug” signifie insecte. Un insecte s'était glissé dans le
+savez-vous d'où vient le terme “bug” ?</p>
+{ =<p>En anglais, “bug” signifie insecte. Un insecte s'était glissé dans le
 mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un
 relais et provoqué une panne.</p>#<p><span style\="color\:
 \#000000;">En effet, il s'agissait d'une mite.<br /></span></p>
 ~<p>“Bug” était le surnom d'un des premiers programmeurs chez
 Microsoft, il était réputé pour commettre beaucoup
-d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p> ~<p>“Bug”
-est la version en verlan de “GUB” (Grande Unité Binaire), un projet
+d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
+~<p>“Bug” est la version en verlan de “GUB” (Grande Unité Binaire), un projet
 d'ordinateur qui n'a jamais fonctionné.</p>#<p>Non, cherchez bien,
-c'est sur le web !</p> ~<p>“Bug” est le diminutif de Bugatti, la
-marque de la première voiture de luxe de Bill Gates, le fondateur de
-Microsoft. Cette voiture serait tombée 13 fois en panne en un
-an…</p>#<p>Non, cherchez bien, c'est sur le web !</p> ~<p>L'équipe des
-fondateurs d'Apple étaient des fans du dessin animé “Bugs Bunny”. Ils
+c'est sur le web !</p> 
+~<p>“Bug” est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de
+Microsoft. Cette voiture serait tombée 13 fois en panne en un an…</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
+~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé “Bugs Bunny”. Ils
 avaient pris l'habitude d'appeler “Bugs” leurs erreurs de
 programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
 ####<p><span style\="color\: \#000000;">Le premier bug a été causé par
@@ -308,6 +304,141 @@ src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-
 alt\="premier bug" width\="300" height\="213" /></span></p>\n<p><span
 style\="color\: \#000000;"> </span></p> }
 ```
+
+```activité-avancée
+::Des personnages importants::
+Tout ne s'est pas fait en un jour, ...
+Vous connaissez sans doute des personnages importants de l’activité économique liée à l’informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
+Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
+- [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)
+- [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)
+- [Alan Turing] (http://fr.wikipedia.org/wiki/Alan_Turing)
+- [John Von Neuman] (http://fr.wikipedia.org/wiki/John_von_Neumann)
+Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, **l'homme** et la **machine**, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
+Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.
+```
+## Personnages importants - Correction
+- Ada Lovelace
+![Ada Lovelace](media/AdaLovelace.jpeg){: .imggauche}
+*Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
+
+Ce projet n'aboutira finalement pas dans un succès commercial mais aura contribué à produire les **bases de l'informatique**.
+Le rôle d'Ada Lovelace dans ce projet a été tel qu'elle a été depuis qualifiée de *première programmeuse*.
+	
+- Alan Turing
+![Alan Turing](media/432px-Alan_Turing_Aged_16.jpg)	
+Dans les **années 1930**, les travaux du **mathématicien** *Alan Turing* sont déterminants pour définir d'abord ce qu'est une **machine programmable** universelle, et ensuite pour dessiner les frontières de ce qu'il est possible de calculer à l'aide d'une telle machine. Turing a également eu une action déterminante pendant la **seconde guerre mondiale**. Il conçoit des machines capables de **décrypter** les messages allemands codés par la machine **Enigma**. Ses découvertes permirent, selon plusieurs historiens, de raccourcir la capacité de résistance du régime nazi de deux ans.
+
+Si la vie de cet homme exceptionnel au destin tragique vous intéresse nous vous conseillons les deux liens suivants :
+
+- [Alan Turing 1](http://future.arte.tv/fr/alan-turing)
+- [Alan Turing 2](http://videotheque.inria.fr/videotheque/doc/758)
+
+Vous y découvrirez entre autre une hypothèse sur l'origine du logo de la pomme croquée d'`Apple.` 
+		
+- John Von Neumann 	
+![John Von Neumann](media/johnVonNeumann.jpeg)
+
+![architecture Von Neumann](media/420px-Von_Neumann_architecture_fr.png)
+"Von Neumann Architecture",
+schéma par Chris Martin, source sous licence CC-BY-SA 3.0
+
+Dans les **années 40**, **John Von Neumann** propose une **architecture** pour une machine programmable.
+
+Par architecture, il faut entendre comme dans l'habitat, une description précise de son organisation qui permet d'expliquer son fonctionnement et la construire effectivement. Notre ordinateur moderne apparaît. 
+
+Dans ce monde numérique qui évolue si vite, il est remarquable que **deux notions fondamentales**, à savoir ce qu'il est *possible de calculer* par machine programmable défini par Turing, et cette *architecture* de machine dite de Von Neumann soient toujours celles qui régissent le fonctionnement de nos **ordinateurs d'aujourd'hui**.
+
+- Grace Hopper
+![Grace Hopper](media/220px-Grace_Hopper_and_UNIVAC.jpg)
+"Grace Murray Hopper au clavier de l'UNIVAC, vers 1960.",
+Smithsonian Institution, Source, photo sous licence CC-BY 2.0.	
+C’est à la **fin des années 50** que les premiers **langages** informatiques de programmation apparaissent. Ce sont des langages artificiels, c'est-à-dire inventés par l'homme, facilement lisibles et intelligibles. Un programme spécifique appelé *compilateur* ou *interprète* se charge de traduire un texte écrit dans ce langage de programmation en langage machine. Les conséquences sont importantes : la **programmation** devient accessible à un plus grand nombre d'individus, et l'écriture d'un programme n'est plus spécifique à une machine. C'est le début du **métier de programmeur**.
+
+Grace Hopper a inventé le **premier compilateur**. Elle est aussi à l'origine du langage `Cobol` qui a été énormément utilisée dans l'informatique de gestion. On la voit ici (photo ci-contre) au clavier de l'`UNIVAC`, vers 1960.
+
+``` activité-avancée
+::La vitesse des ordinateurs::
+Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d’opérations élémentaires qu’un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
+En vous aidant par exemple de :
+- [http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs)
+retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
+    - l’ENIAC 
+    - Apple I
+    - IBM PC
+    - Ipad (premier modèle)
+    - smartphone Samsung Galaxy S4
+Essayez de **tracer un diagramme** ou une courbe pour **représenter** cette **évolution**. Que constatez-vous ?
+{}
+```
+## la vitesse des ordinateurs [Correction]
+
+**L'ENIAC**
+![ENIAC](media/)
+L’un des tout premiers ordinateurs, l’`ENIAC` a été réalisé en **1946**. Il avait une vitesse d’horloge de **100khz**, ce qui signifie qu’il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l’`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C’est toujours le cas pour tous les programmes informatiques.
+
+Ces caractéristiques techniques peuvent nous paraître ridicules mais elles correspondent à calculer en **3s** ce que des mathématiciens sont capables de faire *à la main* en **3 jours**.
+
+------------------
+
+En **1976**, sort l’`Apple I` avec une fréquence d’horloge de **1 Mhz **(1 Million d’opérations élémentaires par seconde). En trente ans, la puissance a été **multipliée par 10 **alors que l’encombrement est passé de la taille d’une maison (30 tonnes, 170 m2) à celui d’une machine qui tient sur une table.
+
+------------------
+
+L’`IBM-PC` quant à lui apparaît en **1981** et *tourne* à une vitesse de **4,77Mhz**. La vitesse a donc été multipliée par presque 5 en 5 ans.
+
+------------------
+
+En **2010**, une des premières tablettes, l’`IPAD` est proposé sur le marché avec un processeur travaillant à 1Ghz, soit **1 milliards d’opérations élémentaires par seconde**. Notons que ces opérations élémentaires sont de plus en plus complexes, ce qui accentue encore l’augmentation de la puissance des machines. 1Ghz correspond à 200 fois 5Mhz, l’IPAD est donc plus de **200 fois plus puissant** que les premiers PC.
+
+------------------
+
+En **2013**, le `Samsung Galaxy S4` est un *smartphone* qui tient dans la main et dans la poche et qui a une fréquence d’horloge supérieure à **2Ghz**. On pourrait ajouter que ces machines ont plusieurs processeurs qui travaillent ensemble ce qui démultiplie là encore leurs capacités, …
+![loi de Moore](media/)
+Comme nous l’avons précisé dans la question, la vitesse des processeurs n’est pas le seul élément à prendre en compte, mais il donne une bonne idée de l’évolution de la puissance des machines.
+
+Représenter cette évolution sur une courbe est particulièrement difficile, car la courbe monte tellement fort qu’elle *sort* très rapidement de la feuille. Multiplier par 2 à chaque intervalle de temps régulier définit une courbe **exponentielle**, caractéristique de la *loi de Moore* qui prédit cette évolution. Peu de technologies ont des évolutions aussi spectaculaires.
+
+Notons, que cette loi *empirique* (constatée, mais pas démontrée) s'arrêtera forcément un jour, la vitesse ne pouvant être infinie. Beaucoup de gens ont d'ailleurs prédit qu'à telle ou telle date, la loi ne se vérifierait plus, ... or, pour l'instant ça tient toujours, ...
+
+``` activité-avancée
+::D'où vient le PC ?::
+[markdown]
+![Francois Gernelle](media/)
+**L'Ordinateur personnel**
+Historiquement, les premiers ordinateurs étaient de **très grosses machines**, occupant des salles entières et dédiées à des traitements de gestion, appelés *MainFrame*. La **miniaturisation** a entraîné l’apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C’est la naissance de la *deuxième ère* de l’informatique.
+C’est au début des années **70**,  qu’un français, **François Gernelle** (photo),  a breveté l'idée d’**ordinateur personnel**.
+Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d’un **autre modèle** d’ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
+À l'aide de ressources telles que :
+- [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
+faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes
+    - En quelle **année** est-il apparu ?
+    - Quelle **quantité** en a-t-on fabriqué ?
+    - Quelle était la taille de son **Disque dur** ?
+    - Pourquoi le `PC` d’`IBM` est-il resté dans l’histoire ?
+{}
+```
+## D'où vient le PC ? [Correction]
+### Le PC de 1981 à aujourd'hui
+
+L'`IBM-PC` a fait son apparition en **1981**. Plusieurs millions d'exemplaires ont été vendu à travers la monde. Le premier modèle ne possédait **pas de disque dur**, seulement des lecteurs de disquettes. Par la suite, d'autres modèles toujours plus puissants et sophistiqués ont vu le jour. À chaque fois les nouveaux modèles étaient compatibles avec les anciens, cela signifie que les programmes qui fonctionnaient sur les anciens modèles pouvaient être réutilisés avec les nouveaux.
+
+`IBM` s'est associé avec `Microsoft` qui fournissait le système d'exploitation qui s'appelait alors `MS-DOS`. Celui-ci a évolué en même temps que les capacité des machines. La dernière génération connue s'appelle ... `Windows 10` !
+
+Grâce à son **architecture ouverte** (i.e. la "description des schémas de fonctionnement" a été diffusée), de nombreuses autres marques ont fabriqué des machines comparables en respectant des **normes** et en installant également les systèmes de `Microsoft`. On les a appelé des **compatibles PC**. Aujourd'hui, on a l'habitude de parler de `PC` et `IBM` n'a plus qu'une très petite part de ce marché. En revanche `Microsoft` reste hégémonique pour le système d'exploitation `Windows`. 
+
+Il faut néanmoins savoir que d'autres systèmes peuvent être installés sur les `PC`, en particulier `Linux`, qui est un système d'exploitation **rapide**, **fiable** et **puissant** qui est par certains aspects bien meilleur que `Windows`. Malheureusement, les accords commerciaux entre les constructeurs de machines et `Microsoft` rendent assez compliqués l'achat d'un `PC` équipé de `Linux`. En pratique, un PC équipé de `Linux` à la place de `Windows` est quasi introuvable dans le commerce grand public.
+
+Pour l'anecdote, le texte que vous êtes en train de lire a été rédigé sur un PC sous `Linux`.
+
+### Qui l’eut cru ?
+
+En **1984** sort la troisième génération de PC : le `PC/AT`
+
+extrait de wikipedia : ![http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
+
+*La machine fut jugée suffisamment puissante — selon les critères de l'époque — pour être interdite à l'exportation vers les pays de l'Est, alors sous embargo technologique (COCOM). IBM en refusa aussi pendant deux ans la vente à prix réduit au personnel, arguant qu'un particulier ne pouvait pas avoir besoin d'une telle puissance ni d'une telle capacité disque (30 Mo), qui la destinaient plutôt aux petites et moyennes entreprises.*
+
 # Naissance d'Internet
 
   [Naissance d'internet](https://player.vimeo.com/video/122104260){: .lien_video }
