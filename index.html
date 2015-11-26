@@ -81,6 +81,7 @@
                     $('nav.accordion').attr('style', '');
                 }
             });
+            
         };
         // ## Accordion menu: control folding and unfolding of selected sections (see above for content loading) ##
         function accordion(){
@@ -150,6 +151,12 @@
                     accordion();
                     load_fancybox();
                 });
+                // triggers click on first subsection
+                // triggers click of 1st subsection after loading
+                //$(".accordion ul li a")[0].click()
+                setTimeout(function(){
+                    $(".accordion ul li a")[0].click(), 1000;
+                }, 500)
             });
         });
     </script>
