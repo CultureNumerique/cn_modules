@@ -725,6 +725,93 @@ machines et leur adresse IP.</p>#<p>Oui, c'est exact !</p> ####<p>Un
 serveur de noms est une machine qui contient une table d'équivalence
 entre des noms de machines et leur adresse IP.</p> }
 ```
+
+```activité-avancée
+::Combien y-a-t-il d'adresses IP ?::
+[markdown]
+**Plus assez d'adresses IP ?**
+Les fondateurs d'Internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses IP n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer, ...
+Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de `IPV4` et `IPV6`.
+Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :
+- Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
+- Nouvelle norme IP version 6 `IPV6`. Combien pourrait-on avoir de numéros IPV6 différents par millimètre carré de la surface de la terre ?
+{}
+```
+## Combien y-a-t-il d'adresses IP ? [Correction]
+### `IP V4` : nombre d'adresses *vs* nombre d'êtres humains
+
+La population mondiale est supérieure à 7 Milliards, or le système `IPV4` ne peut représenter que 4 milliards (4 294 967 296 = (2^^32^ )) d'adresses, ce qui est largement insuffisant.
+L'apparition entre autre des "objets connectés" et des appareils mobiles fait exploser la demande et on entrevoit que cette demande va considérablement augmenter dans un avenir proche.
+
+### `IP V6`, on voit les choses en grand
+
+Heureusement, la nouvelle norme IPV6 est quand à elle beaucoup plus généreuse :
+
+*Extrait wikipedia* : [http://fr.wikipedia.org/wiki/IPv6](http://fr.wikipedia.org/wiki/IPv6)
+
+`l'augmentation de 2^^32 (soit environ 4,3×109) à 2128 (soit environ 3,4×1038) du nombre d'adresses disponibles.
+Pour épuiser la totalité de ce stock d'adresses, il faudrait placer 667 millions de milliards d'appareils connectés sur chaque millimètre carré de la surface de la Terre`
+
+Cette fois on peut espérer tenir avec ce système un bon moment.
+
+### Le numérique compte en binaire :
+
+Nous n'avons pas encore vu comment on code les informations en binaire. Pour tous ceux d'entre vous qui n'ont pas de culture scientifique, cela peut paraître abstrait. On peut quand même remarquer que les résultats ci-dessus s'expliquent en calculant de la façon suivante :
+
+- IPV4 utilise des adresses codées sur 32 bits, le nombre de combinaisons est alors 2^32.
+- alors que IPV6 code les adresses sur 128 bits, ce qui fait 2128 adresses possibles.
+
+```activité-avancée
+::Les serveurs de noms::
+[markdown]
+Les serveurs de noms (*DNS* en anglais) : un maillon fragile de l'édifice ...
+La **norme** qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les **serveurs racine de DNS** (*Domain Name System*, en français : système de nom de domaine).
+À partir de cette ressource : 
+[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
+faites les recherches nécessaires pour répondre aux questions suivantes :
+- Si ces machines **s'arrêtaient**, la traduction des adresses IP en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l’impact de cet arrêt ?
+- **Combien** existe-t-il de serveurs racine de DNS ?
+- **Qui** possède ces machines : des états, des organisations, des sociétés privées ?
+- **Où** se trouvent-elles majoritairement ?
+- **Que** s’est-il passé en 2002 et 2007 ?
+{}
+```
+
+## Les serveurs de noms [correction]
+### Les serveur racines de DNS
+
+Si les serveurs racines de DNS **s'arrêtaient**, alors progressivement les millions de serveurs de noms répartis sur la planète qui en dépendent deviendraient obsolètes et la **correspondance** entre les noms des machines, que nous utilisons et les adresses IP **ne fonctionnerait plus**. En d'autres termes **internet s'arrêterait**.
+
+Or, il n'existe que **13** serveurs racines, ils sont détenus (sécurisés et entretenus) par des **états**, des sociétés **commerciales** **privées** ou des **organisations**. Les machines qui hébergent ces serveurs sont majoritairement situées sur le **sol américain** et donc soumis au **droit américain**, alors que l'ensemble de la planète en dépend.
+
+Beaucoup de gens pensent que cela constitue un problème, un bien commun universel aux mains de quelques-uns, soumis aux lois d'un seul pays, peut-on, doit-on faire confiance à des sociétés privées pour prendre les décisions qui concernent la gestion, la sécurité et le bon fonctionnement d'éléments aussi cruciaux que les serveurs racines de DNS. Certains militent pour une vision plus démocratique avec des décisions partagées.
+
+Vous êtes maintenant en capacité de comprendre ces questions pour vous forger votre propre opinion.
+
+Ces serveurs racines sont des points faible du système, si l'un d'entre eux devient indisponible, alors c'est un 13ème de la charge qui qui doit être réparti sur les douze autres. Vu le nombre gigantesque de requêtes effectuées en permanence, cela peut ralentir l'ensemble du réseau à l'échelle de la planète.
+
+C'est ce qui s'est passé en **2002** et en **2007**, lorsque des serveurs racines ont été la cible de **cyber attaques**.
+
+*cf* [http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS#Attaque_de_2002](http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS#Attaque_de_2002).
+
+```activité-avancée
+::Panne générale::
+[markdown]
+Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
+![routeurs](media/exoInternet.svg)
+Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l’ordinateur B. 
+- Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?
+- Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? 
+- Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.
+{
+####  Si les routeurs C et D tombent en panne le réseau local de A est déconnecté et A ne peut plus communiquer avec B. 
+La même chose se produit si les routeurs H et I tombent en panne. 
+Si F et I tombent en panne, alors les communications passent encore par D, E, K et H.
+Les câbles entre C-F, C-I, D-E, de la même façon isolent le réseau de A.
+A-C-I-B ; A-C-F-I-B ; A-C-F-H-B ; A-C-F-E-K-H-B ; A-D-E-K-H-B ; A-D-E-F-H-B ; A-D-E-F-I-B
+}
+```
+
 # Que se passe-t-il quand on se connecte à Internet?
 
 ## Cours
