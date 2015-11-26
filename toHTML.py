@@ -19,7 +19,7 @@ def replaceLink(link):
     return link.replace("../media", "/media")
 
 def write_iframe_code(video_link):
-    return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="'+video_link+'"></iframe></p>'
+    return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
     
 
 def parse_content(href, module=False):
@@ -99,8 +99,9 @@ def generateModuleHtml(data, module_folder=False):
                             if href.endswith(".html") or len(videos) > 0:
                                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                                 section_type = data["sections"][idA]["subsections"][idB]["type"]
-                                with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
-                                    text(data["sections"][idA]["subsections"][idB]["title"])
+                                if section_type != 'correction':
+                                    with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
+                                        text(data["sections"][idA]["subsections"][idB]["title"])
 
     # Print main content
     doc.asis('<!--  MAIN CONTENT -->')
@@ -121,38 +122,39 @@ def generateModuleHtml(data, module_folder=False):
                 print (" ---- no content for section %s" % (section_id))
             # Loop through subsections
             for idB, subsection in enumerate(section["subsections"]):
-                subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                with tag('section', id=subsection_id, style="display:none"):
-                    try:
-                        href = module_folder+'/'+subsection["source_file"]
-                        subsec_text = parse_content(href, module_folder)
-                    except:
-                        href = ""
-                        subsec_text = ""
-                    # If there are videos, rendering differs, as we put subsection text in a fancybox reader along with video iframes  
-                    if len(subsection["videos"]) > 0:
-                        for idVid, video in  enumerate(subsection["videos"]):
-                            # go now line for each video after 1st video
-                            if idVid > 0:
-                                doc.asis('<br />')
-                            # add iframe code
-                            doc.asis(write_iframe_code(video['video_link']))
-                            doc.asis("\n\n")
-                            # add text only 1st time
-                            if idVid == 0:
-                                # add text in fancybox lightbox
-                                
-                                text_id = subsection_id+"_"+str(idVid)
-                                with tag('div', klass="inline fancybox", href="#"+text_id):
-                                    text('Version Texte du cours')
-                                    with tag('div', klass="mini-text"):
-                                        doc.asis(subsec_text)
-                                with tag('div', style="display:none"):
-                                    with tag('div', id=text_id, klass="fancy-text"):
-                                        doc.asis(subsec_text)
-                    else: # print subsection text asis                        
-                        if href.endswith(".html"):
-                            doc.asis(subsec_text)
+                if section_type != 'correction':
+                    subsection_id = "subsec_"+str(idA)+"_"+str(idB)
+                    with tag('section', id=subsection_id, style="display:none"):
+                        try:
+                            href = module_folder+'/'+subsection["source_file"]
+                            subsec_text = parse_content(href, module_folder)
+                        except:
+                            href = ""
+                            subsec_text = ""
+                        # If there are videos, rendering differs, as we put subsection text in a fancybox reader along with video iframes  
+                        if len(subsection["videos"]) > 0:
+                            for idVid, video in  enumerate(subsection["videos"]):
+                                # go now line for each video after 1st video
+                                if idVid > 0:
+                                    doc.asis('<br />')
+                                # add iframe code
+                                doc.asis(write_iframe_code(video['video_link']))
+                                doc.asis("\n\n")
+                                # add text only 1st time
+                                if idVid == 0:
+                                    # add text in fancybox lightbox
+                                    
+                                    text_id = subsection_id+"_"+str(idVid)
+                                    with tag('div', klass="inline fancybox", href="#"+text_id):
+                                        text('Version Texte du cours')
+                                        with tag('div', klass="mini-text"):
+                                            doc.asis(subsec_text)
+                                    with tag('div', style="display:none"):
+                                        with tag('div', id=text_id, klass="fancy-text"):
+                                            doc.asis(subsec_text)
+                        else: # print subsection text asis                        
+                            if href.endswith(".html"):
+                                doc.asis(subsec_text)
 
 
     #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))

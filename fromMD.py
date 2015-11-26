@@ -23,6 +23,8 @@ from slugify import slugify
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
 
+MARKDOWN_EXT = ['markdown.extensions.extra', 'markdown.extensions.nl2br', 'superscript']
+
 def create_empty_ims_test(id, title):
     """
         create empty imsc test source code
@@ -183,7 +185,7 @@ def process_md(md_src, current_dir):
                 else:
                     new_subsection_title = split
                     # regex for detecting subsec of type "correction"
-                    if '[correction]' in split:
+                    if re.search('\[*\s*Correction\s*\]*', split, flags=re.I):
                         next_type = 'correction'
             # add subsections to list
             new_section['subsections'] = subsections
@@ -203,7 +205,7 @@ def process_md(md_src, current_dir):
             subsection['source_file'] = subsection['type']+'/'+filename
             # if type = webcontent or correction, text pasted as is in webcontent folder
             if subsection['type'] in (('webcontent', 'correction')):
-                src = markdown.markdown(subsection['sub_src'], ['markdown.extensions.extra', 'markdown.extensions.nl2br'])
+                src = markdown.markdown(subsection['sub_src'], MARKDOWN_EXT)
                 # Detect video links
                 videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
                 for video_match in videos_findall:

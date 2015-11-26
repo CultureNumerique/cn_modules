@@ -16,19 +16,14 @@ from yattag import indent
 from yattag import Doc
 
 HEADER = """
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-</head>
-<body>
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0"></head><body>
 """
 
 FOOTER = """
-</body>
-</html>
+</body></html>
 """
+
+MARKDOWN_EXT = ['markdown.extensions.extra', 'markdown.extensions.nl2br', 'superscript']
 # GIFT syntax (from https://docs.moodle.org/28/en/GIFT_format):
 # * Questions separated by new line
 # * Question made of 3 parts:
@@ -83,12 +78,12 @@ class GiftQuestion():
             with tag('p', klass='questiontitle'):
                 text(self.title)
             with tag('p', klass='questiontext'):
-                if self.text_format == 'markdown':
-                    print ("printing Markdown/ source = %s " % (self.text))
-                    html_text = markdown.markdown(self.text, ['markdown.extensions.extra', 'markdown.extensions.nl2br'])
-                    doc.asis(html_text)
-                else:
+                if self.text_format == 'html':
                     doc.asis(self.text)
+                else:
+                    print ("printing Markdown/ source = %s " % (self.text))
+                    html_text = markdown.markdown(self.text, MARKDOWN_EXT)
+                    doc.asis(html_text)
             # If type MULTICHOICE, MULTIANSWER give choices
             if self.type in ['MULTICHOICE', 'MULTIANSWER']:
                 with tag('ul', klass=self.type.lower()):

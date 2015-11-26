@@ -314,8 +314,12 @@ h2.accueil, h3.accueil {
 	padding: 3px;
 }
 
-.question ul {
-	list-style-type: none;
+.multichoice >li {
+	list-style: none;
+}
+
+.multianswer >li {
+	list-style: none;
 }
 
 .question p.questiontitle {
