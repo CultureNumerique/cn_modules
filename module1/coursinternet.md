@@ -1124,51 +1124,157 @@ ralentissement quand il intervient. Mais parfois, le simple changement
 du mode de connexion utilisé peut faire des miracles. Soyez agiles !!!
 
 ```Activité
-// question: 165021 name: 1.6.1 Quizz (Q1/3) ::1.6.1 Quizz
-::(Q1/3)::[html]<p>Quels supports sont utilisés pour la transmission de
-données et qui peut donc servir pour une connexion internet ?</p>{
+::les supports de connexion::
+[html]<p>Quels supports sont utilisés pour la transmission de
+données et qui peut donc servir pour une connexion internet ?</p>
+{
 ~<p>L'eau dans un tuyau.</p>#<p>Pas à notre connaissance, mais
-pourquoi pas ?</p> ~%20%<p>L'électricité dans les câbles
-téléphonique.</p>#<p>Oui, l'ADSL</p> ~%20%<p>L'électricité dans les
-câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des
-prises électriques (Voir \:
+pourquoi pas ?</p> 
+~%20%<p>L'électricité dans les câbles téléphonique.</p>#<p>Oui, l'ADSL</p> 
+~%20%<p>L'électricité dans les câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des prises électriques (Voir \:
 http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)</p>
 ~%20%<p>La lumière dans les fibres optiques.</p>#<p>Oui, aussi.</p>
 ~%20%<p>Les ondes électromagnétiques dans l'air.</p>#<p>Oui, Wifi,
 bluetooth, réseau téléphonique 2G, 3G, 4G, etc.</p>
-~%20%<p>L'électricité dans les câbles des prises
-électriques.</p>#<p>Oui, voir \:
+~%20%<p>L'électricité dans les câbles des prises électriques.</p>#<p>Oui, voir \:
 http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
 ####<p>Tout, sauf l'eau, évidemment !</p> }
 
 
-// question: 165022 name: 1.6.1 Quizz (Q2/3) ::1.6.1 Quizz
-::(Q2/3)::[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion
-?</p>{ ~%25%<p>Le débit maximal admissible du lien qui me raccorde au
-réseau local.</p>#<p>Oui, c'est l'un des paramètres.</p> ~%25%<p>Le
-nombre d'utilisateurs de ce lien.</p>#<p>Exact, c'est l'un des
-paramètres.</p> ~%25%<p>Le nombre de messages qui passent par les
+::vitesse de connexion::
+[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion ?</p>
+{ 
+~%25%<p>Le débit maximal admissible du lien qui me raccorde au
+réseau local.</p>#<p>Oui, c'est l'un des paramètres.</p> 
+~%25%<p>Le nombre d'utilisateurs de ce lien.</p>#<p>Exact, c'est l'un des paramètres.</p> 
+~%25%<p>Le nombre de messages qui passent par les
 mêmes routeurs que les miens.</p>#<p>Oui, c'est un paramètre.</p>
 ~%25%<p>Le nombre de requêtes arrivant sur la machine avec qui je
-désire échanger des messages.</p>#<p>Oui.</p> ~<p>L'âge de
-l'utilisateur.</p>#<p>Sans commentaire !</p> ####<p>Le débit maximal
-admissible du lien, le nombre d'utilisateurs de ce lien, le nombre de
-requêtes mais aussi le nombre de messages qui passent par les mêmes
-routeurs que les miens.</p> }
+désire échanger des messages.</p>#<p>Oui.</p> 
+~<p>L'âge de l'utilisateur.</p>#<p>Sans commentaire !</p> 
+####<p>Le débit maximal admissible du lien, le nombre d'utilisateurs de ce lien, le nombre de requêtes mais aussi le nombre de messages qui passent par les mêmes routeurs que les miens.</p> }
 
 
-// question: 165023 name: 1.6.1 Quizz (Q3/3) ::1.6.1 Quizz
-::(Q3/3)::[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>{
+::eduroam::
+[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>
+{
 =<p>Avoir un compte Lille 3 ou un compte dans une autre
-université.</p>#<p>Exact !</p> ~<p>Payer un
-abonnement.</p>#<p>Absolument pas, c'est gratuit.</p> ~<p>Aller en
-cours.</p>#<p>Aucun rapport !</p> ~<p>Utiliser un smartphone produit
-en France.</p>#<p>Aucun rapport !</p> ~<p>Signer la charte graphique
-de Lille 3.</p>#<p>Non mais signer la charte
-<em><strong>informatique</strong> </em>Lille 3 est obligatoire...</p>
-####<p>Avoir un compte Lille 3 ou un compte dans une autre
+université.</p>#<p>Exact !</p> 
+~<p>Payer un abonnement.</p>#<p>Absolument pas, c'est gratuit.</p> ~<p>Aller en cours.</p>#<p>Aucun rapport !</p> 
+~<p>Utiliser un smartphone produit en France.</p>#<p>Aucun rapport !</p> ~<p>Signer la charte graphique de Lille 3.</p>#<p>Non mais signer la charte <em><strong>informatique</strong> </em>Lille 3 est obligatoire...</p>
+####<p>Avoir un compte Lille 3 valide ou un compte dans une autre
 université.</p> }
 ```
+```activité-avancée
+::Wifi ou Données mobiles ?::
+[markdown]
+Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à Internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l’un ou avec l’autre ?
+La réponse dépend de trois paramètres :
+    - la **disponibilité** de ces modes de connexions (s’il n’y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
+    - le **prix** de la connexion
+    - la **rapidité** de la connexion
+Imaginons plusieurs situations concrètes :
+1/  je suis chez moi avec un *smartphone*, le domicile est équipée d’une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
+        - avec le réseau de données mobiles (3G ou 4G)
+        - via le Wifi de la maison
+2/ Je suis à *l’université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
+        - avec le wifi de l’université (réseau eduroam)
+        - avec mon forfait 3G/4G
+3/ Je suis en *voiture* (ce n’est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
+        - en wifi
+        - avec le réseau de données mobiles de mon opérateur téléphonique
+**Classez** ces modes de connexion du plus lent au plus rapide.
+    `3G`
+    `4G`
+    `H+`
+    `E (Edge)` 
+Après avoir **réfléchi** et effectué les **recherches** nécessaires, répondez  aux questions posées.
+```
+## Wifi ou données mobiles ? - [Correction]
+### Wifi ou données mobiles : Comment choisir ?
+
+1/ Chez moi avec un **smartphone**, j'ai intérêt à me connecter avec le **wifi** de la **Box adsl**.
+En effet, la connexion Wifi a déjà été payée dans le cadre de l’abonnement ADSL, la connexion du smartphone ou de la tablette n’engendre donc pas de frais supplémentaires.
+Par contre la connexion au réseau 3G/4G est décomptée du forfait qui est souvent limité.
+
+2/ **L’université** a investi dans le réseau wifi `eduroam`pour proposer ce service aux usagers, il est donc *gratuit* et n’entraîne aucun frais de connexion.
+En revanche comme dans l’exemple précédent, les forfaits *données mobiles* des abonnements téléphoniques sont souvent limités et/ou chers.
+Le réseau Wifi de l'université s'appelle eduroam et tous les usagers peuvent s'y connecter.
+
+3/ En **voiture**, si ce n’est pas moi qui conduit, je peux me connecter à Internet en utilisant la connexion **3G/4G**.
+Elle permet de rester connecté sur de grandes distances. La couverture en agglomération et dans les zones de forte densité démographique est en général assez bonne pour l'ensemble des opérateurs,
+en revanche dans les zones plus reculées, il est parfois difficile de *trouver du réseau*. Et là tous les opérateurs n'ont pas la même couverture.
+
+La courte portée des antennes Wifi ne permet pas d'utiliser ce mode connexion lors de déplacements importants.
+
+### Le saviez-vous ? - Le relai Wifi
+
+On trouve dans certaines villes des bus  proposant un accès Wifi.
+Si ceux-ci sont équipés d'une antenne de réception 4G, ils peuvent ensuite "redistribuer" la connexion en Wifi, à l'intérieur du véhicule.
+
+Cela est également **possible** avec des **smartphones** récents. Sur le principe décrit ci-dessus, un smartphone peut se connecter à un réseau 3G/4G et ensuite se comporter comme une borne wifi à laquelle peuvent se connecter d'**autres périphériques**.
+Cela est très pratique pour se connecter avec un ordinateur là où seules des connections 3G/4G seraient disponibles ... mais attention à la facture ! 
+
+### Les normes et leurs sigles
+
+- Les modes de connexion du plus lent au plus rapide.
+
+    - E (Edge) aussi appelé 2G, lent. Ce mode de connexion permet à peine de lire ses mails. Il ne permet pas une navigation fluide sur le Web.
+    - 3G (3ème génération) permet de faire des recherches et de surfer sans trop attendre.
+    - H+, est une amélioration de la 3G. il est plus rapide que le wifi si les connexions sont optimales. Et l'accès à la musique en ligne où aux vidéos peut être envisagé.
+    - 4G, plus rapide que le wifi si les connexions sont optimales. À condition bien sûr que cette connexion soit de bonne qualité ("plusieurs petites briques"), l'accès à Internet est alors très fluide, et les jeux en ligne, les vidéos en streaming ou le téléchargement de gros fichiers devient possible.
+
+Notez bien que pour pouvoir bénéficier d'une connexion 4G, il faut :
+
+ - que cette connexion soit disponible là où vous vous trouvez,
+ - que votre smartphone soit équipé d'une antenne 4G, c'est loin d'être le cas sur tous les modèles y compris sur des appareils récents.
+
+``` activité-avancée
+::Les débits::
+[markdown]
+**Pouvoir évaluer les ordres de grandeur**
+Le **débit** est une des mesures caractérisant la **qualité** d’une connexion. Il mesure la quantité d’information que l’on peut transmettre à chaque seconde. Pour mesurer le débit d’une connexion, il faut d’abord savoir ce qu’est un bit. Un bit est l’élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c’est donc transmettre des bits.
+Généralement le débit est mesuré en bit par seconde `bit/s` ou ses variantes : (kilo-bit par seconde `kbit/s`, mille bits par seconde,  mega-bit par second `Mbit/s`, un million de bits par seconde, giga-bit par seconde `Gbit/s`, un milliard de bits par seconde)
+Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d’une vidéo lue en continu.
+Le nombre de bits que l'on peut stocker sur un DVD Blu-ray double couche est 50 gigaoctets (Go), soit 400 gigabits, car un octet est une séquence de 8 bits. Calculer le temps de transmission d'un DVD Blu-ray double couche complet dans les cas suivants:
+    - l'ADSL à 10Mb/s
+    - La fibre à 1Gb/s
+    - Le wifi à 50Mb/s
+    - La 3G à 384 Kb/s
+    - La 4G à 150Mb/s
+{
+####Un DVD Blu-ray double couche a une capacité de 50 gigaoctets (Go), soit 400 gigabits 400 gigabits (Gb), soit encore 400 000 megabits (Mb). Un octet étant une séquence de 8 bits, la capacité s'écrit également 400 000 000 kilobits (Kb).
+Pour obtenir le temps, il faut bien-sûr diviser cette quantité, dans la bonne unité par le débit considéré.
+On obtient:
+    - ADSL à 10Mb/s : 400 000/10 = 40 000 secondes soit un peu plus de 11 heures
+    - Fibre à 1 Gb/s : 400/1 = 400 secondes un peu plus de 6 minutes
+    - Wifi à 50 Mb/s : un peu plus de 2 heures
+    - 3G à 384 Kb/s : 400 000 000/384 soit 1041666 secondes un peu plus de 12 jours
+    - 4G à 150 Mb/s : 400 000 / 150 un peu plus de 44 minutes.
+Il est donc très rare qu'on échange des vidéos sous le format de ces Blu-ray sur internet et c'est en général des vidéos de moindre qualité qui sont disponibles pour le téléchargement ou la lecture en flux (streaming).
+}
+```
+## Le saviez-vous ? 
+### l'ADSL et ses débits
+#### Ça va plus vite dans un sens que dans l'autre
+
+Les lignes ADSL que nous utilisons souvent à domicile, ne sont pas “symétriques”, c’est d’ailleurs ce que signifie leur nom,
+
+*extrait de wikipedia* 
+
+[http://fr.wikipedia.org/wiki/Asymmetric_Digital_Subscriber_Line](http://fr.wikipedia.org/wiki/Asymmetric_Digital_Subscriber_Line)  :
+
+`Le sigle anglais ADSL signifie Asymmetric Digital Subscriber Line, qui se traduit fonctionnellement par « [liaison] numérique [à débit] asymétrique [sur] ligne d'abonné »1. La terminologie française officielle recommande l'expression « liaison numérique asymétrique »2, mais le sigle « ADSL » reste le plus largement utilisé dans le langage courant.`
+
+Comme son nom l'indique, la technologie ADSL fournit un débit asymétrique. Le flux de données est plus important dans un sens de transmission que dans l'autre. Le débit de données montant d'une communication ADSL (upload) est plus faible que le débit descendant (download), dans un rapport qui varie généralement entre 5 et 20.
+
+En France, le lancement commercial de l'ADSL a été effectué par France Telecom Interactive en 1999 “
+
+En pratique, nous utilisons surtout Internet à domicile pour “récupérer” des données plutôt que pour en envoyer.
+Le sens du “téléchargement” (download) est donc privilégié par rapport à “l’upload.” Le débit est plus important lorsqu'on "reçoit" des données que quand on en envoie.
+
+En conséquence, il ne faut pas être étonné si l’envoi d’un mail avec une grosse pièce jointe est très long tandis que la réception d’un mail identique sera beaucoup plus rapide. Cela peut aisément s'expérimenter en s’envoyant un mail avec une pièce jointe de quelques MO.
+
 # Société : qui décide sur Internet?
 
 ## Cours
@@ -1307,4 +1413,50 @@ domaine général A ?</p>{ ~<p>ABC</p> ~<p>ACB</p> =<p>CBA</p>
 ~<p>CAB</p> ~<p>BAC</p> ~<p>BCA</p> ####<p>C.B.A \: le nom de la
 machine, puis le nom du domaine de 1er niveau et enfin le nom du
 domaine général.</p> }
+```
+## Le saviez-vous ? 
+### Comment la Chine censure Internet ?
+
+Le terme **DNS** (*déjà vu dans ce module*) désigne le système (et les machines) qui assurent le service de nommage dans internet, c'est-à-dire l'association entre les *noms de domaine* et adresses *IP*. Les machines qui assurent la distribution de ces informations sont les fameux *serveurs de noms* que nous avons vu précédemment.
+
+Le contrôle du DNS est un enjeu politique fort. Wikipedia relate un exemple de tension qui a eu lieu en 2006 :
+
+*Le système DNS alternatif chinois lancé le 1er septembre 2006 utilise son propre DNS racine et ne passe plus par les serveurs de noms de domaines de l'ICANN. Par exemple, les domaines .com.cn et .net.cn apparaissent aux résidents chinois sous la forme .com et .net. ; cela créé alors dans la pratique deux réseaux Internet distincts : l'un est chinois, l'autre est mondial. Quant à un site chinois, il ne pourra être accessible du reste du monde que s'il en fait la demande auprès des autorités chinoises, qui publieront alors son nom dans les DNS officiels chinois qui eux sont reliés au DNS racine de l'ICANN.*
+
+À première vue, la mise en place d'un DNS chinois peut prêter à sourire, l'effet le plus directement visible est que certains sites de nom de domaine nom.net.cn sont visibles (sur le réseau internet chinois) avec comme nom nom.net ; l'impact est uniquement visuel et psychologique.
+
+En faisant appel à vos connaissances du fonctionnement d'internet, vous pouvez tout de même remarquer deux conséquences induites par cette action des autorités chinoises : 
+
+- il y a dorénavant deux internet. Ou, en d'autres termes, un même nom de domaine ne correspond plus au même service suivant le lieu où l'on se trouve : google.com pourrait correspondre dans une partie du monde à la firme américaine bien connue et en Chine à une autre organisation.
+- La deuxième conséquence est fortement liée à la première. Auparavant, c'est l'organisation *VeriSign* qui contrôlait tous noms de domaine en .com et en .net. À présent certains noms de domaines de cette forme ne demandent plus d'autorisation et ne paient plus de droits à *VeriSign*. C'est donc une perte de pouvoir et une perte de revenus pour VeriSign.
+
+Une petite remarque pour finir. Rappelez-vous que le DNS sert *uniquement* à traduire un nom en adresse IP. Si vous connaissez directement l'adresse IP d'une machine qui vous intéresse, bloquer le DNS ne vous empêchera pas d'y accéder. Pour vous interdire tout accès à cette machine, il faut filtrer vos messages sur un certain nombre de routeurs permettant d'y accéder. L'autorité de **contrôle des routeurs** est donc tout aussi importante que l'autorité de **contrôle des serveurs DNS**.
+
+``` activité
+::L’ICANN et la CNIL::
+[markdown]
+Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.
+En utilisant les ressources suivantes (et d’autres) :
+    - [http://fr.wikipedia.org/wiki/Domain_Name_System](http://fr.wikipedia.org/wiki/Domain_Name_System)
+    - [http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
+    - [http://www.cnil.fr/](http://www.cnil.fr/)
+    - [http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf](http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf)
+cherchez les réponses aux questions suivantes :
+**domaines de premier niveau**
+        - Qu'est un domaine de premier niveau ?
+        - Donnez quelques exemples.
+        - Qui les gère ?
+        - Qu'en pensez-vous ?
+**la CNIL**
+        - Quel est le rôle de la CNIL ?
+        - Avec combien d'employés remplit-elle ses missions ?
+        - Qu'en pensez-vous ?
+{
+####**Domaines de premier niveau**
+Les domaines de premier niveau sont les plus élevés dans la hiérarchie des noms de domaines. Ce sont notamment les domaines identifiants un pays ( `.fr, .de, .uk`...) ou les domaines `.org` pour les organisations et `.com` pour les sites à caractère commercial. Chacun de ces domaines est géré par une organisation propre, mais c'est un organisme unique, *l'ICANN*, qui délègue cette gestion aux autres organismes.
+**La CNIL**
+La CNIL (*Commission Nationale de l'Informatique et des Libertés*) est l'instance française chargée de veiller au respect des libertés et de la vie privée sur internet. À ce titre, elle régule notamment l'usage des données personnelles et traces que tout un chacun laisse lorsqu'il utilise internet.
+Au 20 juillet 2013, la CNIL était composée de 17 membres et 174 agents. 
+}
+
 ```
