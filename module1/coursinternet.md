@@ -318,15 +318,16 @@ Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **E
 Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.
 ```
 ## Personnages importants - Correction
-- Ada Lovelace
-![Ada Lovelace](media/AdaLovelace.jpeg){: .imggauche}
+### Ada Lovelace
+![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
+
 *Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
 
 Ce projet n'aboutira finalement pas dans un succès commercial mais aura contribué à produire les **bases de l'informatique**.
 Le rôle d'Ada Lovelace dans ce projet a été tel qu'elle a été depuis qualifiée de *première programmeuse*.
 	
-- Alan Turing
-![Alan Turing](media/432px-Alan_Turing_Aged_16.jpg)	
+### Alan Turing
+![Alan Turing](media/alanturing.jpg)	
 Dans les **années 1930**, les travaux du **mathématicien** *Alan Turing* sont déterminants pour définir d'abord ce qu'est une **machine programmable** universelle, et ensuite pour dessiner les frontières de ce qu'il est possible de calculer à l'aide d'une telle machine. Turing a également eu une action déterminante pendant la **seconde guerre mondiale**. Il conçoit des machines capables de **décrypter** les messages allemands codés par la machine **Enigma**. Ses découvertes permirent, selon plusieurs historiens, de raccourcir la capacité de résistance du régime nazi de deux ans.
 
 Si la vie de cet homme exceptionnel au destin tragique vous intéresse nous vous conseillons les deux liens suivants :
@@ -334,23 +335,26 @@ Si la vie de cet homme exceptionnel au destin tragique vous intéresse nous vous
 - [Alan Turing 1](http://future.arte.tv/fr/alan-turing)
 - [Alan Turing 2](http://videotheque.inria.fr/videotheque/doc/758)
 
-Vous y découvrirez entre autre une hypothèse sur l'origine du logo de la pomme croquée d'`Apple.` 
+Vous y découvrirez entre autre une hypothèse sur l'origine du logo de la pomme croquée d'`Apple`. 
 		
-- John Von Neumann 	
-![John Von Neumann](media/johnVonNeumann.jpeg)
-
-![architecture Von Neumann](media/420px-Von_Neumann_architecture_fr.png)
-"Von Neumann Architecture",
-schéma par Chris Martin, source sous licence CC-BY-SA 3.0
+### John Von Neumann 	
+![John Von Neumann](media/johnVonNeumann.jpg)
 
 Dans les **années 40**, **John Von Neumann** propose une **architecture** pour une machine programmable.
 
 Par architecture, il faut entendre comme dans l'habitat, une description précise de son organisation qui permet d'expliquer son fonctionnement et la construire effectivement. Notre ordinateur moderne apparaît. 
 
+![architecture Von Neumann](media/VonNeumannArchitecture_fr.png)
+
+"Von Neumann Architecture",
+schéma par Chris Martin, source sous licence CC-BY-SA 3.0
+
+
 Dans ce monde numérique qui évolue si vite, il est remarquable que **deux notions fondamentales**, à savoir ce qu'il est *possible de calculer* par machine programmable défini par Turing, et cette *architecture* de machine dite de Von Neumann soient toujours celles qui régissent le fonctionnement de nos **ordinateurs d'aujourd'hui**.
 
-- Grace Hopper
-![Grace Hopper](media/220px-Grace_Hopper_and_UNIVAC.jpg)
+### Grace Hopper
+![Grace Hopper](media/Grace_Hopper_and_UNIVAC.jpg)
+
 "Grace Murray Hopper au clavier de l'UNIVAC, vers 1960.",
 Smithsonian Institution, Source, photo sous licence CC-BY 2.0.	
 C’est à la **fin des années 50** que les premiers **langages** informatiques de programmation apparaissent. Ce sont des langages artificiels, c'est-à-dire inventés par l'homme, facilement lisibles et intelligibles. Un programme spécifique appelé *compilateur* ou *interprète* se charge de traduire un texte écrit dans ce langage de programmation en langage machine. Les conséquences sont importantes : la **programmation** devient accessible à un plus grand nombre d'individus, et l'écriture d'un programme n'est plus spécifique à une machine. C'est le début du **métier de programmeur**.
@@ -374,7 +378,8 @@ Essayez de **tracer un diagramme** ou une courbe pour **représenter** cette **�
 ## la vitesse des ordinateurs [Correction]
 
 **L'ENIAC**
-![ENIAC](media/)
+![ENIAC](media/ENIAC.gif)
+
 L’un des tout premiers ordinateurs, l’`ENIAC` a été réalisé en **1946**. Il avait une vitesse d’horloge de **100khz**, ce qui signifie qu’il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l’`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C’est toujours le cas pour tous les programmes informatiques.
 
 Ces caractéristiques techniques peuvent nous paraître ridicules mais elles correspondent à calculer en **3s** ce que des mathématiciens sont capables de faire *à la main* en **3 jours**.
@@ -394,17 +399,19 @@ En **2010**, une des premières tablettes, l’`IPAD` est proposé sur le march�
 ------------------
 
 En **2013**, le `Samsung Galaxy S4` est un *smartphone* qui tient dans la main et dans la poche et qui a une fréquence d’horloge supérieure à **2Ghz**. On pourrait ajouter que ces machines ont plusieurs processeurs qui travaillent ensemble ce qui démultiplie là encore leurs capacités, …
-![loi de Moore](media/)
+
+![loi de Moore](media/graph_puissance_small.jpg)
+
 Comme nous l’avons précisé dans la question, la vitesse des processeurs n’est pas le seul élément à prendre en compte, mais il donne une bonne idée de l’évolution de la puissance des machines.
 
 Représenter cette évolution sur une courbe est particulièrement difficile, car la courbe monte tellement fort qu’elle *sort* très rapidement de la feuille. Multiplier par 2 à chaque intervalle de temps régulier définit une courbe **exponentielle**, caractéristique de la *loi de Moore* qui prédit cette évolution. Peu de technologies ont des évolutions aussi spectaculaires.
 
 Notons, que cette loi *empirique* (constatée, mais pas démontrée) s'arrêtera forcément un jour, la vitesse ne pouvant être infinie. Beaucoup de gens ont d'ailleurs prédit qu'à telle ou telle date, la loi ne se vérifierait plus, ... or, pour l'instant ça tient toujours, ...
 
-``` activité-avancée
+```activité-avancée
 ::D'où vient le PC ?::
 [markdown]
-![Francois Gernelle](media/)
+![Francois Gernelle](media/FrancoisGernelle.jpg)
 **L'Ordinateur personnel**
 Historiquement, les premiers ordinateurs étaient de **très grosses machines**, occupant des salles entières et dédiées à des traitements de gestion, appelés *MainFrame*. La **miniaturisation** a entraîné l’apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C’est la naissance de la *deuxième ère* de l’informatique.
 C’est au début des années **70**,  qu’un français, **François Gernelle** (photo),  a breveté l'idée d’**ordinateur personnel**.
@@ -435,9 +442,51 @@ Pour l'anecdote, le texte que vous êtes en train de lire a été rédigé sur u
 
 En **1984** sort la troisième génération de PC : le `PC/AT`
 
-extrait de wikipedia : ![http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
+extrait de wikipedia : [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
 
 *La machine fut jugée suffisamment puissante — selon les critères de l'époque — pour être interdite à l'exportation vers les pays de l'Est, alors sous embargo technologique (COCOM). IBM en refusa aussi pendant deux ans la vente à prix réduit au personnel, arguant qu'un particulier ne pouvait pas avoir besoin d'une telle puissance ni d'une telle capacité disque (30 Mo), qui la destinaient plutôt aux petites et moyennes entreprises.*
+
+```activité-avancée
+::Les interfaces Homme - Machine::
+Une branche de la **science informatique** est l'étude des **interactions** entre l’homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d’ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
+Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui, ... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
+- Que doit-on à Douglas **Engelbart** ?
+- Qu'est-ce que le  “**Palo Alto Research Center** “ ? Qu’y fait-on ?
+- Qu’est-ce que l’ordinateur **Lisa** ?
+   - Qu’a-t-il apporté de nouveau ?
+   - Qui l’a fabriqué ?
+   - En quelle année est-il apparu ?
+Par ailleurs, les ordinateurs prennent des formes nouvelles et se combinent avec d'autres objets du quotidien, ...
+- Qu’appelle-t-on **l’informatique ubiquitaire** ou *informatique omniprésente* ?
+   - quel objet en est le meilleur représentant ?
+Après avoir effectué vos recherches, répondez aux questions.
+{}
+```
+## Évolution des interfaces homme-machine - [Correction]
+### Les interfaces ont démocratisé l'accès au numérique
+
+Une branche de la **science informatique** est l'étude des interactions entre l’homme et la machine.
+De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois à des progrès technologiques, des efforts d’ingénieurs et des succès commerciaux, mais aussi des avancées dans les idées.
+
+**Douglas Engelbart** par exemple,  était un grand spécialiste des interfaces homme-machine. Il a créé le premier **prototype de souris** (ci-contre) en **1968**. Il avait imaginé également les interfaces graphiques qui apparaîtront plus tard. En attendant, les écrans n'affichaient que du texte, ligne par ligne et les commandes étaient entrées avec un clavier. Les **cartes perforées** étaient également très utilisées pour ne pas avoir à re-saisir les programmes à chaque utilisation.
+	
+![Le premier prototype de souris](media/Douglas_Engelbart's_prototype_mouse.jpg)
+
+"Le premier prototype de souris, développé par Douglas Engelbart"
+Photo par Michael Hicks, source sous licence CC-BY 2.0.
+	[Pour en savoir plus sur Doug Engelbart.](http://www.silicon.fr/in-memoriam-doug-engelbart-pere-de-la-souris-87561.html) 
+
+C'est également au **P.A.R.C**. qu'est apparue la notion d'informatique **ubiquitaire** qui est considérée comme la **troisième ère de l'informatique**. La première étant celle des *gros systèmes* (MainFrame), la deuxième apparue dans les années 80, celle des *ordinateurs personnels* (PC et Mac). L'emblème de cette informatique ubiquitaire est le **smartphone**, un ordinateur très puissant qui ne nous quitte presque plus, et qui nous permet d'être connecté en permanence.
+On parle aussi, d'informatique *omniprésente* ou *d'intelligence ambiante.*
+
+Les **objets connectés**, de plus en plus présents, participent également à cette évolution. Cette omniprésence de l'accès à l'information a un fort impact sur la société, modifie les habitudes de travail et de vie privée.
+
+![Lisa](media/Apple_Lisa_2.jpg)
+
+Le Lisa, photo par Marcin Wichary,
+source sous licence CC-BY 2.0.
+
+En **1983**, Apple achète pour 40 000$, une licence pour le brevet de la souris, et sort le premier ordinateur personnel équipé d'une souris et d'une interface graphique : le **Lisa**. Il va révolutionner le marché des ordinateurs personnels qui débutait (2 ans après le premier PC). Parmi les concepteurs du Lisa, on retrouvera **Steve Jobs**, un autre visionnaire qui fera la carrière qu'on connaît chez `Apple`.
 
 # Naissance d'Internet
 
@@ -473,42 +522,118 @@ par n'importe quel chemin à l'intérieur d'internet.*
 
 
 ```activité
-// question: 165014 name: 1.3.1 (Q2/3) ::1.3.1 
-::(Q2/3)::[html]<p>Que
-signifie internet ?</p>{ ~<p>Il s'agit de la contraction des mots
-anglais \: "<em>international</em>" et "<em>network</em>" (réseau
-international).</p>#<p>Ça aurait pu, mais non !</p> =<p>Il s'agit de
-la contraction des mots "<em>interconnection</em>" et
+::signification d'Internet::
+[html]<p>Que signifie internet ?</p>{ 
+~<p>Il s'agit de la contraction des mots anglais \: "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p> 
+=<p>Il s'agit de la contraction des mots "<em>interconnection</em>" et
 "<em>networks</em>" (interconnexion de réseaux).</p>#<p>Exactement
-!</p> ~<p> Les lettres du mot I.N.T.E.R.N.E.T sont les initiales des
-noms de ses 8 fondateurs.</p>#<p>Pas du tout !</p> ####<p>Internet est
-la contraction des deux mots anglais "interconnection" et "networks",
-qui signifie "interconnexion de réseaux".</p> }
+!</p> 
+~<p> Les lettres du mot I.N.T.E.R.N.E.T sont les initiales des
+noms de ses 8 fondateurs.</p>#<p>Pas du tout !</p> 
+####<p>Internet est la contraction des deux mots anglais "interconnection" et "networks", qui signifie "interconnexion de réseaux".</p> }
 
 
-// question: 165013 name: 1.3.1 Quizz (Q1/3) ::1.3.1 Quizz
-::(Q1/3)::[html]<p>Quelle est la date de la création d'internet ? (date
-la plus proche)</p>{ ~<p>1789</p>#<p>Vraiment ?</p>
-~<p>1918</p>#<p>N'est-ce pas un peu tôt ?</p> ~<p>1945</p>#<p>N'est-ce
-pas un peu tôt ?</p> =<p>1970</p>#<p>Oui, c'est cela.</p>
-~<p>1990</p>#<p>Non, c'est trop récent...</p> ~<p>2005</p>#<p>Aussi
-tard ?</p> ####<p>C'est aux environs de <strong>1970</strong> qu'a été
+::Âge d'internet::
+[html]<p>Quelle est la date de la création d'internet ? (date
+la plus proche)</p>{ 
+~<p>1789</p>#<p>Vraiment ?</p>
+~<p>1918</p>#<p>N'est-ce pas un peu tôt ?</p> 
+~<p>1945</p>#<p>N'est-ce pas un peu tôt ?</p> 
+=<p>1970</p>#<p>Oui, c'est cela.</p>
+~<p>1990</p>#<p>Non, c'est trop récent...</p> 
+~<p>2005</p>#<p>Aussi tard ?</p> 
+####<p>C'est aux environs de <strong>1970</strong> qu'a été
 créé internet.</p> }
 
 
-// question: 165015 name: 1.3.1 Quizz (Q3/3) ::1.3.1 Quizz
-::(Q3/3)::[html]<p>Pourquoi internet est-il qualifié de réseau robuste
-ou tolérant aux pannes ?</p>{ ~<p>Parce qu'il est fabriqué avec des
+::Robustesse d'Internet::
+[html]<p>Pourquoi internet est-il qualifié de réseau robuste
+ou tolérant aux pannes ?</p>
+{ ~<p>Parce qu'il est fabriqué avec des
 matériaux très résistants.</p>#<p>Et non, ce n'est pas uniforme...</p>
 ~<p>Parce que beaucoup de salariés sont à sa disposition pour le
-réparer rapidement si nécessaire.</p>#<p>Vous êtes sûr ?</p> =<p>Parce
-que, de par sa conception, il peut fonctionner en mode “dégradé”,
-c'est à dire que même si des lignes ou des machines sont en panne,
-d'autres chemins peuvent être utilisés pour véhiculer les
-informations.</p>#<p>Tout à fait !</p> ####<p>Parce qu'il peut
-fonctionner en mode "dégradé"...</p> }
+réparer rapidement si nécessaire.</p>#<p>Vous êtes sûr ?</p> 
+=<p>Parce que, de par sa conception, il peut fonctionner en mode *dégradé*, c'est à dire que même si des lignes ou des machines sont en panne, d'autres chemins peuvent être utilisés pour véhiculer les
+informations.</p>#<p>Tout à fait !</p> 
+####<p>Parce qu'il peut fonctionner en mode "dégradé"...</p> }
 
 ```
+
+``` activité-avancée
+::Qui a inventé Internet ?::
+On a parfois une représentation erronée du rôle des différents pays dans la **création** d'Internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
+- Qui est **Vinton « Vint » Gray Cerf** ? Comment est-il parfois surnommé ?
+- Qui est **Louis Pouzin** ? Qu’était le projet **Cyclades** ?
+Après vous être documenté sur ces deux personnages importants, rédigez une courte réponse qui résume ce que vous avez appris.
+{}
+```
+## Qui a inventé Internet ? - Correction
+ 
+### Vinton Gray Cerf
+![Vinton Cerf](media/vintoncerf.jpg)
+
+Dr. Vint Cerf, photo de Veni Markovski,
+source sous licence CC-BY 3.0.
+	
+*Extrait de Wikipédia*
+
+`Vinton « Vint » Gray Cerf, né le 23 juin 1943 à New Haven, Connecticut, États-Unis, est un ingénieur américain, chercheur et co-inventeur avec Bob Kahn du protocole TCP/IP. Il est considéré comme l'un des pères fondateurs d'Internet.`
+
+Il est souvent appelé le "père d'Internet".
+	
+### Louis Pouzin
+![louis Pouzin](media/louispouzin.jpg)
+
+Louis POUZIN, Photo de Jérémie BERNARD,
+source sous licence CC-BY-SA 3.0.
+	
+*Extrait de Wikipedia*
+
+`Cyclades était un projet expérimental français ayant pour but de créer un réseau global de télécommunication utilisant la commutation de paquets. Créé en 1971, conçu par Louis Pouzin, il fut abandonné en 1978. Ses concepts ont influencé les travaux de développement de l'Internet en inspirant sa suite de protocoles.`
+
+Si vous voulez écouter son **avis** sur ce qu'est devenu Internet, voici une vidéo très intéressante :  
+[Louis Pouzin Youtube](https://youtu.be/p70Go9IS1h4)
+
+``` activité-avancée
+::Qui a accès à internet ?::
+En utilisant les ressources suivantes (et d’autres) :
+- [http://fr.wikipedia.org/wiki/Histoire_d'Internet](http://fr.wikipedia.org/wiki/Histoire_d'Internet)
+- [http://www.blogdumoderateur.com/chiffres-internet/](http://www.blogdumoderateur.com/chiffres-internet/)
+Chercher les réponses aux questions suivantes
+- **Combien** y avait-il dans le monde d’ordinateurs connectés :
+        en 1984, en 1987, en 1989, aujourd'hui :
+- en quelle année a-t-on passé la barre du **Million d’utilisateurs** ? 
+- Quelle **proportion** de la population mondiale **n’a pas accès** à Internet ?
+- À l’inverse, quelle proportion a accès à Internet en **France** ? 
+  - Est-ce supérieur ou inférieur à la moyenne **européenne** ?
+  - Est-ce supérieur ou inférieur à la proportion des **USA** ?
+- En **1 mn**, dans le monde :
+        Combien de recherche **Google** ?
+        Combien de **mails** sont envoyés ?
+        Combien de contenus partagés sur **Facebook** ?
+Après avoir effectué vos recherches, répondez à ces questions.
+{}
+```
+## Qui a accès à internet ?  [Correction]
+L'accès à Internet a considérablement évolué en quelques années. Néanmoins, de grandes **inégalités** persistent encore.
+
+Le nombre d'ordinateurs connectés permet de faire une approximation du nombre de personnes qui utilisent internet.
+
+Il y avait **1000 machines connectées en 1984**, 3 ans plus tard 10 fois plus, c'est à dire **10 000 en 1987**. Cela a encore été multiplié par 10 dans les 2 années qui suivirent, soit **100 000 machines en 1989**. Puis le **million** d'utilisateurs a été franchi en **1992**.
+
+22 ans plus tard, nous en sommes à presque **3 milliards d'utilisateurs** à travers le monde.
+
+Il n'existe certainement rien d'autre à travers l'histoire qui ait connu une telle **évolution** !
+
+Et pourtant, la population mondiale est supérieure à 7 Milliards, ce qui nous permet de nous rendre compte que **plus de la moitié de la population mondiale** n'a toujours **pas accès** à internet !
+
+En **France** en 2014, **83%** de la population est connectée, un taux supérieur à la moyenne européenne et supérieur aussi à celui des États-unis.
+
+Enfin, pour tenter de mesurer l'ampleur des informations échangées sur internet, regardons ce qui ce passe en moyenne chaque minute :
+
+- 4 millions de recherches Google
+- 200 millions de mails envoyés 
+- 2,46 millions de contenus partagés sur Facebook
 
 # Comment ça marche?
 
