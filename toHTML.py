@@ -14,9 +14,6 @@ from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
 
-def replaceLink(link):
-    """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
-    return link.replace("../media", "/media")
 
 def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
@@ -34,7 +31,7 @@ def parse_content(href, module=False):
 
     try:
         for element, attribute, link, pos in tree.iterlinks():
-            newlink = link.replace("../media", module+"/media")
+            newlink = link.replace("media", module+"/media")
             element.set(attribute, newlink)
     except Exception as e:
         print("Exception rewriting/removing links %s" % (e))
@@ -74,6 +71,13 @@ def generateModuleHtml(data, module_folder=False):
         with tag('ul'):
             # looping through sections
             for idA, section in enumerate(data["sections"]):
+                # 1st section active by default
+                if idA == 0:
+                    active_sec = " active"
+                    display = " display:block"
+                else:
+                    active_sec = ""
+                    display = ""
                 try:
                     source_file = data["sections"][idA]["source_file"]
                     if len(source_file) > 0:
@@ -83,11 +87,16 @@ def generateModuleHtml(data, module_folder=False):
                 except:
                     section_id = ""
                 with tag('li'):
-                    with tag('a', href="#", data_sec_id=section_id, klass="section"):
+                    with tag('a', href="#", data_sec_id=section_id, klass="section"+active_sec):
                         text(data["sections"][idA]["title"])
-                    with tag('p'):
+                    with tag('p', style=display):
                         # looping through subsections, skipping non html files
                         for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
+                            # 1st subsection active by default
+                            if idB == 0:
+                                active_sub = " active"
+                            else:
+                                active_sub = ""
                             try:
                                 href = data["sections"][idA]["subsections"][idB]["source_file"]
                             except:
@@ -100,7 +109,7 @@ def generateModuleHtml(data, module_folder=False):
                                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                                 section_type = data["sections"][idA]["subsections"][idB]["type"]
                                 if section_type != 'correction':
-                                    with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
+                                    with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type+active_sub):
                                         text(data["sections"][idA]["subsections"][idB]["title"])
 
     # Print main content
@@ -108,23 +117,24 @@ def generateModuleHtml(data, module_folder=False):
     with tag('main', klass="content"):
         # Loop through sections
         for idA, section in enumerate(data["sections"]):
+            
             section_id = "sec_"+(str(idA))
-            # load intro by default, rest is hidden
-            if idA == 0:
-                display = "true"
-            else:
-                display = "none"
             try:
                 href = module_folder+'/'+section["source_file"]
-                with tag('section', id=section_id, style=("display:"+display)):
+                with tag('section', id=section_id, style=("display:none")):
                     doc.asis(parse_content(href, module_folder))
             except:
                 print (" ---- no content for section %s" % (section_id))
             # Loop through subsections
             for idB, subsection in enumerate(section["subsections"]):
                 if section_type != 'correction':
+                    # load 1st subsec by default, rest is hidden
+                    if idA == 0 and idB == 0:
+                        display = "true"
+                    else:
+                        display = "none"
                     subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                    with tag('section', id=subsection_id, style="display:none"):
+                    with tag('section', id=subsection_id, style="display:"+display):
                         try:
                             href = module_folder+'/'+subsection["source_file"]
                             subsec_text = parse_content(href, module_folder)

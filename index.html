@@ -91,7 +91,7 @@
                 var nav_height = $('nav.menu').outerHeight();
                 $('main.content').attr('style', 'min-height:'+nav_height+'px;')
                 // folding/unfolding mechanism
-                $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+                //$('.accordion > li:eq(0) a').addClass('active').next().slideDown();
                 $('.accordion a.section').click(function(j) {
                     console.log("accordéon ====", $(this));
                     var dropDown = $(this).closest('li').find('p');
@@ -123,9 +123,9 @@
                             openEffect : 'none',
                             closeEffect : 'none',
                             tpl: {
-                                    next : '<a title="Next" class="fancybox-nav fancybox-next fancybox-wb-next" href="javascript:;"></a>',
-                                    prev : '<a title="Previous" class="fancybox-nav fancybox-prev fancybox-wb-prev" href="javascript:;"></a>',
-                                    closeBtn: '<a title="Close" class="fancybox-item fancybox-close fancybox-wb-close" href="javascript:;"></a>'
+                                next : '<a title="Next" class="fancybox-nav fancybox-next fancybox-wb-next" href="javascript:;"></a>',
+                                prev : '<a title="Previous" class="fancybox-nav fancybox-prev fancybox-wb-prev" href="javascript:;"></a>',
+                                closeBtn: '<a title="Close" class="fancybox-item fancybox-close fancybox-wb-close" href="javascript:;"></a>'
                             },
                             helpers : {
                                     overlay : {
@@ -150,13 +150,12 @@
                     navigation();
                     accordion();
                     load_fancybox();
+                    // triggers click on first subsection
+                    setTimeout(function(){
+                        //first = $(".accordion ul li a")[0]
+                        //first.click();
+                    }, 500)
                 });
-                // triggers click on first subsection
-                // triggers click of 1st subsection after loading
-                //$(".accordion ul li a")[0].click()
-                setTimeout(function(){
-                    $(".accordion ul li a")[0].click(), 1000;
-                }, 500)
             });
         });
     </script>
