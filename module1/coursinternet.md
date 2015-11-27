@@ -35,7 +35,7 @@ Nous vivons dans un monde où le numérique a pris beaucoup de place :
 internet, la radio, la télévision, la téléphonie, la photographie et
 bien d'autres choses que nous ne soupçonnons pas sont entièrement
 numériques et donc manipulables par des ordinateurs au sens large, par
-exemple, des tablettes, des smartphones, les box adsl … en fait toutes
+exemple, des tablettes, des smartphones, les box adsl... en fait toutes
 les machines qui fonctionnent avec des processeurs, (nous reviendrons
 sur ce terme).
 
@@ -58,30 +58,21 @@ cours...
 ``` activité
 ::Pourquoi représenter avec des nombres ?::
 [html]<p>Pourquoi faut-il représenter les textes, images, son,
-etc.  par des nombres dans un ordinateur ?</p>
+etc, par des nombres dans un ordinateur ?</p>
 {
- ~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
-~<p>Les ordinateurs ont été inventés par des
-mathématiciens.</p>#<p>Non, les mathématiciens savent manipuler
-autre-chose que des nombres, et les ordinateurs sont le fruit de
-l'interaction entre de nombreuses sciences.</p> 
-=<p>Tout ordinateur
-est fondamentalement une machine qui calcule avec des
+~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
+~<p>Les ordinateurs ont été inventés par des mathématiciens.</p>#<p>Non, les mathématiciens savent manipuler autre chose que des nombres, et les ordinateurs sont le fruit de l'interaction entre de nombreuses sciences.</p> 
+=<p>Tout ordinateur est fondamentalement une machine qui calcule avec des
 nombres.</p>#<p>Oui, comme un ordinateur ne manipule que des nombres,
-tout doit être représenté sous forme de nombres pour qu'un ordinateur
-puisse le manipuler.</p> 
-####<p>Un ordinateur ne manipule que des
-nombres, tout doit donc être représenté sous forme de nombres pour
-qu'il puisse le manipuler.</p> }
+tout doit être représenté sous forme de nombres être manipulé par un ordinateur.</p> 
+####<p>Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler.</p> }
 
 ::Numérisation::
-[html]<p>Que signifie "<em>numérisation</em>" ?</p>{
+[html]<p>Que signifie <em>numérisation</em> ?</p>{
 =<p>L'opération qui consiste à représenter sous forme de nombres une
-information quelle qu'elle soit.</p>#<p>Oui !</p> ~<p>L'opération qui
-consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer
-tous les nombres c'est compter...</p> ####<p>La numérisation est
-l'opération qui consiste à représenter sous forme de nombres une
-information, quelle qu'elle soit.</p> }
+information quelle qu'elle soit.</p>#<p>Oui !</p>
+~<p>L'opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer tous les nombres c'est compter...</p>
+####<p>La numérisation est l'opération qui consiste à représenter sous forme de nombres une information, quelle qu'elle soit.</p> }
 
 ::Où sont les processeurs ?::
 [html]<p>Parmi ces objets, quels sont ceux équipés de
@@ -103,7 +94,7 @@ généralement les étudiants des filières scientifiques.  Mais vous qui
 Choisissez au moins 3 des domaines suivants et faites des recherches
 pour voir en quoi ils sont impactés par le numérique.
 - dans les médias, dans la santé, en histoire, en sociologie, en
-- linguistique, en art et culture, dans l’enseignement, en
+- linguistique, en art et culture, dans l'enseignement, en
 - archéologie.
 Faites une synthèse en quelques lignes de vos recherches en précisant
 les domaines auxquels vous vous êtes intéressés. Indiquez les liens
@@ -113,7 +104,7 @@ domaines...
 ```
 ## Le numérique concerne tout le monde [correction]
 
-Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n’est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
+Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n'est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
 S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** ( *digital humanities* en anglais). 
 
 Voici quelques exemples que nous vous proposons :
@@ -126,13 +117,13 @@ Voici quelques exemples que nous vous proposons :
 * En **histoire, sociologie, linguistique** : *fouille de données*
    * [fouille de données](http://www.youtube.com/watch?feature=player_embedded&v=tp4y-_VoXdA)
 * En **art et culture** :
-	* [exple L3](http://)
-* Dans l’**enseignement** : (outils numérique d’accompagnement scolaire, MOOC,...)
-   * [FUN](https://www.france-universite-numerique-mooc.fr/cours/)  
+	* [Le Fresnoy](http://www.lefresnoy.net/fr/Le-Fresnoy/presentation)
+* Dans l'**enseignement** : (outils numérique d'accompagnement scolaire, MOOC,...)
+   * [FUN](https://www.france-universite-numerique-mooc.fr/cours/)
 * En fouille archéologique :  une réalisation prestigieuse réalisée à Lille3 : 
- * [vase qui parle](http://)
+ * [vase qui parle]http://bsa.biblio.univ-lille3.fr/blog/2013/09/exposition-le-vase-qui-parle-au-palais-des-beaux-arts-de-lille/)
 
-N’hésitez pas à proposer d’autres exemples dans le forum de discussion.
+N'hésitez pas à proposer d'autres exemples dans le forum de discussion.
 
 ```activité-avancée
 ::Le numérique au quotidien::
@@ -153,12 +144,12 @@ La **domotique** est un domaine en pleine expansion qui vise à équiper numéri
 - [nest](https://nest.com/fr/)
 - [domotique](http://fr.wikipedia.org/wiki/Domotique)
 
-Pour les **transports**, on peut s'intéresser aux voitures, les ordinateurs de bord sont depuis longtemps présents dans les autos, de plus en plus ils sont responsables de notre sécurité :
+Pour les **transports**, les ordinateurs de bord sont depuis longtemps présents dans les voitures, de plus en plus ils sont responsables de notre sécurité :
 
 - [electrostabilisateur]( http://fr.wikipedia.org/wiki/electrostabilisateur_programmé)
 - [ordinateur de bord](http://fr.wikipedia.org/wiki/Ordinateur_de_bord)
 
-Les **chaussures** : gadget ou réelle innovation ? Ce genre d’objet est de plus en plus présents dans nos vies :
+Les **chaussures** : gadget ou réelle innovation ? Ce genre d'objet est de plus en plus présents dans nos vies :
 
  - [chaussures](http://www.linternaute.com/science/technologie/deja-demain/07/chaussure-intelligente/chaussure-intelligente.shtml)
 
@@ -171,18 +162,18 @@ Les **lentilles pour la vue** ?
 [markdown]
 Le numérique, un enjeu pour les **citoyens du XXIème siècle** ...
 Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités** des applications développées. Nous vous invitons à vous **documenter** et à réfléchir aux questions suivantes :
- - Dans la **gestion de l‘énergie**: qu’est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
-- En **politique et média** : Qu’est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l’a rendu possible / facile ?
+ - Dans la **gestion de l‘énergie**: qu'est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
+- En **politique et média** : Qu'est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l'a rendue possible / facile ?
 - En **citoyenneté** : Que signifie **vote électronique** et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un *avantage* et un *inconvénient*.
 Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
 {####[markdown]
 Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
 - À propos de la troisième révolution industrielle :
-  - [3eme revolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
+  - [Troisième révolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
   - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
-- En **politique et média** : Qu’est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l’a rendu possible / facile ?
-  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)   
-- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.     
+- En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
+  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)
+- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
   - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
 }
 ```
@@ -196,7 +187,7 @@ Les premiers ordinateurs ont été conçus et réalisés vers la fin de la
 seconde guerre mondiale. Il était déjà possible de leur faire réaliser
 des calculs complexes inaccessibles à la main. Ils sont alors capables
 de manipuler des informations représentées sous une forme
-numérique. Grâce à la numérisation de textes, d'images, de sons etc,
+numérique. Grâce à la numérisation de textes, d'images, de sons, etc,
 les ordinateurs sont devenus des machines de traitement automatique de
 l'information. En français, le mot ordinateur s'est imposé en 1956.
 
@@ -250,7 +241,7 @@ puissant au même prix.
 ```Activité
 ::(Q1/2)::[html]<p>De quand datent les premiers ordinateurs ?</p>{
 ~<p>Au XVIIe siècle</p> ~<p>Juste avant la Révolution française</p>
-=<p>A la fin de la seconde guerre mondiale</p> ~<p>Dans les années
+=<p>À la fin de la seconde guerre mondiale</p> ~<p>Dans les années
 1980</p> ~<p>Avant la première guerre mondiale</p> ####<p>C'est à la
 fin de la seconde guerre mondiale que les premiers ordinateurs sont
 apparus.</p> }
@@ -283,35 +274,34 @@ mien !</p> }
 
 // question: 165001 name: 1.2.2 Quizz (Q2/2) ::1.2.2 Quizz
 ::(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
-courant d'être confronté à des programmes “bugués”, c'est à dire des
+courant d'être confronté à des programmes <em>bugués</em>, c'est à dire des
 programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais
-savez-vous d'où vient le terme “bug” ?</p>
-{ =<p>En anglais, “bug” signifie insecte. Un insecte s'était glissé dans le
+savez-vous d'où vient le terme <em>bug</em> ?</p>
+{ =<p>En anglais, bug signifie insecte. Un insecte s'était glissé dans le
 mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un
 relais et provoqué une panne.</p>#<p><span style\="color\:
 \#000000;">En effet, il s'agissait d'une mite.<br /></span></p>
-~<p>“Bug” était le surnom d'un des premiers programmeurs chez
+~<p>Bug était le surnom d'un des premiers programmeurs chez
 Microsoft, il était réputé pour commettre beaucoup
 d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
-~<p>“Bug” est la version en verlan de “GUB” (Grande Unité Binaire), un projet
+~<p>Bug est la version en verlan de GUB (Grande Unité Binaire), un projet
 d'ordinateur qui n'a jamais fonctionné.</p>#<p>Non, cherchez bien,
 c'est sur le web !</p> 
-~<p>“Bug” est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de
+~<p>Bug est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de
 Microsoft. Cette voiture serait tombée 13 fois en panne en un an…</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
-~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé “Bugs Bunny”. Ils
-avaient pris l'habitude d'appeler “Bugs” leurs erreurs de
+~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé Bugs Bunny. Ils
+avaient pris l'habitude d'appeler Bugs leurs erreurs de
 programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
-####<p><span style\="color\: \#000000;">Le premier bug a été causé par
-une mite \:</span></p>\n<p><span style\="color\: \#000000;"><img
+####<p>Le premier bug a été causé par
+une mite :<img
 src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg"
-alt\="premier bug" width\="300" height\="213" /></span></p>\n<p><span
-style\="color\: \#000000;"> </span></p> }
+alt\="premier bug" width\="300" height\="213" /></p>}
 ```
 
 ```activité-avancée
 ::Des personnages importants::[markdown]
 Tout ne s'est pas fait en un jour, ...
-Vous connaissez sans doute des personnages importants de l’activité économique liée à l’informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
+Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
 Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
 - [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)
 - [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)
@@ -349,28 +339,26 @@ Par architecture, il faut entendre comme dans l'habitat, une description précis
 
 ![architecture Von Neumann](media/VonNeumannArchitecture_fr.png)
 
-"Von Neumann Architecture",
-schéma par Chris Martin, source sous licence CC-BY-SA 3.0
+*Von Neumann Architecture*, schéma par Chris Martin, source sous licence CC-BY-SA 3.0
 
-
-Dans ce monde numérique qui évolue si vite, il est remarquable que **deux notions fondamentales**, à savoir ce qu'il est *possible de calculer* par machine programmable défini par Turing, et cette *architecture* de machine dite de Von Neumann soient toujours celles qui régissent le fonctionnement de nos **ordinateurs d'aujourd'hui**.
+Dans ce monde numérique qui évolue si vite, il est remarquable que **deux notions fondamentales**, à savoir ce qu'il est *possible de calculer* par machine programmable défini par Turing, et cette *architecture* de machine dite de Von Neumann soient toujours celles qui régissent le fonctionnement de nos ordinateurs d'aujourd'hui.
 
 ### Grace Hopper
 ![Grace Hopper](media/Grace_Hopper_and_UNIVAC.jpg)
 
-"Grace Murray Hopper au clavier de l'UNIVAC, vers 1960.",
-Smithsonian Institution, Source, photo sous licence CC-BY 2.0.	
-C’est à la **fin des années 50** que les premiers **langages** informatiques de programmation apparaissent. Ce sont des langages artificiels, c'est-à-dire inventés par l'homme, facilement lisibles et intelligibles. Un programme spécifique appelé *compilateur* ou *interprète* se charge de traduire un texte écrit dans ce langage de programmation en langage machine. Les conséquences sont importantes : la **programmation** devient accessible à un plus grand nombre d'individus, et l'écriture d'un programme n'est plus spécifique à une machine. C'est le début du **métier de programmeur**.
+*Grace Murray Hopper au clavier de l'UNIVAC, vers 1960.*, Smithsonian Institution, Source, photo sous licence CC-BY 2.0.	
 
-Grace Hopper a inventé le **premier compilateur**. Elle est aussi à l'origine du langage `Cobol` qui a été énormément utilisée dans l'informatique de gestion. On la voit ici (photo ci-contre) au clavier de l'`UNIVAC`, vers 1960.
+C'est à la **fin des années 50** que les premiers **langages** informatiques de programmation apparaissent. Ce sont des langages artificiels, c'est-à-dire inventés par l'homme, facilement lisibles et intelligibles. Un programme spécifique appelé *compilateur* ou *interprète* se charge de traduire un texte écrit dans ce langage de programmation en langage machine. Les conséquences sont importantes : la **programmation** devient accessible à un plus grand nombre d'individus, et l'écriture d'un programme n'est plus spécifique à une machine. C'est le début du **métier de programmeur**.
+
+Grace Hopper a inventé le **premier compilateur**. Elle est aussi à l'origine du langage `Cobol` qui a été énormément utilisé dans l'informatique de gestion. On la voit ici (photo ci-contre) au clavier de l'`UNIVAC`, vers 1960.
 
 ``` activité-avancée
 ::La vitesse des ordinateurs::
-Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d’opérations élémentaires qu’un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
+Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
 En vous aidant par exemple de :
 - [http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs)
 retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
-    - l’ENIAC 
+    - l'ENIAC 
     - Apple I
     - IBM PC
     - Ipad (premier modèle)
@@ -383,52 +371,54 @@ Essayez de **tracer un diagramme** ou une courbe pour **représenter** cette **�
 **L'ENIAC**
 ![ENIAC](media/ENIAC.gif)
 
-L’un des tout premiers ordinateurs, l’`ENIAC` a été réalisé en **1946**. Il avait une vitesse d’horloge de **100khz**, ce qui signifie qu’il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l’`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C’est toujours le cas pour tous les programmes informatiques.
+L'un des tout premiers ordinateurs, l'`ENIAC` a été réalisé en **1946**. Il avait une vitesse d'horloge de **100khz**, ce qui signifie qu'il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l'`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C'est toujours le cas pour tous les programmes informatiques.
 
 Ces caractéristiques techniques peuvent nous paraître ridicules mais elles correspondent à calculer en **3s** ce que des mathématiciens sont capables de faire *à la main* en **3 jours**.
 
 ------------------
 
-En **1976**, sort l’`Apple I` avec une fréquence d’horloge de **1 Mhz **(1 Million d’opérations élémentaires par seconde). En trente ans, la puissance a été **multipliée par 10 **alors que l’encombrement est passé de la taille d’une maison (30 tonnes, 170 m2) à celui d’une machine qui tient sur une table.
+En **1976**, sort l'`Apple I` avec une fréquence d'horloge de **1 Mhz** (1 Million d'opérations élémentaires par seconde). En trente ans, la puissance a été **multipliée par 10** alors que l'encombrement est passé de la taille d'une maison (30 tonnes, 170 m2) à celui d'une machine qui tient sur une table.
 
 ------------------
 
-L’`IBM-PC` quant à lui apparaît en **1981** et *tourne* à une vitesse de **4,77Mhz**. La vitesse a donc été multipliée par presque 5 en 5 ans.
+L'`IBM-PC` quant à lui apparaît en **1981** et *tourne* à une vitesse de **4,77Mhz**. La vitesse a donc été multipliée par presque 5 en 5 ans.
 
 ------------------
 
-En **2010**, une des premières tablettes, l’`IPAD` est proposé sur le marché avec un processeur travaillant à 1Ghz, soit **1 milliards d’opérations élémentaires par seconde**. Notons que ces opérations élémentaires sont de plus en plus complexes, ce qui accentue encore l’augmentation de la puissance des machines. 1Ghz correspond à 200 fois 5Mhz, l’IPAD est donc plus de **200 fois plus puissant** que les premiers PC.
+En **2010**, une des premières tablettes, l'`IPAD` est proposé sur le marché avec un processeur travaillant à 1Ghz, soit **1 milliards d'opérations élémentaires par seconde**. Notons que ces opérations élémentaires sont de plus en plus complexes, ce qui accentue encore l'augmentation de la puissance des machines. 1Ghz correspond à 200 fois 5Mhz, l'IPAD est donc plus de **200 fois plus puissant** que les premiers PC.
 
 ------------------
 
-En **2013**, le `Samsung Galaxy S4` est un *smartphone* qui tient dans la main et dans la poche et qui a une fréquence d’horloge supérieure à **2Ghz**. On pourrait ajouter que ces machines ont plusieurs processeurs qui travaillent ensemble ce qui démultiplie là encore leurs capacités, …
+En **2013**, le `Samsung Galaxy S4` est un *smartphone* qui tient dans la main et dans la poche et qui a une fréquence d'horloge supérieure à **2Ghz**. On pourrait ajouter que ces machines ont plusieurs processeurs qui travaillent ensemble ce qui démultiplie là encore leurs capacités,...
 
 ![loi de Moore](media/graph_puissance_small.jpg)
 
-Comme nous l’avons précisé dans la question, la vitesse des processeurs n’est pas le seul élément à prendre en compte, mais il donne une bonne idée de l’évolution de la puissance des machines.
+Comme nous l'avons précisé dans la question, la vitesse des processeurs n'est pas le seul élément à prendre en compte, mais il donne une bonne idée de l'évolution de la puissance des machines.
 
-Représenter cette évolution sur une courbe est particulièrement difficile, car la courbe monte tellement fort qu’elle *sort* très rapidement de la feuille. Multiplier par 2 à chaque intervalle de temps régulier définit une courbe **exponentielle**, caractéristique de la *loi de Moore* qui prédit cette évolution. Peu de technologies ont des évolutions aussi spectaculaires.
+Représenter cette évolution sur une courbe est particulièrement difficile, car la courbe croît tellement vite qu'elle *sort* très rapidement de la feuille. Multiplier par 2 à chaque intervalle de temps régulier définit une courbe **exponentielle**, caractéristique de la *loi de Moore* qui prédit cette évolution. Peu de technologies ont des évolutions aussi spectaculaires.
 
-Notons, que cette loi *empirique* (constatée, mais pas démontrée) s'arrêtera forcément un jour, la vitesse ne pouvant être infinie. Beaucoup de gens ont d'ailleurs prédit qu'à telle ou telle date, la loi ne se vérifierait plus, ... or, pour l'instant ça tient toujours, ...
+Notons, que cette loi *empirique* (constatée, mais pas démontrée) s'arrêtera forcément un jour, la vitesse ne pouvant être infinie. Beaucoup de gens ont d'ailleurs prédit qu'à telle ou telle date, la loi ne se vérifierait plus, ... or, pour l'instant elle tient toujours, ...
 
 ```activité-avancée
 ::D'où vient le PC ?::
 [markdown]
 ![Francois Gernelle](media/FrancoisGernelle.jpg)
 **L'Ordinateur personnel**
-Historiquement, les premiers ordinateurs étaient de **très grosses machines**, occupant des salles entières et dédiées à des traitements de gestion, appelés *MainFrame*. La **miniaturisation** a entraîné l’apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C’est la naissance de la *deuxième ère* de l’informatique.
-C’est au début des années **70**,  qu’un français, **François Gernelle** (photo),  a breveté l'idée d’**ordinateur personnel**.
-Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d’un **autre modèle** d’ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
+Historiquement, les premiers ordinateurs étaient de **très grosses machines**, appelés *MainFrame*, occupant des salles entières et dédiées à des traitements de gestion. La **miniaturisation** a entraîné l'apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C'est la naissance de la *deuxième ère* de l'informatique.
+C'est au début des années **70**,  qu'un français, **François Gernelle** (photo),  a breveté l'idée d'**ordinateur personnel**.
+Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d'un **autre modèle** d'ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
 À l'aide de ressources telles que :
 - [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
 faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes
     - En quelle **année** est-il apparu ?
     - Quelle **quantité** en a-t-on fabriqué ?
     - Quelle était la taille de son **Disque dur** ?
-    - Pourquoi le `PC` d’`IBM` est-il resté dans l’histoire ?
+    - Pourquoi le `PC` d'`IBM` est-il resté dans l'histoire ?
 {}
 ```
+
 ## D'où vient le PC ? [Correction]
+
 ### Le PC de 1981 à aujourd'hui
 
 L'`IBM-PC` a fait son apparition en **1981**. Plusieurs millions d'exemplaires ont été vendu à travers la monde. Le premier modèle ne possédait **pas de disque dur**, seulement des lecteurs de disquettes. Par la suite, d'autres modèles toujours plus puissants et sophistiqués ont vu le jour. À chaque fois les nouveaux modèles étaient compatibles avec les anciens, cela signifie que les programmes qui fonctionnaient sur les anciens modèles pouvaient être réutilisés avec les nouveaux.
@@ -437,11 +427,11 @@ L'`IBM-PC` a fait son apparition en **1981**. Plusieurs millions d'exemplaires o
 
 Grâce à son **architecture ouverte** (i.e. la "description des schémas de fonctionnement" a été diffusée), de nombreuses autres marques ont fabriqué des machines comparables en respectant des **normes** et en installant également les systèmes de `Microsoft`. On les a appelé des **compatibles PC**. Aujourd'hui, on a l'habitude de parler de `PC` et `IBM` n'a plus qu'une très petite part de ce marché. En revanche `Microsoft` reste hégémonique pour le système d'exploitation `Windows`. 
 
-Il faut néanmoins savoir que d'autres systèmes peuvent être installés sur les `PC`, en particulier `Linux`, qui est un système d'exploitation **rapide**, **fiable** et **puissant** qui est par certains aspects bien meilleur que `Windows`. Malheureusement, les accords commerciaux entre les constructeurs de machines et `Microsoft` rendent assez compliqués l'achat d'un `PC` équipé de `Linux`. En pratique, un PC équipé de `Linux` à la place de `Windows` est quasi introuvable dans le commerce grand public.
+Il faut néanmoins savoir que d'autres systèmes peuvent être installés sur les `PC`, en particulier `Linux`, qui est un système d'exploitation **rapide**, **fiable** et **puissant** qui est par certains aspects bien meilleur que `Windows`. Malheureusement, les accords commerciaux entre les constructeurs de machines et `Microsoft` rendent assez compliqués l'achat d'un `PC` équipé de `Linux`. En pratique, un PC équipé de `Linux` à la place de `Windows` est quasi introuvable dans le commerce grand public. 
 
 Pour l'anecdote, le texte que vous êtes en train de lire a été rédigé sur un PC sous `Linux`.
 
-### Qui l’eut cru ?
+### Qui l'eut cru ?
 
 En **1984** sort la troisième génération de PC : le `PC/AT`
 
@@ -451,31 +441,33 @@ extrait de wikipedia : [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia
 
 ```activité-avancée
 ::Les interfaces Homme - Machine::
-Une branche de la **science informatique** est l'étude des **interactions** entre l’homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d’ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
-Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui, ... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
+Une branche de la **science informatique** est l'étude des **interactions** entre l'homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d'ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
+Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui,... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
 - Que doit-on à Douglas **Engelbart** ?
-- Qu'est-ce que le  “**Palo Alto Research Center** “ ? Qu’y fait-on ?
-- Qu’est-ce que l’ordinateur **Lisa** ?
-   - Qu’a-t-il apporté de nouveau ?
-   - Qui l’a fabriqué ?
+- Qu'est-ce que le  **Palo Alto Research Center** ? Qu'y fait-on ?
+- Qu'est-ce que l'ordinateur **Lisa** ?
+   - Qu'a-t-il apporté de nouveau ?
+   - Qui l'a fabriqué ?
    - En quelle année est-il apparu ?
 Par ailleurs, les ordinateurs prennent des formes nouvelles et se combinent avec d'autres objets du quotidien, ...
-- Qu’appelle-t-on **l’informatique ubiquitaire** ou *informatique omniprésente* ?
+- Qu'appelle-t-on **l'informatique ubiquitaire** ou *informatique omniprésente* ?
    - quel objet en est le meilleur représentant ?
 Après avoir effectué vos recherches, répondez aux questions.
 {}
 ```
+
 ## Évolution des interfaces homme-machine - [Correction]
+
 ### Les interfaces ont démocratisé l'accès au numérique
 
-Une branche de la **science informatique** est l'étude des interactions entre l’homme et la machine.
-De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois à des progrès technologiques, des efforts d’ingénieurs et des succès commerciaux, mais aussi des avancées dans les idées.
+Une branche de la **science informatique** est l'étude des interactions entre l'homme et la machine.
+De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois à des progrès technologiques, des efforts d'ingénieurs et des succès commerciaux, mais aussi des avancées dans les idées.
 
 **Douglas Engelbart** par exemple,  était un grand spécialiste des interfaces homme-machine. Il a créé le premier **prototype de souris** (ci-contre) en **1968**. Il avait imaginé également les interfaces graphiques qui apparaîtront plus tard. En attendant, les écrans n'affichaient que du texte, ligne par ligne et les commandes étaient entrées avec un clavier. Les **cartes perforées** étaient également très utilisées pour ne pas avoir à re-saisir les programmes à chaque utilisation.
 	
 ![Le premier prototype de souris](media/Douglas_Engelbart's_prototype_mouse.jpg)
 
-"Le premier prototype de souris, développé par Douglas Engelbart"
+*Le premier prototype de souris, développé par Douglas Engelbart*. 
 Photo par Michael Hicks, source sous licence CC-BY 2.0.
 	[Pour en savoir plus sur Doug Engelbart.](http://www.silicon.fr/in-memoriam-doug-engelbart-pere-de-la-souris-87561.html) 
 
@@ -486,12 +478,11 @@ Les **objets connectés**, de plus en plus présents, participent également à 
 
 ![Lisa](media/Apple_Lisa_2.jpg)
 
-Le Lisa, photo par Marcin Wichary,
-source sous licence CC-BY 2.0.
+*Le Lisa*, photo par Marcin Wichary, source sous licence CC-BY 2.0.
 
 En **1983**, Apple achète pour 40 000$, une licence pour le brevet de la souris, et sort le premier ordinateur personnel équipé d'une souris et d'une interface graphique : le **Lisa**. Il va révolutionner le marché des ordinateurs personnels qui débutait (2 ans après le premier PC). Parmi les concepteurs du Lisa, on retrouvera **Steve Jobs**, un autre visionnaire qui fera la carrière qu'on connaît chez `Apple`.
 
-# Naissance d'Internet
+# Naissance d'internet
 
   [Naissance d'internet](https://player.vimeo.com/video/122104260){: .lien_video }
 
@@ -501,12 +492,12 @@ entre eux par des câbles qui leur permettaient de transporter
 l'information numérique : des réseaux informatiques (network en
 anglais souvent abrégé en net).
 
-En période de guerre froide, les US avaient peur de voir leurs centres
+En période de guerre froide, les États-Unis avaient peur de voir leurs centres
 bombardés ou une ligne qui reliait 2 centres coupée. Il fallait
 pouvoir communiquer entre des centres stratégiques et pouvoir
 bénéficier à distance des résultats des supercalculateurs même en cas
 d'attaque nucléaire. Ils ont demandé aux chercheurs de proposer un
-système qui serait tolérant aux pannes… ou aux bombes.
+système qui serait tolérant aux pannes... ou aux bombes.
 
 L'idée a été de multiplier les centres et d'interconnecter les réseaux
 de chaque centre. Pour protéger l'ensemble, la proposition a été de
@@ -525,7 +516,7 @@ par n'importe quel chemin à l'intérieur d'internet.*
 
 
 ```activité
-::signification d'Internet::
+::signification d'internet::
 [html]<p>Que signifie internet ?</p>{ 
 ~<p>Il s'agit de la contraction des mots anglais \: "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p> 
 =<p>Il s'agit de la contraction des mots "<em>interconnection</em>" et
@@ -549,7 +540,7 @@ la plus proche)</p>{
 créé internet.</p> }
 
 
-::Robustesse d'Internet::
+::Robustesse d'internet::
 [html]<p>Pourquoi internet est-il qualifié de réseau robuste
 ou tolérant aux pannes ?</p>
 { ~<p>Parce qu'il est fabriqué avec des
@@ -563,51 +554,50 @@ informations.</p>#<p>Tout à fait !</p>
 ```
 
 ``` activité-avancée
-::Qui a inventé Internet ?::
-On a parfois une représentation erronée du rôle des différents pays dans la **création** d'Internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
+::Qui a inventé internet ?::
+On a parfois une représentation erronée du rôle des différents pays dans la **création** d'internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
 - Qui est **Vinton « Vint » Gray Cerf** ? Comment est-il parfois surnommé ?
-- Qui est **Louis Pouzin** ? Qu’était le projet **Cyclades** ?
+- Qui est **Louis Pouzin** ? Qu'était le projet **Cyclades** ?
 Après vous être documenté sur ces deux personnages importants, rédigez une courte réponse qui résume ce que vous avez appris.
 {}
 ```
-## Qui a inventé Internet ? - Correction
+## Qui a inventé internet ? - Correction
  
 ### Vinton Gray Cerf
 ![Vinton Cerf](media/vintoncerf.jpg)
 
-Dr. Vint Cerf, photo de Veni Markovski,
+*Dr. Vint Cerf*, photo de Veni Markovski,
 source sous licence CC-BY 3.0.
 	
 *Extrait de Wikipédia*
 
-`Vinton « Vint » Gray Cerf, né le 23 juin 1943 à New Haven, Connecticut, États-Unis, est un ingénieur américain, chercheur et co-inventeur avec Bob Kahn du protocole TCP/IP. Il est considéré comme l'un des pères fondateurs d'Internet.`
+`Vinton « Vint » Gray Cerf, né le 23 juin 1943 à New Haven, Connecticut, États-Unis, est un ingénieur américain, chercheur et co-inventeur avec Bob Kahn du protocole TCP/IP. Il est considéré comme l'un des pères fondateurs d'internet.`
 
-Il est souvent appelé le "père d'Internet".
+Il est souvent appelé le *père d'internet*.
 	
 ### Louis Pouzin
 ![louis Pouzin](media/louispouzin.jpg)
 
-Louis POUZIN, Photo de Jérémie BERNARD,
-source sous licence CC-BY-SA 3.0.
+*Louis Pouzin*, Photo de Jérémie Bernard, source sous licence CC-BY-SA 3.0.
 	
 *Extrait de Wikipedia*
 
-`Cyclades était un projet expérimental français ayant pour but de créer un réseau global de télécommunication utilisant la commutation de paquets. Créé en 1971, conçu par Louis Pouzin, il fut abandonné en 1978. Ses concepts ont influencé les travaux de développement de l'Internet en inspirant sa suite de protocoles.`
+`Cyclades était un projet expérimental français ayant pour but de créer un réseau global de télécommunication utilisant la commutation de paquets. Créé en 1971, conçu par Louis Pouzin, il fut abandonné en 1978. Ses concepts ont influencé les travaux de développement d'internet en inspirant sa suite de protocoles.`
 
-Si vous voulez écouter son **avis** sur ce qu'est devenu Internet, voici une vidéo très intéressante :  
+Si vous voulez écouter son **avis** sur ce qu'est devenu internet, voici une vidéo très intéressante :
 [Louis Pouzin Youtube](https://youtu.be/p70Go9IS1h4)
 
 ``` activité-avancée
 ::Qui a accès à internet ?::
-En utilisant les ressources suivantes (et d’autres) :
+En utilisant les ressources suivantes (et d'autres) :
 - [http://fr.wikipedia.org/wiki/Histoire_d'Internet](http://fr.wikipedia.org/wiki/Histoire_d'Internet)
 - [http://www.blogdumoderateur.com/chiffres-internet/](http://www.blogdumoderateur.com/chiffres-internet/)
 Chercher les réponses aux questions suivantes
-- **Combien** y avait-il dans le monde d’ordinateurs connectés :
+- **Combien** y avait-il dans le monde d'ordinateurs connectés :
         en 1984, en 1987, en 1989, aujourd'hui :
-- en quelle année a-t-on passé la barre du **Million d’utilisateurs** ? 
-- Quelle **proportion** de la population mondiale **n’a pas accès** à Internet ?
-- À l’inverse, quelle proportion a accès à Internet en **France** ? 
+- en quelle année a-t-on passé la barre du **Million d'utilisateurs** ? 
+- Quelle **proportion** de la population mondiale **n'a pas accès** à internet ?
+- À l'inverse, quelle proportion a accès à internet en **France** ? 
   - Est-ce supérieur ou inférieur à la moyenne **européenne** ?
   - Est-ce supérieur ou inférieur à la proportion des **USA** ?
 - En **1 mn**, dans le monde :
@@ -618,19 +608,17 @@ Après avoir effectué vos recherches, répondez à ces questions.
 {}
 ```
 ## Qui a accès à internet ?  [Correction]
-L'accès à Internet a considérablement évolué en quelques années. Néanmoins, de grandes **inégalités** persistent encore.
+L'accès à internet a considérablement évolué en quelques années. Néanmoins, de grandes **inégalités** persistent encore.
 
 Le nombre d'ordinateurs connectés permet de faire une approximation du nombre de personnes qui utilisent internet.
 
 Il y avait **1000 machines connectées en 1984**, 3 ans plus tard 10 fois plus, c'est à dire **10 000 en 1987**. Cela a encore été multiplié par 10 dans les 2 années qui suivirent, soit **100 000 machines en 1989**. Puis le **million** d'utilisateurs a été franchi en **1992**.
 
-22 ans plus tard, nous en sommes à presque **3 milliards d'utilisateurs** à travers le monde.
+22 ans plus tard, nous en sommes à presque **3 milliards d'utilisateurs** à travers le monde. Il n'existe certainement rien d'autre à travers l'histoire qui ait connu une telle évolution !
 
-Il n'existe certainement rien d'autre à travers l'histoire qui ait connu une telle **évolution** !
+Et pourtant, la population mondiale est supérieure à 7 milliards, ce qui nous permet de nous rendre compte que **plus de la moitié de la population mondiale** n'a toujours **pas accès** à internet !
 
-Et pourtant, la population mondiale est supérieure à 7 Milliards, ce qui nous permet de nous rendre compte que **plus de la moitié de la population mondiale** n'a toujours **pas accès** à internet !
-
-En **France** en 2014, **83%** de la population est connectée, un taux supérieur à la moyenne européenne et supérieur aussi à celui des États-unis.
+En **France** en 2014, **83%** de la population est connectée, un taux supérieur à la moyenne européenne et supérieur aussi à celui des États-Unis.
 
 Enfin, pour tenter de mesurer l'ampleur des informations échangées sur internet, regardons ce qui ce passe en moyenne chaque minute :
 
@@ -657,7 +645,7 @@ Pour échanger des informations d'un ordinateur vers un autre, celui
 qui *envoie* l'information doit donc connaître l'adresse `IP` du
 destinataire, et pour obtenir une réponse, l'émetteur doit
 impérativement fournir dans chaque message envoyé sa propre adresse
-`IP`. Tous les messages échangés sur Internet sont donc de la forme :
+`IP`. Tous les messages échangés sur internet sont donc de la forme :
 `n°IP destinataire / information / n°IP émetteur`.
 
 Le deuxième ingrédient concerne le *Routage* des messages sur le
@@ -687,7 +675,7 @@ liste de contacts dans notre téléphone, stockent un ensemble de nom et
 d'adresses `IP`.
 
 Très concrètement, regardons par exemple ce qui se passe lorsque je
-veux consulter la page d'accueil de Lille 3.  tout d'abord, je clique
+veux consulter la page d'accueil de Lille 3.  Tout d'abord, je clique
 sur un lien vers le site de l'université. Ce lien contient le nom de
 la machine capable de me fournir la page d'accueil :
 `www.univ-lille3.fr`. Mon ordinateur va donc contacter un serveur de
@@ -701,7 +689,7 @@ ordinateur qu'à afficher ce contenu.
 
 ```Activité
 // question: 165016 name: 1.4.1 Quizz (Q1/3) ::1.4.1 Quizz
-::(Q1/3)::[html]<p>A quoi sert une adresse IP ?</p>{ =<p>À identifier
+::(Q1/3)::[html]<p>À quoi sert une adresse IP ?</p>{ =<p>À identifier
 les machines connectées de façon unique.</p>#<p>Oui !</p> ~<p>À
 différencier les gros ordinateurs et les plus petits.</p>#<p>Comment
 ça ?</p> ~<p>À envoyer des mails automatiquement.</p>#<p>Pas du
@@ -710,7 +698,7 @@ identifier de façon unique les machines connectées.</p> }
 
 
 // question: 165027 name: 1.4.1 Quizz (Q2/3)_NEW ::1.4.1 Quizz
-::(Q2/3)::[html]<p>A l'aide de quel équipement réalise-t-on
+::(Q2/3)::[html]<p>À l'aide de quel équipement réalise-t-on
 l'interconnexion de réseaux ?</p>{ ~<p>Une adresse IP</p>#<p>Vous
 devriez revoir la vidéo !</p> ~<p>Un serveur de noms</p>#<p>Non, il ne
 s'agit d'un serveur de noms.</p> =<p>Un routeur</p>#<p>Exact !</p>
@@ -733,7 +721,7 @@ entre des noms de machines et leur adresse IP.</p> }
 ::Combien y-a-t-il d'adresses IP ?::
 [markdown]
 **Plus assez d'adresses IP ?**
-Les fondateurs d'Internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses IP n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer, ...
+Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer...
 Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de `IPV4` et `IPV6`.
 Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :
 - Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
@@ -743,12 +731,12 @@ Faites quelques recherches sur ces normes pour répondre aux 2 questions suivant
 ## Combien y-a-t-il d'adresses IP ? [Correction]
 ### `IP V4` : nombre d'adresses *vs* nombre d'êtres humains
 
-La population mondiale est supérieure à 7 Milliards, or le système `IPV4` ne peut représenter que 4 milliards (4 294 967 296 = (2^^32^ )) d'adresses, ce qui est largement insuffisant.
-L'apparition entre autre des "objets connectés" et des appareils mobiles fait exploser la demande et on entrevoit que cette demande va considérablement augmenter dans un avenir proche.
+La population mondiale est supérieure à 7 milliards, or le système `IPV4` ne peut représenter que 4 milliards (4 294 967 296 = (2^^32^ )) d'adresses, ce qui est largement insuffisant.
+L'apparition entre autre des *objets connectés* et des appareils mobiles fait exploser la demande et on entrevoit que cette demande va considérablement augmenter dans un avenir proche.
 
 ### `IP V6`, on voit les choses en grand
 
-Heureusement, la nouvelle norme IPV6 est quand à elle beaucoup plus généreuse :
+Heureusement, la nouvelle norme `IPV6` est quand à elle beaucoup plus généreuse :
 
 *Extrait wikipedia* : [http://fr.wikipedia.org/wiki/IPv6](http://fr.wikipedia.org/wiki/IPv6)
 
@@ -761,8 +749,8 @@ Cette fois on peut espérer tenir avec ce système un bon moment.
 
 Nous n'avons pas encore vu comment on code les informations en binaire. Pour tous ceux d'entre vous qui n'ont pas de culture scientifique, cela peut paraître abstrait. On peut quand même remarquer que les résultats ci-dessus s'expliquent en calculant de la façon suivante :
 
-- IPV4 utilise des adresses codées sur 32 bits, le nombre de combinaisons est alors 2^32.
-- alors que IPV6 code les adresses sur 128 bits, ce qui fait 2128 adresses possibles.
+- `IPV4` utilise des adresses codées sur 32 bits, le nombre de combinaisons est alors 2^32.
+- `IPV6` code les adresses sur 128 bits, ce qui fait 2^128 adresses possibles.
 
 ```activité-avancée
 ::Les serveurs de noms::
@@ -772,11 +760,11 @@ La **norme** qui régit le fonctionnement des serveurs de noms propose une organ
 À partir de cette ressource : 
 [http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
 faites les recherches nécessaires pour répondre aux questions suivantes :
-- Si ces machines **s'arrêtaient**, la traduction des adresses IP en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l’impact de cet arrêt ?
+- Si ces machines **s'arrêtaient**, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l'impact de cet arrêt ?
 - **Combien** existe-t-il de serveurs racine de DNS ?
 - **Qui** possède ces machines : des états, des organisations, des sociétés privées ?
 - **Où** se trouvent-elles majoritairement ?
-- **Que** s’est-il passé en 2002 et 2007 ?
+- **Que** s'est-il passé en 2002 et 2007 ?
 {}
 ```
 
@@ -802,7 +790,7 @@ C'est ce qui s'est passé en **2002** et en **2007**, lorsque des serveurs racin
 [markdown]
 Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
 ![routeurs](media/exoInternet.svg)
-Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l’ordinateur B. 
+Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. 
 - Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?
 - Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? 
 - Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.
@@ -815,16 +803,16 @@ A-C-I-B ; A-C-F-I-B ; A-C-F-H-B ; A-C-F-E-K-H-B ; A-D-E-K-H-B ; A-D-E-F-H-B ; A-
 }
 ```
 
-# Que se passe-t-il quand on se connecte à Internet?
+# Que se passe-t-il quand on se connecte à internet?
 
 ## Cours
-  [Se connecter à Internet] ( https://player.vimeo.com/video/122104376 ){:.lien_video}
+  [Se connecter à internet] ( https://player.vimeo.com/video/122104376 ){:.lien_video}
 
-Examinons les conséquences de l'organisation d'Internet lorsqu'on veut
+Examinons les conséquences de l'organisation d'internet lorsqu'on veut
 s'y connecter ...
 
 ### Rejoindre un réseau local
-L'ordinateur, le smartphone ou la tablette qui doit accéder à Internet
+L'ordinateur, le smartphone ou la tablette qui doit accéder à internet
 doit d'abord rejoindre un réseau. Nous verrons un peu plus loin les
 différents moyens de se connecter à un réseau que ce soit par le wifi,
 un câble ou le réseau de téléphonie mobile.
@@ -832,7 +820,7 @@ un câble ou le réseau de téléphonie mobile.
 ### Obtenir les 3 informations nécessaires
 De plus, nous avons vu que pour communiquer avec d'autres machines,
 notre ordinateur a besoin de trois informations importantes : le
-numéro `IP`, l'adresse du routeur qui relie ce réseau à Internet, et
+numéro `IP`, l'adresse du routeur qui relie ce réseau à internet, et
 l'adresse du serveur de noms. Ces trois informations sont fournies à
 notre machine immédiatement après qu'elle ait rejoint le réseau. C'est
 une machine particulière dans le réseau local qui fournit ces
@@ -840,7 +828,7 @@ informations et donc une autorité locale qui décide de ces
 attributions. Par exemple chez vous, c'est votre box ADSL sous votre
 responsabilité qui s'en charge. La box elle-même, qui est un
 ordinateur presque comme les autres, reçoit ces 3 informations de
-votre fournisseur d'accès à Internet (FAI) quand elle démarre. Avec la
+votre fournisseur d'accès à internet (FAI) quand elle démarre. Avec la
 4G c'est une machine chez votre opérateur mobile qui est sollicitée…
 
 ### Pas de garantie de confidentialité
@@ -915,17 +903,17 @@ tout...</p>
 ``` activité-avancée
 ::Utiliser les serveurs de noms::
 [markdown]
-Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s’il est possible de les utiliser directement, ils sont assez techniques.
-Nous vous proposons d’utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
+Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s'il est possible de les utiliser directement, ils sont assez techniques.
+Nous vous proposons d'utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
 Selon ce site ;
   - quelle est votre adresse IP ?
   - où vous trouvez-vous ?
-D’après ce site, où se trouvent les machines suivantes :
+D'après ce site, où se trouvent les machines suivantes :
   - [www.wikipedia.org](www.wikipedia.org)
   - [www.facebook.com](www.facebook.com)
   - [www.google.com](www.google.com)
-Quelle est l’adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
-**Copiez** l’adresse IP que vous venez de  trouver dans la **barre d’adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d’adresse.
+Quelle est l'adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
+**Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d'adresse.
 - Que constatez vous ?
 Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...
 {}
@@ -965,7 +953,7 @@ et oui, ce site est une version traduite en français d'un site Allemand.
 ### www.grappa.univ-lille3.fr
 l'adresse **IP** de l'équipe de recherche Grappa est : `194.254.132.190`
 
-Si vous copiez cette adresse dans dans la barre d’adresse de votre navigateur, vous tombez exactement sur la **même page** que si vous allez sur [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr).
+Si vous copiez cette adresse dans dans la barre d'adresse de votre navigateur, vous tombez exactement sur la **même page** que si vous allez sur [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr).
 Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence.
 
 ```
@@ -973,12 +961,12 @@ Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence
 [markdown]
 Pour utiliser les *services numériques* de l'université, vous avez signé une **charte informatique** lors de votre inscription :
 Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du suivi des informations des utilisateurs.
-Si vous vous connectez avec la **4G** depuis l’université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
+Si vous vous connectez avec la **4G** depuis l'université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
 {#### 1/ Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du filtrage et du suivi ?
 *Les engagements de l'Université*
 `Réglementairement, l'Université recueille et conserve les informations sur les accès à ses services numériques. L'Université peut être obligée de fournir ces informations lors d'une enquête judiciaire.`
-2/ Si vous vous connectez avec la **4G** depuis l’université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
-OUI et OUI, les services numériques en particulier ceux accessibles depuis **l’ENT** sont soumis à cette charte **quel que soit le mode de connexion**. En revanche, si vous vous connectez en 4G à d’autres sites que ceux de l’université tout en étant physiquement dans les batiments de l’établissement, aucune information ne sera collectée par l’université.
+2/ Si vous vous connectez avec la **4G** depuis l'université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
+OUI et OUI, les services numériques en particulier ceux accessibles depuis **l'ENT** sont soumis à cette charte **quel que soit le mode de connexion**. En revanche, si vous vous connectez en 4G à d'autres sites que ceux de l'université tout en étant physiquement dans les batiments de l'établissement, aucune information ne sera collectée par l'université.
 }
 ```
 
@@ -1004,7 +992,7 @@ l'image d'un robinet d'eau, on voit bien qu'un robinet avec un gros
 tuyau me permettra de remplir mon seau beaucoup plus vite qu'avec un
 petit robinet qui ne laisse passer qu'un léger filet d'eau. Le débit
 dans ce cas est une quantité d'eau par seconde.  La problématique est
-la même pour le réseau Internet. Nous avons vu précédemment que les
+la même pour le réseau internet. Nous avons vu précédemment que les
 informations numériques étaient ramenées à des suites de bits (des 0
 et des1). Le débit sera donc pour les réseaux en nombre de bits par
 seconde. Comme cette information circule très vite on parlera en fait
@@ -1068,7 +1056,7 @@ mobiles.  Ces différentes technologies sont essentiellement utilisées
 pour nos connexions nomades, c'est-à-dire avec des appareils mobiles
 tels que des ordinateurs portables, des tablettes ou des
 smartphones. Fondamentalement, elles permettent toutes la même chose,
-c'est à dire un accès complet à Internet.
+c'est à dire un accès complet à internet.
 
  
 ### Les connexions nomades
@@ -1119,7 +1107,7 @@ ralentis en fonction de plusieurs facteurs :
 
 Ainsi, il est très fréquent de constater que la vitesse de
 transmission des données varie dans le temps ; varie selon les
-endroits ou les moyens avec lesquels on se connecte à Internet ou
+endroits ou les moyens avec lesquels on se connecte à internet ou
 encore varie selon les sites que l'on visite ou les services que l'on
 demande. Comme nous venons de le voir, la vitesse d'une connexion
 dépend de nombreux facteurs. Difficile donc de savoir d'où vient un
@@ -1171,19 +1159,19 @@ université.</p> }
 ```activité-avancée
 ::Wifi ou Données mobiles ?::
 [markdown]
-Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à Internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l’un ou avec l’autre ?
+Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l'un ou avec l'autre ?
 La réponse dépend de trois paramètres :
-    - la **disponibilité** de ces modes de connexions (s’il n’y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
+    - la **disponibilité** de ces modes de connexions (s'il n'y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
     - le **prix** de la connexion
     - la **rapidité** de la connexion
 Imaginons plusieurs situations concrètes :
-1/  je suis chez moi avec un *smartphone*, le domicile est équipée d’une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
+1/  je suis chez moi avec un *smartphone*, le domicile est équipée d'une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
         - avec le réseau de données mobiles (3G ou 4G)
         - via le Wifi de la maison
-2/ Je suis à *l’université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
-        - avec le wifi de l’université (réseau eduroam)
+2/ Je suis à *l'université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
+        - avec le wifi de l'université (réseau eduroam)
         - avec mon forfait 3G/4G
-3/ Je suis en *voiture* (ce n’est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
+3/ Je suis en *voiture* (ce n'est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
         - en wifi
         - avec le réseau de données mobiles de mon opérateur téléphonique
 **Classez** ces modes de connexion du plus lent au plus rapide.
@@ -1197,14 +1185,14 @@ Après avoir **réfléchi** et effectué les **recherches** nécessaires, répon
 ### Wifi ou données mobiles : Comment choisir ?
 
 1/ Chez moi avec un **smartphone**, j'ai intérêt à me connecter avec le **wifi** de la **Box adsl**.
-En effet, la connexion Wifi a déjà été payée dans le cadre de l’abonnement ADSL, la connexion du smartphone ou de la tablette n’engendre donc pas de frais supplémentaires.
+En effet, la connexion Wifi a déjà été payée dans le cadre de l'abonnement ADSL, la connexion du smartphone ou de la tablette n'engendre donc pas de frais supplémentaires.
 Par contre la connexion au réseau 3G/4G est décomptée du forfait qui est souvent limité.
 
-2/ **L’université** a investi dans le réseau wifi `eduroam`pour proposer ce service aux usagers, il est donc *gratuit* et n’entraîne aucun frais de connexion.
-En revanche comme dans l’exemple précédent, les forfaits *données mobiles* des abonnements téléphoniques sont souvent limités et/ou chers.
+2/ **L'université** a investi dans le réseau wifi `eduroam`pour proposer ce service aux usagers, il est donc *gratuit* et n'entraîne aucun frais de connexion.
+En revanche comme dans l'exemple précédent, les forfaits *données mobiles* des abonnements téléphoniques sont souvent limités et/ou chers.
 Le réseau Wifi de l'université s'appelle eduroam et tous les usagers peuvent s'y connecter.
 
-3/ En **voiture**, si ce n’est pas moi qui conduit, je peux me connecter à Internet en utilisant la connexion **3G/4G**.
+3/ En **voiture**, si ce n'est pas moi qui conduit, je peux me connecter à internet en utilisant la connexion **3G/4G**.
 Elle permet de rester connecté sur de grandes distances. La couverture en agglomération et dans les zones de forte densité démographique est en général assez bonne pour l'ensemble des opérateurs,
 en revanche dans les zones plus reculées, il est parfois difficile de *trouver du réseau*. Et là tous les opérateurs n'ont pas la même couverture.
 
@@ -1225,7 +1213,7 @@ Cela est très pratique pour se connecter avec un ordinateur là où seules des 
     - E (Edge) aussi appelé 2G, lent. Ce mode de connexion permet à peine de lire ses mails. Il ne permet pas une navigation fluide sur le Web.
     - 3G (3ème génération) permet de faire des recherches et de surfer sans trop attendre.
     - H+, est une amélioration de la 3G. il est plus rapide que le wifi si les connexions sont optimales. Et l'accès à la musique en ligne où aux vidéos peut être envisagé.
-    - 4G, plus rapide que le wifi si les connexions sont optimales. À condition bien sûr que cette connexion soit de bonne qualité ("plusieurs petites briques"), l'accès à Internet est alors très fluide, et les jeux en ligne, les vidéos en streaming ou le téléchargement de gros fichiers devient possible.
+    - 4G, plus rapide que le wifi si les connexions sont optimales. À condition bien sûr que cette connexion soit de bonne qualité ("plusieurs petites briques"), l'accès à internet est alors très fluide, et les jeux en ligne, les vidéos en streaming ou le téléchargement de gros fichiers devient possible.
 
 Notez bien que pour pouvoir bénéficier d'une connexion 4G, il faut :
 
@@ -1236,9 +1224,9 @@ Notez bien que pour pouvoir bénéficier d'une connexion 4G, il faut :
 ::Les débits::
 [markdown]
 **Pouvoir évaluer les ordres de grandeur**
-Le **débit** est une des mesures caractérisant la **qualité** d’une connexion. Il mesure la quantité d’information que l’on peut transmettre à chaque seconde. Pour mesurer le débit d’une connexion, il faut d’abord savoir ce qu’est un bit. Un bit est l’élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c’est donc transmettre des bits.
+Le **débit** est une des mesures caractérisant la **qualité** d'une connexion. Il mesure la quantité d'information que l'on peut transmettre à chaque seconde. Pour mesurer le débit d'une connexion, il faut d'abord savoir ce qu'est un bit. Un bit est l'élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c'est donc transmettre des bits.
 Généralement le débit est mesuré en bit par seconde `bit/s` ou ses variantes : (kilo-bit par seconde `kbit/s`, mille bits par seconde,  mega-bit par second `Mbit/s`, un million de bits par seconde, giga-bit par seconde `Gbit/s`, un milliard de bits par seconde)
-Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d’une vidéo lue en continu.
+Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d'une vidéo lue en continu.
 Le nombre de bits que l'on peut stocker sur un DVD Blu-ray double couche est 50 gigaoctets (Go), soit 400 gigabits, car un octet est une séquence de 8 bits. Calculer le temps de transmission d'un DVD Blu-ray double couche complet dans les cas suivants:
     - l'ADSL à 10Mb/s
     - La fibre à 1Gb/s
@@ -1261,7 +1249,7 @@ Il est donc très rare qu'on échange des vidéos sous le format de ces Blu-ray 
 ### l'ADSL et ses débits
 #### Ça va plus vite dans un sens que dans l'autre
 
-Les lignes ADSL que nous utilisons souvent à domicile, ne sont pas “symétriques”, c’est d’ailleurs ce que signifie leur nom,
+Les lignes ADSL que nous utilisons souvent à domicile, ne sont pas “symétriques”, c'est d'ailleurs ce que signifie leur nom,
 
 *extrait de wikipedia* 
 
@@ -1273,12 +1261,12 @@ Comme son nom l'indique, la technologie ADSL fournit un débit asymétrique. Le 
 
 En France, le lancement commercial de l'ADSL a été effectué par France Telecom Interactive en 1999 “
 
-En pratique, nous utilisons surtout Internet à domicile pour “récupérer” des données plutôt que pour en envoyer.
-Le sens du “téléchargement” (download) est donc privilégié par rapport à “l’upload.” Le débit est plus important lorsqu'on "reçoit" des données que quand on en envoie.
+En pratique, nous utilisons surtout internet à domicile pour “récupérer” des données plutôt que pour en envoyer.
+Le sens du “téléchargement” (download) est donc privilégié par rapport à “l'upload.” Le débit est plus important lorsqu'on "reçoit" des données que quand on en envoie.
 
-En conséquence, il ne faut pas être étonné si l’envoi d’un mail avec une grosse pièce jointe est très long tandis que la réception d’un mail identique sera beaucoup plus rapide. Cela peut aisément s'expérimenter en s’envoyant un mail avec une pièce jointe de quelques MO.
+En conséquence, il ne faut pas être étonné si l'envoi d'un mail avec une grosse pièce jointe est très long tandis que la réception d'un mail identique sera beaucoup plus rapide. Cela peut aisément s'expérimenter en s'envoyant un mail avec une pièce jointe de quelques MO.
 
-# Société : qui décide sur Internet?
+# Société : qui décide sur internet?
 
 ## Cours
 [Internet : Qui décide ?](https://player.vimeo.com/video/122104174){: .lien_video }
@@ -1299,7 +1287,7 @@ plupart des pays du monde, et de l'AFNOR en France, d'éditer et
 diffuser ces normes.
 
 De très nombreuses normes entrent en jeu dans le fonctionnement
-d'Internet et des réseaux informatiques. C'est le cas de du protocole
+d'internet et des réseaux informatiques. C'est le cas de du protocole
 de l'internet dans lequel on retrouve la définition des adresses `IP`
 dont nous avons parlé. C'est aussi le cas des protocoles et langages
 du Web dont nous parlerons bientôt. L'existence de ces normes est une
@@ -1418,13 +1406,13 @@ machine, puis le nom du domaine de 1er niveau et enfin le nom du
 domaine général.</p> }
 ```
 ## Le saviez-vous ? 
-### Comment la Chine censure Internet ?
+### Comment la Chine censure internet ?
 
 Le terme **DNS** (*déjà vu dans ce module*) désigne le système (et les machines) qui assurent le service de nommage dans internet, c'est-à-dire l'association entre les *noms de domaine* et adresses *IP*. Les machines qui assurent la distribution de ces informations sont les fameux *serveurs de noms* que nous avons vu précédemment.
 
 Le contrôle du DNS est un enjeu politique fort. Wikipedia relate un exemple de tension qui a eu lieu en 2006 :
 
-*Le système DNS alternatif chinois lancé le 1er septembre 2006 utilise son propre DNS racine et ne passe plus par les serveurs de noms de domaines de l'ICANN. Par exemple, les domaines .com.cn et .net.cn apparaissent aux résidents chinois sous la forme .com et .net. ; cela créé alors dans la pratique deux réseaux Internet distincts : l'un est chinois, l'autre est mondial. Quant à un site chinois, il ne pourra être accessible du reste du monde que s'il en fait la demande auprès des autorités chinoises, qui publieront alors son nom dans les DNS officiels chinois qui eux sont reliés au DNS racine de l'ICANN.*
+*Le système DNS alternatif chinois lancé le 1er septembre 2006 utilise son propre DNS racine et ne passe plus par les serveurs de noms de domaines de l'ICANN. Par exemple, les domaines .com.cn et .net.cn apparaissent aux résidents chinois sous la forme .com et .net. ; cela créé alors dans la pratique deux réseaux internet distincts : l'un est chinois, l'autre est mondial. Quant à un site chinois, il ne pourra être accessible du reste du monde que s'il en fait la demande auprès des autorités chinoises, qui publieront alors son nom dans les DNS officiels chinois qui eux sont reliés au DNS racine de l'ICANN.*
 
 À première vue, la mise en place d'un DNS chinois peut prêter à sourire, l'effet le plus directement visible est que certains sites de nom de domaine nom.net.cn sont visibles (sur le réseau internet chinois) avec comme nom nom.net ; l'impact est uniquement visuel et psychologique.
 
@@ -1436,10 +1424,10 @@ En faisant appel à vos connaissances du fonctionnement d'internet, vous pouvez 
 Une petite remarque pour finir. Rappelez-vous que le DNS sert *uniquement* à traduire un nom en adresse IP. Si vous connaissez directement l'adresse IP d'une machine qui vous intéresse, bloquer le DNS ne vous empêchera pas d'y accéder. Pour vous interdire tout accès à cette machine, il faut filtrer vos messages sur un certain nombre de routeurs permettant d'y accéder. L'autorité de **contrôle des routeurs** est donc tout aussi importante que l'autorité de **contrôle des serveurs DNS**.
 
 ``` activité
-::L’ICANN et la CNIL::
+::L'ICANN et la CNIL::
 [markdown]
 Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.
-En utilisant les ressources suivantes (et d’autres) :
+En utilisant les ressources suivantes (et d'autres) :
     - [http://fr.wikipedia.org/wiki/Domain_Name_System](http://fr.wikipedia.org/wiki/Domain_Name_System)
     - [http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
     - [http://www.cnil.fr/](http://www.cnil.fr/)
