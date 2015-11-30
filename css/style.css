@@ -126,6 +126,12 @@ blockquote {
 	text-align: justify;
 }
 
+.fil_ariane {
+    color: grey;
+    font-size: 85%;
+	padding-bottom: 1em;
+}
+
 /*  ------  HEADER --------*/
 
 header {

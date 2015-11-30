@@ -206,6 +206,10 @@ def process_md(md_src, current_dir):
             # if type = webcontent or correction, text pasted as is in webcontent folder
             if subsection['type'] in (('webcontent', 'correction')):
                 src = markdown.markdown(subsection['sub_src'], MARKDOWN_EXT)
+                # rewrite relative image links :
+                # in md and html, they are directs: media/un_media.jpg, 
+                #
+                                
                 # Detect video links
                 videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
                 for video_match in videos_findall:

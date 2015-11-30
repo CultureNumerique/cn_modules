@@ -19,7 +19,7 @@ def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
     
 
-def parse_content(href, module=False):
+def parse_content(href, module=False, rewrite_iframe_src=True):
     """ open file and replace ../img with img and src to data_src for iframes """
     if not module:
         module = ""
@@ -28,7 +28,7 @@ def parse_content(href, module=False):
         htmltext = file.read()
 
     tree = html.fromstring(htmltext)
-
+    # Rewrite image links
     try:
         for element, attribute, link, pos in tree.iterlinks():
             newlink = link.replace("media", module+"/media")
@@ -36,7 +36,7 @@ def parse_content(href, module=False):
     except Exception as e:
         print("Exception rewriting/removing links %s" % (e))
 
-    # removing "Retour au cours" links
+    # FIXME: this should be removed, since obsolete : removing "Retour au cours" links
     try:
         links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
         for l in links:
@@ -46,14 +46,15 @@ def parse_content(href, module=False):
         pass
 
     # rename iframe attribute to prevent loading all iframes at once
-    try:
-        iframes = tree.xpath('//iframe')
-        for iframe in iframes:
-            iframe.attrib['data-src'] = iframe.attrib['src']
-            etree.strip_attributes(iframe, 'src')
-    except Exception as e:
-        print("Exception with iframe src")
-        pass
+    if rewrite_iframe_src:
+        try:
+            iframes = tree.xpath('//iframe')
+            for iframe in iframes:
+                iframe.attrib['data-src'] = iframe.attrib['src']
+                etree.strip_attributes(iframe, 'src')
+        except Exception as e:
+            print("Exception with iframe src")
+            pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
@@ -135,6 +136,9 @@ def generateModuleHtml(data, module_folder=False):
                         display = "none"
                     subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                     with tag('section', id=subsection_id, style="display:"+display):
+                        # fil d'arianne
+                        with tag('p', klass='fil_ariane'):
+                            text(section['title']+' | '+subsection['title'])
                         try:
                             href = module_folder+'/'+subsection["source_file"]
                             subsec_text = parse_content(href, module_folder)
@@ -148,7 +152,10 @@ def generateModuleHtml(data, module_folder=False):
                                 if idVid > 0:
                                     doc.asis('<br />')
                                 # add iframe code
-                                doc.asis(write_iframe_code(video['video_link']))
+                                iframe_code = write_iframe_code(video['video_link'])
+                                if display: # for very first subsection, keep normal iframe src 
+                                    iframe_code = iframe_code.replace('data-src', 'src')
+                                doc.asis(iframe_code)
                                 doc.asis("\n\n")
                                 # add text only 1st time
                                 if idVid == 0:
