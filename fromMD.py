@@ -16,14 +16,17 @@ import sys
 import re
 import json
 import markdown
+import requests
 
 from fromGIFT import extract_questions, process_questions
 from slugify import slugify
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
-
 MARKDOWN_EXT = ['markdown.extensions.extra', 'markdown.extensions.nl2br', 'superscript']
+VIDEO_THUMB_API_URL = ''
+DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
+
 
 def create_empty_ims_test(id, title):
     """
@@ -75,7 +78,28 @@ def create_empty_ims_test(id, title):
     src+="</assessment></questestinterop>\n"
 
     return src
+    
 
+def fetch_video_thumb(video_link):
+    """
+        fetch video thumbnail
+        FIXME: vimeo-only code
+    """
+    # get video id
+    video_id = video_link.rsplit('/', 1)[1]
+    try: 
+        # fetch json
+        response = requests.request('GET', VIDEO_THUMB_API_URL+video_id+'.json')
+        json_response = response.json
+        data = json.load(json_response)
+        # copy image link
+        image_link = data['thumbnail_large']
+        image_link = image_link.replace('wepb', 'jpg')
+    except:
+        image_link = DEFAULT_VIDEO_THUMB_URL    
+    
+    return image_link
+    
 
 def write_file(src, current_dir, target_folder, name):
     """
@@ -206,23 +230,20 @@ def process_md(md_src, current_dir):
             # if type = webcontent or correction, text pasted as is in webcontent folder
             if subsection['type'] in (('webcontent', 'correction')):
                 src = markdown.markdown(subsection['sub_src'], MARKDOWN_EXT)
-                # rewrite relative image links :
-                # in md and html, they are directs: media/un_media.jpg, 
-                #
-                                
                 # Detect video links
                 videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
                 for video_match in videos_findall:
-                    try:
-                        # FIXME fetch image from vimeo
-                        pass
-                    except:
-                        pass
+                    video_link = video_match[1]
+                    image_link = fetch_video_thumb(video_link)
                     new_video = {
                         'video_title':video_match[0],
-                        'video_link':video_match[1]
+                        'video_link':video_match[1],
+                        'video_thumbnail':image_link
                     }
                     subsection['videos'].append(new_video)
+                    # append image in video link anchor
+                    # add (video) in title ?
+                    src = src.replace(video_match[0], video_match[0]+' (video)')
                         
             # else, process questions from GIFT source
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):

@@ -3,30 +3,21 @@ $CATEGORY: $course$/Quiz Bank '1.2 Quizz'
 
 ::Pourquoi représenter avec des nombres ?::
 [html]<p>Pourquoi faut-il représenter les textes, images, son,
-etc.  par des nombres dans un ordinateur ?</p>
+etc, par des nombres dans un ordinateur ?</p>
 {
- ~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
-~<p>Les ordinateurs ont été inventés par des
-mathématiciens.</p>#<p>Non, les mathématiciens savent manipuler
-autre-chose que des nombres, et les ordinateurs sont le fruit de
-l'interaction entre de nombreuses sciences.</p> 
-=<p>Tout ordinateur
-est fondamentalement une machine qui calcule avec des
+~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
+~<p>Les ordinateurs ont été inventés par des mathématiciens.</p>#<p>Non, les mathématiciens savent manipuler autre chose que des nombres, et les ordinateurs sont le fruit de l'interaction entre de nombreuses sciences.</p> 
+=<p>Tout ordinateur est fondamentalement une machine qui calcule avec des
 nombres.</p>#<p>Oui, comme un ordinateur ne manipule que des nombres,
-tout doit être représenté sous forme de nombres pour qu'un ordinateur
-puisse le manipuler.</p> 
-####<p>Un ordinateur ne manipule que des
-nombres, tout doit donc être représenté sous forme de nombres pour
-qu'il puisse le manipuler.</p> }
+tout doit être représenté sous forme de nombres être manipulé par un ordinateur.</p> 
+####<p>Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler.</p> }
 
 ::Numérisation::
-[html]<p>Que signifie "<em>numérisation</em>" ?</p>{
+[html]<p>Que signifie <em>numérisation</em> ?</p>{
 =<p>L'opération qui consiste à représenter sous forme de nombres une
-information quelle qu'elle soit.</p>#<p>Oui !</p> ~<p>L'opération qui
-consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer
-tous les nombres c'est compter...</p> ####<p>La numérisation est
-l'opération qui consiste à représenter sous forme de nombres une
-information, quelle qu'elle soit.</p> }
+information quelle qu'elle soit.</p>#<p>Oui !</p>
+~<p>L'opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer tous les nombres c'est compter...</p>
+####<p>La numérisation est l'opération qui consiste à représenter sous forme de nombres une information, quelle qu'elle soit.</p> }
 
 ::Où sont les processeurs ?::
 [html]<p>Parmi ces objets, quels sont ceux équipés de
@@ -50,7 +41,7 @@ généralement les étudiants des filières scientifiques.  Mais vous qui
 Choisissez au moins 3 des domaines suivants et faites des recherches
 pour voir en quoi ils sont impactés par le numérique.
 - dans les médias, dans la santé, en histoire, en sociologie, en
-- linguistique, en art et culture, dans l’enseignement, en
+- linguistique, en art et culture, dans l'enseignement, en
 - archéologie.
 Faites une synthèse en quelques lignes de vos recherches en précisant
 les domaines auxquels vous vous êtes intéressés. Indiquez les liens
@@ -79,18 +70,18 @@ $CATEGORY: $course$/Quiz Bank '1.7 Exercice d'approfondissement'
 [markdown]
 Le numérique, un enjeu pour les **citoyens du XXIème siècle** ...
 Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités** des applications développées. Nous vous invitons à vous **documenter** et à réfléchir aux questions suivantes :
- - Dans la **gestion de l‘énergie**: qu’est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
-- En **politique et média** : Qu’est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l’a rendu possible / facile ?
+ - Dans la **gestion de l‘énergie**: qu'est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
+- En **politique et média** : Qu'est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l'a rendue possible / facile ?
 - En **citoyenneté** : Que signifie **vote électronique** et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un *avantage* et un *inconvénient*.
 Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
 {####[markdown]
 Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
 - À propos de la troisième révolution industrielle :
-  - [3eme revolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
+  - [Troisième révolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
   - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
-- En **politique et média** : Qu’est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l’a rendu possible / facile ?
-  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)   
-- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.     
+- En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
+  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)
+- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
   - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
 }
 
@@ -100,7 +91,7 @@ $CATEGORY: $course$/Quiz Bank '2.2 Quizz'
 
 ::(Q1/2)::[html]<p>De quand datent les premiers ordinateurs ?</p>{
 ~<p>Au XVIIe siècle</p> ~<p>Juste avant la Révolution française</p>
-=<p>A la fin de la seconde guerre mondiale</p> ~<p>Dans les années
+=<p>À la fin de la seconde guerre mondiale</p> ~<p>Dans les années
 1980</p> ~<p>Avant la première guerre mondiale</p> ####<p>C'est à la
 fin de la seconde guerre mondiale que les premiers ordinateurs sont
 apparus.</p> }
@@ -135,29 +126,28 @@ mien !</p> }
 
 // question: 165001 name: 1.2.2 Quizz (Q2/2) ::1.2.2 Quizz
 ::(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
-courant d'être confronté à des programmes “bugués”, c'est à dire des
+courant d'être confronté à des programmes <em>bugués</em>, c'est à dire des
 programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais
-savez-vous d'où vient le terme “bug” ?</p>
-{ =<p>En anglais, “bug” signifie insecte. Un insecte s'était glissé dans le
+savez-vous d'où vient le terme <em>bug</em> ?</p>
+{ =<p>En anglais, bug signifie insecte. Un insecte s'était glissé dans le
 mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un
 relais et provoqué une panne.</p>#<p><span style\="color\:
 \#000000;">En effet, il s'agissait d'une mite.<br /></span></p>
-~<p>“Bug” était le surnom d'un des premiers programmeurs chez
+~<p>Bug était le surnom d'un des premiers programmeurs chez
 Microsoft, il était réputé pour commettre beaucoup
 d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
-~<p>“Bug” est la version en verlan de “GUB” (Grande Unité Binaire), un projet
+~<p>Bug est la version en verlan de GUB (Grande Unité Binaire), un projet
 d'ordinateur qui n'a jamais fonctionné.</p>#<p>Non, cherchez bien,
 c'est sur le web !</p> 
-~<p>“Bug” est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de
+~<p>Bug est le diminutif de Bugatti, la marque de la première voiture de luxe de Bill Gates, le fondateur de
 Microsoft. Cette voiture serait tombée 13 fois en panne en un an…</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
-~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé “Bugs Bunny”. Ils
-avaient pris l'habitude d'appeler “Bugs” leurs erreurs de
+~<p>L'équipe des fondateurs d'Apple étaient des fans du dessin animé Bugs Bunny. Ils
+avaient pris l'habitude d'appeler Bugs leurs erreurs de
 programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
-####<p><span style\="color\: \#000000;">Le premier bug a été causé par
-une mite \:</span></p>\n<p><span style\="color\: \#000000;"><img
+####<p>Le premier bug a été causé par
+une mite :<img
 src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg"
-alt\="premier bug" width\="300" height\="213" /></span></p>\n<p><span
-style\="color\: \#000000;"> </span></p> }
+alt\="premier bug" width\="300" height\="213" /></p>}
 
 
 $CATEGORY: $course$/Quiz Bank '2.4 Exercice d'approfondissement'
@@ -165,7 +155,7 @@ $CATEGORY: $course$/Quiz Bank '2.4 Exercice d'approfondissement'
 
 ::Des personnages importants::[markdown]
 Tout ne s'est pas fait en un jour, ...
-Vous connaissez sans doute des personnages importants de l’activité économique liée à l’informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
+Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
 Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
 - [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)
 - [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)
@@ -179,11 +169,11 @@ $CATEGORY: $course$/Quiz Bank '2.6 Exercice d'approfondissement'
 
 
 ::La vitesse des ordinateurs::
-Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d’opérations élémentaires qu’un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
+Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
 En vous aidant par exemple de :
 - [http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs)
 retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
-    - l’ENIAC 
+    - l'ENIAC 
     - Apple I
     - IBM PC
     - Ipad (premier modèle)
@@ -199,16 +189,16 @@ $CATEGORY: $course$/Quiz Bank '2.8 Exercice d'approfondissement'
 [markdown]
 ![Francois Gernelle](media/FrancoisGernelle.jpg)
 **L'Ordinateur personnel**
-Historiquement, les premiers ordinateurs étaient de **très grosses machines**, occupant des salles entières et dédiées à des traitements de gestion, appelés *MainFrame*. La **miniaturisation** a entraîné l’apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C’est la naissance de la *deuxième ère* de l’informatique.
-C’est au début des années **70**,  qu’un français, **François Gernelle** (photo),  a breveté l'idée d’**ordinateur personnel**.
-Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d’un **autre modèle** d’ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
+Historiquement, les premiers ordinateurs étaient de **très grosses machines**, appelés *MainFrame*, occupant des salles entières et dédiées à des traitements de gestion. La **miniaturisation** a entraîné l'apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C'est la naissance de la *deuxième ère* de l'informatique.
+C'est au début des années **70**,  qu'un français, **François Gernelle** (photo),  a breveté l'idée d'**ordinateur personnel**.
+Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d'un **autre modèle** d'ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
 À l'aide de ressources telles que :
 - [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
 faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes
     - En quelle **année** est-il apparu ?
     - Quelle **quantité** en a-t-on fabriqué ?
     - Quelle était la taille de son **Disque dur** ?
-    - Pourquoi le `PC` d’`IBM` est-il resté dans l’histoire ?
+    - Pourquoi le `PC` d'`IBM` est-il resté dans l'histoire ?
 {}
 
 
@@ -216,16 +206,16 @@ $CATEGORY: $course$/Quiz Bank '2.10 Exercice d'approfondissement'
 
 
 ::Les interfaces Homme - Machine::
-Une branche de la **science informatique** est l'étude des **interactions** entre l’homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d’ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
-Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui, ... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
+Une branche de la **science informatique** est l'étude des **interactions** entre l'homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d'ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
+Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui,... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
 - Que doit-on à Douglas **Engelbart** ?
-- Qu'est-ce que le  “**Palo Alto Research Center** “ ? Qu’y fait-on ?
-- Qu’est-ce que l’ordinateur **Lisa** ?
-   - Qu’a-t-il apporté de nouveau ?
-   - Qui l’a fabriqué ?
+- Qu'est-ce que le  **Palo Alto Research Center** ? Qu'y fait-on ?
+- Qu'est-ce que l'ordinateur **Lisa** ?
+   - Qu'a-t-il apporté de nouveau ?
+   - Qui l'a fabriqué ?
    - En quelle année est-il apparu ?
 Par ailleurs, les ordinateurs prennent des formes nouvelles et se combinent avec d'autres objets du quotidien, ...
-- Qu’appelle-t-on **l’informatique ubiquitaire** ou *informatique omniprésente* ?
+- Qu'appelle-t-on **l'informatique ubiquitaire** ou *informatique omniprésente* ?
    - quel objet en est le meilleur représentant ?
 Après avoir effectué vos recherches, répondez aux questions.
 {}
@@ -234,7 +224,7 @@ Après avoir effectué vos recherches, répondez aux questions.
 $CATEGORY: $course$/Quiz Bank '3.2 Quizz'
 
 
-::signification d'Internet::
+::signification d'internet::
 [html]<p>Que signifie internet ?</p>{ 
 ~<p>Il s'agit de la contraction des mots anglais \: "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p> 
 =<p>Il s'agit de la contraction des mots "<em>interconnection</em>" et
@@ -258,7 +248,7 @@ la plus proche)</p>{
 créé internet.</p> }
 
 
-::Robustesse d'Internet::
+::Robustesse d'internet::
 [html]<p>Pourquoi internet est-il qualifié de réseau robuste
 ou tolérant aux pannes ?</p>
 { ~<p>Parce qu'il est fabriqué avec des
@@ -274,10 +264,10 @@ informations.</p>#<p>Tout à fait !</p>
 $CATEGORY: $course$/Quiz Bank '3.3 Exercice d'approfondissement'
 
 
-::Qui a inventé Internet ?::
-On a parfois une représentation erronée du rôle des différents pays dans la **création** d'Internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
+::Qui a inventé internet ?::
+On a parfois une représentation erronée du rôle des différents pays dans la **création** d'internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
 - Qui est **Vinton « Vint » Gray Cerf** ? Comment est-il parfois surnommé ?
-- Qui est **Louis Pouzin** ? Qu’était le projet **Cyclades** ?
+- Qui est **Louis Pouzin** ? Qu'était le projet **Cyclades** ?
 Après vous être documenté sur ces deux personnages importants, rédigez une courte réponse qui résume ce que vous avez appris.
 {}
 
@@ -286,15 +276,15 @@ $CATEGORY: $course$/Quiz Bank '3.5 Exercice d'approfondissement'
 
 
 ::Qui a accès à internet ?::
-En utilisant les ressources suivantes (et d’autres) :
+En utilisant les ressources suivantes (et d'autres) :
 - [http://fr.wikipedia.org/wiki/Histoire_d'Internet](http://fr.wikipedia.org/wiki/Histoire_d'Internet)
 - [http://www.blogdumoderateur.com/chiffres-internet/](http://www.blogdumoderateur.com/chiffres-internet/)
 Chercher les réponses aux questions suivantes
-- **Combien** y avait-il dans le monde d’ordinateurs connectés :
+- **Combien** y avait-il dans le monde d'ordinateurs connectés :
         en 1984, en 1987, en 1989, aujourd'hui :
-- en quelle année a-t-on passé la barre du **Million d’utilisateurs** ? 
-- Quelle **proportion** de la population mondiale **n’a pas accès** à Internet ?
-- À l’inverse, quelle proportion a accès à Internet en **France** ? 
+- en quelle année a-t-on passé la barre du **Million d'utilisateurs** ? 
+- Quelle **proportion** de la population mondiale **n'a pas accès** à internet ?
+- À l'inverse, quelle proportion a accès à internet en **France** ? 
   - Est-ce supérieur ou inférieur à la moyenne **européenne** ?
   - Est-ce supérieur ou inférieur à la proportion des **USA** ?
 - En **1 mn**, dans le monde :
@@ -309,7 +299,7 @@ $CATEGORY: $course$/Quiz Bank '4.2 Quizz'
 
 
 // question: 165016 name: 1.4.1 Quizz (Q1/3) ::1.4.1 Quizz
-::(Q1/3)::[html]<p>A quoi sert une adresse IP ?</p>{ =<p>À identifier
+::(Q1/3)::[html]<p>À quoi sert une adresse IP ?</p>{ =<p>À identifier
 les machines connectées de façon unique.</p>#<p>Oui !</p> ~<p>À
 différencier les gros ordinateurs et les plus petits.</p>#<p>Comment
 ça ?</p> ~<p>À envoyer des mails automatiquement.</p>#<p>Pas du
@@ -318,7 +308,7 @@ identifier de façon unique les machines connectées.</p> }
 
 
 // question: 165027 name: 1.4.1 Quizz (Q2/3)_NEW ::1.4.1 Quizz
-::(Q2/3)::[html]<p>A l'aide de quel équipement réalise-t-on
+::(Q2/3)::[html]<p>À l'aide de quel équipement réalise-t-on
 l'interconnexion de réseaux ?</p>{ ~<p>Une adresse IP</p>#<p>Vous
 devriez revoir la vidéo !</p> ~<p>Un serveur de noms</p>#<p>Non, il ne
 s'agit d'un serveur de noms.</p> =<p>Un routeur</p>#<p>Exact !</p>
@@ -343,7 +333,7 @@ $CATEGORY: $course$/Quiz Bank '4.3 Exercice d'approfondissement'
 ::Combien y-a-t-il d'adresses IP ?::
 [markdown]
 **Plus assez d'adresses IP ?**
-Les fondateurs d'Internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses IP n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer, ...
+Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer...
 Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de `IPV4` et `IPV6`.
 Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :
 - Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
@@ -361,11 +351,11 @@ La **norme** qui régit le fonctionnement des serveurs de noms propose une organ
 À partir de cette ressource : 
 [http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
 faites les recherches nécessaires pour répondre aux questions suivantes :
-- Si ces machines **s'arrêtaient**, la traduction des adresses IP en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l’impact de cet arrêt ?
+- Si ces machines **s'arrêtaient**, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l'impact de cet arrêt ?
 - **Combien** existe-t-il de serveurs racine de DNS ?
 - **Qui** possède ces machines : des états, des organisations, des sociétés privées ?
 - **Où** se trouvent-elles majoritairement ?
-- **Que** s’est-il passé en 2002 et 2007 ?
+- **Que** s'est-il passé en 2002 et 2007 ?
 {}
 
 
@@ -376,7 +366,7 @@ $CATEGORY: $course$/Quiz Bank '4.7 Exercice d'approfondissement'
 [markdown]
 Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
 ![routeurs](media/exoInternet.svg)
-Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l’ordinateur B. 
+Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. 
 - Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?
 - Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? 
 - Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.
@@ -418,17 +408,17 @@ $CATEGORY: $course$/Quiz Bank '5.3 Exercice d'approfondissement'
 
 ::Utiliser les serveurs de noms::
 [markdown]
-Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s’il est possible de les utiliser directement, ils sont assez techniques.
-Nous vous proposons d’utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
+Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s'il est possible de les utiliser directement, ils sont assez techniques.
+Nous vous proposons d'utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
 Selon ce site ;
   - quelle est votre adresse IP ?
   - où vous trouvez-vous ?
-D’après ce site, où se trouvent les machines suivantes :
+D'après ce site, où se trouvent les machines suivantes :
   - [www.wikipedia.org](www.wikipedia.org)
   - [www.facebook.com](www.facebook.com)
   - [www.google.com](www.google.com)
-Quelle est l’adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
-**Copiez** l’adresse IP que vous venez de  trouver dans la **barre d’adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d’adresse.
+Quelle est l'adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
+**Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d'adresse.
 - Que constatez vous ?
 Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...
 {}
@@ -484,19 +474,19 @@ $CATEGORY: $course$/Quiz Bank '6.3 Exercice d'approfondissement'
 
 ::Wifi ou Données mobiles ?::
 [markdown]
-Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à Internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l’un ou avec l’autre ?
+Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l'un ou avec l'autre ?
 La réponse dépend de trois paramètres :
-    - la **disponibilité** de ces modes de connexions (s’il n’y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
+    - la **disponibilité** de ces modes de connexions (s'il n'y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
     - le **prix** de la connexion
     - la **rapidité** de la connexion
 Imaginons plusieurs situations concrètes :
-1/  je suis chez moi avec un *smartphone*, le domicile est équipée d’une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
+1/  je suis chez moi avec un *smartphone*, le domicile est équipée d'une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
         - avec le réseau de données mobiles (3G ou 4G)
         - via le Wifi de la maison
-2/ Je suis à *l’université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
-        - avec le wifi de l’université (réseau eduroam)
+2/ Je suis à *l'université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
+        - avec le wifi de l'université (réseau eduroam)
         - avec mon forfait 3G/4G
-3/ Je suis en *voiture* (ce n’est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
+3/ Je suis en *voiture* (ce n'est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
         - en wifi
         - avec le réseau de données mobiles de mon opérateur téléphonique
 **Classez** ces modes de connexion du plus lent au plus rapide.
@@ -513,9 +503,9 @@ $CATEGORY: $course$/Quiz Bank '6.5 Exercice d'approfondissement'
 ::Les débits::
 [markdown]
 **Pouvoir évaluer les ordres de grandeur**
-Le **débit** est une des mesures caractérisant la **qualité** d’une connexion. Il mesure la quantité d’information que l’on peut transmettre à chaque seconde. Pour mesurer le débit d’une connexion, il faut d’abord savoir ce qu’est un bit. Un bit est l’élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c’est donc transmettre des bits.
+Le **débit** est une des mesures caractérisant la **qualité** d'une connexion. Il mesure la quantité d'information que l'on peut transmettre à chaque seconde. Pour mesurer le débit d'une connexion, il faut d'abord savoir ce qu'est un bit. Un bit est l'élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c'est donc transmettre des bits.
 Généralement le débit est mesuré en bit par seconde `bit/s` ou ses variantes : (kilo-bit par seconde `kbit/s`, mille bits par seconde,  mega-bit par second `Mbit/s`, un million de bits par seconde, giga-bit par seconde `Gbit/s`, un milliard de bits par seconde)
-Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d’une vidéo lue en continu.
+Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d'une vidéo lue en continu.
 Le nombre de bits que l'on peut stocker sur un DVD Blu-ray double couche est 50 gigaoctets (Go), soit 400 gigabits, car un octet est une séquence de 8 bits. Calculer le temps de transmission d'un DVD Blu-ray double couche complet dans les cas suivants:
     - l'ADSL à 10Mb/s
     - La fibre à 1Gb/s
@@ -563,10 +553,10 @@ domaine général.</p> }
 $CATEGORY: $course$/Quiz Bank '7.4 Quizz'
 
 
-::L’ICANN et la CNIL::
+::L'ICANN et la CNIL::
 [markdown]
 Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.
-En utilisant les ressources suivantes (et d’autres) :
+En utilisant les ressources suivantes (et d'autres) :
     - [http://fr.wikipedia.org/wiki/Domain_Name_System](http://fr.wikipedia.org/wiki/Domain_Name_System)
     - [http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
     - [http://www.cnil.fr/](http://www.cnil.fr/)

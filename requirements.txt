@@ -3,3 +3,4 @@ yattag
 python-slugify
 markdown
 MarkdownSuperscript
+requests
