@@ -18,13 +18,16 @@ import json
 import markdown
 import requests
 
-from fromGIFT import extract_questions, process_questions
+from lxml import etree
+from lxml import html
 from slugify import slugify
+
+from fromGIFT import extract_questions, process_questions
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
 MARKDOWN_EXT = ['markdown.extensions.extra', 'markdown.extensions.nl2br', 'superscript']
-VIDEO_THUMB_API_URL = ''
+VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
 DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
 
 
@@ -87,15 +90,17 @@ def fetch_video_thumb(video_link):
     """
     # get video id
     video_id = video_link.rsplit('/', 1)[1]
+    print ("== video ID = %s" % video_id)
     try: 
         # fetch json
         response = requests.request('GET', VIDEO_THUMB_API_URL+video_id+'.json')
-        json_response = response.json
-        data = json.load(json_response)
+        data = response.json()[0]
         # copy image link
         image_link = data['thumbnail_large']
         image_link = image_link.replace('wepb', 'jpg')
-    except:
+    except Exception:
+        #raise
+        print (" ----------------  error while fecthing video %s" % (video_link))
         image_link = DEFAULT_VIDEO_THUMB_URL    
     
     return image_link
@@ -241,9 +246,22 @@ def process_md(md_src, current_dir):
                         'video_thumbnail':image_link
                     }
                     subsection['videos'].append(new_video)
-                    # append image in video link anchor
-                    # add (video) in title ?
-                    src = src.replace(video_match[0], video_match[0]+' (video)')
+                if len(videos_findall) > 0:
+                    # post-Processing video links
+                    try:
+                        tree = html.fromstring(src)
+                            # append image in video link anchor
+                            #img = html.fromstring('<img src="'+image_link+'"></img>')
+                            #video_link.append(img)
+                        for vl in tree.xpath('//a[contains(@class, "lien_video")]'):
+                            vl.attrib['target']="_blank"
+                            # add " (video)" in title
+                            vl.text = vl.text+" (vers la video)"
+                        
+                        src = html.tostring(tree, encoding='utf-8').decode('utf-8')
+                    except:
+                        print("Exception with moodle courses links")
+                        pass
                         
             # else, process questions from GIFT source
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
