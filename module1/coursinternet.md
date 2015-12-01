@@ -85,12 +85,11 @@ ces objets sont équipés de micro-processeurs !</p> }
 
 ``` activité-avancée
 ::Le numérique concerne tout le monde:: 
-Quels étudiants sont concernés par
-le numérique ?
+Quels étudiants sont concernés par le numérique ?
 Le numérique concerne évidemment les étudiants en informatique et plus
 généralement les étudiants des filières scientifiques.  Mais vous qui
 êtes inscrit dans une université de sciences humaines et sociales,
-êtes-vous concerné ?
+êtes-vous concernés ?
 Choisissez au moins 3 des domaines suivants et faites des recherches
 pour voir en quoi ils sont impactés par le numérique.
 - dans les médias, dans la santé, en histoire, en sociologie, en
@@ -571,7 +570,7 @@ source sous licence CC-BY 3.0.
 	
 *Extrait de Wikipédia*
 
-`Vinton « Vint » Gray Cerf, né le 23 juin 1943 à New Haven, Connecticut, États-Unis, est un ingénieur américain, chercheur et co-inventeur avec Bob Kahn du protocole TCP/IP. Il est considéré comme l'un des pères fondateurs d'internet.`
+>Vinton « Vint » Gray Cerf, né le 23 juin 1943 à New Haven, Connecticut, États-Unis, est un ingénieur américain, chercheur et co-inventeur avec Bob Kahn du protocole TCP/IP. Il est considéré comme l'un des pères fondateurs d'internet.
 
 Il est souvent appelé le *père d'internet*.
 	
@@ -582,7 +581,7 @@ Il est souvent appelé le *père d'internet*.
 	
 *Extrait de Wikipedia*
 
-`Cyclades était un projet expérimental français ayant pour but de créer un réseau global de télécommunication utilisant la commutation de paquets. Créé en 1971, conçu par Louis Pouzin, il fut abandonné en 1978. Ses concepts ont influencé les travaux de développement d'internet en inspirant sa suite de protocoles.`
+>Cyclades était un projet expérimental français ayant pour but de créer un réseau global de télécommunication utilisant la commutation de paquets. Créé en 1971, conçu par Louis Pouzin, il fut abandonné en 1978. Ses concepts ont influencé les travaux de développement d'internet en inspirant sa suite de protocoles.
 
 Si vous voulez écouter son **avis** sur ce qu'est devenu internet, voici une vidéo très intéressante :
 [Louis Pouzin Youtube](https://youtu.be/p70Go9IS1h4)
@@ -806,7 +805,7 @@ A-C-I-B ; A-C-F-I-B ; A-C-F-H-B ; A-C-F-E-K-H-B ; A-D-E-K-H-B ; A-D-E-F-H-B ; A-
 # Que se passe-t-il quand on se connecte à internet?
 
 ## Cours
-  [Se connecter à internet] ( https://player.vimeo.com/video/122104376 ){:.lien_video}
+  [Se connecter à internet]( https://player.vimeo.com/video/122104376 ){:.lien_video}
 
 Examinons les conséquences de l'organisation d'internet lorsqu'on veut
 s'y connecter ...
@@ -974,9 +973,9 @@ OUI et OUI, les services numériques en particulier ceux accessibles depuis **l'
 
 ## Cours
 
-    [Les supports physiques](https://player.vimeo.com/video/122104443){: .lien_video }
-    
-    [Connexions nomades](https://player.vimeo.com/video/122104499){: .lien_video }
+[Les supports physiques](https://player.vimeo.com/video/122104443){: .lien_video }
+  
+[Connexions nomades](https://player.vimeo.com/video/122104499){: .lien_video }
 
 Internet et plus généralement les réseaux informatiques peuvent
 utiliser plusieurs types de supports pour transporter l'information

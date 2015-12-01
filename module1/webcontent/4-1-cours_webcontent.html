@@ -1,52 +1,52 @@
-<p><a class="lien_video" href="https://player.vimeo.com/video/122104315">Comment ça marche ? (video)</a></p>
-<p>Regardons un peu plus précisément comment fonctionne internet. Trois<br />
-ingrédients importants interviennent dans le système ; le premier est<br />
-l'adresse <code>IP</code> qui permet de fournir un nom et une adresse à chaque<br />
-machine.  Chaque ordinateur connecté à internet a un numéro unique (un<br />
-peu comme un numéro de téléphone, mais bien plus long !). Ce numéro<br />
-dépend de l'endroit où l'ordinateur se trouve dans internet et permet<br />
-donc de trouver un chemin dans l'interconnexion de réseaux. On appelle<br />
-ce numéro l'adresse <code>IP</code>. De façon très simplifiée, l'adresse <code>IP</code><br />
-comporte une partie identifiant un réseau dans cette interconnexion et<br />
+<div><p><a class="lien_video" href="http://vimeo.com/122104315" target="_blank">Comment ça marche ? (vers la video)</a></p>
+<p>Regardons un peu plus précisément comment fonctionne internet. Trois<br>
+ingrédients importants interviennent dans le système ; le premier est<br>
+l'adresse <code>IP</code> qui permet de fournir un nom et une adresse à chaque<br>
+machine.  Chaque ordinateur connecté à internet a un numéro unique (un<br>
+peu comme un numéro de téléphone, mais bien plus long !). Ce numéro<br>
+dépend de l'endroit où l'ordinateur se trouve dans internet et permet<br>
+donc de trouver un chemin dans l'interconnexion de réseaux. On appelle<br>
+ce numéro l'adresse <code>IP</code>. De façon très simplifiée, l'adresse <code>IP</code><br>
+comporte une partie identifiant un réseau dans cette interconnexion et<br>
 une autre partie identifiant la machine au sein de ce réseau.</p>
-<p>Pour échanger des informations d'un ordinateur vers un autre, celui<br />
-qui <em>envoie</em> l'information doit donc connaître l'adresse <code>IP</code> du<br />
-destinataire, et pour obtenir une réponse, l'émetteur doit<br />
-impérativement fournir dans chaque message envoyé sa propre adresse<br />
-<code>IP</code>. Tous les messages échangés sur internet sont donc de la forme :<br />
+<p>Pour échanger des informations d'un ordinateur vers un autre, celui<br>
+qui <em>envoie</em> l'information doit donc connaître l'adresse <code>IP</code> du<br>
+destinataire, et pour obtenir une réponse, l'émetteur doit<br>
+impérativement fournir dans chaque message envoyé sa propre adresse<br>
+<code>IP</code>. Tous les messages échangés sur internet sont donc de la forme :<br>
 <code>n°IP destinataire / information / n°IP émetteur</code>.</p>
-<p>Le deuxième ingrédient concerne le <em>Routage</em> des messages sur le<br />
-réseau.  Si les ordinateurs émetteur et destinataire sont dans le même<br />
-réseau, le principe est simple : l'ordinateur émetteur envoie son<br />
-message sur ce réseau et chaque ordinateur du réseau le lit. Les<br />
-destinataires peuvent alors s'intéresser aux messages qui leurs sont<br />
-destinés.  Si le destinataire n'est pas dans le même réseau, la<br />
-transmission ne peut plus se faire directement à l'ordinateur du<br />
-destinataire. L'émetteur envoie le message à une machine connectée à<br />
-la fois à ce réseau et à un ou plusieurs autres réseaux. Cette machine<br />
-est une passerelle/routeur qui réalise effectivement<br />
-l'interconnexion. Le routeur renvoie alors le message vers les autres<br />
-réseaux pour poursuivre son chemin. Et ce processus se répète jusqu'à<br />
+<p>Le deuxième ingrédient concerne le <em>Routage</em> des messages sur le<br>
+réseau.  Si les ordinateurs émetteur et destinataire sont dans le même<br>
+réseau, le principe est simple : l'ordinateur émetteur envoie son<br>
+message sur ce réseau et chaque ordinateur du réseau le lit. Les<br>
+destinataires peuvent alors s'intéresser aux messages qui leurs sont<br>
+destinés.  Si le destinataire n'est pas dans le même réseau, la<br>
+transmission ne peut plus se faire directement à l'ordinateur du<br>
+destinataire. L'émetteur envoie le message à une machine connectée à<br>
+la fois à ce réseau et à un ou plusieurs autres réseaux. Cette machine<br>
+est une passerelle/routeur qui réalise effectivement<br>
+l'interconnexion. Le routeur renvoie alors le message vers les autres<br>
+réseaux pour poursuivre son chemin. Et ce processus se répète jusqu'à<br>
 ce que le message arrive à destination.</p>
-<p>Enfin le troisième ingrédient concerne le nommage des machines.  En<br />
-effet, ce sont des femmes et des hommes qui utilisent ces<br />
-machines. Pour désigner un destinataire, personne ne manipule<br />
-directement des adresses <code>IP</code> qui sont des numéros bien plus longs que<br />
-les numéros de téléphone. Dans notre interface avec le monde<br />
-d'internet nous connaissons plutôt des noms comme <code>www.univ-lille3.fr</code><br />
-ou encore <code>www.service-public.fr</code>. Le lien entre adresses <code>IP</code> et noms<br />
-se fait par le biais des <em>serveurs de noms</em> qui, à la manière d'une<br />
-liste de contacts dans notre téléphone, stockent un ensemble de nom et<br />
+<p>Enfin le troisième ingrédient concerne le nommage des machines.  En<br>
+effet, ce sont des femmes et des hommes qui utilisent ces<br>
+machines. Pour désigner un destinataire, personne ne manipule<br>
+directement des adresses <code>IP</code> qui sont des numéros bien plus longs que<br>
+les numéros de téléphone. Dans notre interface avec le monde<br>
+d'internet nous connaissons plutôt des noms comme <code>www.univ-lille3.fr</code><br>
+ou encore <code>www.service-public.fr</code>. Le lien entre adresses <code>IP</code> et noms<br>
+se fait par le biais des <em>serveurs de noms</em> qui, à la manière d'une<br>
+liste de contacts dans notre téléphone, stockent un ensemble de nom et<br>
 d'adresses <code>IP</code>.</p>
-<p>Très concrètement, regardons par exemple ce qui se passe lorsque je<br />
-veux consulter la page d'accueil de Lille 3.  Tout d'abord, je clique<br />
-sur un lien vers le site de l'université. Ce lien contient le nom de<br />
-la machine capable de me fournir la page d'accueil :<br />
-<code>www.univ-lille3.fr</code>. Mon ordinateur va donc contacter un serveur de<br />
-noms pour connaître l'adresse <code>IP</code> de cette machine. Une fois que<br />
-cette adresse <code>IP</code> est connue, il peut communiquer avec<br />
-<code>www.univ-lille3.fr</code> et envoyer à cette machine un message qui demande<br />
-le contenu de cette page d'accueil. Le message contient bien entendu<br />
-l'adresse <code>IP</code> de mon ordinateur, ainsi la machine peut me répondre en<br />
-renvoyant le contenu qui m'intéresse. Il ne reste plus alors à mon<br />
-ordinateur qu'à afficher ce contenu.</p>
+<p>Très concrètement, regardons par exemple ce qui se passe lorsque je<br>
+veux consulter la page d'accueil de Lille 3.  Tout d'abord, je clique<br>
+sur un lien vers le site de l'université. Ce lien contient le nom de<br>
+la machine capable de me fournir la page d'accueil :<br>
+<code>www.univ-lille3.fr</code>. Mon ordinateur va donc contacter un serveur de<br>
+noms pour connaître l'adresse <code>IP</code> de cette machine. Une fois que<br>
+cette adresse <code>IP</code> est connue, il peut communiquer avec<br>
+<code>www.univ-lille3.fr</code> et envoyer à cette machine un message qui demande<br>
+le contenu de cette page d'accueil. Le message contient bien entendu<br>
+l'adresse <code>IP</code> de mon ordinateur, ainsi la machine peut me répondre en<br>
+renvoyant le contenu qui m'intéresse. Il ne reste plus alors à mon<br>
+ordinateur qu'à afficher ce contenu.</p></div>

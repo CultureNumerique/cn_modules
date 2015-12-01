@@ -20,7 +20,7 @@ def write_iframe_code(video_link):
     
 
 def parse_content(href, module=False, rewrite_iframe_src=True):
-    """ open file and replace ../img with img and src to data_src for iframes """
+    """ open file and replace media links and src for iframes """
     if not module:
         module = ""
 
@@ -28,10 +28,12 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
         htmltext = file.read()
 
     tree = html.fromstring(htmltext)
-    # Rewrite image links
+    # Rewrite image links: for each module file, media dir is one step above (../media/)
+    # with html export, medias are accessed from index.html in root dir, so we have 
+    # to reconstruct the whole path
     try:
         for element, attribute, link, pos in tree.iterlinks():
-            newlink = link.replace("media", module+"/media")
+            newlink = link.replace("../media", module+"/media")
             element.set(attribute, newlink)
     except Exception as e:
         print("Exception rewriting/removing links %s" % (e))
@@ -46,6 +48,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
         pass
 
     # rename iframe attribute to prevent loading all iframes at once
+    # FIXME : should be removed since iframes are generated in another place now
     if rewrite_iframe_src:
         try:
             iframes = tree.xpath('//iframe')

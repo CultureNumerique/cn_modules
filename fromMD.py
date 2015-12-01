@@ -239,28 +239,32 @@ def process_md(md_src, current_dir):
                 videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
                 for video_match in videos_findall:
                     video_link = video_match[1]
-                    image_link = fetch_video_thumb(video_link)
+                    #image_link = fetch_video_thumb(video_link)
+                    image_link = DEFAULT_VIDEO_THUMB_URL
                     new_video = {
                         'video_title':video_match[0],
                         'video_link':video_match[1],
                         'video_thumbnail':image_link
                     }
                     subsection['videos'].append(new_video)
+                    # FIXME append image in video link anchor
+                    #img = html.fromstring('<img src="'+image_link+'"></img>')
+                    #video_link.append(img)
                 if len(videos_findall) > 0:
                     # post-Processing video links
                     try:
                         tree = html.fromstring(src)
-                            # append image in video link anchor
-                            #img = html.fromstring('<img src="'+image_link+'"></img>')
-                            #video_link.append(img)
                         for vl in tree.xpath('//a[contains(@class, "lien_video")]'):
                             vl.attrib['target']="_blank"
                             # add " (video)" in title
                             vl.text = vl.text+" (vers la video)"
+                            # change href to this format http://vimeo.com/[id]
+                            video_id = vl.attrib['href'].rsplit('/', 1)[1]
+                            vl.attrib['href'] = 'http://vimeo.com/'+video_id
                         
                         src = html.tostring(tree, encoding='utf-8').decode('utf-8')
                     except:
-                        print("Exception with moodle courses links")
+                        print("Exception with vimeo video links")
                         pass
                         
             # else, process questions from GIFT source
@@ -269,10 +273,14 @@ def process_md(md_src, current_dir):
                 raw_questions = extract_questions(subsection['sub_src'])
                 src = ''
                 for question in  process_questions(raw_questions):
-                    print(">>>>>>>>>>> writing question in HTML %s" % (question.to_html()))
+                    # append each question to html output
                     src+=question.to_html()
                     if src == '': # fallback when question is not yet properly formated
                         src = '<p>'+subsection['sub_src']+'</p>'
+                    # post-process Gift source replacing markdown formated questions text by html equivalent
+                    if question.text_format == "moodle":
+                        question.text = "[html]"+markdown.markdown(question.text, MARKDOWN_EXT)
+                        # retrieve question text part in raw Gift and replace
                 # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
                 test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
@@ -285,7 +293,8 @@ def process_md(md_src, current_dir):
                 questions_bank+= subsection['sub_src'] + '\n\n'
 
 
-
+            # change relative media links from media/ to ../media/
+            src = src.replace('media/', '../media/')
             # write html file
             write_file(src, current_dir, target_folder, filename)
 

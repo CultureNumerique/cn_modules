@@ -32,12 +32,11 @@ $CATEGORY: $course$/Quiz Bank '1.3 Exercice d'approfondissement'
 
 
 ::Le numérique concerne tout le monde:: 
-Quels étudiants sont concernés par
-le numérique ?
+Quels étudiants sont concernés par le numérique ?
 Le numérique concerne évidemment les étudiants en informatique et plus
 généralement les étudiants des filières scientifiques.  Mais vous qui
 êtes inscrit dans une université de sciences humaines et sociales,
-êtes-vous concerné ?
+êtes-vous concernés ?
 Choisissez au moins 3 des domaines suivants et faites des recherches
 pour voir en quoi ils sont impactés par le numérique.
 - dans les médias, dans la santé, en histoire, en sociologie, en

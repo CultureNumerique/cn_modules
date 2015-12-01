@@ -128,12 +128,11 @@ def generateIMSManifest(data):
                      if file_type == "webcontent":
                         try:
                             html_doc = html.parse(href)
-                            img_sources = html_doc.xpath('//@src')
-                            for img in img_sources:
-                                img = img.rsplit('/', 1)[1]
-                                if img in images:
+                            for img in html_doc.xpath('//@src'):
+                                img_filename = img.rsplit('/', 1)[1]
+                                if img_filename in images:
                                     # add dependency
-                                    doc.stag('dependency', identifierref=images[img])
+                                    doc.stag('dependency', identifierref=images[img_filename])
                         except:
                             pprint(" Error while parsing doc: %s" % (href))
                             continue
