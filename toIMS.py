@@ -79,11 +79,15 @@ def generateIMSManifest(data):
     with tag('organizations'):
         with tag('organization', identifier="organization0", structure='rooted-hierarchy'):
             with tag('item', identifier='root'):
+                # add empty section as section "0 . Généralités" to avoid wrong numbering
+                with tag('item', identifier='section_generalites'):
+                    with tag('title'):
+                        text('')
                 for idA, section in enumerate(data["sections"]):
                     section_id = "sec_"+(str(idA))
                     with tag('item', identifier=section_id):
                         with tag('title'):
-                            text(str(idA))
+                            text(section['title'])
                         for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                             href = data["sections"][idA]["subsections"][idB]["source_file"]
                             # FIXME: when adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml

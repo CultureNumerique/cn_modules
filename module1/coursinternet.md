@@ -132,7 +132,7 @@ Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun de
     - Transports
     - Vêtements
     - Médical / paramédical
-Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
+Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).{}
 ```
 
 ## le numérique au quotidien [correction]
