@@ -100,7 +100,7 @@ def fetch_video_thumb(video_link):
         image_link = image_link.replace('wepb', 'jpg')
     except Exception:
         #raise
-        print (" ----------------  error while fecthing video %s" % (video_link))
+        print (" ----------------  error while fetching video %s" % (video_link))
         image_link = DEFAULT_VIDEO_THUMB_URL    
     
     return image_link
@@ -234,7 +234,7 @@ def process_md(md_src, current_dir):
             subsection['source_file'] = subsection['type']+'/'+filename
             # if type = webcontent or correction, text pasted as is in webcontent folder
             if subsection['type'] in (('webcontent', 'correction')):
-                src = markdown.markdown(subsection['sub_src'], MARKDOWN_EXT)
+                html_src = markdown.markdown(subsection['sub_src'], MARKDOWN_EXT)
                 # Detect video links
                 videos_findall = re.findall('\[(?P<video_title>.*)\]\s*\((?P<video_link>.*)\){:\s*\.lien_video\s*}', subsection['sub_src'], flags=re.M)
                 for video_match in videos_findall:
@@ -253,7 +253,7 @@ def process_md(md_src, current_dir):
                 if len(videos_findall) > 0:
                     # post-Processing video links
                     try:
-                        tree = html.fromstring(src)
+                        tree = html.fromstring(html_src)
                         for vl in tree.xpath('//a[contains(@class, "lien_video")]'):
                             vl.attrib['target']="_blank"
                             # add " (video)" in title
@@ -262,7 +262,7 @@ def process_md(md_src, current_dir):
                             video_id = vl.attrib['href'].rsplit('/', 1)[1]
                             vl.attrib['href'] = 'http://vimeo.com/'+video_id
                         
-                        src = html.tostring(tree, encoding='utf-8').decode('utf-8')
+                        html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
                     except:
                         print("Exception with vimeo video links")
                         pass
@@ -271,16 +271,17 @@ def process_md(md_src, current_dir):
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
                 # a) parses to HTML source code
                 raw_questions = extract_questions(subsection['sub_src'])
-                src = ''
+                html_src = ''
+                gift_src = ''
                 for question in  process_questions(raw_questions):
                     # append each question to html output
-                    src+=question.to_html()
-                    if src == '': # fallback when question is not yet properly formated
-                        src = '<p>'+subsection['sub_src']+'</p>'
+                    html_src+=question.to_html()
+                    if html_src == '': # fallback when question is not yet properly formated
+                        html_src = '<p>'+subsection['sub_src']+'</p>'
                     # post-process Gift source replacing markdown formated questions text by html equivalent
-                    if question.text_format == "moodle":
-                        question.text = "[html]"+markdown.markdown(question.text, MARKDOWN_EXT)
-                        # retrieve question text part in raw Gift and replace
+                    if question.text_format in (("markdown")):
+                        question.md_src_to_html()
+                    gift_src+='\n'+question.gift_src+'\n'
                 # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
                 test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
@@ -290,13 +291,13 @@ def process_md(md_src, current_dir):
                 write_file(xml_src, current_dir, target_folder, xml_filename)
                 # c) append raw questions to question bank file, adding test title as category
                 questions_bank+= "$CATEGORY: $course$/Quiz Bank '"+test_title+"'\n\n"
-                questions_bank+= subsection['sub_src'] + '\n\n'
+                questions_bank+= gift_src + '\n\n'
 
 
             # change relative media links from media/ to ../media/
-            src = src.replace('media/', '../media/')
+            html_src = html_src.replace('media/', '../media/')
             # write html file
-            write_file(src, current_dir, target_folder, filename)
+            write_file(html_src, current_dir, target_folder, filename)
 
     # write questions bank file
     write_file(questions_bank, current_dir, '', 'questions_bank.gift.txt')

@@ -55,6 +55,7 @@ class GiftQuestion():
 
     """
     def __init__(self):
+        self.gift_src = ''
         self.type = ''
         self.title = ''
         self.text = ''
@@ -66,6 +67,31 @@ class GiftQuestion():
         self.global_feedback_format = '[markdown]'
         self.feedback_for_right = '' # for TRUEFALSE questions, given when giving the right answer
         self.feedback_for_wrong = '' # for TRUEFALSE questions, given when giving the wrong answer
+    
+    def md_src_to_html(self):
+        """ Convert question or feedback src from markdown to html ( useful for easier export) """
+        new_src = self.gift_src
+        # A / look for question text, and if format is markdown, convert in html
+        if self.text_format in (('markdown')):
+            m1 = re.search('(?P<titre>::.*::){0,1}\s*(?P<format>\[[^\]]*\]){0,1}\s*(?P<qtext>[^\{]*)', new_src, flags=re.M)
+            if m1:
+                if m1.group('qtext'):
+                    qtext = markdown.markdown(m1.group('qtext'), MARKDOWN_EXT)
+                    new_src = new_src.replace(m1.group('qtext'), qtext)
+                if m1.group('format'):    
+                    new_src = new_src.replace(m1.group('format'), '[html]')
+        
+        # B / same for global feedback if any
+        m2 = re.search('\{####(?P<format>\[[^\]]*\]){0,1}\s*(?P<gf>[^\}]*)', new_src, flags=re.M)
+        if m2:
+            if m2.group('format'):
+                new_src = new_src.replace(m2.group('format'), '[html]')
+            if m2.group('gf'):
+                gf = markdown.markdown(m2.group('gf'), MARKDOWN_EXT)
+                new_src = new_src.replace(m2.group('gf'), gf)
+                
+        self.gift_src = new_src
+        return new_src
 
     def to_html(self):
         """ From a question object, write HTML representation """
@@ -165,6 +191,7 @@ def process_questions(questions_src):
     for q_src in questions_src:
         #pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
+        q_obj.gift_src = q_src
         q_prestate = ""
         # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
         split_1 = q_src.split('{', maxsplit=1)
