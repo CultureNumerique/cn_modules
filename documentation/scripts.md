@@ -20,6 +20,10 @@ Sont inclus également quelques autres utilitaires:
 la branche gh-pages (cf page Site Vitrine)
 
 # `fromMD`
+```
+$ python3 fromMD.py moduleX/fichier_markdown.md moduleX
+```
+
 # `toHTML`
 # `toIMS`
 
