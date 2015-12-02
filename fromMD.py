@@ -255,8 +255,6 @@ def process_md(md_src, current_dir):
                     try:
                         tree = html.fromstring(html_src)
                         for vl in tree.xpath('//a[contains(@class, "lien_video")]'):
-                            vl.attrib['target']="_blank"
-                            # add " (video)" in title
                             vl.text = vl.text+" (vers la video)"
                             # change href to this format http://vimeo.com/[id]
                             video_id = vl.attrib['href'].rsplit('/', 1)[1]
@@ -296,6 +294,11 @@ def process_md(md_src, current_dir):
 
             # change relative media links from media/ to ../media/
             html_src = html_src.replace('media/', '../media/')
+            # add "target="_blank" to all anchors
+            tree = html.fromstring(html_src)
+            for link in tree.xpath('//a'):
+                link.attrib['target']="_blank"
+            html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
             # write html file
             write_file(html_src, current_dir, target_folder, filename)
 
