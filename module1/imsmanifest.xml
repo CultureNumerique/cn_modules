@@ -22,8 +22,11 @@
   <organizations>
     <organization structure="rooted-hierarchy" identifier="organization0">
       <item identifier="root">
+        <item identifier="section_generalites">
+          <title></title>
+        </item>
         <item identifier="sec_0">
-          <title>0</title>
+          <title>1 Informatique et numérique</title>
           <item identifierref="doc_0_0" identifier="subsec_0_0">
             <title>1.1 Cours</title>
           </item>
@@ -47,7 +50,7 @@
           </item>
         </item>
         <item identifier="sec_1">
-          <title>1</title>
+          <title>2 Historique informatique</title>
           <item identifierref="doc_1_0" identifier="subsec_1_0">
             <title>2.1 Cours</title>
           </item>
@@ -83,7 +86,7 @@
           </item>
         </item>
         <item identifier="sec_2">
-          <title>2</title>
+          <title>3 Naissance d'internet</title>
           <item identifierref="doc_2_0" identifier="subsec_2_0">
             <title>3.1 Cours</title>
           </item>
@@ -104,7 +107,7 @@
           </item>
         </item>
         <item identifier="sec_3">
-          <title>3</title>
+          <title>4 Comment ça marche?</title>
           <item identifierref="doc_3_0" identifier="subsec_3_0">
             <title>4.1 Cours</title>
           </item>
@@ -128,7 +131,7 @@
           </item>
         </item>
         <item identifier="sec_4">
-          <title>4</title>
+          <title>5 Que se passe-t-il quand on se connecte à internet?</title>
           <item identifierref="doc_4_0" identifier="subsec_4_0">
             <title>5.1 Cours</title>
           </item>
@@ -143,7 +146,7 @@
           </item>
         </item>
         <item identifier="sec_5">
-          <title>5</title>
+          <title>6 Les supports physiques de transmission de l'information</title>
           <item identifierref="doc_5_0" identifier="subsec_5_0">
             <title>6.1 Cours</title>
           </item>
@@ -164,7 +167,7 @@
           </item>
         </item>
         <item identifier="sec_6">
-          <title>6</title>
+          <title>7 Société : qui décide sur internet?</title>
           <item identifierref="doc_6_0" identifier="subsec_6_0">
             <title>7.1 Cours</title>
           </item>
@@ -175,7 +178,7 @@
             <title>7.3 Le saviez-vous ? </title>
           </item>
           <item identifierref="doc_6_3" identifier="subsec_6_3">
-            <title>7.4 Quizz</title>
+            <title>7.4 Exercice d'approfondissement</title>
           </item>
         </item>
       </item>
@@ -183,196 +186,196 @@
   </organizations>
   <resources>
     <!-- Media -->
-    <resource type="webcontent" href="media/exoInternet.svg" identifier="media_0">
+    <resource href="media/exoInternet.svg" identifier="media_0" type="webcontent">
       <file href="media/exoInternet.svg" />
     </resource>
-    <resource type="webcontent" href="media/johnVonNeumann.jpg" identifier="media_1">
+    <resource href="media/johnVonNeumann.jpg" identifier="media_1" type="webcontent">
       <file href="media/johnVonNeumann.jpg" />
     </resource>
-    <resource type="webcontent" href="media/alanturing.jpg" identifier="media_2">
+    <resource href="media/alanturing.jpg" identifier="media_2" type="webcontent">
       <file href="media/alanturing.jpg" />
     </resource>
-    <resource type="webcontent" href="media/Grace_Hopper_and_UNIVAC.jpg" identifier="media_3">
+    <resource href="media/Grace_Hopper_and_UNIVAC.jpg" identifier="media_3" type="webcontent">
       <file href="media/Grace_Hopper_and_UNIVAC.jpg" />
     </resource>
-    <resource type="webcontent" href="media/ENIAC.gif" identifier="media_4">
+    <resource href="media/ENIAC.gif" identifier="media_4" type="webcontent">
       <file href="media/ENIAC.gif" />
     </resource>
-    <resource type="webcontent" href="media/culture-numerique_mode_emploi-v04.pdf" identifier="media_5">
+    <resource href="media/culture-numerique_mode_emploi-v04.pdf" identifier="media_5" type="webcontent">
       <file href="media/culture-numerique_mode_emploi-v04.pdf" />
     </resource>
-    <resource type="webcontent" href="media/cult_num_s1_mod_1_internet_.svg" identifier="media_6">
+    <resource href="media/cult_num_s1_mod_1_internet_.svg" identifier="media_6" type="webcontent">
       <file href="media/cult_num_s1_mod_1_internet_.svg" />
     </resource>
-    <resource type="webcontent" href="media/louispouzin.jpg" identifier="media_7">
+    <resource href="media/louispouzin.jpg" identifier="media_7" type="webcontent">
       <file href="media/louispouzin.jpg" />
     </resource>
-    <resource type="webcontent" href="media/Douglas_Engelbart's_prototype_mouse.jpg" identifier="media_8">
+    <resource href="media/Douglas_Engelbart's_prototype_mouse.jpg" identifier="media_8" type="webcontent">
       <file href="media/Douglas_Engelbart's_prototype_mouse.jpg" />
     </resource>
-    <resource type="webcontent" href="media/vintoncerf.jpg" identifier="media_9">
+    <resource href="media/vintoncerf.jpg" identifier="media_9" type="webcontent">
       <file href="media/vintoncerf.jpg" />
     </resource>
-    <resource type="webcontent" href="media/graph_puissance_small.jpg" identifier="media_10">
+    <resource href="media/graph_puissance_small.jpg" identifier="media_10" type="webcontent">
       <file href="media/graph_puissance_small.jpg" />
     </resource>
-    <resource type="webcontent" href="media/Apple_Lisa_2.jpg" identifier="media_11">
+    <resource href="media/Apple_Lisa_2.jpg" identifier="media_11" type="webcontent">
       <file href="media/Apple_Lisa_2.jpg" />
     </resource>
-    <resource type="webcontent" href="media/francoisGernelle.jpg" identifier="media_12">
+    <resource href="media/francoisGernelle.jpg" identifier="media_12" type="webcontent">
       <file href="media/francoisGernelle.jpg" />
     </resource>
-    <resource type="webcontent" href="media/adalovelace.jpg" identifier="media_13">
+    <resource href="media/adalovelace.jpg" identifier="media_13" type="webcontent">
       <file href="media/adalovelace.jpg" />
     </resource>
-    <resource type="webcontent" href="media/illu_1.jpg" identifier="media_14">
+    <resource href="media/illu_1.jpg" identifier="media_14" type="webcontent">
       <file href="media/illu_1.jpg" />
     </resource>
     <!-- Webcontent -->
-    <resource type="webcontent" href="webcontent/1-1-cours_webcontent.html" identifier="doc_0_0">
+    <resource href="webcontent/1-1-cours_webcontent.html" identifier="doc_0_0" type="webcontent">
       <file href="webcontent/1-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/1-2-quizz_auto-evaluation.xml" identifier="doc_0_1">
+    <resource href="auto-evaluation/1-2-quizz_auto-evaluation.xml" identifier="doc_0_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/1-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/1-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_2">
+    <resource href="devoirs/1-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/1-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/1-4-le-numerique-concerne-tout-le-monde-correction_correction.html" identifier="doc_0_3">
+    <resource href="correction/1-4-le-numerique-concerne-tout-le-monde-correction_correction.html" identifier="doc_0_3" type="webcontent">
       <file href="correction/1-4-le-numerique-concerne-tout-le-monde-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/1-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_4">
+    <resource href="devoirs/1-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/1-5-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/1-6-le-numerique-au-quotidien-correction_correction.html" identifier="doc_0_5">
+    <resource href="correction/1-6-le-numerique-au-quotidien-correction_correction.html" identifier="doc_0_5" type="webcontent">
       <file href="correction/1-6-le-numerique-au-quotidien-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/1-7-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_6">
+    <resource href="devoirs/1-7-exercice-dapprofondissement_devoirs.xml" identifier="doc_0_6" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/1-7-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/2-1-cours_webcontent.html" identifier="doc_1_0">
+    <resource href="webcontent/2-1-cours_webcontent.html" identifier="doc_1_0" type="webcontent">
       <file href="webcontent/2-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/2-2-quizz_auto-evaluation.xml" identifier="doc_1_1">
+    <resource href="auto-evaluation/2-2-quizz_auto-evaluation.xml" identifier="doc_1_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/2-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/2-3-quizz_auto-evaluation.xml" identifier="doc_1_2">
+    <resource href="auto-evaluation/2-3-quizz_auto-evaluation.xml" identifier="doc_1_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/2-3-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/2-4-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_3">
+    <resource href="devoirs/2-4-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_3" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/2-4-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/2-5-personnages-importants-correction_correction.html" identifier="doc_1_4">
+    <resource href="correction/2-5-personnages-importants-correction_correction.html" identifier="doc_1_4" type="webcontent">
       <file href="correction/2-5-personnages-importants-correction_correction.html" />
       <dependency identifierref="media_13" />
       <dependency identifierref="media_2" />
       <dependency identifierref="media_1" />
       <dependency identifierref="media_3" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/2-6-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_5">
+    <resource href="devoirs/2-6-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_5" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/2-6-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/2-7-la-vitesse-des-ordinateurs-correction_correction.html" identifier="doc_1_6">
+    <resource href="correction/2-7-la-vitesse-des-ordinateurs-correction_correction.html" identifier="doc_1_6" type="webcontent">
       <file href="correction/2-7-la-vitesse-des-ordinateurs-correction_correction.html" />
       <dependency identifierref="media_4" />
       <dependency identifierref="media_10" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/2-8-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_7">
+    <resource href="devoirs/2-8-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_7" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/2-8-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/2-9-dou-vient-le-pc-correction_correction.html" identifier="doc_1_8">
+    <resource href="correction/2-9-dou-vient-le-pc-correction_correction.html" identifier="doc_1_8" type="webcontent">
       <file href="correction/2-9-dou-vient-le-pc-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/2-10-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_9">
+    <resource href="devoirs/2-10-exercice-dapprofondissement_devoirs.xml" identifier="doc_1_9" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/2-10-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/2-11-evolution-des-interfaces-homme-machine-correction_correction.html" identifier="doc_1_10">
+    <resource href="correction/2-11-evolution-des-interfaces-homme-machine-correction_correction.html" identifier="doc_1_10" type="webcontent">
       <file href="correction/2-11-evolution-des-interfaces-homme-machine-correction_correction.html" />
       <dependency identifierref="media_8" />
       <dependency identifierref="media_11" />
     </resource>
-    <resource type="webcontent" href="webcontent/3-1-cours_webcontent.html" identifier="doc_2_0">
+    <resource href="webcontent/3-1-cours_webcontent.html" identifier="doc_2_0" type="webcontent">
       <file href="webcontent/3-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/3-2-quizz_auto-evaluation.xml" identifier="doc_2_1">
+    <resource href="auto-evaluation/3-2-quizz_auto-evaluation.xml" identifier="doc_2_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/3-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/3-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_2_2">
+    <resource href="devoirs/3-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_2_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/3-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/3-4-qui-a-invente-internet-correction_correction.html" identifier="doc_2_3">
+    <resource href="correction/3-4-qui-a-invente-internet-correction_correction.html" identifier="doc_2_3" type="webcontent">
       <file href="correction/3-4-qui-a-invente-internet-correction_correction.html" />
       <dependency identifierref="media_9" />
       <dependency identifierref="media_7" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/3-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_2_4">
+    <resource href="devoirs/3-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_2_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/3-5-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/3-6-qui-a-acces-a-internet-correction_correction.html" identifier="doc_2_5">
+    <resource href="correction/3-6-qui-a-acces-a-internet-correction_correction.html" identifier="doc_2_5" type="webcontent">
       <file href="correction/3-6-qui-a-acces-a-internet-correction_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/4-1-cours_webcontent.html" identifier="doc_3_0">
+    <resource href="webcontent/4-1-cours_webcontent.html" identifier="doc_3_0" type="webcontent">
       <file href="webcontent/4-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/4-2-quizz_auto-evaluation.xml" identifier="doc_3_1">
+    <resource href="auto-evaluation/4-2-quizz_auto-evaluation.xml" identifier="doc_3_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/4-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/4-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_2">
+    <resource href="devoirs/4-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/4-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/4-4-combien-y-a-t-il-dadresses-ip-correction_correction.html" identifier="doc_3_3">
+    <resource href="correction/4-4-combien-y-a-t-il-dadresses-ip-correction_correction.html" identifier="doc_3_3" type="webcontent">
       <file href="correction/4-4-combien-y-a-t-il-dadresses-ip-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/4-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_4">
+    <resource href="devoirs/4-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/4-5-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/4-6-les-serveurs-de-noms-correction_correction.html" identifier="doc_3_5">
+    <resource href="correction/4-6-les-serveurs-de-noms-correction_correction.html" identifier="doc_3_5" type="webcontent">
       <file href="correction/4-6-les-serveurs-de-noms-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/4-7-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_6">
+    <resource href="devoirs/4-7-exercice-dapprofondissement_devoirs.xml" identifier="doc_3_6" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/4-7-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/5-1-cours_webcontent.html" identifier="doc_4_0">
+    <resource href="webcontent/5-1-cours_webcontent.html" identifier="doc_4_0" type="webcontent">
       <file href="webcontent/5-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/5-2-quizz_auto-evaluation.xml" identifier="doc_4_1">
+    <resource href="auto-evaluation/5-2-quizz_auto-evaluation.xml" identifier="doc_4_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/5-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/5-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_4_2">
+    <resource href="devoirs/5-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_4_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/5-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/5-4-utiliser-les-serveurs-de-noms-correction_correction.html" identifier="doc_4_3">
+    <resource href="correction/5-4-utiliser-les-serveurs-de-noms-correction_correction.html" identifier="doc_4_3" type="webcontent">
       <file href="correction/5-4-utiliser-les-serveurs-de-noms-correction_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/6-1-cours_webcontent.html" identifier="doc_5_0">
+    <resource href="webcontent/6-1-cours_webcontent.html" identifier="doc_5_0" type="webcontent">
       <file href="webcontent/6-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/6-2-quizz_auto-evaluation.xml" identifier="doc_5_1">
+    <resource href="auto-evaluation/6-2-quizz_auto-evaluation.xml" identifier="doc_5_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/6-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/6-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_5_2">
+    <resource href="devoirs/6-3-exercice-dapprofondissement_devoirs.xml" identifier="doc_5_2" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/6-3-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="correction/6-4-wifi-ou-donnees-mobiles-correction_correction.html" identifier="doc_5_3">
+    <resource href="correction/6-4-wifi-ou-donnees-mobiles-correction_correction.html" identifier="doc_5_3" type="webcontent">
       <file href="correction/6-4-wifi-ou-donnees-mobiles-correction_correction.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="devoirs/6-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_5_4">
+    <resource href="devoirs/6-5-exercice-dapprofondissement_devoirs.xml" identifier="doc_5_4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="devoirs/6-5-exercice-dapprofondissement_devoirs.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/6-6-le-saviez-vous_webcontent.html" identifier="doc_5_5">
+    <resource href="webcontent/6-6-le-saviez-vous_webcontent.html" identifier="doc_5_5" type="webcontent">
       <file href="webcontent/6-6-le-saviez-vous_webcontent.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/7-1-cours_webcontent.html" identifier="doc_6_0">
+    <resource href="webcontent/7-1-cours_webcontent.html" identifier="doc_6_0" type="webcontent">
       <file href="webcontent/7-1-cours_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/7-2-quizz_auto-evaluation.xml" identifier="doc_6_1">
+    <resource href="auto-evaluation/7-2-quizz_auto-evaluation.xml" identifier="doc_6_1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
       <file href="auto-evaluation/7-2-quizz_auto-evaluation.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/7-3-le-saviez-vous_webcontent.html" identifier="doc_6_2">
+    <resource href="webcontent/7-3-le-saviez-vous_webcontent.html" identifier="doc_6_2" type="webcontent">
       <file href="webcontent/7-3-le-saviez-vous_webcontent.html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="auto-evaluation/7-4-quizz_auto-evaluation.xml" identifier="doc_6_3">
-      <file href="auto-evaluation/7-4-quizz_auto-evaluation.xml" />
+    <resource href="devoirs/7-4-exercice-dapprofondissement_devoirs.xml" identifier="doc_6_3" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="devoirs/7-4-exercice-dapprofondissement_devoirs.xml" />
     </resource>
   </resources>
 </manifest>

@@ -24,6 +24,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623497 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -36,6 +37,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623515 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -74,6 +76,7 @@
                     "videos": [
                         {
                             "video_link": "https://player.vimeo.com/video/138623558",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -86,6 +89,7 @@
                     "videos": [
                         {
                             "video_link": "https://player.vimeo.com/video/138623609",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -98,6 +102,7 @@
                     "videos": [
                         {
                             "video_link": "https://player.vimeo.com/video/138623583",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -122,6 +127,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623678 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -146,6 +152,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623721 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -158,6 +165,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623756 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -170,6 +178,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623826 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -201,6 +210,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623890 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -261,7 +271,7 @@
                 },
                 {
                     "source_file": "devoirs/6-4-exercice-dapprofondissement_devoirs.html",
-                    "sub_src": "\n::Question de loyaut\u00e9::[html]<p>\u00c9coutez l'enregistrement \"Quand nos smartphones sont espionn\u00e9s\" depuis\n<a href=\"https://interstices.info/jcms/p_83464/quand-nos-smartphones-sont-espionnes\">cette page</a>\npuis r\u00e9pondez \u00e0 la question qui suit.</p>\n\n// question: 298  name: Exemple d'application qui ne respecte pas la loyaut\u00e9\n::Exemple d'application qui ne respecte pas la loyaut\u00e9::[html]<p>Donnez un exemple d'application cit\u00e9e dans l'enregistrement qui ne respecte pas les principes de base de loyaut\u00e9 entre \u00e9diteur d'application et utilisateur.</p>{}\n\n",
+                    "sub_src": "\n::Question de loyaut\u00e9::[html]<p>\u00c9coutez l'enregistrement \"Quand nos smartphones sont espionn\u00e9s\" depuis\n<a href=\"https://interstices.info/jcms/p_83464/quand-nos-smartphones-sont-espionnes\">cette page</a>\npuis r\u00e9pondez \u00e0 la question qui suit.</p>{}\n\n// question: 298  name: Exemple d'application qui ne respecte pas la loyaut\u00e9\n::Exemple d'application qui ne respecte pas la loyaut\u00e9::[html]<p>Donnez un exemple d'application cit\u00e9e dans l'enregistrement qui ne respecte pas les principes de base de loyaut\u00e9 entre \u00e9diteur d'application et utilisateur.</p>{}\n\n",
                     "title": "6.4 Exercice d'approfondissement",
                     "type": "devoirs",
                     "videos": []
@@ -319,6 +329,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/138623956 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]
@@ -331,6 +342,7 @@
                     "videos": [
                         {
                             "video_link": " https://player.vimeo.com/video/139925788 ",
+                            "video_thumbnail": "https://i.vimeocdn.com/video/536038298_640.jpg",
                             "video_title": "video"
                         }
                     ]

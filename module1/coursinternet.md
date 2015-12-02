@@ -1422,7 +1422,7 @@ En faisant appel à vos connaissances du fonctionnement d'internet, vous pouvez 
 
 Une petite remarque pour finir. Rappelez-vous que le DNS sert *uniquement* à traduire un nom en adresse IP. Si vous connaissez directement l'adresse IP d'une machine qui vous intéresse, bloquer le DNS ne vous empêchera pas d'y accéder. Pour vous interdire tout accès à cette machine, il faut filtrer vos messages sur un certain nombre de routeurs permettant d'y accéder. L'autorité de **contrôle des routeurs** est donc tout aussi importante que l'autorité de **contrôle des serveurs DNS**.
 
-``` activité
+``` activité-avancée
 ::L'ICANN et la CNIL::
 [markdown]
 Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.

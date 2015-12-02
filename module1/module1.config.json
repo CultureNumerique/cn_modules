@@ -52,7 +52,7 @@
                 },
                 {
                     "source_file": "devoirs/1-5-exercice-dapprofondissement_devoirs.html",
-                    "sub_src": "\n::Le num\u00e9rique au quotidien::\nDu num\u00e9rique partout autour de nous, tous les jours ...\nLes microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples o\u00f9 le num\u00e9rique a permis des \u00e9volutions notables :\n    - Domotique\n    - Transports\n    - V\u00eatements\n    - M\u00e9dical / param\u00e9dical\nApr\u00e8s avoir effectu\u00e9 vos recherches, copier dans la fen\u00eatre de rendu 1 lien pour au moins 3 des 4 th\u00e8mes propos\u00e9s (un lien par th\u00e8me).\n",
+                    "sub_src": "\n::Le num\u00e9rique au quotidien::\nDu num\u00e9rique partout autour de nous, tous les jours ...\nLes microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples o\u00f9 le num\u00e9rique a permis des \u00e9volutions notables :\n    - Domotique\n    - Transports\n    - V\u00eatements\n    - M\u00e9dical / param\u00e9dical\nApr\u00e8s avoir effectu\u00e9 vos recherches, copier dans la fen\u00eatre de rendu 1 lien pour au moins 3 des 4 th\u00e8mes propos\u00e9s (un lien par th\u00e8me).{}\n",
                     "title": "1.5 Exercice d'approfondissement",
                     "type": "devoirs",
                     "videos": []
@@ -402,10 +402,10 @@
                     "videos": []
                 },
                 {
-                    "source_file": "auto-evaluation/7-4-quizz_auto-evaluation.html",
+                    "source_file": "devoirs/7-4-exercice-dapprofondissement_devoirs.html",
                     "sub_src": "\n::L'ICANN et la CNIL::\n[markdown]\nInternet n'est pas un monde totalement libre et sans loi comme on pourrait \u00eatre tent\u00e9 de le croire. De grands acteurs internationaux et nationaux participent de la r\u00e9gulation d'internet. Nous vous proposons ici d'en d\u00e9couvrir deux.\nEn utilisant les ressources suivantes (et d'autres) :\n    - [http://fr.wikipedia.org/wiki/Domain_Name_System](http://fr.wikipedia.org/wiki/Domain_Name_System)\n    - [http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)\n    - [http://www.cnil.fr/](http://www.cnil.fr/)\n    - [http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf](http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf)\ncherchez les r\u00e9ponses aux questions suivantes :\n**domaines de premier niveau**\n        - Qu'est un domaine de premier niveau ?\n        - Donnez quelques exemples.\n        - Qui les g\u00e8re ?\n        - Qu'en pensez-vous ?\n**la CNIL**\n        - Quel est le r\u00f4le de la CNIL ?\n        - Avec combien d'employ\u00e9s remplit-elle ses missions ?\n        - Qu'en pensez-vous ?\n{\n####**Domaines de premier niveau**\nLes domaines de premier niveau sont les plus \u00e9lev\u00e9s dans la hi\u00e9rarchie des noms de domaines. Ce sont notamment les domaines identifiants un pays ( `.fr, .de, .uk`...) ou les domaines `.org` pour les organisations et `.com` pour les sites \u00e0 caract\u00e8re commercial. Chacun de ces domaines est g\u00e9r\u00e9 par une organisation propre, mais c'est un organisme unique, *l'ICANN*, qui d\u00e9l\u00e8gue cette gestion aux autres organismes.\n**La CNIL**\nLa CNIL (*Commission Nationale de l'Informatique et des Libert\u00e9s*) est l'instance fran\u00e7aise charg\u00e9e de veiller au respect des libert\u00e9s et de la vie priv\u00e9e sur internet. \u00c0 ce titre, elle r\u00e9gule notamment l'usage des donn\u00e9es personnelles et traces que tout un chacun laisse lorsqu'il utilise internet.\nAu 20 juillet 2013, la CNIL \u00e9tait compos\u00e9e de 17 membres et 174 agents. \n}\n\n",
-                    "title": "7.4 Quizz",
-                    "type": "auto-evaluation",
+                    "title": "7.4 Exercice d'approfondissement",
+                    "type": "devoirs",
                     "videos": []
                 }
             ],

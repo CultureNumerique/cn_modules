@@ -22,7 +22,7 @@ from lxml import etree
 from lxml import html
 from slugify import slugify
 
-from fromGIFT import extract_questions, process_questions
+from scripts.fromGIFT import extract_questions, process_questions
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
@@ -295,10 +295,14 @@ def process_md(md_src, current_dir):
             # change relative media links from media/ to ../media/
             html_src = html_src.replace('media/', '../media/')
             # add "target="_blank" to all anchors
-            tree = html.fromstring(html_src)
-            for link in tree.xpath('//a'):
-                link.attrib['target']="_blank"
-            html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
+            try:
+                tree = html.fromstring(html_src)
+                for link in tree.xpath('//a'):
+                    link.attrib['target']="_blank"
+                html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
+            except:
+                print ("=== Error finding anchors in html src: %s" % html_src)
+                pass
             # write html file
             write_file(html_src, current_dir, target_folder, filename)
 

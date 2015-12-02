@@ -934,7 +934,7 @@ des formules mathématiques.
 
 ```activité-avancée 
 - manipulations images svg :
-http://www.w3schools.com/svg/svg_text.asp
+http://www.w3schools.com/svg/svg_text.asp{}
 ```
 
 ## les images matricielles

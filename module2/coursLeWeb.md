@@ -675,7 +675,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
 ```activité-avancée
 ::Question de loyauté::[html]<p>Écoutez l'enregistrement "Quand nos smartphones sont espionnés" depuis
 <a href="https://interstices.info/jcms/p_83464/quand-nos-smartphones-sont-espionnes">cette page</a>
-puis répondez à la question qui suit.</p>
+puis répondez à la question qui suit.</p>{}
 
 // question: 298  name: Exemple d'application qui ne respecte pas la loyauté
 ::Exemple d'application qui ne respecte pas la loyauté::[html]<p>Donnez un exemple d'application citée dans l'enregistrement qui ne respecte pas les principes de base de loyauté entre éditeur d'application et utilisateur.</p>{}

@@ -12,6 +12,7 @@ nombres.</p>#<p>Oui, comme un ordinateur ne manipule que des nombres,
 tout doit être représenté sous forme de nombres être manipulé par un ordinateur.</p> 
 ####<p>Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler.</p> }
 
+
 ::Numérisation::
 [html]<p>Que signifie <em>numérisation</em> ?</p>{
 =<p>L'opération qui consiste à représenter sous forme de nombres une
@@ -19,13 +20,15 @@ information quelle qu'elle soit.</p>#<p>Oui !</p>
 ~<p>L'opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>#<p>Non, citer tous les nombres c'est compter...</p>
 ####<p>La numérisation est l'opération qui consiste à représenter sous forme de nombres une information, quelle qu'elle soit.</p> }
 
+
 ::Où sont les processeurs ?::
 [html]<p>Parmi ces objets, quels sont ceux équipés de
-processeur(s) \:</p>{ ~%16.66667%<p>tablettes</p>
+processeur(s) </p>{ ~%16.66667%<p>tablettes</p>
 ~%16.66667%<p>smartphones</p> ~%16.66667%<p>box ADSL</p>
 ~%16.66667%<p>lecteur mp3</p> ~%16.66667%<p>ordinateur</p>
 ~%16.66667%<p>calculatrice</p> ~<p>aucun</p>#<p>Tous !</p> ####<p>Tous
 ces objets sont équipés de micro-processeurs !</p> }
+
 
 
 $CATEGORY: $course$/Quiz Bank '1.3 Exercice d'approfondissement'
@@ -49,6 +52,7 @@ La liste est non exhaustive et vous pouvez vous intéresser à d'autres
 domaines...
 
 
+
 $CATEGORY: $course$/Quiz Bank '1.5 Exercice d'approfondissement'
 
 
@@ -59,30 +63,30 @@ Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun de
     - Transports
     - Vêtements
     - Médical / paramédical
-Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
+Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).{}
+
 
 
 $CATEGORY: $course$/Quiz Bank '1.7 Exercice d'approfondissement'
 
 
 ::Le numérique dans la société::
-[markdown]
-Le numérique, un enjeu pour les **citoyens du XXIème siècle** ...
-Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités** des applications développées. Nous vous invitons à vous **documenter** et à réfléchir aux questions suivantes :
- - Dans la **gestion de l‘énergie**: qu'est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
-- En **politique et média** : Qu'est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l'a rendue possible / facile ?
-- En **citoyenneté** : Que signifie **vote électronique** et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un *avantage* et un *inconvénient*.
-Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
-{####[markdown]
-Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
-- À propos de la troisième révolution industrielle :
-  - [Troisième révolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
-  - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
-- En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
-  - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)
-- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
-  - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
-}
+[html]
+<p>Le numérique, un enjeu pour les <strong>citoyens du XXIème siècle</strong> ...<br />
+Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux <strong>finalités</strong> des applications développées. Nous vous invitons à vous <strong>documenter</strong> et à réfléchir aux questions suivantes :<br />
+ - Dans la <strong>gestion de l‘énergie</strong>: qu'est-ce que la <strong>troisième révolution industrielle</strong> et pourquoi le numérique y contribue-t-il ?<br />
+- En <strong>politique et média</strong> : Qu'est-ce que la <strong>vérification par les faits</strong> (<em>fact-checking</em> en anglais) ? En quoi le numérique l'a rendue possible / facile ?<br />
+- En <strong>citoyenneté</strong> : Que signifie <strong>vote électronique</strong> et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un <em>avantage</em> et un <em>inconvénient</em>.<br />
+Après avoir fait vos recherches, répondez aux questions posées en <strong>quelques lignes</strong> et en indiquant les <strong>liens</strong> où vous avez trouvé ces informations.</p>{####[html]
+<p>Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :<br />
+- À propos de la troisième révolution industrielle :<br />
+  - <a href="http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle">Troisième révolution industrielle</a><br />
+  - <a href="http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr">pasdecalais</a><br />
+- En <strong>politique et média</strong> : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?<br />
+  - <a href="http://fr.wikipedia.org/wiki/Vérification_par_les_faits">vérification par les faits</a><br />
+- En <strong>citoyenneté</strong> : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.<br />
+  - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)</p>}
+
 
 
 $CATEGORY: $course$/Quiz Bank '2.2 Quizz'
@@ -95,6 +99,7 @@ $CATEGORY: $course$/Quiz Bank '2.2 Quizz'
 fin de la seconde guerre mondiale que les premiers ordinateurs sont
 apparus.</p> }
 
+
 ::(Q2/2)::[html]<p>Que dit la loi de Moore ?</p>{ ~<p>Que s'il existe au
 moins deux façons de faire quelque chose et qu'au moins l'une de ces
 façons peut entraîner une catastrophe, il se trouvera forcément
@@ -104,10 +109,10 @@ les 2 ans environ.</p>#<p>Exact !</p> ####<p>La puissance d'un
 ordinateur double environ tous les 2 ans.</p> }
 
 
+
 $CATEGORY: $course$/Quiz Bank '2.3 Quizz'
 
 
-// question: 165000 name: 1.2.2 Quizz (Q1/2) ::1.2.2 Quizz
 ::(Q1/2)::[html]<p>Entre mon ordinateur et l'ordinateur de mon père qui
 ont 12 ans d'écart, quelle est la différence de puissance à laquelle
 on peut s'attendre ?</p>{ ~<p>Ils sont tous les deux aussi puissants,
@@ -116,22 +121,20 @@ on peut s'attendre ?</p>{ ~<p>Ils sont tous les deux aussi puissants,
 que ça...</p> =<p>Mon ordinateur est environ 60 fois plus
 puissant</p>#<p>Tout à fait !</p> ~<p>Mon ordinateur est environ 150
 fois plus puissant.</p>#<p>Quand même pas tant que ça !</p> ####<p>2
-ans \: x 2<br />4 ans \: x 4<br />6 ans \: x 8<br />8 ans \: x1 6<br
-/>10 ans \: x 32 <br /><strong>12 ans \: x 64</strong></p>\n<p>En
-d'autres mots un traitement qui prenait <strong>30 min</strong> avec
-l'ordinateur de mon père s'effectue en <strong>28 s</strong> sur le
+ans  x 2<br />4 ans  x 4<br />6 ans  x 8<br />8 ans  x1 6<br
+/>10 ans  x 32 <br />12 ans  x 64</p>\n<p>En
+d'autres mots un traitement qui prenait 30 min avec
+l'ordinateur de mon père s'effectue en 28 s sur le
 mien !</p> }
 
 
-// question: 165001 name: 1.2.2 Quizz (Q2/2) ::1.2.2 Quizz
 ::(Q2/2)::[html]<p>D'où vient le mot "bug" ?<br />Il est malheureusement
 courant d'être confronté à des programmes <em>bugués</em>, c'est à dire des
 programmes qui ne font pas ce qu'ils sont sensés faire.<br />Mais
 savez-vous d'où vient le terme <em>bug</em> ?</p>
 { =<p>En anglais, bug signifie insecte. Un insecte s'était glissé dans le
 mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un
-relais et provoqué une panne.</p>#<p><span style\="color\:
-\#000000;">En effet, il s'agissait d'une mite.<br /></span></p>
+relais et provoqué une panne.</p>#<p>En effet, il s'agissait d'une mite.<br /></p>
 ~<p>Bug était le surnom d'un des premiers programmeurs chez
 Microsoft, il était réputé pour commettre beaucoup
 d'erreurs.</p>#<p>Non, cherchez bien, c'est sur le web !</p> 
@@ -145,23 +148,24 @@ avaient pris l'habitude d'appeler Bugs leurs erreurs de
 programmation.</p>#<p>Non, cherchez bien, c'est sur le web !</p>
 ####<p>Le premier bug a été causé par
 une mite :<img
-src\="https\://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg"
+src\="https//ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/images/culture-numerique/illustrations-questions/S2/TheFirstBug_1947.jpg"
 alt\="premier bug" width\="300" height\="213" /></p>}
+
 
 
 $CATEGORY: $course$/Quiz Bank '2.4 Exercice d'approfondissement'
 
 
-::Des personnages importants::[markdown]
-Tout ne s'est pas fait en un jour, ...
-Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
-Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
-- [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)
-- [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)
-- [Alan Turing] (http://fr.wikipedia.org/wiki/Alan_Turing)
-- [John Von Neuman] (http://fr.wikipedia.org/wiki/John_von_Neumann)
-Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, **l'homme** et la **machine**, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
-Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.
+::Des personnages importants::[html]
+<p>Tout ne s'est pas fait en un jour, ...<br />
+Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux <strong>chercheurs</strong> et <strong>ingénieurs</strong> ont contribué au <strong>développement</strong> des <strong>idées</strong> et des <strong>machines</strong>.<br />
+Nous vous proposons de faire une recherche sur <strong>4 personnes</strong>, dont 2 <strong>femmes</strong> qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :<br />
+- [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)<br />
+- [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)<br />
+- [Alan Turing] (http://fr.wikipedia.org/wiki/Alan_Turing)<br />
+- [John Von Neuman] (http://fr.wikipedia.org/wiki/John_von_Neumann)<br />
+Par ailleurs, l'un de ces personnages est étroitement lié à une machine : <strong>ENIGMA</strong>. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, <strong>l'homme</strong> et la <strong>machine</strong>, sont les héros du film <em>The imitation Game</em> sorti sur les écrans français en janvier 2015.<br />
+Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en <strong>quelques lignes</strong> en les resituant chronologiquement.</p>
 
 
 $CATEGORY: $course$/Quiz Bank '2.6 Exercice d'approfondissement'
@@ -181,24 +185,25 @@ Essayez de **tracer un diagramme** ou une courbe pour **représenter** cette **�
 {}
 
 
+
 $CATEGORY: $course$/Quiz Bank '2.8 Exercice d'approfondissement'
 
 
 ::D'où vient le PC ?::
-[markdown]
-![Francois Gernelle](media/FrancoisGernelle.jpg)
-**L'Ordinateur personnel**
-Historiquement, les premiers ordinateurs étaient de **très grosses machines**, appelés *MainFrame*, occupant des salles entières et dédiées à des traitements de gestion. La **miniaturisation** a entraîné l'apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C'est la naissance de la *deuxième ère* de l'informatique.
-C'est au début des années **70**,  qu'un français, **François Gernelle** (photo),  a breveté l'idée d'**ordinateur personnel**.
-Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d'un **autre modèle** d'ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
-À l'aide de ressources telles que :
-- [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
-faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes
-    - En quelle **année** est-il apparu ?
-    - Quelle **quantité** en a-t-on fabriqué ?
-    - Quelle était la taille de son **Disque dur** ?
-    - Pourquoi le `PC` d'`IBM` est-il resté dans l'histoire ?
-{}
+[html]
+<p><img alt="Francois Gernelle" src="media/FrancoisGernelle.jpg" /><br />
+<strong>L'Ordinateur personnel</strong><br />
+Historiquement, les premiers ordinateurs étaient de <strong>très grosses machines</strong>, appelés <em>MainFrame</em>, occupant des salles entières et dédiées à des traitements de gestion. La <strong>miniaturisation</strong> a entraîné l'apparition de nouveaux ordinateurs pouvant simplement être posés sur des <strong>bureaux</strong>. C'est la naissance de la <em>deuxième ère</em> de l'informatique.<br />
+C'est au début des années <strong>70</strong>,  qu'un français, <strong>François Gernelle</strong> (photo),  a breveté l'idée d'<strong>ordinateur personnel</strong>.<br />
+Mais c'est au début des années <strong>80</strong>, qu'une grande entreprise américaine du secteur informatique, <code>IBM</code> commence une production massive d'un <strong>autre modèle</strong> d'ordinateurs personnels qui lui assure un <strong>succès commercial</strong> important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par <code>IBM</code>: le <strong>PC</strong> (<em>Personnal Computer</em>).<br />
+À l'aide de ressources telles que :<br />
+- <a href="http://fr.wikipedia.org/wiki/IBM_PC">http://fr.wikipedia.org/wiki/IBM_PC</a><br />
+faites des recherches sur l'<code>IBM - PC</code> pour répondre aux questions suivantes<br />
+    - En quelle <strong>année</strong> est-il apparu ?<br />
+    - Quelle <strong>quantité</strong> en a-t-on fabriqué ?<br />
+    - Quelle était la taille de son <strong>Disque dur</strong> ?<br />
+    - Pourquoi le <code>PC</code> d'<code>IBM</code> est-il resté dans l'histoire ?</p>{}
+
 
 
 $CATEGORY: $course$/Quiz Bank '2.10 Exercice d'approfondissement'
@@ -220,12 +225,13 @@ Après avoir effectué vos recherches, répondez aux questions.
 {}
 
 
+
 $CATEGORY: $course$/Quiz Bank '3.2 Quizz'
 
 
 ::signification d'internet::
 [html]<p>Que signifie internet ?</p>{ 
-~<p>Il s'agit de la contraction des mots anglais \: "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p> 
+~<p>Il s'agit de la contraction des mots anglais  "<em>international</em>" et "<em>network</em>" (réseau international).</p>#<p>Ça aurait pu, mais non !</p> 
 =<p>Il s'agit de la contraction des mots "<em>interconnection</em>" et
 "<em>networks</em>" (interconnexion de réseaux).</p>#<p>Exactement
 !</p> 
@@ -243,7 +249,7 @@ la plus proche)</p>{
 =<p>1970</p>#<p>Oui, c'est cela.</p>
 ~<p>1990</p>#<p>Non, c'est trop récent...</p> 
 ~<p>2005</p>#<p>Aussi tard ?</p> 
-####<p>C'est aux environs de <strong>1970</strong> qu'a été
+####<p>C'est aux environs de 1970 qu'a été
 créé internet.</p> }
 
 
@@ -271,6 +277,7 @@ Après vous être documenté sur ces deux personnages importants, rédigez une c
 {}
 
 
+
 $CATEGORY: $course$/Quiz Bank '3.5 Exercice d'approfondissement'
 
 
@@ -294,10 +301,10 @@ Après avoir effectué vos recherches, répondez à ces questions.
 {}
 
 
+
 $CATEGORY: $course$/Quiz Bank '4.2 Quizz'
 
 
-// question: 165016 name: 1.4.1 Quizz (Q1/3) ::1.4.1 Quizz
 ::(Q1/3)::[html]<p>À quoi sert une adresse IP ?</p>{ =<p>À identifier
 les machines connectées de façon unique.</p>#<p>Oui !</p> ~<p>À
 différencier les gros ordinateurs et les plus petits.</p>#<p>Comment
@@ -306,7 +313,6 @@ tout...</p> ####<p>Une adresse IP (Internet Protocol) sert à
 identifier de façon unique les machines connectées.</p> }
 
 
-// question: 165027 name: 1.4.1 Quizz (Q2/3)_NEW ::1.4.1 Quizz
 ::(Q2/3)::[html]<p>À l'aide de quel équipement réalise-t-on
 l'interconnexion de réseaux ?</p>{ ~<p>Une adresse IP</p>#<p>Vous
 devriez revoir la vidéo !</p> ~<p>Un serveur de noms</p>#<p>Non, il ne
@@ -315,7 +321,6 @@ s'agit d'un serveur de noms.</p> =<p>Un routeur</p>#<p>Exact !</p>
 réalise l'interconnexion de réseaux.</p> }
 
 
-// question: 165018 name: 1.4.1 Quizz (Q3/3) ::1.4.1 Quizz
 ::(Q3/3)::[html]<p>Qu'est-ce qu'un serveur de noms ?</p>{ ~<p>Un site
 web qui aide à choisir un prénom pour ses enfants.</p>#<p>C'est une
 blague !</p> ~<p>Un logiciel (pirate) qui permet de trouver les mots
@@ -326,56 +331,57 @@ serveur de noms est une machine qui contient une table d'équivalence
 entre des noms de machines et leur adresse IP.</p> }
 
 
+
 $CATEGORY: $course$/Quiz Bank '4.3 Exercice d'approfondissement'
 
 
 ::Combien y-a-t-il d'adresses IP ?::
-[markdown]
-**Plus assez d'adresses IP ?**
-Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer...
-Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de `IPV4` et `IPV6`.
-Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :
-- Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
-- Nouvelle norme IP version 6 `IPV6`. Combien pourrait-on avoir de numéros IPV6 différents par millimètre carré de la surface de la terre ?
-{}
+[html]
+<p><strong>Plus assez d'adresses IP ?</strong><br />
+Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses <code>IP</code> n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de <strong>pénurie d'adresses IP</strong>. La norme a dû évoluer...<br />
+Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de <code>IPV4</code> et <code>IPV6</code>.<br />
+Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :<br />
+- Dans la norme IP version 4 <code>IPV4</code>, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?<br />
+- Nouvelle norme IP version 6 <code>IPV6</code>. Combien pourrait-on avoir de numéros IPV6 différents par millimètre carré de la surface de la terre ?</p>{}
+
 
 
 $CATEGORY: $course$/Quiz Bank '4.5 Exercice d'approfondissement'
 
 
 ::Les serveurs de noms::
-[markdown]
-Les serveurs de noms (*DNS* en anglais) : un maillon fragile de l'édifice ...
-La **norme** qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les **serveurs racine de DNS** (*Domain Name System*, en français : système de nom de domaine).
-À partir de cette ressource : 
-[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
-faites les recherches nécessaires pour répondre aux questions suivantes :
-- Si ces machines **s'arrêtaient**, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l'impact de cet arrêt ?
-- **Combien** existe-t-il de serveurs racine de DNS ?
-- **Qui** possède ces machines : des états, des organisations, des sociétés privées ?
-- **Où** se trouvent-elles majoritairement ?
-- **Que** s'est-il passé en 2002 et 2007 ?
-{}
+[html]
+<p>Les serveurs de noms (<em>DNS</em> en anglais) : un maillon fragile de l'édifice ...<br />
+La <strong>norme</strong> qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les <strong>serveurs racine de DNS</strong> (<em>Domain Name System</em>, en français : système de nom de domaine).<br />
+À partir de cette ressource : <br />
+[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),<br />
+faites les recherches nécessaires pour répondre aux questions suivantes :<br />
+- Si ces machines <strong>s'arrêtaient</strong>, la traduction des adresses <code>IP</code> en nom et vice-versa s'arrêterait. <strong>À votre avis</strong>, quel serait l'impact de cet arrêt ?<br />
+- <strong>Combien</strong> existe-t-il de serveurs racine de DNS ?<br />
+- <strong>Qui</strong> possède ces machines : des états, des organisations, des sociétés privées ?<br />
+- <strong>Où</strong> se trouvent-elles majoritairement ?<br />
+- <strong>Que</strong> s'est-il passé en 2002 et 2007 ?</p>{}
+
 
 
 $CATEGORY: $course$/Quiz Bank '4.7 Exercice d'approfondissement'
 
 
 ::Panne générale::
-[markdown]
-Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
-![routeurs](media/exoInternet.svg)
-Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. 
-- Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?
-- Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? 
-- Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.
-{
+[html]
+<p>Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. <br />
+<img alt="routeurs" src="media/exoInternet.svg" /><br />
+Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. <br />
+- Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?<br />
+- Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? <br />
+- Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.</p>{
 ####  Si les routeurs C et D tombent en panne le réseau local de A est déconnecté et A ne peut plus communiquer avec B. 
 La même chose se produit si les routeurs H et I tombent en panne. 
 Si F et I tombent en panne, alors les communications passent encore par D, E, K et H.
 Les câbles entre C-F, C-I, D-E, de la même façon isolent le réseau de A.
 A-C-I-B ; A-C-F-I-B ; A-C-F-H-B ; A-C-F-E-K-H-B ; A-D-E-K-H-B ; A-D-E-F-H-B ; A-D-E-F-I-B
 }
+
 
 
 $CATEGORY: $course$/Quiz Bank '5.2 Quizz'
@@ -389,7 +395,8 @@ obtenir pour rejoindre internet ?</p>{
 ~%33.33333%<p>L'adresse d'un serveur de noms.</p>#<p>C'est bien l'un
 des éléments.</p> 
 ~%33.33333%<p>L'adresse d'un routeur.</p>#<p>Oui, mais pas seulement.</p> ~<p>L'accès à un moteur de recherche.</p>#<p>Pas du tout.</p> 
-####<p>En fait, il doit obtenir 3 éléments \: une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur.</p> }
+####<p>En fait, il doit obtenir 3 éléments  une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur.</p> }
+
 
 ::le routeur::
 [html]<p>Pourquoi la machine qui assure l'interconnexion avec
@@ -402,25 +409,26 @@ tout...</p>
 ####<p>Parce que toutes les informations transitent par elle.</p> }
 
 
+
 $CATEGORY: $course$/Quiz Bank '5.3 Exercice d'approfondissement'
 
 
 ::Utiliser les serveurs de noms::
-[markdown]
-Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s'il est possible de les utiliser directement, ils sont assez techniques.
-Nous vous proposons d'utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
-Selon ce site ;
-  - quelle est votre adresse IP ?
-  - où vous trouvez-vous ?
-D'après ce site, où se trouvent les machines suivantes :
-  - [www.wikipedia.org](www.wikipedia.org)
-  - [www.facebook.com](www.facebook.com)
-  - [www.google.com](www.google.com)
-Quelle est l'adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
-**Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d'adresse.
-- Que constatez vous ?
-Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...
-{}
+[html]
+<p>Il existe des <em>outils</em> dans votre ordinateur pour interroger les serveurs de noms et faire donc la <em>conversion</em> entre <code>adresses IP</code> et <code>noms</code>. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s'il est possible de les utiliser directement, ils sont assez techniques.<br />
+Nous vous proposons d'utiliser plutôt un <strong>service</strong> disponible sur internet à travers le navigateur : <a href="http://www.monip.fr">http://www.monip.fr</a><br />
+Selon ce site ;<br />
+  - quelle est votre adresse IP ?<br />
+  - où vous trouvez-vous ?<br />
+D'après ce site, où se trouvent les machines suivantes :<br />
+  - <a href="www.wikipedia.org">www.wikipedia.org</a><br />
+  - <a href="www.facebook.com">www.facebook.com</a><br />
+  - <a href="www.google.com">www.google.com</a><br />
+Quelle est l'adresse IP de la machine qui porte le nom <a href="www.grappa.univ-lille3.fr">www.grappa.univ-lille3.fr</a> ?<br />
+<strong>Copiez</strong> l'adresse IP que vous venez de  trouver dans la <strong>barre d'adresse de votre navigateur.</strong> Dans un autre onglet, <strong>copiez</strong> le <strong>nom</strong> : www.grappa.univ-lille3.fr dans la barre d'adresse.<br />
+- Que constatez vous ?<br />
+Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...</p>{}
+
 
 
 $CATEGORY: $course$/Quiz Bank '6.2 Quizz'
@@ -433,13 +441,13 @@ données et qui peut donc servir pour une connexion internet ?</p>
 ~<p>L'eau dans un tuyau.</p>#<p>Pas à notre connaissance, mais
 pourquoi pas ?</p> 
 ~%20%<p>L'électricité dans les câbles téléphonique.</p>#<p>Oui, l'ADSL</p> 
-~%20%<p>L'électricité dans les câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des prises électriques (Voir \:
-http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)</p>
+~%20%<p>L'électricité dans les câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des prises électriques (Voir 
+http//fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)</p>
 ~%20%<p>La lumière dans les fibres optiques.</p>#<p>Oui, aussi.</p>
 ~%20%<p>Les ondes électromagnétiques dans l'air.</p>#<p>Oui, Wifi,
 bluetooth, réseau téléphonique 2G, 3G, 4G, etc.</p>
-~%20%<p>L'électricité dans les câbles des prises électriques.</p>#<p>Oui, voir \:
-http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
+~%20%<p>L'électricité dans les câbles des prises électriques.</p>#<p>Oui, voir 
+http//fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
 ####<p>Tout, sauf l'eau, évidemment !</p> }
 
 
@@ -458,60 +466,60 @@ désire échanger des messages.</p>#<p>Oui.</p>
 
 
 ::eduroam::
-[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>
+[html]<p>Pour utiliser le wifi à Lille 3 je dois </p>
 {
 =<p>Avoir un compte Lille 3 ou un compte dans une autre
 université.</p>#<p>Exact !</p> 
 ~<p>Payer un abonnement.</p>#<p>Absolument pas, c'est gratuit.</p> ~<p>Aller en cours.</p>#<p>Aucun rapport !</p> 
-~<p>Utiliser un smartphone produit en France.</p>#<p>Aucun rapport !</p> ~<p>Signer la charte graphique de Lille 3.</p>#<p>Non mais signer la charte <em><strong>informatique</strong> </em>Lille 3 est obligatoire...</p>
+~<p>Utiliser un smartphone produit en France.</p>#<p>Aucun rapport !</p> ~<p>Signer la charte graphique de Lille 3.</p>#<p>Non mais signer la charte <em>informatique </em>Lille 3 est obligatoire...</p>
 ####<p>Avoir un compte Lille 3 valide ou un compte dans une autre
 université.</p> }
+
 
 
 $CATEGORY: $course$/Quiz Bank '6.3 Exercice d'approfondissement'
 
 
 ::Wifi ou Données mobiles ?::
-[markdown]
-Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l'un ou avec l'autre ?
-La réponse dépend de trois paramètres :
-    - la **disponibilité** de ces modes de connexions (s'il n'y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
-    - le **prix** de la connexion
-    - la **rapidité** de la connexion
-Imaginons plusieurs situations concrètes :
-1/  je suis chez moi avec un *smartphone*, le domicile est équipée d'une *Box adsl* qui fournit un accès *Wifi*. Ai-je intérêt à me connecter :
-        - avec le réseau de données mobiles (3G ou 4G)
-        - via le Wifi de la maison
-2/ Je suis à *l'université* et je veux me connecter avec mon *smartphone*. Ai-je intérêt à me connecter :
-        - avec le wifi de l'université (réseau eduroam)
-        - avec mon forfait 3G/4G
-3/ Je suis en *voiture* (ce n'est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
-        - en wifi
-        - avec le réseau de données mobiles de mon opérateur téléphonique
-**Classez** ces modes de connexion du plus lent au plus rapide.
-    `3G`
-    `4G`
-    `H+`
-    `E (Edge)` 
-Après avoir **réfléchi** et effectué les **recherches** nécessaires, répondez  aux questions posées.
+[html]
+<p>Les possesseurs de <strong>tablette</strong> ou de <strong>smartphone</strong> peuvent se connecter à internet via le <strong>Wifi</strong> ou le <strong>réseau téléphonique</strong> (<em>données mobiles 3G/4G</em>). Vaut-il mieux se connecter avec l'un ou avec l'autre ?<br />
+La réponse dépend de trois paramètres :<br />
+    - la <strong>disponibilité</strong> de ces modes de connexions (s'il n'y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)<br />
+    - le <strong>prix</strong> de la connexion<br />
+    - la <strong>rapidité</strong> de la connexion<br />
+Imaginons plusieurs situations concrètes :<br />
+1/  je suis chez moi avec un <em>smartphone</em>, le domicile est équipée d'une <em>Box adsl</em> qui fournit un accès <em>Wifi</em>. Ai-je intérêt à me connecter :<br />
+        - avec le réseau de données mobiles (3G ou 4G)<br />
+        - via le Wifi de la maison<br />
+2/ Je suis à <em>l'université</em> et je veux me connecter avec mon <em>smartphone</em>. Ai-je intérêt à me connecter :<br />
+        - avec le wifi de l'université (réseau eduroam)<br />
+        - avec mon forfait 3G/4G<br />
+3/ Je suis en <em>voiture</em> (ce n'est pas moi qui conduis) et je veux consulter mes <em>emails</em> ou faire une <em>recherche</em> sur le net avec mon <em>smartphone</em>, ai-je intérêt à me connecter :<br />
+        - en wifi<br />
+        - avec le réseau de données mobiles de mon opérateur téléphonique<br />
+<strong>Classez</strong> ces modes de connexion du plus lent au plus rapide.<br />
+<code>3G</code><br />
+<code>4G</code><br />
+<code>H+</code><br />
+<code>E (Edge)</code> <br />
+Après avoir <strong>réfléchi</strong> et effectué les <strong>recherches</strong> nécessaires, répondez  aux questions posées.</p>
 
 
 $CATEGORY: $course$/Quiz Bank '6.5 Exercice d'approfondissement'
 
 
 ::Les débits::
-[markdown]
-**Pouvoir évaluer les ordres de grandeur**
-Le **débit** est une des mesures caractérisant la **qualité** d'une connexion. Il mesure la quantité d'information que l'on peut transmettre à chaque seconde. Pour mesurer le débit d'une connexion, il faut d'abord savoir ce qu'est un bit. Un bit est l'élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c'est donc transmettre des bits.
-Généralement le débit est mesuré en bit par seconde `bit/s` ou ses variantes : (kilo-bit par seconde `kbit/s`, mille bits par seconde,  mega-bit par second `Mbit/s`, un million de bits par seconde, giga-bit par seconde `Gbit/s`, un milliard de bits par seconde)
-Du débit, dépend notamment le *temps* nécessaire pour télécharger un morceau de musique ou la qualité d'une vidéo lue en continu.
-Le nombre de bits que l'on peut stocker sur un DVD Blu-ray double couche est 50 gigaoctets (Go), soit 400 gigabits, car un octet est une séquence de 8 bits. Calculer le temps de transmission d'un DVD Blu-ray double couche complet dans les cas suivants:
-    - l'ADSL à 10Mb/s
-    - La fibre à 1Gb/s
-    - Le wifi à 50Mb/s
-    - La 3G à 384 Kb/s
-    - La 4G à 150Mb/s
-{
+[html]
+<p><strong>Pouvoir évaluer les ordres de grandeur</strong><br />
+Le <strong>débit</strong> est une des mesures caractérisant la <strong>qualité</strong> d'une connexion. Il mesure la quantité d'information que l'on peut transmettre à chaque seconde. Pour mesurer le débit d'une connexion, il faut d'abord savoir ce qu'est un bit. Un bit est l'élément d'information de base manipulé par un ordinateur qui ne peut prendre comme valeur que 0 ou 1. Toutes les données dans un ordinateur sont codées en une suite de bits. Transmettre des données numérisées c'est donc transmettre des bits.<br />
+Généralement le débit est mesuré en bit par seconde <code>bit/s</code> ou ses variantes : (kilo-bit par seconde <code>kbit/s</code>, mille bits par seconde,  mega-bit par second <code>Mbit/s</code>, un million de bits par seconde, giga-bit par seconde <code>Gbit/s</code>, un milliard de bits par seconde)<br />
+Du débit, dépend notamment le <em>temps</em> nécessaire pour télécharger un morceau de musique ou la qualité d'une vidéo lue en continu.<br />
+Le nombre de bits que l'on peut stocker sur un DVD Blu-ray double couche est 50 gigaoctets (Go), soit 400 gigabits, car un octet est une séquence de 8 bits. Calculer le temps de transmission d'un DVD Blu-ray double couche complet dans les cas suivants:<br />
+    - l'ADSL à 10Mb/s<br />
+    - La fibre à 1Gb/s<br />
+    - Le wifi à 50Mb/s<br />
+    - La 3G à 384 Kb/s<br />
+    - La 4G à 150Mb/s</p>{
 ####Un DVD Blu-ray double couche a une capacité de 50 gigaoctets (Go), soit 400 gigabits 400 gigabits (Gb), soit encore 400 000 megabits (Mb). Un octet étant une séquence de 8 bits, la capacité s'écrit également 400 000 000 kilobits (Kb).
 Pour obtenir le temps, il faut bien-sûr diviser cette quantité, dans la bonne unité par le débit considéré.
 On obtient:
@@ -524,53 +532,53 @@ Il est donc très rare qu'on échange des vidéos sous le format de ces Blu-ray 
 }
 
 
+
 $CATEGORY: $course$/Quiz Bank '7.2 Quizz'
 
 
-// question: 165024 name: 1.8.1 (Q1/3) ::1.8.1
 ::(Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de
-domaine et les adresses IP ?</p>{ =<p>Au niveau mondial \:</p> ->
-ICANN =<p>Au niveau de la France \:</p> -> AFNIC = -> CNIL
+domaine et les adresses IP ?</p>{ =<p>Au niveau mondial </p> ->
+ICANN =<p>Au niveau de la France </p> -> AFNIC = -> CNIL
 ####<p>ICANN pour le niveau mondial et l'AFNIC pour la France.</p> }
 
-// question: 165028 name: 1.8.1 (Q2/3)_NEW ::1.8.1
+
 ::(Q2/3)_NEW::[html]<p>L'ISO est l'organisation internationale de
 normalisation.</p>{TRUE#<p>Il faut revoir la vidéo...</p>#<p>Exact
 !</p>####<p>Vrai, l'ISO est bien l'organisation internationale de
 normalisation (International Organization for Standardization).<br
 /><br /></p>}
 
-// question: 165029 name: 1.8.1 (Q3/3) Noms pleinement qualifiés_NEW
+
 ::(Q3/3) Noms pleinement qualifiés_NEW::[html]<p>Comment s'écrit
 le nom d'une machine C, située dans un domaine B, lui même dans un
 domaine général A ?</p>{ ~<p>ABC</p> ~<p>ACB</p> =<p>CBA</p>
-~<p>CAB</p> ~<p>BAC</p> ~<p>BCA</p> ####<p>C.B.A \: le nom de la
+~<p>CAB</p> ~<p>BAC</p> ~<p>BCA</p> ####<p>C.B.A  le nom de la
 machine, puis le nom du domaine de 1er niveau et enfin le nom du
 domaine général.</p> }
 
 
-$CATEGORY: $course$/Quiz Bank '7.4 Quizz'
+
+$CATEGORY: $course$/Quiz Bank '7.4 Exercice d'approfondissement'
 
 
 ::L'ICANN et la CNIL::
-[markdown]
-Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.
-En utilisant les ressources suivantes (et d'autres) :
-    - [http://fr.wikipedia.org/wiki/Domain_Name_System](http://fr.wikipedia.org/wiki/Domain_Name_System)
-    - [http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers](http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers)
-    - [http://www.cnil.fr/](http://www.cnil.fr/)
-    - [http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf](http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf)
-cherchez les réponses aux questions suivantes :
-**domaines de premier niveau**
-        - Qu'est un domaine de premier niveau ?
-        - Donnez quelques exemples.
-        - Qui les gère ?
-        - Qu'en pensez-vous ?
-**la CNIL**
-        - Quel est le rôle de la CNIL ?
-        - Avec combien d'employés remplit-elle ses missions ?
-        - Qu'en pensez-vous ?
-{
+[html]
+<p>Internet n'est pas un monde totalement libre et sans loi comme on pourrait être tenté de le croire. De grands acteurs internationaux et nationaux participent de la régulation d'internet. Nous vous proposons ici d'en découvrir deux.<br />
+En utilisant les ressources suivantes (et d'autres) :<br />
+    - <a href="http://fr.wikipedia.org/wiki/Domain_Name_System">http://fr.wikipedia.org/wiki/Domain_Name_System</a><br />
+    - <a href="http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers">http://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers</a><br />
+    - <a href="http://www.cnil.fr/">http://www.cnil.fr/</a><br />
+    - <a href="http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf">http://www.cnil.fr/fileadmin/documents/La_CNIL/publications/CNIL_RA2012_web.pdf</a><br />
+cherchez les réponses aux questions suivantes :<br />
+<strong>domaines de premier niveau</strong><br />
+        - Qu'est un domaine de premier niveau ?<br />
+        - Donnez quelques exemples.<br />
+        - Qui les gère ?<br />
+        - Qu'en pensez-vous ?<br />
+<strong>la CNIL</strong><br />
+        - Quel est le rôle de la CNIL ?<br />
+        - Avec combien d'employés remplit-elle ses missions ?<br />
+        - Qu'en pensez-vous ?</p>{
 ####**Domaines de premier niveau**
 Les domaines de premier niveau sont les plus élevés dans la hiérarchie des noms de domaines. Ce sont notamment les domaines identifiants un pays ( `.fr, .de, .uk`...) ou les domaines `.org` pour les organisations et `.com` pour les sites à caractère commercial. Chacun de ces domaines est géré par une organisation propre, mais c'est un organisme unique, *l'ICANN*, qui délègue cette gestion aux autres organismes.
 **La CNIL**
