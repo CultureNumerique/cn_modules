@@ -13,7 +13,7 @@ donc représenter le roman comme une suite de 0 et de 1 et inversement
 passer de cette suite de 0 et 1 en un texte lisible.
 
 
->[Animation] Peut être des lettres simples en suite de 0 et de 1, et des compositions en mots*composition de suites de 0 et 1...  est-ce qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?  
+>[Animation] Peut être des lettres simples en suite de 0 et de 1, et des compositions en mots*composition de suites de 0 et 1...  est-ce qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?
 
 
 Il faut aussi pouvoir échanger. Plutôt que de se prêter un roman sur
@@ -34,7 +34,7 @@ représentation choisie contient explicitement la désignation du titre
 et de l'auteur.
 
 >[Animation]
- ex d'un roman dont le titre est un nom (Harry Potter vs J.K. Rolling).  
+ ex d'un roman dont le titre est un nom (Harry Potter vs J.K. Rolling).
   
 De même, considérons la classification du roman dans les catégories
 policier, historique ou libertin.  Cette tâche est difficile pour une
@@ -49,7 +49,7 @@ information peut être enrichie pour faciliter les traitements relatifs
 
 
 >[Animation]
-Ici on illustre que dans le codage on ajoute des meta-données.  
+Ici on illustre que dans le codage on ajoute des meta-données.
 
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
@@ -75,7 +75,7 @@ vont gouverner le choix d'une telle représentation :
   réaliser les traitements souhaités ?
 - l'économie : est-elle économe en taille pour permettre un stockage
   et des échanges rapides ?
-- l'efficacité : les traitements envisagés pourront-ils se faire rapidement ?  
+- l'efficacité : les traitements envisagés pourront-ils se faire rapidement ?
 - la sûreté ou la confidentialité : permet-elle de cacher
   l'information ou d'en contrôler les accès ?
 
@@ -103,7 +103,7 @@ numérique multimédia.
 ::Il n'existe qu'une façon de représenter numériquement une image:: 
 {F# représenter une information est le résultat de nombreux choix}
 
-::Représentation des données et traitement informatique sont-ils liés ?::{T}
+::Les traitements possibles sur des données numériques dépendent fortement des choix de représentation::{T}
 
 ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
 #### Le genre, la date de création, ...
