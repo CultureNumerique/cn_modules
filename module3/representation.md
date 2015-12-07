@@ -12,29 +12,16 @@ par une machine pour qu'elle puisse le stocker et l'afficher. Il faut
 donc représenter le roman comme une suite de 0 et de 1 et inversement
 passer de cette suite de 0 et 1 en un texte lisible.
 
-
->[Animation] Peut être des lettres simples en suite de 0 et de 1, et des compositions en mots*composition de suites de 0 et 1...  est-ce qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?
-
-
 Il faut aussi pouvoir échanger. Plutôt que de se prêter un roman sur
 support papier, c'est sa représentation numérique qui sera copiée à
 travers le réseau. Il est donc nécessaire que l'émetteur et le
 récepteur (en l'occurrence les logiciels utilisés par chacun d'eux)
 soient d'accord sur la façon de représenter l'ouvrage.
 
-
->[Animation]
-Ce serait bien de voir différents choix possibles et un
-accord entre deux protagonistes. Donc l'idée de choix et ensuite
-d'accord entre parties.  
-
 Retrouver le titre et l'auteur du roman est une tâche qui vous semble
 évidente. Elle sera rendue plus facile et sûre pour une machine si la
 représentation choisie contient explicitement la désignation du titre
 et de l'auteur.
-
->[Animation]
- ex d'un roman dont le titre est un nom (Harry Potter vs J.K. Rolling).
   
 De même, considérons la classification du roman dans les catégories
 policier, historique ou libertin.  Cette tâche est difficile pour une
@@ -46,10 +33,6 @@ machine sans une représentation adéquate et des informations
 complémentaires. Par conséquent, la représentation numérique d'une
 information peut être enrichie pour faciliter les traitements relatifs
 à de telles tâches.
-
-
->[Animation]
-Ici on illustre que dans le codage on ajoute des meta-données.
 
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
@@ -117,14 +100,12 @@ numérique multimédia.
 
 ```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-[html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
-<ul>
-<li>Qui développe le format `html`</li>
-<li>Depuis quand ce travail sur ce langage HTML existe-t-il ? </li>
-<li>Quels sont les objectifs de cette numérisation ?</li>
-<li>Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ? </li>
-<li>Quelle est la version la plus récente de HTML ? </li>
-</ul>
+[markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes 
+* Qui développe le format `html`
+* Depuis quand ce travail sur ce langage `html` existe-t-il ?
+* Quels sont les objectifs de cette numérisation ?
+* Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
+* Quelle est la version la plus récente de `html` ? 
 {
 #### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
 }
@@ -140,7 +121,7 @@ numérique de document dont une caractéristique essentielle est de
 représenter contenu et structure d'un côté dans le langage `html` et
 présentation d'un autre côté avec une feuille de style `CSS`. Cette
 représentation facilite les traitements et la transmission à travers
-les réseaux et permet l'affichage sur tout type d'écran. Cett`e
+les réseaux et permet l'affichage sur tout type d'écran. Cette
 distinction entre structure, contenu et présentation est plus générale
 et résulte de l'analyse de ce qu'est un document textuel.
 
@@ -150,17 +131,12 @@ présentation.
 
 ```activité
 ::Installer des logiciels:: 
-[html]<p>Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants</p>
-<ul>
-<li>Un éditeur de textes : Nous vous recommandons :
- <ul>
-   <li>Sous linux : <code>gedit</code>  (installé par défaut) ou <code>atom</code> (https:**atom.io)</li>
-   <li>Sous Windows : <code>notepad</code> (installé par défaut) ou <code>atom</code>((https:/atom.io)</li>
-   <li>Sous Mac</li> : <code>yyy</code> (installé par défaut) ou  <code>atom</code>((https:/atom.io)</li>
-   <li>Une solution alternative est d'utiliser l'éditeur de texte  intégré dans <code>owncloud</code>.</li>
- </ul>
-<li>Un traitement de textes. Les exemples seront donnés dans ce cours avec <code>libreoffice</code>. 
-</ul>
+[markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
+* Un éditeur de textes : Nous vous recommandons :
+  * Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
+  * Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
+  * Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
+* Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
 {}
 ```
 
@@ -179,13 +155,13 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 
 ```activité
 ::Éditeur de textes:: 
-[html]<p>Lancer un éditeur de textes et en faire une capture
-  d'écran à déposer en réponse à ce quizz.</p>
+[markdown]Lancer un éditeur de textes et en faire une capture
+  d'écran à déposer en réponse à ce quizz.
 {}
 
 ::Fonctionnalités d'un éditeur de textes:: 
-[html]
-<p>Parmi les fonctionnalités suivantes, lesquelles sont possibles ?  </p> 
+[markdown]
+Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
 ~%25%rechercher et remplacer #très souvent disponible 
@@ -207,9 +183,6 @@ est souvent hiérarchique ou arborescente car il y a des relations
 d'inclusion : un paragraphe dans une sous-section dans une section
 dans le document.
 
->[Animation]
-illustrer hiérarchie et arbre 
-
 Grâce à cette organisation structurelle, de nouveaux traitements sont
 disponibles : extraire le résumé, numéroter les sections, construire
 une table des matières, réordonner des sections avec mise à jour de la
@@ -217,36 +190,31 @@ table des matières, ...
 
 ```activité
 ::La structure d'un document:: 
-[html]<p>Téléchargez le document suivant sur votre machine et ouvrez-le avec <code>libreoffice</code>: http:/culturenumerique.univ-lille3.fr/activitesWeb*textes/representation.odt</p>
-<ul>
-<li>Ouvrez le <em>navigateur</em> (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document. </li>
-<li>Rendre une capture de cette fenêtre de navigateur</li>
-</ul>
+[markdown] Téléchargez le document suivant sur votre machine et ouvrez-le avec `libreoffice` : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
+* Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+* Rendre une capture de cette fenêtre de navigateur
 {}
 
 ::La structure d'une page web::
-<ul>
-<li> à l'aide de firefox, rendez-vous sur la page http:/culture-numerique.univ-lille3.fr/activitesWeb/html*.</li>
-<li>pressez les touches <code>CTRL-MAJ-C</code>. La fenêtre de l'inspecteur de code
-  <code>html</code> s'ouvre.</li>
-<li>observez la structure du document <code>html</code>. Utilisez les petites
-  flèches pour découvrir ou cacher les parties de code <code>html</code> incluses les unes dans les autres.</li>
-<li>Sur quelles petites flèches devez-vous cliquer pour arriver au texte <em>Vous pouvez changer la taille...</em>? 
-<li>La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code <code>html</code>. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.</li>
+*  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
+* Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
+* Observez la structure du document `html`. Utilisez les petites
+  flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
+* Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
+* La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
 {#html/body/section/ul/li}
-
 ```
 
 ```activité-avancée
 ::Réorganiser la structure d'un document::
-Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb*textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du <em>navigateur</em> (touche <code>F5</code>). Rendez une capture d'écran de la structure obtenue visible dans le <em>navigateur</em>.
+Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
 {}
 ```
 
 ## Les méta-donnnées, une vue qualifiée
 
-Une troisième vue découle des besoins lorsqu'on manipule des
-documents : un utilisateur peut souhaiter retrouver la date de
+Une troisième vue découle de besoins que l'on peut illustrer par les
+exemples suivants : un utilisateur peut souhaiter retrouver la date de
 création d'un document, un bibliothécaire cherche des documents par
 auteur, par titre, par mot-clef, par édition et numéro d'édition, ou
 encore par date. Ces éléments ne figurent pas nécessairement dans le
@@ -254,14 +222,9 @@ document mais ils le qualifient. Ce sont des méta-informations (ou
 méta-données), c'est-à-dire des informations à propos des
 informations. Elles forment la **vue qualifiée**** du document. Très
 souvent ces informations sont mémorisées sous la forme de propriétés
-(ou attributs) ayant une valeur.  Par exemple, la propriété **titre** de
-ce document vaut `Culture numérique`, la propriété **datecréation** de
-ce document vaut `10 septembre 2015`, etc...
-
->[Animation]
-je verrais bien en anim des docs papier qu'on range dans une
-pochette avec les meta données qu'on écrit sur la pochette.
-
+(ou attributs) ayant une valeur.  Par exemple, la propriété **titre**
+de ce document vaut `Culture numérique`, la propriété **datecréation**
+de ce document vaut `10 septembre 2015`, etc...
 
 Grâce à cette vue qualifiée et ces méta-données, les traitements sur
 des ensembles de documents sont facilités : on peut classer par
@@ -269,28 +232,26 @@ auteur, rechercher par titre, ordonner des versions par date, ...
 
 ```activité 
 ::La vue qualifiée:: 
-Dans le traitement de texte, regarder les propriétés du
+[markdown]Dans le traitement de texte, regarder les propriétés du
 document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-<ul>
-  <li>Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  
-  </li>
-</ul>
+* Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
 {}
 ```
 
 ```activité
 ::Uniquement des méta-données:: 
-[html]
-<p>Pour certaines applications, un document un document textuel peut se
+[markdown]
+Pour certaines applications, un document un document textuel peut se
 résumer uniquement à ses méta-données. C'est le cas des notices
 bibliographiques où la plus grande partie des fonds n'est pas
 numérisée et donc pour lesquelles le contenu des livres n'est pas
-représenté numériquement. </p> 
-<p>Rendez-vous sur le site de la
+représenté numériquement.
+
+* Rendez-vous sur le site de la
 bibliothèque de l'université dans l'interface de recherche de
-livres.</p> <ul> <li>Indiquez sur quels critères vous pouvez effectuer
-une recherche</li>
-</ul>.  
+livres.
+* Indiquez sur quels critères vous pouvez effectuer
+une recherche.
 {}
 ```
 ## La présentation, une vue pas uniquement graphique
@@ -317,29 +278,28 @@ pour impression et lecture diffère de la forme d'un document pour
 affichage sur écran. La forme peut dépendre de l'objectif de
 communication visé.
 
-``` 
-[idée activité]
-on peut remettre une couche html et css. On peut
-montrer des documents du Web sous différentes formes. On peut montrer
-un document Latex et faire découvrir sa structure, puis montrer le pdf
-correspondant. On peut ajouter twocolumn et montrer le résultat. La
-même chose avec document OpenOffice et deux styles (cf après mais par
-expérience ce n'est pas facile)
+```activité
+::Le jardin zen:: 
+[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
+* Sur le web, la beauté des CSS
+  * http://www.csszengarden.com/tr/francais/
+  * http://www.csszengarden.com/tr/fr/221/
+  * http://www.csszengarden.com/tr/fr/219/
+  Entre ces différents designs, qu'est-ce qui change ?
+{
+~%-25% La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
+~%-25% Le contenu#non, lisez bien, les textes sont les mêmes!
+~%100% La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
+}
+```
 
-une activité qui montre que forme n'est pas structure.
-- fournir 2 fichiers .odt identiques dans la forme, l'un mis en forme
-  avec le formatage direct (représentation séquentielle) sans aucune
-  structure ni description, l'autre à l'aide de styles (représentation
-  structurée).
-- faire chercher le nombre de mots, de car, un mot particulier,
-  rech/**rempl dans les 2 docs: résultat et facilité identique
-- faire chercher, le nom de l'auteur, l'adresse de l'auteur, le titre,
-  la date de création, les mots clés, le résumé, l'un des 2 avec des
-  métadonnées renseignées l'autre pas
-- passer en mode navigation, demander de modifier la structure (par ex
-  des niveaux)
-- générer une TDM
-- changer le style de tous les parag (taille de typo par ex)
+```activité
+::Mise en forme et structure:: 
+Examinez les deux fichiers suivants.
+* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
+* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
+Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+{}
 ```
 
 ## Un point d'étape 
@@ -354,7 +314,7 @@ Peut-être une anim de rappel
 3. La présentation : l'apparence graphique.
 4. Les méta-données : informations à propos du document, non
    nécessairement affichées ou imprimées mais utiles pour sa gestion,
-   son traitement.  
+   son traitement.
 
    
 Chacune des vues contenu, structure, qualifiée et de présentation est
