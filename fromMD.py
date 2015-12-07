@@ -25,8 +25,8 @@ from slugify import slugify
 from scripts.fromGIFT import extract_questions, process_questions
 
 # Folders created for exporting course elements in a directory corresponding to its type
-FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'videos', 'media', 'webcontent']
-MARKDOWN_EXT = ['markdown.extensions.extra', 'markdown.extensions.nl2br', 'superscript']
+FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'media', 'webcontent']
+MARKDOWN_EXT = ['markdown.extensions.extra', 'superscript']
 VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
 DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
 
@@ -314,19 +314,30 @@ def process_md(md_src, current_dir):
 
 def main(argv):
     """
-        fromMD : take markdown file 'filein' + 'module_folder' and turn it into config json file +
-        html and gift files for further export to HTML or IMSCC moodle archive
-
+        fromMD : 
+        - takes one argument == "module_folder" 
+        - fetches first markdown file in this folder ==  'filein'
+        => output: 
+            + config json file 
+            + html and gift files for further export to HTML or IMSCC moodle archive
     """
-    if len(sys.argv) != 3:
-        print(" requires 2 arguments (file in + module_folder)")
+    if len(sys.argv) != 2:
+        print(" requires 1 argument == module_folder")
         return False
-    filein = sys.argv[1]
-    module_folder = sys.argv[2]
-    if '.md' not in filein:
-        print(" file has to be MarkDown file, ending with '.md'")
+    module_folder = sys.argv[1]
+    
+    # Fetch first md file in module foolder
+    filein = None
+    for file in os.listdir(module_folder):
+        if '.md' in file:
+            filein = os.path.join(module_folder, file)
+            break
+    if not filein:
+        print(" No MarkDown file found, MarkDown file should end with '.md'")
         return false
-
+    else:
+        print ("found MarkDown file : %s" % filein)
+        
     with open(filein, encoding='utf-8') as md_file:
         md_src = md_file.read()
 
