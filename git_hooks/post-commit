@@ -1,4 +1,9 @@
-echo "rebase gh-pages branch with master"
+#!/bin/bash
 git checkout -B gh-pages
-git rebase master
-git checkout master
+for i in module1 module2 module3
+do
+    echo item: $i/$i.html
+    git add -f $i/$i.html
+done
+git commit -m 'updated html files'
+git checkout dev
