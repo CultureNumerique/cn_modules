@@ -13,28 +13,17 @@ donc représenter le roman comme une suite de 0 et de 1 et inversement
 passer de cette suite de 0 et 1 en un texte lisible.
 
 
->[Animation] Peut être des lettres simples en suite de 0 et de 1, et des compositions en mots*composition de suites de 0 et 1...  est-ce qu'on fait passer l'idée de coder*décoder et sa contraction en codec ?  
-
-
 Il faut aussi pouvoir échanger. Plutôt que de se prêter un roman sur
 support papier, c'est sa représentation numérique qui sera copiée à
 travers le réseau. Il est donc nécessaire que l'émetteur et le
 récepteur (en l'occurrence les logiciels utilisés par chacun d'eux)
-soient d'accord sur la façon de représenter l'ouvrage.
-
-
->[Animation]
-Ce serait bien de voir différents choix possibles et un
-accord entre deux protagonistes. Donc l'idée de choix et ensuite
-d'accord entre parties.  
+soient d'accord sur la façon de représenter l'ouvrage. 
 
 Retrouver le titre et l'auteur du roman est une tâche qui vous semble
 évidente. Elle sera rendue plus facile et sûre pour une machine si la
 représentation choisie contient explicitement la désignation du titre
 et de l'auteur.
 
->[Animation]
- ex d'un roman dont le titre est un nom (Harry Potter vs J.K. Rolling).  
   
 De même, considérons la classification du roman dans les catégories
 policier, historique ou libertin.  Cette tâche est difficile pour une
@@ -47,9 +36,6 @@ complémentaires. Par conséquent, la représentation numérique d'une
 information peut être enrichie pour faciliter les traitements relatifs
 à de telles tâches.
 
-
->[Animation]
-Ici on illustre que dans le codage on ajoute des meta-données.  
 
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
@@ -116,7 +102,7 @@ numérique multimédia.
 ```
 
 ```activité-avancée
-::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
+::Représenter et normaliser est une tâche complexe : l'exemple de HTML.::
 [html]<p>En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes </p>
 <ul>
 <li>Qui développe le format `html`</li>
@@ -161,9 +147,9 @@ présentation.
  </ul>
 <li>Un traitement de textes. Les exemples seront donnés dans ce cours avec <code>libreoffice</code>. 
 </ul>
+Nous vous rappelons  par ailleurs que tous ces logiciels sont installés dans les salles en libre accès qui sont à votre disposition dans l'établissement.
 {}
 ```
-
 
 ## Le contenu, une vue séquentielle
 
@@ -189,8 +175,8 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
 ~%25%rechercher et remplacer #très souvent disponible 
-~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches 
-~%25%corriger l'orthographe #certains le font 
+~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches ou alt-flèches
+~%25%corriger l'orthographe #certains le font, s'ils disposent d'un dictionnaire pour la langue utilisée
 ~%-100% mettre en gras #l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
 }
 ```
@@ -206,9 +192,6 @@ et sous-sections, des listes, etc... C'est la vue *structurée*. Elle
 est souvent hiérarchique ou arborescente car il y a des relations
 d'inclusion : un paragraphe dans une sous-section dans une section
 dans le document.
-
->[Animation]
-illustrer hiérarchie et arbre 
 
 Grâce à cette organisation structurelle, de nouveaux traitements sont
 disponibles : extraire le résumé, numéroter les sections, construire
@@ -257,11 +240,6 @@ souvent ces informations sont mémorisées sous la forme de propriétés
 (ou attributs) ayant une valeur.  Par exemple, la propriété **titre** de
 ce document vaut `Culture numérique`, la propriété **datecréation** de
 ce document vaut `10 septembre 2015`, etc...
-
->[Animation]
-je verrais bien en anim des docs papier qu'on range dans une
-pochette avec les meta données qu'on écrit sur la pochette.
-
 
 Grâce à cette vue qualifiée et ces méta-données, les traitements sur
 des ensembles de documents sont facilités : on peut classer par
@@ -603,7 +581,7 @@ chinois, et même Emoji.
 
 
 ```activité 
-- Représenter et normaliser est une tache complexe :
+- Représenter et normaliser est une tâche complexe :
   l'exemple du codage des caractères. Le site montre bien qui est
   dans le consortium et que c'est une structure complexe mais organisée
   qui gère tout cela. A des relations avec W3C et ISO.
@@ -905,7 +883,7 @@ couleur, la position, etc.
 Les logiciels qui affichent ces images *comprennent* et *interprêtent*
 les descriptions, c'est-à-dire calculent le résultat
 visuel. Contrairement aux manipulations des photos, il est
-donc très facile de modifier un élément de l'image indépendemment des
+donc très facile de modifier un élément de l'image indépendamment des
 autres.  
 
 Un avantage très important des images vectorielle réside en leur
@@ -1027,7 +1005,7 @@ imprimant de plus gros pixels, ce qui
 
 Mais on peut aussi effectuer une opération de zoom qui 
 
-### les images CMJN
+### Les images CMJN
 Un autre modèle de couleur est utilisé dans le monde de l'édition, il
 s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
 au modèle RVB, il s'agit de décrire une couleur par combinaison de
