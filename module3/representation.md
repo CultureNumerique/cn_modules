@@ -497,7 +497,7 @@ une très longue durée, l'usage de formats propriétaires repose sur des
 logiciels qui peuvent disparaître ou changer leur règles
 d'utilisation...
 
-Comme pour les infrastructures, l'état et bien d'autres organisations sont conscientes de ces difficultés. Elle produisent souvent des directives, circulaires  pour inciter à utiliser des formats ouverts et libres. Mais il est bien plus difficile de convaincre les utilisateurs souvent plus enclins à continuer selon leurs habitudes, résultant souvent de nombreux efforts d'apprentissage.   
+Comme pour les infrastructures, l'état et bien d'autres organisations sont conscientes de ces difficultés. Elle produisent souvent des directives, circulaires  pour inciter à utiliser des formats ouverts et libres. Mais il est bien plus difficile de convaincre les utilisateurs souvent plus enclins à continuer selon leurs habitudes, résultant souvent de nombreux efforts d'apprentissage.
 
 De votre côté, recevoir une formation indépendante des outils, donc
 plus fondamentale peut contribuer à être moins dépendant et moins
@@ -505,7 +505,9 @@ servile dans ce monde numérique. Mais cela demande un effort
 particulier, une attente moins centrée sur l'immédiat et l'utilitaire,
 un peu moins personnelle car prenant conscience d'enjeux
 communautaires.
-  
+
+
+
 # Documents numériques textuels
 
 Nous avons analysé ce qu'est un document textuel.  Nous avons mis en
@@ -579,6 +581,30 @@ binaire. On peut le faire avec des caractères divers français, arabe,
 chinois, et même Emoji.
 
 
+```activité
+::Unicode::
+[markdown]Qu'est-ce que Unicode ? 
+{~une manière standardisée de dessiner des caractères d'une langue#Non!
+=un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
+
+::Caractère informatique, caractère et glyphe::
+[markdown]En informatique le caractère est un peu différent du caractère en typographie... 
+{=Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture# oui
+=Le caractère informatique peut être invisible#oui
+=Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran#oui
+~Le caractère informatique est une émoticône qui permet de représenter un sentiment.#non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
+}
+
+::Caractères sans glype::
+[markdown]Donner des exemples de caractères non imprimables
+{####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
+
+::Point de codage::
+[markdown]Quel est le point de codage unicode du point d'exclamation et son nom ?
+{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
+```
+
+
 ```activité 
 - Représenter et normaliser est une tache complexe :
   l'exemple du codage des caractères. Le site montre bien qui est
@@ -598,7 +624,8 @@ chinois, et même Emoji.
 - *avancée* on peut faire réfléchir au
   décodage et demander un algorithme de décodage d'un texte en UTF 16,
   puis en UTF8
-```
+  {}
+  ```
   
 ## Textes "simples"
 
