@@ -920,7 +920,7 @@ couleur, la position, etc.
 Les logiciels qui affichent ces images *comprennent* et *interprêtent*
 les descriptions, c'est-à-dire calculent le résultat
 visuel. Contrairement aux manipulations des photos, il est
-donc très facile de modifier un élément de l'image indépendemment des
+donc très facile de modifier un élément de l'image indépendamment des
 autres.  
 
 Un avantage très important des images vectorielle réside en leur
@@ -1042,7 +1042,7 @@ imprimant de plus gros pixels, ce qui
 
 Mais on peut aussi effectuer une opération de zoom qui 
 
-### les images CMJN
+### Les images CMJN
 Un autre modèle de couleur est utilisé dans le monde de l'édition, il
 s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
 au modèle RVB, il s'agit de décrire une couleur par combinaison de

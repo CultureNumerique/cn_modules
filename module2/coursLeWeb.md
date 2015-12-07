@@ -788,7 +788,7 @@ puis répondez à la question qui suit.</p>{}
  faut être en haut de la liste et donc apparaître important aux yeux du
  moteur de recherche. 
 
- De bonnes pratiques en matière de conception de pages web peut y
+ De bonnes pratiques en matière de conception de pages web peuvent y
  contribuer. Puisque toute la chaîne de traitement est automatique, les
  ressources que le moteur analyse et indexe doivent être parfaitement
  intelligibles par la machine. Il est donc très important d'écrire
