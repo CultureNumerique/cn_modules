@@ -28,10 +28,9 @@ FILETYPES = {
 def usage():
     str = """
 Usage:
-   toIMS module_dir config_filein
-
+   toIMS module_dir 
    exporte les fichiers depuis l'arborescence git située dans [module_dir] en
-    suivant les paramètres du fichier de config [config_filein] pour les
+    suivant les paramètres du fichier de config généré  pour les
      comprimer dans une archive [module_dir].imscc.zip
 
 """
@@ -149,14 +148,17 @@ def generateIMSManifest(data):
 
 
 def main(argv):
-    """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
-    if len(sys.argv) != 3:
+    """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle 
+        takes one argument == "module_folder"
+    """
+    if len(sys.argv) != 2:
         usage()
-
-    filein = sys.argv[1]
-    module_dir = sys.argv[2]
+        
+    module_dir = sys.argv[1]
     fileout = module_dir+'.imscc.zip'
-
+    # take config file whose name is built as follows  
+    filein = os.path.join(module_dir, module_dir+'.config.json')
+    
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)

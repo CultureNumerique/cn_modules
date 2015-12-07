@@ -190,6 +190,7 @@ def usage():
     str = """
         Usage:
            toHTML.py config_filein
+           if ommited, default config file is "toHTMLgobal.config.json"
 
            exporte les fichiers depuis l'arborescence git + fichier de config pour en
            faire un fichier HTML module.html pour chaque [module] défini en config
@@ -202,16 +203,21 @@ def main(argv):
         toHTML is a utility to help building HTML export of course material
         given a config file with sections structure + some other parameters
     """
-    if len(sys.argv) != 2:
-        usage()
+    
     # filein is a global config file that gives each module's parameters
-    filein = sys.argv[1]
-    print ("Arguments : filein %s " % (filein))
+    if len(sys.argv) == 2:
+        filein = sys.argv[1]
+    elif len(sys.argv) < 2:
+        filein = 'toHTMLglobal.config.json'
+    else:
+        usage()
+    
     with open(filein, encoding='utf-8') as global_config:
         # load module data from filin
         global_data = json.load(global_config)
     for module in global_data["modules"]:
-        mod_config = module["config"]
+        # config file for eaxh module is nammed [module_folder].config.json
+        mod_config = os.path.join(module["folder"], module["folder"]+'.config.json')
         with open(mod_config, encoding='utf-8') as mod_data_file:
             # load module data from filin
             mod_data = json.load(mod_data_file)
