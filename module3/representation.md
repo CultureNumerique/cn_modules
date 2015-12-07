@@ -88,27 +88,22 @@ numérique multimédia.
 
 ::Les traitements possibles sur des données numériques dépendent fortement des choix de représentation::{T}
 
-::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples:: {
-#### Le genre, la date de création, ...
-}
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples::
+{#### Le genre, la date de création, ...}
 
 ::Donnez quelques exemples de critères qui peuvent gouverner le choix d'une représentation numérique d'une information.::
-{
-#la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...
-} 
+{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...} 
 ```
 
 ```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-[markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes 
+[markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes : 
 * Qui développe le format `html`
 * Depuis quand ce travail sur ce langage `html` existe-t-il ?
 * Quels sont les objectifs de cette numérisation ?
 * Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
 * Quelle est la version la plus récente de `html` ? 
-{
-#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.
-}
+{#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.}
 ``` 
 
 
@@ -202,7 +197,7 @@ table des matières, ...
   flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
 * Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
 * La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
-{#html/body/section/ul/li}
+{####html/body/section/ul/li}
 ```
 
 ```activité-avancée
@@ -252,7 +247,7 @@ bibliothèque de l'université dans l'interface de recherche de
 livres.
 * Indiquez sur quels critères vous pouvez effectuer
 une recherche.
-{}
+{####Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
 ## La présentation, une vue pas uniquement graphique
 
@@ -287,9 +282,9 @@ communication visé.
   * http://www.csszengarden.com/tr/fr/219/
   Entre ces différents designs, qu'est-ce qui change ?
 {
-~%-25% La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
-~%-25% Le contenu#non, lisez bien, les textes sont les mêmes!
-~%100% La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
+~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
+~Le contenu#non, lisez bien, les textes sont les mêmes!
+=La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
 }
 ```
 
@@ -299,7 +294,7 @@ Examinez les deux fichiers suivants.
 * http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
 * http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
 Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
-{}
+{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
 ## Un point d'étape 
@@ -336,6 +331,20 @@ Cette distinction entre le quoi et le comment est, en informatique
 comme dans beaucoup d'autres sciences, une approche essentielle des
 problèmes.
 
+```Activité
+::Que représenter (I) ?::
+[markdown]Pour représenter des caractères, différentes propositions ont été faites. Que permettait de représenter le code Baudot?
+{#### 32 caractères uniquement : les lettres, les chiffres, la ponctuation, et quelques autres  symboles (=, +, -, /, *, &, #...) ; }
+
+::Que représenter (II) ?::
+[markdown]Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
+{#### Les symboles des langues autres que l'américain ne peuvent être représentés.}
+
+::Comment représenter ?::
+[markdown]Trouver plusieurs moyens utilisés pour représenter un texte: un basé sur des sons, un autre basé sur des trous.
+{###Le codage morse ou les cartes perforées sont deux réponses possibles à comment représenter des textes ou des caractères.}
+```
+
 ## Différents formats pour différents usages
 
 Les choix effectués pour répondre à la question **comment représenter
@@ -356,6 +365,7 @@ et les technologies. Par exemple `html` a été défini dans des versions
 successives depuis le début des années 90 jusque `html5`, paru
 en 2014.
 
+
 ## Formats et logiciels
 
 Nous avons expliqué la relation forte entre le choix de la
@@ -363,7 +373,7 @@ représentation et les traitements qui peuvent être faits sur une
 donnée numérique. D'un point de vue très concret, cette relation se
 traduit souvent par la liaison entre un format et une application
 spécifique d'un éditeur logiciel. Par exemple, un document textuel au
-format `doc` est associé au logiciel Word de Microsoft. Il aura
+format `doc` est associé au logiciel `Word` de Microsoft. Il aura
 souvent été créé avec ce logiciel et pourra être lu et modifié avec ce
 logiciel.
 
@@ -385,7 +395,7 @@ raisons :
 1. Tout d'abord, les choix qui ont été opérés pour définir les formats
    ne sont pas toujours compatibles.  On peut donc perdre des
    informations lors de cette conversion.
-2. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas écrire de programme de conversion.
+2. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas toujours écrire de programme de conversion.
 
 Par ailleurs, un document textuel dans un format peut être parfois
 manipulé avec des logiciels différents pour des besoins différents.
@@ -395,6 +405,16 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
+
+```Activité
+::Extensions::
+[markdown] Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
+{####txt}
+
+::Conversions::
+[markdown] Est-il toujours possible de convertir un document d'un format vers un autre format ?
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible.}
+```
 ## Ouvert ou propriétaire
 
 Le processus de choix de représentation et de définition d'un format
@@ -426,22 +446,19 @@ peut-être même pas.
 
 ```activité
 ::Les fichiers d'extension Doc::
-[html] <p>Lisez la page Wikipedia suivante : https://**fr.wikipedia.org/wiki*Doc_%28informatique%29 et répondez aux questions suivantes</p>
-<ol>
-  <li>Est-ce que les fichiers avec l'extension <code>doc</code> désignent  une chose unique ? </li>
-  <li>Est-ce que ce format est ouvert ?</li>
-  <li>Est-ce que ce format est toujours développé ?</li>
-  <li>Est-ce un format adapté à de grands documents ?</li>
-</ol>
+[markdown] Lisez la page Wikipedia suivante : https://en.wikipedia.org/wiki/Doc_%28computing%29 et répondez aux questions suivantes
+{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
+= Est-ce que ce format est toujours développé ?#Oui
+}
 
 ::Les documents au format PDF::
-[html]<p>Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes</p>
-<ol>
- <li>Est-ce un format ouvert ?</li>
- <li>Peut-on lire et écrire du <code>pdf</code> avec des logiciels différents ?</li>
- <li>Que signifie portable ? </li>
- <li>Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?</li>
-</ol>
+[markdown]Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes
+* Est-ce un format ouvert ?
+* Peut-on lire et écrire du `pdf` avec des logiciels différents ?
+* Que signifie portable ?
+* Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+{}
 ```
 
 ## Une minute citoyenne
@@ -1000,9 +1017,3 @@ Une même image peut donc avoir plusieurs représentations dans des
 modèles différents, le choix du codage dépendra de l'utilisation
 désirée.
 
-# Footnotes
-
-
-[fn:9] Pas trop convaincu par la BU...
-
-[fn:1] pixel est la contraction des mots *picture element* 
