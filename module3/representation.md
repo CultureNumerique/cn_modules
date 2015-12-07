@@ -602,10 +602,23 @@ chinois, et même Emoji.
 ::Point de codage::
 [markdown]Quel est le point de codage unicode du point d'exclamation et son nom ?
 {####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
+
+::Encodage d'une page Web::
+[markdown]Dans votre navigateur, ouvrez le menu `affichage/encodage du texte`. Regardez la liste des propositions. Si vous passez de la valeur actuelle à d'autres propositions que constatez-vous ? (N'oubliez pas de repositionner la valeur initiale, sans doute unicode.)
+{
+=l'affichage du texte est transformé#Correct, sans pour autant que le document ait changé.
+~l'interprétation du codage des caractères est resté le même#Non, c'est justement l'inverse qui se produit.
+}
+
 ```
 
+```activité-avancée
+::codage de points de codage::
+[markdown]Quelle est la différence entre UTF-8, UTF-16, unicode ?
+{####Une fois un numéro, le point de codage,  attribué à un caractère il faut décider comment représenter ce numéro en suite de 0 et de 1. C'est le rôle des normes UTF-8 et UTF-16.}
+```
 
-```activité 
+>[Idées activités]
 - Représenter et normaliser est une tache complexe :
   l'exemple du codage des caractères. Le site montre bien qui est
   dans le consortium et que c'est une structure complexe mais organisée
@@ -613,7 +626,7 @@ chinois, et même Emoji.
 - Montrer la ligne avec codage des caractères dans une source
   html. Sur le Web, 85% des docts sont en UTF-8
 - Trouver le point de codage de caractères
-  français, et de caractères de différentes langues.  
+  français, et de caractères de différentes langues.
 - Les codages ont évolué au cours du temps. Une activité
   autour de ASCII et Latin1 ?
 - Les codages sont nombreux. Vous avez déja vu des problèmes
@@ -624,8 +637,6 @@ chinois, et même Emoji.
 - *avancée* on peut faire réfléchir au
   décodage et demander un algorithme de décodage d'un texte en UTF 16,
   puis en UTF8
-  {}
-  ```
   
 ## Textes "simples"
 
