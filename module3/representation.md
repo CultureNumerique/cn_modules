@@ -98,11 +98,11 @@ numérique multimédia.
 ```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
 [markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes : 
-* Qui développe le format `html`
-* Depuis quand ce travail sur ce langage `html` existe-t-il ?
-* Quels sont les objectifs de cette numérisation ?
-* Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
-* Quelle est la version la plus récente de `html` ? 
+- Qui développe le format `html`
+- Depuis quand ce travail sur ce langage `html` existe-t-il ?
+- Quels sont les objectifs de cette numérisation ?
+- Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
+- Quelle est la version la plus récente de `html` ? 
 {#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.}
 ``` 
 
@@ -127,11 +127,11 @@ présentation.
 ```activité
 ::Installer des logiciels:: 
 [markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
-* Un éditeur de textes : Nous vous recommandons :
-  * Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
-  * Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
-  * Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
-* Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
+- Un éditeur de textes : Nous vous recommandons :
+  - Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
+- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
 {}
 ```
 
@@ -186,17 +186,17 @@ table des matières, ...
 ```activité
 ::La structure d'un document:: 
 [markdown] Téléchargez le document suivant sur votre machine et ouvrez-le avec `libreoffice` : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
-* Rendre une capture de cette fenêtre de navigateur
+- Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+- Rendre une capture de cette fenêtre de navigateur
 {}
 
 ::La structure d'une page web::
-*  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
-* Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
-* Observez la structure du document `html`. Utilisez les petites
+-  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
+- Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
+- Observez la structure du document `html`. Utilisez les petites
   flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
-* Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-* La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
 {####html/body/section/ul/li}
 ```
 
@@ -229,7 +229,7 @@ auteur, rechercher par titre, ordonner des versions par date, ...
 ::La vue qualifiée:: 
 [markdown]Dans le traitement de texte, regarder les propriétés du
 document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
+- Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
 {}
 ```
 
@@ -242,10 +242,10 @@ bibliographiques où la plus grande partie des fonds n'est pas
 numérisée et donc pour lesquelles le contenu des livres n'est pas
 représenté numériquement.
 
-* Rendez-vous sur le site de la
+- Rendez-vous sur le site de la
 bibliothèque de l'université dans l'interface de recherche de
 livres.
-* Indiquez sur quels critères vous pouvez effectuer
+- Indiquez sur quels critères vous pouvez effectuer
 une recherche.
 {####Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
@@ -276,10 +276,10 @@ communication visé.
 ```activité
 ::Le jardin zen:: 
 [markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
-* Sur le web, la beauté des CSS
-  * http://www.csszengarden.com/tr/francais/
-  * http://www.csszengarden.com/tr/fr/221/
-  * http://www.csszengarden.com/tr/fr/219/
+- Sur le web, la beauté des CSS
+  - http://www.csszengarden.com/tr/francais/
+  - http://www.csszengarden.com/tr/fr/221/
+  - http://www.csszengarden.com/tr/fr/219/
   Entre ces différents designs, qu'est-ce qui change ?
 {
 ~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
@@ -291,8 +291,8 @@ communication visé.
 ```activité
 ::Mise en forme et structure:: 
 Examinez les deux fichiers suivants.
-* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
+- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
+- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
 Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
@@ -454,10 +454,10 @@ peut-être même pas.
 
 ::Les documents au format PDF::
 [markdown]Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes
-* Est-ce un format ouvert ?
-* Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-* Que signifie portable ?
-* Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
 {}
 ```
 
@@ -616,13 +616,17 @@ chinois, et même Emoji.
 ::codage de points de codage::
 [markdown]Quelle est la différence entre UTF-8, UTF-16, unicode ?
 {####Une fois un numéro, le point de codage,  attribué à un caractère il faut décider comment représenter ce numéro en suite de 0 et de 1. C'est le rôle des normes UTF-8 et UTF-16.}
+
+::Déclaration du codage des caractères dans les pages Web::
+[markdown]Aujourd'hui plus de 80% des pages web sont écrites en UTF-8. Pour vérifier quel encodage des caractères a été choisi pour une page Web, quand la page est bien écrite, elle indique clairement ce choix. En observant le code source (utilisez la séquence de touches `CTRL-U` pour l'obtenir) de la page  http://culturenumerique.univ-lille3.fr/, recopiez la ligne qui déclare cet encodage du jeu de caractères.
+{#### =<meta charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire information à propos de ce document, =charset= est une contraction pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8= spécifie l'encodage choisi.}
 ```
 
 >[Idées activités]
 - Représenter et normaliser est une tache complexe :
   l'exemple du codage des caractères. Le site montre bien qui est
   dans le consortium et que c'est une structure complexe mais organisée
-  qui gère tout cela. A des relations avec W3C et ISO.
+  qui gère tout cela. A des relations avec W3C et ISO. 
 - Montrer la ligne avec codage des caractères dans une source
   html. Sur le Web, 85% des docts sont en UTF-8
 - Trouver le point de codage de caractères
@@ -661,7 +665,18 @@ des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
 
->[Animation]
+```activité
+::Compter les mots::
+[markdown]Dans libreoffice, essayez de saisir les expressions suivantes :
+- Bonjour l'ami.
+- Soyez curieux bien-sûr ; essayez-donc !
+Dans le bas de la fenêtre le logiciel de traitement de textes indique le nombre de mots du document ou d'une sélection. Qu'observez-vous dans ces deux cas ?
+
+Recommencez cette tentative dans un éditeur de textes. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
+{####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ? C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte `gedit` ce choix n'est pas le même.}
+```
+
+>[Idées activités]
 - Activité ou demo sur éditeur de textes et ses fonctionnalités
 - Méta-données sur textes simples. Notez que le compte de
   mots est souvent différent selon le logiciel (gedit vs linux)
@@ -697,6 +712,22 @@ utilisant les fonctions prédéfinies d'un traitement de texte.
 > prendre la forme d'une suite d'actions dans un logiciel de traitement
 > de textes.
 
+```activité-avancée
+::Les paragraphes, structure explicite::
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
+- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
+- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
+- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+{}
+
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, le type de papier, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
+```
+
 ## Textes structurés pour décrire des documents textuels
 
 Pour définir un document textuel, on peut décrire les différentes vues
@@ -712,7 +743,7 @@ partir de sa description.
 
 - *Les langages Wiki* ont été utilisés principalement pour composer
   des pages Web dans un langage simplifié. On utilise des conventions
-  comme : une ligne qui commence par * est un titre, ** pour un
+  comme : une ligne qui commence par `*` est un titre, `**` pour un
   sous-titre. Une ligne blanche sépare les paragraphes. Un programme
   de calcul peut construire une page Web à partir d'une description
   textuelle en langage Wiki.
@@ -725,8 +756,8 @@ partir de sa description.
   entrée le document texte décrivant le document et produit en sortie
   un document lisible et imprimable au format `pdf` respectant ces
   règles d'édition.
-- *Le langage html* utilise des caractères particuliers comme <, > et
-  * pour définir des balises. Par exemple, les balises `<section>` et
+- *Le langage html* utilise des caractères particuliers comme `<`, `>` et
+  `/` pour définir des balises. Par exemple, les balises `<section>` et
   `</section>` permettent de définir une section. Le corps du document
   `html` contient le contenu et la structure. L'entête du document
   contient des méta données comme le codage des caractères utilisé par
@@ -735,12 +766,13 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
-```activité
+
+
+>[Idées activité]
 - Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
 - Éditeur de texte et LateX. Coloration syntaxique. Comprendre et montrer le pdf correspondant. On peut montrer un site LateX en ligne.
 - On peut refaire html et css. Par exemple sur html montrer corps et entête. Montrer les méta-données de l'entête.
 - On doit respecter certaines règles typographiques lorsqu'on décrit un document. Cf document Marc.
-```
 
 ## Traitement de textes
 
@@ -875,12 +907,19 @@ propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
 ```activité
-::Le libre::
-<ul>
-<li>Les personnages: Qui est Richard Stallman ? Qui est Laurence Lessig ?</li>
-<li>Quelles sont les différentes variantes de creative commons?</li>
-<li>Quels sont les 4 principes du logiciel libre (voir le site de l'april : http:**www.april.org) ? </li>
-</ul>
+::Les personnages du libre::
+[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
+{#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
+
+::Creative Commons::
+[markdown]Quelles sont les différentes variantes de creative commons ?
+{#### Six possibilités existent, combinaisons de quatre pôles définissant les différents usages : Attribution : signature de l'auteur initial (obligatoire en droit français) (sigle : BY) ; Non Commercial : interdiction de tirer un profit commercial de l'œuvre sans autorisation de l'auteur (sigle : NC) ; No derivative works : impossibilité d'intégrer tout ou partie dans une œuvre composite ; l'échantillonnage (sampling), par exemple, devenant impossible (sigle : ND) ; Share alike : partage de l'œuvre, avec obligation de rediffuser selon la même licence ou une licence similaire (version ultérieure ou localisée) (sigle : SA)
+}
+
+::Le logiciel libre::
+[markdown]Quels sont les 4 principes du logiciel libre (voir le site de l'April : http://www.april.org) ?
+{#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
+}
 ```
 <!--À discuter
 - Faire réfléchir sur les évolutions récentes de html ? Web
@@ -921,7 +960,7 @@ Les logiciels qui affichent ces images *comprennent* et *interprêtent*
 les descriptions, c'est-à-dire calculent le résultat
 visuel. Contrairement aux manipulations des photos, il est
 donc très facile de modifier un élément de l'image indépendamment des
-autres.  
+autres.
 
 Un avantage très important des images vectorielle réside en leur
 capacité à les afficher à n'importe quelle échelle sans aucune perte
@@ -987,8 +1026,8 @@ lorsque les 3 composantes sont au maximum, cela donne du blanc.
 Si le codage de la couleur a été normalisé, il existe de nombreux
 formats d'images :
 
-* compression
-* transparence
+- compression
+- transparence
 
 ### les méta-données
 Comme pour tous les documents, des méta-données peuvent être associées
