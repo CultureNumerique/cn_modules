@@ -236,12 +236,11 @@ document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/re
 ```activité
 ::Uniquement des méta-données:: 
 [markdown]
-Pour certaines applications, un document un document textuel peut se
+Pour certaines applications, un document textuel peut se
 résumer uniquement à ses méta-données. C'est le cas des notices
 bibliographiques où la plus grande partie des fonds n'est pas
 numérisée et donc pour lesquelles le contenu des livres n'est pas
 représenté numériquement.
-
 - Rendez-vous sur le site de la
 bibliothèque de l'université dans l'interface de recherche de
 livres.
@@ -413,7 +412,7 @@ contribuent à indexer le web.
 
 ::Conversions::
 [markdown] Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible.}
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
 ```
 ## Ouvert ou propriétaire
 
@@ -506,8 +505,6 @@ particulier, une attente moins centrée sur l'immédiat et l'utilitaire,
 un peu moins personnelle car prenant conscience d'enjeux
 communautaires.
 
-
-
 # Documents numériques textuels
 
 Nous avons analysé ce qu'est un document textuel.  Nous avons mis en
@@ -595,7 +592,7 @@ chinois, et même Emoji.
 ~Le caractère informatique est une émoticône qui permet de représenter un sentiment.#non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
 }
 
-::Caractères sans glype::
+::Caractères sans glyphe::
 [markdown]Donner des exemples de caractères non imprimables
 {####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
 
@@ -664,14 +661,14 @@ notion de mot est le résultat d'un traitement par la machine dépendant
 des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
-
+> attention sous `macos`, `texedit` est en double mode : éditeur txt et rtf, en interrupteur. ça peut donc être contre productif. Par ailleurs, il ne sait pas compter les mots, ... et oui c'est top les mac
+  
 ```activité
 ::Compter les mots::
 [markdown]Dans libreoffice, essayez de saisir les expressions suivantes :
 - Bonjour l'ami.
 - Soyez curieux bien-sûr ; essayez-donc !
 Dans le bas de la fenêtre le logiciel de traitement de textes indique le nombre de mots du document ou d'une sélection. Qu'observez-vous dans ces deux cas ?
-
 Recommencez cette tentative dans un éditeur de textes. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
 {####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ? C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte `gedit` ce choix n'est pas le même.}
 ```
@@ -722,10 +719,9 @@ utilisant les fonctions prédéfinies d'un traitement de texte.
 
 ::La ligne n'est pas vraiment un élément structurel::
 [markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
-
 - Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
 - Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
-{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, le type de papier, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
 ```
 
 ## Textes structurés pour décrire des documents textuels
@@ -744,7 +740,7 @@ partir de sa description.
 - *Les langages Wiki* ont été utilisés principalement pour composer
   des pages Web dans un langage simplifié. On utilise des conventions
   comme : une ligne qui commence par `*` est un titre, `**` pour un
-  sous-titre. Une ligne blanche sépare les paragraphes. Un programme
+  sous-titre. Une ligne vide sépare les paragraphes. Un programme
   de calcul peut construire une page Web à partir d'une description
   textuelle en langage Wiki.
 - *Le langage LateX* utilisé pour la composition de documents dans le
@@ -1035,11 +1031,11 @@ nombreuses façons de la  représenter.
 Nous pouvons donc considérer que chaque pixel est une observation
 d'une très petite partie d'une image réelle, comme un tout petit
 échantillon de l'image pris à un endroit précis. Pour ce petit
-échantillon, on mesure et mémorise la couleur. Plus les échantillons
+échantillon, on mesure et mémorise la couleur. Plus les échantillons sont
 nombreux et petits, plus l'image sera fidèle à la réalité, à condition
 que la mesure de la couleur soit également précise.
 
-Ce processus d'échantillonage est bien connu des physiciens auquel
+Ce processus d'échantillonnage est bien connu des physiciens auquel
 nous empruntons le terme. Nous le retrouvons dans toutes les
 représentations de signaux physiques, ici l'image, mais également pour
 les sons, la musique.
@@ -1063,7 +1059,7 @@ chaque échantillon. Dans le cas d'un son on mesure une valeur de note
 {####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
 
 ::La qualité de l'image::
-[markdown]La qualité de l'image va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
+[markdown]La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
 {####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
 ```
 
@@ -1095,12 +1091,12 @@ maximum, cela donne du blanc.
 {####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
 
 ::Les valeurs RGB::
-[markdown]Avec 1 octet par couleur, combien d'octets et combie  de couleurs possibles peuvent être codées ?
+[markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
 {####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
 
 ::Les images CMJN::
 [markdown] Un autre modèle de couleur
-est utilisé dans le monde de l'édition, il s'agit du modèle . Le
+est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le
 principe est similaire au modèle RVB, il s'agit de décrire une couleur
 par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
 correspond aux technologies des écrans, le CMJN est adapté au monde de
