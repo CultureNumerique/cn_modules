@@ -907,12 +907,19 @@ propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
 ```activité
-::Le libre::
-<ul>
-<li>Les personnages: Qui est Richard Stallman ? Qui est Laurence Lessig ?</li>
-<li>Quelles sont les différentes variantes de creative commons?</li>
-<li>Quels sont les 4 principes du logiciel libre (voir le site de l'april : http:**www.april.org) ? </li>
-</ul>
+::Les personnages du libre::
+[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
+{#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
+
+::Creative Commons::
+[markdown]Quelles sont les différentes variantes de creative commons ?
+{#### Six possibilités existent, combinaisons de quatre pôles définissant les différents usages : Attribution : signature de l'auteur initial (obligatoire en droit français) (sigle : BY) ; Non Commercial : interdiction de tirer un profit commercial de l'œuvre sans autorisation de l'auteur (sigle : NC) ; No derivative works : impossibilité d'intégrer tout ou partie dans une œuvre composite ; l'échantillonnage (sampling), par exemple, devenant impossible (sigle : ND) ; Share alike : partage de l'œuvre, avec obligation de rediffuser selon la même licence ou une licence similaire (version ultérieure ou localisée) (sigle : SA)
+}
+
+::Le logiciel libre::
+[markdown]Quels sont les 4 principes du logiciel libre (voir le site de l'April : http://www.april.org) ?
+{#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
+}
 ```
 <!--À discuter
 - Faire réfléchir sur les évolutions récentes de html ? Web
