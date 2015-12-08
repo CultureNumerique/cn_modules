@@ -7,7 +7,6 @@ correction/
 cours/
 module*/*.imscc.zip
 module*/*.config.json
-module*.html
 module*/imsmanifest.xml
 module*/*.gift.txt
 
