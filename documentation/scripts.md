@@ -19,11 +19,12 @@ Sont inclus également quelques autres utilitaires:
 * hooks Git `git_hooks/post-commit` permettant de mettre à jour automatiquement
 la branche gh-pages (cf page Site Vitrine)
 
-# `fromMD`
+## `fromMD`
+Ce script prend 
 ```
-$ python3 fromMD.py moduleX/fichier_markdown.md moduleX
+$ python3 fromMD.py [module_folder]
 ```
 
-# `toHTML`
-# `toIMS`
+## `toHTML`
+## `toIMS`
 

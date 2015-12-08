@@ -13,6 +13,7 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
+import fromMD
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
@@ -149,13 +150,19 @@ def generateIMSManifest(data):
 
 def main(argv):
     """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle 
-        takes one argument == "module_folder"
+        usage:
+        python3 toIMS.py module_folder [OPTIONS]
+        OPTIONS: 
+        -md : parses markdown file found in module_folder given in argument 
     """
     if len(sys.argv) != 2:
         usage()
         
     module_dir = sys.argv[1]
     fileout = module_dir+'.imscc.zip'
+    #  get config file by parsing markdown in module folder
+    # FIXME do it only with an option '-md':
+    fromMD.main([module_dir])
     # take config file whose name is built as follows  
     filein = os.path.join(module_dir, module_dir+'.config.json')
     

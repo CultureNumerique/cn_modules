@@ -14,6 +14,7 @@ from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
 
+import fromMD
 
 def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
@@ -189,25 +190,29 @@ def generateModuleHtml(data, module_folder=False):
 def usage():
     str = """
         Usage:
-           toHTML.py config_filein
-           if ommited, default config file is "toHTMLgobal.config.json"
-
-           exporte les fichiers depuis l'arborescence git + fichier de config pour en
+           toHTML.py config_filein [OPTIONS]
+           - if ommited, default config file is "toHTMLgobal.config.json"
+           - exporte les fichiers depuis l'arborescence git + fichier de config pour en
            faire un fichier HTML module.html pour chaque [module] défini en config
+           
+           OPTIONS: 
+           -md : parses markdown file found in module_folder given in argument 
+           
     """
     print (str)
     exit(1)
 
-def main(argv):
+def main(args):
     """
         toHTML is a utility to help building HTML export of course material
         given a config file with sections structure + some other parameters
+        FIXME : add option -m with module folder to generate all HTML sources + module html file
     """
     
     # filein is a global config file that gives each module's parameters
-    if len(sys.argv) == 2:
-        filein = sys.argv[1]
-    elif len(sys.argv) < 2:
+    if len(args) == 1:
+        filein = args[0]
+    elif len(args) < 1:
         filein = 'toHTMLglobal.config.json'
     else:
         usage()
@@ -216,6 +221,9 @@ def main(argv):
         # load module data from filin
         global_data = json.load(global_config)
     for module in global_data["modules"]:
+        # generate config file with fromMD script/library
+        #if '-md' in sys.argv:
+        fromMD.main([module["folder"]])
         # config file for eaxh module is nammed [module_folder].config.json
         mod_config = os.path.join(module["folder"], module["folder"]+'.config.json')
         with open(mod_config, encoding='utf-8') as mod_data_file:
@@ -228,4 +236,4 @@ def main(argv):
 
 ############### main ################
 if __name__ == "__main__":
-    main(sys.argv)
+    main(sys.argv[1:])
