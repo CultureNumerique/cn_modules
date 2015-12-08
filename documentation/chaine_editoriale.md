@@ -90,7 +90,12 @@ ou
         ```
 
         
-Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. Exemple:
+
+#### Syntaxe GIFT
+
+Ces activités sont rédigées en GIFT; chaque question est séparée par une ligne vide. La syntaxe Gift a été proposé par l'équipde Moodle pour permettre de gagner du temps dans la rédaction de quizz et de tests. Cette syntaxe est disponible sur [cette page](https://docs.moodle.org/28/en/GIFT_format). Il s'agit d'un format "texte" qui peut s'éditer dans n'importe quel "éditeur de texte" (et non dans un "traitement de texte").
+ 
+Exemple:
 
         ```activité-avancée
         
@@ -109,5 +114,42 @@ Ces activités sont rédigées en GIFT; chaque question est séparée par une li
         ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
         }
         ```
+
+#### HTML et MarkDown dans les questions rédigées en GIFT
+
+Dans les questions rédigées en GIFT il est possible de rédiger le texte au format HTML ou Markdown en spécifiant devant chaque bloc la syntaxe ([voir explications à la fin de ce paragraphe](https://docs.moodle.org/28/en/GIFT_format#Percentage_Answer_Weights)). 
+
+Dans le cas du Markdown, il y a cependant une limitation pour les listes (simples ou numérotées). En Markdown il faut laisser une ligne vide avant de commencer une liste:
+```
+Ingrédients:
+
+- carottes
+- pommes de terre
+
+```
+... or dans la spécification GIFT, une ligne vide sépare 2 questions distinctes. Le compromis que nous adoptons ici consiste à dire qu'un simple passage à la ligne est conservé dans l'export texte **pour les activités uniquement et non le reste du texte de cours**. Les listes pourront donc être écrite à l'aide de `-` après un passage à la ligne:
+Par exemple: 
+```
+Ingrédients:
+- carottes
+- pommes de terre
+
+```  
+sera interprété comme ceci (en HTML):
+```
+<p>
+Ingrédients<br />
+- carottes<br />
+- pommes de terre<br />
+</p>
+```
+
+####Export
+
+- site vitrine : Ces activités sont exportés en HTML pour le site vitrine
+- Moodle/IMSCC : dans ce cas, le traitement se fait en 2 étapes:
+    - génération d'un test vide en lieu et place de la sous-section "activité"
+    - aggrégation de toutes les activités dnas un fichier banque de question `questions_bank.gift.txt` disponible dans chaque dossier de module. Le nom de section est ajoutée comme catégorie pour chaque activité. Il est alors possible d'importer la banque de questions, puis d'ajouter pour chaque test (vide) la question correspondante.
+
 
 
