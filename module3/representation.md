@@ -942,6 +942,8 @@ dimensions dans les logiciels spécialisés de design 3D.
 {}
 ```
 
+
+
 Ce type d'image n'est pas adapté à la représentation de photo, la
 complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
