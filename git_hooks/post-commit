@@ -1,4 +1,4 @@
 #!/bin/bash
-git checkout -B gh-pages
-git rebase dev
+git checkout gh-pages
+git merge dev
 git checkout dev
