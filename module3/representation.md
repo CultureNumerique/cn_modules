@@ -935,45 +935,58 @@ bibliothèque.
 # Les images
 
 Nous avons détaillé le cas des documents textuels comme exemple
-générique. Regardons maintenant les différents modes de représentation
-des images. Là aussi de nombreux *formats* sont possibles et la notion
-de *norme* est essentielle pour les mêmes raisons de compatibilité
-et d'interopérabilité. En premier lieu, il convient de différentier les
-images vectorielles qui sont représentées sous forme d'une suite
-d'objets géométriques eux-même représentés à l'aide d'équations
-mathématiques,  des images matricielles qui sont représentées comme
-une suite de points (les *pixels*), chacun d'eux étant décrits par une
-couleur.
+générique de représentation de l'information. Étudions maintenant le
+cas des images pour se persuader que les même principes (de choix,
+d'exigence, de besoins,...) ont conduit à de nombreux *formats*. Ici
+aussi la notion de *norme* est essentielle pour les mêmes raisons de
+compatibilité et d'interopérabilité.
 
-## les images vectorielles
+## Deux approches principales
 
-Les formats d'image vectoriels permettent de "décrire" des formes
-complexes par combinaison de formes simples. La puissance des
-formalismes mathématiques peuvent produire des images d'une grande
-complexité. 
+En premier lieu, il convient de différentier deux types d'images qui
+dérivent de besoins différents, et qui prolonge la distinction entre
+des images représentant une abstraction du réel, en général créés par
+l'homme et des images qui sont des copies fidèles du monde réel.
 
-Les différents objets qui constituent l'image sont décrits dans un
-langage adéquat qui précise pour chacun d'eux, la forme, la dimension, la
-couleur, la position, etc. 
+Dans le premier cas on trouve par exemple des dessins techniques ou
+des cartes. Dans l'autre cas on trouve des images photographiques ou
+des images issues de capteurs, radars, d'imagerie en médecine etc,
+provenant donc de signaux physiques ou ondulatoires.
 
-Les logiciels qui affichent ces images *comprennent* et *interprêtent*
-les descriptions, c'est-à-dire calculent le résultat
-visuel. Contrairement aux manipulations des photos, il est
-donc très facile de modifier un élément de l'image indépendamment des
-autres.
+Les correspondances dans le monde numérique sont les images
+*vectorielles* et les images *matricielles*.
 
-Un avantage très important des images vectorielle réside en leur
-capacité à les afficher à n'importe quelle échelle sans aucune perte
-de qualité. L'affichage est *recalculé* quel que soit le niveau de
-zoom. 
+## Les images vectorielles
 
-Elles peuvent évidemment contenir du texte et sont particulièrement
-adaptées pour représenter des visuels tels que des logos ou des
-dessins *Introduire des exemples* Les images vectorielles sont le plus
-souvent créées à partir de logiciels spécialisés ( *logiciels de
-dessin vectoriels* ).  Notons également que le même type de
-représentation est utilisée pour représenter des objets en 3
-dimensions dans les logiciels spécialisés de design 3D.
+Les images vectorielles sont une représentation numérique d'images
+basée sur des ensembles d'objets abstraits géométriques. Ce sont par
+exemple des lignes, des points, des rectangles, des arcs de cercles,
+etc.  L'idée est ici de *décrire* des formes complexes par combinaison
+de formes simples. Les différents objets qui constituent l'image sont
+décrits dans un langage informatique qui précise pour chacun d'eux, la
+forme, la dimension, la couleur, la position, etc.  La puissance des
+formalismes mathématiques sous-jacents peuvent conduire à produire des
+images d'une grande complexité et même des animations.
+
+Les images vectorielles sont utilisées pour produire des schémas, des
+diagrammes, des cartes etc. Elles peuvent évidemment contenir du texte
+et sont particulièrement adaptées pour représenter des visuels tels
+que des logos. On retrouve ces images et les outils qui permettent de
+les créer dans de nombreuses applications, par exemple dans les
+tableurs, les traitements de textes. Mais elles sont aussi créées à
+partir de logiciels spécialisés : les *logiciels de dessin vectoriels*.
+
+Les logiciels qui affichent et manipulent ces images *comprennent* et
+*interprêtent* les descriptions, c'est-à-dire calculent le résultat
+visuel à partir de la description.  Un avantage très important des
+images vectorielle réside alors en leur capacité à les afficher à
+n'importe quelle échelle sans aucune perte de qualité. L'affichage est
+*recalculé* quel que soit le niveau de zoom. Il est également très
+facile de modifier un élément de l'image indépendamment des autres.
+
+Notons également que le même type de représentation est également
+utilisée pour représenter des objets en 3 dimensions, autrement dit en
+3D.
 
 ```activité
 ::Pierre Bézier::
@@ -981,66 +994,138 @@ dimensions dans les logiciels spécialisés de design 3D.
 {}
 ```
 
-
+<!--
 Ce type d'image n'est pas adapté à la représentation de photo, la
 complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
+-->
 
 ```activité-avancée 
 ::manipulations images svg::
 http://www.w3schools.com/svg/svg_text.asp{}
 ```
 
-## les images matricielles
-À l'inverse, les images matricielles sont particulièrement bien
-adaptées pour représenter les photos. Issues de scanner ou d'appareils
-photos numériques, leur représentation se fait sous la forme d'une
-suite de points (*pixels*[fn:1]) eux-mêmes représentés par une valeur
-de couleur.  L'organisation des pixels est assez simple, ils sont
-ordonnés en ligne et en colonne sous la forme d'une matrice (d'où le
-nom *images matricielles*), ce qui signifie simplement que toutes les
-lignes et toutes les colonnes ont le même nombre de points. 
+## Les images matricielles
 
-En revanche le codage des valeurs de couleur doit une nouvelle fois
-faire l'objet de normes. En effet, il existe de très nombreuses façons
-de représenter la couleur. Ainsi depuis longtemps les peintres ont
-tenté de *créer* des nuances en mélangeant des couleurs dites
-primaires. Ce procédé est comparable à celui utilisé pour coder les
-couleurs des pixels d'une image numérique.
+À l'inverse, les images matricielles sont représentées comme un
+ensemble de points de couleur, juxtaposés, et souvent minuscules. Si
+les points sont suffisamment petits et nombreux, notre oeil ne
+parvient pas à les distinguer. Ce principe est largement utilisé
+depuis bien longtemps et dans d'autres domaines que le numérique comme
+la photographie, les écrans de télévision, l'imprimerie.
+
+Aujourd'hui dans notre monde numérique, les images matricielles sont
+particulièrement bien adaptées pour représenter les photos.  Les
+appareils photo numériques ainsi que les scanners utilisent ces représentations. 
+
+Dans les images matricielles, les points sont appelés *pixels*. Ils
+sont ordonnés en ligne et en colonne dans une grande grille
+rectangulaire, qu'on appelle matrice (d'où le nom d'image
+matricielle). Simplement, toutes les lignes et toutes les colonnes ont
+le même nombre de points.
+
+<!--
+Chaque pixel est associé à une couleur. Le codage des valeurs de
+couleur fait une nouvelle fois l'objet de normes car il existe de très
+nombreuses façons de la  représenter.
+-->
+
+## Échantillonner 
+
+Nous pouvons donc considérer que chaque pixel est une observation
+d'une très petite partie d'une image réelle, comme un tout petit
+échantillon de l'image pris à un endroit précis. Pour ce petit
+échantillon, on mesure et mémorise la couleur. Plus les échantillons
+nombreux et petits, plus l'image sera fidèle à la réalité, à condition
+que la mesure de la couleur soit également précise.
+
+Ce processus d'échantillonage est bien connu des physiciens auquel
+nous empruntons le terme. Nous le retrouvons dans toutes les
+représentations de signaux physiques, ici l'image, mais également pour
+les sons, la musique.
+
+Pour l'image l'échantillonnage découpe l'espace en petites
+unités. Pour la musique, l'échantillonnage découpe le temps en petites
+unités. Dans le cas d'une image on mesure une valeur de couleur pour
+chaque échantillon. Dans le cas d'un son on mesure une valeur de note
+(de fréquence sonore) pour chaque échantillon.
+
+
+
+
+```activité-avancée
+::Échantillonner la musique::
+[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
+
+::Échantillonner les images::
+[markdown]Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
+{####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
+
+::La qualité de l'image::
+[markdown]La qualité de l'image va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
+{####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
+```
+
+## La couleur
+
+Comment représenter cette valeur de couleur mesurée ? 
+
+Depuis longtemps les peintres ont créé des nuances en
+mélangeant des couleurs dites primaires. Ce procédé est comparable à
+celui utilisé pour coder les couleurs des pixels d'une image
+vectorielle ou matricielle. 
 
 ### les images RVB
-le modèle le plus répandu est le modèle RVB pour Rouge Vert
-Bleu. Chaque pixel est décrit par un triplet, chacune des 3 valeurs
-représentant respectivement la proportion de rouge, de vert et de bleu.
-La couleur finale étant la combinaison de ces trois valeurs.
-Le modèle RVB est directement issu des de la technologie, en effet,
-les écrans (télévision, ordinateur, tablettes, ainsi que les capteurs
-des appareils photos numériques ou les scanners utilisent tous ce mode
-de représentation de la couleur. 
-Dans le modèle RVB, la couleur (O, O, O) correspond au noir, alors que
-lorsque les 3 composantes sont au maximum, cela donne du blanc. 
+
+Le modèle de couleurs le plus répandu est le modèle RVB pour Rouge
+Vert Bleu. Chaque pixel est décrit par 3 valeurs représentant
+respectivement la proportion de rouge, de vert et de bleu.  La couleur
+finale est la combinaison de ces trois valeurs.  Le modèle RVB est
+directement issu de contraintes technologiques.  En effet, les écrans
+(télévision, ordinateur, tablettes, ainsi que les capteurs des
+appareils photos numériques ou les scanners utilisent tous ce mode de
+représentation de la couleur.  Dans le modèle RVB, la couleur (O, O,
+O) correspond au noir, alors que lorsque les 3 composantes sont au
+maximum, cela donne du blanc.
+
+```activité-avancée
+::Les valeurs de R de G ou de B::
+[markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
+{####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
+
+::Les valeurs RGB::
+[markdown]Avec 1 octet par couleur, combien d'octets et combie  de couleurs possibles peuvent être codées ?
+{####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
+
+::Les images CMJN::
+[markdown] Un autre modèle de couleur
+est utilisé dans le monde de l'édition, il s'agit du modèle . Le
+principe est similaire au modèle RVB, il s'agit de décrire une couleur
+par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
+correspond aux technologies des écrans, le CMJN est adapté au monde de
+l'impression. Que signifient les initiales CMJN ?
+{#### Cyan Magenta Jaune et Noir}
+```
+## Les formats
+
+Comme pour le cas des documents, les formats d'images sont très variés et la grande distinction entre image matricielle et vectorielle n'entraîne pas que deux formats.  Évidemment le langage de description des formes géométriques dans les images vectorielles entraîne de nombreux choix. Aujourd'hui la communauté semble toutefois s'accorder de plus en plus sur le standard `SVG`. Pour les images matricielles, la variabilité des formats est vraiment très grande. De nombreuses caractéristiques issues des besoins de manipulation sont à considérer mais également les progrès technologiques liés aux dispositifs d'acquisition comme simplement les appareils photos. À titre d'exemple, citons la possibilité comme la manière de stocker les méta-données comme par exemple la date, l'auteur, etc ; la volonté de les échanger sur internet rapidement et donc de limiter l'espace stockage ; la possibilité de gérer des images composées de plusieurs couches superposées, ou de gérer de la transparence.
 
 
-### les formats
-
-Si le codage de la couleur a été normalisé, il existe de nombreux
-formats d'images :
-
-- compression
-- transparence
-
-### les méta-données
-Comme pour tous les documents, des méta-données peuvent être associées
-à la représentation brute des images (la suite des valeurs de couleur
-de couleur associées à chaque pixel). La plupart des appareils photos
-numériques ajoutent ces méta-données à chaque prise de vue. Elles
+```activité-avancée
+::meta-données de photos::
+[markdown] La plupart des appareils photos
+numériques ajoutent des méta-données à chaque prise de vue. Elles
 peuvent décrire les caractéristiques techniques de la prise de vue
 (valeur de la focale, vitesse d'obturation, ouverture du
 diaphragme,...) mais aussi des informations plus personnelles comme
 les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
-utilisé, ainsi que l'heure et la date de la pride vue.
+utilisé, ainsi que l'heure et la date de la prise de vue.
+Mais aussi les personnages ou les étiquettes associées à la photo ...
+{}
+```
 
-### la taille des images
+<!--  ### la taille des images
 Ce vocabulaire de taille peut recouvrir 3 notions bien distinctes :
 
 - la taille du fichier contenant la représentation numérique de
@@ -1081,16 +1166,7 @@ imprimant de plus gros pixels, ce qui
 
 Mais on peut aussi effectuer une opération de zoom qui 
 
-### Les images CMJN
-Un autre modèle de couleur est utilisé dans le monde de l'édition, il
-s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
-au modèle RVB, il s'agit de décrire une couleur par combinaison de
-plusieurs couleurs primaires. Mais alors que le RVB correspond aux
-technologies des écrans, le CMJN est adapté au monde de
-l'impression. Cyan, Magenta, Jaune et noir étant les couleurs
-primaires utilisées pour l'impression. 
-
-Une même image peut donc avoir plusieurs représentations dans des
-modèles différents, le choix du codage dépendra de l'utilisation
-désirée.
-
+Une même image peut donc avoir plusieurs
+représentations dans des modèles différents, le choix du codage
+dépendra de l'utilisation désirée.
+-->
