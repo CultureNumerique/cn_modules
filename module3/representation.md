@@ -937,7 +937,6 @@ représentation est utilisée pour représenter des objets en 3
 dimensions dans les logiciels spécialisés de design 3D.
 
 ```activité
-
 ::Pierre Bézier::
 - Qui est **Pierre Bézier** ?
 {}
@@ -948,7 +947,7 @@ complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
 
 ```activité-avancée 
-- manipulations images svg :
+::manipulations images svg::
 http://www.w3schools.com/svg/svg_text.asp{}
 ```
 
