@@ -24,6 +24,7 @@ from slugify import slugify
 
 from scripts.fromGIFT import extract_questions, process_questions
 
+
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'media', 'webcontent']
 MARKDOWN_EXT = ['markdown.extensions.extra', 'superscript']
@@ -312,7 +313,7 @@ def process_md(md_src, current_dir):
     config['sections'] = sections
     return config
 
-def main(argv):
+def main(args):
     """
         fromMD : 
         - takes one argument == "module_folder" 
@@ -321,10 +322,11 @@ def main(argv):
             + config json file 
             + html and gift files for further export to HTML or IMSCC moodle archive
     """
-    if len(sys.argv) != 2:
+    print (" argv : %s" % str(args))
+    if len(args) != 1 :
         print(" requires 1 argument == module_folder")
         return False
-    module_folder = sys.argv[1]
+    module_folder = args[0]
     
     # Fetch first md file in module foolder
     filein = None
@@ -371,4 +373,4 @@ def main(argv):
 
 ############### main ################
 if __name__ == "__main__":
-    main(sys.argv)
+    main(sys.argv[1:])

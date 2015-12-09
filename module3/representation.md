@@ -98,11 +98,11 @@ numérique multimédia.
 ```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
 [markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes : 
-* Qui développe le format `html`
-* Depuis quand ce travail sur ce langage `html` existe-t-il ?
-* Quels sont les objectifs de cette numérisation ?
-* Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
-* Quelle est la version la plus récente de `html` ? 
+- Qui développe le format `html`
+- Depuis quand ce travail sur ce langage `html` existe-t-il ?
+- Quels sont les objectifs de cette numérisation ?
+- Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
+- Quelle est la version la plus récente de `html` ? 
 {#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.}
 ``` 
 
@@ -127,11 +127,11 @@ présentation.
 ```activité
 ::Installer des logiciels:: 
 [markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
-* Un éditeur de textes : Nous vous recommandons :
-  * Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
-  * Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
-  * Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
-* Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
+- Un éditeur de textes : Nous vous recommandons :
+  - Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
+- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
 {}
 ```
 
@@ -186,17 +186,17 @@ table des matières, ...
 ```activité
 ::La structure d'un document:: 
 [markdown] Téléchargez le document suivant sur votre machine et ouvrez-le avec `libreoffice` : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
-* Rendre une capture de cette fenêtre de navigateur
+- Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+- Rendre une capture de cette fenêtre de navigateur
 {}
 
 ::La structure d'une page web::
-*  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
-* Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
-* Observez la structure du document `html`. Utilisez les petites
+-  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
+- Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
+- Observez la structure du document `html`. Utilisez les petites
   flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
-* Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-* La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
 {####html/body/section/ul/li}
 ```
 
@@ -229,23 +229,22 @@ auteur, rechercher par titre, ordonner des versions par date, ...
 ::La vue qualifiée:: 
 [markdown]Dans le traitement de texte, regarder les propriétés du
 document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
+- Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
 {}
 ```
 
 ```activité
 ::Uniquement des méta-données:: 
 [markdown]
-Pour certaines applications, un document un document textuel peut se
+Pour certaines applications, un document textuel peut se
 résumer uniquement à ses méta-données. C'est le cas des notices
 bibliographiques où la plus grande partie des fonds n'est pas
 numérisée et donc pour lesquelles le contenu des livres n'est pas
 représenté numériquement.
-
-* Rendez-vous sur le site de la
+- Rendez-vous sur le site de la
 bibliothèque de l'université dans l'interface de recherche de
 livres.
-* Indiquez sur quels critères vous pouvez effectuer
+- Indiquez sur quels critères vous pouvez effectuer
 une recherche.
 {####Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
@@ -276,10 +275,10 @@ communication visé.
 ```activité
 ::Le jardin zen:: 
 [markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
-* Sur le web, la beauté des CSS
-  * http://www.csszengarden.com/tr/francais/
-  * http://www.csszengarden.com/tr/fr/221/
-  * http://www.csszengarden.com/tr/fr/219/
+- Sur le web, la beauté des CSS
+  - http://www.csszengarden.com/tr/francais/
+  - http://www.csszengarden.com/tr/fr/221/
+  - http://www.csszengarden.com/tr/fr/219/
   Entre ces différents designs, qu'est-ce qui change ?
 {
 ~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
@@ -291,8 +290,8 @@ communication visé.
 ```activité
 ::Mise en forme et structure:: 
 Examinez les deux fichiers suivants.
-* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-* http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
+- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
+- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
 Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
@@ -413,7 +412,7 @@ contribuent à indexer le web.
 
 ::Conversions::
 [markdown] Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible.}
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
 ```
 ## Ouvert ou propriétaire
 
@@ -454,10 +453,10 @@ peut-être même pas.
 
 ::Les documents au format PDF::
 [markdown]Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes
-* Est-ce un format ouvert ?
-* Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-* Que signifie portable ?
-* Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
 {}
 ```
 
@@ -505,8 +504,6 @@ servile dans ce monde numérique. Mais cela demande un effort
 particulier, une attente moins centrée sur l'immédiat et l'utilitaire,
 un peu moins personnelle car prenant conscience d'enjeux
 communautaires.
-
-
 
 # Documents numériques textuels
 
@@ -595,7 +592,7 @@ chinois, et même Emoji.
 ~Le caractère informatique est une émoticône qui permet de représenter un sentiment.#non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
 }
 
-::Caractères sans glype::
+::Caractères sans glyphe::
 [markdown]Donner des exemples de caractères non imprimables
 {####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
 
@@ -616,13 +613,17 @@ chinois, et même Emoji.
 ::codage de points de codage::
 [markdown]Quelle est la différence entre UTF-8, UTF-16, unicode ?
 {####Une fois un numéro, le point de codage,  attribué à un caractère il faut décider comment représenter ce numéro en suite de 0 et de 1. C'est le rôle des normes UTF-8 et UTF-16.}
+
+::Déclaration du codage des caractères dans les pages Web::
+[markdown]Aujourd'hui plus de 80% des pages web sont écrites en UTF-8. Pour vérifier quel encodage des caractères a été choisi pour une page Web, quand la page est bien écrite, elle indique clairement ce choix. En observant le code source (utilisez la séquence de touches `CTRL-U` pour l'obtenir) de la page  http://culturenumerique.univ-lille3.fr/, recopiez la ligne qui déclare cet encodage du jeu de caractères.
+{#### =<meta charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire information à propos de ce document, =charset= est une contraction pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8= spécifie l'encodage choisi.}
 ```
 
 >[Idées activités]
 - Représenter et normaliser est une tache complexe :
   l'exemple du codage des caractères. Le site montre bien qui est
   dans le consortium et que c'est une structure complexe mais organisée
-  qui gère tout cela. A des relations avec W3C et ISO.
+  qui gère tout cela. A des relations avec W3C et ISO. 
 - Montrer la ligne avec codage des caractères dans une source
   html. Sur le Web, 85% des docts sont en UTF-8
 - Trouver le point de codage de caractères
@@ -660,8 +661,19 @@ notion de mot est le résultat d'un traitement par la machine dépendant
 des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
+> attention sous `macos`, `texedit` est en double mode : éditeur txt et rtf, en interrupteur. ça peut donc être contre productif. Par ailleurs, il ne sait pas compter les mots, ... et oui c'est top les mac
+  
+```activité
+::Compter les mots::
+[markdown]Dans libreoffice, essayez de saisir les expressions suivantes :
+- Bonjour l'ami.
+- Soyez curieux bien-sûr ; essayez-donc !
+Dans le bas de la fenêtre le logiciel de traitement de textes indique le nombre de mots du document ou d'une sélection. Qu'observez-vous dans ces deux cas ?
+Recommencez cette tentative dans un éditeur de textes. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
+{####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ? C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte `gedit` ce choix n'est pas le même.}
+```
 
->[Animation]
+>[Idées activités]
 - Activité ou demo sur éditeur de textes et ses fonctionnalités
 - Méta-données sur textes simples. Notez que le compte de
   mots est souvent différent selon le logiciel (gedit vs linux)
@@ -689,13 +701,21 @@ comme avec le langage `html` dont nous avons déjà parlé, soit en
 utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
-> Alors comment définir cette structure de façon explicite ?
-> L'interaction, par le biais d'un langage commun entre l'homme et la
-> machine joue alors un rôle essentiel. Ce langage d'interaction peut se
-> traduire par un texte écrit et formel qui décrit un document comme par
-> exemple le `html` dont nous avons déjà parlé.  Mais, ce langage peut
-> prendre la forme d'une suite d'actions dans un logiciel de traitement
-> de textes.
+
+```activité-avancée
+::Les paragraphes, structure explicite::
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
+- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
+- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
+- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+{}
+
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
+```
 
 ## Textes structurés pour décrire des documents textuels
 
@@ -712,8 +732,8 @@ partir de sa description.
 
 - *Les langages Wiki* ont été utilisés principalement pour composer
   des pages Web dans un langage simplifié. On utilise des conventions
-  comme : une ligne qui commence par * est un titre, ** pour un
-  sous-titre. Une ligne blanche sépare les paragraphes. Un programme
+  comme : une ligne qui commence par `*` est un titre, `**` pour un
+  sous-titre. Une ligne vide sépare les paragraphes. Un programme
   de calcul peut construire une page Web à partir d'une description
   textuelle en langage Wiki.
 - *Le langage LateX* utilisé pour la composition de documents dans le
@@ -725,8 +745,8 @@ partir de sa description.
   entrée le document texte décrivant le document et produit en sortie
   un document lisible et imprimable au format `pdf` respectant ces
   règles d'édition.
-- *Le langage html* utilise des caractères particuliers comme <, > et
-  * pour définir des balises. Par exemple, les balises `<section>` et
+- *Le langage html* utilise des caractères particuliers comme `<`, `>` et
+  `/` pour définir des balises. Par exemple, les balises `<section>` et
   `</section>` permettent de définir une section. Le corps du document
   `html` contient le contenu et la structure. L'entête du document
   contient des méta données comme le codage des caractères utilisé par
@@ -735,12 +755,13 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
-```activité
+
+
+>[Idées activité]
 - Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
 - Éditeur de texte et LateX. Coloration syntaxique. Comprendre et montrer le pdf correspondant. On peut montrer un site LateX en ligne.
 - On peut refaire html et css. Par exemple sur html montrer corps et entête. Montrer les méta-données de l'entête.
 - On doit respecter certaines règles typographiques lorsqu'on décrit un document. Cf document Marc.
-```
 
 ## Traitement de textes
 
@@ -874,67 +895,90 @@ philosophie du libre dans le numérique est née dans les années 80 à
 propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
-```activité
-::Le libre::
-<ul>
-<li>Les personnages: Qui est Richard Stallman ? Qui est Laurence Lessig ?</li>
-<li>Quelles sont les différentes variantes de creative commons?</li>
-<li>Quels sont les 4 principes du logiciel libre (voir le site de l'april : http:**www.april.org) ? </li>
-</ul>
-```
 <!--À discuter
 - Faire réfléchir sur les évolutions récentes de html ? Web
-  des données, knowledge graph, réseaux sociaux ?  
-- éditeur de texte: la notion de paragraphe définie par la fin de
-  ligne 8-). Montrer que la ligne (vue à l'écran) n'est pas un élément
-  de structure en faisant varier la taille de la fenêtre éditeur. Le
-  mot et les ponctuations ? 
+  des données, knowledge graph, réseaux sociaux ?
 - Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
-bibliothèque.  
+bibliothèque.
 -->
+
+```activité
+::Les personnages du libre::
+[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
+{#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
+
+::Creative Commons::
+[markdown]Quelles sont les différentes variantes de creative commons ?
+{#### Six possibilités existent, combinaisons de quatre pôles définissant les différents usages : Attribution : signature de l'auteur initial (obligatoire en droit français) (sigle : BY) ; Non Commercial : interdiction de tirer un profit commercial de l'œuvre sans autorisation de l'auteur (sigle : NC) ; No derivative works : impossibilité d'intégrer tout ou partie dans une œuvre composite ; l'échantillonnage (sampling), par exemple, devenant impossible (sigle : ND) ; Share alike : partage de l'œuvre, avec obligation de rediffuser selon la même licence ou une licence similaire (version ultérieure ou localisée) (sigle : SA)
+}
+
+::Le logiciel libre::
+[markdown]Quels sont les 4 principes du logiciel libre (voir le site de l'April : http://www.april.org) ?
+{#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
+}
+```
 
 # Les images
 
 Nous avons détaillé le cas des documents textuels comme exemple
-générique. Regardons maintenant les différents modes de représentation
-des images. Là aussi de nombreux *formats* sont possibles et la notion
-de *norme* est essentielle pour les mêmes raisons de compatibilité
-et d'interopérabilité. En premier lieu, il convient de différentier les
-images vectorielles qui sont représentées sous forme d'une suite
-d'objets géométriques eux-même représentés à l'aide d'équations
-mathématiques,  des images matricielles qui sont représentées comme
-une suite de points (les *pixels*), chacun d'eux étant décrits par une
-couleur.
+générique de représentation de l'information. Étudions maintenant le
+cas des images pour se persuader que les même principes (de choix,
+d'exigence, de besoins,...) ont conduit à de nombreux *formats*. Ici
+aussi la notion de *norme* est essentielle pour les mêmes raisons de
+compatibilité et d'interopérabilité.
 
-## les images vectorielles
+## Deux approches principales
 
-Les formats d'image vectoriels permettent de "décrire" des formes
-complexes par combinaison de formes simples. La puissance des
-formalismes mathématiques peuvent produire des images d'une grande
-complexité. 
+En premier lieu, il convient de différentier deux types d'images qui
+dérivent de besoins différents, et qui prolonge la distinction entre
+des images représentant une abstraction du réel, en général créés par
+l'homme et des images qui sont des copies fidèles du monde réel.
 
-Les différents objets qui constituent l'image sont décrits dans un
-langage adéquat qui précise pour chacun d'eux, la forme, la dimension, la
-couleur, la position, etc. 
+Dans le premier cas on trouve par exemple des dessins techniques ou
+des cartes. Dans l'autre cas on trouve des images photographiques ou
+des images issues de capteurs, radars, d'imagerie en médecine etc,
+provenant donc de signaux physiques ou ondulatoires.
 
-Les logiciels qui affichent ces images *comprennent* et *interprêtent*
-les descriptions, c'est-à-dire calculent le résultat
-visuel. Contrairement aux manipulations des photos, il est
-donc très facile de modifier un élément de l'image indépendamment des
-autres.  
+Les correspondances dans le monde numérique sont les images
+*vectorielles* et les images *matricielles*.
 
-Un avantage très important des images vectorielle réside en leur
-capacité à les afficher à n'importe quelle échelle sans aucune perte
-de qualité. L'affichage est *recalculé* quel que soit le niveau de
-zoom. 
+## Les images vectorielles
 
-Elles peuvent évidemment contenir du texte et sont particulièrement
-adaptées pour représenter des visuels tels que des logos ou des
-dessins *Introduire des exemples* Les images vectorielles sont le plus
-souvent créées à partir de logiciels spécialisés ( *logiciels de
-dessin vectoriels* ).  Notons également que le même type de
-représentation est utilisée pour représenter des objets en 3
-dimensions dans les logiciels spécialisés de design 3D.
+Les images vectorielles sont une représentation numérique d'images
+basée sur des ensembles d'objets abstraits géométriques. Ce sont par
+exemple des lignes, des points, des rectangles, des arcs de cercles,
+etc.  L'idée est ici de *décrire* des formes complexes par combinaison
+de formes simples. Les différents objets qui constituent l'image sont
+décrits dans un langage informatique qui précise pour chacun d'eux, la
+forme, la dimension, la couleur, la position, etc.  La puissance des
+formalismes mathématiques sous-jacents peuvent conduire à produire des
+images d'une grande complexité et même des animations.
+
+Les images vectorielles sont utilisées pour produire des schémas, des
+diagrammes, des cartes etc. Elles peuvent évidemment contenir du texte
+et sont particulièrement adaptées pour représenter des visuels tels
+que des logos. On retrouve ces images et les outils qui permettent de
+les créer dans de nombreuses applications, par exemple dans les
+tableurs, les traitements de textes. Mais elles sont aussi créées à
+partir de logiciels spécialisés : les *logiciels de dessin vectoriels*.
+
+Les logiciels qui affichent et manipulent ces images *comprennent* et
+*interprêtent* les descriptions, c'est-à-dire calculent le résultat
+visuel à partir de la description.  Un avantage très important des
+images vectorielle réside alors en leur capacité à les afficher à
+n'importe quelle échelle sans aucune perte de qualité. L'affichage est
+*recalculé* quel que soit le niveau de zoom. Il est également très
+facile de modifier un élément de l'image indépendamment des autres.
+
+Notons également que le même type de représentation est également
+utilisée pour représenter des objets en 3 dimensions, autrement dit en
+3D.
+
+<!--
+Ce type d'image n'est pas adapté à la représentation de photo, la
+complexité de la réalité ne peut pas facilement être représentée par
+des formules mathématiques.
+-->
 
 ```activité
 ::Pierre Bézier::
@@ -942,116 +986,120 @@ dimensions dans les logiciels spécialisés de design 3D.
 {}
 ```
 
-
-Ce type d'image n'est pas adapté à la représentation de photo, la
-complexité de la réalité ne peut pas facilement être représentée par
-des formules mathématiques.
-
 ```activité-avancée 
 ::manipulations images svg::
 http://www.w3schools.com/svg/svg_text.asp{}
 ```
 
-## les images matricielles
-À l'inverse, les images matricielles sont particulièrement bien
-adaptées pour représenter les photos. Issues de scanner ou d'appareils
-photos numériques, leur représentation se fait sous la forme d'une
-suite de points (*pixels*[fn:1]) eux-mêmes représentés par une valeur
-de couleur.  L'organisation des pixels est assez simple, ils sont
-ordonnés en ligne et en colonne sous la forme d'une matrice (d'où le
-nom *images matricielles*), ce qui signifie simplement que toutes les
-lignes et toutes les colonnes ont le même nombre de points. 
+## Les images matricielles
 
-En revanche le codage des valeurs de couleur doit une nouvelle fois
-faire l'objet de normes. En effet, il existe de très nombreuses façons
-de représenter la couleur. Ainsi depuis longtemps les peintres ont
-tenté de *créer* des nuances en mélangeant des couleurs dites
-primaires. Ce procédé est comparable à celui utilisé pour coder les
-couleurs des pixels d'une image numérique.
+À l'inverse, les images matricielles sont représentées comme un
+ensemble de points de couleur, juxtaposés, et souvent minuscules. Si
+les points sont suffisamment petits et nombreux, notre oeil ne
+parvient pas à les distinguer. Ce principe est largement utilisé
+depuis bien longtemps et dans d'autres domaines que le numérique comme
+la photographie, les écrans de télévision, l'imprimerie.
+
+Aujourd'hui dans notre monde numérique, les images matricielles sont
+particulièrement bien adaptées pour représenter les photos.  Les
+appareils photo numériques ainsi que les scanners utilisent ces représentations. 
+
+Dans les images matricielles, les points sont appelés *pixels*. Ils
+sont ordonnés en ligne et en colonne dans une grande grille
+rectangulaire, qu'on appelle matrice (d'où le nom d'image
+matricielle). Simplement, toutes les lignes et toutes les colonnes ont
+le même nombre de points.
+
+## Échantillonner 
+
+Nous pouvons donc considérer que chaque pixel est une observation
+d'une très petite partie d'une image réelle, comme un tout petit
+échantillon de l'image pris à un endroit précis. Pour ce petit
+échantillon, on mesure et mémorise la couleur. Plus les échantillons sont
+nombreux et petits, plus l'image sera fidèle à la réalité, à condition
+que la mesure de la couleur soit également précise.
+
+Ce processus d'échantillonnage est bien connu des physiciens auquel
+nous empruntons le terme. Nous le retrouvons dans toutes les
+représentations de signaux physiques, ici l'image, mais également pour
+les sons, la musique.
+
+Pour l'image l'échantillonnage découpe l'espace en petites
+unités. Pour la musique, l'échantillonnage découpe le temps en petites
+unités. Dans le cas d'une image on mesure une valeur de couleur pour
+chaque échantillon. Dans le cas d'un son on mesure une valeur de note
+(de fréquence sonore) pour chaque échantillon.
+
+
+
+
+```activité-avancée
+::Échantillonner la musique::
+[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
+
+::Échantillonner les images::
+[markdown]Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
+{####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
+
+::La qualité de l'image::
+[markdown]La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
+{####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
+```
+
+## La couleur
+
+Comment représenter cette valeur de couleur mesurée ? 
+
+Depuis longtemps les peintres ont créé des nuances en
+mélangeant des couleurs dites primaires. Ce procédé est comparable à
+celui utilisé pour coder les couleurs des pixels d'une image
+vectorielle ou matricielle. 
 
 ### les images RVB
-le modèle le plus répandu est le modèle RVB pour Rouge Vert
-Bleu. Chaque pixel est décrit par un triplet, chacune des 3 valeurs
-représentant respectivement la proportion de rouge, de vert et de bleu.
-La couleur finale étant la combinaison de ces trois valeurs.
-Le modèle RVB est directement issu des de la technologie, en effet,
-les écrans (télévision, ordinateur, tablettes, ainsi que les capteurs
-des appareils photos numériques ou les scanners utilisent tous ce mode
-de représentation de la couleur. 
-Dans le modèle RVB, la couleur (O, O, O) correspond au noir, alors que
-lorsque les 3 composantes sont au maximum, cela donne du blanc. 
 
+Le modèle de couleurs le plus répandu est le modèle RVB pour Rouge
+Vert Bleu. Chaque pixel est décrit par 3 valeurs représentant
+respectivement la proportion de rouge, de vert et de bleu.  La couleur
+finale est la combinaison de ces trois valeurs.  Le modèle RVB est
+directement issu de contraintes technologiques.  En effet, les écrans
+(télévision, ordinateur, tablettes, ainsi que les capteurs des
+appareils photos numériques ou les scanners utilisent tous ce mode de
+représentation de la couleur.  Dans le modèle RVB, la couleur (O, O,
+O) correspond au noir, alors que lorsque les 3 composantes sont au
+maximum, cela donne du blanc.
 
-### les formats
+```activité-avancée
+::Les valeurs de R de G ou de B::
+[markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
+{####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
 
-Si le codage de la couleur a été normalisé, il existe de nombreux
-formats d'images :
+::Les valeurs RGB::
+[markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
+{####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
 
-* compression
-* transparence
+::Les images CMJN::
+[markdown] Un autre modèle de couleur
+est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le
+principe est similaire au modèle RVB, il s'agit de décrire une couleur
+par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
+correspond aux technologies des écrans, le CMJN est adapté au monde de
+l'impression. Que signifient les initiales CMJN ?
+{#### Cyan Magenta Jaune et Noir}
+```
+## Les formats
 
-### les méta-données
-Comme pour tous les documents, des méta-données peuvent être associées
-à la représentation brute des images (la suite des valeurs de couleur
-de couleur associées à chaque pixel). La plupart des appareils photos
-numériques ajoutent ces méta-données à chaque prise de vue. Elles
+Comme pour le cas des documents, les formats d'images sont très variés et la grande distinction entre image matricielle et vectorielle n'entraîne pas que deux formats.  Évidemment le langage de description des formes géométriques dans les images vectorielles entraîne de nombreux choix. Aujourd'hui la communauté semble toutefois s'accorder de plus en plus sur le standard `SVG`. Pour les images matricielles, la variabilité des formats est vraiment très grande. De nombreuses caractéristiques issues des besoins de manipulation sont à considérer mais également les progrès technologiques liés aux dispositifs d'acquisition comme simplement les appareils photos. À titre d'exemple, citons la possibilité comme la manière de stocker les méta-données comme par exemple la date, l'auteur, etc ; la volonté de les échanger sur internet rapidement et donc de limiter l'espace stockage ; la possibilité de gérer des images composées de plusieurs couches superposées, ou de gérer de la transparence.
+
+```activitée-avancée
+::meta-données de photos::
+[markdown] La plupart des appareils photos
+numériques ajoutent des méta-données à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de meta-données associées aux photos.
+{####Elles
 peuvent décrire les caractéristiques techniques de la prise de vue
 (valeur de la focale, vitesse d'obturation, ouverture du
 diaphragme,...) mais aussi des informations plus personnelles comme
 les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
-utilisé, ainsi que l'heure et la date de la pride vue.
-
-### la taille des images
-Ce vocabulaire de taille peut recouvrir 3 notions bien distinctes :
-
-- la taille du fichier contenant la représentation numérique de
-  l'image
-- la *résolution* (on dit aussi la *définition*) de l'image,
-  c'est-à-dire le nombre de pixels qui la constituent.
-- les dimensions en cm de l'image affichée sur un écran ou imprimée
-  sur un support.
-
-Les deux premières notions sont évidemment liées et proportionnelles,
-chaque couleur (chaque pixel) étant codée avec un certains nombre de
-bits, une image découpées en 50 000 pixels prendra une place 50 fois
-supérieure à une image de 1 000 pixels (ou prendra 50 fois plus de
-temps à être télécharger sur le réseau).
-
-La troisième notion est plus délicate et les liens avec la résolution
-des images sont souvent mal compris. Il faut d'abord comprendre qu'un
-pixel n'a pas de taille fixe, 
-
-Les écrans peuvent être vus comme des images numériques matricielles,
-ils sont eux aussi découpés en pixels organisés en ligne et
-colonne. D'ailleurs, lorsqu'on fait une *copie d'écran*, cela génère
-une image matricielle contenant exactement le même nombre de pixels
-que l'écran.
-
-Les images matricielle affichée à l'écran peuvent être affichées en
-faisant correspondre un pixel de l'image avec un pixel de
-l'écran. Les dimensions (en cm) de l'image affichée dépendent alors du
-paramétrage de l'écran (un même écran peut être configurée selon
-plusieurs résolutions) et de la taille physique de l'écran. 
-Certains smartphones ont des résolutions identiques aux
-grands écrans de bureau, les pixels sont alors beaucoup plus petits.
-
-Lors de l'impression, on retrouve les mêmes caractéristiques, les
-images peuvent être imprimées en *serrant* beaucoup les pixels c'est à
-dire en mettant beaucoup de pixel par unité de longueur soit en
-imprimant de plus gros pixels, ce qui 
-
-Mais on peut aussi effectuer une opération de zoom qui 
-
-### Les images CMJN
-Un autre modèle de couleur est utilisé dans le monde de l'édition, il
-s'agit du modèle Cyan Magenta Jaune et Noir. Le principe est similaire
-au modèle RVB, il s'agit de décrire une couleur par combinaison de
-plusieurs couleurs primaires. Mais alors que le RVB correspond aux
-technologies des écrans, le CMJN est adapté au monde de
-l'impression. Cyan, Magenta, Jaune et noir étant les couleurs
-primaires utilisées pour l'impression. 
-
-Une même image peut donc avoir plusieurs représentations dans des
-modèles différents, le choix du codage dépendra de l'utilisation
-désirée.
-
+utilisé, ainsi que l'heure et la date de la prise de vue.
+Mais aussi les personnages ou les étiquettes associées à la photo ...}
+```
