@@ -3,6 +3,7 @@ if (git status | grep dev)
 then
 
 	git checkout -B gh-pages dev
+	python3 toHTML.py
 	for i in module1 module2 module3
 	do
 		echo item: $i/$i.html
@@ -10,4 +11,6 @@ then
 	done
 	git commit -m 'updated html files'
 	git checkout dev
+else
+	echo 'not in dev branch'
 fi
