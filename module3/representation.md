@@ -701,13 +701,6 @@ comme avec le langage `html` dont nous avons déjà parlé, soit en
 utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
-> Alors comment définir cette structure de façon explicite ?
-> L'interaction, par le biais d'un langage commun entre l'homme et la
-> machine joue alors un rôle essentiel. Ce langage d'interaction peut se
-> traduire par un texte écrit et formel qui décrit un document comme par
-> exemple le `html` dont nous avons déjà parlé.  Mais, ce langage peut
-> prendre la forme d'une suite d'actions dans un logiciel de traitement
-> de textes.
 
 ```activité-avancée
 ::Les paragraphes, structure explicite::
@@ -902,6 +895,13 @@ philosophie du libre dans le numérique est née dans les années 80 à
 propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
+<!--À discuter
+- Faire réfléchir sur les évolutions récentes de html ? Web
+  des données, knowledge graph, réseaux sociaux ?
+- Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
+bibliothèque.
+-->
+
 ```activité
 ::Les personnages du libre::
 [markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
@@ -917,16 +917,6 @@ mouvement qui impacte aujourd'hui toute la société numérique.
 {#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
 }
 ```
-<!--À discuter
-- Faire réfléchir sur les évolutions récentes de html ? Web
-  des données, knowledge graph, réseaux sociaux ?  
-- éditeur de texte: la notion de paragraphe définie par la fin de
-  ligne 8-). Montrer que la ligne (vue à l'écran) n'est pas un élément
-  de structure en faisant varier la taille de la fenêtre éditeur. Le
-  mot et les ponctuations ? 
-- Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
-bibliothèque.  
--->
 
 # Les images
 
@@ -984,17 +974,17 @@ Notons également que le même type de représentation est également
 utilisée pour représenter des objets en 3 dimensions, autrement dit en
 3D.
 
-```activité
-::Pierre Bézier::
-- Qui est **Pierre Bézier** ?
-{}
-```
-
 <!--
 Ce type d'image n'est pas adapté à la représentation de photo, la
 complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
 -->
+
+```activité
+::Pierre Bézier::
+- Qui est **Pierre Bézier** ?
+{}
+```
 
 ```activité-avancée 
 ::manipulations images svg::
@@ -1019,12 +1009,6 @@ sont ordonnés en ligne et en colonne dans une grande grille
 rectangulaire, qu'on appelle matrice (d'où le nom d'image
 matricielle). Simplement, toutes les lignes et toutes les colonnes ont
 le même nombre de points.
-
-<!--
-Chaque pixel est associé à une couleur. Le codage des valeurs de
-couleur fait une nouvelle fois l'objet de normes car il existe de très
-nombreuses façons de la  représenter.
--->
 
 ## Échantillonner 
 
@@ -1107,62 +1091,15 @@ l'impression. Que signifient les initiales CMJN ?
 
 Comme pour le cas des documents, les formats d'images sont très variés et la grande distinction entre image matricielle et vectorielle n'entraîne pas que deux formats.  Évidemment le langage de description des formes géométriques dans les images vectorielles entraîne de nombreux choix. Aujourd'hui la communauté semble toutefois s'accorder de plus en plus sur le standard `SVG`. Pour les images matricielles, la variabilité des formats est vraiment très grande. De nombreuses caractéristiques issues des besoins de manipulation sont à considérer mais également les progrès technologiques liés aux dispositifs d'acquisition comme simplement les appareils photos. À titre d'exemple, citons la possibilité comme la manière de stocker les méta-données comme par exemple la date, l'auteur, etc ; la volonté de les échanger sur internet rapidement et donc de limiter l'espace stockage ; la possibilité de gérer des images composées de plusieurs couches superposées, ou de gérer de la transparence.
 
-
-```activité-avancée
+```activitée-avancée
 ::meta-données de photos::
 [markdown] La plupart des appareils photos
-numériques ajoutent des méta-données à chaque prise de vue. Elles
+numériques ajoutent des méta-données à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de meta-données associées aux photos.
+{####Elles
 peuvent décrire les caractéristiques techniques de la prise de vue
 (valeur de la focale, vitesse d'obturation, ouverture du
 diaphragme,...) mais aussi des informations plus personnelles comme
 les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
 utilisé, ainsi que l'heure et la date de la prise de vue.
-Mais aussi les personnages ou les étiquettes associées à la photo ...
-{}
+Mais aussi les personnages ou les étiquettes associées à la photo ...}
 ```
-
-<!--  ### la taille des images
-Ce vocabulaire de taille peut recouvrir 3 notions bien distinctes :
-
-- la taille du fichier contenant la représentation numérique de
-  l'image
-- la *résolution* (on dit aussi la *définition*) de l'image,
-  c'est-à-dire le nombre de pixels qui la constituent.
-- les dimensions en cm de l'image affichée sur un écran ou imprimée
-  sur un support.
-
-Les deux premières notions sont évidemment liées et proportionnelles,
-chaque couleur (chaque pixel) étant codée avec un certains nombre de
-bits, une image découpées en 50 000 pixels prendra une place 50 fois
-supérieure à une image de 1 000 pixels (ou prendra 50 fois plus de
-temps à être télécharger sur le réseau).
-
-La troisième notion est plus délicate et les liens avec la résolution
-des images sont souvent mal compris. Il faut d'abord comprendre qu'un
-pixel n'a pas de taille fixe, 
-
-Les écrans peuvent être vus comme des images numériques matricielles,
-ils sont eux aussi découpés en pixels organisés en ligne et
-colonne. D'ailleurs, lorsqu'on fait une *copie d'écran*, cela génère
-une image matricielle contenant exactement le même nombre de pixels
-que l'écran.
-
-Les images matricielle affichée à l'écran peuvent être affichées en
-faisant correspondre un pixel de l'image avec un pixel de
-l'écran. Les dimensions (en cm) de l'image affichée dépendent alors du
-paramétrage de l'écran (un même écran peut être configurée selon
-plusieurs résolutions) et de la taille physique de l'écran. 
-Certains smartphones ont des résolutions identiques aux
-grands écrans de bureau, les pixels sont alors beaucoup plus petits.
-
-Lors de l'impression, on retrouve les mêmes caractéristiques, les
-images peuvent être imprimées en *serrant* beaucoup les pixels c'est à
-dire en mettant beaucoup de pixel par unité de longueur soit en
-imprimant de plus gros pixels, ce qui 
-
-Mais on peut aussi effectuer une opération de zoom qui 
-
-Une même image peut donc avoir plusieurs
-représentations dans des modèles différents, le choix du codage
-dépendra de l'utilisation désirée.
--->
