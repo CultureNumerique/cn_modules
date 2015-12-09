@@ -1081,18 +1081,16 @@ cette valeur de couleur mesurée ? La représentation s'inspire des
 peintres qui ont, de tout temps, créé des nuances en mélangeant des
 couleurs dites primaires. 
 
-### les images RVB
-
-Le modèle de couleurs le plus répandu est le modèle RVB pour Rouge
-Vert Bleu. Chaque pixel est décrit par 3 valeurs représentant
-respectivement la proportion de rouge, de vert et de bleu.  La couleur
-finale est la combinaison de ces trois valeurs.  Le modèle RVB est
-directement issu de contraintes technologiques.  En effet, les écrans
-(télévision, ordinateur, tablettes, ainsi que les capteurs des
-appareils photos numériques ou les scanners utilisent tous ce mode de
-représentation de la couleur.  Dans le modèle RVB, la couleur (O, O,
-O) correspond au noir, alors que lorsque les 3 composantes sont au
-maximum, cela donne du blanc.
+Le modèle de couleurs le plus répandu est le modèle **RVB** (pour
+Rouge Vert Bleu) ou **RGB** (pour Red Green Blue). Chaque pixel est
+décrit par 3 valeurs représentant respectivement la proportion de
+rouge, de vert et de bleu.  La couleur finale est la combinaison de
+ces trois valeurs.  Le modèle RVB est directement issu de contraintes
+technologiques.  En effet, les écrans (télévision, ordinateur,
+tablettes, ainsi que les capteurs des appareils photos numériques ou
+les scanners utilisent tous ce mode de représentation de la couleur.
+Dans le modèle RVB, la couleur (0, 0, 0) correspond au noir, alors que
+lorsque les 3 composantes sont au maximum, cela donne du blanc.
 
 ```activité-avancée
 ::Les valeurs de R de G ou de B::
