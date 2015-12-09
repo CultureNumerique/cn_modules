@@ -9,6 +9,7 @@ module*/*.imscc.zip
 module*/*.config.json
 module*/imsmanifest.xml
 module*/*.gift.txt
+module*.html
 
 draft
 *.txt.html
