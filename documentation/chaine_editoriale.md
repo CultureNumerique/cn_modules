@@ -108,3 +108,5 @@ Ces activités sont rédigées en GIFT; chaque question est séparée par une li
         ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
         }
         ```
+        
+        
