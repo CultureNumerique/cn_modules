@@ -23,7 +23,7 @@ from lxml import html
 from slugify import slugify
 
 from scripts.fromGIFT import extract_questions, process_questions
-
+from toIMS import create_empty_ims_test
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'media', 'webcontent']
@@ -32,56 +32,7 @@ VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
 DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
 
 
-def create_empty_ims_test(id, title):
-    """
-        create empty imsc test source code
-    """
 
-    header = """<?xml version="1.0" encoding="UTF-8"?>
-    <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
-    """
-
-    metadata = """
-    <!--  Metadata  -->
-    <qtimetadata>
-      <qtimetadatafield>
-        <fieldlabel>cc_profile</fieldlabel>
-        <fieldentry>cc.exam.v0p1</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>qmd_assessmenttype</fieldlabel>
-        <fieldentry>Examination</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>qmd_scoretype</fieldlabel>
-        <fieldentry>Percentage</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
-        <fieldentry>Yes</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>qmd_hintspermitted</fieldlabel>
-        <fieldentry>Yes</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>qmd_solutionspermitted</fieldlabel>
-        <fieldentry>Yes</fieldentry>
-      </qtimetadatafield>
-      <qtimetadatafield>
-        <fieldlabel>cc_maxattempts</fieldlabel>
-        <fieldentry>1</fieldentry>
-      </qtimetadatafield>
-    </qtimetadata>
-    """
-
-    src = ""
-    src+=header
-    src+='<assessment ident="'+id+'" title="'+title+'">\n'
-    src+=metadata
-    src+="</assessment></questestinterop>\n"
-
-    return src
     
 
 def fetch_video_thumb(video_link):
