@@ -920,59 +920,83 @@ bibliothèque.
 
 # Les images
 
-Nous avons détaillé le cas des documents textuels comme exemple
-générique de représentation de l'information. Étudions maintenant le
-cas des images pour se persuader que les même principes (de choix,
-d'exigence, de besoins,...) ont conduit à de nombreux *formats*. Ici
-aussi la notion de *norme* est essentielle pour les mêmes raisons de
-compatibilité et d'interopérabilité.
+Une des grandes mutations liée au numérique est que les documents
+numériques sont désormais des **documents multimedia**. Nous nous sommes
+intéressés jusqu'à présent aux documents textuels comme exemple
+générique pour introduire les problématiques liées à la représentation
+de l'information. Nous allons dans cette section élargir notre propos
+en considérant le cas des **images**. Nous allons retrouver les mêmes
+principes généraux pour la définition et le choix des différentes
+représentations des images. Ces différents choix ont également conduit
+à de nombreux *formats* pour les images. Ici aussi la notion de
+*norme* est essentielle pour les mêmes raisons de compatibilité et
+d'interopérabilité.
 
 ## Deux approches principales
 
-En premier lieu, il convient de différentier deux types d'images qui
-dérivent de besoins différents, et qui prolonge la distinction entre
-des images représentant une abstraction du réel, en général créés par
-l'homme et des images qui sont des copies fidèles du monde réel.
+Il convient de différentier deux types d'images qui correspondent à
+des besoins différents et qui donnent lieu à des représentations
+numériques différentes :
 
-Dans le premier cas on trouve par exemple des dessins techniques ou
-des cartes. Dans l'autre cas on trouve des images photographiques ou
-des images issues de capteurs, radars, d'imagerie en médecine etc,
-provenant donc de signaux physiques ou ondulatoires.
+* Les images qui représentent une abstraction du réel telles que les
+  dessins ou les cartes. Ces abstractions ont, en général, été créées
+  par l'homme et ont des représentations numériques qui sont des
+  *images vectorielles*.  
 
-Les correspondances dans le monde numérique sont les images
-*vectorielles* et les images *matricielles*.
+* Les images qui représentent le plus fidèlement possible le monde
+  réel comme les photographies, les images issues de capteur, les
+  images médicales. Ces images ont des représentations numériques qui sont des
+  *images matricielles*.
 
 ## Les images vectorielles
 
-Les images vectorielles sont une représentation numérique d'images
-basée sur des ensembles d'objets abstraits géométriques. Ce sont par
-exemple des lignes, des points, des rectangles, des arcs de cercles,
-etc.  L'idée est ici de *décrire* des formes complexes par combinaison
-de formes simples. Les différents objets qui constituent l'image sont
-décrits dans un langage informatique qui précise pour chacun d'eux, la
-forme, la dimension, la couleur, la position, etc.  La puissance des
-formalismes mathématiques sous-jacents peuvent conduire à produire des
-images d'une grande complexité et même des animations.
+L'idée directrice est de décrire une image abstraite pour pouvoir la
+reproduire. Prenons l'exemple d'une maison dessinée
+schématiquement. Il suffit de préciser un rectangle pour le corps de
+la maison, un triangle pour son toit, un trapèze pour la cheminée, des
+rectangles pour les fenêtres en précisant les dimensions et positions
+respectives de ces figures géométriques. Cela se complique si vous
+souhaitez ajouter des volutes de fumée qui sortent de la cheminée mais
+il existe de nombreuses fonctions mathématiques qui permettent de
+représenter tout type de courbe. Enfin, pour colorier, il suffit de
+préciser quelle couleur associer à quelle zone de l'image.
 
-Les images vectorielles sont utilisées pour produire des schémas, des
+Cet exemple simple a introduit les principes généraux que nous
+précisons maintenant. Une image vectorielle est une représentation
+numérique construite à partir d'objets abstraits géométriques. Ce sont
+,par exemple, des lignes, des points, des rectangles, des arcs de
+cercles, des ellipsoides, etc.  Les différents objets qui constituent
+l'image sont décrits dans un langage informatique qui précise pour
+chacun d'eux, la forme, la dimension, la couleur, la position, etc. Le
+langage permet ensuite de décrire comment on combine tous les objets
+pour produire l'image. La puissance des formalismes utilisés peut
+conduire à produire des images d'une grande complexité capables
+d'approximer des images réelles. 
+
+En règle générale, un utilisateur n'a pas à appréhender le langage de
+description des images vectorielles. En effet, ces images vectorielles
+peuvent être créées avec des outils disponibles dans de nombreuses
+applications comme les tableurs, les traitements de textes, les
+logiciels de présentation. Mais elles sont aussi créées à partir de
+logiciels spécialisés : les *logiciels de dessin vectoriels*.  Les
+images vectorielles sont utilisées pour produire des schémas, des
 diagrammes, des cartes etc. Elles peuvent évidemment contenir du texte
 et sont particulièrement adaptées pour représenter des visuels tels
-que des logos. On retrouve ces images et les outils qui permettent de
-les créer dans de nombreuses applications, par exemple dans les
-tableurs, les traitements de textes. Mais elles sont aussi créées à
-partir de logiciels spécialisés : les *logiciels de dessin vectoriels*.
+que des logos.
 
-Les logiciels qui affichent et manipulent ces images *comprennent* et
-*interprêtent* les descriptions, c'est-à-dire calculent le résultat
-visuel à partir de la description.  Un avantage très important des
-images vectorielle réside alors en leur capacité à les afficher à
-n'importe quelle échelle sans aucune perte de qualité. L'affichage est
-*recalculé* quel que soit le niveau de zoom. Il est également très
-facile de modifier un élément de l'image indépendamment des autres.
-
-Notons également que le même type de représentation est également
-utilisée pour représenter des objets en 3 dimensions, autrement dit en
-3D.
+Les logiciels qui manipulent et affichent ces images vectorielles
+*comprennent* et *interprêtent* les descriptions, c'est-à-dire
+calculent le résultat visuel à partir de la description. Un premier
+avantage est qu'une image vectorielle est une description de l'image
+et est donc de plus petite taille qu'une description point par point.
+Un second avantage très important des images vectorielle réside alors
+en leur capacité à les afficher à n'importe quelle échelle sans aucune
+perte de qualité. L'affichage est *recalculé* quel que soit le niveau
+de zoom. Il est également très facile de modifier un élément de
+l'image indépendamment des autres. Il est enfin facile d'intégrer des
+images vectorielles dans des animations. Pour terminer, notons que le
+même type de représentation est utilisé pour représenter des images en
+3 dimensions.
 
 <!--
 Ce type d'image n'est pas adapté à la représentation de photo, la
@@ -993,45 +1017,46 @@ http://www.w3schools.com/svg/svg_text.asp{}
 
 ## Les images matricielles
 
-À l'inverse, les images matricielles sont représentées comme un
-ensemble de points de couleur, juxtaposés, et souvent minuscules. Si
-les points sont suffisamment petits et nombreux, notre oeil ne
-parvient pas à les distinguer. Ce principe est largement utilisé
-depuis bien longtemps et dans d'autres domaines que le numérique comme
-la photographie, les écrans de télévision, l'imprimerie.
-
-Aujourd'hui dans notre monde numérique, les images matricielles sont
+L'idée directrice est ici de représenter l'image point par point : le
+premier point en haut à gauche a telle couleur et telle luminosité, le
+second point ..., jusqu'au dernier point en bas à droite. Une image
+matricielle est donc représentée comme un ensemble de points de
+couleur, juxtaposés dans un rectangle, et souvent minuscules. Si les
+points sont suffisamment petits et nombreux, notre oeil ne parvient
+pas à les distinguer. Ce principe est utilisé depuis longtemps dans
+des domaines comme la photographie, les écrans de télévision,
+l'imprimerie. Dans le monde du numérique, les images matricielles sont
 particulièrement bien adaptées pour représenter les photos.  Les
-appareils photo numériques ainsi que les scanners utilisent ces représentations. 
+appareils photo numériques ainsi que les scanners utilisent ces
+représentations.
 
 Dans les images matricielles, les points sont appelés *pixels*. Ils
 sont ordonnés en ligne et en colonne dans une grande grille
-rectangulaire, qu'on appelle matrice (d'où le nom d'image
-matricielle). Simplement, toutes les lignes et toutes les colonnes ont
-le même nombre de points.
+rectangulaire, qu'on appelle matrice d'où le nom d'image
+matricielle. Nous pouvons donc considérer que chaque pixel est une
+observation d'une très petite partie d'une image réelle, comme un tout
+petit **échantillon de l'image réelle** pris à un endroit précis. Pour
+ce petit échantillon, on mesure et mémorise la couleur. Ce processus
+d'échantillonnage est bien connu des physiciens auquel nous empruntons
+le terme. Nous le retrouvons dans toutes les représentations de
+signaux physiques, ici l'image, mais également pour les sons, la
+musique. Par exemple, dans le cas d'un son on mesure une valeur de
+note (de fréquence sonore) pour chaque échantillon.
 
-## Échantillonner 
-
-Nous pouvons donc considérer que chaque pixel est une observation
-d'une très petite partie d'une image réelle, comme un tout petit
-échantillon de l'image pris à un endroit précis. Pour ce petit
-échantillon, on mesure et mémorise la couleur. Plus les échantillons sont
-nombreux et petits, plus l'image sera fidèle à la réalité, à condition
-que la mesure de la couleur soit également précise.
-
-Ce processus d'échantillonnage est bien connu des physiciens auquel
-nous empruntons le terme. Nous le retrouvons dans toutes les
-représentations de signaux physiques, ici l'image, mais également pour
-les sons, la musique.
-
-Pour l'image l'échantillonnage découpe l'espace en petites
-unités. Pour la musique, l'échantillonnage découpe le temps en petites
-unités. Dans le cas d'une image on mesure une valeur de couleur pour
-chaque échantillon. Dans le cas d'un son on mesure une valeur de note
-(de fréquence sonore) pour chaque échantillon.
-
-
-
+Les logiciels affichent les images matricielles point par point.  Un
+avantage est que l'affichage d'une image matricielle peut approcher la
+qualité d'une image réelle si le nombre de pixels est suffisamment
+grand. Mais ceci se fait au détriment de l'espace pris par l'image qui
+peut être très grand. Les manipulations d'une image matricielle sont
+également plus difficiles. Par exemple, il est même parfois nécessaire
+de dégrader la qualité de l'image pour échanger des images ou même
+simplement pour afficher une image de plus petite taille. Cette
+dégradation est réalisée en prenant un plus petit nombre de pixel et
+chaque nouveau (grand) pixel aura pour couleur la couleur moyenne des
+(petits) pixels d'origine. La qualité des écrans et des images est
+mesurée avec les notions de *définition* et de *résolution*
+introduites en activité. Nous discutons la représentation numérique
+des couleurs dans la section suivante.
 
 ```activité-avancée
 ::Échantillonner la musique::
@@ -1049,25 +1074,23 @@ chaque échantillon. Dans le cas d'un son on mesure une valeur de note
 
 ## La couleur
 
-Comment représenter cette valeur de couleur mesurée ? 
+Nous avons introduit les images matricielles comme une description
+point par point d'une image où chaque point ou pixel est associé à une
+couleur mesurée à partir de l'image réelle. Mais comment représenter
+cette valeur de couleur mesurée ? La représentation s'inspire des
+peintres qui ont, de tout temps, créé des nuances en mélangeant des
+couleurs dites primaires. 
 
-Depuis longtemps les peintres ont créé des nuances en
-mélangeant des couleurs dites primaires. Ce procédé est comparable à
-celui utilisé pour coder les couleurs des pixels d'une image
-vectorielle ou matricielle. 
-
-### les images RVB
-
-Le modèle de couleurs le plus répandu est le modèle RVB pour Rouge
-Vert Bleu. Chaque pixel est décrit par 3 valeurs représentant
-respectivement la proportion de rouge, de vert et de bleu.  La couleur
-finale est la combinaison de ces trois valeurs.  Le modèle RVB est
-directement issu de contraintes technologiques.  En effet, les écrans
-(télévision, ordinateur, tablettes, ainsi que les capteurs des
-appareils photos numériques ou les scanners utilisent tous ce mode de
-représentation de la couleur.  Dans le modèle RVB, la couleur (O, O,
-O) correspond au noir, alors que lorsque les 3 composantes sont au
-maximum, cela donne du blanc.
+Le modèle de couleurs le plus répandu est le modèle **RVB** (pour
+Rouge Vert Bleu) ou **RGB** (pour Red Green Blue). Chaque pixel est
+décrit par 3 valeurs représentant respectivement la proportion de
+rouge, de vert et de bleu.  La couleur finale est la combinaison de
+ces trois valeurs.  Le modèle RVB est directement issu de contraintes
+technologiques.  En effet, les écrans (télévision, ordinateur,
+tablettes, ainsi que les capteurs des appareils photos numériques ou
+les scanners utilisent tous ce mode de représentation de la couleur.
+Dans le modèle RVB, la couleur (0, 0, 0) correspond au noir, alors que
+lorsque les 3 composantes sont au maximum, cela donne du blanc.
 
 ```activité-avancée
 ::Les valeurs de R de G ou de B::
@@ -1089,7 +1112,28 @@ l'impression. Que signifient les initiales CMJN ?
 ```
 ## Les formats
 
-Comme pour le cas des documents, les formats d'images sont très variés et la grande distinction entre image matricielle et vectorielle n'entraîne pas que deux formats.  Évidemment le langage de description des formes géométriques dans les images vectorielles entraîne de nombreux choix. Aujourd'hui la communauté semble toutefois s'accorder de plus en plus sur le standard `SVG`. Pour les images matricielles, la variabilité des formats est vraiment très grande. De nombreuses caractéristiques issues des besoins de manipulation sont à considérer mais également les progrès technologiques liés aux dispositifs d'acquisition comme simplement les appareils photos. À titre d'exemple, citons la possibilité comme la manière de stocker les méta-données comme par exemple la date, l'auteur, etc ; la volonté de les échanger sur internet rapidement et donc de limiter l'espace stockage ; la possibilité de gérer des images composées de plusieurs couches superposées, ou de gérer de la transparence.
+Même si il n'existe que deux types de représentation vectorielle et
+matricielle, comme dans le cas des documents, il existe de très
+nombreux formats d'image. 
+
+Évidemment le langage de description des formes géométriques dans les
+images vectorielles entraîne de nombreux choix. Cependant, la
+communauté semble aujourd'hui s'accorder de plus en plus sur le standard
+`SVG`. 
+
+Pour les images matricielles, la variabilité des formats est vraiment
+très grande. De nombreuses caractéristiques issues des besoins de
+manipulation sont à considérer mais également les progrès
+technologiques liés aux dispositifs d'acquisition comme simplement les
+appareils photos. À titre d'exemple, citons la possibilité comme la
+manière de stocker les méta-données comme par exemple la date,
+l'auteur, etc ; la volonté de les échanger sur internet rapidement et
+donc de limiter l'espace stockage ; la possibilité de gérer des images
+composées de plusieurs couches superposées, ou de gérer de la
+transparence. Un dernier paramètre est que les images sont souvent
+compressées car elles peuvent être de très grande taille. Tout ceci
+donne lieu à de nombreux formats matriciels dont les principaux sont
+`BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 
 ```activitée-avancée
 ::meta-données de photos::
