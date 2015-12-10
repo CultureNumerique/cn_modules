@@ -89,7 +89,7 @@ ou
         ```activité-avancée
         ```
 
-        
+  
 
 #### Syntaxe GIFT
 
@@ -151,5 +151,5 @@ Ingrédients<br />
     - génération d'un test vide en lieu et place de la sous-section "activité"
     - aggrégation de toutes les activités dnas un fichier banque de question `questions_bank.gift.txt` disponible dans chaque dossier de module. Le nom de section est ajoutée comme catégorie pour chaque activité. Il est alors possible d'importer la banque de questions, puis d'ajouter pour chaque test (vide) la question correspondante.
 
-
+Ces mécanismes sont automatisés grâce aux scripts dont l'utilisation est détaillée dans [la page scripts](scripts.md)
 
