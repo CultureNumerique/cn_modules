@@ -18,6 +18,8 @@ $ git add -f moduleX/moduleX.html
 $ git commit -m 'updated html files'
 $ git checkout dev
 
+
+
 ```
 **ET**, lors du push, ne pas oublier de faire soit:  
 
