@@ -89,7 +89,7 @@ ou
         ```activité-avancée
         ```
 
-        
+  
 
 #### Syntaxe GIFT
 

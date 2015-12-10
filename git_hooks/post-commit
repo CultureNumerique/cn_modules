@@ -1,8 +1,8 @@
 #!/bin/bash
 if (git status | grep dev)
 then
-
-	git checkout -B gh-pages dev
+	git fetch origin
+	git checkout -B gh-pages origin/gh-pages
 	python3 toHTML.py
 	for i in module1 module2 module3
 	do
