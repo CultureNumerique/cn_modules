@@ -13,7 +13,8 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
-import fromMD
+import scripts.fromMD
+
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
@@ -25,6 +26,57 @@ FILETYPES = {
     'cours' : 'webcontent',
 }
 
+
+def create_empty_ims_test(id, title):
+    """
+        create empty imsc test source code
+    """
+
+    header = """<?xml version="1.0" encoding="UTF-8"?>
+    <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+    """
+
+    metadata = """
+    <!--  Metadata  -->
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    """
+
+    src = ""
+    src+=header
+    src+='<assessment ident="'+id+'" title="'+title+'">\n'
+    src+=metadata
+    src+="</assessment></questestinterop>\n"
+
+    return src
 
 def usage():
     str = """
@@ -162,7 +214,7 @@ def main(argv):
     fileout = module_dir+'.imscc.zip'
     #  get config file by parsing markdown in module folder
     # FIXME do it only with an option '-md':
-    fromMD.main([module_dir])
+    scripts.fromMD.main([module_dir])
     # take config file whose name is built as follows  
     filein = os.path.join(module_dir, module_dir+'.config.json')
     

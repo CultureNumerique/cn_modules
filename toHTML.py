@@ -14,7 +14,7 @@ from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
 
-import fromMD
+import scripts.fromMD
 
 def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
@@ -223,7 +223,7 @@ def main(args):
     for module in global_data["modules"]:
         # generate config file with fromMD script/library
         #if '-md' in sys.argv:
-        fromMD.main([module["folder"]])
+        scripts.fromMD.main([module["folder"]])
         # config file for eaxh module is nammed [module_folder].config.json
         mod_config = os.path.join(module["folder"], module["folder"]+'.config.json')
         with open(mod_config, encoding='utf-8') as mod_data_file:
