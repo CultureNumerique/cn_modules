@@ -11,7 +11,7 @@ module*/imsmanifest.xml
 module*/*.gift.txt
 module*.html
 
-draft
+draft*
 *.txt.html
 
 # Byte-compiled / optimized / DLL files

@@ -8,6 +8,8 @@ import json
 import markdown
 import zipfile
 import random
+import datetime
+import time
 
 from lxml import etree
 from lxml import html
@@ -55,6 +57,8 @@ class GiftQuestion():
 
     """
     def __init__(self):
+        now = datetime.datetime.now()  
+        self.id = int(now.timestamp())
         self.gift_src = ''
         self.type = ''
         self.title = ''
