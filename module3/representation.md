@@ -74,13 +74,13 @@ travers des logiciels et prendre conscience des choix de
 représentation contribue à une compréhension plus profonde et une
 utilisation bien plus efficace et réfléchie de ces logiciels.
 
-
 Nous allons considérer, dans un premier temps, la représentation
 numérique des documents textuels. Le cours devrait vous permettre de
 transposer les notions présentées dans d'autres domaines. En
 particulier, à la fin du cours, les questions liées à la parole,
 l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
+
 
 ```activité
 ::Il n'existe qu'une façon de représenter numériquement une image:: 
@@ -754,8 +754,6 @@ partir de sa description.
   mots clés à destination des robots pour une bonne indexation du
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
-
-
 
 >[Idées activité]
 - Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
