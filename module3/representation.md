@@ -83,27 +83,28 @@ numérique multimédia.
 
 
 ```activité
-::Il n'existe qu'une façon de représenter numériquement une image:: 
+::Il n'existe qu'une façon seule façon de représenter numériquement un roman:: 
 {F# représenter une information est le résultat de nombreux choix}
 
-::Les traitements possibles sur des données numériques dépendent fortement des choix de représentation::{T}
+::Les traitements possibles dépendent fortement des choix de représentation::{T}
 
-::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au texte. Donnez quelques exemples::
-{#### Le genre, la date de création, ...}
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
+{#### Le genre, la date de création, l'éditeur, ...}
 
-::Donnez quelques exemples de critères qui peuvent gouverner le choix d'une représentation numérique d'une information.::
+::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
 {#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...} 
 ```
 
 ```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-[markdown]En vous rendant sur la page wikipedia de HTML répondez aux questions suivantes : 
-- Qui développe le format `html`
-- Depuis quand ce travail sur ce langage `html` existe-t-il ?
-- Quels sont les objectifs de cette numérisation ?
-- Approximativement combien de groupes et de participants participent à l'élaboration de cette norme ?
-- Quelle est la version la plus récente de `html` ? 
-{#### Le W3C développe le HTML, Le travail a commencé au début des années 1990, HTML est conçu pour l'interopérabilité et donner du sens aux parties de textes ; la version  récente est HTML5.}
+[markdown]En vous rendant sur les pages wikipedia de `HTML` et du `W3C`. Répondez aux questions suivantes : 
+- Quelle est l'origine de `html` ?
+- Qui développe et publie les spécifications `html` depuis 1995 ?
+- Quelle est la version la plus récente de `html` et son année de parution ? 
+- Qui participe au développement du standard `html` au `W3C` ?
+- Quelles sont les étapes pour arriver à être une recommandation ?
+- Qui est responsable du standard `css` pour les feuilles de style ?
+{#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
 ``` 
 
 
