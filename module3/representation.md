@@ -950,7 +950,7 @@ numériques différentes :
 
 L'idée directrice est de décrire une image abstraite pour pouvoir la
 reproduire. Prenons l'exemple d'une maison dessinée
-schématiquement. Il suffit de préciser un rectangle pour le corps de
+schématiquement. Il suffit de dessiner un rectangle pour le corps de
 la maison, un triangle pour son toit, un trapèze pour la cheminée, des
 rectangles pour les fenêtres en précisant les dimensions et positions
 respectives de ces figures géométriques. Cela se complique si vous
@@ -959,17 +959,16 @@ il existe de nombreuses fonctions mathématiques qui permettent de
 représenter tout type de courbe. Enfin, pour colorier, il suffit de
 préciser quelle couleur associer à quelle zone de l'image.
 
-Cet exemple simple a introduit les principes généraux que nous
-précisons maintenant. Une image vectorielle est une représentation
-numérique construite à partir d'objets abstraits géométriques. Ce sont
-,par exemple, des lignes, des points, des rectangles, des arcs de
-cercles, des ellipsoides, etc.  Les différents objets qui constituent
-l'image sont décrits dans un langage informatique qui précise pour
-chacun d'eux, la forme, la dimension, la couleur, la position, etc. Le
-langage permet ensuite de décrire comment on combine tous les objets
-pour produire l'image. La puissance des formalismes utilisés peut
-conduire à produire des images d'une grande complexité capables
-d'approximer des images réelles. 
+Cet exemple a introduit les principes généraux : une image vectorielle
+est une représentation numérique construite à partir d'objets
+abstraits géométriques. Ce sont, par exemple, des lignes, des points,
+des rectangles, des arcs de cercles, des ellipsoides, etc.  Les
+différents objets qui constituent l'image sont décrits dans un langage
+informatique qui précise, pour chacun d'eux, la forme, la dimension,
+la couleur, la position, etc. Le langage permet également de décrire
+comment on combine tous les objets pour produire l'image. La puissance
+des formalismes utilisés peut conduire à produire des images d'une
+grande complexité comme des images artistiques..
 
 En règle générale, un utilisateur n'a pas à appréhender le langage de
 description des images vectorielles. En effet, ces images vectorielles
@@ -991,10 +990,11 @@ Un second avantage très important des images vectorielle réside alors
 en leur capacité à les afficher à n'importe quelle échelle sans aucune
 perte de qualité. L'affichage est *recalculé* quel que soit le niveau
 de zoom. Il est également très facile de modifier un élément de
-l'image indépendamment des autres. Il est enfin facile d'intégrer des
-images vectorielles dans des animations. Pour terminer, notons que le
-même type de représentation est utilisé pour représenter des images en
-3 dimensions.
+l'image indépendamment des autres. Enfin, notons que le même
+type de représentation est utilisé pour représenter des images en 3
+dimensions. Pour terminer, il est facile d'intégrer des images
+vectorielles dans des animations comme, par exemple, pour les décors
+de jeux video.
 
 <!--
 Ce type d'image n'est pas adapté à la représentation de photo, la
@@ -1019,7 +1019,7 @@ L'idée directrice est ici de représenter l'image point par point : le
 premier point en haut à gauche a telle couleur et telle luminosité, le
 second point ..., jusqu'au dernier point en bas à droite. Une image
 matricielle est donc représentée comme un ensemble de points de
-couleur, juxtaposés dans un rectangle, et souvent minuscules. Si les
+couleur, juxtaposés dans un rectangle. Si les
 points sont suffisamment petits et nombreux, notre oeil ne parvient
 pas à les distinguer. Ce principe est utilisé depuis longtemps dans
 des domaines comme la photographie, les écrans de télévision,
@@ -1079,16 +1079,18 @@ cette valeur de couleur mesurée ? La représentation s'inspire des
 peintres qui ont, de tout temps, créé des nuances en mélangeant des
 couleurs dites primaires. 
 
-Le modèle de couleurs le plus répandu est le modèle **RVB** (pour
-Rouge Vert Bleu) ou **RGB** (pour Red Green Blue). Chaque pixel est
+Le modèle de couleurs le plus répandu est le modèle **`RVB`** (pour
+Rouge Vert Bleu) ou **`RGB`** (pour Red Green Blue). Chaque pixel est
 décrit par 3 valeurs représentant respectivement la proportion de
 rouge, de vert et de bleu.  La couleur finale est la combinaison de
-ces trois valeurs.  Le modèle RVB est directement issu de contraintes
+ces trois valeurs.  Le modèle `RVB` est directement issu de contraintes
 technologiques.  En effet, les écrans (télévision, ordinateur,
-tablettes, ainsi que les capteurs des appareils photos numériques ou
+tablettes), ainsi que les capteurs des appareils photos numériques ou
 les scanners utilisent tous ce mode de représentation de la couleur.
-Dans le modèle RVB, la couleur (0, 0, 0) correspond au noir, alors que
-lorsque les 3 composantes sont au maximum, cela donne du blanc.
+Dans le modèle `RVB`, la couleur (0, 0, 0) correspond au noir, alors que
+lorsque les 3 composantes sont au maximum, cela donne du blanc. La
+représentation machine dans le modèle `RVB` est discutée dans les
+activités pour en déduire le nombre de couleurs représentables.
 
 ```activité-avancée
 ::Les valeurs de R de G ou de B::
@@ -1125,13 +1127,13 @@ manipulation sont à considérer mais également les progrès
 technologiques liés aux dispositifs d'acquisition comme simplement les
 appareils photos. À titre d'exemple, citons la possibilité comme la
 manière de stocker les méta-données comme par exemple la date,
-l'auteur, etc ; la volonté de les échanger sur internet rapidement et
-donc de limiter l'espace stockage ; la possibilité de gérer des images
-composées de plusieurs couches superposées, ou de gérer de la
-transparence. Un dernier paramètre est que les images sont souvent
-compressées car elles peuvent être de très grande taille. Tout ceci
-donne lieu à de nombreux formats matriciels dont les principaux sont
-`BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
+l'auteur, etc ; la possibilité de gérer des images composées de
+plusieurs couches superposées, ou de gérer de la transparence. Un
+dernier paramètre découle de la volonté d'échanger les images sur
+internet rapidement et donc de limiter l'espace stockage avec des
+méthodes de compression qui peuvent être diverses.  Tout
+ceci donne lieu à de nombreux formats matriciels dont les principaux
+sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 
 ```activitée-avancée
 ::meta-données de photos::
