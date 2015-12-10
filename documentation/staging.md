@@ -20,6 +20,8 @@ $ git checkout dev
 
 
 
+
+
 ```
 **ET**, lors du push, ne pas oublier de faire soit:  
 
