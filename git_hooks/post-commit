@@ -3,6 +3,7 @@ if (git status | grep dev)
 then
 	git fetch origin
 	git checkout -B gh-pages origin/gh-pages
+	git merge dev
 	python3 toHTML.py
 	for i in module1 module2 module3
 	do

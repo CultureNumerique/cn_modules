@@ -26,17 +26,22 @@ FILETYPES = {
     'cours' : 'webcontent',
 }
 
+CC_PROFILES = {
+    'MULTICHOICE' : 'cc.multiple_choice.v0p1',
+    'MULTIANSWER' : 'cc.multiple_response.v0p1',
+    'TRUEFALSE' : 'cc.true_false.v0p1',
+    'ESSAY' : 'cc.essay.v0p1',
+    'MISSINGWORD' : 'cc.fib.v0p1',
+    'MATCH' : 'cc.pattern_match.v0p1'
+}
 
-def create_empty_ims_test(id, title):
-    """
-        create empty imsc test source code
-    """
+HEADER_TEST = """<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+"""
 
-    header = """<?xml version="1.0" encoding="UTF-8"?>
-    <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
-    """
-
-    metadata = """
+def set_qti_metadata(max_attempts):
+    
+    qtimetadata = """
     <!--  Metadata  -->
     <qtimetadata>
       <qtimetadatafield>
@@ -65,15 +70,104 @@ def create_empty_ims_test(id, title):
       </qtimetadatafield>
       <qtimetadatafield>
         <fieldlabel>cc_maxattempts</fieldlabel>
-        <fieldentry>1</fieldentry>
-      </qtimetadatafield>
-    </qtimetadata>
-    """
+        <fieldentry>"""
 
+    qtimetadata_tail = "</fieldentry></qtimetadatafield></qtimetadata>"
+    
+    return qtimetadata+str(max_attempts)+qtimetadata_tail
+
+def create_ims_test(questions, test_id, test_title):
+    """
+    Supported types : ESSAY, MULTICHOICE, MULTIANSWER, TRUEFALSE, DESCRIPTION 
+    """
+    # create magic yattag triple
+    doc, tag, text = Doc().tagtext()
+    doc.asis(HEADER_TEST+'\n')
+    if 'ESSAY' in questions[0].type:
+        max_attempts = 'unlimited' 
+    else:
+        max_attempts = 1
+    with tag('assessment', ident=test_id, title=test_title):
+        doc.asis(set_qti_metadata(max_attempts))
+        #<!-- Titre de l'execercice  -->
+        with tag('rubric'):
+            with tag('material', label="Summary"):
+                with tag('mattext', texttype="text/html"):
+                    text()
+        # only one section in a test
+        with tag('section', ident='section_1_test_'+test_id):
+        # loop on questions
+            for idx, question in enumerate(questions):
+                with tag('item', ident='q_'+str(idx), title=question.title):
+                    #<!--  metatata  -->
+                    with tag('itemmetadata'):
+                        with tag('qtimetadata'):
+                            with tag('qtimetadatafield'):
+                                with tag('fieldlabel'):
+                                    text("cc_profile")
+                                with tag('fieldentry'):
+                                    # FIXME : try and get default when no type !
+                                    text(CC_PROFILES[question.type])
+                            with tag('qtimetadatafield'):
+                                with tag('fieldlabel'):
+                                    text("cc_question_category")
+                                with tag('fieldentry'):
+                                    text('Quiz Bank '+test_title)
+                    #<!-- Contenu de la question -->
+                    with tag('presentation'):
+                        # Enoncé
+                        with tag('material'):
+                            with tag('mattext', texttype='text/html'):
+                                text(question.text)
+                        # réponses possibles
+                        if 'ESSAY' in question.type:
+                            with tag('response_str', rcardinality='Single', ident='response_'+str(question.id)):
+                                doc.stag('render_fib', rows=15, prompt='Box', fibtype="String")
+                        elif question.type in (('MULTICHOICE', 'MULTIANSWER')):
+                            for id_a, answer in enumerate(question.answers):
+                                pass
+                        elif question.type in (('TRUEFALSE')):
+                            pass
+                        else:
+                            pass
+                    # Response Processing
+                    with tag('resprocessing'):
+                        # outcomes: FIXME: allways the same ?
+                        with tag('outcomes'):
+                            doc.stag('decvar', varname='SCORE', vartype='Decimal', minvalue="0", maxvalue="100")
+                        # respconditions pour décrire quelle est la bonne réponse, les interactions, etc
+                        ## pour le feedback general
+                        with tag('respcondition', title='General feedback', kontinue='Yes'):
+                            with tag('conditionvar'):
+                                with tag('other'):
+                                    text()
+                            with tag('displayfeedback', feedbacktype="Response", linkrefid='general_fb'):
+                                text()
+                        ## lister les autres conditions
+                    # liste les feedbacks 
+                    ## feedback general
+                    with tag('itemfeedback', ident='general_fb'):
+                        with tag('flow_mat'):
+                            with tag('material'):
+                                with tag('mattext', texttype='text/html'):
+                                    text(question.global_feedback)
+                    ## autres feedbacks
+                    
+                    
+    
+    doc.asis('</questestinterop>\n')
+    return indent(doc.getvalue())
+
+def create_empty_ims_test(id, title, max_attempts=None):
+    """
+        create empty imsc test source code
+    """
+    if not max_attempts:
+        max_attempts = 1
     src = ""
-    src+=header
+    src+=HEADER_TEST
     src+='<assessment ident="'+id+'" title="'+title+'">\n'
-    src+=metadata
+    src+=set_qti_metadata(max_attempts)
     src+="</assessment></questestinterop>\n"
 
     return src

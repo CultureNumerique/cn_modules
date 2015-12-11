@@ -23,7 +23,7 @@ from lxml import html
 from slugify import slugify
 
 from scripts.fromGIFT import extract_questions, process_questions
-from toIMS import create_empty_ims_test
+from toIMS import create_ims_test
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'media', 'webcontent']
@@ -221,9 +221,10 @@ def process_md(md_src, current_dir):
             elif subsection['type'] in (('auto-evaluation', 'devoirs')):
                 # a) parses to HTML source code
                 raw_questions = extract_questions(subsection['sub_src'])
+                questions = process_questions(raw_questions)
                 html_src = ''
                 gift_src = ''
-                for question in  process_questions(raw_questions):
+                for question in questions:
                     # append each question to html output
                     html_src+=question.to_html()
                     if html_src == '': # fallback when question is not yet properly formated
@@ -235,7 +236,8 @@ def process_md(md_src, current_dir):
                 # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
                 test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
-                xml_src = create_empty_ims_test(test_id, test_title)
+                #xml_src = create_empty_ims_test(test_id, test_title)
+                xml_src = create_ims_test(questions, test_id, test_title)
                 xml_filename = filename.replace('html', 'xml')
                 #   write xml file at same location
                 write_file(xml_src, current_dir, target_folder, xml_filename)
