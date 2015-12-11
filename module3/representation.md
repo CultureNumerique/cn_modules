@@ -81,21 +81,7 @@ particulier, à la fin du cours, les questions liées à la parole,
 l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
-
 ```activité
-::Il n'existe qu'une façon seule façon de représenter numériquement un roman:: 
-{F# représenter une information est le résultat de nombreux choix}
-
-::Les traitements possibles dépendent fortement des choix de représentation::{T}
-
-::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
-{#### Le genre, la date de création, l'éditeur, ...}
-
-::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
-{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...} 
-```
-
-```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
 [markdown]En vous rendant sur les pages wikipedia de `HTML` et du `W3C`. Répondez aux questions suivantes : 
 - Quelle est l'origine de `html` ?
@@ -107,6 +93,28 @@ numérique multimédia.
 {#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
 ``` 
 
+
+```compréhension
+
+::Les traitements possibles dépendent fortement des choix de représentation::{T}
+
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
+{#### Le genre, la date de création, l'éditeur, ...}
+
+::Il n'existe qu'une façon seule façon de représenter numériquement un livre:: 
+{F# représenter une information est le résultat de nombreux choix}
+
+::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
+{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...}
+
+::Les choix de représentations sont faits par::
+[markdown]
+{
+~Les informaticiens#non pas seuls car intervient aussi l'utilisation métier des objets représentés 
+~Les experts métier#non pas seuls car il faut des spécialistes des données numériques et des algorithmes
+=Les deux#oui et souvent aussi des chercheurs, des entreprises, ...
+}
+```
 
 # Analyse d'un document : plusieurs vues complémentaires
 ## Introduction
@@ -149,14 +157,9 @@ d'imaginer des traitements : rechercher, remplacer, couper, copier,
 coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 ...
 
-```activité
+```activité 
 ::Éditeur de textes:: 
-[markdown]Lancer un éditeur de textes et en faire une capture
-  d'écran à déposer en réponse à ce quizz.
-{}
-
-::Fonctionnalités d'un éditeur de textes:: 
-[markdown]
+[markdown]Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus. 
 Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
@@ -185,17 +188,17 @@ une table des matières, réordonner des sections avec mise à jour de la
 table des matières, ...
 
 ```activité
-::La structure d'un document:: 
-[markdown] Téléchargez le document suivant sur votre machine et ouvrez-le avec `libreoffice` : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-- Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+::La structure d'un document texte odt:: 
+[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
+- Ouvrez le *navigateur de `libreoffice`* (touche F5),
+- dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur
 {}
 
 ::La structure d'une page web::
--  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
+-  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culture-numerique.univ-lille3.fr/activitesWeb/html). 
 - Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
-- Observez la structure du document `html`. Utilisez les petites
-  flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
+- Observez la structure du document `html`. Utilisez les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
 - La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
 {####html/body/section/ul/li}
@@ -216,10 +219,10 @@ auteur, par titre, par mot-clef, par édition et numéro d'édition, ou
 encore par date. Ces éléments ne figurent pas nécessairement dans le
 document mais ils le qualifient. Ce sont des méta-informations (ou
 méta-données), c'est-à-dire des informations à propos des
-informations. Elles forment la **vue qualifiée**** du document. Très
+informations. Elles forment la **vue qualifiée** du document. Très
 souvent ces informations sont mémorisées sous la forme de propriétés
-(ou attributs) ayant une valeur.  Par exemple, la propriété **titre**
-de ce document vaut `Culture numérique`, la propriété **datecréation**
+(ou attributs) ayant une valeur.  Par exemple, la propriété `titre`
+de ce document vaut `Culture numérique`, la propriété `datecréation`
 de ce document vaut `10 septembre 2015`, etc...
 
 Grâce à cette vue qualifiée et ces méta-données, les traitements sur
