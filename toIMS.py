@@ -9,9 +9,11 @@ import random
 
 from lxml import etree
 from lxml import html
+from markdown import markdown
 from pprint import pprint
 from yattag import indent
 from yattag import Doc
+
 
 import scripts.fromMD
 
@@ -31,6 +33,7 @@ CC_PROFILES = {
     'MULTIANSWER' : 'cc.multiple_response.v0p1',
     'TRUEFALSE' : 'cc.true_false.v0p1',
     'ESSAY' : 'cc.essay.v0p1',
+    'DESCRIPTION': 'cc.essay.v0p1',
     'MISSINGWORD' : 'cc.fib.v0p1',
     'MATCH' : 'cc.pattern_match.v0p1'
 }
@@ -107,7 +110,12 @@ def create_ims_test(questions, test_id, test_title):
                                     text("cc_profile")
                                 with tag('fieldentry'):
                                     # FIXME : try and get default when no type !
-                                    text(CC_PROFILES[question.type])
+                                    print ('  ===question ? %s' % question.gift_src)
+                                    try:
+                                        text(CC_PROFILES[question.type])
+                                    except:
+                                        # skip question
+                                        continue
                             with tag('qtimetadatafield'):
                                 with tag('fieldlabel'):
                                     text("cc_question_category")

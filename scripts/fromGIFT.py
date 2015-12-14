@@ -93,7 +93,10 @@ class GiftQuestion():
             if m2.group('gf'):
                 gf = markdown.markdown(m2.group('gf'), MARKDOWN_EXT)
                 new_src = new_src.replace(m2.group('gf'), gf)
-                
+        
+        # C FIXME : should also check for per-answer feedbacks
+        
+        # convert self src
         self.gift_src = new_src
         return new_src
 
@@ -238,7 +241,7 @@ def process_questions(questions_src):
             q_answers = r1.sub('', q_answers)
         ## Then, process the remaining types
         print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
-        if q_answers == '':
+        if q_answers.isspace() or q_answers == '':
             q_obj.type = 'ESSAY'
         ## TRUEFALSE questions
         elif q_answers.startswith(('T','F','TRUE','FALSE')):
@@ -283,6 +286,8 @@ def process_questions(questions_src):
             q_obj.type = 'MULTIANSWER'
         elif false_answer_count > 0:
             q_obj.type = 'MULTICHOICE'
+        else: # FIXME we should recognize NUMERIC and MATCHING here
+            q_obj.type = 'ESSAY'
         question_objects.append(q_obj)
 
 

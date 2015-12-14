@@ -237,7 +237,7 @@ def process_md(md_src, current_dir):
                 test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
                 #xml_src = create_empty_ims_test(test_id, test_title)
-                xml_src = create_empty_ims_test(test_id, test_title)
+                xml_src = create_ims_test(questions, test_id, test_title)
                 xml_filename = filename.replace('html', 'xml')
                 #   write xml file at same location
                 write_file(xml_src, current_dir, target_folder, xml_filename)
