@@ -139,7 +139,96 @@ class GiftQuestion():
         doc.asis('<!-- Globlal feedback :'+self.global_feedback+' -->')
         doc.asis('\n')
         return(indent(doc.getvalue(), newline='\n'))
+    
+    def parse_gift_src(self):
+        # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
+        split_1 = self.gift_src.split('{', maxsplit=1)
+        q_prestate = split_1[0]
+        if len(split_1) <= 1:
+            # description type with no {}
+            self.text = self.gift_src
+            self.type = 'DESCRIPTION'
+            q_answers = ''
+        else:
+            tmp = split_1[1]
+            split_2 = tmp.split('}', maxsplit=1)
+            q_answers = tmp.split('}', maxsplit=1)[0]
+            if len(split_2) > 1:
+                q_poststate = tmp.split('}', maxsplit=1)[1]
 
+        # 2. Process q_prestate
+        #pprint(" Trying to process prestate = %s" % (q_prestate))
+        r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>[^\]]*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
+        m0 = r0.search(q_prestate)
+        if m0.group('title'):
+            self.title = m0.group('title')
+            #pprint(" Question title= %s" % self.title)
+        if m0.group('text_format'):
+            self.text_format = m0.group('text_format')
+            #pprint(" Question format = %s" % self.text_format)
+        if m0.group('text'):
+            self.text = m0.group('text')
+            #pprint(" Question part = %s" % self.text)
+
+        # 3. Process answers
+        ## Retrieve global feedback, if any, and remove it for simpler further processing
+        r1 = re.compile('####(?P<fb_format>\[.*\]){0,1}(?P<global_fb>.*)', flags=re.M+re.S)
+        m1 = r1.search(q_answers)
+        if m1 is not None:
+            self.global_feedback = m1.group('global_fb')
+            self.global_feedback_format = m1.group('fb_format')
+            q_answers = r1.sub('', q_answers)
+        ## Then, process the remaining types
+        print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
+        if q_answers.isspace() or q_answers == '':
+            self.type = 'ESSAY'
+        ## TRUEFALSE questions
+        elif q_answers.startswith(('T','F','TRUE','FALSE')):
+            self.type = 'TRUEFALSE'
+            r2 = re.compile('#(?P<wrong_fb>[^#]*)#(?P<right_fb>[^#]*)')
+            m2 = r2.search(q_answers)
+            if m2 is not None:
+                self.feedback_for_wrong = m2.group('wrong_fb')
+                self.feedback_for_right = m2.group('right_fb')
+            if q_answers.startswith(('F','FALSE')):
+                self.question_is_true = False # default is True
+        ## NUMERIC questions
+        elif q_answers.startswith('#'):
+            self.type = 'NUMERIC'
+            # FIXME: for NUMERIC questions with a single anwser, get possible value and range #3.1415:0.0005
+
+        ## MULTICHOICE / MULTIANSWERS / NUMERIC / MATCHING
+        ### split answers
+        right_answer_count = 0
+        false_answer_count = 0
+
+        for answer_raw in re.findall('([~=][^~=]*)', q_answers):
+            new_answer = {}
+            # MULTIANSWERS <=> right_answer_count =  AND false_answer_count > 0
+            if answer_raw.startswith('='):
+                new_answer['is_right'] = True
+                right_answer_count+=1
+            elif answer_raw.startswith('~'):
+                new_answer['is_right'] = False
+                false_answer_count+=1
+            if len(answer_raw) > 0:
+                ### get text and create new answer object
+                # FIXME : MATCHING questions have answers like "=subquestion1 -> subanswer1"
+                # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
+                m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
+                new_answer['credit'] = m.group('credit')
+                new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
+                new_answer['feedback'] = m.group('feedback')
+                self.answers.append(new_answer)
+
+        if right_answer_count == 0 and false_answer_count > 0:
+            self.type = 'MULTIANSWER'
+        elif false_answer_count > 0:
+            self.type = 'MULTICHOICE'
+        else: # FIXME we should recognize NUMERIC and MATCHING here
+            self.type = 'ESSAY'
+    
+    
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
     #question = re.sub('\\\\n', '', question) # remove \\n in src txt
@@ -192,104 +281,13 @@ def process_questions(questions_src):
     """ given a list of questions sources, process each question to retrieve all fields;
         each question_source is a one liner string of text. Return a list of question objects
     """
-
     question_objects = []
-
     for q_src in questions_src:
         #pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
         q_obj.gift_src = q_src
-        q_prestate = ""
-        # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
-        split_1 = q_src.split('{', maxsplit=1)
-        q_prestate = split_1[0]
-        if len(split_1) <= 1:
-            # description type with no {}
-            q_obj.text = q_src
-            q_obj.type = 'DESCRIPTION'
-            q_answers = ''
-            # question_objects.append(q_obj)
-            # continue
-        else:
-            tmp = split_1[1]
-            split_2 = tmp.split('}', maxsplit=1)
-            q_answers = tmp.split('}', maxsplit=1)[0]
-            if len(split_2) > 1:
-                q_poststate = tmp.split('}', maxsplit=1)[1]
-
-        # 2. Process q_prestate
-        #pprint(" Trying to process prestate = %s" % (q_prestate))
-        r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>[^\]]*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
-        m0 = r0.search(q_prestate)
-        if m0.group('title'):
-            q_obj.title = m0.group('title')
-            #pprint(" Question title= %s" % q_obj.title)
-        if m0.group('text_format'):
-            q_obj.text_format = m0.group('text_format')
-            #pprint(" Question format = %s" % q_obj.text_format)
-        if m0.group('text'):
-            q_obj.text = m0.group('text')
-            #pprint(" Question part = %s" % q_obj.text)
-
-        # 3. Process answers
-        ## Retrieve global feedback, if any, and remove it for simpler further processing
-        r1 = re.compile('####(?P<fb_format>\[.*\]){0,1}(?P<global_fb>.*)', flags=re.M+re.S)
-        m1 = r1.search(q_answers)
-        if m1 is not None:
-            q_obj.global_feedback = m1.group('global_fb')
-            q_obj.global_feedback_format = m1.group('fb_format')
-            q_answers = r1.sub('', q_answers)
-        ## Then, process the remaining types
-        print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
-        if q_answers.isspace() or q_answers == '':
-            q_obj.type = 'ESSAY'
-        ## TRUEFALSE questions
-        elif q_answers.startswith(('T','F','TRUE','FALSE')):
-            q_obj.type = 'TRUEFALSE'
-            r2 = re.compile('#(?P<wrong_fb>[^#]*)#(?P<right_fb>[^#]*)')
-            m2 = r2.search(q_answers)
-            if m2 is not None:
-                q_obj.feedback_for_wrong = m2.group('wrong_fb')
-                q_obj.feedback_for_right = m2.group('right_fb')
-            if q_answers.startswith(('F','FALSE')):
-                q_obj.question_is_true = False # default is True
-        ## NUMERIC questions
-        elif q_answers.startswith('#'):
-            q_obj.type = 'NUMERIC'
-            # FIXME: for NUMERIC questions with a single anwser, get possible value and range #3.1415:0.0005
-
-        ## MULTICHOICE / MULTIANSWERS / NUMERIC
-        ### split answers
-        right_answer_count = 0
-        false_answer_count = 0
-
-        for answer_raw in re.findall('([~=][^~=]*)', q_answers):
-            new_answer = {}
-            # MULTIANSWERS <=> right_answer_count =  AND false_answer_count > 0
-            if answer_raw.startswith('='):
-                new_answer['is_right'] = True
-                right_answer_count+=1
-            elif answer_raw.startswith('~'):
-                new_answer['is_right'] = False
-                false_answer_count+=1
-            if len(answer_raw) > 0:
-                ### get text and create new answer object
-                # FIXME : MATCHING questions have answers like "=subquestion1 -> subanswer1"
-                # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
-                m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
-                new_answer['credit'] = m.group('credit')
-                new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
-                new_answer['feedback'] = m.group('feedback')
-                q_obj.answers.append(new_answer)
-
-        if right_answer_count == 0 and false_answer_count > 0:
-            q_obj.type = 'MULTIANSWER'
-        elif false_answer_count > 0:
-            q_obj.type = 'MULTICHOICE'
-        else: # FIXME we should recognize NUMERIC and MATCHING here
-            q_obj.type = 'ESSAY'
+        q_obj.parse_gift_src()
         question_objects.append(q_obj)
-
 
     return question_objects
 
