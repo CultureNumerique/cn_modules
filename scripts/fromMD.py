@@ -23,7 +23,7 @@ from lxml import html
 from slugify import slugify
 
 from scripts.fromGIFT import extract_questions, process_questions
-from toIMS import create_ims_test
+from toIMS import create_ims_test, create_empty_ims_test
 
 # Folders created for exporting course elements in a directory corresponding to its type
 FOLDERS = ['auto-evaluation', 'devoirs', 'cours', 'correction', 'media', 'webcontent']
@@ -237,7 +237,7 @@ def process_md(md_src, current_dir):
                 test_title = subsection['title']
                 test_id = str(idsec)+'_'+str(idsub)+'_'+slugify(subsection['title'])
                 #xml_src = create_empty_ims_test(test_id, test_title)
-                xml_src = create_ims_test(questions, test_id, test_title)
+                xml_src = create_empty_ims_test(test_id, test_title)
                 xml_filename = filename.replace('html', 'xml')
                 #   write xml file at same location
                 write_file(xml_src, current_dir, target_folder, xml_filename)
