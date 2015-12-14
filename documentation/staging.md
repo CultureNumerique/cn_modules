@@ -11,17 +11,13 @@ Si on veut mettre à jour le site, il faut donc mettre à jour la branche gh-pag
 ```
 $  git fetch origin
 $ git checkout -B gh-pages origin/gh-pages
+$ git merge dev
 $ python3 toHTML.py
 # pour chaque dossier de module moduleX:
 # nous utilisons git add -f car ces fichiers sont ignorés par le versionning (cf .gitignore file)
 $ git add -f moduleX/moduleX.html
 $ git commit -m 'updated html files'
 $ git checkout dev
-
-
-
-
-
 ```
 **ET**, lors du push, ne pas oublier de faire soit:  
 

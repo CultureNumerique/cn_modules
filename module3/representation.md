@@ -81,21 +81,7 @@ particulier, à la fin du cours, les questions liées à la parole,
 l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
-
 ```activité
-::Il n'existe qu'une façon seule façon de représenter numériquement un roman:: 
-{F# représenter une information est le résultat de nombreux choix}
-
-::Les traitements possibles dépendent fortement des choix de représentation::{T}
-
-::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
-{#### Le genre, la date de création, l'éditeur, ...}
-
-::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
-{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...} 
-```
-
-```activité-avancée
 ::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
 [markdown]En vous rendant sur les pages wikipedia de `HTML` et du `W3C`. Répondez aux questions suivantes : 
 - Quelle est l'origine de `html` ?
@@ -107,6 +93,28 @@ numérique multimédia.
 {#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
 ``` 
 
+
+```compréhension
+
+::Les traitements possibles dépendent fortement des choix de représentation::{T}
+
+::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
+{#### Le genre, la date de création, l'éditeur, ...}
+
+::Il n'existe qu'une façon seule façon de représenter numériquement un livre:: 
+{F# représenter une information est le résultat de nombreux choix}
+
+::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
+{#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...}
+
+::Les choix de représentations sont faits par::
+[markdown]
+{
+~Les informaticiens#non pas seuls car intervient aussi l'utilisation métier des objets représentés 
+~Les experts métier#non pas seuls car il faut des spécialistes des données numériques et des algorithmes
+=Les deux#oui et souvent aussi des chercheurs, des entreprises, ...
+}
+```
 
 # Analyse d'un document : plusieurs vues complémentaires
 ## Introduction
@@ -149,23 +157,18 @@ d'imaginer des traitements : rechercher, remplacer, couper, copier,
 coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 ...
 
-```activité
-::Éditeur de textes:: 
-[markdown]Lancer un éditeur de textes et en faire une capture
-  d'écran à déposer en réponse à ce quizz.
-{}
+```activité 
+::Éditeur de textes pour des séquences de caractères:: 
+[markdown]Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
+- manipuler les fichiers : ouvrir, enregistrer,
+- manipuler des éléments de textes : couper, copier, coller
+- rechercher dans le texte : rechercher, remplacer, suivant, précédent
+- des outils complémentaires
 
-::Fonctionnalités d'un éditeur de textes:: 
-[markdown]
-Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
-{
-~%25%copier/couper/coller #tous les éditeurs le permettent
-~%25%rechercher et remplacer #très souvent disponible 
-~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches 
-~%25%corriger l'orthographe #certains le font 
-~%-100% mettre en gras #l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
-}
-```
+::Éditeur de textes avec des séquences de caractères dans un langage::
+[markdown] Ouvrir dans un éditeur de textes un fichier `html` (en
+mettre un dispo` }. Ce texte est une séquence de caractères mais
+l'éditeur reconnaît le langage et colorie les balises `html`.  ```
 
 ## La structure, une vue arborescente
 
@@ -185,26 +188,21 @@ une table des matières, réordonner des sections avec mise à jour de la
 table des matières, ...
 
 ```activité
-::La structure d'un document:: 
-[markdown] Téléchargez le document suivant sur votre machine et ouvrez-le avec `libreoffice` : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-- Ouvrez le *navigateur* (touche F5), déplier tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+::La structure d'un document texte `odt`:: 
+[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
+- Ouvrez le *navigateur de `libreoffice`* (touche F5),
+- dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur
+- **activité avancée : réorganiser la structure.** Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
 {}
 
 ::La structure d'une page web::
--  à l'aide de firefox, rendez-vous sur la page http://culture-numerique.univ-lille3.fr/activitesWeb/html. 
+-  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culture-numerique.univ-lille3.fr/activitesWeb/html). 
 - Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
-- Observez la structure du document `html`. Utilisez les petites
-  flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
+- Observez la structure du document `html`. Utilisez les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
 - La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
 {####html/body/section/ul/li}
-```
-
-```activité-avancée
-::Réorganiser la structure d'un document::
-Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
-{}
 ```
 
 ## Les méta-donnnées, une vue qualifiée
@@ -216,10 +214,10 @@ auteur, par titre, par mot-clef, par édition et numéro d'édition, ou
 encore par date. Ces éléments ne figurent pas nécessairement dans le
 document mais ils le qualifient. Ce sont des méta-informations (ou
 méta-données), c'est-à-dire des informations à propos des
-informations. Elles forment la **vue qualifiée**** du document. Très
+informations. Elles forment la **vue qualifiée** du document. Très
 souvent ces informations sont mémorisées sous la forme de propriétés
-(ou attributs) ayant une valeur.  Par exemple, la propriété **titre**
-de ce document vaut `Culture numérique`, la propriété **datecréation**
+(ou attributs) ayant une valeur.  Par exemple, la propriété `titre`
+de ce document vaut `Culture numérique`, la propriété `datecréation`
 de ce document vaut `10 septembre 2015`, etc...
 
 Grâce à cette vue qualifiée et ces méta-données, les traitements sur
@@ -227,28 +225,33 @@ des ensembles de documents sont facilités : on peut classer par
 auteur, rechercher par titre, ordonner des versions par date, ...
 
 ```activité 
-::La vue qualifiée:: 
-[markdown]Dans le traitement de texte, regarder les propriétés du
-document suivant : http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-- Quel est le titre, le sujet, les mots clef ? Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
-{}
-```
-
-```activité
-::Uniquement des méta-données:: 
+::La vue qualifiée  d'un document texte `odt`:: 
 [markdown]
-Pour certaines applications, un document textuel peut se
-résumer uniquement à ses méta-données. C'est le cas des notices
-bibliographiques où la plus grande partie des fonds n'est pas
-numérisée et donc pour lesquelles le contenu des livres n'est pas
-représenté numériquement.
-- Rendez-vous sur le site de la
-bibliothèque de l'université dans l'interface de recherche de
-livres.
+Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
+- le titre,
+- le sujet,
+- les mots clef,
+- la date de création.  Faites une capture d'écran de la fenêtre où
+vous avez trouvé ces meta-données.  {}
+
+::Un document peut être réduit à des méta données::
+[markdown]
+
+C'est le cas des notices bibliographiques des bibliothèques dont la
+plus grande partie des fonds n'est pas numérisée. Par conséquent, le
+contenu des livres n'est pas représenté numériquement et chaque
+ouvrage est défini par des méta données regroupées dans une
+notice. Nous prenons en exemple le
+[Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+- Faites une requête comme, par exemple, `représentation information`
+- Parcourez une ou plusieurs notices des ouvrages en réponse
+- Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
 - Indiquez sur quels critères vous pouvez effectuer
 une recherche.
-{####Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
+{#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
+
+
 ## La présentation, une vue pas uniquement graphique
 
 Enfin, les choix du dessin de chaque caractère, de leur taille, de la
@@ -273,20 +276,7 @@ pour impression et lecture diffère de la forme d'un document pour
 affichage sur écran. La forme peut dépendre de l'objectif de
 communication visé.
 
-```activité
-::Le jardin zen:: 
-[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
-- Sur le web, la beauté des CSS
-  - http://www.csszengarden.com/tr/francais/
-  - http://www.csszengarden.com/tr/fr/221/
-  - http://www.csszengarden.com/tr/fr/219/
-  Entre ces différents designs, qu'est-ce qui change ?
-{
-~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
-~Le contenu#non, lisez bien, les textes sont les mêmes!
-=La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
-}
-```
+
 
 ```activité
 ::Mise en forme et structure:: 
@@ -319,6 +309,40 @@ portée par le contenu et la structure ; la lisibilité est
 majoritairement une affaire de présentation ; la capacité à être
 efficacement traité par une machine repose sur le contenu, la
 structure et les méta-données.
+
+```compréhension
+::Avec la vue séquentielle, on peut remplacer les occurrences d'un mot par un autre mot::
+{T}
+::Avec la vue structurée, on peut créer une table des matières automatiquement::
+{T}
+::Un contenu avec une structure a une seule présentation possible::
+{F}
+::vue qualifiée::
+[markdown] Donnez au minimum 4 méta données que vous pouvez associé à un livre
+::Éditeur de textes:: 
+[markdown]
+Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
+{
+~%25%copier/couper/coller #tous les éditeurs le permettent
+~%25%rechercher et remplacer #très souvent disponible 
+~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches 
+~%25%corriger l'orthographe #certains le font 
+~%-100% mettre en gras #l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
+}
+::Le jardin zen:: 
+[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
+- Sur le web, la beauté des CSS
+  - http://www.csszengarden.com/tr/francais/
+  - http://www.csszengarden.com/tr/fr/221/
+  - http://www.csszengarden.com/tr/fr/219/
+  Entre ces différents designs, qu'est-ce qui change ?
+{
+~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
+~Le contenu#non, lisez bien, les textes sont les mêmes!
+=La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
+}
+
+```
 
 # Documents numériques - formats et normes
 
