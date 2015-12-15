@@ -114,8 +114,8 @@ def create_ims_test(questions, test_id, test_title):
                                     try:
                                         text(CC_PROFILES[question.type])
                                     except:
-                                        # skip question
-                                        continue
+                                        # default to essay
+                                        text(CC_PROFILES['ESSAY'])
                             with tag('qtimetadatafield'):
                                 with tag('fieldlabel'):
                                     text("cc_question_category")

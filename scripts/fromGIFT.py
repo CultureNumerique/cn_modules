@@ -76,15 +76,14 @@ class GiftQuestion():
         """ Convert question or feedback src from markdown to html ( useful for easier export) """
         new_src = self.gift_src
         # A / look for question text, and if format is markdown, convert in html
-        if self.text_format in (('markdown')):
-            m1 = re.search('(?P<titre>::.*::){0,1}\s*(?P<format>\[[^\]]*\]){0,1}\s*(?P<qtext>[^\{]*)', new_src, flags=re.M)
-            if m1:
-                if m1.group('qtext'):
-                    qtext = markdown.markdown(m1.group('qtext'), MARKDOWN_EXT)
-                    new_src = new_src.replace(m1.group('qtext'), qtext)
-                if m1.group('format'):    
-                    new_src = new_src.replace(m1.group('format'), '[html]')
-        
+        m1 = re.search('(?P<titre>::.*::){0,1}\s*(?P<format>\[[^\]]*\]){0,1}\s*(?P<qtext>[^\{]*)', new_src, flags=re.M)
+        if m1:
+            if m1.group('qtext'):
+                qtext = markdown.markdown(m1.group('qtext'), MARKDOWN_EXT)
+                new_src = new_src.replace(m1.group('qtext'), qtext)
+            if m1.group('format'):    
+                new_src = new_src.replace(m1.group('format'), '[html]')
+    
         # B / same for global feedback if any
         m2 = re.search('\{####(?P<format>\[[^\]]*\]){0,1}\s*(?P<gf>[^\}]*)', new_src, flags=re.M)
         if m2:
@@ -286,6 +285,7 @@ def process_questions(questions_src):
         #pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
         q_obj.gift_src = q_src
+        q_obj.md_src_to_html()
         q_obj.parse_gift_src()
         question_objects.append(q_obj)
 
