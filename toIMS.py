@@ -144,21 +144,22 @@ def create_ims_test(questions, test_id, test_title):
                         with tag('outcomes'):
                             doc.stag('decvar', varname='SCORE', vartype='Decimal', minvalue="0", maxvalue="100")
                         # respconditions pour décrire quelle est la bonne réponse, les interactions, etc
-                        ## pour le feedback general
-                        with tag('respcondition', title='General feedback', kontinue='Yes'):
-                            with tag('conditionvar'):
-                                with tag('other'):
-                                    text()
-                            with tag('displayfeedback', feedbacktype="Response", linkrefid='general_fb'):
-                                text()
-                        ## lister les autres conditions
+                        ## pour afficher le feedback general
+                        if question.global_feedback != '':
+                            with tag('respcondition', title='General feedback'):
+                                with tag('conditionvar'):
+                                    doc.stag('other')
+                                doc.stag('displayfeedback', feedbacktype="Response", linkrefid='general_fb'):
+                        ## lister les autres interactions/conditions
+                        
                     # liste les feedbacks 
                     ## feedback general
-                    with tag('itemfeedback', ident='general_fb'):
-                        with tag('flow_mat'):
-                            with tag('material'):
-                                with tag('mattext', texttype='text/html'):
-                                    text(question.global_feedback)
+                    if question.global_feedback != '':
+                        with tag('itemfeedback', ident='general_fb'):
+                            with tag('flow_mat'):
+                                with tag('material'):
+                                    with tag('mattext', texttype='text/html'):
+                                        text(question.global_feedback)
                     ## autres feedbacks
                     
                     
