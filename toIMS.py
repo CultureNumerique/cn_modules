@@ -121,7 +121,7 @@ def create_ims_test(questions, test_id, test_title):
                                     text("cc_question_category")
                                 with tag('fieldentry'):
                                     text('Quiz Bank '+test_title)
-                    #<!-- Contenu de la question -->
+                    #Contenu de la question 
                     with tag('presentation'):
                         # Enoncé
                         with tag('material'):
@@ -131,11 +131,17 @@ def create_ims_test(questions, test_id, test_title):
                         if 'ESSAY' in question.type:
                             with tag('response_str', rcardinality='Single', ident='response_'+str(question.id)):
                                 doc.stag('render_fib', rows=15, prompt='Box', fibtype="String")
-                        elif question.type in (('MULTICHOICE', 'MULTIANSWER')):
-                            for id_a, answer in enumerate(question.answers):
-                                pass
-                        elif question.type in (('TRUEFALSE')):
-                            pass
+                        elif question.type in (('MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE')):
+                            # rcardinality optional, but a priori 'Single' form MChoice, 'Multiple' for Manswer; 
+                            with tag('response_lid', ident='response_'+str(question.id)):
+                                with tag('render_choice', shuffle='No'):
+                                    if question.type in (('TRUEFALSE')):
+                                        question.answers = [{'answer_text':'Vrai'}, {'answer_text':'Faux'}]
+                                    for id_a, answer in enumerate(question.answers):
+                                        with tag('response_label', ident='answer_'+str(id_a)):
+                                            with tag('material'):
+                                                with tag('mattext', texttype="text/html"):
+                                                    text(answer['answer_text'])
                         else:
                             pass
                     # Response Processing
@@ -149,9 +155,24 @@ def create_ims_test(questions, test_id, test_title):
                             with tag('respcondition', title='General feedback'):
                                 with tag('conditionvar'):
                                     doc.stag('other')
-                                doc.stag('displayfeedback', feedbacktype="Response", linkrefid='general_fb'):
+                                doc.stag('displayfeedback', feedbacktype="Response", linkrefid='general_fb')
                         ## lister les autres interactions/conditions
-                        
+                        if question.type in (('MULTICHOICE', 'TRUEFALSE')):
+                            for id_a, answer in enumerate(question.answers):
+                                if answer['is_right']:
+                                    title = 'Correct'
+                                    score = 100
+                                else:
+                                    title = ''
+                                    score = 0
+                                with tag('respcondition', title=title):
+                                    with tag('conditionvar'):
+                                        with tag('varequal', respident='response_'+str(question.id)): # respoident is id of response_lid element
+                                            text('answer_'+str(id_a))
+                                    with tag('setvar', varname='SCORE', action='Set'):
+                                        text(score)
+                                    doc.stag('displayfeedback', feedbacktype='Response', linkrefid='feedb_'+str(id_a))
+                                    
                     # liste les feedbacks 
                     ## feedback general
                     if question.global_feedback != '':
@@ -161,7 +182,13 @@ def create_ims_test(questions, test_id, test_title):
                                     with tag('mattext', texttype='text/html'):
                                         text(question.global_feedback)
                     ## autres feedbacks
-                    
+                    for id_a, answer in enumerate(question.answers):
+                        with tag('itemfeedback', ident='feedb_'+str(id_a)):
+                            with tag('flow_mat'):
+                                with tag('material'):
+                                    with tag('mattext', texttype='text/html'):
+                                        text(answer['feedback'])
+                        
                     
     
     doc.asis('</questestinterop>\n')
