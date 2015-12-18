@@ -598,10 +598,6 @@ est représenté comme une suite de 0 et de 1. Il existe
 différents codages, le plus répandu et le plus économe en place est
 `UTF-8`.
 
->[Animation]
-bien montrer le double encodage : car vers nombre vers
-binaire. On peut le faire avec des caractères divers français, arabe,
-chinois, et même Emoji.
 
 ```Activité
 ::Autres codes -- Un code mécanisé::
@@ -661,12 +657,15 @@ texte en répondant aux questions suivantes :
 - Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ? {110 deux octets, 1110 trois octets, 11110 4 octets}
 ```
 
-
 ```compréhension
 ::Unicode::
 [markdown]Qu'est-ce que Unicode ? 
 {~une manière standardisée de dessiner des caractères d'une langue#Non!
 =un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
+
+::Point de codage::
+[markdown]Quel est le point de codage Unicode du point d'exclamation et son nom ?
+{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
 
 ::Caractère informatique, caractère et glyphe::
 [markdown]En informatique le caractère est un peu différent du caractère en typographie... 
@@ -680,19 +679,8 @@ texte en répondant aux questions suivantes :
 [markdown]Donner des exemples de caractères non imprimables
 {####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
 
-::Point de codage::
-[markdown]Quel est le point de codage unicode du point d'exclamation et son nom ?
-{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
-
-
-
 ```
 
-
-
-
-
-  
 ## Textes "simples"
 
 Un document textuel peut être réduit à la seule vue séquentielle,
@@ -715,31 +703,51 @@ notion de mot est le résultat d'un traitement par la machine dépendant
 des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
-> attention sous `macos`, `texedit` est en double mode : éditeur txt et rtf, en interrupteur. ça peut donc être contre productif. Par ailleurs, il ne sait pas compter les mots, ... et oui c'est top les mac
+
   
 ```activité
+::Structure implicite::
+[markdown] Ouvrir un éditeur de texte et insérer du contenu textuel
+(par saisie ou copier-coller ou ouverture d'un fichier
+texte). Vérifier en vous amusant à grandir et réduire la taille de la
+fenêtre que le paragraphe est bien un élément de structure et que la
+ligne n'est pas un élément de structure. {les paragraphes marqués par
+un passage à la ligne restent inchangés alors que les lignes varient
+selon la taille de la fenêtre}
 ::Compter les mots::
-[markdown]Dans libreoffice, essayez de saisir les expressions suivantes :
-- Bonjour l'ami.
-- Soyez curieux bien-sûr ; essayez-donc !
-Dans le bas de la fenêtre le logiciel de traitement de textes indique le nombre de mots du document ou d'une sélection. Qu'observez-vous dans ces deux cas ?
-Recommencez cette tentative dans un éditeur de textes. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
-{####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ? C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte `gedit` ce choix n'est pas le même.}
+[markdown] On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
+- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le
+logiciel de traitement de textes vous indique le nombre de mots du
+document ou d'une sélection. Qu'observez-vous pour le texte et pour
+les parties de textes quant au nombre de mots ? Est-ce le résultat
+auquel vous vous attendiez ?
+- Effectuez la même opération dans un éditeur de textes et posez vous
+les mêmes questions. Vous chercherez dans les différents menus comment
+obtenir les statistiques du texte qui indiquent le nombre de mots.
+{####Notre version compte un mot supplémentaire pour le point virgule
+et le point d'exclamation, mais cela changera-t-il dans le futur ?
+C'est en tous cas un choix implicite reposant sur la présence d'une
+espace, car vous n'avez pas explicitement désigné les mots. Dans
+l'éditeur de texte `gedit` ce choix n'est pas le même.}
+
 ```
 
->[Idées activités]
-- Activité ou demo sur éditeur de textes et ses fonctionnalités
-- Méta-données sur textes simples. Notez que le compte de
-  mots est souvent différent selon le logiciel (gedit vs linux)
-- Montrer que la ligne d'affichage n'est pas un élément de
-  structure. Par contre, la ligne ou paragraphe correspondant à un appui
-  sur touche Entrée en est un.
-- Sur la notion de mot. On peut montrer que deux logiciels
-  différents vont compter les mots de façon différente. On peut envoyer
-  sur la page wikipedia mot et montrer que selon le point de vue le mot
-  peut être défini de façon différente.
+```activité-avancée
+::Les paragraphes, structure explicite::
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
+- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
+- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
+- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+{}
 
-  
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
+```
+
+
 ## Des langages et des logiciels
 
 Au delà de cette structure informelle ou naturelle (les mots, les
@@ -756,20 +764,6 @@ utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
 
-```activité-avancée
-::Les paragraphes, structure explicite::
-[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
-- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
-- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
-- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
-{}
-
-::La ligne n'est pas vraiment un élément structurel::
-[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
-- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
-- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
-{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
-```
 
 ## Textes structurés pour décrire des documents textuels
 
@@ -809,11 +803,32 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
->[Idées activité]
-- Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
-- Éditeur de texte et LateX. Coloration syntaxique. Comprendre et montrer le pdf correspondant. On peut montrer un site LateX en ligne.
-- On peut refaire html et css. Par exemple sur html montrer corps et entête. Montrer les méta-données de l'entête.
-- On doit respecter certaines règles typographiques lorsqu'on décrit un document. Cf document Marc.
+```activité
+::Exemple de html::
+[markdown]
+- Ouvrez le fichier truc.html dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier truc.html dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Décrivez la structure du document (titre, sections, listes, ...)
+- Regardez dans l'éditeur le texte `html contenu dans la partie `head du fichier truc.html. Vous pouvez voir les métadonnées : le contenu de la balise 'title (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+
+::Exemple de LateX::
+[markdown]
+- Ouvrez le fichier ia.tex dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `lateX` car il colorie les balises `html`.
+- Ouvrez le fichier ia.pdf avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
+- Retrouvez dans l'éditeur de texte la description des éléments de structure que vous voyez dans le document `pdf`.
+
+``` ```activité avancée
+::Règles de typographie::
+[markdown]
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la
+structure du document et certains éléments de mise en forme. C'est le
+programme qui respecte les règles de l'édition scientifique pour
+générer le document imprimable : taille des espaces, sauts de ligne,
+césure des mots, sauts de page, placement des figures, ... Cependant,
+il reste à votre charge de connaître et respecter certaines régles
+typographiques minimales comme espace après la virgule, espace avant
+et près le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+```
 
 ## Traitement de textes
 
@@ -947,13 +962,6 @@ philosophie du libre dans le numérique est née dans les années 80 à
 propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
-<!--À discuter
-- Faire réfléchir sur les évolutions récentes de html ? Web
-  des données, knowledge graph, réseaux sociaux ?
-- Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
-bibliothèque.
--->
-
 ```activité
 ::Les personnages du libre::
 [markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
@@ -968,6 +976,10 @@ bibliothèque.
 [markdown]Quels sont les 4 principes du logiciel libre (voir le site de l'April : http://www.april.org) ?
 {#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
 }
+```
+
+```compréhension
+terminer par des questions simples sur la section
 ```
 
 # Les images
