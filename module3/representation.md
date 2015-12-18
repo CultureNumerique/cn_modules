@@ -604,20 +604,65 @@ binaire. On peut le faire avec des caractères divers français, arabe,
 chinois, et même Emoji.
 
 ```Activité
-::Que représenter (I) ?::
-[markdown]Pour représenter des caractères, différentes propositions ont été faites. Que permettait de représenter le code Baudot?
-{#### 32 caractères uniquement : les lettres, les chiffres, la ponctuation, et quelques autres  symboles (=, +, -, /, *, &, #...) ; }
+::Autres codes -- Un code mécanisé::
+[markdown]
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot)?  {#### 32
+caractères uniquement : les lettres, les chiffres, la ponctuation, et
+quelques autres symboles (=, +, -, /, *, &, #...) ; }
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour
+représenter les caractères?  {#### Les symboles des langues autres que
+l'américain ne peuvent être représentés.}
 
-::Que représenter (II) ?::
-[markdown]Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{#### Les symboles des langues autres que l'américain ne peuvent être représentés.}
+::Autres codes -- un code par le signal::
+[markdown]
+- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) {les lettres et les chiffres}
+- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? {impulsion courte notée . ou `ti, impulsion longue notée - ou `taah ; trois durées d'espacement entre impulsions, entre lettres, entre mots}
+- Trouver pour quelle raison la lettre `E a le plus court codage ? {lettre la plus fréquente et souci de diminuer la longueur des transmissions}
 
-::Comment représenter ?::
-[markdown]Trouver plusieurs moyens utilisés pour représenter un texte: un basé sur des sons, un autre basé sur des trous.
-{###Le codage morse ou les cartes perforées sont deux réponses possibles à comment représenter des textes ou des caractères.}
+::Unicode::
+[markdown]
+Rendez vous sur le[site Unicode](http://www.unicode.org/).
+- Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
+- Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
+- Regardez les [caractères actuels](http://www.unicode.org/charts/).
+- Regardez en particulier *Basic Latin* qui ont été les premiers
+  caractères codés en informatique dans une table 'ASCII.
+
+::Déclaration du codage des caractères dans les pages Web::
+[markdown]
+Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8 pour 80% des pages Web.
+- Ouvrez la page toto (une page html avec un court texte en langue française avec des accents des ç, ... sans déclaration du codage)
+- Ouvrez la page tutu (la même avec déclaration du codage UTF-8)
+- Que constatez-vous ?
+- Consultez les codes sources de ces deux pages (utilisez la séquence de touches
+`CTRL-U` pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare
+cet encodage du jeu de caractères.  {#### =<meta
+charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire
+information à propos de ce document, =charset= est une contraction
+pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8=
+spécifie l'encodage choisi.}
 ```
 
-```activité
+```activité-avancée
+::codage des points de codage -- UTF-8 et UTF-16::
+[markdown]
+Le standard Unicode associe à tout caractère pris en charge
+par Unicode un nom et un numéro appelé son point de codage. Ce point
+de codage est un nombre entier qu'il faut encore coder en langage
+machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe
+dans des suites de huit symboles appelés octets. Rendez vous sur la
+page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
+texte en répondant aux questions suivantes :
+- Combien peut-on coder de caractères avec UTF-8 ? {supérieur à 1 million}
+- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? {Non de 1 à 4 octets}
+- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. {sur 1 octet 01000001}
+- Quels sont les caractères codés sur 1 octet ? {les lettres minuscules, majuscules, ponctuations}
+- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet {les lettres accentuées, le c cédille, le e dans l'o}
+- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ? {110 deux octets, 1110 trois octets, 11110 4 octets}
+```
+
+
+```compréhension
 ::Unicode::
 [markdown]Qu'est-ce que Unicode ? 
 {~une manière standardisée de dessiner des caractères d'une langue#Non!
@@ -639,44 +684,14 @@ chinois, et même Emoji.
 [markdown]Quel est le point de codage unicode du point d'exclamation et son nom ?
 {####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
 
-::Encodage d'une page Web::
-[markdown]Dans votre navigateur, ouvrez le menu `affichage/encodage du texte`. Regardez la liste des propositions. Si vous passez de la valeur actuelle à d'autres propositions que constatez-vous ? (N'oubliez pas de repositionner la valeur initiale, sans doute unicode.)
-{
-=l'affichage du texte est transformé#Correct, sans pour autant que le document ait changé.
-~l'interprétation du codage des caractères est resté le même#Non, c'est justement l'inverse qui se produit.
-}
+
 
 ```
 
-```activité-avancée
-::codage de points de codage::
-[markdown]Quelle est la différence entre UTF-8, UTF-16, unicode ?
-{####Une fois un numéro, le point de codage,  attribué à un caractère il faut décider comment représenter ce numéro en suite de 0 et de 1. C'est le rôle des normes UTF-8 et UTF-16.}
 
-::Déclaration du codage des caractères dans les pages Web::
-[markdown]Aujourd'hui plus de 80% des pages web sont écrites en UTF-8. Pour vérifier quel encodage des caractères a été choisi pour une page Web, quand la page est bien écrite, elle indique clairement ce choix. En observant le code source (utilisez la séquence de touches `CTRL-U` pour l'obtenir) de la page  http://culturenumerique.univ-lille3.fr/, recopiez la ligne qui déclare cet encodage du jeu de caractères.
-{#### =<meta charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire information à propos de ce document, =charset= est une contraction pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8= spécifie l'encodage choisi.}
-```
 
->[Idées activités]
-- Représenter et normaliser est une tache complexe :
-  l'exemple du codage des caractères. Le site montre bien qui est
-  dans le consortium et que c'est une structure complexe mais organisée
-  qui gère tout cela. A des relations avec W3C et ISO. 
-- Montrer la ligne avec codage des caractères dans une source
-  html. Sur le Web, 85% des docts sont en UTF-8
-- Trouver le point de codage de caractères
-  français, et de caractères de différentes langues.
-- Les codages ont évolué au cours du temps. Une activité
-  autour de ASCII et Latin1 ?
-- Les codages sont nombreux. Vous avez déja vu des problèmes
-  d'affichage dans des mails ou des pages web, ils sont souvent dus à
-  des erreurs de codage. Montrer des exemples ?
-- Envoyer sur des documents décrivant UTF8 et UTF16 et poser
-  des questions sur ces codages. 
-- *avancée* on peut faire réfléchir au
-  décodage et demander un algorithme de décodage d'un texte en UTF 16,
-  puis en UTF8
+
+
   
 ## Textes "simples"
 
