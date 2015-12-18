@@ -279,29 +279,14 @@ communication visé.
 
 
 ```activité
-::Mise en forme et structure:: 
-Examinez les deux fichiers suivants.
-- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
-Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+::Mise en forme et structure::
+[markdown]
+Téléchargez lez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
 ## Un point d'étape 
 
-
->[Animation]
-Peut-être une anim de rappel
-1. Le contenu brut : la suite de caractères
-2. La structure : identification des paragraphes, des titres, des
-   sections, etc... et identification de l'organisation de ces
-   éléments.
-3. La présentation : l'apparence graphique.
-4. Les méta-données : informations à propos du document, non
-   nécessairement affichées ou imprimées mais utiles pour sa gestion,
-   son traitement.
-
-   
 Chacune des vues contenu, structure, qualifiée et de présentation est
 importante.  Elles contribuent toutes, à des degrés divers, à des
 objectifs complémentaires : l'intelligibilité est essentiellement
@@ -355,19 +340,7 @@ Cette distinction entre le quoi et le comment est, en informatique
 comme dans beaucoup d'autres sciences, une approche essentielle des
 problèmes.
 
-```Activité
-::Que représenter (I) ?::
-[markdown]Pour représenter des caractères, différentes propositions ont été faites. Que permettait de représenter le code Baudot?
-{#### 32 caractères uniquement : les lettres, les chiffres, la ponctuation, et quelques autres  symboles (=, +, -, /, *, &, #...) ; }
 
-::Que représenter (II) ?::
-[markdown]Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{#### Les symboles des langues autres que l'américain ne peuvent être représentés.}
-
-::Comment représenter ?::
-[markdown]Trouver plusieurs moyens utilisés pour représenter un texte: un basé sur des sons, un autre basé sur des trous.
-{###Le codage morse ou les cartes perforées sont deux réponses possibles à comment représenter des textes ou des caractères.}
-```
 
 ## Différents formats pour différents usages
 
@@ -429,16 +402,39 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
+```activité
 
-```Activité
-::Extensions::
-[markdown] Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
-{####txt}
+::Les fichiers d'extension Doc::
+[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
 
-::Conversions::
-[markdown] Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
+= Est-ce que ce format est toujours développé ?#Oui
+= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
+}
+
+::L'éditeur de texte et les fichiers:: [markdown] Un éditeur de textes
+peut effectuer des opérations simples sur des textes simples qui sont
+des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
+- texte simple avec l'extension txt
+- fichier odt
+- fichier html
+- fichier doc
+- texte simple avec l'extension toto
+- fichier pdf
+{}
 ```
+
+```activité avancée
+::Les documents au format PDF::
+[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+{}
+```
+
 ## Ouvert ou propriétaire
 
 Le processus de choix de représentation et de définition d'un format
@@ -467,23 +463,23 @@ web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
 
-
-```activité
-::Les fichiers d'extension Doc::
-[markdown] Lisez la page Wikipedia suivante : https://en.wikipedia.org/wiki/Doc_%28computing%29 et répondez aux questions suivantes
-{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
-~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
-= Est-ce que ce format est toujours développé ?#Oui
-}
-
-::Les documents au format PDF::
-[markdown]Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes
-- Est-ce un format ouvert ?
-- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-- Que signifie portable ?
-- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
-{}
+```compréhension
+::Extensions::
+[markdown]
+Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
+{####txt}
+::Avec un éditeur de textes, je peux ouvrir un fichier `doc::{F}
+::Avec un éditeur de textes, je peux ouvrir un fichier `html::{T}
+::Un fichier `html ouvert par le navigateur et par un éditeur donne le même résultat::{T}
+::Un contenu avec une structure a une seule présentation possible::
+{F}
+::Conversions::
+[markdown]
+Est-il toujours possible de convertir un document d'un format vers un autre format ?
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+::Un format ouvert facilite l'interopérabilité::{T}
 ```
+
 
 ## Une minute citoyenne
 
@@ -521,7 +517,12 @@ une très longue durée, l'usage de formats propriétaires repose sur des
 logiciels qui peuvent disparaître ou changer leur règles
 d'utilisation...
 
-Comme pour les infrastructures, l'état et bien d'autres organisations sont conscientes de ces difficultés. Elle produisent souvent des directives, circulaires  pour inciter à utiliser des formats ouverts et libres. Mais il est bien plus difficile de convaincre les utilisateurs souvent plus enclins à continuer selon leurs habitudes, résultant souvent de nombreux efforts d'apprentissage.
+Comme pour les infrastructures, l'état et bien d'autres organisations
+sont conscientes de ces difficultés. Elle produisent souvent des
+directives, circulaires pour inciter à utiliser des formats ouverts et
+libres. Mais il est bien plus difficile de convaincre les utilisateurs
+souvent plus enclins à continuer selon leurs habitudes, résultant
+souvent de nombreux efforts d'apprentissage.
 
 De votre côté, recevoir une formation indépendante des outils, donc
 plus fondamentale peut contribuer à être moins dépendant et moins
@@ -602,6 +603,19 @@ bien montrer le double encodage : car vers nombre vers
 binaire. On peut le faire avec des caractères divers français, arabe,
 chinois, et même Emoji.
 
+```Activité
+::Que représenter (I) ?::
+[markdown]Pour représenter des caractères, différentes propositions ont été faites. Que permettait de représenter le code Baudot?
+{#### 32 caractères uniquement : les lettres, les chiffres, la ponctuation, et quelques autres  symboles (=, +, -, /, *, &, #...) ; }
+
+::Que représenter (II) ?::
+[markdown]Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
+{#### Les symboles des langues autres que l'américain ne peuvent être représentés.}
+
+::Comment représenter ?::
+[markdown]Trouver plusieurs moyens utilisés pour représenter un texte: un basé sur des sons, un autre basé sur des trous.
+{###Le codage morse ou les cartes perforées sont deux réponses possibles à comment représenter des textes ou des caractères.}
+```
 
 ```activité
 ::Unicode::
