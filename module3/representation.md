@@ -279,29 +279,14 @@ communication visé.
 
 
 ```activité
-::Mise en forme et structure:: 
-Examinez les deux fichiers suivants.
-- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt
-- http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt
-Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+::Mise en forme et structure::
+[markdown]
+Téléchargez lez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
 ## Un point d'étape 
 
-
->[Animation]
-Peut-être une anim de rappel
-1. Le contenu brut : la suite de caractères
-2. La structure : identification des paragraphes, des titres, des
-   sections, etc... et identification de l'organisation de ces
-   éléments.
-3. La présentation : l'apparence graphique.
-4. Les méta-données : informations à propos du document, non
-   nécessairement affichées ou imprimées mais utiles pour sa gestion,
-   son traitement.
-
-   
 Chacune des vues contenu, structure, qualifiée et de présentation est
 importante.  Elles contribuent toutes, à des degrés divers, à des
 objectifs complémentaires : l'intelligibilité est essentiellement
@@ -355,19 +340,7 @@ Cette distinction entre le quoi et le comment est, en informatique
 comme dans beaucoup d'autres sciences, une approche essentielle des
 problèmes.
 
-```Activité
-::Que représenter (I) ?::
-[markdown]Pour représenter des caractères, différentes propositions ont été faites. Que permettait de représenter le code Baudot?
-{#### 32 caractères uniquement : les lettres, les chiffres, la ponctuation, et quelques autres  symboles (=, +, -, /, *, &, #...) ; }
 
-::Que représenter (II) ?::
-[markdown]Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{#### Les symboles des langues autres que l'américain ne peuvent être représentés.}
-
-::Comment représenter ?::
-[markdown]Trouver plusieurs moyens utilisés pour représenter un texte: un basé sur des sons, un autre basé sur des trous.
-{###Le codage morse ou les cartes perforées sont deux réponses possibles à comment représenter des textes ou des caractères.}
-```
 
 ## Différents formats pour différents usages
 
@@ -429,16 +402,39 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
+```activité
 
-```Activité
-::Extensions::
-[markdown] Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
-{####txt}
+::Les fichiers d'extension Doc::
+[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
 
-::Conversions::
-[markdown] Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
+= Est-ce que ce format est toujours développé ?#Oui
+= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
+}
+
+::L'éditeur de texte et les fichiers:: [markdown] Un éditeur de textes
+peut effectuer des opérations simples sur des textes simples qui sont
+des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
+- texte simple avec l'extension txt
+- fichier odt
+- fichier html
+- fichier doc
+- texte simple avec l'extension toto
+- fichier pdf
+{}
 ```
+
+```activité avancée
+::Les documents au format PDF::
+[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+{}
+```
+
 ## Ouvert ou propriétaire
 
 Le processus de choix de représentation et de définition d'un format
@@ -467,23 +463,23 @@ web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
 
-
-```activité
-::Les fichiers d'extension Doc::
-[markdown] Lisez la page Wikipedia suivante : https://en.wikipedia.org/wiki/Doc_%28computing%29 et répondez aux questions suivantes
-{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
-~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
-= Est-ce que ce format est toujours développé ?#Oui
-}
-
-::Les documents au format PDF::
-[markdown]Lisez la page Wikipedia suivante : https://wikipedia.org/wiki/Portable_Document_Format et répondez aux questions suivantes
-- Est-ce un format ouvert ?
-- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-- Que signifie portable ?
-- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
-{}
+```compréhension
+::Extensions::
+[markdown]
+Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
+{####txt}
+::Avec un éditeur de textes, je peux ouvrir un fichier `doc::{F}
+::Avec un éditeur de textes, je peux ouvrir un fichier `html::{T}
+::Un fichier `html ouvert par le navigateur et par un éditeur donne le même résultat::{T}
+::Un contenu avec une structure a une seule présentation possible::
+{F}
+::Conversions::
+[markdown]
+Est-il toujours possible de convertir un document d'un format vers un autre format ?
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+::Un format ouvert facilite l'interopérabilité::{T}
 ```
+
 
 ## Une minute citoyenne
 
@@ -521,7 +517,12 @@ une très longue durée, l'usage de formats propriétaires repose sur des
 logiciels qui peuvent disparaître ou changer leur règles
 d'utilisation...
 
-Comme pour les infrastructures, l'état et bien d'autres organisations sont conscientes de ces difficultés. Elle produisent souvent des directives, circulaires  pour inciter à utiliser des formats ouverts et libres. Mais il est bien plus difficile de convaincre les utilisateurs souvent plus enclins à continuer selon leurs habitudes, résultant souvent de nombreux efforts d'apprentissage.
+Comme pour les infrastructures, l'état et bien d'autres organisations
+sont conscientes de ces difficultés. Elle produisent souvent des
+directives, circulaires pour inciter à utiliser des formats ouverts et
+libres. Mais il est bien plus difficile de convaincre les utilisateurs
+souvent plus enclins à continuer selon leurs habitudes, résultant
+souvent de nombreux efforts d'apprentissage.
 
 De votre côté, recevoir une formation indépendante des outils, donc
 plus fondamentale peut contribuer à être moins dépendant et moins
@@ -597,17 +598,74 @@ est représenté comme une suite de 0 et de 1. Il existe
 différents codages, le plus répandu et le plus économe en place est
 `UTF-8`.
 
->[Animation]
-bien montrer le double encodage : car vers nombre vers
-binaire. On peut le faire avec des caractères divers français, arabe,
-chinois, et même Emoji.
 
+```Activité
+::Autres codes -- Un code mécanisé::
+[markdown]
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot)?  {#### 32
+caractères uniquement : les lettres, les chiffres, la ponctuation, et
+quelques autres symboles (=, +, -, /, *, &, #...) ; }
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour
+représenter les caractères?  {#### Les symboles des langues autres que
+l'américain ne peuvent être représentés.}
 
-```activité
+::Autres codes -- un code par le signal::
+[markdown]
+- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) {les lettres et les chiffres}
+- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? {impulsion courte notée . ou `ti, impulsion longue notée - ou `taah ; trois durées d'espacement entre impulsions, entre lettres, entre mots}
+- Trouver pour quelle raison la lettre `E a le plus court codage ? {lettre la plus fréquente et souci de diminuer la longueur des transmissions}
+
+::Unicode::
+[markdown]
+Rendez vous sur le[site Unicode](http://www.unicode.org/).
+- Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
+- Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
+- Regardez les [caractères actuels](http://www.unicode.org/charts/).
+- Regardez en particulier *Basic Latin* qui ont été les premiers
+  caractères codés en informatique dans une table 'ASCII.
+
+::Déclaration du codage des caractères dans les pages Web::
+[markdown]
+Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8 pour 80% des pages Web.
+- Ouvrez la page toto (une page html avec un court texte en langue française avec des accents des ç, ... sans déclaration du codage)
+- Ouvrez la page tutu (la même avec déclaration du codage UTF-8)
+- Que constatez-vous ?
+- Consultez les codes sources de ces deux pages (utilisez la séquence de touches
+`CTRL-U` pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare
+cet encodage du jeu de caractères.  {#### =<meta
+charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire
+information à propos de ce document, =charset= est une contraction
+pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8=
+spécifie l'encodage choisi.}
+```
+
+```activité-avancée
+::codage des points de codage -- UTF-8 et UTF-16::
+[markdown]
+Le standard Unicode associe à tout caractère pris en charge
+par Unicode un nom et un numéro appelé son point de codage. Ce point
+de codage est un nombre entier qu'il faut encore coder en langage
+machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe
+dans des suites de huit symboles appelés octets. Rendez vous sur la
+page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
+texte en répondant aux questions suivantes :
+- Combien peut-on coder de caractères avec UTF-8 ? {supérieur à 1 million}
+- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? {Non de 1 à 4 octets}
+- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. {sur 1 octet 01000001}
+- Quels sont les caractères codés sur 1 octet ? {les lettres minuscules, majuscules, ponctuations}
+- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet {les lettres accentuées, le c cédille, le e dans l'o}
+- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ? {110 deux octets, 1110 trois octets, 11110 4 octets}
+```
+
+```compréhension
 ::Unicode::
 [markdown]Qu'est-ce que Unicode ? 
 {~une manière standardisée de dessiner des caractères d'une langue#Non!
 =un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
+
+::Point de codage::
+[markdown]Quel est le point de codage Unicode du point d'exclamation et son nom ?
+{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
 
 ::Caractère informatique, caractère et glyphe::
 [markdown]En informatique le caractère est un peu différent du caractère en typographie... 
@@ -621,49 +679,8 @@ chinois, et même Emoji.
 [markdown]Donner des exemples de caractères non imprimables
 {####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
 
-::Point de codage::
-[markdown]Quel est le point de codage unicode du point d'exclamation et son nom ?
-{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
-
-::Encodage d'une page Web::
-[markdown]Dans votre navigateur, ouvrez le menu `affichage/encodage du texte`. Regardez la liste des propositions. Si vous passez de la valeur actuelle à d'autres propositions que constatez-vous ? (N'oubliez pas de repositionner la valeur initiale, sans doute unicode.)
-{
-=l'affichage du texte est transformé#Correct, sans pour autant que le document ait changé.
-~l'interprétation du codage des caractères est resté le même#Non, c'est justement l'inverse qui se produit.
-}
-
 ```
 
-```activité-avancée
-::codage de points de codage::
-[markdown]Quelle est la différence entre UTF-8, UTF-16, unicode ?
-{####Une fois un numéro, le point de codage,  attribué à un caractère il faut décider comment représenter ce numéro en suite de 0 et de 1. C'est le rôle des normes UTF-8 et UTF-16.}
-
-::Déclaration du codage des caractères dans les pages Web::
-[markdown]Aujourd'hui plus de 80% des pages web sont écrites en UTF-8. Pour vérifier quel encodage des caractères a été choisi pour une page Web, quand la page est bien écrite, elle indique clairement ce choix. En observant le code source (utilisez la séquence de touches `CTRL-U` pour l'obtenir) de la page  http://culturenumerique.univ-lille3.fr/, recopiez la ligne qui déclare cet encodage du jeu de caractères.
-{#### =<meta charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire information à propos de ce document, =charset= est une contraction pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8= spécifie l'encodage choisi.}
-```
-
->[Idées activités]
-- Représenter et normaliser est une tache complexe :
-  l'exemple du codage des caractères. Le site montre bien qui est
-  dans le consortium et que c'est une structure complexe mais organisée
-  qui gère tout cela. A des relations avec W3C et ISO. 
-- Montrer la ligne avec codage des caractères dans une source
-  html. Sur le Web, 85% des docts sont en UTF-8
-- Trouver le point de codage de caractères
-  français, et de caractères de différentes langues.
-- Les codages ont évolué au cours du temps. Une activité
-  autour de ASCII et Latin1 ?
-- Les codages sont nombreux. Vous avez déja vu des problèmes
-  d'affichage dans des mails ou des pages web, ils sont souvent dus à
-  des erreurs de codage. Montrer des exemples ?
-- Envoyer sur des documents décrivant UTF8 et UTF16 et poser
-  des questions sur ces codages. 
-- *avancée* on peut faire réfléchir au
-  décodage et demander un algorithme de décodage d'un texte en UTF 16,
-  puis en UTF8
-  
 ## Textes "simples"
 
 Un document textuel peut être réduit à la seule vue séquentielle,
@@ -686,31 +703,51 @@ notion de mot est le résultat d'un traitement par la machine dépendant
 des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
-> attention sous `macos`, `texedit` est en double mode : éditeur txt et rtf, en interrupteur. ça peut donc être contre productif. Par ailleurs, il ne sait pas compter les mots, ... et oui c'est top les mac
+
   
 ```activité
+::Structure implicite::
+[markdown] Ouvrir un éditeur de texte et insérer du contenu textuel
+(par saisie ou copier-coller ou ouverture d'un fichier
+texte). Vérifier en vous amusant à grandir et réduire la taille de la
+fenêtre que le paragraphe est bien un élément de structure et que la
+ligne n'est pas un élément de structure. {les paragraphes marqués par
+un passage à la ligne restent inchangés alors que les lignes varient
+selon la taille de la fenêtre}
 ::Compter les mots::
-[markdown]Dans libreoffice, essayez de saisir les expressions suivantes :
-- Bonjour l'ami.
-- Soyez curieux bien-sûr ; essayez-donc !
-Dans le bas de la fenêtre le logiciel de traitement de textes indique le nombre de mots du document ou d'une sélection. Qu'observez-vous dans ces deux cas ?
-Recommencez cette tentative dans un éditeur de textes. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
-{####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ? C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte `gedit` ce choix n'est pas le même.}
+[markdown] On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
+- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le
+logiciel de traitement de textes vous indique le nombre de mots du
+document ou d'une sélection. Qu'observez-vous pour le texte et pour
+les parties de textes quant au nombre de mots ? Est-ce le résultat
+auquel vous vous attendiez ?
+- Effectuez la même opération dans un éditeur de textes et posez vous
+les mêmes questions. Vous chercherez dans les différents menus comment
+obtenir les statistiques du texte qui indiquent le nombre de mots.
+{####Notre version compte un mot supplémentaire pour le point virgule
+et le point d'exclamation, mais cela changera-t-il dans le futur ?
+C'est en tous cas un choix implicite reposant sur la présence d'une
+espace, car vous n'avez pas explicitement désigné les mots. Dans
+l'éditeur de texte `gedit` ce choix n'est pas le même.}
+
 ```
 
->[Idées activités]
-- Activité ou demo sur éditeur de textes et ses fonctionnalités
-- Méta-données sur textes simples. Notez que le compte de
-  mots est souvent différent selon le logiciel (gedit vs linux)
-- Montrer que la ligne d'affichage n'est pas un élément de
-  structure. Par contre, la ligne ou paragraphe correspondant à un appui
-  sur touche Entrée en est un.
-- Sur la notion de mot. On peut montrer que deux logiciels
-  différents vont compter les mots de façon différente. On peut envoyer
-  sur la page wikipedia mot et montrer que selon le point de vue le mot
-  peut être défini de façon différente.
+```activité-avancée
+::Les paragraphes, structure explicite::
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
+- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
+- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
+- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+{}
 
-  
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
+```
+
+
 ## Des langages et des logiciels
 
 Au delà de cette structure informelle ou naturelle (les mots, les
@@ -727,20 +764,6 @@ utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
 
-```activité-avancée
-::Les paragraphes, structure explicite::
-[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
-- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
-- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
-- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
-{}
-
-::La ligne n'est pas vraiment un élément structurel::
-[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
-- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
-- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
-{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
-```
 
 ## Textes structurés pour décrire des documents textuels
 
@@ -780,11 +803,32 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
->[Idées activité]
-- Éditeur de texte et org. Coloration syntaxique. Comprendre. Voir dans    navigateur.
-- Éditeur de texte et LateX. Coloration syntaxique. Comprendre et montrer le pdf correspondant. On peut montrer un site LateX en ligne.
-- On peut refaire html et css. Par exemple sur html montrer corps et entête. Montrer les méta-données de l'entête.
-- On doit respecter certaines règles typographiques lorsqu'on décrit un document. Cf document Marc.
+```activité
+::Exemple de html::
+[markdown]
+- Ouvrez le fichier truc.html dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier truc.html dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Décrivez la structure du document (titre, sections, listes, ...)
+- Regardez dans l'éditeur le texte `html contenu dans la partie `head du fichier truc.html. Vous pouvez voir les métadonnées : le contenu de la balise 'title (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+
+::Exemple de LateX::
+[markdown]
+- Ouvrez le fichier ia.tex dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `lateX` car il colorie les balises `html`.
+- Ouvrez le fichier ia.pdf avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
+- Retrouvez dans l'éditeur de texte la description des éléments de structure que vous voyez dans le document `pdf`.
+
+``` ```activité avancée
+::Règles de typographie::
+[markdown]
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la
+structure du document et certains éléments de mise en forme. C'est le
+programme qui respecte les règles de l'édition scientifique pour
+générer le document imprimable : taille des espaces, sauts de ligne,
+césure des mots, sauts de page, placement des figures, ... Cependant,
+il reste à votre charge de connaître et respecter certaines régles
+typographiques minimales comme espace après la virgule, espace avant
+et près le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+```
 
 ## Traitement de textes
 
@@ -888,6 +932,10 @@ Nous vous donnons donc les conseils suivants :
 - Marc a un texte sur la typographie
 ```
 
+```compréhension
+terminer par des questions simples sur la section
+```
+
 # Ouverture, interopérabilité, licences, ... et liberté 
 
 À travers cette présentation, vous avez sans doute retenu la distinction entre
@@ -918,13 +966,6 @@ philosophie du libre dans le numérique est née dans les années 80 à
 propos des logiciels. Elle s'est étendue depuis et devient un
 mouvement qui impacte aujourd'hui toute la société numérique.
 
-<!--À discuter
-- Faire réfléchir sur les évolutions récentes de html ? Web
-  des données, knowledge graph, réseaux sociaux ?
-- Montrer que une organisation hiérarchique se retrouve souvent. Montrer la structure d'un livre avec un docbook simplifié. Montrer la structure d'une BD xml de gestion d'une
-bibliothèque.
--->
-
 ```activité
 ::Les personnages du libre::
 [markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
@@ -940,6 +981,7 @@ bibliothèque.
 {#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
 }
 ```
+
 
 # Les images
 
