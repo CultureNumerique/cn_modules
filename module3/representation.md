@@ -932,6 +932,10 @@ Nous vous donnons donc les conseils suivants :
 - Marc a un texte sur la typographie
 ```
 
+```compréhension
+terminer par des questions simples sur la section
+```
+
 # Ouverture, interopérabilité, licences, ... et liberté 
 
 À travers cette présentation, vous avez sans doute retenu la distinction entre
@@ -978,9 +982,6 @@ mouvement qui impacte aujourd'hui toute la société numérique.
 }
 ```
 
-```compréhension
-terminer par des questions simples sur la section
-```
 
 # Les images
 
