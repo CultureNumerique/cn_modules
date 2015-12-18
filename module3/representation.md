@@ -159,16 +159,19 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 
 ```activité 
 ::Éditeur de textes pour des séquences de caractères:: 
-[markdown]Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
+[markdown]
+Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
+
 - manipuler les fichiers : ouvrir, enregistrer,
 - manipuler des éléments de textes : couper, copier, coller
 - rechercher dans le texte : rechercher, remplacer, suivant, précédent
 - des outils complémentaires
 
 ::Éditeur de textes avec des séquences de caractères dans un langage::
-[markdown] Ouvrir dans un éditeur de textes un fichier `html` (en
-mettre un dispo` }. Ce texte est une séquence de caractères mais
-l'éditeur reconnaît le langage et colorie les balises `html`.  ```
+[markdown]
+Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo` }. Ce texte est une séquence de caractères mais l'éditeur reconnaît le langage et colorie les balises `html`.
+
+```
 
 ## La structure, une vue arborescente
 
@@ -403,16 +406,13 @@ sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
 ```activité
-
 ::Les fichiers d'extension Doc::
 [markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
-
 {~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
 ~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
 = Est-ce que ce format est toujours développé ?#Oui
 = Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
 }
-
 ::L'éditeur de texte et les fichiers:: [markdown] Un éditeur de textes
 peut effectuer des opérations simples sur des textes simples qui sont
 des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
@@ -425,7 +425,7 @@ des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essaye
 {}
 ```
 
-```activité avancée
+```activité-avancée
 ::Les documents au format PDF::
 [markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
 - Est-ce un format ouvert ?
@@ -599,21 +599,25 @@ différents codages, le plus répandu et le plus économe en place est
 `UTF-8`.
 
 
-```Activité
+```activité
 ::Autres codes -- Un code mécanisé::
 [markdown]
-- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot)?  {#### 32
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot)?  
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour
+représenter les caractères?
+{32
 caractères uniquement : les lettres, les chiffres, la ponctuation, et
 quelques autres symboles (=, +, -, /, *, &, #...) ; }
-- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour
-représenter les caractères?  {#### Les symboles des langues autres que
+{Les symboles des langues autres que
 l'américain ne peuvent être représentés.}
-
 ::Autres codes -- un code par le signal::
 [markdown]
-- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) {les lettres et les chiffres}
-- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? {impulsion courte notée . ou `ti, impulsion longue notée - ou `taah ; trois durées d'espacement entre impulsions, entre lettres, entre mots}
-- Trouver pour quelle raison la lettre `E a le plus court codage ? {lettre la plus fréquente et souci de diminuer la longueur des transmissions}
+- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
+- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? 
+- Trouver pour quelle raison la lettre `E a le plus court codage ? 
+{les lettres et les chiffres}
+{impulsion courte notée . ou `ti, impulsion longue notée - ou `taah ; trois durées d'espacement entre impulsions, entre lettres, entre mots}
+{lettre la plus fréquente et souci de diminuer la longueur des transmissions}
 
 ::Unicode::
 [markdown]
@@ -621,18 +625,16 @@ Rendez vous sur le[site Unicode](http://www.unicode.org/).
 - Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
 - Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
 - Regardez les [caractères actuels](http://www.unicode.org/charts/).
-- Regardez en particulier *Basic Latin* qui ont été les premiers
-  caractères codés en informatique dans une table 'ASCII.
+- Regardez en particulier *Basic Latin* qui ont été les premiers caractères codés en informatique dans une table 'ASCII.
 
 ::Déclaration du codage des caractères dans les pages Web::
 [markdown]
-Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8 pour 80% des pages Web.
-- Ouvrez la page toto (une page html avec un court texte en langue française avec des accents des ç, ... sans déclaration du codage)
-- Ouvrez la page tutu (la même avec déclaration du codage UTF-8)
+Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8` pour 80% des pages Web.
+- Ouvrez la page toto (une page `html` avec un court texte en langue française avec des accents des ç, ... sans déclaration du codage)
+- Ouvrez la page tutu (la même avec déclaration du codage `UTF-8`)
 - Que constatez-vous ?
 - Consultez les codes sources de ces deux pages (utilisez la séquence de touches
-`CTRL-U` pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare
-cet encodage du jeu de caractères.  {#### =<meta
+`CTRL-U` pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare cet encodage du jeu de caractères.  {#### =<meta
 charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire
 information à propos de ce document, =charset= est une contraction
 pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8=
@@ -649,12 +651,18 @@ machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe
 dans des suites de huit symboles appelés octets. Rendez vous sur la
 page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
 texte en répondant aux questions suivantes :
-- Combien peut-on coder de caractères avec UTF-8 ? {supérieur à 1 million}
+- Combien peut-on coder de caractères avec `UTF-8` ? 
 - Est-ce que tous les caractères sont codées sur le même nombre d'octets ? {Non de 1 à 4 octets}
-- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. {sur 1 octet 01000001}
-- Quels sont les caractères codés sur 1 octet ? {les lettres minuscules, majuscules, ponctuations}
-- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet {les lettres accentuées, le c cédille, le e dans l'o}
-- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ? {110 deux octets, 1110 trois octets, 11110 4 octets}
+- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
+- Quels sont les caractères codés sur 1 octet ? 
+- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet 
+- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
+{supérieur à 1 million}
+{sur 1 octet 01000001}
+{les lettres minuscules, majuscules, ponctuations}
+{les lettres accentuées, le c cédille, le e dans l'o}
+{110 deux octets, 1110 trois octets, 11110 4 octets}
+
 ```
 
 ```compréhension
@@ -707,13 +715,7 @@ langue, de la définition des symboles de ponctuation.
   
 ```activité
 ::Structure implicite::
-[markdown] Ouvrir un éditeur de texte et insérer du contenu textuel
-(par saisie ou copier-coller ou ouverture d'un fichier
-texte). Vérifier en vous amusant à grandir et réduire la taille de la
-fenêtre que le paragraphe est bien un élément de structure et que la
-ligne n'est pas un élément de structure. {les paragraphes marqués par
-un passage à la ligne restent inchangés alors que les lignes varient
-selon la taille de la fenêtre}
+[markdown] Ouvrir un éditeur de texte et insérer du contenu textuel (par saisie ou copier-coller ou ouverture d'un fichier texte). Vérifier en vous amusant à grandir et réduire la taille de la fenêtre que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure. 
 ::Compter les mots::
 [markdown] On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
 - Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le
@@ -724,11 +726,13 @@ auquel vous vous attendiez ?
 - Effectuez la même opération dans un éditeur de textes et posez vous
 les mêmes questions. Vous chercherez dans les différents menus comment
 obtenir les statistiques du texte qui indiquent le nombre de mots.
-{####Notre version compte un mot supplémentaire pour le point virgule
-et le point d'exclamation, mais cela changera-t-il dans le futur ?
-C'est en tous cas un choix implicite reposant sur la présence d'une
-espace, car vous n'avez pas explicitement désigné les mots. Dans
-l'éditeur de texte `gedit` ce choix n'est pas le même.}
+{les paragraphes marqués par un passage à la ligne restent inchangés
+alors que les lignes varient selon la taille de la fenêtre} {####Notre
+version compte un mot supplémentaire pour le point virgule et le point
+d'exclamation, mais cela changera-t-il dans le futur ?  C'est en tous
+cas un choix implicite reposant sur la présence d'une espace, car vous
+n'avez pas explicitement désigné les mots. Dans l'éditeur de texte
+`gedit` ce choix n'est pas le même.}
 
 ```
 
@@ -817,7 +821,7 @@ partir de sa description.
 - Ouvrez le fichier ia.pdf avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
 - Retrouvez dans l'éditeur de texte la description des éléments de structure que vous voyez dans le document `pdf`.
 
-``` ```activité avancée
+``` ```activité-avancée
 ::Règles de typographie::
 [markdown]
 Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la
