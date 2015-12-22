@@ -169,7 +169,7 @@ Lancer un éditeur de textes (voir activité précédente). Entrer un court text
 
 ::Éditeur de textes avec des séquences de caractères dans un langage::
 [markdown]
-Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo` }. Ce texte est une séquence de caractères mais l'éditeur reconnaît le langage et colorie les balises `html`.
+Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grace, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `html`. Pour aider l'utilisateur, il colorie les balises `html`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
 
 ```
 
@@ -191,22 +191,25 @@ une table des matières, réordonner des sections avec mise à jour de la
 table des matières, ...
 
 ```activité
-::La structure d'un document texte `odt`:: 
-[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
-- Ouvrez le *navigateur de `libreoffice`* (touche F5),
-- dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
-- Rendre une capture de cette fenêtre de navigateur
-- **activité avancée : réorganiser la structure.** Avec le document http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
-{}
-
 ::La structure d'une page web::
--  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culture-numerique.univ-lille3.fr/activitesWeb/html). 
+-  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
 - Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
-- Observez la structure du document `html`. Utilisez les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
+- Dans cette fenêtre, observez la structure du document `html`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Reproduisez ce chemin en réponse à ce quizz.
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Par exemple, `html>body>section>p'. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `html`. Quel est le chemin pour arriver au texte*Vous pouvez changer la taille...* ? 
 {####html/body/section/ul/li}
 ```
+
+```activité-avancée
+::La structure d'un document texte `odt`:: 
+[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
+- Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document,
+- dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+- Rendre une capture de cette fenêtre de navigateur
+- Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
+{}
+```
+
 
 ## Les méta-donnnées, une vue qualifiée
 
@@ -234,26 +237,19 @@ Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activit
 - le titre,
 - le sujet,
 - les mots clef,
-- la date de création.  Faites une capture d'écran de la fenêtre où
-vous avez trouvé ces meta-données.  {}
+- la date de création.
+Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  {}
 
 ::Un document peut être réduit à des méta données::
 [markdown]
-
 C'est le cas des notices bibliographiques des bibliothèques dont la
-plus grande partie des fonds n'est pas numérisée. Par conséquent, le
-contenu des livres n'est pas représenté numériquement et chaque
-ouvrage est défini par des méta données regroupées dans une
-notice. Nous prenons en exemple le
-[Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
 - Faites une requête comme, par exemple, `représentation information`
 - Parcourez une ou plusieurs notices des ouvrages en réponse
 - Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
-- Indiquez sur quels critères vous pouvez effectuer
-une recherche.
+- Indiquez sur quels critères vous pouvez effectuer une recherche.
 {#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
-
 
 ## La présentation, une vue pas uniquement graphique
 
@@ -281,7 +277,7 @@ communication visé.
 
 
 
-```activité
+```activité-avancée
 ::Mise en forme et structure::
 [markdown]
 Téléchargez lez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
@@ -429,7 +425,7 @@ des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essaye
 ::Les documents au format PDF::
 [markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
 - Est-ce un format ouvert ?
-- Peut-on lire et écrire du `pdf avec des logiciels différents ?
+- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
 - Que signifie portable ?
 - Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
 {}
@@ -602,14 +598,12 @@ différents codages, le plus répandu et le plus économe en place est
 ```activité
 ::Autres codes -- Un code mécanisé::
 [markdown]
-- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot)?  
-- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour
-représenter les caractères?
-{32
-caractères uniquement : les lettres, les chiffres, la ponctuation, et
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
+{32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
 quelques autres symboles (=, +, -, /, *, &, #...) ; }
-{Les symboles des langues autres que
-l'américain ne peuvent être représentés.}
+{Les symboles des langues autres que l'américain ne peuvent être représentés.}
+
 ::Autres codes -- un code par le signal::
 [markdown]
 - Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
@@ -621,7 +615,7 @@ l'américain ne peuvent être représentés.}
 
 ::Unicode::
 [markdown]
-Rendez vous sur le[site Unicode](http://www.unicode.org/).
+Rendez vous sur le [site Unicode](http://www.unicode.org/).
 - Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
 - Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
 - Regardez les [caractères actuels](http://www.unicode.org/charts/).
@@ -644,20 +638,16 @@ spécifie l'encodage choisi.}
 ```activité-avancée
 ::codage des points de codage -- UTF-8 et UTF-16::
 [markdown]
-Le standard Unicode associe à tout caractère pris en charge
-par Unicode un nom et un numéro appelé son point de codage. Ce point
-de codage est un nombre entier qu'il faut encore coder en langage
-machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe
-dans des suites de huit symboles appelés octets. Rendez vous sur la
-page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
+Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
 texte en répondant aux questions suivantes :
 - Combien peut-on coder de caractères avec `UTF-8` ? 
-- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? {Non de 1 à 4 octets}
+- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? 
 - Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
 - Quels sont les caractères codés sur 1 octet ? 
 - Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet 
 - Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
 {supérieur à 1 million}
+{Non de 1 à 4 octets}
 {sur 1 octet 01000001}
 {les lettres minuscules, majuscules, ponctuations}
 {les lettres accentuées, le c cédille, le e dans l'o}
@@ -715,19 +705,17 @@ langue, de la définition des symboles de ponctuation.
   
 ```activité
 ::Structure implicite::
-[markdown] Ouvrir un éditeur de texte et insérer du contenu textuel (par saisie ou copier-coller ou ouverture d'un fichier texte). Vérifier en vous amusant à grandir et réduire la taille de la fenêtre que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure. 
+[markdown]
+Ouvrir un éditeur de texte et insérer du contenu textuel (par saisie ou copier-coller ou ouverture d'un fichier texte). Vérifier en vous amusant à grandir et réduire la taille de la fenêtre que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure. 
+
 ::Compter les mots::
-[markdown] On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
-- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le
-logiciel de traitement de textes vous indique le nombre de mots du
-document ou d'une sélection. Qu'observez-vous pour le texte et pour
-les parties de textes quant au nombre de mots ? Est-ce le résultat
-auquel vous vous attendiez ?
-- Effectuez la même opération dans un éditeur de textes et posez vous
-les mêmes questions. Vous chercherez dans les différents menus comment
-obtenir les statistiques du texte qui indiquent le nombre de mots.
+[markdown]
+On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
+- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le logiciel de traitement de textes vous indique le nombre de mots du document ou d'une sélection. Qu'observez-vous pour le texte et pour les parties de textes quant au nombre de mots ? Est-ce le résultat auquel vous vous attendiez ?
+- Effectuez la même opération dans un éditeur de textes et posez vous les mêmes questions. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
 {les paragraphes marqués par un passage à la ligne restent inchangés
-alors que les lignes varient selon la taille de la fenêtre} {####Notre
+alors que les lignes varient selon la taille de la fenêtre}
+{####Notre
 version compte un mot supplémentaire pour le point virgule et le point
 d'exclamation, mais cela changera-t-il dans le futur ?  C'est en tous
 cas un choix implicite reposant sur la présence d'une espace, car vous
@@ -810,28 +798,24 @@ partir de sa description.
 ```activité
 ::Exemple de html::
 [markdown]
-- Ouvrez le fichier truc.html dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
-- Ouvrez le fichier truc.html dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
 - Décrivez la structure du document (titre, sections, listes, ...)
-- Regardez dans l'éditeur le texte `html contenu dans la partie `head du fichier truc.html. Vous pouvez voir les métadonnées : le contenu de la balise 'title (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise 'title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
 
 ::Exemple de LateX::
 [markdown]
-- Ouvrez le fichier ia.tex dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `lateX` car il colorie les balises `html`.
-- Ouvrez le fichier ia.pdf avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
-- Retrouvez dans l'éditeur de texte la description des éléments de structure que vous voyez dans le document `pdf`.
+- Ouvrez le fichier `ia.tex` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `LateX` car il colorie les mots utilisés par le langage  `LateX`.
+- Ouvrez le fichier `ia.pdf` avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf` défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
+- Retrouvez dans le fichier `text` ouvert dans l'éditeur de texte la description des éléments de structure que vous visualisez dans le document `pdf`.
 
-``` ```activité-avancée
+```
+
+```activité-avancée
 ::Règles de typographie::
 [markdown]
-Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la
-structure du document et certains éléments de mise en forme. C'est le
-programme qui respecte les règles de l'édition scientifique pour
-générer le document imprimable : taille des espaces, sauts de ligne,
-césure des mots, sauts de page, placement des figures, ... Cependant,
-il reste à votre charge de connaître et respecter certaines régles
-typographiques minimales comme espace après la virgule, espace avant
-et près le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant
+et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
 ```
 
 ## Traitement de textes
@@ -1039,7 +1023,7 @@ informatique qui précise, pour chacun d'eux, la forme, la dimension,
 la couleur, la position, etc. Le langage permet également de décrire
 comment on combine tous les objets pour produire l'image. La puissance
 des formalismes utilisés peut conduire à produire des images d'une
-grande complexité comme des images artistiques..
+grande complexité comme des images artistiques.
 
 En règle générale, un utilisateur n'a pas à appréhender le langage de
 description des images vectorielles. En effet, ces images vectorielles
@@ -1057,15 +1041,14 @@ Les logiciels qui manipulent et affichent ces images vectorielles
 calculent le résultat visuel à partir de la description. Un premier
 avantage est qu'une image vectorielle est une description de l'image
 et est donc de plus petite taille qu'une description point par point.
-Un second avantage très important des images vectorielle réside alors
+Un second avantage très important des images vectorielles réside alors
 en leur capacité à les afficher à n'importe quelle échelle sans aucune
 perte de qualité. L'affichage est *recalculé* quel que soit le niveau
 de zoom. Il est également très facile de modifier un élément de
 l'image indépendamment des autres. Enfin, notons que le même
 type de représentation est utilisé pour représenter des images en 3
 dimensions. Pour terminer, il est facile d'intégrer des images
-vectorielles dans des animations comme, par exemple, pour les décors
-de jeux video.
+vectorielles dans des animations comme, par exemple, pour les jeux video.
 
 <!--
 Ce type d'image n'est pas adapté à la représentation de photo, la
@@ -1077,11 +1060,15 @@ des formules mathématiques.
 ::Pierre Bézier::
 - Qui est **Pierre Bézier** ?
 {}
+
+::Courbe de Bézier::
+[markdown]
+Il est possible de définir des courbes avec peu d'informations. Par exemple, une courbe de Bézier cubique est définie par la donnée de 4 points A, B, C et D. A est le point de départ, AB donne la direction initiale, D est le point d'arrivée et CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
 ```
 
 ```activité-avancée 
 ::manipulations images svg::
-http://www.w3schools.com/svg/svg_text.asp{}
+Vous pouvez vous initier à la définition d'images vectorielles avec le standard `svg` sur ce [site tutoriel](http://www.w3schools.com/svg)
 ```
 
 ## Les images matricielles
@@ -1163,7 +1150,7 @@ lorsque les 3 composantes sont au maximum, cela donne du blanc. La
 représentation machine dans le modèle `RVB` est discutée dans les
 activités pour en déduire le nombre de couleurs représentables.
 
-```activité-avancée
+```activité
 ::Les valeurs de R de G ou de B::
 [markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
 {####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
@@ -1171,14 +1158,13 @@ activités pour en déduire le nombre de couleurs représentables.
 ::Les valeurs RGB::
 [markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
 {####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
+```
 
+```activité-avancée
 ::Les images CMJN::
-[markdown] Un autre modèle de couleur
-est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le
-principe est similaire au modèle RVB, il s'agit de décrire une couleur
-par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
-correspond aux technologies des écrans, le CMJN est adapté au monde de
-l'impression. Que signifient les initiales CMJN ?
+[markdown]
+Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le principe est similaire au modèle RVB, il s'agit de décrire une couleur par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
+correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
 {#### Cyan Magenta Jaune et Noir}
 ```
 ## Les formats
@@ -1206,10 +1192,9 @@ méthodes de compression qui peuvent être diverses.  Tout
 ceci donne lieu à de nombreux formats matriciels dont les principaux
 sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 
-```activitée-avancée
+```activité-avancée
 ::meta-données de photos::
-[markdown] La plupart des appareils photos
-numériques ajoutent des méta-données à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de meta-données associées aux photos.
+[markdown] La plupart des appareils photos numériques ajoutent des méta-données à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de meta-données associées aux photos.
 {####Elles
 peuvent décrire les caractéristiques techniques de la prise de vue
 (valeur de la focale, vitesse d'obturation, ouverture du
