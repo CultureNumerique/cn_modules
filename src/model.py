@@ -36,10 +36,12 @@ DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
 
 
 # Regexps 
-# TODO Simplification: read line by line and just check boundaries of head/section/subsections and activities. (regexp line by line)
-reSplitSection=re.compile('^#\s+(?P<title>.*?)$',flags=re.S+re.M)
-reSplitSubsection = re.compile('^##\s+(?P<title>.*?)$',flags=re.S+re.M)    
-reSplitActivities = re.compile('^(?P<cours>.*?)^`{3}\s*(?P<type>.*?)$(?P<txt>.*?)^`{3}',re.S+re.M+re.I)
+reEndHead = re.compile('^#')
+reStartSection = re.compile('^#\s+(?P<title>.*)$')
+reStartSubsection = re.compile('^##\s+(?P<title>.*)$')
+reStartActivity = re.compile('^```(?P<type>.*)$')
+reEndActivity = re.compile('^```\s*$')
+reMetaData = re.compile('^(?P<meta>.*?):\s*(?P<value>.*)\s*$')
 
 
 
@@ -87,10 +89,9 @@ class Subsection:
     - num subsection number based on the section number 
     """
     num = 1
-    def __init__(self, section, src):
+    def __init__(self, section):
         self.section = section
         self.num = self.section.num+'-'+str(Subsection.num)
-        self.src = src
         Subsection.num +=1
 
     def getFilename(self):
@@ -108,12 +109,25 @@ class Subsection:
     
 class Cours(Subsection):
     """ Class for a lecture"""
-    def __init__(self, section, src,title = 'Cours'):
-        Subsection.__init__(self,section,src)
+    def __init__(self, section, file=None, src='' ,title = 'Cours'):
+        Subsection.__init__(self,section)
         self.title = title
         self.folder = 'webcontent'
         self.videos = []
-        
+        if src:
+            self.src= src
+        else:
+            self.src=''
+            self.parse(file)
+
+
+    def parse(self,f):
+        ''' Read lines in f until the end of the course '''
+        self.lastLine = f.readline()
+        while self.lastLine and not reStartSection.match(self.lastLine) and not reStartSubsection.match(self.lastLine) and not reStartActivity.match(self.lastLine):
+            self.src += self.lastLine
+            self.lastLine = f.readline()
+            
     def toHTML(self):
         html_src = markdown.markdown(self.src, MARKDOWN_EXT)
         if self.detectVideoLinks() : 
@@ -152,10 +166,20 @@ class Cours(Subsection):
 
 class AnyActivity(Subsection):
     """ Abstract class for any activity """
-    def __init__(self,section,src):
-        Subsection.__init__(self,section,src)
+    def __init__(self,section,f):
+        Subsection.__init__(self,section)
+        self.src = ''
+        self.parse(f)
         self.questions = process_questions(extract_questions(self.src))
 
+
+    def parse(self,f):
+        ''' Read lines in f until the end of the activity '''
+        self.lastLine = f.readline()
+        while self.lastLine and not reEndActivity.match(self.lastLine):
+            self.src += self.lastLine
+            self.lastLine = f.readline()
+    
     def toGift(self):
         gift_src=''
         for question in self.questions:
@@ -218,50 +242,61 @@ class ActiviteAvancee(AnyActivity):
 class Section:
     num = 1
 
-    def __init__(self,title,src):
+    def __init__(self,title,f):
         self.title = title
         self.subsections = []
         self.num = str(Section.num)
-        self.parseSections(src)
+        self.parse(f)
         Section.num +=1
         Subsection.num=1 
         
-    def parseSections(self, src):
-        # Split subsections  
-        subtitle='Cours' # Default Title
-        body = src[:]
-        m_next = reSplitSubsection.search(body)
-        while ( m_next ) :
-            self.parseSubsections(subtitle, body[:m_next.start()]) 
-            m = m_next
-            body = body[m.end():]
-            m_next = reSplitSubsection.search(body)
-            subtitle = m.group('title')
-        self.parseSubsections(subtitle,body)
-
-    def parseSubsections(self, title, src):
-        hasActivities = False
+    def parse(self, f):
         m = sys.modules[__name__]
-        for parts in reSplitActivities.finditer(src):
-            typeSection = unidecode(parts.group('type')).title().translate(' .-_')
-            hasActivities = True
-            if typeSection in m.__dict__ :
-                act = getattr(m,typeSection)
-                if isclass(act):
-                    self.subsections.append(act(self,parts.group('txt')))
+        body = ''
+        self.lastLine = f.readline()
+        while self.lastLine and not reStartSection.match(self.lastLine):
+
+            # is it a new subsection ?
+            match = reStartSubsection.match(self.lastLine)
+            if match :
+                # should I create a subsection (text just below a section
+                # or between activities
+                if body and not body.isspace():
+                    self.subsections.append(Cours(self,src=body))
+                sub = Cours(self,file=f,title=match.group('title'))
+                self.subsections.append(sub)
+                # The next line is the last line read in the parse of the subsection
+                self.lastLine = sub.lastLine
+                body = ''
+            else:
+                # is it an activity
+                match = reStartActivity.match(self.lastLine)
+                if match :
+                    # should I create a subsection (text just below a section
+                    # or between activities
+                    if body and not body.isspace():
+                        self.subsections.append(Cours(self,src=body))
+                    # guess the activity type
+                    typeSection = re.sub('[ ._-]','',unidecode(match.group('type')).title())
+                    goodType = False
+                    if typeSection in m.__dict__ :
+                        act = getattr(m,typeSection)
+                        if isclass(act):
+                            self.subsections.append(act(self,f))
+                            goodType = True
+                    if not goodType:
+                        print ("Unknown activity type",typeSection, file=sys.stderr)
+                        # read the file until the end of the block
+                        while self.lastLine and not reEndActivity.match(self.lastLine)  :
+                            self.lastLine = f.readline()
+                    # read a new line after the end of blocks 
+                    self.lastLine = f.readline()
+                    body = '' 
+
                 else:
-                    print ("Unknown activity type",typeSection, file=sys.stderr)
-            # is there a non empty text before the first activity?
-            if not parts.group('cours').isspace():
-                self.subsections.append(Cours(self, parts.group('cours'),title ))
-        ## is there a non empty text after the last activity ?
-        if hasActivities and parts.end() != len(src):
-            rest = src[parts.end():]
-            if not rest.isspace():
-                self.subsections.append(Cours(self, rest ))
-        ## there is no activity at all in that subsection, juste create a course
-        if not hasActivities:
-            self.subsections.append(Cours(self,src,title))
+                    # no match, add the line to the body and read a new line
+                    body += self.lastLine
+                    self.lastLine = f.readline()
         
 
     def toHTMLFiles(self,outDir):
@@ -281,47 +316,37 @@ class Section:
 class Module:
     """ Module structure"""
 
-    def __init__(self,src):
+    def __init__(self,f):
         self.sections = []
         Section.num = 1
-        self.parse(src)
+        self.parse(f)
 
     
-    def parseHead(self,head) :
-        """ FIXME: make it more generic """ 
-        reg1 = re.search('TITLE:\s*(?P<title>.*)', head)
-        if reg1:
-            self.title = reg1.group('title')
-        reg2 = re.search('LANGUAGE:\s*(?P<lang>.*)', head)
-        if reg2:
-            self.language = reg2.group('lang')
-
+    def parseHead(self,f) :
+        """ Captures meta-data  """
+        l = f.readline()
+        while l and not reEndHead.match(l) :
+            m = reMetaData.match(l)
+            if m:
+                setattr(self, m.group('meta'), m.group('value'))
+            l = f.readline()
+        return l
+                
     def toJson(self):
         return json.dumps(self, sort_keys=True,
                           indent=4, separators=(',', ': '),cls=ComplexEncoder)
     
-    def parse(self,src):
+    def parse(self,f):
         #  A. split sections
         ## up to first section
-        m = reSplitSection.search(src)
-    
-        self.parseHead( src[:m.start()] )
-
-        # Split sections
-        ## What is the body of this section ? 
-        body = src[m.end():]
-        ## search next heading
-        m_next = reSplitSection.search(body)
-
-        ## Repeat until there is a next heading
-        while ( m_next ) :
-            self.sections.append(Section(m.group('title'),body[:m_next.start()]))        
-            m = m_next
-            body = body[m.end():]
-            m_next = reSplitSection.search(body)
-
-        ## The last section!
-        self.sections.append(Section(m.group('title'),body))
+        l = self.parseHead(f)
+        match = reStartSection.match(l)
+        while l and match:
+            s = Section(match.group('title'),f)
+            self.sections.append( s )
+            l = s.lastLine
+            match = reStartSection.match(l)
+                
 
     def toHTMLFiles(self, outDir):
         for s in self.sections:
@@ -343,8 +368,9 @@ class Module:
 
 ############### main ################
 if __name__ == "__main__":
+    import io
     
-    md_src = """
+    f = io.StringIO("""
 LANGUAGE:   FR
 TITLE:   Représentation numérique de l'information : Test Module
 AUTHOR:     Culture numérique
@@ -366,7 +392,9 @@ dfg
 dfgxs
 
 ## sub EEEEE
-
+```truc
+sdsdf
+```
 # sect 333
 
 avant activite
@@ -378,14 +406,14 @@ ceci est une acticité 1
 ceci est une acticité 2
 ```
 milieu activite
-```activité
+```activité-avancee
 ceci est une acticité 3
 ```
 
 apres activite
-"""
+""")
     
-    m = Module(md_src)
+    m = Module(f)
 
     print (m.toJson())
 

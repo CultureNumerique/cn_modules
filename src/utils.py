@@ -50,16 +50,14 @@ def processModule(module_folder):
     else:
         print ("found MarkDown file : %s" % filein)
         
-    with open(filein, encoding='utf-8') as md_file:
-        md_src = md_file.read()
-
     current_dir = os.path.join(os.getcwd(), module_folder)
 
     # create folders
     createDirs(current_dir)
 
-    # parse md 
-    m = model.Module(md_src)
+    with open(filein, encoding='utf-8') as md_file:
+        # parse md 
+        m = model.Module(md_file)
 
     # write html,  XML, and JSon  files
     m.toHTMLFiles(current_dir)
