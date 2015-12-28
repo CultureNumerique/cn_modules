@@ -13,7 +13,7 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
-import scripts.fromMD
+#import model
 
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
@@ -308,7 +308,8 @@ def main(argv):
     fileout = module_dir+'.imscc.zip'
     #  get config file by parsing markdown in module folder
     # FIXME do it only with an option '-md':
-    scripts.fromMD.main([module_dir])
+    #### TODO
+    # model.main([module_dir])
     # take config file whose name is built as follows  
     filein = os.path.join(module_dir, module_dir+'.config.json')
     
