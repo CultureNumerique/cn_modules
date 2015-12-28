@@ -14,7 +14,7 @@ from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
 
-#import fromMD
+import utils
 
 def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
@@ -82,7 +82,8 @@ def generateMenuSubsections(subsections,doc,tag,text):
             subsection_id = "subsec_"+subsection['num']
             if subsection['folder'] != 'correction':
                 with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+subsection['folder']+active_sub):
-                    text(subsection['title'])
+                    text(subsection['num']+' '+
+                         subsection['title'])
 
 
 def generateMenuSections(data,doc,tag,text): 
@@ -104,7 +105,7 @@ def generateMenuSections(data,doc,tag,text):
             section_id = ""
         with tag('li'):
             with tag('a', href="#", data_sec_id=section_id, klass="section"+active_sec):
-                text(section['title'])
+                text(section['num']+' '+section['title'])
             with tag('p', style=display):
                 generateMenuSubsections(section['subsections'],doc,tag,text)
 
@@ -144,7 +145,7 @@ def generateSubsectionContent(section,subsection,doc,tag,text):
             with tag('p', klass='fil_ariane'):
                 text(section['title']+' | '+subsection['title'])
             try:
-                href = module_folder+'/'+subsection['filename']
+                href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
                 subsec_text = parse_content(href, module_folder)
             except:
                 href = ""
@@ -166,7 +167,7 @@ def generateMainContent(data, doc,tag,text):
             
             section_id = "sec_"+section['num']
             try:
-                href = module_folder+'/'+section['filename']
+                href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
                 with tag('section', id=section_id, style=("display:none")):
                     doc.asis(parse_content(href, module_folder))
             except:
@@ -192,7 +193,7 @@ def generateModuleHtml(data, module_folder=False):
     doc.asis('<!--  NAVIGATION MENU -->')
     with tag('nav', klass="menu accordion"):
         with tag('h3'):
-            text(data["lom_metadata"]["title"])
+            text(data["title"])
         with tag('ul'):
             generateMenuSections(data,doc,tag,text)
             
@@ -235,8 +236,8 @@ def main(args):
     for module in global_data["modules"]:
         # generate config file with fromMD script/library
         #if '-md' in sys.argv:
-        #### TODOO scripts.fromMD.main([module["folder"]])
-        # config file for eaxh module is nammed [module_folder].config.json
+        utils.processModule(module["folder"])
+        # config file for each module is named [module_folder].config.json
         mod_config = os.path.join(module["folder"], module["folder"]+'.config.json')
         with open(mod_config, encoding='utf-8') as mod_data_file:
             # load module data from filin

@@ -1,6 +1,8 @@
 import os
 import shutil
 
+import model
+
 FOLDERS = ['Comprehension', 'Activite', 'ActiviteAvancee', 'cours', 'correction', 'media', 'webcontent']
 
 
@@ -34,3 +36,33 @@ def createDirs(outDir):
         else:
             os.makedirs(new_folder, exist_ok=True)
     
+def processModule(module_folder):
+    
+    # Fetch first md file in module folder
+    filein = None
+    for file in os.listdir(module_folder):
+        if '.md' in file:
+            filein = os.path.join(module_folder, file)
+            break
+    if not filein:
+        print(" No MarkDown file found, MarkDown file should end with '.md'")
+        return false
+    else:
+        print ("found MarkDown file : %s" % filein)
+        
+    with open(filein, encoding='utf-8') as md_file:
+        md_src = md_file.read()
+
+    current_dir = os.path.join(os.getcwd(), module_folder)
+
+    # create folders
+    createDirs(current_dir)
+
+    # parse md 
+    m = model.Module(md_src)
+
+    # write html,  XML, and JSon  files
+    m.toHTMLFiles(current_dir)
+    m.toXMLMoodle(current_dir)
+    write_file(m.toGift(), current_dir, '', 'questions_bank.gift.txt')
+    write_file(m.toJson(), current_dir, '',  module_folder+'.config.json')
