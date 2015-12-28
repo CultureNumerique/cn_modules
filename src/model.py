@@ -3,16 +3,17 @@
 #
 ######################################################################################
 #
-#    fromMD is a python lib that allows to parse a markdown file following the
-#    Culture Numérique guidelines. The output is a
-#       - JSON config file used to create HTML view or IMSCC archive for further
-#       export to Moodle. (Open EDX coming soon)
-#       - a cut out of the file in html and gift files, orderered in a folder structure
+#    Data model for Courses and Activities. The module provides
+#    parse tools for markdown files following the
+#    Culture Numérique guidelines. Outputs
+#       - JSON config file
+#       - HTML files (a cut out of the file in html and gift files, orderered in a folder structure)
+#       - HTML views
+#       - IMSCC archive (Open EDX coming soon)
 #
 ######################################################################################
 
 
-import os
 import sys
 import re
 import json
@@ -27,6 +28,7 @@ from slugify import slugify
 
 from fromGIFT import extract_questions, process_questions
 from toIMS import create_ims_test, create_empty_ims_test
+import utils
 
 MARKDOWN_EXT = ['markdown.extensions.extra', 'superscript']
 VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
@@ -78,22 +80,6 @@ def fetch_video_thumb(video_link):
     return image_link
     
 
-def write_file(src, outDir, target_folder, name):
-    """
-        given a "src" source string, write a file with "name" located in
-        "outDir"/"target_folder"
-    """
-    filename = os.path.join(outDir, target_folder, name)
-    try:
-        with open(filename, 'w') as outfile:
-            outfile.write(src)
-    except:
-        print (" Error writing file %s" % filename,file=sys.stderr)
-        return False
-
-    # if successful
-    return True
-
 class Subsection:
     """ 
     Abstract class for any type of subsection: lectures and activities
@@ -112,7 +98,7 @@ class Subsection:
         return self.filename
 
     def toHTMLFile(self,outDir):
-        write_file(self.toHTML(), outDir, self.folder, self.getFilename())
+        utils.write_file(self.toHTML(), outDir, self.folder, self.getFilename())
         
     def toGift(self):
         return ''
@@ -205,7 +191,7 @@ class AnyActivity(Subsection):
         filename = self.getFilename()
         xml_filename = filename.replace('html', 'xml')
         #   write xml file at same location
-        write_file(xml_src, outDir, self.folder , xml_filename)
+        utils.write_file(xml_src, outDir, self.folder , xml_filename)
 
 class Comprehension(AnyActivity):
                                         
@@ -357,25 +343,54 @@ class Module:
 
 ############### main ################
 if __name__ == "__main__":
-    if len(sys.argv) != 2 :
-        print(" requires 1 argument == module_folder")
-        sys.exit(1)
-    module_folder = sys.argv[1]
     
-    for file in os.listdir(module_folder):
-        if '.md' in file:
-            filein = os.path.join(module_folder, file)
-            break
-    if not filein:
-        print(" No MarkDown file found, MarkDown file should end with '.md'")
-        sys.exit(1)
-    else:
-        print ("found MarkDown file : %s" % filein)
-    with open(filein, encoding='utf-8') as md_file:
-        md_src = md_file.read()
-        
+    md_src = """
+LANGUAGE:   FR
+TITLE:   Représentation numérique de l'information : Test Module
+AUTHOR:     Culture numérique
+CSS: http://culturenumerique.univ-lille3.fr/css/base.css
+
+# sect 11111
+contenu sd
+## subsec AAAA
+aaa
+## subs BBBB
+contenu b
+# sect CCCC
+cont cccc
+## subsec DDDD
+ddddd
+# sect 222222
+dfg
+dfg
+dfgxs
+
+## sub EEEEE
+
+# sect 333
+
+avant activite
+
+```activité
+ceci est une acticité 1
+```
+```activité
+ceci est une acticité 2
+```
+milieu activite
+```activité
+ceci est une acticité 3
+```
+
+apres activite
+"""
+    
     m = Module(md_src)
+
     print (m.toJson())
 
+    module_folder = "tmp"
+    utils.createDirs(module_folder)
+    
     m.toHTMLFiles(module_folder)
     m.toXMLMoodle(module_folder)
