@@ -1,5 +1,8 @@
 TITLE: Internet: technologies, usages, société
-
+MENUTITLE: Internet
+AUTHOR: Culture Numérique
+LANGUAGE: fr
+CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Informatique et numérique
 
