@@ -394,7 +394,7 @@ raisons :
 1. Tout d'abord, les choix qui ont été opérés pour définir les formats
    ne sont pas toujours compatibles.  On peut donc perdre des
    informations lors de cette conversion.
-2. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas toujours écrire de programme de conversion.
+4. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas toujours écrire de programme de conversion.
 
 Par ailleurs, un document textuel dans un format peut être parfois
 manipulé avec des logiciels différents pour des besoins différents.
@@ -761,8 +761,6 @@ comme avec le langage `html` dont nous avons déjà parlé, soit en
 utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
-
-
 ## Textes structurés pour décrire des documents textuels
 
 Pour définir un document textuel, on peut décrire les différentes vues
@@ -815,7 +813,26 @@ partir de sa description.
 - Ouvrez le fichier `ia.pdf` avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf` défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
 - Retrouvez dans le fichier `text` ouvert dans l'éditeur de texte la description des éléments de structure que vous visualisez dans le document `pdf`.
 
+::Markdown avec Dillinger.io::
+[markdown]
+Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats. 
+Rendez-vous sur [dillinger.io](http://dillinger.io) et inscrivez-vous. Pour cela, vous pouvez utiliser votre adresse personnelle, [dillinger.io] est un service libre et ouvert, respectueux des données privées.
+Si toutefois, vous ne souhaitez pas prendre un compte sur ce site, vous pouvez utiliser l'éditeur de texte : [atom](https://atom.io/).
+N'hésitez pas à partager vos expériences sur le forum du cours, ...
+##### Une fois sur le site, *sélectionner* et *effacer* tout le contenu de la page de gauche (l'éditeur), puis *copier/coller* le texte qui se trouve [ici]().
+Sur la partie droite s'affiche un *rendu* du document, soit une *vue de présentation*. En observant cet exemple, répondez aux questions. 
+en `Markdown` comment :
+- mettre des mots en italique ?
+- mettre des mots en gras ?
+- définir un titre de premier niveau ?
+- de deuxième niveau ?
+- faire une liste à puces ?
+- mettre tout un paragraphe en exergue comme une citation?
+- délimiter des paragraphes ?
+{#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
 ```
+
+
 
 ```activité-avancée
 ::Règles de typographie::
