@@ -37,7 +37,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
             newlink = link.replace("../media", module+"/media")
             element.set(attribute, newlink)
     except Exception as e:
-        print("Exception rewriting/removing links %s" % (e))
+        print("Exception rewriting/removing links %s" % (e),file=sys.stderr)
 
     # FIXME: this should be removed, since obsolete : removing "Retour au cours" links
     try:
@@ -45,7 +45,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
         for l in links:
             l.getparent().remove(l)
     except:
-        print("Exception with moodle courses links")
+        print("Exception with moodle courses links",file=sys.stderr)
         pass
 
     # rename iframe attribute to prevent loading all iframes at once
@@ -57,57 +57,41 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
                 iframe.attrib['data-src'] = iframe.attrib['src']
                 etree.strip_attributes(iframe, 'src')
         except Exception as e:
-            print("Exception with iframe src")
+            print("Exception with iframe src",file=sys.stderr)
             pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
-def generateMenuSubsections(subsections,doc,tag,text):
+def generateMenuSubsections(idSection, subsections,doc,tag,text):
     # looping through subsections, skipping non html files
-    for subsection in subsections:
+    for idSubSection, subsection in enumerate(subsections):
         # 1st subsection active by default
-        if subsection['num'].endswith('-1'):
+        if idSubSection == 0:
             active_sub = " active"
         else:
             active_sub = ""
-        try:
-            href = subsection['filename']
-        except:
-            href = ""
-        try:
-            videos = subsection['videos']
-        except:
-            videos = []
-        if href.endswith(".html") or len(videos) > 0:
-            subsection_id = "subsec_"+subsection['num']
-            if subsection['folder'] != 'correction':
-                with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+subsection['folder']+active_sub):
-                    text(subsection['num']+' '+
-                         subsection['title'])
+        subsection_id = "subsec_"+str(idSection)+'_'+str(idSubSection)
+        if subsection['folder'] != 'correction':
+            with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+subsection['folder']+active_sub):
+                text(str(idSection+1)+'.'+str(idSubSection+1)+' '+
+                     subsection['title'])
 
 
 def generateMenuSections(data,doc,tag,text): 
-    for section in data["sections"]:
+    for idSection, section in enumerate(data["sections"]):
         # 1st section active by default
-        if section['num'] == "1":
+        if idSection == 0:
             active_sec = " active"
             display = " display:block"
         else:
             active_sec = ""
             display = ""
-        try:
-            source_file = section['filename']
-            if len(source_file) > 0:
-                section_id = "sec_"+section['num']
-            else:
-                section_id = ""
-        except:
-            section_id = ""
+        section_id = "sec_"+str(idSection)
         with tag('li'):
             with tag('a', href="#", data_sec_id=section_id, klass="section"+active_sec):
                 text(section['num']+' '+section['title'])
             with tag('p', style=display):
-                generateMenuSubsections(section['subsections'],doc,tag,text)
+                generateMenuSubsections(idSection,section['subsections'],doc,tag,text)
 
 def generateVideo(doc,tag,text,videos,display,subsection,subsec_text):
     for idVid, video in enumerate(videos):
@@ -133,49 +117,37 @@ def generateVideo(doc,tag,text,videos,display,subsection,subsec_text):
                 with tag('div', id=text_id, klass="fancy-text"):
                     doc.asis(subsec_text)
 
-def generateSubsectionContent(section,subsection,doc,tag,text):
-        # load 1st subsec by default, rest is hidden
-        if subsection['num'].endswith('.1'):
-            display = "true"
-        else:
-            display = "none"
-        subsection_id = "subsec_"+subsection['num']
-        with tag('section', id=subsection_id, style="display:"+display):
-            # fil d'arianne
-            with tag('p', klass='fil_ariane'):
-                text(section['title']+' | '+subsection['title'])
-            try:
-                href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
-                subsec_text = parse_content(href, module_folder)
-            except:
-                href = ""
-                subsec_text = ""
-            # If there are videos, rendering differs, as we put subsection text in a fancybox reader along with video iframes  
-            if "videos" in subsection :
-                generateVideo(doc,tag,text,subsection["videos"],display,subsection,subsec_text)
-            else: # print subsection text asis                        
-                if href.endswith(".html"):
-                    doc.asis(subsec_text)
-    
-                    
-def generateMainContent(data, doc,tag,text):
+def generateMainContent(data, doc,tag,text,module_folder):
     # Print main content
     doc.asis('<!--  MAIN CONTENT -->')
     with tag('main', klass="content"):
         # Loop through sections
-        for section in data["sections"]:
+        for idSection,section in enumerate(data["sections"]):
             
-            section_id = "sec_"+section['num']
-            try:
-                href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
-                with tag('section', id=section_id, style=("display:none")):
-                    doc.asis(parse_content(href, module_folder))
-            except:
-                print (" ---- no content for section %s" % (section_id))
+#            section_id = "sec_"+str(idSection)
+#            href = os.path.join(module_folder, section['filename'])
+#            with tag('section', id=section_id, style=("display:none")):
+#                doc.asis(parse_content(href, module_folder))
             # Loop through subsections
-            for subsection in section['subsections']:
+            for idSubsection,subsection in enumerate(section['subsections']):
                 if subsection['folder'] != 'correction':
-                    generateSubsectionContent(section,subsection,doc,tag,text)
+                    # load 1st subsec by default, rest is hidden
+                    if idSubsection==0 and idSection == 0:
+                        display = "true"
+                    else:
+                        display = "none"
+                    subsection_id = "subsec_"+str(idSection)+'_'+str(idSubsection)
+                    with tag('section', id=subsection_id, style="display:"+display):
+                        # fil d'arianne
+                        with tag('p', klass='fil_ariane'):
+                            text(section['title']+' | '+subsection['title'])
+                        href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
+                        subsec_text = parse_content(href, module_folder)
+                        if "videos" in subsection and len(subsection["videos"]) != 0 :
+                            generateVideo(doc,tag,text,subsection["videos"],display,subsection,subsec_text)
+                        else: # print subsection text asis                        
+                            if href.endswith(".html"):
+                                doc.asis(subsec_text)
 
 
 def writeHtml(module_folder,doc):
@@ -197,7 +169,7 @@ def generateModuleHtml(data, module_folder=False):
         with tag('ul'):
             generateMenuSections(data,doc,tag,text)
             
-    generateMainContent(data,doc,tag,text)
+    generateMainContent(data,doc,tag,text,module_folder)
     writeHtml(module_folder,doc)
     
 def usage():

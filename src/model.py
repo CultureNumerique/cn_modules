@@ -328,7 +328,7 @@ class Module:
         while l and not reEndHead.match(l) :
             m = reMetaData.match(l)
             if m:
-                setattr(self, m.group('meta'), m.group('value'))
+                setattr(self, m.group('meta').lower(), m.group('value'))
             l = f.readline()
         return l
                 
