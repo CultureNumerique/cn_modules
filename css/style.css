@@ -280,15 +280,18 @@ a.active{
     content: url('../svg/help.svg');
 }
 
-.auto-evaluation:before {
+.Comprehension:before {
 	content: url('../svg/activite_quiz.svg');
 }
 
 .correction:before {
     content: url('../svg/activite_correction.svg');
 }
-.devoirs:before {
+.Activite:before {
     content: url('../svg/activite_assign.svg');
+}
+.ActiviteAvancee:before {
+    content: url('../svg/activite_attendanceregister.svg');
 }
 .webcontent:before{
     content: url('../svg/activite_page.svg');
