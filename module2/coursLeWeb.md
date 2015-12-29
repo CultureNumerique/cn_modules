@@ -1,6 +1,7 @@
 LANGUAGE: fr
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css" />
 TITLE: Le Web
+MENUTITLE: Le Web
 AUTHOR: Culture Numérique
 
 # Introduction

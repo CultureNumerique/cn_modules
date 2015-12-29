@@ -1,5 +1,6 @@
-LANGUAGE:   FR
+LANGUAGE:   fr
 TITLE:   Représentation numérique de l'information : les documents
+MENUTITLE: Les documents
 AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
