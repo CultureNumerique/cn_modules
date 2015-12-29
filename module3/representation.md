@@ -95,13 +95,12 @@ numérique multimédia.
 
 
 ```compréhension
-
 ::Les traitements possibles dépendent fortement des choix de représentation::{T}
 
 ::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
 {#### Le genre, la date de création, l'éditeur, ...}
 
-::Il n'existe qu'une façon seule façon de représenter numériquement un livre:: 
+::Il n'existe qu'une seule façon de représenter numériquement un livre:: 
 {F# représenter une information est le résultat de nombreux choix}
 
 ::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
@@ -161,16 +160,15 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 ::Éditeur de textes pour des séquences de caractères:: 
 [markdown]
 Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
-
 - manipuler les fichiers : ouvrir, enregistrer,
 - manipuler des éléments de textes : couper, copier, coller
 - rechercher dans le texte : rechercher, remplacer, suivant, précédent
-- des outils complémentaires
+- des outils complémentaires {}
 
 ::Éditeur de textes avec des séquences de caractères dans un langage::
 [markdown]
-Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grace, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `html`. Pour aider l'utilisateur, il colorie les balises `html`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
-
+Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `html`. Pour aider l'utilisateur, il colorie les balises `html`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
+{}
 ```
 
 ## La structure, une vue arborescente
@@ -193,7 +191,7 @@ table des matières, ...
 ```activité
 ::La structure d'une page web::
 -  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
-- Pressez les touches `CTRL-MAJ-C`. La fenêtre de l'inspecteur de code `html` s'ouvre.
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `html` s'ouvre.
 - Dans cette fenêtre, observez la structure du document `html`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
 - La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Par exemple, `html>body>section>p'. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `html`. Quel est le chemin pour arriver au texte*Vous pouvez changer la taille...* ? 
@@ -297,12 +295,16 @@ structure et les méta-données.
 ```compréhension
 ::Avec la vue séquentielle, on peut remplacer les occurrences d'un mot par un autre mot::
 {T}
+
 ::Avec la vue structurée, on peut créer une table des matières automatiquement::
 {T}
+
 ::Un contenu avec une structure a une seule présentation possible::
 {F}
+
 ::vue qualifiée::
-[markdown] Donnez au minimum 4 méta données que vous pouvez associé à un livre
+[markdown] Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
+
 ::Éditeur de textes:: 
 [markdown]
 Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
@@ -313,6 +315,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 ~%25%corriger l'orthographe #certains le font 
 ~%-100% mettre en gras #l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
 }
+
 ::Le jardin zen:: 
 [markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
 - Sur le web, la beauté des CSS
@@ -321,7 +324,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
   - http://www.csszengarden.com/tr/fr/219/
   Entre ces différents designs, qu'est-ce qui change ?
 {
-~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (CTRL-U) 
+~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac) 
 ~Le contenu#non, lisez bien, les textes sont les mêmes!
 =La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
 }
@@ -409,6 +412,7 @@ contribuent à indexer le web.
 = Est-ce que ce format est toujours développé ?#Oui
 = Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
 }
+
 ::L'éditeur de texte et les fichiers:: [markdown] Un éditeur de textes
 peut effectuer des opérations simples sur des textes simples qui sont
 des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
@@ -464,18 +468,23 @@ peut-être même pas.
 [markdown]
 Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
 {####txt}
-::Avec un éditeur de textes, je peux ouvrir un fichier `doc::{F}
-::Avec un éditeur de textes, je peux ouvrir un fichier `html::{T}
-::Un fichier `html ouvert par le navigateur et par un éditeur donne le même résultat::{T}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier `doc`::{F}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier `html`::{T}
+
+
 ::Un contenu avec une structure a une seule présentation possible::
 {F}
+
 ::Conversions::
 [markdown]
 Est-il toujours possible de convertir un document d'un format vers un autre format ?
 {####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
 ::Un format ouvert facilite l'interopérabilité::{T}
 ```
-
+>::Un fichier `html` ouvert par le navigateur et par un éditeur donne le même résultat::{T}
+non, ambiguite de la question ou simple erreur dans la reponse ?
 
 ## Une minute citoyenne
 
@@ -600,18 +609,15 @@ différents codages, le plus répandu et le plus économe en place est
 [markdown]
 - Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
 - Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
-quelques autres symboles (=, +, -, /, *, &, #...) ; }
-{Les symboles des langues autres que l'américain ne peuvent être représentés.}
+{####32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
+quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues autres que l'américain ne peuvent être représentés.}
 
 ::Autres codes -- un code par le signal::
 [markdown]
 - Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
 - Ce code est basé sur des impulsions et des silences. Quels sont-ils ? 
-- Trouver pour quelle raison la lettre `E a le plus court codage ? 
-{les lettres et les chiffres}
-{impulsion courte notée . ou `ti, impulsion longue notée - ou `taah ; trois durées d'espacement entre impulsions, entre lettres, entre mots}
-{lettre la plus fréquente et souci de diminuer la longueur des transmissions}
+- Trouver pour quelle raison la lettre `E` a le plus court codage ? 
+{####les lettres et les chiffres ; impulsion courte notée `.` ou `ti`, impulsion longue notée `-` ou `taah` ; trois durées d'espacement entre impulsions, entre lettres, entre mots ; `E`: lettre la plus fréquente et souci de diminuer la longueur des transmissions}
 
 ::Unicode::
 [markdown]
@@ -619,7 +625,7 @@ Rendez vous sur le [site Unicode](http://www.unicode.org/).
 - Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
 - Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
 - Regardez les [caractères actuels](http://www.unicode.org/charts/).
-- Regardez en particulier *Basic Latin* qui ont été les premiers caractères codés en informatique dans une table 'ASCII.
+- Regardez en particulier *Basic Latin* qui ont été les premiers caractères codés en informatique dans une table 'ASCII`.{}
 
 ::Déclaration du codage des caractères dans les pages Web::
 [markdown]
@@ -628,7 +634,7 @@ Les caractères sont représentés conformément au standard Unicode et au codag
 - Ouvrez la page tutu (la même avec déclaration du codage `UTF-8`)
 - Que constatez-vous ?
 - Consultez les codes sources de ces deux pages (utilisez la séquence de touches
-`CTRL-U` pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare cet encodage du jeu de caractères.  {#### =<meta
+`CTRL-U` ou  cmd-U sur Mac pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare cet encodage du jeu de caractères.  {#### =<meta
 charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire
 information à propos de ce document, =charset= est une contraction
 pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8=
@@ -801,7 +807,7 @@ partir de sa description.
 - Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
 - Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
 - Décrivez la structure du document (titre, sections, listes, ...)
-- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise 'title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
 
 ::Exemple de LateX::
 [markdown]
