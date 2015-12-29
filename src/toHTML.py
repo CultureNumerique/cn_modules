@@ -176,7 +176,7 @@ def generateModuleHtml(data, module_folder=False):
     generateMainContent(data,doc,tag,text,module_folder)
     writeHtml(module_folder,doc)
 
-def processModule(module):
+def processModule(module,e):
     # generate config file with fromMD script/library
     utils.processModule(module)
     # config file for each module is named [module_folder].config.json
@@ -184,28 +184,43 @@ def processModule(module):
     with open(mod_config, encoding='utf-8') as mod_data_file:
         # load module data from filin
         mod_data = json.load(mod_data_file)
+        if 'menutitle' in mod_data:
+            shortTitle = mod_data['menutitle']
+        else:
+            shortTitle = mod_data['title']
+        strhtml = '<li><a href="'+module+'/'+module+'.html">'+shortTitle+'</a></li>'
 
     generateModuleHtml(mod_data, module)
+    e.append(html.fromstring(strhtml))
     
-def processConfig(fconfig):
+def processConfig(fconfig,e):
     global_data = json.load(fconfig)
     for module in global_data["modules"]:
-        processModule(module['folder'])
+        processModule(module['folder'],e)
                       
-def processModules(modules):
+def processModules(modules,e):
     for module in modules:
         logging.info("Process %s",module)
-        processModule(module)
+        processModule(module,e)
 
-def processDefault():
+def processDefault(e):
     import glob
     listt = glob.glob("module[0-9]")
     for module in sorted(listt,key=lambda a: a.lstrip('module')):
-        processModule(module)
+        processModule(module,e)
 
+
+def loadTemplate(template="index.tmpl"):
+    parser = etree.HTMLParser()
+    tree   = etree.parse(template, parser)
+    e_list = tree.xpath("//ul[@id='static-nav']")
+    return tree,e_list[0]
+
+    
 ############### main ################
 if __name__ == "__main__":
 
+    
     import argparse
     parser = argparse.ArgumentParser(description="Parses markdown files and generates a website. Default is to process all folders 'module*'.")
     group = parser.add_mutually_exclusive_group()
@@ -215,11 +230,19 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))
-    
+
+    # load the html template
+    index,e = loadTemplate();
+
     if args.config != None:
-        processConfig(args.config)
+        processConfig(args.config,e)
     elif args.modules != None:
-        processModules(args.modules)
+        processModules(args.modules,e)
     else:
-        processDefault()
-            
+        processDefault(e)
+
+#    print (html.tostring(index))
+    
+    # write resulting html file
+#    print (html.tostring(index,method='html'))
+    index.write("index.html",method='html')    
