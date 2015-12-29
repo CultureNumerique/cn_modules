@@ -10,6 +10,7 @@ import zipfile
 import random
 import datetime
 import time
+import logging
 
 from lxml import etree
 from lxml import html
@@ -111,7 +112,7 @@ class GiftQuestion():
                 if self.text_format == 'html':
                     doc.asis(self.text)
                 else:
-                    print ("printing Markdown/ source = %s " % (self.text))
+                    logging.info ("printing Markdown/ source = %s " % (self.text))
                     html_text = markdown.markdown(self.text, MARKDOWN_EXT)
                     doc.asis(html_text)
             # If type MULTICHOICE, MULTIANSWER give choices
@@ -181,7 +182,7 @@ def extract_questions(some_text):
             new_question = clean_question_src(new_question)
             questions_src.append(new_question)
 
-    pprint (" ^^^^^^^^^^^^  Extracted  %d questions" % (len(questions_src)))
+    logging.info(" ^^^^^^^^^^^^  Extracted  %d questions" % (len(questions_src)))
     return questions_src
 
 
@@ -193,7 +194,6 @@ def process_questions(questions_src):
     question_objects = []
 
     for q_src in questions_src:
-        #pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
         q_obj.gift_src = q_src
         q_prestate = ""
@@ -215,7 +215,6 @@ def process_questions(questions_src):
                 q_poststate = tmp.split('}', maxsplit=1)[1]
 
         # 2. Process q_prestate
-        #pprint(" Trying to process prestate = %s" % (q_prestate))
         r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>[^\]]*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
         m0 = r0.search(q_prestate)
         if m0.group('title'):
@@ -237,7 +236,7 @@ def process_questions(questions_src):
             q_obj.global_feedback_format = m1.group('fb_format')
             q_answers = r1.sub('', q_answers)
         ## Then, process the remaining types
-        print(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
+        logging.info(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
         if q_answers == '':
             q_obj.type = 'ESSAY'
         ## TRUEFALSE questions

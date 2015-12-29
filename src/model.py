@@ -19,6 +19,7 @@ import re
 import json
 import markdown
 import requests
+import logging
 from unidecode import unidecode
 from inspect import isclass
 
@@ -66,7 +67,7 @@ def fetch_video_thumb(video_link):
     """
     # get video id
     video_id = video_link.rsplit('/', 1)[1]
-    print ("== video ID = %s" % video_id)
+    logging.info ("== video ID = %s" % video_id)
     try: 
         # fetch json
         response = requests.request('GET', VIDEO_THUMB_API_URL+video_id+'.json')
@@ -76,7 +77,7 @@ def fetch_video_thumb(video_link):
         image_link = image_link.replace('wepb', 'jpg')
     except Exception:
         #raise
-        print (" ----------------  error while fetching video %s" % (video_link),file=sysy.stderr)
+        logging.exception (" ----------------  error while fetching video %s" % (video_link))
         image_link = DEFAULT_VIDEO_THUMB_URL    
     
     return image_link
@@ -142,7 +143,7 @@ class Cours(Subsection):
 
                 html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
             except:
-                print("Exception with vimeo video links")
+                logging.exception("Exception with vimeo video links")
         return html_src
                 
     def detectVideoLinks(self):
@@ -205,7 +206,7 @@ class AnyActivity(Subsection):
                 link.attrib['target']="_blank"
             html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
         except:
-            print ("=== Error finding anchors in html src: %s" % html_src,file=sys.Stderr)
+            logging.exception("=== Error finding anchors in html src: %s" % html_src)
 
         return html_src
     
@@ -285,7 +286,7 @@ class Section:
                             self.subsections.append(act(self,f))
                             goodType = True
                     if not goodType:
-                        print ("Unknown activity type",typeSection, file=sys.stderr)
+                        logging.warning ("Unknown activity type %s",typeSection)
                         # read the file until the end of the block
                         while self.lastLine and not reEndActivity.match(self.lastLine)  :
                             self.lastLine = f.readline()

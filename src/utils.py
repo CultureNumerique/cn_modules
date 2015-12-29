@@ -2,9 +2,11 @@ import os
 import shutil
 
 import model
+import logging
+
 
 FOLDERS = ['Comprehension', 'Activite', 'ActiviteAvancee', 'cours', 'correction', 'media', 'webcontent']
-
+VERBOSITY = False
 
 def write_file(src, current_dir, target_folder, name):
     """
@@ -16,7 +18,7 @@ def write_file(src, current_dir, target_folder, name):
         with open(filename, 'w') as outfile:
             outfile.write(src)
     except:
-        print (" Error writing file %s" % filename,file=sys.stderr)
+        logging.exception(" Error writing file %s" % filename)
         return False
 
     # if successful
@@ -45,10 +47,10 @@ def processModule(module_folder):
             filein = os.path.join(module_folder, file)
             break
     if not filein:
-        print(" No MarkDown file found, MarkDown file should end with '.md'")
+        logging.error(" No MarkDown file found, MarkDown file should end with '.md'")
         return false
     else:
-        print ("found MarkDown file : %s" % filein)
+        logging.info ("found MarkDown file : %s" % filein)
         
     current_dir = os.path.join(os.getcwd(), module_folder)
 

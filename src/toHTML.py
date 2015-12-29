@@ -4,10 +4,10 @@
 import json
 import os
 import sys
+import logging
 
 from lxml import etree
 from lxml import html
-from pprint import pprint
 from yattag import indent
 from yattag import Doc
 from lxml.html.clean import Cleaner
@@ -26,7 +26,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
         with open(href, 'r') as file:
             htmltext = file.read()
     except Exception as e:
-        print("Exception reading %s: %s " % (href,e),file=sys.stderr)
+        logging.exception("Exception reading %s: %s " % (href,e))
         return ''
 
     if not htmltext:
@@ -49,7 +49,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
         for l in links:
             l.getparent().remove(l)
     except:
-        print("Exception with moodle courses links",file=sys.stderr)
+        loggin.exception("Exception with moodle courses links")
         pass
 
     # rename iframe attribute to prevent loading all iframes at once
@@ -61,7 +61,7 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
                 iframe.attrib['data-src'] = iframe.attrib['src']
                 etree.strip_attributes(iframe, 'src')
         except Exception as e:
-            print("Exception with iframe src",file=sys.stderr)
+            loggin.exception("Exception with iframe src")
             pass
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
@@ -194,6 +194,7 @@ def processConfig(fconfig):
                       
 def processModules(modules):
     for module in modules:
+        logging.info("Process %s",module)
         processModule(module)
 
 def processDefault():
@@ -204,15 +205,17 @@ def processDefault():
 
 ############### main ################
 if __name__ == "__main__":
+
     import argparse
     parser = argparse.ArgumentParser(description="Parses markdown files and generates a website. Default is to process all folders 'module*'.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-c", "--config",help="config file in a json format",type=argparse.FileType('r'))
     group.add_argument("-m", "--modules",help="module folders",nargs='*')
-    parser.add_argument("-v", "--verbose", help="increase output verbosity",
-                        action="store_true")
+    parser.add_argument("-l", "--log", dest="logLevel", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help="Set the logging level", default='WARNING')
+    
     args = parser.parse_args()
-
+    logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))
+    
     if args.config != None:
         processConfig(args.config)
     elif args.modules != None:
