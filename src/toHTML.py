@@ -4,8 +4,6 @@
 import json
 import os
 import sys
-import zipfile
-import random
 
 from lxml import etree
 from lxml import html
@@ -24,10 +22,16 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
     """ open file and replace media links and src for iframes """
     if not module:
         module = ""
+    try:
+        with open(href, 'r') as file:
+            htmltext = file.read()
+    except Exception as e:
+        print("Exception reading %s: %s " % (href,e),file=sys.stderr)
+        return ''
 
-    with open(href, 'r') as file:
-        htmltext = file.read()
-
+    if not htmltext:
+        return ''
+    
     tree = html.fromstring(htmltext)
     # Rewrite image links: for each module file, media dir is one step above (../media/)
     # with html export, medias are accessed from index.html in root dir, so we have 
@@ -171,54 +175,48 @@ def generateModuleHtml(data, module_folder=False):
             
     generateMainContent(data,doc,tag,text,module_folder)
     writeHtml(module_folder,doc)
-    
-def usage():
-    str = """
-        Usage:
-           toHTML.py config_filein [OPTIONS]
-           - if ommited, default config file is "toHTMLgobal.config.json"
-           - exporte les fichiers depuis l'arborescence git + fichier de config pour en
-           faire un fichier HTML module.html pour chaque [module] défini en config
-           
-           OPTIONS: 
-           -md : parses markdown file found in module_folder given in argument 
-           
-    """
-    print (str)
-    exit(1)
 
-def main(args):
-    """
-        toHTML is a utility to help building HTML export of course material
-        given a config file with sections structure + some other parameters
-        FIXME : add option -m with module folder to generate all HTML sources + module html file
-    """
-    
-    # filein is a global config file that gives each module's parameters
-    if len(args) == 1:
-        filein = args[0]
-    elif len(args) < 1:
-        filein = 'toHTMLglobal.config.json'
-    else:
-        usage()
-    
-    with open(filein, encoding='utf-8') as global_config:
+def processModule(module):
+    # generate config file with fromMD script/library
+    utils.processModule(module)
+    # config file for each module is named [module_folder].config.json
+    mod_config = os.path.join(module, module+'.config.json')
+    with open(mod_config, encoding='utf-8') as mod_data_file:
         # load module data from filin
-        global_data = json.load(global_config)
-    for module in global_data["modules"]:
-        # generate config file with fromMD script/library
-        #if '-md' in sys.argv:
-        utils.processModule(module["folder"])
-        # config file for each module is named [module_folder].config.json
-        mod_config = os.path.join(module["folder"], module["folder"]+'.config.json')
-        with open(mod_config, encoding='utf-8') as mod_data_file:
-            # load module data from filin
-            mod_data = json.load(mod_data_file)
+        mod_data = json.load(mod_data_file)
 
-        # print(" Data loaded \n %s" % (data) )
-        generateModuleHtml(mod_data, module["folder"])
-    print (" index.html saved. Compressing archive in %s " % (os.getcwd()))
+    generateModuleHtml(mod_data, module)
+    
+def processConfig(fconfig):
+    global_data = json.load(fconfig)
+    for module in global_data["modules"]:
+        processModule(module['folder'])
+                      
+def processModules(modules):
+    for module in modules:
+        processModule(module)
+
+def processDefault():
+    import glob
+    listt = glob.glob("module[0-9]")
+    for module in sorted(listt,key=lambda a: a.lstrip('module')):
+        processModule(module)
 
 ############### main ################
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    import argparse
+    parser = argparse.ArgumentParser(description="Parses markdown files and generates a website. Default is to process all folders 'module*'.")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-c", "--config",help="config file in a json format",type=argparse.FileType('r'))
+    group.add_argument("-m", "--modules",help="module folders",nargs='*')
+    parser.add_argument("-v", "--verbose", help="increase output verbosity",
+                        action="store_true")
+    args = parser.parse_args()
+
+    if args.config != None:
+        processConfig(args.config)
+    elif args.modules != None:
+        processModules(args.modules)
+    else:
+        processDefault()
+            
