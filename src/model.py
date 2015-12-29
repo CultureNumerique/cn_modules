@@ -44,7 +44,15 @@ reStartActivity = re.compile('^```(?P<type>.*)$')
 reEndActivity = re.compile('^```\s*$')
 reMetaData = re.compile('^(?P<meta>.*?):\s*(?P<value>.*)\s*$')
 
-
+def goodActivity(match):
+    m = sys.modules[__name__]
+    typeSection = re.sub('[ ._-]','',unidecode(match.group('type')).title())
+    if typeSection in m.__dict__ :
+        act = getattr(m,typeSection)
+        if isclass(act):
+            return act
+    return None
+    
 
 class ComplexEncoder(json.JSONEncoder):
     ''' Encoder for Json serialization: just delete recursive structures'''
@@ -125,9 +133,15 @@ class Cours(Subsection):
     def parse(self,f):
         ''' Read lines in f until the end of the course '''
         self.lastLine = f.readline()
-        while self.lastLine and not reStartSection.match(self.lastLine) and not reStartSubsection.match(self.lastLine) and not reStartActivity.match(self.lastLine):
+        while self.lastLine and not reStartSection.match(self.lastLine) and not reStartSubsection.match(self.lastLine) :
+            # Is it really the end of the section?
+            # blocks that are not activities are included!
+            match = reStartActivity.match(self.lastLine) 
+            if match and goodActivity(match):
+                return
             self.src += self.lastLine
             self.lastLine = f.readline()
+
             
     def toHTML(self):
         html_src = markdown.markdown(self.src, MARKDOWN_EXT)
@@ -252,7 +266,6 @@ class Section:
         Subsection.num=1 
         
     def parse(self, f):
-        m = sys.modules[__name__]
         body = ''
         self.lastLine = f.readline()
         while self.lastLine and not reStartSection.match(self.lastLine):
@@ -273,27 +286,20 @@ class Section:
                 # is it an activity
                 match = reStartActivity.match(self.lastLine)
                 if match :
-                    # should I create a subsection (text just below a section
-                    # or between activities
-                    if body and not body.isspace():
-                        self.subsections.append(Cours(self,src=body))
-                    # guess the activity type
-                    typeSection = re.sub('[ ._-]','',unidecode(match.group('type')).title())
-                    goodType = False
-                    if typeSection in m.__dict__ :
-                        act = getattr(m,typeSection)
-                        if isclass(act):
-                            self.subsections.append(act(self,f))
-                            goodType = True
-                    if not goodType:
-                        logging.warning ("Unknown activity type %s",typeSection)
-                        # read the file until the end of the block
-                        while self.lastLine and not reEndActivity.match(self.lastLine)  :
-                            self.lastLine = f.readline()
-                    # read a new line after the end of blocks 
-                    self.lastLine = f.readline()
-                    body = '' 
-
+                    act = goodActivity(match)
+                    if act: 
+                        # should I create a subsection (text just below a section
+                        # or between activities
+                        if body and not body.isspace():
+                            self.subsections.append(Cours(self,src=body))
+                            body = '' 
+                        self.subsections.append(act(self,f))
+                        # read a new line after the end of blocks 
+                        self.lastLine = f.readline()
+                    else:
+                        logging.warning ("Unknown activity type %s",self.lastLine)
+                        body += self.lastLine
+                        self.lastLine = f.readline()
                 else:
                     # no match, add the line to the body and read a new line
                     body += self.lastLine
@@ -389,6 +395,9 @@ cont cccc
 ddddd
 # sect 222222
 dfg
+```
+code
+```
 dfg
 dfgxs
 
