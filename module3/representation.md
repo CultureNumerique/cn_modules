@@ -83,12 +83,12 @@ l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
 ```activité
-::Représenter et normaliser est une tache complexe : l'exemple de HTML.::
-[markdown]En vous rendant sur les pages wikipedia de `HTML` et du `W3C`. Répondez aux questions suivantes : 
-- Quelle est l'origine de `html` ?
-- Qui développe et publie les spécifications `html` depuis 1995 ?
-- Quelle est la version la plus récente de `html` et son année de parution ? 
-- Qui participe au développement du standard `html` au `W3C` ?
+::Représenter et normaliser est une tâche complexe : l'exemple de HTML.::
+[markdown]En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
+- Quelle est l'origine de `HTML` ?
+- Qui développe et publie les spécifications `HTML` depuis 1995 ?
+- Quelle est la version la plus récente de `HTML` et son année de parution ? 
+- Qui participe au développement du standard `HTML` au `W3C` ?
 - Quelles sont les étapes pour arriver à être une recommandation ?
 - Qui est responsable du standard `css` pour les feuilles de style ?
 {#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
@@ -122,7 +122,7 @@ Dans cette section, nous analysons ce qu'est un document textuel pour
 déterminer les critères amenant à une bonne représentation numérique.
 Le cours sur le Web a déjà introduit un exemple de représentation
 numérique de document dont une caractéristique essentielle est de
-représenter contenu et structure d'un côté dans le langage `html` et
+représenter contenu et structure d'un côté dans le langage `HTML` et
 présentation d'un autre côté avec une feuille de style `CSS`. Cette
 représentation facilite les traitements et la transmission à travers
 les réseaux et permet l'affichage sur tout type d'écran. Cette
@@ -137,9 +137,9 @@ présentation.
 ::Installer des logiciels:: 
 [markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
 - Un éditeur de textes : Nous vous recommandons :
-  - Sous linux : `gedit`  (installé par défaut) ou `atom` (https://atom.io)
-  - Sous Windows : `notepad` (installé par défaut) ou `atom` (https://atom.io)
-  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` (https://atom.io)
+  - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` [https://atom.io](https://atom.io)
 - Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
 {}
 ```
@@ -162,13 +162,14 @@ coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 [markdown]
 Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
 - manipuler les fichiers : ouvrir, enregistrer,
-- manipuler des éléments de textes : couper, copier, coller
-- rechercher dans le texte : rechercher, remplacer, suivant, précédent
-- des outils complémentaires {}
+- manipuler des éléments de textes : couper, copier, coller,
+- rechercher dans le texte : rechercher, remplacer, suivant, précédent,
+- et sans doute des outils complémentaires spécifiques à l'éditeur choisi.
+{}
 
 ::Éditeur de textes avec des séquences de caractères dans un langage::
 [markdown]
-Ouvrir dans un éditeur de textes un fichier `html` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `html`. Pour aider l'utilisateur, il colorie les balises `html`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
+(*Pas convaincu, trop tôt ?*) Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
 {}
 ```
 
@@ -192,19 +193,19 @@ table des matières, ...
 ```activité
 ::La structure d'une page web::
 -  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
-- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `html` s'ouvre.
-- Dans cette fenêtre, observez la structure du document `html`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `html` incluses les unes dans les autres.
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
+- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `html`. Par exemple, `html>body>section>p'. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `html`. Quel est le chemin pour arriver au texte*Vous pouvez changer la taille...* ? 
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
 {####html/body/section/ul/li}
 ```
 
 ```activité-avancée
-::La structure d'un document texte `odt`:: 
+::La structure d'un document texte odt:: 
 [markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
-- Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document,
-- dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
-- Rendre une capture de cette fenêtre de navigateur
+- Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
+- Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+- Rendre une capture de cette fenêtre de navigateur.
 - Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
 {}
 ```
@@ -241,8 +242,7 @@ Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-donné
 
 ::Un document peut être réduit à des méta données::
 [markdown]
-C'est le cas des notices bibliographiques des bibliothèques dont la
-plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
 - Faites une requête comme, par exemple, `représentation information`
 - Parcourez une ou plusieurs notices des ouvrages en réponse
 - Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
@@ -258,7 +258,7 @@ présentation ou forme** du document. Cette forme va s'appliquer au
 contenu en s'aidant de la structure mais il est important de bien
 distinguer la **présentation** et le **contenu structuré**. En effet,
 comme vous l'avez vu dans le cours sur le Web, la séparation entre
-contenu et structure dans un fichier `html` et présentation dans une
+contenu et structure dans un fichier `HTML` et présentation dans une
 feuille de style css permet d'afficher un même contenu avec
 différentes formes mais aussi de faciliter certains traitements.
 Enfin, soyez vigilants car les traitements de textes entretiennent la
@@ -279,7 +279,7 @@ communication visé.
 ```activité-avancée
 ::Mise en forme et structure::
 [markdown]
-Téléchargez lez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
@@ -303,7 +303,7 @@ structure et les méta-données.
 ::Un contenu avec une structure a une seule présentation possible::
 {F}
 
-::vue qualifiée::
+::La vue qualifiée::
 [markdown] Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
 
 ::Éditeur de textes:: 
@@ -318,11 +318,11 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 }
 
 ::Le jardin zen:: 
-[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes), regardez ces différents liens
-- Sur le web, la beauté des CSS
-  - http://www.csszengarden.com/tr/francais/
-  - http://www.csszengarden.com/tr/fr/221/
-  - http://www.csszengarden.com/tr/fr/219/
+[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes).  Regardez ces différents liens sur le site la beauté des CSS : 
+  - [http://www.csszengarden.com/tr/francais/](http://www.csszengarden.com/tr/francais/)
+  - [http://www.csszengarden.com/tr/fr/221/](http://www.csszengarden.com/tr/fr/221/)
+  - [http://www.csszengarden.com/tr/fr/219/](http://www.csszengarden.com/tr/fr/219/)
+  
   Entre ces différents designs, qu'est-ce qui change ?
 {
 ~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac) 
@@ -361,8 +361,8 @@ précisés avec les abréviations suivantes :
 Vous noterez, que pour de mêmes usages, comme la composition de
 documents textuels, il existe des formats différents comme `doc` et
 `odt`. Vous noterez également que les formats évoluent avec les usages
-et les technologies. Par exemple `html` a été défini dans des versions
-successives depuis le début des années 90 jusque `html5`, paru
+et les technologies. Par exemple `HTML` a été défini dans des versions
+successives depuis le début des années 90 jusque `HTML5`, paru
 en 2014.
 
 
@@ -408,15 +408,14 @@ contribuent à indexer le web.
 ```activité
 ::Les fichiers d'extension Doc::
 [markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
-{~ Est-ce que les fichiers avec l'extension `doc` désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+{~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
 ~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
 = Est-ce que ce format est toujours développé ?#Oui
 = Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
 }
 
-::L'éditeur de texte et les fichiers:: [markdown] Un éditeur de textes
-peut effectuer des opérations simples sur des textes simples qui sont
-des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
+::L'éditeur de texte et les fichiers::
+[markdown] Un éditeur de textes peut effectuer des opérations simples sur des textes simples qui sont des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
 - texte simple avec l'extension txt
 - fichier odt
 - fichier html
@@ -446,7 +445,7 @@ cacher ou de le protéger par des brevets.
 
 On parle de **format ouvert** si le format est diffusé publiquement. Par
 exemple, vous pouvez accéder librement sur le Web à la définition du
-format `html5`.  De plus, aucune entrave légale n'accompagne
+format `HTML5`.  De plus, aucune entrave légale n'accompagne
 l'utilisation d'un format ouvert et de ce fait, un format ouvert n'est
 pas lié à un logiciel. En effet, plusieurs logiciels différents
 peuvent librement lire ou écrire les informations représentées dans ce
@@ -459,7 +458,7 @@ format très répandu donne une puissance économique très importante
 dans notre monde numérique et une position dominante. En effet, la
 conversion étant impossible, une mise en concurrence est rendue très
 improbable et les utilisateurs sont alors contraints d'utiliser le
-logiciel associé. Si `html` avait été un format fermé, sans doute le
+logiciel associé. Si `HTML` avait été un format fermé, sans doute le
 web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
@@ -470,9 +469,9 @@ peut-être même pas.
 Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
 {####txt}
 
-::Avec un éditeur de textes, je peux ouvrir un fichier `doc`::{F}
+::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
 
-::Avec un éditeur de textes, je peux ouvrir un fichier `html`::{T}
+::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
 
 
 ::Un contenu avec une structure a une seule présentation possible::
@@ -484,8 +483,6 @@ Est-il toujours possible de convertir un document d'un format vers un autre form
 {####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
 ::Un format ouvert facilite l'interopérabilité::{T}
 ```
->::Un fichier `html` ouvert par le navigateur et par un éditeur donne le même résultat::{T}
-non, ambiguite de la question ou simple erreur dans la reponse ?
 
 ## Une minute citoyenne
 
@@ -563,7 +560,7 @@ Précisons d'abord la notion de caractère en prenant l'exemple de la
 langue française. Les caractères sont les minuscules, les majuscules,
 les lettres accentuées, les chiffres, l'espace et les symboles de
 ponctuation.  On peut aussi considérer des caractères comme le
-caractère "e dans l'o" ou les symboles monétaires...
+ "e dans l'o" ou les symboles monétaires...
 
 Mais avec l'internationalisation et la numérisation de textes anciens,
 il faut être également capable de représenter tous les caractères de
@@ -574,7 +571,7 @@ existe des groupes internationaux qui ont pour mission d'établir des
 normes pour la représentation numérique des caractères. C'est le cas
 du consortium international *Unicode* fondé il y a plus de 20
 ans. Il définit en premier lieu le *quoi*, c'est-à-dire quels
-caractères ou symboles faut-il coder. À l'heure actuelle, la plupart
+caractères ou symboles il faut coder. À l'heure actuelle, la plupart
 des caractères et symboles de la très grande majorité des langues sont
 codés. Mais le consortium introduit régulièrement des nouvelles
 langues rares ou anciennes ou même des langages comme les Emoji.
@@ -601,7 +598,7 @@ passer d'une lettre majuscule de notre alphabet à la lettre minuscule
 correspondante, il suffit d'ajouter 32 à son numéro. Avec Unicode,
 tout caractère a donc un numéro, il reste à préciser comment ce numéro
 est représenté comme une suite de 0 et de 1. Il existe
-différents codages, le plus répandu et le plus économe en place est
+différents codages, le plus répandu en place est
 `UTF-8`.
 
 
@@ -645,8 +642,7 @@ spécifie l'encodage choisi.}
 ```activité-avancée
 ::codage des points de codage -- UTF-8 et UTF-16::
 [markdown]
-Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le
-texte en répondant aux questions suivantes :
+Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le texte en répondant aux questions suivantes :
 - Combien peut-on coder de caractères avec `UTF-8` ? 
 - Est-ce que tous les caractères sont codées sur le même nombre d'octets ? 
 - Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
@@ -713,30 +709,27 @@ langue, de la définition des symboles de ponctuation.
 ```activité
 ::Structure implicite::
 [markdown]
-Ouvrir un éditeur de texte et insérer du contenu textuel (par saisie ou copier-coller ou ouverture d'un fichier texte). Vérifier en vous amusant à grandir et réduire la taille de la fenêtre que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure. 
+Ouvrir le [fichier suivant](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
+{#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
 
 ::Compter les mots::
 [markdown]
 On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
 - Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le logiciel de traitement de textes vous indique le nombre de mots du document ou d'une sélection. Qu'observez-vous pour le texte et pour les parties de textes quant au nombre de mots ? Est-ce le résultat auquel vous vous attendiez ?
 - Effectuez la même opération dans un éditeur de textes et posez vous les mêmes questions. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
-{les paragraphes marqués par un passage à la ligne restent inchangés
-alors que les lignes varient selon la taille de la fenêtre}
-{####Notre
-version compte un mot supplémentaire pour le point virgule et le point
+{####Notre version compte un mot supplémentaire pour le point virgule et le point
 d'exclamation, mais cela changera-t-il dans le futur ?  C'est en tous
 cas un choix implicite reposant sur la présence d'une espace, car vous
 n'avez pas explicitement désigné les mots. Dans l'éditeur de texte
 `gedit` ce choix n'est pas le même.}
-
 ```
 
 ```activité-avancée
 ::Les paragraphes, structure explicite::
-[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne. À vous de constater cela dans votre traitement de textes :
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne, mais sans pour autant changer de paragraphe. À vous de constater cela dans votre traitement de textes :
 - Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
 - Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
-- Au milieu du second, appuyez sur`MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+- Au milieu du second, appuyez sur `MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
 {}
 
 ::La ligne n'est pas vraiment un élément structurel::
@@ -755,10 +748,10 @@ structurer un document de manière plus explicite et plus précise en
 déclarant des parties, sections, sous-sections, listes, etc.  La
 définition de cette structure est exclusivement sous la responsabilité
 humaine. C'est le concepteur du document qui sait quelle organisation,
-quelle structure associer à son contenu.  Il existe 2 grandes méthodes
+quelle structure associer à son contenu.  Il existe deux grandes méthodes
 pour interagir avec la machine, soit utilisant un langage spécifique
 qui à l'aide de mots et de symboles permet de décrire la structure
-comme avec le langage `html` dont nous avons déjà parlé, soit en
+comme avec le langage `HTML` dont nous avons déjà parlé, soit en
 utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
@@ -785,7 +778,7 @@ partir de sa description.
   monde scientifique (articles, rapports, thèses, livres). Dans ce
   langage, le texte structuré décrit le contenu et la structure avec,
   par exemple, une section commence par la séquence de caractères
-  `\section{titredesection}`. La forme est définie par les règles
+  `\section{titre de section}`. La forme est définie par les règles
   externes de l'édition scientifique. Un programme de calcul prend en
   entrée le document texte décrivant le document et produit en sortie
   un document lisible et imprimable au format `pdf` respectant ces
@@ -838,8 +831,7 @@ en `Markdown` comment :
 ```activité-avancée
 ::Règles de typographie::
 [markdown]
-Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant
-et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
 ```
 
 ## Traitement de textes
