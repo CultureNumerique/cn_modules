@@ -266,27 +266,14 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 ```
 
 ```activité
-::Installer des logiciels:: 
-[markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
-- Un éditeur de textes : Nous vous recommandons :
-  - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` [https://atom.io](https://atom.io)
-- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
+::Installer LibreOffice:: 
+[markdown]Les activités seront proposées avec le traitement de textes `libreoffice`. Vous pouvez l'installer depuis le site [http://fr.libreoffice.org/](http://fr.libreoffice.org/). (Rappelez-vous que vous devez installer des logiciels depuis les sites officiels uniquement.) 
+
+Les activités peuvent aussi être réalisées depuis les salles d'accès libre de l'université où tous les logiciels nécessaires sont disponibles.
 {}
 ```
 
 ```activité
-::La structure d'une page web::
--  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
-- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
-- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
-- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
-{####html/body/section/ul/li}
-```
-
-```activité-avancée
 ::La structure d'un document texte odt:: 
 [markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
 - Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
@@ -296,15 +283,22 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {}
 ```
 
-```activité 
-::La vue qualifiée  d'un document texte `odt`:: 
+```activité-avancée
+::Mise en forme et structure::
 [markdown]
-Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
+Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
+```
+
+```activité 
+::La vue qualifiée  d'un document texte odt:: 
+[markdown] Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
 - le titre,
 - le sujet,
 - les mots clef,
 - la date de création.
-Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  {}
+Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
+{}
 
 ::Un document peut être réduit à des méta données::
 [markdown]
@@ -316,12 +310,31 @@ C'est le cas des notices bibliographiques des bibliothèques dont la plus grande
 {#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
 ```
 
-```activité-avancée
-::Mise en forme et structure::
-[markdown]
-Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
-{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
+
+```activité
+::La structure d'une page web::
+[markdown]La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
+- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
+- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
+{####html/body/section/ul/li}
 ```
+
+
+```activité-avancée
+::Installer un éditeur de textes:: 
+[markdown] Vous utiliserez et installerez un éditeur de textes. Selon le système d'exploitation de votre ordinateur, nous vous recommandons :
+  - Sous linux : `gedit`  (installé par défaut) ou  [atom](https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou (notepad++)[https://notepad-plus-plus.org/fr/] ou encore [atom](https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou   [atom](https://atom.io)
+
+Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui peut se révéler un peu complexe. 
+{}
+```
+
+
 
 
 # Documents numériques - formats et normes
