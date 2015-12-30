@@ -1,0 +1,24 @@
+::Éditeur de textes pour des séquences de caractères:: 
+[markdown]
+Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
+- manipuler les fichiers : ouvrir, enregistrer,
+- manipuler des éléments de textes : couper, copier, coller,
+- rechercher dans le texte : rechercher, remplacer, suivant, précédent,
+- et sans doute des outils complémentaires spécifiques à l'éditeur choisi.
+{}
+
+::Éditeur de textes avec des séquences de caractères dans un langage::
+[markdown]
+(*Pas convaincu, trop tôt ?*) Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
+{}
+
+
+::L'éditeur de texte et les fichiers::
+[markdown] Un éditeur de textes peut effectuer des opérations simples sur des textes simples qui sont des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
+- texte simple avec l'extension txt
+- fichier odt
+- fichier html
+- fichier doc
+- texte simple avec l'extension toto
+- fichier pdf
+{}

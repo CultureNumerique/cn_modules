@@ -162,10 +162,11 @@ def generateModuleHtml(data, module, outModuleDir):
     writeHtml(module, outModuleDir,doc)
 
 def processModule(module,e,outDir):
-    # generate config file 
+    # generate config file
     utils.processModule(module,outDir)
+    outModuleDir = os.path.join(outDir,module)
     # config file for each module is named [module_folder].config.json
-    mod_config = os.path.join(module, module+'.config.json')
+    mod_config = os.path.join(outModuleDir, module+'.config.json')
     with open(mod_config, encoding='utf-8') as mod_data_file:
         # load module data from filin
         mod_data = json.load(mod_data_file)
@@ -175,7 +176,7 @@ def processModule(module,e,outDir):
             shortTitle = mod_data['title']
         strhtml = '<li><a href="'+module+'/'+module+'.html">'+shortTitle+'</a></li>'
 
-    generateModuleHtml(mod_data, module, os.path.join(outDir,module))
+    generateModuleHtml(mod_data, module, outModuleDir)
         
     e.append(html.fromstring(strhtml))
     

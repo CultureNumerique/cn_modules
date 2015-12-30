@@ -213,9 +213,6 @@ pour impression et lecture diffère de la forme d'un document pour
 affichage sur écran. La forme peut dépendre de l'objectif de
 communication visé.
 
-
-
-
 ### Un point d'étape
 
 Chacune des vues contenu, structure, qualifiée et de présentation est
@@ -255,25 +252,18 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
   - [http://www.csszengarden.com/tr/francais/](http://www.csszengarden.com/tr/francais/)
   - [http://www.csszengarden.com/tr/fr/221/](http://www.csszengarden.com/tr/fr/221/)
   - [http://www.csszengarden.com/tr/fr/219/](http://www.csszengarden.com/tr/fr/219/)
-
-  Entre ces différents designs, qu'est-ce qui change ?
+Entre ces différents designs, qu'est-ce qui change ?
 {
 ~%0%La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac)
 ~%0%Le contenu#non, lisez bien, les textes sont les mêmes!
 ~%100%La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
 }
-
 ```
 
 ```activité
-::Installer des logiciels::
-[markdown]Les activités qui vont suivre vont être un peu délicates. En effet, elles ne présentent aucune difficulté majeure, mais elles nécessite la manipulation de différents logiciels. Or, il est particulièrement 
-Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
-- Un éditeur de textes : Nous vous recommandons :
-  - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` [https://atom.io](https://atom.io)
-- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice`
+::Installer LibreOffice::
+[markdown]Les activités seront proposées avec le traitement de textes `libreoffice`. Vous pouvez l'installer depuis le site [http://fr.libreoffice.org/](http://fr.libreoffice.org/). (Rappelez-vous que vous devez installer des logiciels depuis les sites officiels uniquement.)
+Les activités peuvent aussi être réalisées depuis les salles d'accès libre de l'université où tous les logiciels nécessaires sont disponibles.
 {}
 ```
 
@@ -299,9 +289,8 @@ Selon le système d'exploitation de votre ordinateur, vous utiliserez et install
 ```
 
 ```activité
-::La vue qualifiée  d'un document texte `odt`::
-[markdown]
-Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
+::La vue qualifiée  d'un document texte odt::
+[markdown] Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
 - le titre,
 - le sujet,
 - les mots clef,
@@ -309,15 +298,27 @@ Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activit
 - le nombre de mots,
 - le nombre de signes (nombre de mots excluants les espaces)
 Faites des captures d'écran des fenêtres où vous avez trouvé ces meta-données.  {}
+{}
 
 ::Un document peut être réduit à des méta données::
 [markdown]
-C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
 - Faites une requête comme, par exemple, `représentation information`
 - Parcourez une ou plusieurs notices des ouvrages en réponse
 - Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
 - Indiquez sur quels critères vous pouvez effectuer une recherche.
 {#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
+```
+
+```activité
+::La structure d'une page web::
+[markdown]La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
+- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html).
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
+- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ?
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ?
+{####html/body/section/ul/li}
 ```
 
 ```activité-avancée
@@ -328,10 +329,19 @@ Téléchargez les deux fichiers suivants : [representation1](http://culturenumer
 Par ailleurs, si vous observez bien, plusieurs défauts majeurs apparaissent dans representation2.odt : certains titres se retrouvent isolés en bas de page (p3 et p5), le dernier titre en bleu (page 4) est d'une taille légèrement inférieure aux autre titres en bleu. Ces petites erreurs sont courantes lorsqu'on tente de faire la mise en forme "à la main". Aucune de ces erreurs ne peut se produire dans représentation1.odt car les styles des paragraphes prennent en charge entre autre : les veuves et les orphelines (au moins 2 lignes en bas de page ou en haut de page), les titres sont toujours sur la même page que le paragraphe suivant, ce qui évite des titres en bas de page, et les taille, couleur, police, ... choisis sont sélectionnés une seule fois au moment de la définition du style, ce qui signifie qu'AUCUNE différence de forme ne peut intervenir entre 2 paragraphes associés à un même style. La mise en forme de documents longs est donc grandement facilitée par l'utilisation de style de paragraphe.
 En résumé : les styles permettent de STRUCTURER le document (génération automatique d'une table des matières, vision en mode plan et faciliter de réorganisation), ils sont donc essentielles pour la vue Structurée du document, mais ils sont aussi précieux pour la vue de présentation en faisant gagner beaucoup de temps et en augmentant considérablement la qualité du document.
 }
+
+::Installer un éditeur de textes::
+[markdown] Vous utiliserez et installerez un éditeur de textes. Selon le système d'exploitation de votre ordinateur, nous vous recommandons :
+  - Sous linux : `gedit`  (installé par défaut) ou  [atom](https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou (notepad++)[https://notepad-plus-plus.org/fr/] ou encore [atom](https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou   [atom](https://atom.io)
+Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui peut se révéler un peu complexe.
+{}
 ```
 
-
 # Documents numériques - formats et normes
+
+### Pourquoi et comment
 
 Chacune des vues va contribuer à la représentation numérique d'un
 document textuel, mais, selon le domaine d'application, elle sera plus
@@ -344,7 +354,7 @@ problèmes.
 
 
 
-## Différents formats pour différents usages
+### Différents formats pour différents usages
 
 Les choix effectués pour répondre à la question **comment représenter
 des documents textuels** aboutissent à des **formats** de
@@ -365,7 +375,7 @@ successives depuis le début des années 90 jusque `HTML5`, paru
 en 2014.
 
 
-## Formats et logiciels
+### Formats et logiciels
 
 Nous avons expliqué la relation forte entre le choix de la
 représentation et les traitements qui peuvent être faits sur une
@@ -424,17 +434,7 @@ contribuent à indexer le web.
 {}
 ```
 
-```activité-avancée
-::Les documents au format PDF::
-[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
-- Est-ce un format ouvert ?
-- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-- Que signifie portable ?
-- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
-{}
-```
-
-## Ouvert ou propriétaire
+### Ouvert ou propriétaire
 
 Le processus de choix de représentation et de définition d'un format
 est complexe et coûteux. Il peut être aussi stratégique d'un point de
@@ -461,7 +461,6 @@ logiciel associé. Si `HTML` avait été un format fermé, sans doute le
 web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
-
 ```compréhension
 ::Extensions::
 [markdown]
@@ -471,7 +470,6 @@ Dans le nom de fichier `mondocument.txt`, quelle est l'extension ?
 ::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
 
 ::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
-
 
 ::Un contenu avec une structure a une seule présentation possible::
 {F}
@@ -483,7 +481,8 @@ Est-il toujours possible de convertir un document d'un format vers un autre form
 ::Un format ouvert facilite l'interopérabilité::{T}
 ```
 
-## Une minute citoyenne
+
+### Une minute citoyenne
 
 Le numérique est aujourd'hui un facteur de développement économique
 important. Ce développement repose en partie sur des infrastructures
@@ -532,6 +531,45 @@ servile dans ce monde numérique. Mais cela demande un effort
 particulier, une attente moins centrée sur l'immédiat et l'utilitaire,
 un peu moins personnelle car prenant conscience d'enjeux
 communautaires.
+
+```compréhension
+::Extensions::
+[markdown]
+Dans le nom de fichier `mondocument.txt`, quelle est l'extension ?
+{####txt}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
+
+
+::Un contenu avec une structure a une seule présentation possible::
+{F}
+
+::Conversions::
+[markdown]
+Est-il toujours possible de convertir un document d'un format vers un autre format ?
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+::Un format ouvert facilite l'interopérabilité::{T}
+```
+
+```activité
+::Les fichiers d'extension Doc::
+[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29).
+{~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
+= Est-ce que ce format est toujours développé ?#Oui
+= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
+}
+
+::Les documents au format PDF::
+[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+{}
+```
 
 # Documents numériques textuels
 
@@ -654,7 +692,6 @@ Le standard Unicode associe à tout caractère pris en charge par Unicode un nom
 {les lettres minuscules, majuscules, ponctuations}
 {les lettres accentuées, le c cédille, le e dans l'o}
 {110 deux octets, 1110 trois octets, 11110 4 octets}
-
 ```
 
 ```compréhension
