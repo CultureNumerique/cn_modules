@@ -267,7 +267,8 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 
 ```activité
 ::Installer des logiciels::
-[markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
+[markdown]Les activités qui vont suivre vont être un peu délicates. En effet, elles ne présentent aucune difficulté majeure, mais elles nécessite la manipulation de différents logiciels. Or, il est particulièrement 
+Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
 - Un éditeur de textes : Nous vous recommandons :
   - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
   - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
@@ -293,6 +294,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 - Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur.
 - Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
+- Mettez à jour la **table des matières** qui se trouve en début de doument : `clic-droit` dans la partie grisée de la table des matières et sélectionner `Actualiser l'index`.
 {}
 ```
 
