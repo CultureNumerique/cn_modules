@@ -82,19 +82,6 @@ particulier, à la fin du cours, les questions liées à la parole,
 l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
-```activité
-::Représenter et normaliser est une tâche complexe : l'exemple de HTML.::
-[markdown]En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
-- Quelle est l'origine de `HTML` ?
-- Qui développe et publie les spécifications `HTML` depuis 1995 ?
-- Quelle est la version la plus récente de `HTML` et son année de parution ? 
-- Qui participe au développement du standard `HTML` au `W3C` ?
-- Quelles sont les étapes pour arriver à être une recommandation ?
-- Qui est responsable du standard `css` pour les feuilles de style ?
-{#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
-``` 
-
-
 ```compréhension
 ::Les traitements possibles dépendent fortement des choix de représentation::{T}
 
@@ -116,8 +103,23 @@ numérique multimédia.
 }
 ```
 
+```activité
+::Représenter et normaliser est une tâche complexe : l'exemple de HTML.::
+[markdown]En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
+- Quelle est l'origine de `HTML` ?
+- Qui développe et publie les spécifications `HTML` depuis 1995 ?
+- Quelle est la version la plus récente de `HTML` et son année de parution ? 
+- Qui participe au développement du standard `HTML` au `W3C` ?
+- Quelles sont les étapes pour arriver à être une recommandation ?
+- Qui est responsable du standard `css` pour les feuilles de style ?
+{#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
+``` 
+
+
+
 # Analyse d'un document : plusieurs vues complémentaires
-## Introduction
+
+### Introduction
 Dans cette section, nous analysons ce qu'est un document textuel pour
 déterminer les critères amenant à une bonne représentation numérique.
 Le cours sur le Web a déjà introduit un exemple de représentation
@@ -133,19 +135,9 @@ L'analyse des documents textuels met en évidence *quatre vues
 complémentaires* : les vues séquentielle, structurée, qualifiée et de
 présentation.
 
-```activité
-::Installer des logiciels:: 
-[markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
-- Un éditeur de textes : Nous vous recommandons :
-  - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
-  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` [https://atom.io](https://atom.io)
-- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
-{}
-```
 
 
-## Le contenu, une vue séquentielle
+### Le contenu, une vue séquentielle
 
 Le premier constat évident est qu'un document textuel est une suite de
 symboles. C'est la *vue séquentielle* du document.  L'ordre est
@@ -157,23 +149,8 @@ d'imaginer des traitements : rechercher, remplacer, couper, copier,
 coller, identifier des mots et pourquoi pas en vérifier l'orthographe,
 ...
 
-```activité 
-::Éditeur de textes pour des séquences de caractères:: 
-[markdown]
-Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
-- manipuler les fichiers : ouvrir, enregistrer,
-- manipuler des éléments de textes : couper, copier, coller,
-- rechercher dans le texte : rechercher, remplacer, suivant, précédent,
-- et sans doute des outils complémentaires spécifiques à l'éditeur choisi.
-{}
 
-::Éditeur de textes avec des séquences de caractères dans un langage::
-[markdown]
-(*Pas convaincu, trop tôt ?*) Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
-{}
-```
-
-## La structure, une vue arborescente
+### La structure, une vue arborescente
 
 Les mots, phrases et paragraphes définissent une première
 structuration du document. Cependant, tout document textuel contient
@@ -190,28 +167,9 @@ disponibles : extraire le résumé, numéroter les sections, construire
 une table des matières, réordonner des sections avec mise à jour de la
 table des matières, ...
 
-```activité
-::La structure d'une page web::
--  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
-- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
-- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
-- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
-{####html/body/section/ul/li}
-```
-
-```activité-avancée
-::La structure d'un document texte odt:: 
-[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
-- Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
-- Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
-- Rendre une capture de cette fenêtre de navigateur.
-- Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
-{}
-```
 
 
-## Les méta-donnnées, une vue qualifiée
+### Les méta-donnnées, une vue qualifiée
 
 Une troisième vue découle de besoins que l'on peut illustrer par les
 exemples suivants : un utilisateur peut souhaiter retrouver la date de
@@ -230,27 +188,8 @@ Grâce à cette vue qualifiée et ces méta-données, les traitements sur
 des ensembles de documents sont facilités : on peut classer par
 auteur, rechercher par titre, ordonner des versions par date, ...
 
-```activité 
-::La vue qualifiée  d'un document texte `odt`:: 
-[markdown]
-Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
-- le titre,
-- le sujet,
-- les mots clef,
-- la date de création.
-Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  {}
 
-::Un document peut être réduit à des méta données::
-[markdown]
-C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
-- Faites une requête comme, par exemple, `représentation information`
-- Parcourez une ou plusieurs notices des ouvrages en réponse
-- Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
-- Indiquez sur quels critères vous pouvez effectuer une recherche.
-{#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
-```
-
-## La présentation, une vue pas uniquement graphique
+### La présentation, une vue pas uniquement graphique
 
 Enfin, les choix du dessin de chaque caractère, de leur taille, de la
 couleur du titre, de la taille des marges, etc.  participent à **la
@@ -276,14 +215,8 @@ communication visé.
 
 
 
-```activité-avancée
-::Mise en forme et structure::
-[markdown]
-Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
-{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
-```
 
-## Un point d'étape 
+### Un point d'étape 
 
 Chacune des vues contenu, structure, qualifiée et de présentation est
 importante.  Elles contribuent toutes, à des degrés divers, à des
@@ -325,12 +258,71 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
   
   Entre ces différents designs, qu'est-ce qui change ?
 {
-~La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac) 
-~Le contenu#non, lisez bien, les textes sont les mêmes!
-=La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
+~%0%La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac) 
+~%0%Le contenu#non, lisez bien, les textes sont les mêmes!
+~%100%La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
 }
 
 ```
+
+```activité
+::Installer des logiciels:: 
+[markdown]Selon le système d'exploitation de votre ordinateur, vous utiliserez et installerez si nécessaire les logiciels suivants
+- Un éditeur de textes : Nous vous recommandons :
+  - Sous linux : `gedit`  (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
+  - Sous Windows : `notepad` (installé par défaut) ou `atom` [https://atom.io](https://atom.io)
+  - Sous Mac : `textEdit` (installé par défaut) ou  `atom` [https://atom.io](https://atom.io)
+- Un traitement de textes. Les exemples seront donnés dans ce cours avec `libreoffice` 
+{}
+```
+
+```activité
+::La structure d'une page web::
+-  Lancer 'Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
+- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
+{####html/body/section/ul/li}
+```
+
+```activité-avancée
+::La structure d'un document texte odt:: 
+[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
+- Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
+- Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
+- Rendre une capture de cette fenêtre de navigateur.
+- Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
+{}
+```
+
+```activité 
+::La vue qualifiée  d'un document texte `odt`:: 
+[markdown]
+Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
+- le titre,
+- le sujet,
+- les mots clef,
+- la date de création.
+Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.  {}
+
+::Un document peut être réduit à des méta données::
+[markdown]
+C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des méta données regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+- Faites une requête comme, par exemple, `représentation information`
+- Parcourez une ou plusieurs notices des ouvrages en réponse
+- Examinez le contenu de `Sujets` et donnez le rôle de ces méta données
+- Indiquez sur quels critères vous pouvez effectuer une recherche.
+{#### les méta données dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les méta-données comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
+```
+
+```activité-avancée
+::Mise en forme et structure::
+[markdown]
+Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
+```
+
 
 # Documents numériques - formats et normes
 

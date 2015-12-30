@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import logging
+import shutil
 
 from lxml import etree
 from lxml import html
@@ -18,10 +19,8 @@ def write_iframe_code(video_link):
     return '<p><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" data-src="'+video_link+'"></iframe></p>'
     
 
-def parse_content(href, module=False, rewrite_iframe_src=True):
+def parse_content(href, module, outModuleDir, rewrite_iframe_src=True):
     """ open file and replace media links and src for iframes """
-    if not module:
-        module = ""
     try:
         with open(href, 'r') as file:
             htmltext = file.read()
@@ -38,31 +37,10 @@ def parse_content(href, module=False, rewrite_iframe_src=True):
     # to reconstruct the whole path
     try:
         for element, attribute, link, pos in tree.iterlinks():
-            newlink = link.replace("../media", module+"/media")
+            newlink = link.replace("media", module+"/media")
             element.set(attribute, newlink)
     except Exception as e:
-        print("Exception rewriting/removing links %s" % (e),file=sys.stderr)
-
-    # FIXME: this should be removed, since obsolete : removing "Retour au cours" links
-    try:
-        links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
-        for l in links:
-            l.getparent().remove(l)
-    except:
-        loggin.exception("Exception with moodle courses links")
-        pass
-
-    # rename iframe attribute to prevent loading all iframes at once
-    # FIXME : should be removed since iframes are generated in another place now
-    if rewrite_iframe_src:
-        try:
-            iframes = tree.xpath('//iframe')
-            for iframe in iframes:
-                iframe.attrib['data-src'] = iframe.attrib['src']
-                etree.strip_attributes(iframe, 'src')
-        except Exception as e:
-            loggin.exception("Exception with iframe src")
-            pass
+        logging.exception("Exception rewriting/removing links %s" % e)
 
     return html.tostring(tree, encoding='utf-8').decode('utf-8')
 
@@ -121,7 +99,7 @@ def generateVideo(doc,tag,text,videos,display,subsection,subsec_text):
                 with tag('div', id=text_id, klass="fancy-text"):
                     doc.asis(subsec_text)
 
-def generateMainContent(data, doc,tag,text,module_folder):
+def generateMainContent(data, doc,tag,text,module, outModuleDir):
     # Print main content
     doc.asis('<!--  MAIN CONTENT -->')
     with tag('main', klass="content"):
@@ -145,8 +123,8 @@ def generateMainContent(data, doc,tag,text,module_folder):
                         # fil d'arianne
                         with tag('p', klass='fil_ariane'):
                             text(section['title']+' | '+subsection['title'])
-                        href = os.path.join(module_folder, subsection['folder'],subsection['filename'])
-                        subsec_text = parse_content(href, module_folder)
+                        href = os.path.join(outModuleDir, subsection['folder'],subsection['filename'])
+                        subsec_text = parse_content(href, module, outModuleDir)
                         if "videos" in subsection and len(subsection["videos"]) != 0 :
                             generateVideo(doc,tag,text,subsection["videos"],display,subsection,subsec_text)
                         else: # print subsection text asis                        
@@ -154,13 +132,20 @@ def generateMainContent(data, doc,tag,text,module_folder):
                                 doc.asis(subsec_text)
 
 
-def writeHtml(module_folder,doc):
-    module_file_name = module_folder+'/'+module_folder+'.html'
+def writeHtml(module, outModuleDir,doc):
+    module_file_name = os.path.join(outModuleDir, module)+'.html'
     moduleHtml = open(module_file_name, 'w')
     moduleHtml.write(indent(doc.getvalue()))
     moduleHtml.close()
+    # Copy the media subdir if necessary to the dest 
+    mediaDir = os.path.join(module,"media")
+    if os.path.isdir(mediaDir):
+        try :
+            shutil.copytree(mediaDir, os.path.join(outModuleDir,'media'))
+        except FileExistsError as exception:
+            logging.warn("%s already exists",mediaDir)
     
-def generateModuleHtml(data, module_folder=False):
+def generateModuleHtml(data, module, outModuleDir):
     """ parse data from config file 'moduleX.config.json' and generate a moduleX html file """
 
     # create magic yattag triple
@@ -173,12 +158,12 @@ def generateModuleHtml(data, module_folder=False):
         with tag('ul'):
             generateMenuSections(data,doc,tag,text)
             
-    generateMainContent(data,doc,tag,text,module_folder)
-    writeHtml(module_folder,doc)
+    generateMainContent(data,doc,tag,text,module, outModuleDir)
+    writeHtml(module, outModuleDir,doc)
 
-def processModule(module,e):
-    # generate config file with fromMD script/library
-    utils.processModule(module)
+def processModule(module,e,outDir):
+    # generate config file 
+    utils.processModule(module,outDir)
     # config file for each module is named [module_folder].config.json
     mod_config = os.path.join(module, module+'.config.json')
     with open(mod_config, encoding='utf-8') as mod_data_file:
@@ -190,24 +175,25 @@ def processModule(module,e):
             shortTitle = mod_data['title']
         strhtml = '<li><a href="'+module+'/'+module+'.html">'+shortTitle+'</a></li>'
 
-    generateModuleHtml(mod_data, module)
+    generateModuleHtml(mod_data, module, os.path.join(outDir,module))
+        
     e.append(html.fromstring(strhtml))
     
-def processConfig(fconfig,e):
+def processConfig(fconfig,e,outDir):
     global_data = json.load(fconfig)
     for module in global_data["modules"]:
-        processModule(module['folder'],e)
+        processModule(module['folder'],e,outDir)
                       
-def processModules(modules,e):
+def processModules(modules,e,outDir):
     for module in modules:
         logging.info("Process %s",module)
-        processModule(module,e)
+        processModule(module,e,outDir)
 
-def processDefault(e):
+def processDefault(e,outDir):
     import glob
     listt = glob.glob("module[0-9]")
     for module in sorted(listt,key=lambda a: a.lstrip('module')):
-        processModule(module,e)
+        processModule(module,e,outDir)
 
 
 def loadTemplate(template="index.tmpl"):
@@ -216,7 +202,22 @@ def loadTemplate(template="index.tmpl"):
     e_list = tree.xpath("//ul[@id='static-nav']")
     return tree,e_list[0]
 
-    
+def prepareDestination(outDir):
+    """ Create outDir and copy mandatory files""" 
+    if not os.path.isdir(outDir):
+       if not os.path.exists(outDir):
+           os.makedirs(outDir)
+       else:
+           print ("Cannot create ",outDir, file=sys.stderr)
+           sys.exit(1)
+    shutil.copy('accueil.html',os.path.join(outDir,'accueil.html'))
+    for d in ['js', 'img', 'svg', 'css']:
+        dest = os.path.join(outDir,d)
+        try :
+            shutil.copytree(d, dest)
+        except FileExistsError as e:
+            logging.warn("%s already exists",d)
+            
 ############### main ################
 if __name__ == "__main__":
 
@@ -227,6 +228,7 @@ if __name__ == "__main__":
     group.add_argument("-c", "--config",help="config file in a json format",type=argparse.FileType('r'))
     group.add_argument("-m", "--modules",help="module folders",nargs='*')
     parser.add_argument("-l", "--log", dest="logLevel", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help="Set the logging level", default='WARNING')
+    parser.add_argument("-d", "--destination", help="Set the destination dir", default='build')
     
     args = parser.parse_args()
     logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))
@@ -234,15 +236,15 @@ if __name__ == "__main__":
     # load the html template
     index,e = loadTemplate();
 
-    if args.config != None:
-        processConfig(args.config,e)
-    elif args.modules != None:
-        processModules(args.modules,e)
-    else:
-        processDefault(e)
-
-#    print (html.tostring(index))
+    # check destination
+    prepareDestination(args.destination)
+        
     
-    # write resulting html file
-#    print (html.tostring(index,method='html'))
-    index.write("index.html",method='html')    
+    if args.config != None:
+        processConfig(args.config,e,args.destination)
+    elif args.modules != None:
+        processModules(args.modules,e,args.destination)
+    else:
+        processDefault(e,args.destination)
+
+    index.write(os.path.join(args.destination, "index.html"),method='html')    
