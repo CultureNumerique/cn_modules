@@ -339,6 +339,8 @@ Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui 
 
 # Documents numériques - formats et normes
 
+### Pourquoi et comment
+
 Chacune des vues va contribuer à la représentation numérique d'un
 document textuel, mais, selon le domaine d'application, elle sera plus
 ou moins importante ou nécessaire. La première question est : **que
@@ -350,7 +352,7 @@ problèmes.
 
 
 
-## Différents formats pour différents usages
+### Différents formats pour différents usages
 
 Les choix effectués pour répondre à la question **comment représenter
 des documents textuels** aboutissent à des **formats** de
@@ -371,7 +373,7 @@ successives depuis le début des années 90 jusque `HTML5`, paru
 en 2014.
 
 
-## Formats et logiciels
+### Formats et logiciels
 
 Nous avons expliqué la relation forte entre le choix de la
 représentation et les traitements qui peuvent être faits sur une
@@ -410,37 +412,8 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
-```activité
-::Les fichiers d'extension Doc::
-[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
-{~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
-~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
-= Est-ce que ce format est toujours développé ?#Oui
-= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
-}
 
-::L'éditeur de texte et les fichiers::
-[markdown] Un éditeur de textes peut effectuer des opérations simples sur des textes simples qui sont des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
-- texte simple avec l'extension txt
-- fichier odt
-- fichier html
-- fichier doc
-- texte simple avec l'extension toto
-- fichier pdf
-{}
-```
-
-```activité-avancée
-::Les documents au format PDF::
-[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
-- Est-ce un format ouvert ?
-- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
-- Que signifie portable ?
-- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
-{}
-```
-
-## Ouvert ou propriétaire
+### Ouvert ou propriétaire
 
 Le processus de choix de représentation et de définition d'un format
 est complexe et coûteux. Il peut être aussi stratégique d'un point de
@@ -467,29 +440,7 @@ logiciel associé. Si `HTML` avait été un format fermé, sans doute le
 web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
-
-```compréhension
-::Extensions::
-[markdown]
-Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
-{####txt}
-
-::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
-
-::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
-
-
-::Un contenu avec une structure a une seule présentation possible::
-{F}
-
-::Conversions::
-[markdown]
-Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
-::Un format ouvert facilite l'interopérabilité::{T}
-```
-
-## Une minute citoyenne
+### Une minute citoyenne
 
 Le numérique est aujourd'hui un facteur de développement économique
 important. Ce développement repose en partie sur des infrastructures
@@ -538,6 +489,46 @@ servile dans ce monde numérique. Mais cela demande un effort
 particulier, une attente moins centrée sur l'immédiat et l'utilitaire,
 un peu moins personnelle car prenant conscience d'enjeux
 communautaires.
+
+```compréhension
+::Extensions::
+[markdown]
+Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
+{####txt}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
+
+::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
+
+
+::Un contenu avec une structure a une seule présentation possible::
+{F}
+
+::Conversions::
+[markdown]
+Est-il toujours possible de convertir un document d'un format vers un autre format ?
+{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+::Un format ouvert facilite l'interopérabilité::{T}
+```
+
+```activité
+::Les fichiers d'extension Doc::
+[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
+{~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
+= Est-ce que ce format est toujours développé ?#Oui
+= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
+}
+
+::Les documents au format PDF::
+[markdown]Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_Document_Format) et répondez aux questions suivantes
+- Est-ce un format ouvert ?
+- Peut-on lire et écrire du `pdf` avec des logiciels différents ?
+- Que signifie portable ?
+- Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
+{}
+```
+
 
 # Documents numériques textuels
 
