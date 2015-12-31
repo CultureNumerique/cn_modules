@@ -599,15 +599,6 @@ est représenté comme une suite de 0 et de 1. Il existe
 différents codages, le plus répandu en place est
 `UTF-8`.
 
-
-```activité
-::Autres codes -- Un code mécanisé::
-[markdown]
-- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
-- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{####32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
-quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues autres que l'américain ne peuvent être représentés.}
-
 ### Textes "simples"
 
 Un document textuel peut être réduit à la seule vue séquentielle,
