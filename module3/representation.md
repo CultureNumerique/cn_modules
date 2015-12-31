@@ -869,28 +869,16 @@ Le standard Unicode associe à tout caractère pris en charge par Unicode un nom
 
 ```activité-avancée
 ::Exemple de html::
-[markdown]
-- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
-- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
-- Décrivez la structure du document (titre, sections, listes, ...)
-- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+Le HTML est un langage très simple à apprendre. Vous pouvez réaliser quelques essais mineurs avec cet exercice. Respectez bien l'imbrication des balises pour que l'ensemble forme bien un bon arbre. Pour aller plus loin, suivez les cours d'option informatique métiers du web ou lisez les nombreux tutoriels sur internet. 
+- Ouvrez le fichier [html.html](media/html.html).
+- Essayez d'ajouter un paragraphe, un titre de niveau 2.
+- Pour les plus aguerris ajoutez une liste avec les balises `<ul><li>élément</li></ul>`.
 {}
 
-::Exemple de LateX::
+::Markdown::
 [markdown]
-- Ouvrez le fichier `ia.tex` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `LateX` car il colorie les mots utilisés par le langage  `LateX`.
-- Ouvrez le fichier `ia.pdf` avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf` défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
-- Retrouvez dans le fichier `text` ouvert dans l'éditeur de texte la description des éléments de structure que vous visualisez dans le document `pdf`.
-
-::Markdown avec Dillinger.io::
-[markdown]
-Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats. 
-Rendez-vous sur [dillinger.io](http://dillinger.io) et inscrivez-vous. Pour cela, vous pouvez utiliser votre adresse personnelle, [dillinger.io] est un service libre et ouvert, respectueux des données privées.
-Si toutefois, vous ne souhaitez pas prendre un compte sur ce site, vous pouvez utiliser l'éditeur de texte : [atom](https://atom.io/).
-N'hésitez pas à partager vos expériences sur le forum du cours, ...
-Une fois sur le site, *sélectionner* et *effacer* tout le contenu de la page de gauche (l'éditeur), puis *copier/coller* le texte qui se trouve [ici]().
-Sur la partie droite s'affiche un *rendu* du document, soit une *vue de présentation*. En observant cet exemple, répondez aux questions. 
-en `Markdown` comment :
+Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats.  Ouvrez le fichier [markdown.html](media/markdown.html).
+En observant cet exemple, trouvez ` comment en  `Markdown` :
 - mettre des mots en italique ?
 - mettre des mots en gras ?
 - définir un titre de premier niveau ?
@@ -899,6 +887,7 @@ en `Markdown` comment :
 - mettre tout un paragraphe en exergue comme une citation?
 - délimiter des paragraphes ?
 {#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
+
 ```
 
 

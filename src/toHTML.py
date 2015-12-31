@@ -198,10 +198,14 @@ def processDefault(e,outDir):
 
 
 def loadTemplate(template="index.tmpl"):
-    parser = etree.HTMLParser()
-    tree   = etree.parse(template, parser)
-    e_list = tree.xpath("//ul[@id='static-nav']")
-    return tree,e_list[0]
+    try: 
+        parser = etree.HTMLParser()
+        tree   = etree.parse(template, parser)
+        e_list = tree.xpath("//ul[@id='static-nav']")
+        return tree,e_list[0]
+    except OSError:
+        print ("html template not found : ",template, file=sys.stderr)
+        sys.exit(0)
 
 def prepareDestination(outDir):
     """ Create outDir and copy mandatory files""" 
@@ -210,7 +214,7 @@ def prepareDestination(outDir):
            os.makedirs(outDir)
        else:
            print ("Cannot create ",outDir, file=sys.stderr)
-           sys.exit(1)
+           sys.exit(0)
     shutil.copy('accueil.html',os.path.join(outDir,'accueil.html'))
     for d in ['js', 'img', 'svg', 'css']:
         dest = os.path.join(outDir,d)
@@ -224,7 +228,7 @@ if __name__ == "__main__":
 
     
     import argparse
-    parser = argparse.ArgumentParser(description="Parses markdown files and generates a website. Default is to process all folders 'module*'.")
+    parser = argparse.ArgumentParser(description="Parses markdown files and generates a website using index.tmpl in the current directory. Default is to process and all folders 'module*'.")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-c", "--config",help="config file in a json format",type=argparse.FileType('r'))
     group.add_argument("-m", "--modules",help="module folders",nargs='*')
