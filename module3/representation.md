@@ -101,7 +101,7 @@ Donnez des exemples de critères qui peuvent gouverner le choix d'une représent
 
 ::Qui choisit ? ::Les choix de représentations sont faits par
 {
-~Les informaticiens#non pas seuls car intervient aussi l'utilisation métier des objets représentés 
+~Les informaticiens#non pas seuls car intervient aussi l'utilisation métier des objets représentés
 ~Les experts métier#non pas seuls car il faut des spécialistes des données numériques et des algorithmes
 =Les deux#oui et souvent aussi des chercheurs, des entreprises, ...
 }
@@ -110,10 +110,10 @@ Donnez des exemples de critères qui peuvent gouverner le choix d'une représent
 ```activité
 ::Une tâche complexe::
 [markdown]
-Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes :
 - Quelle est l'origine de `HTML` ?
 - Qui développe et publie les spécifications `HTML` depuis 1995 ?
-- Quelle est la version la plus récente de `HTML` et son année de parution ? 
+- Quelle est la version la plus récente de `HTML` et son année de parution ?
 - Qui participe au développement du standard `HTML` au `W3C` ?
 - Quelles sont les étapes pour arriver à être une recommandation ?
 - Qui est responsable du standard `css` pour les feuilles de style ?
@@ -244,26 +244,26 @@ Un contenu avec une structure a une seule présentation possible
 ::La vue qualifiée::
 Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
 
-::Éditeur de textes:: 
+::Éditeur de textes::
 [markdown]
 Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
-~%25%rechercher et remplacer #très souvent disponible 
-~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches 
-~%25%corriger l'orthographe #certains le font 
+~%25%rechercher et remplacer #très souvent disponible
+~%25%avancer de mots en mots #souvent par la conjonction CRTL-flèches
+~%25%corriger l'orthographe #certains le font
 ~%-100% mettre en gras #l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
 }
 
-::Le jardin zen:: 
-[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes).  Regardez ces différents liens sur le site la beauté des CSS : 
+::Le jardin zen::
+[markdown] Pour illustrer à la fois la pertinence de séparer les informations de présentation des autres informations textuelles, mais aussi l'effort de la communauté dans cette direction notamment avec les feuilles de style (CSS ou de documents de traitement de textes).  Regardez ces différents liens sur le site la beauté des CSS :
   - [http://www.csszengarden.com/tr/francais/](http://www.csszengarden.com/tr/francais/)
   - [http://www.csszengarden.com/tr/fr/221/](http://www.csszengarden.com/tr/fr/221/)
   - [http://www.csszengarden.com/tr/fr/219/](http://www.csszengarden.com/tr/fr/219/)
-  
+
   Entre ces différents designs, qu'est-ce qui change ?
 {
-~%0%La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac) 
+~%0%La structure#non, elle reste la même, vérifiez l'identité des codes HTML avec l'affichage du code (`CTRL-U` sur PC, `cmd-U`sur Mac)
 ~%0%Le contenu#non, lisez bien, les textes sont les mêmes!
 ~%100%La présentation#oui uniquement la CSS qui ne contient que des éléments de présentation est adaptée.
 }
@@ -271,38 +271,73 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 ```
 
 ```activité
-::Installer LibreOffice:: 
+::Installer LibreOffice::
 [markdown]Les activités seront proposées avec le traitement de textes `libreoffice`. Vous pouvez l'installer depuis le site [http://fr.libreoffice.org/](http://fr.libreoffice.org/). (Rappelez-vous que vous devez installer des logiciels depuis les sites officiels uniquement. Les activités peuvent aussi être réalisées depuis les salles d'accès libre de l'université où tous les logiciels nécessaires sont disponibles.)
 {}
 ```
 
 ```activité
-::La structure d'un document texte odt:: 
+::La structure d'un document texte odt::
 [markdown] Téléchargez le  [document odt](media/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
 - Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
 - Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur.
 - Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
 - Mettez à jour la **table des matières** qui se trouve en début de doument : `clic-droit` dans la partie grisée de la table des matières et sélectionner `Actualiser l'index`.
-{}
+{####Voila une première approche de l'utilisation des styles dans un traitement de texte qui permet d'avoir un document structuré. La manipulation que vous venez de faire (déplacement d'une section) illustre l'organisation arborescente du document. Le déplacement d'un noeud déplace en fait toutes les sous-parties de ce noeud. Par ailleurs, la définition de "niveaux de titre" pour certains noeuds de la structure permet la création automatique (et ici la mise à jour automatique) de la table des matières. Cela ne représente qu'un petite partie des possibilités qu'offre une organisation structurée d'un document texte.}
+
 ```
 
 ```activité-avancée
 ::Mise en forme et structure::
 [markdown]
-Téléchargez les deux fichiers suivants : [representation](media/representation.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
-{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
+Téléchargez les deux fichiers suivants : [representation](media/representation1.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+{####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.
+Par ailleurs, si vous observez bien, plusieurs défauts majeurs apparaissent dans representation2.odt : certains titres se retrouvent isolés en bas de page (p3 et p5), le dernier titre en bleu (page 4) est d'une taille légèrement inférieure aux autre titres en bleu. Ces petites erreurs sont courantes lorsqu'on tente de faire la mise en forme "à la main". Aucune de ces erreurs ne peut se produire dans représentation1.odt car les styles des paragraphes prennent en charge entre autre : les veuves et les orphelines (au moins 2 lignes en bas de page ou en haut de page), les titres sont toujours sur la même page que le paragraphe suivant, ce qui évite des titres en bas de page, et les taille, couleur, police, ... choisis sont sélectionnés une seule fois au moment de la définition du style, ce qui signifie qu'AUCUNE différence de forme ne peut intervenir entre 2 paragraphes associés à un même style. La mise en forme de documents longs est donc grandement facilitée par l'utilisation de styles de paragraphe.
+En résumé : les styles permettent de STRUCTURER le document (génération automatique d'une table des matières, vision en mode plan et facilité de réorganisation), ils sont donc essentiels pour la vue Structurée du document, mais ils sont aussi précieux pour la vue de présentation en faisant gagner beaucoup de temps et en augmentant considérablement la qualité du document. Nous allons illustrer cela dans la suite des activités.}
+
+::Réutilisation de styles::
+[markdown]
+Vous avez manipulé jusqu'ici
+- `representation.odt`, un document structuré utilisant les styles par défaut, toutes les opérations liées à la structure du document sont donc accessibles (cf activité *structure d'un document texte*), mais la mise en forme est très basique.
+- `representation1.odt` qui est lui aussi structuré et dont les styles des différents niveaux de paragraphe ont été modifiés (taille, typo, couleur, alignement, etc).
+Nous allons maintenant réutiliser les styles définis dans `representation1.odt` pour **modifier la présentation sans modifier la structure** de `representation.odt`. Il existe différentes méthodes pour effectuer cela.
+Le principe repose sur le fait que les 2 documents utilisent les mêmes noms de styles (les styles par défaut) à savoir :
+- `Titre`, pour le titre principal du document
+- `sous-titre`, pour le sous-titre
+- `Titre 1`, pour les titres de premier niveau
+- `Titre 2`, pour les titres de deuxième niveau
+- `corps de texte`, pour tous les paragraphes standards
+Il s'agit donc de demander à `LibreOffice` d'aller chercher les paramètres de présentation de ces différents styles tels qu'ils sont définis dans le document `representation1.odt`. Cela s'effectue en quelques clics ...
+À vous de faire cette manipulation très simple. Cherchez dans l'interface de `LibreOffice` comment effectuer cette opération. Si vous rencontrez des difficultés, n'hésitez pas à aller dans les salles d'accès libre où la dernière version de `LibreOffice` est installée et où des monitieurs peuvent peuvent vous aider. Pensez aussi à utiliser le forum du cours pour poster vos questions ou vos remarques et vous aider mutuellement.{}
+
+::Génerer une table des matières::
+Comme vous avez pu le constater, `representation1.odt` est structuré et il possède une mise en forme des styles, mais la table des matières n'a pas été créée. Vous allez donc la créer maintenant. Les styles des titres ont été paramétrés pour correspondre à des niveaux différents dans la structure arboresscente du document. La génération de la table des matières peut donc se faire en 3 clics ...
+Cherchez dans les menus de `LibreOffice` comment insérer une table des matières automatiquement.
+Faites une capture d'écran montrant la table des matières que vous avez créée.  {}
+
+::Numéroter les paragraphes::
+Nous allons pour finir utiliser une fonctionnalité qui utilise encore la structure arborescente (avec des niveaux imbriqués) du document. Il s'agit de la numérotation automatique des paragraphes. Chacun des titres (Titre 1 ou Titre 2) correspondant à un niveau, le traitement de texte peut facilement les retrouver et calculer les numéros. Ainsi, à chaque nouvele partie (Titre 1), la numérotation des sous-parties (Titre 2) recommence à 1.
+Chercher dans `Libreoffice` comment numéroter automatiquement les parties en utilsant la notation suivante :
+A / REPRÉSENTER C’EST CHOISIR…
+B / ANALYSE D'UN DOCUMENT,
+PLUSIEURS VUES COMPLÉMENTAIRES
+1 - Introduction
+2 - Le Contenu, Une Vue Séquentielle
+etc.
+{}
+
 ```
 
-```activité 
-::La vue qualifiée  d'un document texte odt:: 
-[markdown] Ouvrir le document [document odt](representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
+```activité
+::La vue qualifiée  d'un document texte odt::
+[markdown] Ouvrir le document [document odt](representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
 - le titre,
 - le sujet,
 - les mots clef,
 - la date de création.
 Faites une capture d'écran de la fenêtre où vous avez trouvé ces meta-données.
-{}
+{####Les métadonnées que vous avez trouvées dans cet exercice ont toutes été saisies par une personne. Elles permettent de qualifier le document, de donner des informations sur l'information principale qu'est le contenu. Comme nous l'avons déjà vu avec les éditeurs de texte, les traitements de texte sont aussi capables de**calculer** automatiquement d'autres informations qui dépendent du contenu comme le nombre de mots, de paragragraphes ou de signes.}
 
 ::Un document peut être réduit à des méta données::
 [markdown]
@@ -318,16 +353,16 @@ C'est le cas des notices bibliographiques des bibliothèques dont la plus grande
 ```activité
 ::La structure d'une page web::
 [markdown]La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
-- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html). 
+- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html).
 - Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
 - Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
-- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ? 
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ? 
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ?
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ?
 {####html/body/section/ul/li}
 ```
 
 ```activité-avancée
-::Installer un éditeur de textes:: 
+::Installer un éditeur de textes::
 [markdown] Vous utiliserez et installerez un éditeur de textes. Selon le système d'exploitation de votre ordinateur, nous vous recommandons :
   - Sous linux : `gedit`  (installé par défaut) ou  [atom](https://atom.io)
   - Sous Windows : `notepad` (installé par défaut) ou (notepad++)[https://notepad-plus-plus.org/fr/] ou encore [atom](https://atom.io)
@@ -495,7 +530,7 @@ communautaires.
 ```compréhension
 ::Extensions::
 [markdown]
-Dans le nom de fichier `mondocument.txt`, quelle est l'extension ? 
+Dans le nom de fichier `mondocument.txt`, quelle est l'extension ?
 {####txt}
 
 ::Avec un éditeur de textes, je peux ouvrir un fichier doc::{F}
@@ -515,7 +550,7 @@ Est-il toujours possible de convertir un document d'un format vers un autre form
 
 ```activité
 ::Les fichiers d'extension Doc::
-[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29). 
+[markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29).
 {~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
 ~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
 = Est-ce que ce format est toujours développé ?#Oui
@@ -619,7 +654,7 @@ Ce niveau de structure n'est pas explicitement représenté. Par
 exemple, il n'existe pas de codage de la notion de fin de mot. La
 notion de mot est le résultat d'un traitement par la machine dépendant
 des choix des concepteurs des logiciels qui peuvent reposer sur la
-langue, de la définition des symboles de ponctuation. 
+langue, de la définition des symboles de ponctuation.
 
 
 
@@ -755,7 +790,7 @@ pouvez ajouter explicitement des méta-données.
 #### Erreurs communes
 Les modes WYSIWYG induisent souvent de mauvaises
 pratiques. En effet, un utilisateur a souvent tendance à se laisser
-guider par le rendu sur l'écran en oubliant que 
+guider par le rendu sur l'écran en oubliant que
 
 - les règles typographiques utilisées par le logiciel vont venir
   modifier ce rendu. Par exemple, c'est le logiciel qui va calculer la
@@ -774,7 +809,7 @@ Nous vous donnons donc les conseils suivants :
 
 ```compréhension
 ::Unicode::
-[markdown]Qu'est-ce que Unicode ? 
+[markdown]Qu'est-ce que Unicode ?
 {~une manière standardisée de dessiner des caractères d'une langue#Non!
 =un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
 
@@ -783,7 +818,7 @@ Nous vous donnons donc les conseils suivants :
 {####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
 
 ::Caractère informatique, caractère et glyphe::
-[markdown]En informatique le caractère est un peu différent du caractère en typographie... 
+[markdown]En informatique le caractère est un peu différent du caractère en typographie...
 {=Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture# oui
 =Le caractère informatique peut être invisible#oui
 =Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran#oui
@@ -806,9 +841,9 @@ quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues aut
 
 ::Autres codes -- un code par le signal::
 [markdown]
-- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
-- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? 
-- Trouver pour quelle raison la lettre `E` a le plus court codage ? 
+- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29)
+- Ce code est basé sur des impulsions et des silences. Quels sont-ils ?
+- Trouver pour quelle raison la lettre `E` a le plus court codage ?
 {####les lettres et les chiffres ; impulsion courte notée `.` ou `ti`, impulsion longue notée `-` ou `taah` ; trois durées d'espacement entre impulsions, entre lettres, entre mots ; `E`: lettre la plus fréquente et souci de diminuer la longueur des transmissions}
 
 ::Unicode::
@@ -831,7 +866,7 @@ Les caractères sont représentés conformément au standard Unicode et au codag
 ```activité
 ::Structure implicite::
 [markdown]
-Ouvrir le [fichier suivant](media/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
+Ouvrir le [fichier suivant](media/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ?
 {#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
 
 ::Compter les mots::
@@ -853,11 +888,11 @@ On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essay
 ::codage des points de codage -- UTF-8 et UTF-16::
 [markdown]
 Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le texte en répondant aux questions suivantes :
-- Combien peut-on coder de caractères avec `UTF-8` ? 
-- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? 
-- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
-- Quels sont les caractères codés sur 1 octet ? 
-- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet 
+- Combien peut-on coder de caractères avec `UTF-8` ?
+- Est-ce que tous les caractères sont codées sur le même nombre d'octets ?
+- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire.
+- Quels sont les caractères codés sur 1 octet ?
+- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet
 - Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
 {supérieur à 1 million}
 {Non de 1 à 4 octets}
@@ -869,7 +904,7 @@ Le standard Unicode associe à tout caractère pris en charge par Unicode un nom
 
 ```activité-avancée
 ::Exemple de html::
-Le HTML est un langage très simple à apprendre. Vous pouvez réaliser quelques essais mineurs avec cet exercice. Respectez bien l'imbrication des balises pour que l'ensemble forme bien un bon arbre. Pour aller plus loin, suivez les cours d'option informatique métiers du web ou lisez les nombreux tutoriels sur internet. 
+Le HTML est un langage très simple à apprendre. Vous pouvez réaliser quelques essais mineurs avec cet exercice. Respectez bien l'imbrication des balises pour que l'ensemble forme bien un bon arbre. Pour aller plus loin, suivez les cours d'option informatique métiers du web ou lisez les nombreux tutoriels sur internet.
 - Ouvrez le fichier [html.html](media/html.html).
 - Essayez d'ajouter un paragraphe, un titre de niveau 2.
 - Pour les plus aguerris ajoutez une liste avec les balises `<ul><li>élément</li></ul>`.
@@ -900,7 +935,7 @@ Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du
 
 
 
-# Ouverture, interopérabilité, licences, ... et liberté 
+# Ouverture, interopérabilité, licences, ... et liberté
 
 À travers cette présentation, vous avez sans doute retenu la distinction entre
 les vues de contenu, structure, présentation et les méta-données qui
@@ -1084,7 +1119,7 @@ point par point d'une image où chaque point ou pixel est associé à une
 couleur mesurée à partir de l'image réelle. Mais comment représenter
 cette valeur de couleur mesurée ? La représentation s'inspire des
 peintres qui ont, de tout temps, créé des nuances en mélangeant des
-couleurs dites primaires. 
+couleurs dites primaires.
 
 Le modèle de couleurs le plus répandu est le modèle **`RVB`** (pour
 Rouge Vert Bleu) ou **`RGB`** (pour Red Green Blue). Chaque pixel est
@@ -1103,12 +1138,12 @@ activités pour en déduire le nombre de couleurs représentables.
 
 Même si il n'existe que deux types de représentation vectorielle et
 matricielle, comme dans le cas des documents, il existe de très
-nombreux formats d'image. 
+nombreux formats d'image.
 
 Évidemment le langage de description des formes géométriques dans les
 images vectorielles entraîne de nombreux choix. Cependant, la
 communauté semble aujourd'hui s'accorder de plus en plus sur le standard
-`SVG`. 
+`SVG`.
 
 Pour les images matricielles, la variabilité des formats est vraiment
 très grande. De nombreuses caractéristiques issues des besoins de
@@ -1182,4 +1217,3 @@ Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit 
 correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
 {#### Cyan Magenta Jaune et Noir}
 ```
-
