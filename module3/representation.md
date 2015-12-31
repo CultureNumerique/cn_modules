@@ -290,7 +290,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 ```activité-avancée
 ::Mise en forme et structure::
 [markdown]
-Téléchargez les deux fichiers suivants : [representation1](media/representation.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+Téléchargez les deux fichiers suivants : [representation](media/representation.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
