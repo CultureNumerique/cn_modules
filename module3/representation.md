@@ -631,12 +631,6 @@ des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
 
-  
-```activité
-::Structure implicite::
-[markdown]
-Ouvrir le [fichier suivant](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
-{#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
 
 ### Des langages et des logiciels
 
@@ -691,13 +685,6 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
-```activité
-::Exemple de html::
-[markdown]
-- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
-- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
-- Décrivez la structure du document (titre, sections, listes, ...)
-- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
 
 ### Traitement de textes
 
@@ -1065,10 +1052,6 @@ complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
 -->
 
-```activité
-::Pierre Bézier::
-- Qui est **Pierre Bézier** ?
-{}
 
 ### Les images matricielles
 
@@ -1113,10 +1096,6 @@ mesurée avec les notions de *définition* et de *résolution*
 introduites en activité. Nous discutons la représentation numérique
 des couleurs dans la section suivante.
 
-```activité-avancée
-::Échantillonner la musique::
-[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
-{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 
 ### La couleur
 
