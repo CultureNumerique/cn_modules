@@ -23,7 +23,7 @@ Retrouver le titre et l'auteur du roman est une tâche qui vous semble
 évidente. Elle sera rendue plus facile et sûre pour une machine si la
 représentation choisie contient explicitement la désignation du titre
 et de l'auteur.
-  
+
 De même, considérons la classification du roman dans les catégories
 policier, historique ou libertin.  Cette tâche est difficile pour une
 machine sauf à spécifier dans la représentation la catégorie définie
@@ -37,7 +37,7 @@ information peut être enrichie pour faciliter les traitements relatifs
 
 La numérisation ne se limite pas à un changement de support. En effet,
 elle permet des traitements automatiques sur des grandes quantités de
-documents. 
+documents.
 
 Par exemple comment faire en sorte que votre smartphone reconnaisse un
 morceau de musique chantonné ? À l'aide d'un logiciel transformant
@@ -118,7 +118,7 @@ Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous 
 - Quelles sont les étapes pour arriver à être une recommandation ?
 - Qui est responsable du standard `css` pour les feuilles de style ?
 {#### origine au CERN ; Le W3C développe le HTML depuis 1995 ; HTML5 en 2014 ; industriels, éditeurs logiciels, chercheurs, entreprises du Web, ... ; brouillon, appel , candidat, proposition et recommandation, le W3C.}
-``` 
+```
 
 
 
@@ -218,10 +218,7 @@ pour impression et lecture diffère de la forme d'un document pour
 affichage sur écran. La forme peut dépendre de l'objectif de
 communication visé.
 
-
-
-
-### Un point d'étape 
+### Un point d'étape
 
 Chacune des vues contenu, structure, qualifiée et de présentation est
 importante.  Elles contribuent toutes, à des degrés divers, à des
@@ -248,6 +245,7 @@ Un contenu avec une structure a une seule présentation possible
 Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
 
 ::Éditeur de textes:: 
+[markdown]
 Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
@@ -285,6 +283,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 - Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur.
 - Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
+- Mettez à jour la **table des matières** qui se trouve en début de doument : `clic-droit` dans la partie grisée de la table des matières et sélectionner `Actualiser l'index`.
 {}
 ```
 
@@ -327,15 +326,13 @@ C'est le cas des notices bibliographiques des bibliothèques dont la plus grande
 {####html/body/section/ul/li}
 ```
 
-
 ```activité-avancée
 ::Installer un éditeur de textes:: 
 [markdown] Vous utiliserez et installerez un éditeur de textes. Selon le système d'exploitation de votre ordinateur, nous vous recommandons :
   - Sous linux : `gedit`  (installé par défaut) ou  [atom](https://atom.io)
   - Sous Windows : `notepad` (installé par défaut) ou (notepad++)[https://notepad-plus-plus.org/fr/] ou encore [atom](https://atom.io)
   - Sous Mac : `textEdit` (installé par défaut) ou   [atom](https://atom.io)
-
-Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui peut se révéler un peu complexe. 
+Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui peut se révéler un peu complexe.
 {}
 ```
 
@@ -603,6 +600,13 @@ différents codages, le plus répandu en place est
 `UTF-8`.
 
 
+```activité
+::Autres codes -- Un code mécanisé::
+[markdown]
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
+{####32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
+quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues autres que l'américain ne peuvent être représentés.}
 
 ### Textes "simples"
 
@@ -627,6 +631,12 @@ des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
 
+  
+```activité
+::Structure implicite::
+[markdown]
+Ouvrir le [fichier suivant](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
+{#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
 
 ### Des langages et des logiciels
 
@@ -681,6 +691,13 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
+```activité
+::Exemple de html::
+[markdown]
+- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Décrivez la structure du document (titre, sections, listes, ...)
+- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
 
 ### Traitement de textes
 
@@ -1048,6 +1065,10 @@ complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
 -->
 
+```activité
+::Pierre Bézier::
+- Qui est **Pierre Bézier** ?
+{}
 
 ### Les images matricielles
 
@@ -1092,6 +1113,10 @@ mesurée avec les notions de *définition* et de *résolution*
 introduites en activité. Nous discutons la représentation numérique
 des couleurs dans la section suivante.
 
+```activité-avancée
+::Échantillonner la musique::
+[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 
 ### La couleur
 
