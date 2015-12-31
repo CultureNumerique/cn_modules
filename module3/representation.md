@@ -83,19 +83,23 @@ l'image et la vidéo seront esquissées pour vous guider dans le monde
 numérique multimédia.
 
 ```compréhension
-::Les traitements possibles dépendent fortement des choix de représentation::{T}
+::Représenter et manipuler::
+Les traitements possibles dépendent fortement des choix de représentation
+{T}
 
-::La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples::
+::Quelles données ?::
+La représentation numérique d'un livre peut inclure des données qui ne se limitent pas au contenu textuel. Donnez quelques exemples
 {#### Le genre, la date de création, l'éditeur, ...}
 
-::Il n'existe qu'une seule façon de représenter numériquement un livre:: 
+::De la variété ?::
+Il n'existe qu'une seule façon de représenter numériquement un livre
 {F# représenter une information est le résultat de nombreux choix}
 
-::Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique::
+::Comment choisir ?::
+Donnez des exemples de critères qui peuvent gouverner le choix d'une représentation numérique
 {#### la concision, la pertinence (permettre des traitements voulus), l'efficacité (les traitements sont réalisés rapidement, la confidentialité (l'accès aux données  peut être contrôlé),...}
 
-::Les choix de représentations sont faits par::
-[markdown]
+::Qui choisit ? ::Les choix de représentations sont faits par
 {
 ~Les informaticiens#non pas seuls car intervient aussi l'utilisation métier des objets représentés 
 ~Les experts métier#non pas seuls car il faut des spécialistes des données numériques et des algorithmes
@@ -104,8 +108,9 @@ numérique multimédia.
 ```
 
 ```activité
-::Représenter et normaliser est une tâche complexe : l'exemple de HTML.::
-[markdown]En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
+::Une tâche complexe::
+[markdown]
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes : 
 - Quelle est l'origine de `HTML` ?
 - Qui développe et publie les spécifications `HTML` depuis 1995 ?
 - Quelle est la version la plus récente de `HTML` et son année de parution ? 
@@ -227,20 +232,22 @@ efficacement traité par une machine repose sur le contenu, la
 structure et les méta-données.
 
 ```compréhension
-::Avec la vue séquentielle, on peut remplacer les occurrences d'un mot par un autre mot::
+::Vrai ou Faux : vue structurelle::
+Avec la vue séquentielle, on peut remplacer les occurrences d'un mot par un autre mot.
 {T}
 
-::Avec la vue structurée, on peut créer une table des matières automatiquement::
+::Vrai ou Faux : vue structurée::
+Avec la vue structurée, on peut créer une table des matières automatiquement
 {T}
 
-::Un contenu avec une structure a une seule présentation possible::
+::Vrai ou Faux : vue présentation::
+Un contenu avec une structure a une seule présentation possible
 {F}
 
 ::La vue qualifiée::
-[markdown] Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
+Donnez au minimum 4 méta données que vous pouvez associer à un livre{}
 
 ::Éditeur de textes:: 
-[markdown]
 Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 {
 ~%25%copier/couper/coller #tous les éditeurs le permettent
@@ -267,9 +274,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 
 ```activité
 ::Installer LibreOffice:: 
-[markdown]Les activités seront proposées avec le traitement de textes `libreoffice`. Vous pouvez l'installer depuis le site [http://fr.libreoffice.org/](http://fr.libreoffice.org/). (Rappelez-vous que vous devez installer des logiciels depuis les sites officiels uniquement.) 
-
-Les activités peuvent aussi être réalisées depuis les salles d'accès libre de l'université où tous les logiciels nécessaires sont disponibles.
+[markdown]Les activités seront proposées avec le traitement de textes `libreoffice`. Vous pouvez l'installer depuis le site [http://fr.libreoffice.org/](http://fr.libreoffice.org/). (Rappelez-vous que vous devez installer des logiciels depuis les sites officiels uniquement. Les activités peuvent aussi être réalisées depuis les salles d'accès libre de l'université où tous les logiciels nécessaires sont disponibles.)
 {}
 ```
 
@@ -526,7 +531,7 @@ Est-il toujours possible de convertir un document d'un format vers un autre form
 - Peut-on lire et écrire du `pdf` avec des logiciels différents ?
 - Que signifie portable ?
 - Les documents dans ce format peuvent-ils toujours être reconstitués à l'identique ? Pourquoi ?
-{}
+{#### Oui il est ouvert mais seulement depuis 2008 et on peut lire et écrire du pdf avec des logiciels différents. Le mot portable signifie que le format tend à conserer au maximum l'apparence que le concepteur du document lui a donné quel que soit le dispositif de visualisation ou d'impression. Parfois cela ne peut être respecté pour la raison que certaines polices de caractères ne sont pas redistribuables (disponibles sur tout équipement).}
 ```
 
 
@@ -545,7 +550,7 @@ numériques textuels. Nous allons voir deux approches :
 
 Auparavant, nous traitons la question du codage des caractères.
 
-## Représentation numérique des caractères
+### Représentation numérique des caractères
 
 Un document textuel est construit avec des caractères et une séquence
  de caractères correspond souvent à un texte intelligible par l'homme.
@@ -598,87 +603,8 @@ différents codages, le plus répandu en place est
 `UTF-8`.
 
 
-```activité
-::Autres codes -- Un code mécanisé::
-[markdown]
-- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
-- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
-{####32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
-quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues autres que l'américain ne peuvent être représentés.}
 
-::Autres codes -- un code par le signal::
-[markdown]
-- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
-- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? 
-- Trouver pour quelle raison la lettre `E` a le plus court codage ? 
-{####les lettres et les chiffres ; impulsion courte notée `.` ou `ti`, impulsion longue notée `-` ou `taah` ; trois durées d'espacement entre impulsions, entre lettres, entre mots ; `E`: lettre la plus fréquente et souci de diminuer la longueur des transmissions}
-
-::Unicode::
-[markdown]
-Rendez vous sur le [site Unicode](http://www.unicode.org/).
-- Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
-- Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
-- Regardez les [caractères actuels](http://www.unicode.org/charts/).
-- Regardez en particulier *Basic Latin* qui ont été les premiers caractères codés en informatique dans une table 'ASCII`.{}
-
-::Déclaration du codage des caractères dans les pages Web::
-[markdown]
-Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8` pour 80% des pages Web.
-- Ouvrez la page toto (une page `html` avec un court texte en langue française avec des accents des ç, ... sans déclaration du codage)
-- Ouvrez la page tutu (la même avec déclaration du codage `UTF-8`)
-- Que constatez-vous ?
-- Consultez les codes sources de ces deux pages (utilisez la séquence de touches
-`CTRL-U` ou  cmd-U sur Mac pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare cet encodage du jeu de caractères.  {#### =<meta
-charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire
-information à propos de ce document, =charset= est une contraction
-pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8=
-spécifie l'encodage choisi.}
-```
-
-```activité-avancée
-::codage des points de codage -- UTF-8 et UTF-16::
-[markdown]
-Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le texte en répondant aux questions suivantes :
-- Combien peut-on coder de caractères avec `UTF-8` ? 
-- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? 
-- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
-- Quels sont les caractères codés sur 1 octet ? 
-- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet 
-- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
-{supérieur à 1 million}
-{Non de 1 à 4 octets}
-{sur 1 octet 01000001}
-{les lettres minuscules, majuscules, ponctuations}
-{les lettres accentuées, le c cédille, le e dans l'o}
-{110 deux octets, 1110 trois octets, 11110 4 octets}
-
-```
-
-```compréhension
-::Unicode::
-[markdown]Qu'est-ce que Unicode ? 
-{~une manière standardisée de dessiner des caractères d'une langue#Non!
-=un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
-
-::Point de codage::
-[markdown]Quel est le point de codage Unicode du point d'exclamation et son nom ?
-{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
-
-::Caractère informatique, caractère et glyphe::
-[markdown]En informatique le caractère est un peu différent du caractère en typographie... 
-{=Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture# oui
-=Le caractère informatique peut être invisible#oui
-=Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran#oui
-~Le caractère informatique est une émoticône qui permet de représenter un sentiment.#non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
-}
-
-::Caractères sans glyphe::
-[markdown]Donner des exemples de caractères non imprimables
-{####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
-
-```
-
-## Textes "simples"
+### Textes "simples"
 
 Un document textuel peut être réduit à la seule vue séquentielle,
 c'est-à-dire une simple séquence de caractères. Dans ce cas, le format
@@ -701,42 +627,8 @@ des choix des concepteurs des logiciels qui peuvent reposer sur la
 langue, de la définition des symboles de ponctuation. 
 
 
-  
-```activité
-::Structure implicite::
-[markdown]
-Ouvrir le [fichier suivant](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
-{#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
 
-::Compter les mots::
-[markdown]
-On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
-- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le logiciel de traitement de textes vous indique le nombre de mots du document ou d'une sélection. Qu'observez-vous pour le texte et pour les parties de textes quant au nombre de mots ? Est-ce le résultat auquel vous vous attendiez ?
-- Effectuez la même opération dans un éditeur de textes et posez vous les mêmes questions. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
-{####Notre version compte un mot supplémentaire pour le point virgule et le point
-d'exclamation, mais cela changera-t-il dans le futur ?  C'est en tous
-cas un choix implicite reposant sur la présence d'une espace, car vous
-n'avez pas explicitement désigné les mots. Dans l'éditeur de texte
-`gedit` ce choix n'est pas le même.}
-```
-
-```activité-avancée
-::Les paragraphes, structure explicite::
-[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne, mais sans pour autant changer de paragraphe. À vous de constater cela dans votre traitement de textes :
-- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
-- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
-- Au milieu du second, appuyez sur `MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
-{}
-
-::La ligne n'est pas vraiment un élément structurel::
-[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
-- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
-- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
-{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
-```
-
-
-## Des langages et des logiciels
+### Des langages et des logiciels
 
 Au delà de cette structure informelle ou naturelle (les mots, les
 phrases et les paragraphes), nous avons vu qu'il était important de
@@ -751,7 +643,7 @@ comme avec le langage `HTML` dont nous avons déjà parlé, soit en
 utilisant les fonctions prédéfinies d'un traitement de texte.
 Étudions ces deux options un peu plus en détail.
 
-## Textes structurés pour décrire des documents textuels
+### Textes structurés pour décrire des documents textuels
 
 Pour définir un document textuel, on peut décrire les différentes vues
 sur ce document. On parle alors de composition de document en mode
@@ -789,48 +681,8 @@ partir de sa description.
   document. Enfin, la forme est définie dans un fichier texte
   structuré (une feuille de style) dans *le langage css*.
 
-```activité
-::Exemple de html::
-[markdown]
-- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
-- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
-- Décrivez la structure du document (titre, sections, listes, ...)
-- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
 
-::Exemple de LateX::
-[markdown]
-- Ouvrez le fichier `ia.tex` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `LateX` car il colorie les mots utilisés par le langage  `LateX`.
-- Ouvrez le fichier `ia.pdf` avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf` défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
-- Retrouvez dans le fichier `text` ouvert dans l'éditeur de texte la description des éléments de structure que vous visualisez dans le document `pdf`.
-
-::Markdown avec Dillinger.io::
-[markdown]
-Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats. 
-Rendez-vous sur [dillinger.io](http://dillinger.io) et inscrivez-vous. Pour cela, vous pouvez utiliser votre adresse personnelle, [dillinger.io] est un service libre et ouvert, respectueux des données privées.
-Si toutefois, vous ne souhaitez pas prendre un compte sur ce site, vous pouvez utiliser l'éditeur de texte : [atom](https://atom.io/).
-N'hésitez pas à partager vos expériences sur le forum du cours, ...
-Une fois sur le site, *sélectionner* et *effacer* tout le contenu de la page de gauche (l'éditeur), puis *copier/coller* le texte qui se trouve [ici]().
-Sur la partie droite s'affiche un *rendu* du document, soit une *vue de présentation*. En observant cet exemple, répondez aux questions. 
-en `Markdown` comment :
-- mettre des mots en italique ?
-- mettre des mots en gras ?
-- définir un titre de premier niveau ?
-- de deuxième niveau ?
-- faire une liste à puces ?
-- mettre tout un paragraphe en exergue comme une citation?
-- délimiter des paragraphes ?
-{#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
-```
-
-
-
-```activité-avancée
-::Règles de typographie::
-[markdown]
-Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
-```
-
-## Traitement de textes
+### Traitement de textes
 
 Quand la définition de la structure se traduit par une suite d'actions
 dans un logiciel, on parle alors de composition *WYSIWYG* pour "What
@@ -859,7 +711,7 @@ touche `entrée` est d'indiquer une fin de paragraphe ; que la
 déclaration des sections se fait en cliquant sur le texte du titre
 puis dans une liste pour sélectionner le niveau de titre etc.
 
-### Comment procéder ?
+#### Comment procéder ?
 
 Une dernière caractéristique commune aux langages de description et
 aux traitements de texte est qu'ils sont extensibles et permettent de
@@ -905,7 +757,7 @@ date de dernière modification sont ajoutées automatiquement par
 l'outil s'il a été correctement paramétré au préalable mais vous
 pouvez ajouter explicitement des méta-données.
 
-### Erreurs communes
+#### Erreurs communes
 Les modes WYSIWYG induisent souvent de mauvaises
 pratiques. En effet, un utilisateur a souvent tendance à se laisser
 guider par le rendu sur l'écran en oubliant que 
@@ -925,16 +777,144 @@ Nous vous donnons donc les conseils suivants :
 4. *Ne pas utiliser les boutons de mises en forme directe*
 
 
-```activité
-- installer grammalecte sur son LO et jouer avec, on peut
-  donner un texte avec plein d'erreurs et demander combien ont été
-  corrigées par l'outil (typo, grammaire, conjugaison, style).
-- Marc a un texte sur la typographie
+```compréhension
+::Unicode::
+[markdown]Qu'est-ce que Unicode ? 
+{~une manière standardisée de dessiner des caractères d'une langue#Non!
+=un standard qui attribue à chaque caractère dans de nombreuses langues,  un nom et un numéro.#Correct}
+
+::Point de codage::
+[markdown]Quel est le point de codage Unicode du point d'exclamation et son nom ?
+{####33, mais encore 0x0021 en notation hexadécimale, et son nom est EXCLAMATION MARK}
+
+::Caractère informatique, caractère et glyphe::
+[markdown]En informatique le caractère est un peu différent du caractère en typographie... 
+{=Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture# oui
+=Le caractère informatique peut être invisible#oui
+=Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran#oui
+~Le caractère informatique est une émoticône qui permet de représenter un sentiment.#non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
+}
+
+::Caractères sans glyphe::
+[markdown]Donner des exemples de caractères non imprimables
+{####l'espace bien-sûr, mais aussi le retour à la ligne, la fin de fichier, la tabulation,...}
+
 ```
 
-```compréhension
-terminer par des questions simples sur la section
+```activité
+::Autres codes -- Un code mécanisé::
+[markdown]
+- Que permettait de représenter le [code Baudot](https://fr.wikipedia.org/wiki/Code_Baudot) ?
+- Pourquoi aujourd'hui ce code Baudot n'est plus utilisé pour représenter les caractères?
+{####32 caractères uniquement : les lettres, les chiffres, la ponctuation, et
+quelques autres symboles (=, +, -, /, *, &, #...) ; Les symboles des langues autres que l'américain ne peuvent être représentés.}
+
+::Autres codes -- un code par le signal::
+[markdown]
+- Que permet de représenter le [code Morse](https://fr.wikipedia.org/wiki/Morse_%28alphabet%29) 
+- Ce code est basé sur des impulsions et des silences. Quels sont-ils ? 
+- Trouver pour quelle raison la lettre `E` a le plus court codage ? 
+{####les lettres et les chiffres ; impulsion courte notée `.` ou `ti`, impulsion longue notée `-` ou `taah` ; trois durées d'espacement entre impulsions, entre lettres, entre mots ; `E`: lettre la plus fréquente et souci de diminuer la longueur des transmissions}
+
+::Unicode::
+[markdown]
+Rendez vous sur le [site Unicode](http://www.unicode.org/).
+- Allez dans le menu *Proposed Changes -- Proposed Characters*. Vous y verrez des caractères en attente d'intégration dans le standard
+- Allez dans le menu *The Consortium -- Who we are*. Constatez la diversité du consortium et de son organisation.
+- Regardez les [caractères actuels](http://www.unicode.org/charts/).
+- Regardez en particulier *Basic Latin* qui ont été les premiers caractères codés en informatique dans une table 'ASCII`.
+{}
+
+::Déclaration du codage des caractères dans les pages Web::
+[markdown]
+Les caractères sont représentés conformément au standard Unicode et au codage `UTF-8` pour 80% des pages Web.
+- Ouvrez la [page suivante](media/pageSansDeclaration.html) puis ensuite cette [autre page](media/pageAvecEncodage.html)
+- Que constatez-vous ?
+- Consultez les codes sources de ces deux pages (utilisez la séquence de touches `CTRL-U` ou  cmd-U sur Mac pour l'obtenir) et voyez la différence. Recopiez la ligne qui déclare cet encodage du jeu de caractères.  {#### =<meta charset="utf-8">=. Ici =meta= signifie metadonnée, c'est-à-dire information à propos de ce document, =charset= est une contraction pour signifier jeu (ou ensemble) de caractères, et bien-sûr =UTF-8= spécifie l'encodage choisi.}
 ```
+
+```activité
+::Structure implicite::
+[markdown]
+Ouvrir le [fichier suivant](media/representation.txt) avec un éditeur de texte. Modifiez  la taille de la fenêtre de l'éditeur en l'agrandissant ou la réduisant. Quelles observations vous permettent de vérifier  que le paragraphe est bien un élément de structure et que la ligne n'est pas un élément de structure ? 
+{#### les paragraphes marqués par un passage à la ligne restent séparés alors que les lignes varient selon la taille de la fenêtre}
+
+::Compter les mots::
+[markdown]
+On considère le texte suivant : "Bonjour l'ami. Soyez curieux bien-sûr ; essayez-donc ! Signé : marc.latour@yahoo.com"
+- Saisissez le texte dans libreoffice et, dans le bas de la fenêtre le logiciel de traitement de textes vous indique le nombre de mots du document ou d'une sélection. Qu'observez-vous pour le texte et pour les parties de textes quant au nombre de mots ? Est-ce le résultat auquel vous vous attendiez ?
+- Effectuez la même opération dans un éditeur de textes et posez vous les mêmes questions. Vous chercherez dans les différents menus comment obtenir les statistiques du texte qui indiquent le nombre de mots.
+{####Notre version compte un mot supplémentaire pour le point virgule et le point d'exclamation, mais cela changera-t-il dans le futur ?  C'est en tous cas un choix implicite reposant sur la présence d'une espace, car vous n'avez pas explicitement désigné les mots. Dans l'éditeur de texte gedit ce choix n'est pas le même.}
+```
+
+```activité-avancée
+::Les paragraphes, structure explicite::
+[markdown]Dans un traitement de textes, la notion de paragraphe est explicite. Il existe un caractère informatique signifiant fin de paragraphe et l'utilisateur l'insère explicitement dans un texte en appuyant sur la touche `Entrée`. L'appui sur la combinaison `MAJ-Entrée` insère elle une fin de ligne, mais sans pour autant changer de paragraphe. À vous de constater cela dans votre traitement de textes :
+- Dans un nouveau document saisissez un très long texte. N'utilisez qu'une seule fois la touche entrée pour signifier que ce long texte est composé de deux paragraphes.
+- Dans les options de mise en forme des paragraphes centrez le premier. Vérifiez que le second n'est pas centré.
+- Au milieu du second, appuyez sur `MAJ-Entrée` pour retourner à la ligne. Dans les options de mise en forme des paragraphes alignez le second paragraphe à droite. Vérifiez que la mise en forme s'applique, y compris après le retour à la ligne.
+{}
+
+::codage des points de codage -- UTF-8 et UTF-16::
+[markdown]
+Le standard Unicode associe à tout caractère pris en charge par Unicode un nom et un numéro appelé son point de codage. Ce point de codage est un nombre entier qu'il faut encore coder en langage machine, c'est-à-dire avec les seuls symboles 0 et 1 qu'on regroupe dans des suites de huit symboles appelés octets. Rendez vous sur la page [wikipedia UTF-8](https://fr.wikipedia.org/wiki/UTF-8). Lisez le texte en répondant aux questions suivantes :
+- Combien peut-on coder de caractères avec `UTF-8` ? 
+- Est-ce que tous les caractères sont codées sur le même nombre d'octets ? 
+- Le A a pour nom "LatinCapital Letter A" et pour point de codage 65. Sur combien d'octets est-il codé ? Donner son code binaire. 
+- Quels sont les caractères codés sur 1 octet ? 
+- Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet 
+- Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
+{supérieur à 1 million}
+{Non de 1 à 4 octets}
+{sur 1 octet 01000001}
+{les lettres minuscules, majuscules, ponctuations}
+{les lettres accentuées, le c cédille, le e dans l'o}
+{110 deux octets, 1110 trois octets, 11110 4 octets}
+```
+
+```activité-avancée
+::Exemple de html::
+[markdown]
+- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Décrivez la structure du document (titre, sections, listes, ...)
+- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+{}
+
+::Exemple de LateX::
+[markdown]
+- Ouvrez le fichier `ia.tex` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `LateX` car il colorie les mots utilisés par le langage  `LateX`.
+- Ouvrez le fichier `ia.pdf` avec un lecteur de `pdf` (si vous double-cliquez sur le fichier, il ouvre un lecteur de `pdf` défini par défaut). Le document visualisé est le résultat du calcul fait par le compilateur 'LateX`. Vous voyez un document ayant une structure (titre, sections, listes, ...).
+- Retrouvez dans le fichier `text` ouvert dans l'éditeur de texte la description des éléments de structure que vous visualisez dans le document `pdf`.
+
+::Markdown avec Dillinger.io::
+[markdown]
+Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats. 
+Rendez-vous sur [dillinger.io](http://dillinger.io) et inscrivez-vous. Pour cela, vous pouvez utiliser votre adresse personnelle, [dillinger.io] est un service libre et ouvert, respectueux des données privées.
+Si toutefois, vous ne souhaitez pas prendre un compte sur ce site, vous pouvez utiliser l'éditeur de texte : [atom](https://atom.io/).
+N'hésitez pas à partager vos expériences sur le forum du cours, ...
+Une fois sur le site, *sélectionner* et *effacer* tout le contenu de la page de gauche (l'éditeur), puis *copier/coller* le texte qui se trouve [ici]().
+Sur la partie droite s'affiche un *rendu* du document, soit une *vue de présentation*. En observant cet exemple, répondez aux questions. 
+en `Markdown` comment :
+- mettre des mots en italique ?
+- mettre des mots en gras ?
+- définir un titre de premier niveau ?
+- de deuxième niveau ?
+- faire une liste à puces ?
+- mettre tout un paragraphe en exergue comme une citation?
+- délimiter des paragraphes ?
+{#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
+```
+
+
+
+```activité-avancée
+::Règles de typographie::
+[markdown]
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+```
+
+
 
 # Ouverture, interopérabilité, licences, ... et liberté 
 
@@ -977,7 +957,7 @@ mouvement qui impacte aujourd'hui toute la société numérique.
 }
 
 ::Le logiciel libre::
-[markdown]Quels sont les 4 principes du logiciel libre (voir le site de l'April : http://www.april.org) ?
+[markdown]Quels sont les 4 principes du logiciel libre (voir le [site de l'April](http://www.april.org) ) ?
 {#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
 }
 ```
@@ -997,7 +977,7 @@ représentations des images. Ces différents choix ont également conduit
 *norme* est essentielle pour les mêmes raisons de compatibilité et
 d'interopérabilité.
 
-## Deux approches principales
+### Deux approches principales
 
 Il convient de différentier deux types d'images qui correspondent à
 des besoins différents et qui donnent lieu à des représentations
@@ -1013,7 +993,7 @@ numériques différentes :
   images médicales. Ces images ont des représentations numériques qui sont des
   *images matricielles*.
 
-## Les images vectorielles
+### Les images vectorielles
 
 L'idée directrice est de décrire une image abstraite pour pouvoir la
 reproduire. Prenons l'exemple d'une maison dessinée
@@ -1068,22 +1048,8 @@ complexité de la réalité ne peut pas facilement être représentée par
 des formules mathématiques.
 -->
 
-```activité
-::Pierre Bézier::
-- Qui est **Pierre Bézier** ?
-{}
 
-::Courbe de Bézier::
-[markdown]
-Il est possible de définir des courbes avec peu d'informations. Par exemple, une courbe de Bézier cubique est définie par la donnée de 4 points A, B, C et D. A est le point de départ, AB donne la direction initiale, D est le point d'arrivée et CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
-```
-
-```activité-avancée 
-::manipulations images svg::
-Vous pouvez vous initier à la définition d'images vectorielles avec le standard `svg` sur ce [site tutoriel](http://www.w3schools.com/svg)
-```
-
-## Les images matricielles
+### Les images matricielles
 
 L'idée directrice est ici de représenter l'image point par point : le
 premier point en haut à gauche a telle couleur et telle luminosité, le
@@ -1126,21 +1092,8 @@ mesurée avec les notions de *définition* et de *résolution*
 introduites en activité. Nous discutons la représentation numérique
 des couleurs dans la section suivante.
 
-```activité-avancée
-::Échantillonner la musique::
-[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
-{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 
-::Échantillonner les images::
-[markdown]Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
-{####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
-
-::La qualité de l'image::
-[markdown]La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
-{####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
-```
-
-## La couleur
+### La couleur
 
 Nous avons introduit les images matricielles comme une description
 point par point d'une image où chaque point ou pixel est associé à une
@@ -1162,24 +1115,7 @@ lorsque les 3 composantes sont au maximum, cela donne du blanc. La
 représentation machine dans le modèle `RVB` est discutée dans les
 activités pour en déduire le nombre de couleurs représentables.
 
-```activité
-::Les valeurs de R de G ou de B::
-[markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
-{####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
-
-::Les valeurs RGB::
-[markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
-{####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
-```
-
-```activité-avancée
-::Les images CMJN::
-[markdown]
-Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le principe est similaire au modèle RVB, il s'agit de décrire une couleur par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
-correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
-{#### Cyan Magenta Jaune et Noir}
-```
-## Les formats
+### Les formats
 
 Même si il n'existe que deux types de représentation vectorielle et
 matricielle, comme dans le cas des documents, il existe de très
@@ -1204,6 +1140,41 @@ méthodes de compression qui peuvent être diverses.  Tout
 ceci donne lieu à de nombreux formats matriciels dont les principaux
 sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 
+
+```activité
+::Échantillonner la musique::
+[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
+
+::Échantillonner les images::
+[markdown]Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
+{####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
+
+::La qualité de l'image::
+[markdown]La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
+{####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
+```
+
+```activité
+::Les valeurs de R de G ou de B::
+[markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
+{####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
+
+::Les valeurs RGB::
+[markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
+{####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
+```
+
+```activité
+::Pierre Bézier::
+- Qui est **Pierre Bézier** ?
+{}
+
+::Courbe de Bézier::
+[markdown]
+Il est possible de définir des courbes avec peu d'informations. Par exemple, une courbe de Bézier cubique est définie par la donnée de 4 points A, B, C et D. A est le point de départ, AB donne la direction initiale, D est le point d'arrivée et CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
+```
+
 ```activité-avancée
 ::meta-données de photos::
 [markdown] La plupart des appareils photos numériques ajoutent des méta-données à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de meta-données associées aux photos.
@@ -1215,3 +1186,16 @@ les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
 utilisé, ainsi que l'heure et la date de la prise de vue.
 Mais aussi les personnages ou les étiquettes associées à la photo ...}
 ```
+
+
+```activité-avancée
+::manipulations images svg::
+Vous pouvez vous initier à la définition d'images vectorielles avec le standard `svg` sur ce [site tutoriel](http://www.w3schools.com/svg)
+
+::Les images CMJN::
+[markdown]
+Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le principe est similaire au modèle RVB, il s'agit de décrire une couleur par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
+correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
+{#### Cyan Magenta Jaune et Noir}
+```
+

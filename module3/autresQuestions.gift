@@ -22,3 +22,16 @@ Lancer un éditeur de textes (voir activité précédente). Entrer un court text
 - texte simple avec l'extension toto
 - fichier pdf
 {}
+
+
+- installer grammalecte sur son LO et jouer avec, on peut
+  donner un texte avec plein d'erreurs et demander combien ont été
+  corrigées par l'outil (typo, grammaire, conjugaison, style).
+- Marc a un texte sur la typographie
+
+
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}
