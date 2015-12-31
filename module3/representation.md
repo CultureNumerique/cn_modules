@@ -278,7 +278,7 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 
 ```activité
 ::La structure d'un document texte odt:: 
-[markdown] Téléchargez le  [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
+[markdown] Téléchargez le  [document odt](media/representation.odt) sur votre machine. Notez bien l'emplacement où vous l'enregistrez. Lancer `libreoffice` puis ouvrir le document. Pour explorer sa structure :
 - Ouvrez le *navigateur de `libreoffice`* (touche F5). Ici, le mot navigateur ne désigne pas un navigatuer Web mais une fonctionnalité fournie par `libreoffice` pour naviguer dans la structure du document.
 - Dépliez tous les niveaux de titre pour faire apparaître la structure complète des titres du document.
 - Rendre une capture de cette fenêtre de navigateur.
@@ -290,13 +290,13 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 ```activité-avancée
 ::Mise en forme et structure::
 [markdown]
-Téléchargez les deux fichiers suivants : [representation1](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) et [representation2](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+Téléchargez les deux fichiers suivants : [representation1](media/representation.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.}
 ```
 
 ```activité 
 ::La vue qualifiée  d'un document texte odt:: 
-[markdown] Ouvrir le document [document odt](http://culturenumerique.univ-lille3.fr/activitesWeb/textes/representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
+[markdown] Ouvrir le document [document odt](representation.odt) dans `libreoffice`. Recherchez dans les menus comment trouver les propriétés suivantes : 
 - le titre,
 - le sujet,
 - les mots clef,
