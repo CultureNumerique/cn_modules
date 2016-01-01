@@ -1005,7 +1005,7 @@ numériques différentes :
 * Les images qui représentent une abstraction du réel telles que les
   dessins ou les cartes. Ces abstractions ont, en général, été créées
   par l'homme et ont des représentations numériques qui sont des
-  *images vectorielles*.  
+  *images vectorielles*.
 
 * Les images qui représentent le plus fidèlement possible le monde
   réel comme les photographies, les images issues de capteur, les
@@ -1056,16 +1056,9 @@ Un second avantage très important des images vectorielles réside alors
 en leur capacité à les afficher à n'importe quelle échelle sans aucune
 perte de qualité. L'affichage est *recalculé* quel que soit le niveau
 de zoom. Il est également très facile de modifier un élément de
-l'image indépendamment des autres. Enfin, notons que le même
+l'image indépendamment des autres. Notons que le même
 type de représentation est utilisé pour représenter des images en 3
-dimensions. Pour terminer, il est facile d'intégrer des images
-vectorielles dans des animations comme, par exemple, pour les jeux video.
-
-<!--
-Ce type d'image n'est pas adapté à la représentation de photo, la
-complexité de la réalité ne peut pas facilement être représentée par
-des formules mathématiques.
--->
+dimensions. Pour terminer, les langages de description d'images vectorielles sont également étendus pour intégrer des animations et des interactions. Beaucoup de jeux vidéos, notamment ceux intégrés dans le navigateur web utilisent ces images animées vectorielles. 
 
 
 ### Les images matricielles
@@ -1074,14 +1067,14 @@ L'idée directrice est ici de représenter l'image point par point : le
 premier point en haut à gauche a telle couleur et telle luminosité, le
 second point ..., jusqu'au dernier point en bas à droite. Une image
 matricielle est donc représentée comme un ensemble de points de
-couleur, juxtaposés dans un rectangle. Si les
-points sont suffisamment petits et nombreux, notre oeil ne parvient
-pas à les distinguer. Ce principe est utilisé depuis longtemps dans
-des domaines comme la photographie, les écrans de télévision,
-l'imprimerie. Dans le monde du numérique, les images matricielles sont
-particulièrement bien adaptées pour représenter les photos.  Les
-appareils photo numériques ainsi que les scanners utilisent ces
-représentations.
+couleur, juxtaposés dans un rectangle. Si les points sont suffisamment
+petits et nombreux, notre oeil ne parvient pas à les distinguer. Mais
+un très fort grossissement permet de les révéler. Ce principe est
+utilisé depuis longtemps dans des domaines comme la photographie, les
+écrans de télévision, l'imprimerie. Dans le monde du numérique, les
+images matricielles sont particulièrement bien adaptées pour
+représenter les photos.  Les appareils photo numériques ainsi que les
+scanners utilisent ces représentations.
 
 Dans les images matricielles, les points sont appelés *pixels*. Ils
 sont ordonnés en ligne et en colonne dans une grande grille
@@ -1090,11 +1083,11 @@ matricielle. Nous pouvons donc considérer que chaque pixel est une
 observation d'une très petite partie d'une image réelle, comme un tout
 petit **échantillon de l'image réelle** pris à un endroit précis. Pour
 ce petit échantillon, on mesure et mémorise la couleur. Ce processus
-d'échantillonnage est bien connu des physiciens auquel nous empruntons
-le terme. Nous le retrouvons dans toutes les représentations de
-signaux physiques, ici l'image, mais également pour les sons, la
-musique. Par exemple, dans le cas d'un son on mesure une valeur de
-note (de fréquence sonore) pour chaque échantillon.
+d'échantillonnage est bien connu des physiciens. Nous le retrouvons
+dans toutes les représentations de signaux physiques, ici l'image,
+mais également pour les sons, la musique. Par exemple, dans le cas
+d'un son on mesure une valeur de note (de fréquence sonore) pour
+chaque petit échantillon de temps.
 
 Les logiciels affichent les images matricielles point par point.  Un
 avantage est que l'affichage d'une image matricielle peut approcher la
@@ -1111,7 +1104,6 @@ mesurée avec les notions de *définition* et de *résolution*
 introduites en activité. Nous discutons la représentation numérique
 des couleurs dans la section suivante.
 
-
 ### La couleur
 
 Nous avons introduit les images matricielles comme une description
@@ -1122,16 +1114,16 @@ peintres qui ont, de tout temps, créé des nuances en mélangeant des
 couleurs dites primaires.
 
 Le modèle de couleurs le plus répandu est le modèle **`RVB`** (pour
-Rouge Vert Bleu) ou **`RGB`** (pour Red Green Blue). Chaque pixel est
+Rouge Vert Bleu ou **`RGB`** en anglais pour Red Green Blue). Chaque pixel est
 décrit par 3 valeurs représentant respectivement la proportion de
-rouge, de vert et de bleu.  La couleur finale est la combinaison de
+rouge, de vert et de bleu.  La couleur est la combinaison de
 ces trois valeurs.  Le modèle `RVB` est directement issu de contraintes
 technologiques.  En effet, les écrans (télévision, ordinateur,
 tablettes), ainsi que les capteurs des appareils photos numériques ou
 les scanners utilisent tous ce mode de représentation de la couleur.
 Dans le modèle `RVB`, la couleur (0, 0, 0) correspond au noir, alors que
 lorsque les 3 composantes sont au maximum, cela donne du blanc. La
-représentation machine dans le modèle `RVB` est discutée dans les
+représentation numérique dans le modèle `RVB` est discutée dans les
 activités pour en déduire le nombre de couleurs représentables.
 
 ### Les formats
@@ -1149,15 +1141,32 @@ Pour les images matricielles, la variabilité des formats est vraiment
 très grande. De nombreuses caractéristiques issues des besoins de
 manipulation sont à considérer mais également les progrès
 technologiques liés aux dispositifs d'acquisition comme simplement les
-appareils photos. À titre d'exemple, citons la possibilité comme la
+appareils photos. À titre d'exemples, citons la possibilité comme la
 manière de stocker les méta-données comme par exemple la date,
-l'auteur, etc ; la possibilité de gérer des images composées de
-plusieurs couches superposées, ou de gérer de la transparence. Un
+l'auteur, la géolocalisation, etc ; les possibilités de gérer des images composées de
+plusieurs couches superposées et de gérer de la transparence. Un
 dernier paramètre découle de la volonté d'échanger les images sur
 internet rapidement et donc de limiter l'espace stockage avec des
 méthodes de compression qui peuvent être diverses.  Tout
 ceci donne lieu à de nombreux formats matriciels dont les principaux
 sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
+
+
+```compréhension
+::Quelle représentation ?::
+Je veux représenter une carte routière. Je dispose des relevés des positions des routes, des bâtiments, des délimitations des surfaces des villes et villages. Quelle représentation vous semble la plus adaptée?
+{
+=Une image vectorielle#Oui, on décrit les routes et les bâtiments, des villes  par des figures géométriques comme des polygones, des lignes, etc... 
+~Une image matricielle#Non, 
+}
+
+::Une capture d'écran::
+Je réalise une capture d'écran. À votre avis l'image générée est plutôt :
+{
+=une image matricielle#Oui, l'écran est déjà une matrice de points, et on veut une représentation fidèle de cette image, non abstraite. 
+~une image vectorielle#Non, imaginez que l'écran affiche une photographie, on ne peut pas trouver des figures géométriques partout dans cette image.
+}
+```
 
 
 ```activité
