@@ -35,7 +35,7 @@ Lancer un éditeur de textes (voir activité précédente). Entrer un court text
 
 ::Éditeur de textes avec des séquences de caractères dans un langage::
 [markdown]
-(*Pas convaincu, trop tôt ?*) Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
+Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
 {}
 
 

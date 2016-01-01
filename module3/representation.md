@@ -923,6 +923,9 @@ En observant cet exemple, trouvez ` comment en  `Markdown` :
 - délimiter des paragraphes ?
 {#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
 
+::LaTeX::
+Enfin, le format de représentation numérique de documents scientifiques, qui permet de générer de textes de très grande qualité typographique est LaTeX. (Voyez par exemple le site [arXiv](http://www.arxiv.org) et les [formats de soumission d'articles autorisés](https://arxiv.org/help/submit#text)). Ici encore, c'est un langage structuré et on peut le comprendre de cette façon. À titre d'exemple, regardez le [document suivant](media/exempleLaTeX.tex) avec un éditeur de textes (bloc-note, textEdit, gedit, selon votre ordinateur) ainsi que son [rendu en PDF](media/exempleLaTeX.pdf). Quelles commandes permettent de structurer les parties de document ? 
+{####Ce sont les instructions \section et \subsection. Si vous êtes curieux, vous pouvez essayer LaTeX de manière collaborative sur [ShareLaTeX](https://fr.sharelatex.com/) ou sur [Overleaf](https://www.overleaf.com)}
 ```
 
 
@@ -1217,8 +1220,8 @@ Mais aussi les personnages ou les étiquettes associées à la photo ...}
 
 
 ```activité-avancée
-::manipulations images svg::
-Vous pouvez vous initier à la définition d'images vectorielles avec le standard `svg` sur ce [site tutoriel](http://www.w3schools.com/svg)
+::manipulations images SVG::
+Vous pouvez vous initier à la définition d'images vectorielles avec le standard `SVG` avec [cette page](media/svg.html). Essayez donc de changer l'épaisseur de la ligne rouge, la position du rectangle bleu, le rayon du cercle jaune. Et si vous  êtes forts ajoutez une nouvelle ligne verte horizontale!
 
 ::Les images CMJN::
 [markdown]
