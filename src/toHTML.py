@@ -37,7 +37,7 @@ def parse_content(href, module, outModuleDir, rewrite_iframe_src=True):
     # to reconstruct the whole path
     try:
         for element, attribute, link, pos in tree.iterlinks():
-            newlink = link.replace("media", module+"/media")
+            newlink = link.replace("../media", module+"/media")
             element.set(attribute, newlink)
     except Exception as e:
         logging.exception("Exception rewriting/removing links %s" % e)

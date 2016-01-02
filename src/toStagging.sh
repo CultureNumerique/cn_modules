@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#rsync -avh --delete build vduhal@culturenumerique.univ-lille3.fr:htdocs/staging
+#
 
 source='build'
 dest=vduhal@culturenumerique.univ-lille3.fr:htdocs/staging/
@@ -16,7 +16,8 @@ else
 fi
 
 if [ -d $source ]; then
-    scp  -v -r -C $source $dest
+    scp  -r -C $source $dest
+    #rsync -avh --delete $source $dest
 else
     echo "Unable to find: " $source
 fi
