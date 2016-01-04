@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import json
+import logging
 import os
 import sys
 import zipfile
 import random
+
 
 from lxml import etree
 from lxml import html
@@ -22,6 +24,9 @@ FILETYPES = {
     'discussions' : 'imsdt_xmlv1p1',
     'auto-evaluation' : 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
     'devoirs': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
+    'Activite': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
+    'ActiviteAvancee': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
+    'Comprehension': 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
     'webcontent' : 'webcontent',
     'correction' : 'webcontent',
     'cours' : 'webcontent',
@@ -37,9 +42,13 @@ CC_PROFILES = {
     'MATCH' : 'cc.pattern_match.v0p1'
 }
 
+IMS_HEADER = """<?xml version="1.0" encoding="UTF-8"?><manifest xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" 
+    xmlns:lomimscc="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="M_3E1AEC6D" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_imscp_v1p2_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lommanifest_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd">
+    """
+
 HEADER_TEST = """<?xml version="1.0" encoding="UTF-8"?>
-<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
-"""
+    <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+    """
 
 def set_qti_metadata(max_attempts):
     
@@ -188,8 +197,6 @@ def create_ims_test(questions, test_id, test_title):
                                     with tag('mattext', texttype='text/html'):
                                         text(answer['feedback'])
                         
-                    
-    
     doc.asis('</questestinterop>\n')
     return indent(doc.getvalue())
 
@@ -209,13 +216,13 @@ def create_empty_ims_test(id, title, max_attempts=None):
 
 def usage():
     str = """
-Usage:
-   toIMS module_dir 
-   exporte les fichiers depuis l'arborescence git située dans [module_dir] en
-    suivant les paramètres du fichier de config généré  pour les
-     comprimer dans une archive [module_dir].imscc.zip
+    Usage:
+       toIMS module_dir 
+       exporte les fichiers depuis l'arborescence git située dans [module_dir] en
+        suivant les paramètres du fichier de config généré  pour les
+         comprimer dans une archive [module_dir].imscc.zip
 
-"""
+    """
     print (str)
     exit(1)
 
@@ -225,12 +232,16 @@ def replaceLink(link):
     return link.replace("__BASE__/", '')
 
 
+def build_href(folder, filename):
+    pass
+
+
 def generateIMSManifest(data):
-    """ parse data from config file 'toIMSconfig.json' and recreate imsmanifest.xml """
+    """ parse data from config file 'moduleX.config.json' and recreate imsmanifest.xml """
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
     # open tag 'manifest' with default content:
-    doc.asis('<?xml version="1.0" encoding="UTF-8"?><manifest xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lomimscc="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="M_3E1AEC6D" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_imscp_v1p2_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lommanifest_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd">')
+    doc.asis(IMS_HEADER)
     # Print metadata
     with tag('metadata'):
         with tag('schema'):
@@ -240,20 +251,19 @@ def generateIMSManifest(data):
         with tag('lomimscc:lom'):
             with tag('lomimscc:general'):
                 with tag('lomimscc:title'):
-                    with tag('lomimscc:string', language=data["lom_metadata"]["language"]):
-                        text(data["lom_metadata"]["title"])
+                    with tag('lomimscc:string', language=data["language"]):
+                        text(data["menutitle"])
                 with tag('lomimscc:language'):
-                    text(data["lom_metadata"]["language"])
+                    text(data["language"])
                 with tag('lomimscc:description'):
-                    doc.stag('lomimscc:string', language=data["lom_metadata"]["language"])
+                    doc.stag('lomimscc:string', language=data["language"])
                 with tag('lomimscc:identifier'):
                     with tag('lomimscc:catalog'):
                         text('category')
                     with tag('lomimscc:entry'):
-                        cat = data["lom_metadata"]["category"]
-                        if cat:
-                            text(cat)
-                        else:
+                        try:
+                            text(data["category"])
+                        except:
                             text('D')
     # Print organization
     resources = []
@@ -269,16 +279,16 @@ def generateIMSManifest(data):
                     with tag('item', identifier=section_id):
                         with tag('title'):
                             text(section['title'])
-                        for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
-                            href = data["sections"][idA]["subsections"][idB]["source_file"]
-                            # FIXME: when adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
-                            if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
+                        for idB, subsection in enumerate(section["subsections"]):
+                            href = subsection["folder"]+'/'+subsection["filename"]
+                            # when adding moodle-test type change file suffix from .html to .xml
+                            if subsection["folder"] in ['auto-evaluation', 'devoirs', 'Activite', 'ActiviteAvancee', 'Comprehension']:
                                 href = href.replace('html', 'xml')
                             filename = href.rsplit('/',1)[1]
                             resources.append(filename)
                             with tag('item', identifier=("subsec_"+str(idA)+"_"+str(idB)), identifierref=("doc_"+str(idA)+"_"+str(idB))):
                                 with tag('title'):
-                                    text(data["sections"][idA]["subsections"][idB]["title"])
+                                    text(subsection["title"])
     # Print resources
     with tag('resources'):
         # retrieve images and add dependency when needed
@@ -300,17 +310,17 @@ def generateIMSManifest(data):
 
         doc.asis("<!-- Webcontent -->")
         for idA, section in enumerate(data["sections"]):
-            for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
+            for idB, subsection in enumerate(section["subsections"]):
                 doc_id = "doc_"+str(idA)+"_"+str(idB)
-                file_type = FILETYPES[data["sections"][idA]["subsections"][idB]["type"]]
-                # When adding "devoirs" ou "auto-evaluation", change file suffix from .html to .xml
-                href = data["sections"][idA]["subsections"][idB]["source_file"]
-                if data["sections"][idA]["subsections"][idB]["type"] in ['auto-evaluation', 'devoirs']:
+                file_type = FILETYPES[subsection["folder"]]
+                # When adding moodle test resource change file suffix from .html to .xml
+                href = subsection["folder"]+'/'+subsection["filename"]
+                if subsection["folder"] in ['auto-evaluation', 'devoirs', 'Activite', 'ActiviteAvancee', 'Comprehension']:
                     href = href.replace('html', 'xml')
                 with tag('resource', identifier=doc_id, type=file_type, href=href):
                      doc.stag('file', href=href)
                      # add dependency if needed (html only)
-                     if file_type == "webcontent":
+                     if file_type in ["webcontent", "cours", "correction"]:
                         try:
                             html_doc = html.parse(href)
                             for img in html_doc.xpath('//@src'):
@@ -341,33 +351,31 @@ def main(argv):
         
     module_dir = sys.argv[1]
     fileout = module_dir+'.imscc.zip'
-    #  get config file by parsing markdown in module folder
-    # FIXME do it only with an option '-md':
-    #### TODO
-    # model.main([module_dir])
-    # take config file whose name is built as follows  
-    filein = os.path.join(module_dir, module_dir+'.config.json')
+    filein = os.path.join('build', module_dir, module_dir+'.config.json')
     
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
     # change directory
-    os.chdir(module_dir)
+    os.chdir('build/'+module_dir)
 
     # parse data and generate imsmanifest.xml
     generateIMSManifest(data)
-    print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
+    logging.info(" imsmanifest.xml saved for module %s", module_dir)
 
     # Compress relevant files
     zipf = zipfile.ZipFile(fileout, 'w')
     zipf.write(os.getcwd()+'/imsmanifest.xml')
-    for dir_name in data['directories_to_ims']:
-        if os.listdir(dir_name):
-            for file in os.listdir(dir_name):
-                filepath = os.path.join(os.getcwd(), dir_name)
-                filepath = os.path.join(filepath, file)
-                print (" Adding %s to archive " % (filepath))
-                zipf.write(filepath)
+    for dir_name in FILETYPES.keys():
+        try:
+            if os.listdir(dir_name):
+                for file in os.listdir(dir_name):
+                    filepath = os.path.join(os.getcwd(), dir_name)
+                    filepath = os.path.join(filepath, file)
+                    print (" Adding %s to archive " % (filepath))
+                    zipf.write(filepath)
+        except:
+            continue
 
     zipf.close()
 
