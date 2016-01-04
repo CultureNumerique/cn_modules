@@ -228,6 +228,12 @@ class GiftQuestion():
         else: # FIXME we should recognize NUMERIC and MATCHING here
             self.type = 'ESSAY'
     
+    
+def clean_question_src(question):
+    question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
+    question = re.sub('\\\:', '', question) # remove \: in src txt
+
+    return question
 
 def extract_questions(some_text):
     """ From a piece of text, extract and returns a list of single line strings with GIFT formated questions """
@@ -240,6 +246,7 @@ def extract_questions(some_text):
         if line == '' or line.isspace():
             if new_question is not None:
                 if len(new_question) > 0:
+                    new_question = clean_question_src(new_question)
                     questions_src.append(new_question)
                     new_question = "" # we start over a new question
                 else:
@@ -271,11 +278,11 @@ def extract_questions(some_text):
 
 def process_questions(questions_src):
     """ given a list of questions sources, process each question to retrieve all fields;
-        Return a list of question objects
+        each question_source is a one liner string of text. Return a list of question objects
     """
     question_objects = []
     for q_src in questions_src:
-        #logging.info(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
+        #pprint(" ++++++  Processing new question len of questions_src = %d src = %s " % (len(questions_src), q_src))
         q_obj = GiftQuestion()
         q_obj.gift_src = q_src
         q_obj.md_src_to_html()

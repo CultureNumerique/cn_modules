@@ -14,8 +14,7 @@ from pprint import pprint
 from yattag import indent
 from yattag import Doc
 
-import fromMD
-#import model
+import model
 
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
