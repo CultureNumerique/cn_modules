@@ -32,6 +32,8 @@ FILETYPES = {
     'cours' : 'webcontent',
 }
 
+FOLDERS = ['Activite', 'ActiviteAvancee', 'Comprehension', 'webcontent', 'media', 'correction']
+
 CC_PROFILES = {
     'MULTICHOICE' : 'cc.multiple_choice.v0p1',
     'MULTIANSWER' : 'cc.multiple_response.v0p1',
@@ -117,8 +119,6 @@ def create_ims_test(questions, test_id, test_title):
                                 with tag('fieldlabel'):
                                     text("cc_profile")
                                 with tag('fieldentry'):
-                                    # FIXME : try and get default when no type !
-                                    print ('  ===question ? %s' % question.gift_src)
                                     try:
                                         text(CC_PROFILES[question.type])
                                     except:
@@ -138,7 +138,7 @@ def create_ims_test(questions, test_id, test_title):
                         # réponses possibles
                         if 'ESSAY' in question.type:
                             with tag('response_str', rcardinality='Single', ident='response_'+str(question.id)):
-                                doc.stag('render_fib', rows=15, prompt='Box', fibtype="String")
+                                doc.stag('render_fib', rows=5, prompt='Box', fibtype="String")
                         elif question.type in (('MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE')):
                             # rcardinality optional, but a priori 'Single' form MChoice, 'Multiple' for Manswer; 
                             with tag('response_lid', ident='response_'+str(question.id)):
@@ -219,8 +219,8 @@ def usage():
     Usage:
        toIMS module_dir 
        exporte les fichiers depuis l'arborescence git située dans [module_dir] en
-        suivant les paramètres du fichier de config généré  pour les
-         comprimer dans une archive [module_dir].imscc.zip
+       suivant les paramètres du fichier de config généré  pour les
+       comprimer dans une archive [module_dir].imscc.zip
 
     """
     print (str)
@@ -366,7 +366,7 @@ def main(argv):
     # Compress relevant files
     zipf = zipfile.ZipFile(fileout, 'w')
     zipf.write(os.getcwd()+'/imsmanifest.xml')
-    for dir_name in FILETYPES.keys():
+    for dir_name in FOLDERS:
         try:
             if os.listdir(dir_name):
                 for file in os.listdir(dir_name):
