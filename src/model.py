@@ -34,7 +34,7 @@ import utils
 MARKDOWN_EXT = ['markdown.extensions.extra', 'superscript']
 VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
 DEFAULT_VIDEO_THUMB_URL = 'https://i.vimeocdn.com/video/536038298_640.jpg'
-
+BASE_URL = 'http://culturenumerique.univ-lille3.fr'
 
 # Regexps 
 reEndHead = re.compile('^#')
@@ -66,6 +66,7 @@ class ComplexEncoder(json.JSONEncoder):
                 del d['questions']
             return d
         return json.JSONEncoder.default(self, obj)
+
 
 def fetch_video_thumb(video_link):
     """
@@ -158,6 +159,9 @@ class Cours(Subsection):
                 html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
             except:
                 logging.exception("Exception with vimeo video links")
+        # FIXME : ugly hack; we should have a proper URL mechanism like the one in Django framework
+        # indirection for media link because files are splitted and put in folders
+        html_src = html_src.replace('media/', '../media/')
         return html_src
                 
     def detectVideoLinks(self):
@@ -211,8 +215,9 @@ class AnyActivity(Subsection):
             # post-process Gift source replacing markdown formated questions text by html equivalent
             if question.text_format in (("markdown")):
                 question.md_src_to_html()
-        # change relative media links from media/ to ../media/
-        html_src = html_src.replace('media/', '../media/')
+        # change relative media links from media/ to absolute URL since media are 
+        #   difficult to pass on when described in GIFT format
+        html_src = html_src.replace('media/', BASE_URL+'/'+self.section.module+'/media/')
         # add "target="_blank" to all anchors
         try:
             tree = html.fromstring(html_src)
@@ -226,7 +231,8 @@ class AnyActivity(Subsection):
     
     def toXMLMoodle(self,outDir):
         # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
-        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.title)
+        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title)
+        #xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
         filename = self.getFilename()
         xml_filename = filename.replace('html', 'xml')
         #   write xml file at same location
@@ -257,11 +263,12 @@ class ActiviteAvancee(AnyActivity):
 class Section:
     num = 1
 
-    def __init__(self,title,f):
+    def __init__(self,title,f, module):
         self.title = title
         self.subsections = []
         self.num = str(Section.num)
         self.parse(f)
+        self.module = module
         Section.num +=1
         Subsection.num=1 
         
@@ -317,15 +324,19 @@ class Section:
     def toGift(self):
         allGifts = ""
         for sub in self.subsections:
-            allGifts += sub.toGift()
+            if isinstance(sub, AnyActivity):
+                # Add category here
+                allGifts += "$CATEGORY: $module$/"+sub.num+' '+sub.title+"\n\n"
+                allGifts += sub.toGift()
         return allGifts
     
 class Module:
     """ Module structure"""
 
-    def __init__(self,f):
+    def __init__(self,f, module):
         self.sections = []
         Section.num = 1
+        self.module = module
         self.parse(f)
 
     
@@ -349,7 +360,7 @@ class Module:
         l = self.parseHead(f)
         match = reStartSection.match(l)
         while l and match:
-            s = Section(match.group('title'),f)
+            s = Section(match.group('title'),f, self.module)
             self.sections.append( s )
             l = s.lastLine
             match = reStartSection.match(l)
