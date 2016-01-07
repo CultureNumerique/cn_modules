@@ -179,7 +179,7 @@ class GiftQuestion():
             self.global_feedback_format = m1.group('fb_format')
             q_answers = r1.sub('', q_answers)
         ## Then, process the remaining types
-        logging.info(" ++++ Answer part after retrieveing global feedback =%s=" % (q_answers))
+        logging.info(" ++++ Answer part after retrieving global feedback =%s=" % (q_answers))
         if q_answers.isspace() or q_answers == '':
             self.type = 'ESSAY'
         ## TRUEFALSE questions
@@ -218,7 +218,7 @@ class GiftQuestion():
                 m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
                 new_answer['credit'] = m.group('credit')
                 new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
-                new_answer['feedback'] = m.group('feedback')
+                new_answer['feedback'] = m.group('feedback').lstrip('#')
                 self.answers.append(new_answer)
 
         if right_answer_count == 0 and false_answer_count > 0:

@@ -59,7 +59,7 @@ def processModule(module,outDir=None):
 
     with open(filein, encoding='utf-8') as md_file:
         # parse md 
-        m = model.Module(md_file)
+        m = model.Module(md_file, module)
 
     # write html,  XML, and JSon  files
     m.toHTMLFiles(outDir)

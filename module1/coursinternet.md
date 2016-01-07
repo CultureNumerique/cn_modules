@@ -305,12 +305,12 @@ alt\="premier bug" width\="300" height\="213" /></p>}
 Tout ne s'est pas fait en un jour, ...
 Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
 Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
-- [Ada Lovelace] (http://fr.wikipedia.org/wiki/Ada_Lovelace)
-- [Grace Hopper] (http://fr.wikipedia.org/wiki/Grace_Hopper)
-- [Alan Turing] (http://fr.wikipedia.org/wiki/Alan_Turing)
-- [John Von Neuman] (http://fr.wikipedia.org/wiki/John_von_Neumann)
+- [Ada Lovelace](http://fr.wikipedia.org/wiki/Ada_Lovelace)
+- [Grace Hopper](http://fr.wikipedia.org/wiki/Grace_Hopper)
+- [Alan Turing](http://fr.wikipedia.org/wiki/Alan_Turing)
+- [John Von Neuman](http://fr.wikipedia.org/wiki/John_von_Neumann)
 Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, **l'homme** et la **machine**, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
-Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.
+Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.{}
 ```
 ## Personnages importants - Correction
 ### Ada Lovelace

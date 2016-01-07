@@ -158,8 +158,9 @@ def create_ims_test(questions, test_id, test_title):
                         with tag('outcomes'):
                             doc.stag('decvar', varname='SCORE', vartype='Decimal', minvalue="0", maxvalue="100")
                         # respconditions pour décrire quelle est la bonne réponse, les interactions, etc
-                        ## pour afficher le feedback general
+                        ## pour afficher le ne pourrait-elle pas feedback general
                         if question.global_feedback != '':
+                            #with tag('respcondition', title='General feedback', continue="Yes"):
                             with tag('respcondition', title='General feedback'):
                                 with tag('conditionvar'):
                                     doc.stag('other')
@@ -200,7 +201,7 @@ def create_ims_test(questions, test_id, test_title):
     doc.asis('</questestinterop>\n')
     return indent(doc.getvalue())
 
-def create_empty_ims_test(id, title, max_attempts=None):
+def create_empty_ims_test(id, num, title, max_attempts=None):
     """
         create empty imsc test source code
     """
@@ -208,7 +209,7 @@ def create_empty_ims_test(id, title, max_attempts=None):
         max_attempts = 1
     src = ""
     src+=HEADER_TEST
-    src+='<assessment ident="'+id+'" title="'+title+'">\n'
+    src+='<assessment ident="'+id+'" title="'+num+' '+title+'">\n'
     src+=set_qti_metadata(max_attempts)
     src+="</assessment></questestinterop>\n"
 
@@ -278,7 +279,7 @@ def generateIMSManifest(data):
                     section_id = "sec_"+(str(idA))
                     with tag('item', identifier=section_id):
                         with tag('title'):
-                            text(section['title'])
+                            text(section['num']+' '+section['title'])
                         for idB, subsection in enumerate(section["subsections"]):
                             href = subsection["folder"]+'/'+subsection["filename"]
                             # when adding moodle-test type change file suffix from .html to .xml
@@ -288,7 +289,7 @@ def generateIMSManifest(data):
                             resources.append(filename)
                             with tag('item', identifier=("subsec_"+str(idA)+"_"+str(idB)), identifierref=("doc_"+str(idA)+"_"+str(idB))):
                                 with tag('title'):
-                                    text(subsection["title"])
+                                    text(subsection['num']+' '+subsection["title"])
     # Print resources
     with tag('resources'):
         # retrieve images and add dependency when needed
@@ -350,14 +351,15 @@ def main(argv):
         usage()
         
     module_dir = sys.argv[1]
+    build_dir = 'build' # FIXME or get it from argument or config file
     fileout = module_dir+'.imscc.zip'
-    filein = os.path.join('build', module_dir, module_dir+'.config.json')
+    filein = os.path.join(build_dir, module_dir, module_dir+'.config.json')
     
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
-    # change directory
-    os.chdir('build/'+module_dir)
+    # change directory to builded module dir
+    os.chdir(os.path.join(build_dir, module_dir))
 
     # parse data and generate imsmanifest.xml
     generateIMSManifest(data)
