@@ -64,5 +64,5 @@ def processModule(module,outDir=None):
     # write html,  XML, and JSon  files
     m.toHTMLFiles(outDir)
     m.toXMLMoodle(outDir)
-    write_file(m.toGift(), outDir, '', 'questions_bank.gift.txt')
+    write_file(m.toGift(), outDir, '', module+'.questions_bank.gift.txt')
     write_file(m.toJson(), outDir, '',  module+'.config.json')

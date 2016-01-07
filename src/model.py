@@ -326,8 +326,9 @@ class Section:
         for sub in self.subsections:
             if isinstance(sub, AnyActivity):
                 # Add category here
-                allGifts += "$CATEGORY: $module$/"+sub.num+' '+sub.title+"\n\n"
+                allGifts += "\n$CATEGORY: $course$/Quiz Bank '"+sub.num+' '+sub.title+"'\n\n"
                 allGifts += sub.toGift()
+        allGifts = allGifts.replace('media/', BASE_URL+'/'+self.module+'/media/')
         return allGifts
     
 class Module:
