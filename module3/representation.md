@@ -447,6 +447,8 @@ précisés avec les abréviations suivantes :
 - le format `pdf` pour l'impression,
 - le format `html` pour les hypertextes.
 
+![différents formats](media/3_1_illustrations-01.svg)
+
 Vous noterez, que pour de mêmes usages, comme la composition de
 documents textuels, il existe des formats différents comme `doc` et
 `odt`. Vous noterez également que les formats évoluent avec les usages
@@ -475,6 +477,8 @@ format `doc` par exemple. Cette extension peut être vue comme une
 métadonnée qui dit : "le document dans ce fichier respecte le format
 de représentation de documents utilisé par le logiciel `Word`".
 
+![doc et word](media/3_2_format-01.svg)
+
 Si nous avons un document textuel au format `odt`, il ne suffit pas de
 le renommer avec l'extension `doc` pour le rendre lisible par Word. Il
 faut réaliser une **conversion** d'un format dans l'autre, opération qui
@@ -486,6 +490,8 @@ raisons :
    informations lors de cette conversion.
 4. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas toujours écrire de programme de conversion.
 
+![renommage](media/3_2_renommer-01.svg)
+
 Par ailleurs, un document textuel dans un format peut être parfois
 manipulé avec des logiciels différents pour des besoins différents.
 Par exemple, un fichier `html` peut être ouvert par un navigateur pour
@@ -494,6 +500,7 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
+![html](media/3_2_HTML-01.svg)
 
 ### Ouvert ou propriétaire
 
@@ -503,7 +510,10 @@ vue industriel ou commercial. Dès lors, les créateurs ont la
 possibilité de le rendre disponible pour tous librement ou non, de le
 cacher ou de le protéger par des brevets.
 
-On parle de **format ouvert** si le format est diffusé publiquement. Par
+#### Formats ouverts
+On parle de **format ouvert** si le format est diffusé publiquement. 
+![format ouvert exemple](media/3_3_Format_Ouvert_exemple-01.svg)
+Par
 exemple, vous pouvez accéder librement sur le Web à la définition du
 format `HTML5`.  De plus, aucune entrave légale n'accompagne
 l'utilisation d'un format ouvert et de ce fait, un format ouvert n'est
@@ -512,15 +522,21 @@ peuvent librement lire ou écrire les informations représentées dans ce
 format. On facilite ainsi l'interopérabilité. Par exemple, le format
 `html` est utilisé par de nombreux logiciels et même au delà du Web.
 
+![formats ouverts](media/3_3_Format_Ouvert-01.svg)
+#### Formats fermés
 On parle de **format fermé** ou propriétaire lorsque des restrictions
-d'accès et/ou d'utilisation s'appliquent. Être propriétaire d'un
-format très répandu donne une puissance économique très importante
-dans notre monde numérique et une position dominante. En effet, la
+d'accès et/ou d'utilisation s'appliquent.
+
+![formats fermés exemple](media/3_3_Format_Fermé_exemple-01.svg)
+
+ Être propriétaire d'un format très répandu donne une puissance économique très importante dans notre monde numérique et une position dominante. En effet, la
 conversion étant impossible, une mise en concurrence est rendue très
 improbable et les utilisateurs sont alors contraints d'utiliser le
 logiciel associé. Si `HTML` avait été un format fermé, sans doute le
 web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
+
+![formats fermés](media/3_3_Format_Fermé-01.svg)
 
 ### Une minute citoyenne
 
@@ -539,6 +555,8 @@ point d'accès au numérique. La question des formats de représentation
 des données entre évidemment dans l'éventail des possibilités de
 contrôler l'économie du numérique.
 
+![restrictions](media/3_4_restrictions-01.svg)
+
 Lorsque vous enregistrez un document dans un certain format, c'est un
 peu comme si vous rangiez un objet dans une boite. Si le format est
 propriétaire et protégé, alors cela signifie que lorsque vous voulez
@@ -552,7 +570,11 @@ cet accès a de nombreuses conséquences. L'interopérabilité est rendue
 plus difficile : un document dans un format propriétaire, ne peut être
 librement utilisé dans un autre logiciel. La liberté des utilisateurs
 est également atteinte : en échangeant avec un format propriétaire,
-vous forcez vos interlocuteurs à utiliser un logiciel précis. Enfin,
+vous forcez vos interlocuteurs à utiliser un logiciel précis. 
+
+![formats ouverts et fermés](media/3_4_format-01.svg)
+
+Enfin,
 lorsqu'il s'agit de données sensibles ou devant être archivées pour
 une très longue durée, l'usage de formats propriétaires repose sur des
 logiciels qui peuvent disparaître ou changer leur règles
