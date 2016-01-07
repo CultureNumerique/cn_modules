@@ -5,7 +5,7 @@ AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Représenter c'est choisir...
-
+[Representer c'est choisir](https://vimeo.com/universitelille/review/149277667/c39e0aac88){: .lien_video }
 Pourquoi représenter l'information sous format numérique ? En premier
 lieu, c'est un changement de support. Par exemple pour un roman, il
 faut passer d'un support papier à un support numérique compréhensible
@@ -123,6 +123,7 @@ Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous 
 
 
 # Analyse d'un document : plusieurs vues complémentaires
+[Des vues complémentaires](https://vimeo.com/universitelille/review/149277666/6b7542f289){: .lien_video }
 
 ### Introduction
 Dans cette section, nous analysons ce qu'est un document textuel pour
@@ -284,14 +285,14 @@ Parmi les fonctionnalités suivantes, lesquelles sont possibles ?
 - Rendre une capture de cette fenêtre de navigateur.
 - Réorganiser la structure : avec le document, déplacez la partie 4.2 en la plaçant juste après la partie 2.2. Pour cela, n'utilisez pas de copier coller mais uniquement les fonctionnalités offertes par l'usage du *navigateur* (touche `F5`). Rendez une capture d'écran de la structure obtenue visible dans le *navigateur*.
 - Mettez à jour la **table des matières** qui se trouve en début de doument : `clic-droit` dans la partie grisée de la table des matières et sélectionner `Actualiser l'index`.
-{####Voila une première approche de l'utilisation des styles dans un traitement de texte qui permet d'avoir un document structuré. La manipulation que vous venez de faire (déplacement d'une section) illustre l'organisation arborescente du document. Le déplacement d'un noeud déplace en fait toutes les sous-parties de ce noeud. Par ailleurs, la définition de "niveaux de titre" pour certains noeuds de la structure permet la création automatique (et ici la mise à jour automatique) de la table des matières. Cela ne représente qu'un petite partie des possibilités qu'offre une organisation structurée d'un document texte.}
+{####Voila une première approche de l'utilisation des styles dans un traitement de texte qui permet d'avoir un document structuré. La manipulation que vous venez de faire (déplacement d'une section) illustre l'organisation arborescente du document. Le déplacement d'un noeud déplace en fait toutes les sous-parties de ce noeud. Par ailleurs, la définition de "niveaux de titre" pour certains noeuds de la structure permet la création automatique (et ici la mise à jour automatique) de la table des matières. Cela ne représente qu'une petite partie des possibilités qu'offre une organisation structurée d'un document texte.}
 
 ```
 
 ```activité-avancée
 ::Mise en forme et structure::
 [markdown]
-Téléchargez les deux fichiers suivants : [representation](media/representation1.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
+Téléchargez les deux fichiers suivants : [representation1](media/representation1.odt) et [representation2](media/representation2.odt). Ouvrez et parcourez ces deux fichiers. Sont-ils identiques ? Qu'est-ce qui les différencie ? Illustrez votre propos en citant des opérations qui seraient plus facilement réalisables avec l'un plutôt qu'avec l'autre et pourquoi.
 {####Les documents semblent identiques, mais les éléments de structure ne sont pas désignés dans le second. Vous ne pouvez pas réaliser de traitements comme : la réorganisation des sections, la génération des tables de matières, etc.
 Par ailleurs, si vous observez bien, plusieurs défauts majeurs apparaissent dans representation2.odt : certains titres se retrouvent isolés en bas de page (p3 et p5), le dernier titre en bleu (page 4) est d'une taille légèrement inférieure aux autre titres en bleu. Ces petites erreurs sont courantes lorsqu'on tente de faire la mise en forme "à la main". Aucune de ces erreurs ne peut se produire dans représentation1.odt car les styles des paragraphes prennent en charge entre autre : les veuves et les orphelines (au moins 2 lignes en bas de page ou en haut de page), les titres sont toujours sur la même page que le paragraphe suivant, ce qui évite des titres en bas de page, et les taille, couleur, police, ... choisis sont sélectionnés une seule fois au moment de la définition du style, ce qui signifie qu'AUCUNE différence de forme ne peut intervenir entre 2 paragraphes associés à un même style. La mise en forme de documents longs est donc grandement facilitée par l'utilisation de styles de paragraphe.
 En résumé : les styles permettent de STRUCTURER le document (génération automatique d'une table des matières, vision en mode plan et facilité de réorganisation), ils sont donc essentiels pour la vue Structurée du document, mais ils sont aussi précieux pour la vue de présentation en faisant gagner beaucoup de temps et en augmentant considérablement la qualité du document. Nous allons illustrer cela dans la suite des activités.}
@@ -309,7 +310,7 @@ Le principe repose sur le fait que les 2 documents utilisent les mêmes noms de 
 - `Titre 2`, pour les titres de deuxième niveau
 - `corps de texte`, pour tous les paragraphes standards
 Il s'agit donc de demander à `LibreOffice` d'aller chercher les paramètres de présentation de ces différents styles tels qu'ils sont définis dans le document `representation1.odt`. Cela s'effectue en quelques clics ...
-À vous de faire cette manipulation très simple. Cherchez dans l'interface de `LibreOffice` comment effectuer cette opération. Si vous rencontrez des difficultés, n'hésitez pas à aller dans les salles d'accès libre où la dernière version de `LibreOffice` est installée et où des monitieurs peuvent peuvent vous aider. Pensez aussi à utiliser le forum du cours pour poster vos questions ou vos remarques et vous aider mutuellement.{}
+À vous de faire cette manipulation très simple. Cherchez dans l'interface de `LibreOffice` comment effectuer cette opération. Si vous rencontrez des difficultés, n'hésitez pas à aller dans les salles d'accès libre où la dernière version de `LibreOffice` est installée et où des monitieurs peuvent vous aider. Pensez aussi à utiliser le forum du cours pour poster vos questions ou vos remarques et vous aider mutuellement.{}
 
 ::Génerer une table des matières::
 Comme vous avez pu le constater, `representation1.odt` est structuré et il possède une mise en forme des styles, mais la table des matières n'a pas été créée. Vous allez donc la créer maintenant. Les styles des titres ont été paramétrés pour correspondre à des niveaux différents dans la structure arboresscente du document. La génération de la table des matières peut donc se faire en 3 clics ...
@@ -317,7 +318,7 @@ Cherchez dans les menus de `LibreOffice` comment insérer une table des matière
 Faites une capture d'écran montrant la table des matières que vous avez créée.  {}
 
 ::Numéroter les paragraphes::
-Nous allons pour finir utiliser une fonctionnalité qui utilise encore la structure arborescente (avec des niveaux imbriqués) du document. Il s'agit de la numérotation automatique des paragraphes. Chacun des titres (Titre 1 ou Titre 2) correspondant à un niveau, le traitement de texte peut facilement les retrouver et calculer les numéros. Ainsi, à chaque nouvele partie (Titre 1), la numérotation des sous-parties (Titre 2) recommence à 1.
+Nous allons pour finir utiliser une fonctionnalité qui utilise encore la structure arborescente (avec des niveaux imbriqués) du document. Il s'agit de la numérotation automatique des paragraphes. Chacun des titres (Titre 1 ou Titre 2) correspondant à un niveau, le traitement de texte peut facilement les retrouver et calculer les numéros. Ainsi, à chaque nouvelle partie (Titre 1), la numérotation des sous-parties (Titre 2) recommence à 1.
 Chercher dans `Libreoffice` comment numéroter automatiquement les parties en utilsant la notation suivante :
 A / REPRÉSENTER C’EST CHOISIR…
 B / ANALYSE D'UN DOCUMENT,
@@ -537,24 +538,24 @@ Dans le nom de fichier `mondocument.txt`, quelle est l'extension ?
 
 ::Avec un éditeur de textes, je peux ouvrir un fichier HTML::{T}
 
-
 ::Un contenu avec une structure a une seule présentation possible::
 {F}
 
 ::Conversions::
 [markdown]
 Est-il toujours possible de convertir un document d'un format vers un autre format ?
-{####Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+{F #Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
+
 ::Un format ouvert facilite l'interopérabilité::{T}
 ```
 
 ```activité
 ::Les fichiers d'extension Doc::
 [markdown] Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29).
-{~ Est-ce que les fichiers avec l'extension doc désignent  une chose unique ? #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
-~ Est-ce que ce format est ouvert ? #Non, c'est un format propriétaire fermé.
-= Est-ce que ce format est toujours développé ?#Oui
-= Est-ce qu'il a été étendu ? Si oui vers quel format ? #Oui, docx ou Office Open XML
+{~%0% Les fichiers avec l'extension doc désignent  une chose unique. #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
+~%0% Cce format est ouvert. #Non, c'est un format propriétaire fermé.
+~%50% Ce format est toujours développé ?#Oui
+~%50% Ce format a été étendu. #Oui, docx ou Office Open XML
 }
 
 ::Les documents au format PDF::
