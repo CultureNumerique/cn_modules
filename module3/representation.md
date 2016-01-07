@@ -5,6 +5,7 @@ AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Représenter c'est choisir...
+
 [Representer c'est choisir](https://vimeo.com/universitelille/review/149277667/c39e0aac88){: .lien_video }
 
 Pourquoi représenter l'information sous format numérique ? En premier
@@ -432,10 +433,7 @@ Cette distinction entre le quoi et le comment est, en informatique
 comme dans beaucoup d'autres sciences, une approche essentielle des
 problèmes.
 
-
-
 ### Différents formats pour différents usages
-
 Les choix effectués pour répondre à la question **comment représenter
 des documents textuels** aboutissent à des **formats** de
 représentation. Vous connaissez sans doute certains de ces formats
@@ -447,7 +445,7 @@ précisés avec les abréviations suivantes :
 - le format `pdf` pour l'impression,
 - le format `html` pour les hypertextes.
 
-![différents formats](media/3_1_illustrations-01.svg)
+![différents formats](media/3_1_illustrations-01.png)
 
 Vous noterez, que pour de mêmes usages, comme la composition de
 documents textuels, il existe des formats différents comme `doc` et
@@ -477,7 +475,7 @@ format `doc` par exemple. Cette extension peut être vue comme une
 métadonnée qui dit : "le document dans ce fichier respecte le format
 de représentation de documents utilisé par le logiciel `Word`".
 
-![doc et word](media/3_2_format-01.svg)
+![doc et word](media/3_2_format-01.png)
 
 Si nous avons un document textuel au format `odt`, il ne suffit pas de
 le renommer avec l'extension `doc` pour le rendre lisible par Word. Il
@@ -490,7 +488,7 @@ raisons :
    informations lors de cette conversion.
 4. Ensuite, les choix ne sont pas toujours rendus publics. On ne peut donc pas toujours écrire de programme de conversion.
 
-![renommage](media/3_2_renommer-01.svg)
+![renommage](media/3_2_renommer-01.png)
 
 Par ailleurs, un document textuel dans un format peut être parfois
 manipulé avec des logiciels différents pour des besoins différents.
@@ -500,7 +498,7 @@ texte pour le modifier. Comme vous l'avez vu dans le cours du Web, il
 sera également manipulé par les robots des moteurs de recherche qui
 contribuent à indexer le web.
 
-![html](media/3_2_HTML-01.svg)
+![html](media/3_2_HTML-01.png)
 
 ### Ouvert ou propriétaire
 
@@ -511,8 +509,10 @@ possibilité de le rendre disponible pour tous librement ou non, de le
 cacher ou de le protéger par des brevets.
 
 #### Formats ouverts
-On parle de **format ouvert** si le format est diffusé publiquement. 
-![format ouvert exemple](media/3_3_Format_Ouvert_exemple-01.svg)
+On parle de **format ouvert** si le format est diffusé publiquement.
+
+![format ouvert exemple](media/3_3_Format_Ouvert_exemple-01.png)
+
 Par
 exemple, vous pouvez accéder librement sur le Web à la définition du
 format `HTML5`.  De plus, aucune entrave légale n'accompagne
@@ -522,12 +522,13 @@ peuvent librement lire ou écrire les informations représentées dans ce
 format. On facilite ainsi l'interopérabilité. Par exemple, le format
 `html` est utilisé par de nombreux logiciels et même au delà du Web.
 
-![formats ouverts](media/3_3_Format_Ouvert-01.svg)
+![formats ouverts](media/3_3_Format_Ouvert-01.png)
+
 #### Formats fermés
 On parle de **format fermé** ou propriétaire lorsque des restrictions
 d'accès et/ou d'utilisation s'appliquent.
 
-![formats fermés exemple](media/3_3_Format_Fermé_exemple-01.svg)
+![formats fermés exemple](media/3_3_Format_Fermé_exemple-01.png)
 
  Être propriétaire d'un format très répandu donne une puissance économique très importante dans notre monde numérique et une position dominante. En effet, la
 conversion étant impossible, une mise en concurrence est rendue très
@@ -536,7 +537,7 @@ logiciel associé. Si `HTML` avait été un format fermé, sans doute le
 web serait-il très différent de celui d'aujourd'hui ou n'existerait
 peut-être même pas.
 
-![formats fermés](media/3_3_Format_Fermé-01.svg)
+![formats fermés](media/3_3_Format_Fermé-01.png)
 
 ### Une minute citoyenne
 
@@ -555,7 +556,7 @@ point d'accès au numérique. La question des formats de représentation
 des données entre évidemment dans l'éventail des possibilités de
 contrôler l'économie du numérique.
 
-![restrictions](media/3_4_restrictions-01.svg)
+![restrictions](media/3_4_restrictions-01.png)
 
 Lorsque vous enregistrez un document dans un certain format, c'est un
 peu comme si vous rangiez un objet dans une boite. Si le format est
@@ -572,7 +573,7 @@ librement utilisé dans un autre logiciel. La liberté des utilisateurs
 est également atteinte : en échangeant avec un format propriétaire,
 vous forcez vos interlocuteurs à utiliser un logiciel précis. 
 
-![formats ouverts et fermés](media/3_4_format-01.svg)
+![formats ouverts et fermés](media/3_4_format-01.png)
 
 Enfin,
 lorsqu'il s'agit de données sensibles ou devant être archivées pour
@@ -994,6 +995,8 @@ Le standard Unicode associe à tout caractère pris en charge par Unicode un nom
 
 ```activité-avancée
 ::Exemple de html::
+[markdown]
+**HTML**
 Le HTML est un langage très simple à apprendre. Vous pouvez réaliser quelques essais mineurs avec cet exercice. Respectez bien l'imbrication des balises pour que l'ensemble forme bien un bon arbre. Pour aller plus loin, suivez les cours d'option informatique métiers du web ou lisez les nombreux tutoriels sur internet.
 - Ouvrez le fichier [html.html](media/html.html).
 - Essayez d'ajouter un paragraphe, un titre de niveau 2.
@@ -1002,6 +1005,7 @@ Le HTML est un langage très simple à apprendre. Vous pouvez réaliser quelques
 
 ::Markdown::
 [markdown]
+**Markdown**
 Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats.  Ouvrez le fichier [markdown.html](media/markdown.html).
 En observant cet exemple, trouvez ` comment en  `Markdown` :
 - mettre des mots en italique ?
@@ -1014,6 +1018,8 @@ En observant cet exemple, trouvez ` comment en  `Markdown` :
 {#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
 
 ::LaTeX::
+[markdown]
+**LaTeX**
 Enfin, le format de représentation numérique de documents scientifiques, qui permet de générer de textes de très grande qualité typographique est LaTeX. (Voyez par exemple le site [arXiv](http://www.arxiv.org) et les [formats de soumission d'articles autorisés](https://arxiv.org/help/submit#text)). Ici encore, c'est un langage structuré et on peut le comprendre de cette façon. À titre d'exemple, regardez le [document suivant](media/exempleLaTeX.tex) avec un éditeur de textes (bloc-note, textEdit, gedit, selon votre ordinateur) ainsi que son [rendu en PDF](media/exempleLaTeX.pdf). Quelles commandes permettent de structurer les parties de document ? 
 {####Ce sont les instructions \section et \subsection. Si vous êtes curieux, vous pouvez essayer LaTeX de manière collaborative sur [ShareLaTeX](https://fr.sharelatex.com/) ou sur [Overleaf](https://www.overleaf.com)}
 ```
@@ -1023,6 +1029,7 @@ Enfin, le format de représentation numérique de documents scientifiques, qui p
 ```activité-avancée
 ::Règles de typographie::
 [markdown]
+**Règles de typographie**
 Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
 ```
 
@@ -1247,6 +1254,8 @@ sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 
 ```compréhension
 ::Quelle représentation ?::
+[markdown]
+**Vectorielle ou matricielle**
 Je veux représenter une carte routière. Je dispose des relevés des positions des routes, des bâtiments, des délimitations des surfaces des villes et villages. Quelle représentation vous semble la plus adaptée?
 {
 =Une image vectorielle#Oui, on décrit les routes et les bâtiments, des villes  par des figures géométriques comme des polygones, des lignes, etc... 
@@ -1254,51 +1263,79 @@ Je veux représenter une carte routière. Je dispose des relevés des positions 
 }
 
 ::Une capture d'écran::
+[markdown]
+**Une capture d'écran**
 Je réalise une capture d'écran. À votre avis l'image générée est plutôt :
 {
-=une image matricielle#Oui, l'écran est déjà une matrice de points, et on veut une représentation fidèle de cette image, non abstraite. 
-~une image vectorielle#Non, imaginez que l'écran affiche une photographie, on ne peut pas trouver des figures géométriques partout dans cette image.
+=une image matricielle. #Oui, l'écran est déjà une matrice de points, et on veut une représentation fidèle de cette image, non abstraite. 
+~une image vectorielle #Non, imaginez que l'écran affiche une photographie, on ne peut pas trouver des figures géométriques partout dans cette image.
 }
 ```
 
 
 ```activité
 ::Échantillonner la musique::
-[markdown]Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+[markdown]
+**Échantillonner la musique**
+Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
 {#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 
 ::Échantillonner les images::
-[markdown]Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
+[markdown]
+**Échantillonner les images**
+Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer les image sur une grille de 4000 par 3000. Dans les notices, il est indiqué alors combien de mégapixels (millions de pixels) ?
 {####12 Mégapixels. Voyez le tableau https://fr.wikipedia.org/wiki/Capteur_photographique#Capteurs_utilis.C3.A9s_dans_les_appareils_photographiques_num.C3.A9riques}
 
 ::La qualité de l'image::
-[markdown]La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
+[markdown]
+**Qualité et résolution**
+La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. 
+*Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
 {####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
 ```
 
 ```activité
-::Les valeurs de R de G ou de B::
-[markdown]Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
-{####256, Voir https://fr.wikipedia.org/wiki/Octet. Avec un bit, deux valeurs (0 et 1) peuvent être codées ; avec 2 bits, 4 valeurs (00,01,10,11) ; avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),... avec 8 bits, on obtient 256 valeurs possibles.}
+::Les valeurs de Rouge de Vert ou de Bleu::
+[markdown]
+**Les valeurs de Rouge de Vert ou de Bleu**
+Pour chaque pixel, échantillon spacial de l'image, une valeur de couleur est mémorisée. La qualité de l'image dépend à la fois du nombre et la taille des pixels, mais également de la précision de cette mesure de couleur. Très souvent, chaque proportion de rouge, vert et bleu est stockée chacune sur un octet. Mais combien de valeurs possibles peut-on représenter avec un octet ?
+{####256, Voir https://fr.wikipedia.org/wiki/Octet. 
+- Avec un bit, deux valeurs (0 et 1) peuvent être codées ; 
+- avec 2 bits, 4 valeurs (00,01,10,11) ; 
+- avec 3 bits, 8 valeurs (000,001,010,011, 100,101,110,111),
+- ... 
+- avec 8 bits, on obtient 256 valeurs possibles.}
 
-::Les valeurs RGB::
-[markdown]Avec 1 octet par couleur, combien d'octets et combien de couleurs possibles peuvent être codées ?
+::Les valeurs RVB::
+[markdown]
+**Les valeurs RVB**
+Avec 1 octet par couleur primaire : 
+- combien d'octets sont nécessaires pour coder une couleur dans le système RVB (Rouge Vert Bleu) 
+- Combien de couleurs différentes peuvent être codées ?
 {####1 octet par couleur, 3 couleurs, donc 3 octets, donc 256*256*256=16 777 216 valeurs possibles. Soit environ 16 millions.}
 ```
 
 ```activité
 ::Pierre Bézier::
-- Qui est **Pierre Bézier** ?
+[markdown]
+- Qui est *Pierre Bézier* ?
+- Qu'a-t-il inventé ?
 {}
 
 ::Courbe de Bézier::
 [markdown]
-Il est possible de définir des courbes avec peu d'informations. Par exemple, une courbe de Bézier cubique est définie par la donnée de 4 points A, B, C et D. A est le point de départ, AB donne la direction initiale, D est le point d'arrivée et CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
+Il est possible de définir des courbes avec peu d'informations. Par exemple, une *courbe de Bézier cubique* est définie par la donnée de 4 points A, B, C et D. 
+- A est le point de départ, 
+- AB donne la direction initiale, 
+- D est le point d'arrivée et 
+- CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
 ```
 
 ```activité-avancée
 ::métadonnées de photos::
-[markdown] La plupart des appareils photos numériques ajoutent des métadonnées à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de métadonnées associées aux photos.
+[markdown]
+**Métadonnées de photos**
+La plupart des appareils photos numériques ajoutent des métadonnées à chaque prise de vue.  Des standards comme EXIF ou IPTC existent pour les représenter. Recherchez des exemples de métadonnées associées aux photos.
 {####Elles
 peuvent décrire les caractéristiques techniques de la prise de vue
 (valeur de la focale, vitesse d'obturation, ouverture du
@@ -1311,11 +1348,14 @@ Mais aussi les personnages ou les étiquettes associées à la photo ...}
 
 ```activité-avancée
 ::manipulations images SVG::
+[markdown]
+**Manipulations d'images SVG**
 Vous pouvez vous initier à la définition d'images vectorielles avec le standard `SVG` avec [cette page](media/svg.html). Essayez donc de changer l'épaisseur de la ligne rouge, la position du rectangle bleu, le rayon du cercle jaune. Et si vous  êtes forts ajoutez une nouvelle ligne verte horizontale!
 
 ::Les images CMJN::
 [markdown]
+**Les images CMJN**
 Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit du modèle `CMJN`. Le principe est similaire au modèle RVB, il s'agit de décrire une couleur par combinaison de plusieurs couleurs primaires. Mais alors que le RVB
 correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
-{#### Cyan Magenta Jaune et Noir}
+{#### Cyan Magenta Jaune et Noir, en anglais : CMYB pour Cyan, Magenta, Yellow et blacK}
 ```
