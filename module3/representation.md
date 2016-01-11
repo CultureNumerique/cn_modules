@@ -897,10 +897,10 @@ Quel est le **point de codage Unicode** du *point d'exclamation* (!) et son nom 
 [markdown]
 **Caractère informatique, caractère et glyphe**
 En informatique le caractère est un peu différent du caractère en typographie...
-{~%33% Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture. # oui
-~%33% Le caractère informatique peut être invisible. #oui
-~%34% Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran. #oui
-~%-100% Le caractère informatique est une émoticône qui permet de représenter un sentiment. #non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
+{~%30%Le caractère informatique est une notion abstraite pour désigner un symbole d'écriture. # oui
+~%30%Le caractère informatique peut être invisible. #oui
+~%30%Le caractère typographique ou glyphe est le dessin imprimé ou reproduit à l'écran. #oui
+~%-100%Le caractère informatique est une émoticône qui permet de représenter un sentiment. #non, même si les émoticônes (emoji) font partie des caractères unicode, ils ne se réduisent pas à cela.
 }
 
 ::Caractères sans glyphe::
