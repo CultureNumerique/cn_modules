@@ -18,6 +18,18 @@ from yattag import Doc
 
 import model
 
+
+######
+#
+#   reférences : 
+#       - http://www.imsglobal.org/cc/ccv1p2/imscc_profilev1p2-Implementation.html
+#       - http://www.imsglobal.org/question/qtiv1p2/imsqti_asi_bindv1p2.html
+#
+#############
+
+
+
+
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
@@ -92,6 +104,7 @@ def set_qti_metadata(max_attempts):
 def create_ims_test(questions, test_id, test_title):
     """
     Supported types : ESSAY, MULTICHOICE, MULTIANSWER, TRUEFALSE, DESCRIPTION 
+    
     """
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
@@ -119,6 +132,7 @@ def create_ims_test(questions, test_id, test_title):
                                 with tag('fieldlabel'):
                                     text("cc_profile")
                                 with tag('fieldentry'):
+                                    #print ("question = %s \ntype ? %s \n" % (question.text, question.type ))
                                     try:
                                         text(CC_PROFILES[question.type])
                                     except:
@@ -140,17 +154,21 @@ def create_ims_test(questions, test_id, test_title):
                             with tag('response_str', rcardinality='Single', ident='response_'+str(question.id)):
                                 doc.stag('render_fib', rows=5, prompt='Box', fibtype="String")
                         elif question.type in (('MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE')):
+                            if question.type == 'MULTIANSWER':
+                                rcardinality = 'Multiple'
+                            else:
+                                rcardinality = 'Single'
                             # rcardinality optional, but a priori 'Single' form MChoice, 'Multiple' for Manswer; 
-                            with tag('response_lid', ident='response_'+str(question.id)):
+                            with tag('response_lid', rcardinality=rcardinality, ident='response_'+str(question.id)):
                                 with tag('render_choice', shuffle='No'):
-                                    if question.type in (('TRUEFALSE')):
-                                        question.answers = [{'answer_text':'Vrai'}, {'answer_text':'Faux'}]
+                                    #if question.type in (('TRUEFALSE')):
+                                    #    question.answers = [{'answer_text':'Vrai'}, {'answer_text':'Faux'}]
                                     for id_a, answer in enumerate(question.answers):
                                         with tag('response_label', ident='answer_'+str(id_a)):
                                             with tag('material'):
                                                 with tag('mattext', texttype="text/html"):
                                                     text(answer['answer_text'])
-                        else:
+                        else: # FIXME add support for NUMERIC, MATCHING, etc
                             pass
                     # Response Processing
                     with tag('resprocessing'):
@@ -160,20 +178,21 @@ def create_ims_test(questions, test_id, test_title):
                         # respconditions pour décrire quelle est la bonne réponse, les interactions, etc
                         ## pour afficher le ne pourrait-elle pas feedback general
                         if question.global_feedback != '':
-                            #with tag('respcondition', title='General feedback', continue="Yes"):
-                            with tag('respcondition', title='General feedback'):
+                            with tag('respcondition', title='General feedback', kontinue='Yes'):
+                            #with tag('respcondition', title='General feedback'):
                                 with tag('conditionvar'):
                                     doc.stag('other')
                                 doc.stag('displayfeedback', feedbacktype="Response", linkrefid='general_fb')
                         ## lister les autres interactions/conditions
-                        if question.type in (('MULTICHOICE', 'TRUEFALSE')):
+                        if question.type in (('MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE')):
                             for id_a, answer in enumerate(question.answers):
+                                score = 0
                                 if answer['is_right']:
                                     title = 'Correct'
                                     score = 100
                                 else:
                                     title = ''
-                                    score = 0
+                                    score = answer['credit']
                                 with tag('respcondition', title=title):
                                     with tag('conditionvar'):
                                         with tag('varequal', respident='response_'+str(question.id)): # respoident is id of response_lid element
@@ -181,7 +200,56 @@ def create_ims_test(questions, test_id, test_title):
                                     with tag('setvar', varname='SCORE', action='Set'):
                                         text(score)
                                     doc.stag('displayfeedback', feedbacktype='Response', linkrefid='feedb_'+str(id_a))
-                                    
+                        else:
+                            pass
+                                
+                            
+                            """
+                            GIFT source:
+                            ::Exemple de mise en forme::[html]<p>Observez la mise en forme du titre principal dans la deuxième version et indiquez les caractéristiques d'affichage qui ont été choisies dans cette feuille de styles (ce qui change par rapport à la première version).</p>{
+                            	~%25%la typo (la police de caractères)
+                            	~l'ordre des mots a été changé
+                            	~%25%la couleur des caractères
+                            	~%25%l'alignement du paragraphe
+                            	~%25%les caractères ont été transformés en majuscule
+                            	~l'orthographe a été modifié
+                            	####<p>Une feuille de styles ne peut pas changer l'ordre des mots ou l'orthographe, cela reviendrait à changer le contenu, seules les caractéristiques graphiques sont possibles, ici la police, la couleur, l'alignement et la 'casse' des caractères (ils sont affichés en majuscule).</p> 
+                            }
+                            
+                            
+                            
+                            <resprocessing>
+                            # condition spéciale qui calcule le score max
+                              <respcondition title="Correct" continue="No">
+                                <conditionvar>
+                                  <and>
+                                    <not>
+                                      <varequal respident="I_75514CB2" case="Yes">I_6A2938F2</varequal>
+                                    </not>
+                                    <not>
+                                      <varequal respident="I_75514CB2" case="Yes">I_B939A15D</varequal>
+                                    </not>
+                                    <varequal respident="I_75514CB2" case="Yes">I_E3B8B19D</varequal>
+                                    <varequal respident="I_75514CB2" case="Yes">I_EAA1CB96</varequal>
+                                    <varequal respident="I_75514CB2" case="Yes">I_C2FE8C74</varequal>
+                                    <varequal respident="I_75514CB2" case="Yes">I_C40C3BDE</varequal>
+                                  </and>
+                                </conditionvar>
+                                <setvar varname="SCORE" action="Set">100</setvar>
+                                <displayfeedback feedbacktype="Response" linkrefid="correct_fb"/>
+                              </respcondition>
+                              
+                              # condition par défaut qui envoie vers general_fb pour chaque réponse:
+                              <respcondition continue="No">
+                                <conditionvar>
+                                  <varequal respident="I_75514CB2" case="Yes">I_E3B8B19D_fb</varequal>
+                                </conditionvar>
+                                <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+                              </respcondition>
+                              # .... (x6, pour chaque)
+                              
+                            </resprocessing>
+                            """   
                     # liste les feedbacks 
                     ## feedback general
                     if question.global_feedback != '':
@@ -199,7 +267,9 @@ def create_ims_test(questions, test_id, test_title):
                                         text(answer['feedback'])
                         
     doc.asis('</questestinterop>\n')
-    return indent(doc.getvalue())
+    doc_value = indent(doc.getvalue())
+    doc_value = doc_value.replace('kontinue', 'continue')
+    return doc_value
 
 def create_empty_ims_test(id, num, title, max_attempts):
     """

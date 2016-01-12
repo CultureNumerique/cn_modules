@@ -114,9 +114,9 @@ Donnez des exemples de critères qui peuvent gouverner le choix d'une représent
 **Qui choisit ?**
 Les choix de représentations sont faits par
 {
-~%0% Les informaticiens #non pas seuls car intervient aussi l'utilisation métier des objets représentés
-~%0% Les experts métier #non pas seuls car il faut des spécialistes des données numériques et des algorithmes
-~%100%Les deux #oui et souvent aussi des chercheurs, des entreprises, ...
+~Les informaticiens #non pas seuls car intervient aussi l'utilisation métier des objets représentés
+~Les experts métier #non pas seuls car il faut des spécialistes des données numériques et des algorithmes
+=Les deux #oui et souvent aussi des chercheurs, des entreprises, ...
 }
 ```
 

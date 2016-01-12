@@ -242,8 +242,8 @@ class AnyActivity(Subsection):
         else:
             max_attempts = 'unlimited'
         # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
-        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title, max_attempts)
-        #xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
+        #xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title, max_attempts)
+        xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
         filename = self.getFilename()
         xml_filename = filename.replace('html', 'xml')
         #   write xml file at same location

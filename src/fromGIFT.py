@@ -84,18 +84,19 @@ class GiftQuestion():
                 new_src = new_src.replace(m1.group('qtext'), qtext)
             if m1.group('format'):    
                 new_src = new_src.replace(m1.group('format'), '[html]')
-    
-        # B / same for global feedback if any
-        m2 = re.search('\{####(?P<format>\[[^\]]*\]){0,1}\s*(?P<gf>[^\}]*)', new_src, flags=re.M)
+        # B / same for global feedback if any)
+        p2 = re.compile('\{####(?P<format>\[[^\]]*\]){0,1}\s*(?P<gf>[^\}]*)', flags=re.M)
+        m2 = p2.search(self.gift_src)
         if m2:
             if m2.group('format'):
                 new_src = new_src.replace(m2.group('format'), '[html]')
             if m2.group('gf'):
                 gf = markdown.markdown(m2.group('gf'), MARKDOWN_EXT)
-                new_src = new_src.replace(m2.group('gf'), gf)
-        
+                pos = m2.start() # replace only in the relevant part of the string and not the entire string
+                new_src = new_src[:pos]+new_src[pos:].replace(m2.group('gf'), gf)
+    
+    
         # C FIXME : should also check for per-answer feedbacks
-        
         # convert self src
         self.gift_src = new_src
         return new_src
@@ -192,6 +193,12 @@ class GiftQuestion():
                 self.feedback_for_right = m2.group('right_fb')
             if q_answers.startswith(('F','FALSE')):
                 self.question_is_true = False # default is True
+                new_answers = [{'answer_text' : 'Vrai', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}, 
+                    {'answer_text' : 'Faux', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}]
+            else:
+                new_answers = [{'answer_text' : 'Vrai', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}, 
+                    {'answer_text' : 'Faux', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}]
+            self.answers = new_answers
         ## NUMERIC questions
         elif q_answers.startswith('#'):
             self.type = 'NUMERIC'
@@ -203,7 +210,7 @@ class GiftQuestion():
         false_answer_count = 0
 
         for answer_raw in re.findall('([~=][^~=]*)', q_answers):
-            new_answer = {}
+            new_answer = {'credit':0,'answer_text':'','feedback':'','is_right':True}
             # MULTIANSWERS <=> right_answer_count =  AND false_answer_count > 0
             if answer_raw.startswith('='):
                 new_answer['is_right'] = True
@@ -216,16 +223,17 @@ class GiftQuestion():
                 # FIXME : MATCHING questions have answers like "=subquestion1 -> subanswer1"
                 # FIXME : NUMERIC with several possible values indicate ranges like "X:range"
                 m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
-                new_answer['credit'] = m.group('credit')
+                if m.group('credit'):
+                    new_answer['credit'] = m.group('credit').strip('%')
                 new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
                 new_answer['feedback'] = m.group('feedback').lstrip('#')
-                self.answers.append(new_answer)
+            self.answers.append(new_answer)
 
         if right_answer_count == 0 and false_answer_count > 0:
             self.type = 'MULTIANSWER'
         elif false_answer_count > 0:
             self.type = 'MULTICHOICE'
-        else: # FIXME we should recognize NUMERIC and MATCHING here
+        elif self.type == '': # FIXME we should recognize NUMERIC and MATCHING here
             self.type = 'ESSAY'
     
     
