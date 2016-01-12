@@ -143,7 +143,9 @@ def writeHtml(module, outModuleDir,doc):
         try :
             shutil.copytree(mediaDir, os.path.join(outModuleDir,'media'))
         except FileExistsError as exception:
-            logging.warn("%s already exists",mediaDir)
+            logging.warn("%s already exists. Going to delete it",mediaDir)
+            shutil.rmtree(os.path.join(outModuleDir,'media'))
+            shutil.copytree(mediaDir, os.path.join(outModuleDir,'media'))
     
 def generateModuleHtml(data, module, outModuleDir):
     """ parse data from config file 'moduleX.config.json' and generate a moduleX html file """
@@ -240,6 +242,9 @@ if __name__ == "__main__":
 
     # load the html template
     index,e = loadTemplate();
+
+    # add subdirectory to outDir
+    args.destination = os.path.join(args.destination, 'last')
 
     # check destination
     prepareDestination(args.destination)
