@@ -201,12 +201,10 @@ def create_ims_test(questions, test_id, test_title):
     doc.asis('</questestinterop>\n')
     return indent(doc.getvalue())
 
-def create_empty_ims_test(id, num, title, max_attempts=None):
+def create_empty_ims_test(id, num, title, max_attempts):
     """
         create empty imsc test source code
     """
-    if not max_attempts:
-        max_attempts = 1
     src = ""
     src+=HEADER_TEST
     src+='<assessment ident="'+id+'" title="'+num+' '+title+'">\n'

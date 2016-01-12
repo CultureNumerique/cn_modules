@@ -236,8 +236,13 @@ class AnyActivity(Subsection):
         return html_src
     
     def toXMLMoodle(self,outDir):
+        # a) depending on the type, get max number of attempts for the test 
+        if isinstance(self, Comprehension):
+            max_attempts = '1'
+        else:
+            max_attempts = 'unlimited'
         # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
-        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title)
+        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title, max_attempts)
         #xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
         filename = self.getFilename()
         xml_filename = filename.replace('html', 'xml')
