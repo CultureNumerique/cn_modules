@@ -65,4 +65,5 @@ def processModule(module,outDir=None):
     m.toHTMLFiles(outDir)
     m.toXMLMoodle(outDir)
     write_file(m.toGift(), outDir, '', module+'.questions_bank.gift.txt')
+    write_file(m.toVideoList(), outDir, '', module+'.video_iframe_list.txt')
     write_file(m.toJson(), outDir, '',  module+'.config.json')

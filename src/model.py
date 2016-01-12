@@ -182,7 +182,13 @@ class Cours(Subsection):
 
         return (len(videos_findall) > 0)
 
-
+    def videoIframeList(self):
+        video_list = "\n"+self.num+' '+self.title+'\n'
+        for v in self.videos:
+            video_list += '<iframe src='+v['video_link']+' width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n'
+        
+        return video_list
+    
 class AnyActivity(Subsection):
     """ Abstract class for any activity """
     def __init__(self,section,f):
@@ -331,6 +337,13 @@ class Section:
         allGifts = allGifts.replace('media/', BASE_URL+'/'+self.module+'/media/')
         return allGifts
     
+    def toVideoList(self):
+        video_list = ""
+        for sub in self.subsections:
+            if isinstance(sub, Cours) and len(sub.videos) > 0:
+                video_list += sub.videoIframeList()
+        return video_list
+    
 class Module:
     """ Module structure"""
 
@@ -374,7 +387,6 @@ class Module:
     def toXMLMoodle(self, outDir):
         for s in self.sections:
             s.toXMLMoodle(outDir)
-        
             
     def toGift(self):
         """a text resource with all questions with a category / used for import into moodle"""
@@ -384,6 +396,14 @@ class Module:
     
         # write questions bank file
         return questions_bank
+    
+    def toVideoList(self):
+        """ a text resource with all video iframe codes """ 
+        video_list = ""
+        for s in self.sections:
+            video_list += s.toVideoList()+'\n\n'
+            
+        return video_list
 
 ############### main ################
 if __name__ == "__main__":
