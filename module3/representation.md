@@ -124,7 +124,7 @@ Les choix de représentations sont faits par
 ::Une tâche complexe::
 [markdown]
 **Une tâche complexe**
-Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](http://www.w3.org/). Répondez aux questions suivantes :
+Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous rendant sur les pages wikipedia de [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) et du [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium). Répondez aux questions suivantes :
 - Quelle est l'origine de `HTML` ?
 - Qui développe et publie les spécifications `HTML` depuis 1995 ?
 - Quelle est la version la plus récente de `HTML` et son année de parution ?
@@ -242,9 +242,9 @@ efficacement traité par une machine repose sur le contenu, la
 structure et les *métadonnées*.
 
 ```compréhension
-::Vrai ou Faux : vue structurelle::
+::Vrai ou Faux : vue séquentielle::
 [markdown]
-**Vrai ou Faux : vue structurelle**
+**Vrai ou Faux : vue séquentielle**
 Avec la vue séquentielle, on peut remplacer les occurrences d'un mot par un autre mot.
 {T}
 
@@ -316,6 +316,42 @@ Téléchargez le  [document odt](media/representation.odt) sur votre machine. No
 {####Voila une première approche de l'utilisation des styles dans un traitement de texte qui permet d'avoir un document structuré. La manipulation que vous venez de faire (déplacement d'une section) illustre l'organisation arborescente du document. Le déplacement d'un noeud déplace en fait toutes les sous-parties de ce noeud. Par ailleurs, la définition de "niveaux de titre" pour certains noeuds de la structure permet la création automatique (et ici la mise à jour automatique) de la table des matières. Cela ne représente qu'une petite partie des possibilités qu'offre une organisation structurée d'un document texte.}
 
 ```
+```activité
+::La vue qualifiée d'un document texte odt::
+[markdown] 
+**La vue qualifiée d'un document texte odt**
+Ouvrir le document [document odt](representation.odt) dans `LibreOffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
+- le titre,
+- le sujet,
+- les mots clef,
+- la date de création.
+Faites une capture d'écran de la fenêtre où vous avez trouvé ces métadonnées.
+{####Les métadonnées que vous avez trouvées dans cet exercice ont toutes été saisies par une personne. Elles permettent de qualifier le document, de donner des informations sur l'information principale qu'est le contenu. Comme nous l'avons déjà vu avec les éditeurs de texte, les traitements de texte sont aussi capables de**calculer** automatiquement d'autres informations qui dépendent du contenu comme le nombre de mots, de paragraphes ou de signes.}
+
+::Un document peut être réduit à des métadonnées::
+[markdown]
+**Un document peut être réduit à des métadonnées**
+C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des métadonnées regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+- Faites une requête comme, par exemple, `représentation information`
+- Parcourez une ou plusieurs notices des ouvrages en réponse
+- Examinez le contenu de `Sujets` et donnez le rôle de ces métadonnées
+- Indiquez sur quels critères vous pouvez effectuer une recherche.
+{#### les métadonnées dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les métadonnées comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
+```
+
+
+```activité
+::La structure d'une page web::
+[markdown]
+**La structure d'une page web**
+La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
+- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html).
+- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
+- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
+- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ?
+- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ?
+{####html/body/section/ul/li}
+```
 
 ```activité-avancée
 ::Mise en forme et structure::
@@ -367,58 +403,6 @@ etc.
 {}
 
 ```
-
-```activité
-::La vue qualifiée d'un document texte odt::
-[markdown] 
-**La vue qualifiée d'un document texte odt**
-Ouvrir le document [document odt](representation.odt) dans `LibreOffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
-- le titre,
-- le sujet,
-- les mots clef,
-- la date de création.
-Faites une capture d'écran de la fenêtre où vous avez trouvé ces métadonnées.
-{####Les métadonnées que vous avez trouvées dans cet exercice ont toutes été saisies par une personne. Elles permettent de qualifier le document, de donner des informations sur l'information principale qu'est le contenu. Comme nous l'avons déjà vu avec les éditeurs de texte, les traitements de texte sont aussi capables de**calculer** automatiquement d'autres informations qui dépendent du contenu comme le nombre de mots, de paragraphes ou de signes.}
-
-::Un document peut être réduit à des métadonnées::
-[markdown]
-**Un document peut être réduit à des métadonnées**
-C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des métadonnées regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
-- Faites une requête comme, par exemple, `représentation information`
-- Parcourez une ou plusieurs notices des ouvrages en réponse
-- Examinez le contenu de `Sujets` et donnez le rôle de ces métadonnées
-- Indiquez sur quels critères vous pouvez effectuer une recherche.
-{#### les métadonnées dans Sujets sont des concepts ou thèmes associés à l'ouvrage, ils sont produits manuellement par des experts bibliothécaires. Vous pouvez rechercher selon les métadonnées comme les dates, les auteurs, etc. Vous ne pouvez pas faire de recherche plein texte dans l'ensemble du texte d'un livre, sauf éventuellement sur des résumés.}
-```
-
-
-```activité
-::La structure d'une page web::
-[markdown]
-**La structure d'une page web**
-La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
-- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html).
-- Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
-- Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
-- Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ?
-- La liste des balises associées à chacune de ces petites flèches apparaît dans la zone située juste au dessus du code `HTML`. Par exemple, `html>body>section>p`. Elle représente le chemin dans l'arbre associé au document, depuis sa racine jusqu'au texte sélectionné. Sur l'exemple, un paragraphe dans une section dans le corps du document `HTML`. Quel est le chemin pour arriver au texte *Vous pouvez changer la taille...* ?
-{####html/body/section/ul/li}
-```
-
-```activité-avancée
-::Installer un éditeur de textes::
-[markdown] 
-**Installer un éditeur de textes**
-Vous utiliserez et installerez un éditeur de textes. Selon le système d'exploitation de votre ordinateur, nous vous recommandons :
-  - Sous linux : `gedit`  (installé par défaut) ou  [atom](https://atom.io)
-  - Sous Windows : `notepad` (installé par défaut) ou (notepad++)[https://notepad-plus-plus.org/fr/] ou encore [atom](https://atom.io)
-  - Sous Mac : `textEdit` (installé par défaut) ou   [atom](https://atom.io)
-Remarquez que `atom` est un logiciel pour un usage avancé et d'utilisation qui peut se révéler un peu complexe.
-{}
-```
-
-
-
 
 # Documents numériques - formats et normes
 
@@ -603,14 +587,16 @@ Dans le nom de fichier `mondocument.txt`, quelle est l'extension ?
 {####txt}
 
 ::Éditeur de textes et fichier doc::
-Avec un éditeur de textes, je peux ouvrir un fichier doc{F}
+Avec un éditeur de textes, je peux ouvrir un fichier doc
+{F #Non, un fichier doc contient des informations spécifiques au logiciel Word}
 
 ::Éditeur de textes et HTML::
-Avec un éditeur de textes, je peux ouvrir un fichier HTML{T}
+Avec un éditeur de textes, je peux ouvrir un fichier HTML
+{T # Oui car c'est un fichier texte simple décrivant une page Web}
 
 ::Contenu et présentation::
 Un contenu avec une structure a une seule présentation possible
-{F}
+{F # Non, on peut appliquer différentes mises en forme}
 
 ::Conversions de formats::
 [markdown]
@@ -618,7 +604,8 @@ Est-il toujours possible de convertir un document d'un format vers un autre form
 {F #Non, il faut qu'un tel programme de conversion existe et parfois les formats ne sont pas publics et la conversion est alors très difficile ou impossible. }
 
 ::Format ouvert et interopérabilité::
-Un format ouvert facilite l' interopérabilité{T}
+Un format ouvert facilite l' interopérabilité
+{T #Oui car il est diffusé et des logiciels différents peuvent le comprendre}
 ```
 
 ```activité
@@ -939,7 +926,7 @@ Rendez vous sur le [site Unicode](http://www.unicode.org/).
 
 ::Codage des caractères dans les pages Web::
 [markdown]
-Déclaration du codage des caractères dans les pages Web**
+**Déclaration du codage des caractères dans les pages Web**
 Les caractères sont représentés conformément au standard `Unicode` et au codage `UTF-8` pour 80% des pages Web.
 - Ouvrez la [page suivante](media/pageSansDeclaration.html) puis ensuite cette [autre page](media/pageAvecEncodage.html)
 - Que constatez-vous ?
@@ -985,12 +972,7 @@ Le standard Unicode associe à tout caractère pris en charge par Unicode un nom
 - Quels sont les caractères codés sur 1 octet ?
 - Donnez des caractères usuels en écriture française qui ne sont pas codés sur un seul octet
 - Si un octet commence par 0, on peut dire que cet octet code un caractère. Si un octet commence par 110, combien faut-il prendre d'octets ? Avec 1110 ? Avec 11110 ?
-{supérieur à 1 million}
-{Non de 1 à 4 octets}
-{sur 1 octet 01000001}
-{les lettres minuscules, majuscules, ponctuations}
-{les lettres accentuées, le c cédille, le e dans l'o}
-{110 deux octets, 1110 trois octets, 11110 4 octets}
+{#### supérieur à 1 million ; Non de 1 à 4 octets ; sur 1 octet 01000001 ; les lettres minuscules, majuscules, ponctuations ; les lettres accentuées, le c cédille, le e dans l'o ; 110 deux octets, 1110 trois octets, 11110 4 octets}
 ```
 
 ```activité-avancée
@@ -1256,10 +1238,10 @@ sont `BMP`, `GIF`, `TIFF`, `PNG` et `JPEG`.
 ::Quelle représentation ?::
 [markdown]
 **Vectorielle ou matricielle**
-Je veux représenter une carte routière. Je dispose des relevés des positions des routes, des bâtiments, des délimitations des surfaces des villes et villages. Quelle représentation vous semble la plus adaptée?
+Je veux représenter une carte routière. Je dispose des relevés des positions des routes, des bâtiments principaux, des délimitations des surfaces des villes et villages. Quelle représentation vous semble la plus adaptée?
 {
-=Une image vectorielle#Oui, on décrit les routes et les bâtiments, des villes  par des figures géométriques comme des polygones, des lignes, etc... 
-~Une image matricielle#Non, 
+=Une image vectorielle#Oui, on décrit les routes et les bâtiments, des villes  par des figures géométriques comme des polygones, des lignes, etc... En général la représentation est adaptée pour que le rendu soit le plus lisible possible
+~Une image matricielle#Non, serait adaptée pour une image satellite ou une photographie
 }
 
 ::Une capture d'écran::
@@ -1272,13 +1254,7 @@ Je réalise une capture d'écran. À votre avis l'image générée est plutôt :
 }
 ```
 
-
 ```activité
-::Échantillonner la musique::
-[markdown]
-**Échantillonner la musique**
-Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
-{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 
 ::Échantillonner les images::
 [markdown]
@@ -1292,6 +1268,12 @@ Plusieurs  appareils photo sont équipés d'une cellule qui permet de capturer l
 La qualité d'une image imprimée va dépendre du nombre de pixels, mais aussi de la taille de ces pixels. Vous avez sans doute remarqué que la qualité d'un agrandissement photo peut être parfois dégradé par rapport à un original de taille plus réduite. Des unités mesurent cette finesse des images, appelée encore la résolution. Cherchez sur internet les unités utilisées pour indiquer la résolution des images. 
 *Aide* : l'influence anglo-saxonne est bien présente, le pouce (inch) est utilisé.
 {####ppp (ppi) pour point par pouce (point per inch) ou dpi (dot per inch) }
+
+::Échantillonner la musique::
+[markdown]
+**Échantillonner la musique**
+Un CD contient une représentation numérique standardisée de la musique. Dans ce cas,  on prend une mesure de la valeur du son plusieurs milliers de fois par seconde. Les milliers de fois par seconde se disent  *kilo hertz* (Khz). Quelle est la valeur de l'échantillonnage utilisée dans le format des CD audio ?
+{#### 44,1Khz, c'est-à-dire qu'on mesure le son 44 100 fois par seconde.}
 ```
 
 ```activité
@@ -1343,10 +1325,7 @@ diaphragme,...) mais aussi des informations plus personnelles comme
 les coordonnées GPS quand elles sont disponibles, le modèle d'appareil
 utilisé, ainsi que l'heure et la date de la prise de vue.
 Mais aussi les personnages ou les étiquettes associées à la photo ...}
-```
 
-
-```activité-avancée
 ::manipulations images SVG::
 [markdown]
 **Manipulations d'images SVG**
