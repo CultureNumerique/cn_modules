@@ -259,7 +259,7 @@ Entre mon ordinateur et l'ordinateur de mon père qui ont 12 ans d'écart, quell
 8 ans : x16
 10 ans : x32
 12 ans : x64
-En d'autres mots un traitement qui prenait <strong>30 min avec l'ordinateur de mon père s'effectue en 28 s sur le mien !}
+En d'autres mots un traitement qui prenait 30 min avec l'ordinateur de mon père s'effectue en 28 s sur le mien !}
 
 ::Un bug::
 [markdown]**D'où vient le mot "bug" ?**
@@ -587,37 +587,38 @@ l'adresse `IP` de mon ordinateur, ainsi la machine peut me répondre en
 renvoyant le contenu qui m'intéresse. Il ne reste plus alors à mon
 ordinateur qu'à afficher ce contenu.
 
-```Activité
-// question: 165016 name: 1.4.1 Quizz (Q1/3) ::1.4.1 Quizz
-::(Q1/3)::[html]<p>À quoi sert une adresse IP ?</p>{ =<p>À identifier
-les machines connectées de façon unique.</p>#<p>Oui !</p> ~<p>À
-différencier les gros ordinateurs et les plus petits.</p>#<p>Comment
-ça ?</p> ~<p>À envoyer des mails automatiquement.</p>#<p>Pas du
-tout...</p> ####<p>Une adresse IP (Internet Protocol) sert à
-identifier de façon unique les machines connectées.</p> }
+```Comprehension
+::À quoi sert une adresse IP::
+[markdown]**À quoi sert une adresse IP ?**
+{
+=À identifier les machines connectées de façon unique.#Oui !
+~À différencier les gros ordinateurs et les plus petits.#Comment ça ?
+~À envoyer des mails automatiquement.#Pas du tout...
+####Une adresse IP (Internet Protocol) sert à identifier de façon unique les machines connectées.
+}
 
 
-// question: 165027 name: 1.4.1 Quizz (Q2/3)_NEW ::1.4.1 Quizz
-::(Q2/3)::[html]<p>À l'aide de quel équipement réalise-t-on
-l'interconnexion de réseaux ?</p>{ ~<p>Une adresse IP</p>#<p>Vous
-devriez revoir la vidéo !</p> ~<p>Un serveur de noms</p>#<p>Non, il ne
-s'agit d'un serveur de noms.</p> =<p>Un routeur</p>#<p>Exact !</p>
-####<p>C'est à l'aide d'un routeur, encore nommé passerelle qu'on
-réalise l'interconnexion de réseaux.</p> }
+::Équipement d'interconnexion::
+[markdown]**À l'aide de quel équipement réalise-t-on l'interconnexion de réseaux ?**
+{
+~Une adresse IP#Vous devriez revoir la vidéo !
+~Un serveur de noms#Non, il ne s'agit d'un serveur de noms.
+=Un routeur#Exact !
+####C'est à l'aide d'un routeur, ou une passerelle qu'on réalise l'interconnexion de réseaux.
+}
 
 
-// question: 165018 name: 1.4.1 Quizz (Q3/3) ::1.4.1 Quizz
-::(Q3/3)::[html]<p>Qu'est-ce qu'un serveur de noms ?</p>{ ~<p>Un site
-web qui aide à choisir un prénom pour ses enfants.</p>#<p>C'est une
-blague !</p> ~<p>Un logiciel (pirate) qui permet de trouver les mots
-de passe d'autres utilisateurs.</p>#<p>Pas vraiment...</p> =<p>Une
-machine qui contient une table d'équivalence entre des noms de
-machines et leur adresse IP.</p>#<p>Oui, c'est exact !</p> ####<p>Un
-serveur de noms est une machine qui contient une table d'équivalence
-entre des noms de machines et leur adresse IP.</p> }
+::Qu'est-ce qu'un serveur de noms ?::
+[markdown]**Qu'est-ce qu'un serveur de noms ?**
+{
+~Un site web qui aide à choisir un prénom pour ses enfants.#C'est une blague !
+~Un logiciel (pirate) qui permet de trouver les mots de passe d'autres utilisateurs.#Pas vraiment...
+=Une machine qui contient une table d'équivalence entre des noms de machines et leur adresse IP.#Oui, c'est exact !
+####Un serveur de noms est une machine qui contient une table d'équivalence entre des noms de machines et leur adresse IP.
+}
 ```
 
-```activité-avancée
+```activité
 ::Combien y-a-t-il d'adresses IP ?::
 [markdown]
 **Plus assez d'adresses IP ?**
@@ -636,23 +637,18 @@ Heureusement, la nouvelle norme `IPV6` est quand à elle beaucoup plus généreu
 `l'augmentation de 2^^32 (soit environ 4,3×109) à 2128 (soit environ 3,4×1038) du nombre d'adresses disponibles.
 Pour épuiser la totalité de ce stock d'adresses, il faudrait placer 667 millions de milliards d'appareils connectés sur chaque millimètre carré de la surface de la Terre`
 Cette fois on peut espérer tenir avec ce système un bon moment.
-}
-```
-
 ### Le numérique compte en binaire :
-
 Nous n'avons pas encore vu comment on code les informations en binaire. Pour tous ceux d'entre vous qui n'ont pas de culture scientifique, cela peut paraître abstrait. On peut quand même remarquer que les résultats ci-dessus s'expliquent en calculant de la façon suivante :
-
 - `IPV4` utilise des adresses codées sur 32 bits, le nombre de combinaisons est alors 2^32.
 - `IPV6` code les adresses sur 128 bits, ce qui fait 2^128 adresses possibles.
+}
 
-```activité-avancée
 ::Les serveurs de noms::
 [markdown]
-Les serveurs de noms (*DNS* en anglais) : un maillon fragile de l'édifice ...
+**Les serveurs de noms** (*DNS* en anglais) : un maillon fragile de l'édifice ...
 La **norme** qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les **serveurs racine de DNS** (*Domain Name System*, en français : système de nom de domaine).
 À partir de cette ressource : 
-[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS] (http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
+[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS](http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
 faites les recherches nécessaires pour répondre aux questions suivantes :
 - Si ces machines **s'arrêtaient**, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l'impact de cet arrêt ?
 - **Combien** existe-t-il de serveurs racine de DNS ?
@@ -669,12 +665,10 @@ Ces serveurs racines sont des points faible du système, si l'un d'entre eux dev
 C'est ce qui s'est passé en **2002** et en **2007**, lorsque des serveurs racines ont été la cible de **cyber attaques**.
 *cf* [http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS#Attaque_de_2002](http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS#Attaque_de_2002).
 }
-```
 
-
-```activité-avancée
 ::Panne générale::
 [markdown]
+**Panne générale**
 Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
 ![routeurs](media/exoInternet.svg)
 Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. 
@@ -766,30 +760,31 @@ locaux avec des discussions locales ne peuvent donc fonctionner que
 jusqu'à une certaine taille au delà de laquelle une structuration par
 interconnexion devient obligatoire.
 
-```Activité
-::rejoindre le réseau::
-[html]<p>Lorsqu'un ordinateur rejoint un réseau, que doit-il
-obtenir pour rejoindre internet ?</p>{ 
-~%33.33333%<p>Une adresseIP.</p>#<p>Oui, entre autres...</p> 
-~<p>Un nom de code.</p>#<p>Et non...</p> ~<p>Une autorisation de l'État ?</p>#<p>Vraiment ?</p>
-~%33.33333%<p>L'adresse d'un serveur de noms.</p>#<p>C'est bien l'un
-des éléments.</p> 
-~%33.33333%<p>L'adresse d'un routeur.</p>#<p>Oui, mais pas seulement.</p> ~<p>L'accès à un moteur de recherche.</p>#<p>Pas du tout.</p> 
-####<p>En fait, il doit obtenir 3 éléments \: une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur.</p> }
+```comprehension
+::Rejoindre le réseau::
+[markdown]Lorsqu'un ordinateur rejoint un réseau, que doit-il
+obtenir pour rejoindre internet ?{ 
+~%33.33333%Une adresseIP.#Oui, entre autres... 
+~Un nom de code.#Et non... ~Une autorisation de l'État ?#Vraiment ?
+~%33.33333%L'adresse d'un serveur de noms.#C'est bien l'un
+des éléments. 
+~%33.33333%L'adresse d'un routeur.#Oui, mais pas seulement. ~L'accès à un moteur de recherche.#Pas du tout. 
+####En fait, il doit obtenir 3 éléments \: une adresse IP, l'adresse d'un serveur de noms et l'adresse d'un routeur. }
 
 ::le routeur::
-[html]<p>Pourquoi la machine qui assure l'interconnexion avec
+[html]Pourquoi la machine qui assure l'interconnexion avec
 les autres réseaux d'internet (le routeur) est-elle une place de choix
-pour y installer des fonctions de filtrage ?</p>{ 
-=<p>Parce que toutes les informations passent par là.</p>#<p>C'est exact !</p> 
-~<p>Parce que c'est la machine la plus puissante.</p>#<p>Et bien, non.</p>
-~<p>Parce qu'elle est en général bien cachée.</p>#<p>Pas du
-tout...</p> 
-####<p>Parce que toutes les informations transitent par elle.</p> }
+pour y installer des fonctions de filtrage ?{ 
+=Parce que toutes les informations passent par là.#C'est exact ! 
+~Parce que c'est la machine la plus puissante.#Et bien, non.
+~Parce qu'elle est en général bien cachée.#Pas du
+tout... 
+####Parce que toutes les informations transitent par elle. }
 ```
-``` activité-avancée
+```activité
 ::Utiliser les serveurs de noms::
 [markdown]
+**Utiliser les serveurs de noms**
 Il existe des *outils* dans votre ordinateur pour interroger les serveurs de noms et faire donc la *conversion* entre `adresses IP` et `noms`. Ils sont intégrés par exemple dans le navigateur web et la plupart des outils qui utilisent internet. Même s'il est possible de les utiliser directement, ils sont assez techniques.
 Nous vous proposons d'utiliser plutôt un **service** disponible sur internet à travers le navigateur : [http://www.monip.fr](http://www.monip.fr)
 Selon ce site ;
@@ -827,7 +822,7 @@ Si vous copiez cette adresse dans dans la barre d'adresse de votre navigateur, v
 Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence.}
 ```
 
-```activite
+```comprehension
 ::La charte informatique de l'université::
 [markdown]**La charte informatique de l'université**
 Pour utiliser les *services numériques* de l'université, vous avez signé une **charte informatique** lors de votre inscription :
@@ -985,52 +980,46 @@ dépend de nombreux facteurs. Difficile donc de savoir d'où vient un
 ralentissement quand il intervient. Mais parfois, le simple changement
 du mode de connexion utilisé peut faire des miracles. Soyez agiles !!!
 
-```Activité
+```comprehension
 ::les supports de connexion::
-[html]<p>Quels supports sont utilisés pour la transmission de
-données et qui peut donc servir pour une connexion internet ?</p>
+[markdown]**Quels supports sont utilisés pour la transmission de données** et qui peuvent donc servir pour une connexion internet ?
 {
-~<p>L'eau dans un tuyau.</p>#<p>Pas à notre connaissance, mais
-pourquoi pas ?</p> 
-~%20%<p>L'électricité dans les câbles téléphonique.</p>#<p>Oui, l'ADSL</p> 
-~%20%<p>L'électricité dans les câbles spécialisés.</p>#<p>Oui, l'électricité dans les câbles des prises électriques (Voir \:
-http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)</p>
-~%20%<p>La lumière dans les fibres optiques.</p>#<p>Oui, aussi.</p>
-~%20%<p>Les ondes électromagnétiques dans l'air.</p>#<p>Oui, Wifi,
-bluetooth, réseau téléphonique 2G, 3G, 4G, etc.</p>
-~%20%<p>L'électricité dans les câbles des prises électriques.</p>#<p>Oui, voir \:
-http\://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne</p>
-####<p>Tout, sauf l'eau, évidemment !</p> }
-
+~L'eau dans un tuyau.#Pas à notre connaissance, mais pourquoi pas ? 
+~%20%L'électricité dans les câbles téléphonique.#Oui, l'ADSL 
+~%20%L'électricité dans les câbles spécialisés.#Oui, l'électricité dans les câbles des prises électriques (Voir http://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne)
+~%20%La lumière dans les fibres optiques.#Oui, aussi.
+~%20%Les ondes électromagnétiques dans l'air.#Oui, Wifi, bluetooth, réseau téléphonique 2G, 3G, 4G, etc.
+~%20%L'électricité dans les câbles des prises électriques.#Oui, voir http://fr.wikipedia.org/wiki/Courants_porteurs_en_ligne
+####Tout, sauf l'eau, évidemment ! }
 
 ::vitesse de connexion::
-[html]<p>Qu'est-ce qui joue sur la vitesse d'une connexion ?</p>
+[markdown]**Qu'est-ce qui joue sur la vitesse d'une connexion ?**
 { 
-~%25%<p>Le débit maximal admissible du lien qui me raccorde au
-réseau local.</p>#<p>Oui, c'est l'un des paramètres.</p> 
-~%25%<p>Le nombre d'utilisateurs de ce lien.</p>#<p>Exact, c'est l'un des paramètres.</p> 
-~%25%<p>Le nombre de messages qui passent par les
-mêmes routeurs que les miens.</p>#<p>Oui, c'est un paramètre.</p>
-~%25%<p>Le nombre de requêtes arrivant sur la machine avec qui je
-désire échanger des messages.</p>#<p>Oui.</p> 
-~<p>L'âge de l'utilisateur.</p>#<p>Sans commentaire !</p> 
-####<p>Le débit maximal admissible du lien, le nombre d'utilisateurs de ce lien, le nombre de requêtes mais aussi le nombre de messages qui passent par les mêmes routeurs que les miens.</p> }
-
+~%25%Le débit maximal admissible du lien qui me raccorde au réseau local.#Oui, c'est l'un des paramètres. 
+~%25%Le nombre d'utilisateurs de ce lien.#Exact, c'est l'un des paramètres. 
+~%25%Le nombre de messages qui passent par les mêmes routeurs que les miens.#Oui, c'est un paramètre.
+~%25%Le nombre de requêtes arrivant sur la machine avec qui je désire échanger des messages.#Oui. 
+~L'âge de l'utilisateur.#Sans commentaire !
+####Le débit maximal admissible du lien, le nombre d'utilisateurs de ce lien, le nombre de requêtes mais aussi le nombre de messages qui passent par les mêmes routeurs que les miens.
+}
 
 ::eduroam::
-[html]<p>Pour utiliser le wifi à Lille 3 je dois \:</p>
+[markdown]**Eduroam**
+Pour utiliser le wifi à Lille 3 je dois :
 {
-=<p>Avoir un compte Lille 3 ou un compte dans une autre
-université.</p>#<p>Exact !</p> 
-~<p>Payer un abonnement.</p>#<p>Absolument pas, c'est gratuit.</p> ~<p>Aller en cours.</p>#<p>Aucun rapport !</p> 
-~<p>Utiliser un smartphone produit en France.</p>#<p>Aucun rapport !</p> ~<p>Signer la charte graphique de Lille 3.</p>#<p>Non mais signer la charte <em><strong>informatique</strong> </em>Lille 3 est obligatoire...</p>
-####<p>Avoir un compte Lille 3 valide ou un compte dans une autre
-université.</p> }
+=Avoir un compte Lille 3 ou un compte dans une autre université.#Exact ! 
+~Payer un abonnement.#Absolument pas, c'est gratuit.
+~Aller en cours.#Aucun rapport ! 
+~Utiliser un smartphone produit en France.#Aucun rapport !
+~Signer la charte graphique de Lille 3.#Non mais signer la charte informatique Lille 3 est obligatoire...
+####Avoir un compte Lille 3 valide ou un compte dans une autre université. }
 ```
-```activité-avancée
+
+```activité
 ::Wifi ou Données mobiles ?::
 [markdown]
-Les possesseurs de **tablette** ou de **smartphone** peuvent se connecter à internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l'un ou avec l'autre ?
+**Wifi ou Données mobiles ?**
+Les possesseurs de tablette ou de smartphone peuvent se connecter à internet via le **Wifi** ou le **réseau téléphonique** (*données mobiles 3G/4G*). Vaut-il mieux se connecter avec l'un ou avec l'autre ?
 La réponse dépend de trois paramètres :
     - la **disponibilité** de ces modes de connexions (s'il n'y a pas de réseau wifi, il sera difficile de vous connectez en wifi…)
     - le **prix** de la connexion
@@ -1045,12 +1034,6 @@ Imaginons plusieurs situations concrètes :
 3/ Je suis en *voiture* (ce n'est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
         - en wifi
         - avec le réseau de données mobiles de mon opérateur téléphonique
-**Classez** ces modes de connexion du plus lent au plus rapide.
-    `3G`
-    `4G`
-    `H+`
-    `E (Edge)` 
-Après avoir **réfléchi** et effectué les **recherches** nécessaires, répondez  aux questions posées.
 {## Wifi ou données mobiles ?
 ### Wifi ou données mobiles : Comment choisir ?
 1/ Chez moi avec un **smartphone**, j'ai intérêt à me connecter avec le **wifi** de la **Box adsl**.
@@ -1068,6 +1051,16 @@ On trouve dans certaines villes des bus  proposant un accès Wifi.
 Si ceux-ci sont équipés d'une antenne de réception 4G, ils peuvent ensuite "redistribuer" la connexion en Wifi, à l'intérieur du véhicule.
 Cela est également **possible** avec des **smartphones** récents. Sur le principe décrit ci-dessus, un smartphone peut se connecter à un réseau 3G/4G et ensuite se comporter comme une borne wifi à laquelle peuvent se connecter d'**autres périphériques**.
 Cela est très pratique pour se connecter avec un ordinateur là où seules des connections 3G/4G seraient disponibles ... mais attention à la facture ! 
+ }
+
+::Les normes et leurs sigles::
+**Classez ces modes de connexion du plus lent au plus rapide.**
+3G,4G,H+,Edge
+{
+3G -> 2
+4G -> 4
+H+ -> 3
+E (Edge) -> 1
 ### Les normes et leurs sigles
 - Les modes de connexion du plus lent au plus rapide.
     - E (Edge) aussi appelé 2G, lent. Ce mode de connexion permet à peine de lire ses mails. Il ne permet pas une navigation fluide sur le Web.
@@ -1105,24 +1098,22 @@ On obtient:
 Il est donc très rare qu'on échange des vidéos sous le format de ces Blu-ray sur internet et c'est en général des vidéos de moindre qualité qui sont disponibles pour le téléchargement ou la lecture en flux (streaming).
 }
 ```
+
 ## Le saviez-vous ? 
 ### l'ADSL et ses débits
 #### Ça va plus vite dans un sens que dans l'autre
 
-Les lignes ADSL que nous utilisons souvent à domicile, ne sont pas “symétriques”, c'est d'ailleurs ce que signifie leur nom,
+Les lignes ADSL que nous utilisons souvent à domicile, ne sont pas symétriques, c'est d'ailleurs ce que signifie leur nom.
 
-*extrait de wikipedia* 
+[extrait de wikipedia](http://fr.wikipedia.org/wiki/Asymmetric_Digital_Subscriber_Line)  :
 
-[http://fr.wikipedia.org/wiki/Asymmetric_Digital_Subscriber_Line](http://fr.wikipedia.org/wiki/Asymmetric_Digital_Subscriber_Line)  :
-
-`Le sigle anglais ADSL signifie Asymmetric Digital Subscriber Line, qui se traduit fonctionnellement par « [liaison] numérique [à débit] asymétrique [sur] ligne d'abonné »1. La terminologie française officielle recommande l'expression « liaison numérique asymétrique »2, mais le sigle « ADSL » reste le plus largement utilisé dans le langage courant.`
+>Le sigle anglais ADSL signifie Asymmetric Digital Subscriber Line, qui se traduit fonctionnellement par « [liaison] numérique [à débit] asymétrique [sur] ligne d'abonné »1. La terminologie française officielle recommande l'expression « liaison numérique asymétrique »2, mais le sigle « ADSL » reste le plus largement utilisé dans le langage courant.
 
 Comme son nom l'indique, la technologie ADSL fournit un débit asymétrique. Le flux de données est plus important dans un sens de transmission que dans l'autre. Le débit de données montant d'une communication ADSL (upload) est plus faible que le débit descendant (download), dans un rapport qui varie généralement entre 5 et 20.
 
-En France, le lancement commercial de l'ADSL a été effectué par France Telecom Interactive en 1999 “
+En France, le lancement commercial de l'ADSL a été effectué par France Telecom Interactive en 1999
 
-En pratique, nous utilisons surtout internet à domicile pour “récupérer” des données plutôt que pour en envoyer.
-Le sens du “téléchargement” (download) est donc privilégié par rapport à “l'upload.” Le débit est plus important lorsqu'on "reçoit" des données que quand on en envoie.
+En pratique, nous utilisons surtout internet à domicile pour récupérer des données plutôt que pour en envoyer. Le sens du téléchargement (download) est donc privilégié par rapport à l'upload. Le débit est plus important lorsqu'on reçoit des données que quand on en envoie.
 
 En conséquence, il ne faut pas être étonné si l'envoi d'un mail avec une grosse pièce jointe est très long tandis que la réception d'un mail identique sera beaucoup plus rapide. Cela peut aisément s'expérimenter en s'envoyant un mail avec une pièce jointe de quelques MO.
 
@@ -1243,28 +1234,34 @@ protéger les citoyens contre ces abus. Mais leurs moyens ne sont pas
 toujours à la hauteur de leurs missions... Et les affaires comme PRISM
 ont montré que cette question dépasse largement le cadre Français.
 
-```activité
-// question: 165024 name: 1.8.1 (Q1/3) ::1.8.1
-::(Q1/3)::[html]<p>Comment s'appelle l'organisme qui gère les noms de
-domaine et les adresses IP ?</p>{ =<p>Au niveau mondial \:</p> ->
-ICANN =<p>Au niveau de la France \:</p> -> AFNIC = -> CNIL
-####<p>ICANN pour le niveau mondial et l'AFNIC pour la France.</p> }
+```comprehension
+::Noms de domaine::
+[markdown]**Comment s'appelle l'organisme qui gère les noms de domaine et les adresses IP ?** Précisez votre réponse pour la France et au niveau mondial.
+{
+=Au niveau mondial  -> ICANN
+=Au niveau de la France  -> AFNIC
+= -> CNIL
+####ICANN pour le niveau mondial et l'AFNIC pour la France. }
 
-// question: 165028 name: 1.8.1 (Q2/3)_NEW ::1.8.1
-::(Q2/3)_NEW::[html]<p>L'ISO est l'organisation internationale de
-normalisation.</p>{TRUE#<p>Il faut revoir la vidéo...</p>#<p>Exact
-!</p>####<p>Vrai, l'ISO est bien l'organisation internationale de
-normalisation (International Organization for Standardization).<br
-/><br /></p>}
+::Qu'est-ce que l'ISO ?::
+[markdown]**L'ISO est l'organisation internationale de normalisation.**
+{
+TRUE#Il faut revoir la vidéo...#Exact !
+####Vrai, l'ISO est bien l'organisation internationale de normalisation (International Organization for Standardization).
+}
 
-// question: 165029 name: 1.8.1 (Q3/3) Noms pleinement qualifiés_NEW
-::(Q3/3) Noms pleinement qualifiés_NEW::[html]<p>Comment s'écrit
-le nom d'une machine C, située dans un domaine B, lui même dans un
-domaine général A ?</p>{ ~<p>ABC</p> ~<p>ACB</p> =<p>CBA</p>
-~<p>CAB</p> ~<p>BAC</p> ~<p>BCA</p> ####<p>C.B.A \: le nom de la
-machine, puis le nom du domaine de 1er niveau et enfin le nom du
-domaine général.</p> }
+::Noms pleinement qualifiés::
+[markdown]Comment s'écrit le nom d'une machine C, située dans un domaine B, lui même dans un domaine général A ?
+{
+~A.B.C
+~A.C.B
+=C.B.A
+~C.A.B
+~B.A.C
+~B.C.A
+####C.B.A \: Le nom de la machine, puis le nom du domaine de 1er niveau et enfin le nom du domaine général. }
 ```
+
 ## Le saviez-vous ? 
 ### Comment la Chine censure internet ?
 
@@ -1309,5 +1306,4 @@ Les domaines de premier niveau sont les plus élevés dans la hiérarchie des no
 La CNIL (*Commission Nationale de l'Informatique et des Libertés*) est l'instance française chargée de veiller au respect des libertés et de la vie privée sur internet. À ce titre, elle régule notamment l'usage des données personnelles et traces que tout un chacun laisse lorsqu'il utilise internet.
 Au 20 juillet 2013, la CNIL était composée de 17 membres et 174 agents. 
 }
-
 ```
