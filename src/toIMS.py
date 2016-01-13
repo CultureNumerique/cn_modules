@@ -419,7 +419,7 @@ def main(argv):
         usage()
         
     module_dir = sys.argv[1]
-    build_dir = 'build' # FIXME or get it from argument or config file
+    build_dir = os.path.join('build', 'last') # FIXME or get it from argument or config file
     fileout = module_dir+'.imscc.zip'
     filein = os.path.join(build_dir, module_dir, module_dir+'.config.json')
     
