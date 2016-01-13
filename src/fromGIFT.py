@@ -101,7 +101,7 @@ class GiftQuestion():
         self.gift_src = new_src
         return new_src
 
-    def to_html(self):
+    def to_html(self, feedback_option=False):
         """ From a question object, write HTML representation """
 
         doc, tag, text = Doc().tagtext()
@@ -119,25 +119,35 @@ class GiftQuestion():
                     html_text = markdown.markdown(self.text, MARKDOWN_EXT)
                     doc.asis(html_text)
             # If type MULTICHOICE, MULTIANSWER give choices
-            if self.type in ['MULTICHOICE', 'MULTIANSWER']:
+            if self.type in ['MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE']:
                 with tag('ul', klass=self.type.lower()):
                     for answer in self.answers:
+                        
                         with tag('li'):
-                            if self.type == 'MULTICHOICE':
-                                doc.stag('input', type='radio')
+                            if self.type in ['MULTICHOICE', 'TRUEFALSE']:
+                                if answer['is_right'] and feedback_option:
+                                    answer_class = 'right_answer'
+                                else:
+                                    answer_class = ''
+                                doc.stag('input', type='radio', klass=answer_class)
                             elif self.type == 'MULTIANSWER':
-                                doc.stag('input', type='checkbox')
+                                if float(answer['credit']) > 0.0 and feedback_option:
+                                    answer_class = 'right_answer'
+                                else:
+                                    answer_class = ''
+                                doc.stag('input', type='checkbox', klass=answer_class)
                             doc.asis(answer['answer_text'])
 
-            elif self.type == 'TRUEFALSE':
-                with tag('ul', klass=self.type.lower()):
-                    for choice in ['vrai', 'faux']:
-                        with tag('li'):
-                            doc.stag('input', type='radio')
-                            text(choice)
-
+            # elif self.type == 'TRUEFALSE':
+            #     with tag('ul', klass=self.type.lower()):
+            #         for choice in ['vrai', 'faux']:
+            #             with tag('li'):
+            #                 doc.stag('input', type='radio')
+            #                 text(choice)
+            if feedback_option:
+                with tag('p', klass='global_feedback'):
+                    text(self.global_feedback)
         doc.asis('\n')
-        doc.asis('<!-- Globlal feedback :'+self.global_feedback+' -->')
         doc.asis('\n')
         return(indent(doc.getvalue(), newline='\n'))
 
@@ -240,6 +250,7 @@ class GiftQuestion():
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
     question = re.sub('\\\:', '', question) # remove \: in src txt
+    question = re.sub('\\\=', '', question) # remove \: in src txt
 
     return question
 

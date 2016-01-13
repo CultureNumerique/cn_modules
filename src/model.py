@@ -108,8 +108,8 @@ class Subsection:
         self.filename = slugify(self.num+self.title)+'_'+self.folder+'.html'
         return self.filename
 
-    def toHTMLFile(self,outDir):
-        utils.write_file(self.toHTML(), outDir, self.folder, self.getFilename())
+    def toHTMLFile(self,outDir, feedback_option):
+        utils.write_file(self.toHTML(feedback_option), outDir, self.folder, self.getFilename())
         
     def toGift(self):
         return ''
@@ -144,7 +144,7 @@ class Cours(Subsection):
             self.lastLine = f.readline()
 
             
-    def toHTML(self):
+    def toHTML(self, feedback_option=False):
         html_src = markdown.markdown(self.src, MARKDOWN_EXT)
         if self.detectVideoLinks() : 
             # post-Processing video links
@@ -211,11 +211,11 @@ class AnyActivity(Subsection):
             gift_src+='\n'+question.gift_src+'\n'
         return gift_src
     
-    def toHTML(self):
+    def toHTML(self, feedback_option=False):
         html_src = ''
         for question in self.questions:
             # append each question to html output
-            html_src+=question.to_html()
+            html_src+=question.to_html(feedback_option)
             if html_src == '': # fallback when question is not yet properly formated
                 html_src = '<p>'+self.src+'</p>'
             # post-process Gift source replacing markdown formated questions text by html equivalent
@@ -324,9 +324,9 @@ class Section:
                     self.lastLine = f.readline()
         
 
-    def toHTMLFiles(self,outDir):
+    def toHTMLFiles(self,outDir, feedback_option=False):
         for sub in self.subsections:
-            sub.toHTMLFile(outDir)
+            sub.toHTMLFile(outDir, feedback_option)
     
     def toXMLMoodle(self, outDir):
         for sub in self.subsections:
@@ -385,9 +385,9 @@ class Module:
             match = reStartSection.match(l)
                 
 
-    def toHTMLFiles(self, outDir):
+    def toHTMLFiles(self, outDir, feedback_option=False):
         for s in self.sections:
-            s.toHTMLFiles(outDir)
+            s.toHTMLFiles(outDir, feedback_option)
 
     def toXMLMoodle(self, outDir):
         for s in self.sections:
