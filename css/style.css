@@ -38,6 +38,10 @@ body,h1,h2,h3,h4,h5,h6,p,ul {
 
 }
 
+code {
+	font-size: 130%;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-weight: bold;
 	color: #a29797;
@@ -280,15 +284,18 @@ a.active{
     content: url('../svg/help.svg');
 }
 
-.auto-evaluation:before {
+.Comprehension:before {
 	content: url('../svg/activite_quiz.svg');
 }
 
 .correction:before {
     content: url('../svg/activite_correction.svg');
 }
-.devoirs:before {
+.Activite:before {
     content: url('../svg/activite_assign.svg');
+}
+.ActiviteAvancee:before {
+    content: url('../svg/activite_attendanceregister.svg');
 }
 .webcontent:before{
     content: url('../svg/activite_page.svg');
