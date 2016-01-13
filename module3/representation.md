@@ -263,7 +263,8 @@ Un contenu avec une structure a une seule présentation possible
 ::La vue qualifiée::
 [markdown]
 **La vue qualifiée**
-Donnez au minimum 4 métadonnées que vous pouvez associer à un livre{}
+Donnez au minimum 4 métadonnées que vous pouvez associer à un livre
+{}
 
 ::Éditeur de textes::
 [markdown]
@@ -314,8 +315,8 @@ Téléchargez le  [document odt](media/representation.odt) sur votre machine. No
 - Rendre une capture d'écran de la structure obtenue visible dans le *navigateur*.
 - Mettez à jour la **table des matières** qui se trouve en début de document : `clic-droit` dans la partie grisée de la table des matières et sélectionner `Actualiser l'index`.
 {####Voila une première approche de l'utilisation des styles dans un traitement de texte qui permet d'avoir un document structuré. La manipulation que vous venez de faire (déplacement d'une section) illustre l'organisation arborescente du document. Le déplacement d'un noeud déplace en fait toutes les sous-parties de ce noeud. Par ailleurs, la définition de "niveaux de titre" pour certains noeuds de la structure permet la création automatique (et ici la mise à jour automatique) de la table des matières. Cela ne représente qu'une petite partie des possibilités qu'offre une organisation structurée d'un document texte.}
-
 ```
+
 ```activité
 ::La vue qualifiée d'un document texte odt::
 [markdown] 
@@ -380,14 +381,16 @@ Le principe repose sur le fait que les 2 documents utilisent les mêmes noms de 
 - `corps de texte`, pour tous les paragraphes standards
 Il s'agit donc de demander à `LibreOffice` d'aller chercher les paramètres de présentation de ces différents styles tels qu'ils sont définis dans le document *representation1.odt*. Cela s'effectue en quelques clics ...
 À vous de faire cette manipulation très simple. Cherchez dans l'interface de `LibreOffice` comment effectuer cette opération. Si vous rencontrez des difficultés, n'hésitez pas à aller dans les salles d'accès libre où la dernière version de `LibreOffice` est installée et où des moniteurs peuvent vous aider.
-Pensez aussi à utiliser le forum du cours pour poster vos questions ou vos remarques et vous aider mutuellement.{}
+Pensez aussi à utiliser le forum du cours pour poster vos questions ou vos remarques et vous aider mutuellement.
+{}
 
 ::Générer une table des matières::
 [markdown]
 **Générer une table des matières**
 Comme vous avez pu le constater, *representation1.odt* est structuré et il possède une mise en forme des styles, mais la table des matières n'a pas été créée. Vous allez donc la créer maintenant. Les styles des titres ont été paramétrés pour correspondre à des niveaux différents dans la structure arborescente du document. La génération de la table des matières peut donc se faire en 3 clics ...
 Cherchez dans les menus de `LibreOffice` comment insérer une table des matières automatiquement.
-Faites une capture d'écran montrant la table des matières que vous avez créée.  {}
+Faites une capture d'écran montrant la table des matières que vous avez créée.
+{}
 
 ::Numéroter les paragraphes::
 [markdown]
@@ -401,7 +404,6 @@ PLUSIEURS VUES COMPLÉMENTAIRES
 2 - Le Contenu, Une Vue Séquentielle
 etc.
 {}
-
 ```
 
 # Documents numériques - formats et normes
@@ -1012,55 +1014,8 @@ Enfin, le format de représentation numérique de documents scientifiques, qui p
 ::Règles de typographie::
 [markdown]
 **Règles de typographie**
-Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).{}
-```
-
-
-
-# Ouverture, interopérabilité, licences, ... et liberté
-
-À travers cette présentation, vous avez sans doute retenu la distinction entre
-les vues de contenu, structure, présentation et les métadonnées qui
-qualifient un document numérique. Dans les autres types de données
-manipulées par les ordinateurs, comme les images, le son par exemple
-on retrouve également ces distinctions.
-
-Une autre distinction que vous pouvez également retenir c'est celle
-entre logiciel et donnée. Parfois très liés à cause de formats
-propriétaires, on en arrive de temps à autres à les confondre, mais
-bien-sûr la donnée doit pouvoir exister, suivre son cycle de
-développement et d'utilisation en dehors du logiciel qui l'a créé.
-
-Par les formats de données libres et ouverts ou propriétaires ou
-fermés, vous voyez également une illustration de la rencontre entre le
-numérique et le droit. Le droit ne s'applique pas qu'aux formats, mais
-aux également aux contenus et aux logiciels. Le domaine du droit du
-numérique sort du périmètre de ce cours mais vous devez toujours vous
-poser la question du droit dès que vous utilisez une ressource pour la
-publier.
-
-Enfin, sachez que l'idée de la liberté ou de l'ouverture s'applique
-aux contenus par le biais des licences *creative commons* et aux
-logiciels par le biais des licences *GPL* et *CECILL* en précisant
-comment vous pouvez utiliser ces contenus et ces logiciels. La
-philosophie du libre dans le numérique est née dans les années 80 à
-propos des logiciels. Elle s'est étendue depuis et devient un
-mouvement qui impacte aujourd'hui toute la société numérique.
-
-```activité
-::Les personnages du libre::
-[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
-{#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
-
-::Creative Commons::
-[markdown]Quelles sont les différentes variantes de creative commons ?
-{#### Six possibilités existent, combinaisons de quatre pôles définissant les différents usages : Attribution : signature de l'auteur initial (obligatoire en droit français) (sigle : BY) ; Non Commercial : interdiction de tirer un profit commercial de l'œuvre sans autorisation de l'auteur (sigle : NC) ; No derivative works : impossibilité d'intégrer tout ou partie dans une œuvre composite ; l'échantillonnage (sampling), par exemple, devenant impossible (sigle : ND) ; Share alike : partage de l'œuvre, avec obligation de rediffuser selon la même licence ou une licence similaire (version ultérieure ou localisée) (sigle : SA)
-}
-
-::Le logiciel libre::
-[markdown]Quels sont les 4 principes du logiciel libre (voir le [site de l'April](http://www.april.org) ) ?
-{#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
-}
+Lorsque vous utilisez un logiciel comme `LateX`, vous spécifiez la structure du document et certains éléments de mise en forme. C'est le programme qui respecte les règles de l'édition scientifique pour générer le document imprimable : taille des espaces, sauts de ligne, césure des mots, sauts de page, placement des figures, ... Cependant, il reste à votre charge de connaître et respecter certaines régles typographiques minimales comme espace après la virgule, espace avant et après le point-virgule (seulement après en anglais). Voici un document sur les [bonnes pratiques de typographie](http://www.ebooksgratuits.com/guides/typographie.pdf).
+{}
 ```
 
 
@@ -1255,7 +1210,6 @@ Je réalise une capture d'écran. À votre avis l'image générée est plutôt :
 ```
 
 ```activité
-
 ::Échantillonner les images::
 [markdown]
 **Échantillonner les images**
@@ -1311,6 +1265,7 @@ Il est possible de définir des courbes avec peu d'informations. Par exemple, un
 - AB donne la direction initiale, 
 - D est le point d'arrivée et 
 - CD donne la direction d'arrivée et le reste ce sont des mathématiques. Notez que B et C donnent des directions et que la courbe ne passe pas par B et C. Vous pouvez voir des animations de construction de courbe sur la page [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) et lire la section Applications de cette page.
+{}
 ```
 
 ```activité-avancée
@@ -1330,6 +1285,7 @@ Mais aussi les personnages ou les étiquettes associées à la photo ...}
 [markdown]
 **Manipulations d'images SVG**
 Vous pouvez vous initier à la définition d'images vectorielles avec le standard `SVG` avec [cette page](media/svg.html). Essayez donc de changer l'épaisseur de la ligne rouge, la position du rectangle bleu, le rayon du cercle jaune. Et si vous  êtes forts ajoutez une nouvelle ligne verte horizontale!
+{}
 
 ::Les images CMJN::
 [markdown]
@@ -1338,3 +1294,52 @@ Un autre modèle de couleur est utilisé dans le monde de l'édition, il s'agit 
 correspond aux technologies des écrans, le CMJN est adapté au monde de l'impression. Que signifient les initiales CMJN ?
 {#### Cyan Magenta Jaune et Noir, en anglais : CMYB pour Cyan, Magenta, Yellow et blacK}
 ```
+
+
+# Ouverture, interopérabilité, licences, ... et liberté
+
+À travers cette présentation, vous avez sans doute retenu la distinction entre
+les vues de contenu, structure, présentation et les métadonnées qui
+qualifient un document numérique. Dans les autres types de données
+manipulées par les ordinateurs, comme les images, le son par exemple
+on retrouve également ces distinctions.
+
+Une autre distinction que vous pouvez également retenir c'est celle
+entre logiciel et donnée. Parfois très liés à cause de formats
+propriétaires, on en arrive de temps à autres à les confondre, mais
+bien-sûr la donnée doit pouvoir exister, suivre son cycle de
+développement et d'utilisation en dehors du logiciel qui l'a créé.
+
+Par les formats de données libres et ouverts ou propriétaires ou
+fermés, vous voyez également une illustration de la rencontre entre le
+numérique et le droit. Le droit ne s'applique pas qu'aux formats, mais
+aux également aux contenus et aux logiciels. Le domaine du droit du
+numérique sort du périmètre de ce cours mais vous devez toujours vous
+poser la question du droit dès que vous utilisez une ressource pour la
+publier.
+
+Enfin, sachez que l'idée de la liberté ou de l'ouverture s'applique
+aux contenus par le biais des licences *creative commons* et aux
+logiciels par le biais des licences *GPL* et *CECILL* en précisant
+comment vous pouvez utiliser ces contenus et ces logiciels. La
+philosophie du libre dans le numérique est née dans les années 80 à
+propos des logiciels. Elle s'est étendue depuis et devient un
+mouvement qui impacte aujourd'hui toute la société numérique.
+
+```activité
+::Les personnages du libre::
+[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
+{#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
+
+::Creative Commons::
+[markdown]Quelles sont les différentes variantes de creative commons ?
+{#### Six possibilités existent, combinaisons de quatre pôles définissant les différents usages : Attribution : signature de l'auteur initial (obligatoire en droit français) (sigle : BY) ; Non Commercial : interdiction de tirer un profit commercial de l'œuvre sans autorisation de l'auteur (sigle : NC) ; No derivative works : impossibilité d'intégrer tout ou partie dans une œuvre composite ; l'échantillonnage (sampling), par exemple, devenant impossible (sigle : ND) ; Share alike : partage de l'œuvre, avec obligation de rediffuser selon la même licence ou une licence similaire (version ultérieure ou localisée) (sigle : SA)
+}
+
+::Le logiciel libre::
+[markdown]Quels sont les 4 principes du logiciel libre (voir le [site de l'April](http://www.april.org) ) ?
+{#### la liberté d'utiliser le logiciel, pour quelque usage que ce soit ;  la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins ; la liberté de redistribuer des copies de façon à pouvoir aider votre voisin ; la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage. (L'accès au code source est une condition pour tout ceci)
+}
+```
+
+

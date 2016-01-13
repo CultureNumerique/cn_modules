@@ -109,8 +109,8 @@ class GiftQuestion():
         doc.asis('\n')
         doc.asis('<!-- New question -->')
         with tag('div', klass='question'):
-            with tag('p', klass='questiontitle'):
-                text(self.title)
+#            with tag('p', klass='questiontitle'):
+#                text(self.title)
             with tag('p', klass='questiontext'):
                 if self.text_format == 'html':
                     doc.asis(self.text)
