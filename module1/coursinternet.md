@@ -388,7 +388,7 @@ bombardés ou une ligne qui reliait 2 centres coupée. Il fallait
 pouvoir communiquer entre des centres stratégiques et pouvoir
 bénéficier à distance des résultats des supercalculateurs même en cas
 d'attaque nucléaire. Ils ont demandé aux chercheurs de proposer un
-système qui serait tolérant aux pannes... ou aux bombes.
+système qui serait tolérant aux pannes ou aux bombes!
 
 L'idée a été de multiplier les centres et d'interconnecter les réseaux
 de chaque centre. Pour protéger l'ensemble, la proposition a été de
@@ -401,9 +401,9 @@ Ce système a tout de suite rencontré un grand succès. Il a ensuite
 évolué vers INTERNET, nom qu'on lui a donné au début des années 80
 pour signifier qu'il s'agit d'une interconnexion de réseaux.
 
-Selon le vieil adage *tous les chemins mènent à Rome/, le système de
+Selon le vieil adage *tous les chemins mènent à Rome*, le système de
 communication permet d'échanger des données entre 2 points en passant
-par n'importe quel chemin à l'intérieur d'internet.*
+par n'importe quel chemin à l'intérieur d'internet.
 
 
 ```comprehension
@@ -417,7 +417,7 @@ par n'importe quel chemin à l'intérieur d'internet.*
 
 
 ::Âge d'internet::
-[markdown]**Quelle est la date de la création d'internet ?** (date la plus proche)
+[markdown]**Quelle est la date la plus proche de la création d'internet ?** 
 { 
 ~1789#Vraiment ?
 ~1918#N'est-ce pas un peu tôt ?
@@ -441,9 +441,9 @@ informations.#Tout à fait !
 ``` activité-avancée
 ::Qui a inventé internet ?::
 **Qui a inventé internet ?**
-On a parfois une représentation erronée du rôle des différents pays dans la **création** d'internet. Faites quelques recherches sur les **deux personnages** suivants pour rétablir un juste équilibre.
-- Qui est **Vinton « Vint » Gray Cerf** ? Comment est-il parfois surnommé ?
-- Qui est **Louis Pouzin** ? Qu'était le projet **Cyclades** ?
+On a parfois une représentation erronée du rôle des différents pays dans la **création** d'internet. Faites des recherches sur les deux personnes suivantes pour rétablir un juste équilibre.
+- Qui est Vinton « Vint » Gray Cerf ? Comment est-il parfois surnommé ?
+- Qui est Louis Pouzin ? Qu'était le projet Cyclades ?
 Après vous être documenté sur ces deux personnages importants, rédigez une courte réponse qui résume ce que vous avez appris.
 {## Qui a inventé internet ?
 ### Vinton Gray Cerf
@@ -464,22 +464,12 @@ Si vous voulez écouter son **avis** sur ce qu'est devenu internet, voici une vi
 
 ::Qui a accès à internet ?::
 **Qui a accès à internet ?**
-En utilisant les ressources suivantes (et d'autres) :
-- [http://fr.wikipedia.org/wiki/Histoire_d'Internet](http://fr.wikipedia.org/wiki/Histoire_d'Internet)
-- [http://www.blogdumoderateur.com/chiffres-internet/](http://www.blogdumoderateur.com/chiffres-internet/)
-Chercher les réponses aux questions suivantes
-- **Combien** y avait-il dans le monde d'ordinateurs connectés :
-        en 1984, en 1987, en 1989, aujourd'hui :
-- en quelle année a-t-on passé la barre du **Million d'utilisateurs** ? 
-- Quelle **proportion** de la population mondiale **n'a pas accès** à internet ?
-- À l'inverse, quelle proportion a accès à internet en **France** ? 
-  - Est-ce supérieur ou inférieur à la moyenne **européenne** ?
-  - Est-ce supérieur ou inférieur à la proportion des **USA** ?
-- En **1 mn**, dans le monde :
-        Combien de recherche **Google** ?
-        Combien de **mails** sont envoyés ?
-        Combien de contenus partagés sur **Facebook** ?
-Après avoir effectué vos recherches, répondez à ces questions.
+Effectuez des recherches pour répondre aux questions qui suivent. Vous pouvez commencer vos recherches à partir de  [cette page sur l'histoire](http://fr.wikipedia.org/wiki/Histoire_d'Internet) et [cette page qui donne des statistiques d'utilisation](http://www.blogdumoderateur.com/chiffres-internet/)
+- Combien y avait-il dans le monde d'ordinateurs connectés en 1984 ? En 1987 ? En 1989 ? Aujourd'hui ?
+- en quelle année a-t-on passé la barre du million d'utilisateurs ? 
+- Quelle proportion de la population mondiale n'a pas accès à internet ?
+- À l'inverse, quelle proportion a accès à internet en France ? Est-ce supérieur ou inférieur à la moyenne européenne ? Est-ce supérieur ou inférieur à la moyenne aux USA ?
+- En 1 minute, dans le monde, combien de recherche Google ? Combien de mails sont envoyés ? Combien de contenus sont partagés sur Facebook ?
 {## Qui a accès à internet ?
 L'accès à internet a considérablement évolué en quelques années. Néanmoins, de grandes **inégalités** persistent encore.
 Le nombre d'ordinateurs connectés permet de faire une approximation du nombre de personnes qui utilisent internet.
@@ -499,16 +489,14 @@ Enfin, pour tenter de mesurer l'ampleur des informations échangées sur interne
   [Comment ça marche ?](https://player.vimeo.com/video/122104315){: .lien_video }
 
 Regardons un peu plus précisément comment fonctionne internet. Trois
-ingrédients importants interviennent dans le système ; le premier est
-l'adresse `IP` qui permet de fournir un nom et une adresse à chaque
-machine.  Chaque ordinateur connecté à internet a un numéro unique (un
-peu comme un numéro de téléphone, mais bien plus long !). Ce numéro
+ingrédients importants interviennent dans le système.
+
+Le premier est l'*adresse `IP`* qui permet de fournir un nom et une adresse à chaque machine.  Chaque ordinateur connecté à internet a un numéro unique (un peu comme un numéro de téléphone, mais bien plus long !). Ce numéro
 dépend de l'endroit où l'ordinateur se trouve dans internet et permet
 donc de trouver un chemin dans l'interconnexion de réseaux. On appelle
 ce numéro l'adresse `IP`. De façon très simplifiée, l'adresse `IP`
 comporte une partie identifiant un réseau dans cette interconnexion et
 une autre partie identifiant la machine au sein de ce réseau.
-
 Pour échanger des informations d'un ordinateur vers un autre, celui
 qui *envoie* l'information doit donc connaître l'adresse `IP` du
 destinataire, et pour obtenir une réponse, l'émetteur doit
@@ -516,7 +504,7 @@ impérativement fournir dans chaque message envoyé sa propre adresse
 `IP`. Tous les messages échangés sur internet sont donc de la forme :
 `n°IP destinataire / information / n°IP émetteur`.
 
-Le deuxième ingrédient concerne le *Routage* des messages sur le
+Le deuxième ingrédient concerne le *routage des messages* sur le
 réseau.  Si les ordinateurs émetteur et destinataire sont dans le même
 réseau, le principe est simple : l'ordinateur émetteur envoie son
 message sur ce réseau et chaque ordinateur du réseau le lit. Les
@@ -531,7 +519,7 @@ réseaux pour poursuivre son chemin. Et ce processus se répète jusqu'à
 ce que le message arrive à destination.
 
 
-Enfin le troisième ingrédient concerne le nommage des machines.  En
+Enfin le troisième ingrédient concerne le *nommage des machines*.  En
 effet, ce sont des femmes et des hommes qui utilisent ces
 machines. Pour désigner un destinataire, personne ne manipule
 directement des adresses `IP` qui sont des numéros bien plus longs que
@@ -539,7 +527,7 @@ les numéros de téléphone. Dans notre interface avec le monde
 d'internet nous connaissons plutôt des noms comme `www.univ-lille3.fr`
 ou encore `www.service-public.fr`. Le lien entre adresses `IP` et noms
 se fait par le biais des *serveurs de noms* qui, à la manière d'une
-liste de contacts dans notre téléphone, stockent un ensemble de nom et
+liste de contacts dans notre téléphone, stockent un ensemble de noms et
 d'adresses `IP`.
 
 Très concrètement, regardons par exemple ce qui se passe lorsque je
@@ -590,9 +578,7 @@ ordinateur qu'à afficher ce contenu.
 ::Combien y-a-t-il d'adresses IP ?::
 [markdown]
 **Plus assez d'adresses IP ?**
-Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a dû évoluer...
-Aujourd'hui deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent le nom de `IPV4` et `IPV6`.
-Faites quelques recherches sur ces normes pour répondre aux 2 questions suivantes :
+Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a donc dû évoluer. Aujourd'hui, deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent les noms de `IPV4` et `IPV6`. Faites des recherches sur ces normes pour répondre aux 2 questions suivantes :
 - Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
 - Nouvelle norme IP version 6 `IPV6`. Combien pourrait-on avoir de numéros IPV6 différents par millimètre carré de la surface de la terre ?
 {## Combien y-a-t-il d'adresses IP ?
@@ -613,16 +599,14 @@ Nous n'avons pas encore vu comment on code les informations en binaire. Pour tou
 
 ::Les serveurs de noms::
 [markdown]
-**Les serveurs de noms** (*DNS* en anglais) : un maillon fragile de l'édifice ...
-La **norme** qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les **serveurs racine de DNS** (*Domain Name System*, en français : système de nom de domaine).
-À partir de cette ressource : 
-[http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS](http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS),
-faites les recherches nécessaires pour répondre aux questions suivantes :
-- Si ces machines **s'arrêtaient**, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. **À votre avis**, quel serait l'impact de cet arrêt ?
-- **Combien** existe-t-il de serveurs racine de DNS ?
-- **Qui** possède ces machines : des états, des organisations, des sociétés privées ?
-- **Où** se trouvent-elles majoritairement ?
-- **Que** s'est-il passé en 2002 et 2007 ?
+**Les serveurs de noms : un maillon fragile de l'édifice**
+La norme qui régit le fonctionnement des serveurs de noms propose une organisation pyramidale des machines. Les machines au sommet de cette pyramide sont les **serveurs racine de DNS** ( DNS pour Domain Name System, en français, on parle de système de nom de domaine).
+À partir de [cette ressource](http://fr.wikipedia.org/wiki/Serveur_racine_du_DNS), faites les recherches nécessaires pour répondre aux questions suivantes :
+- Si ces machines s'arrêtaient, la traduction des adresses `IP` en nom et vice-versa s'arrêterait. Quel serait, à votre avis, l'impact de cet arrêt ?
+- Combien existe-t-il de serveurs racine de DNS ?
+- Qui possède ces machines : des états, des organisations, des sociétés privées ?
+- Où se trouvent-elles majoritairement ?
+- Que s'est-il passé en 2002 et 2007 ?
 {## Les serveurs de noms [correction]
 ### Les serveur racines de DNS
 Si les serveurs racines de DNS **s'arrêtaient**, alors progressivement les millions de serveurs de noms répartis sur la planète qui en dépendent deviendraient obsolètes et la **correspondance** entre les noms des machines, que nous utilisons et les adresses IP **ne fonctionnerait plus**. En d'autres termes **internet s'arrêterait**.
@@ -639,12 +623,12 @@ C'est ce qui s'est passé en **2002** et en **2007**, lorsque des serveurs racin
 **Panne générale**
 Dans le petit schéma ci-dessous, un nuage représente un réseau local. Les petits carrés sont des routeurs ou des ordinateurs. 
 ![routeurs](media/exoInternet.svg)
-Supposons que les communications dans chaque réseau local fonctionnent correctement. L'ordinateur A doit échanger des données avec l'ordinateur B. 
+Supposons que les communications dans chaque réseau local fonctionnent correctement, c'est-à-dire que chaque ordinateur d'un réseau local peut communiquer avec n'importe quel ordinateur du même réseau local. L'ordinateur A doit échanger des données avec l'ordinateur B.
 - Indiquer le groupe minimal de routeurs qui devraient tomber en panne pour empêcher la communication entre A et B ?
 - Dans le cas des câbles, quel ensemble minimal de câbles devraient être coupés pour empêcher la communication entre A et B ? 
 - Lister tous les chemins possibles (sans boucle) qui permettent de relier A à B.
 {
-####  Si les routeurs C et D tombent en panne le réseau local de A est déconnecté et A ne peut plus communiquer avec B. 
+#### Si les routeurs C et D tombent en panne le réseau local de A est déconnecté et A ne peut plus communiquer avec B. 
 La même chose se produit si les routeurs H et I tombent en panne. 
 Si F et I tombent en panne, alors les communications passent encore par D, E, K et H.
 Les câbles entre C-F, C-I, D-E, de la même façon isolent le réseau de A.
