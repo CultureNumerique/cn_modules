@@ -11,22 +11,22 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 À l'origine, les ordinateurs étaient réservés aux informaticiens, ou
 plutôt comme cette discipline naissait à peine, aux mathématiciens et
 électroniciens qui les créaient. En anglais un ordinateur se nomme
-*computer* , dont la traduction exacte est *calculateur*.
+*computer*, dont la traduction exacte est *calculateur*.
 
 Fondamentalement les ordinateurs ne font que des calculs, ils ne
 savent pas manipuler autre chose que des nombres, qui plus est des
 nombres représentés sous forme binaire c'est-à-dire avec des 0 et
 des 1. En effet, comme toutes les machines électriques la seule
-information qu'ils *comprennent* est de la forme, *y'a du courant* ou
-*y'a pas de courant*.
+information qu'ils "comprennent" est de la forme, "y'a du courant" ou
+"y'a pas de courant".
 
-Or, aujourd'hui, nous utilisons tous des ordinateurs tous les jours,
-non pas pour faire des calculs mais pour tout un tas d'activités
+Or, aujourd'hui, nous utilisons des ordinateurs tous les jours, non
+pas pour faire des calculs, mais pour réaliser de nombreuses activités
 diverses et variées qu'elles soient professionnelles, liées à nos
 loisirs ou à notre vie quotidienne. Et pourtant, ces ordinateurs ne
 sont toujours que des machines qui font des calculs. Il a donc fallu
 trouver des techniques pour traduire/coder le texte, le son, les
-images avec des nombres. C'est ce qu'on appelle la numérisation. On
+images avec des nombres. C'est ce qu'on appelle la *numérisation*. On
 dit souvent que notre monde est analogique (ou continu) et que le
 monde des machines est numérique (ou digital). Les scanners, appareils
 photo numériques, enregistreurs mp3 par exemple sont des dispositifs
@@ -38,25 +38,25 @@ Nous vivons dans un monde où le numérique a pris beaucoup de place :
 internet, la radio, la télévision, la téléphonie, la photographie et
 bien d'autres choses que nous ne soupçonnons pas sont entièrement
 numériques et donc manipulables par des ordinateurs au sens large, par
-exemple, des tablettes, des smartphones, les box adsl... en fait toutes
+exemple, des tablettes, des smartphones, les box adsl, ... en fait toutes
 les machines qui fonctionnent avec des processeurs, (nous reviendrons
 sur ce terme).
 
-Cela représente des enjeux de société très importants. le numérique a
+Cela représente des enjeux de société très importants. Le numérique a
 ouvert des possibilités gigantesques en terme de gain de temps, de
 facilité de traitement, de nouvelles fonctionnalités, d'accès aux
-informations, aux archives etc. mais en même temps de nouvelles
-questions sont apparues : où sont stockées les données, qui y a accès,
-sont-elles en sécurité, sommes-nous dépendants de machines, de
-logiciels, de sociétés commerciales.
+informations, aux archives, ... Mais en même temps de nouvelles
+questions sont apparues : où sont stockées les données ? Qui y a accès ?
+Sont-elles en sécurité ? Sommes-nous dépendants de machines, de
+logiciels, de sociétés commerciales ?
 
 Pour que ces questions ne restent pas dans les mains des
 informaticiens, il est nécessaire que chacun fasse l'effort de
-comprendre les bases, les fondements de ces technologies qui nous
-entourent. Le citoyen du XXIème siècle a besoin d'une véritable
-culture numérique qui ne se limite pas à l'utilisation de FaceBook ou
-d'un traitement de texte. C'est ce que nous allons développer dans ces
-cours...
+comprendre les bases, les fondements des technologies numériques qui
+nous entourent. Le citoyen du XXIème siècle a besoin d'une véritable
+culture numérique qui ne se limite pas à l'utilisation d'un traitement
+de texte ou la participation à un réseau. C'est ce que nous allons
+développer dans ces cours.
 
 ``` comprehension
 ::Pourquoi représenter avec des nombres ?::
@@ -79,30 +79,19 @@ information quelle qu'elle soit.</p>#<p>Oui !</p>
 
 ::Où sont les processeurs ?::
 [html]<p>Parmi ces objets, quels sont ceux équipés de
-processeur(s) \:</p>{ ~%16.66667%<p>tablettes</p>
-~%16.66667%<p>smartphones</p> ~%16.66667%<p>box ADSL</p>
-~%16.66667%<p>lecteur mp3</p> ~%16.66667%<p>ordinateur</p>
-~%16.66667%<p>calculatrice</p> ~<p>aucun</p>#<p>Tous !</p> ####<p>Tous
+processeur(s) \:</p>{ ~%20%<p>tablettes</p>
+~%20%<p>smartphones</p> ~%20%<p>box ADSL</p>
+~%20%<p>lecteur mp3</p> ~%20%<p>ordinateur</p>
+~<p>aucun</p>#<p>Tous !</p> ####<p>Tous
 ces objets sont équipés de micro-processeurs !</p> }
 ```
 
 ``` activité
 ::Le numérique concerne tout le monde:: 
 **Quels étudiants sont concernés par le numérique ?**
-Le numérique concerne évidemment les étudiants en informatique et plus
-généralement les étudiants des filières scientifiques.  Mais vous qui
-êtes inscrit dans une université de sciences humaines et sociales,
-êtes-vous concernés ?
-Choisissez au moins 3 des domaines suivants et faites des recherches
-pour voir en quoi ils sont impactés par le numérique.
-- dans les médias, dans la santé, en histoire, en sociologie, en
-- linguistique, en art et culture, dans l'enseignement, en
-- archéologie.
-Faites une synthèse en quelques lignes de vos recherches en précisant
-les domaines auxquels vous vous êtes intéressés. Indiquez les liens
-des sites sur lesquels vous avez trouvé ces informations.
-La liste est non exhaustive et vous pouvez vous intéresser à d'autres
-domaines...
+Le numérique concerne évidemment les étudiants en informatique et plus généralement les étudiants des filières scientifiques.  Mais vous qui êtes inscrits dans une université de sciences humaines et sociales, êtes-vous concernés ?
+Choisissez au moins 3 des domaines suivants et faites des recherches pour voir en quoi ils sont impactés par le numérique : les médias, la santé, l'histoire, la sociologie, la linguistique, les arts, la culture, l'enseignement, l'archéologie.
+Faites une synthèse en quelques lignes de vos recherches en précisant les domaines auxquels vous vous êtes intéressés. Indiquez les liens des sites sur lesquels vous avez trouvé ces informations. La liste est non exhaustive et vous pouvez vous intéresser à d'autres domaines.
 {### Le numérique concerne tout le monde
 Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n'est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
 S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** ( *digital humanities* en anglais). 
@@ -125,7 +114,6 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
 ``` activité-avancée
 ::Le numérique au quotidien::
 **Le numérique au quotidien**
-Du numérique partout autour de nous, tous les jours ...
 Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
     - Domotique
     - Transports
@@ -149,19 +137,19 @@ Les **lentilles pour la vue** ?
 ::Le numérique dans la société::
 [markdown]
 **Le numérique, un enjeu pour les citoyens du XXIème siècle** ...
-Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités** des applications développées. Nous vous invitons à vous **documenter** et à réfléchir aux questions suivantes :
- - Dans la **gestion de l‘énergie**: qu'est-ce que la **troisième révolution industrielle** et pourquoi le numérique y contribue-t-il ?
-- En **politique et média** : Qu'est-ce que la **vérification par les faits** (*fact-checking* en anglais) ? En quoi le numérique l'a rendue possible / facile ?
-- En **citoyenneté** : Que signifie **vote électronique** et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un *avantage* et un *inconvénient*.
-Après avoir fait vos recherches, répondez aux questions posées en **quelques lignes** et en indiquant les **liens** où vous avez trouvé ces informations.
+Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles choses en automatisant des procédures et en donnant accès à des données jusqu'ici inexploitables. Mais numérique n'est évidemment pas systématiquement synonyme de progrès. Il faut toujours réfléchir aux **finalités des applications** développées. Nous vous invitons à vous documenter et à réfléchir aux questions suivantes :
+ - Dans la **gestion de l‘énergie**: qu'est-ce que la troisième révolution industrielle et pourquoi le numérique y contribue-t-il ?
+- En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
+- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
+Après avoir fait vos recherches, répondez aux questions posées en quelques lignes et en indiquant les liens où vous avez trouvé ces informations.
 {####[markdown]
 Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
 - À propos de la troisième révolution industrielle :
   - [Troisième révolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
   - [pasdecalais](http://www.latroisiemerevolutionindustrielleennordpasdecalais.fr)
-- En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
+- En politique et média : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
   - [vérification par les faits](http://fr.wikipedia.org/wiki/Vérification_par_les_faits)
-- En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
+- En citoyenneté : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
   - [arguments] (http://fr.wikipedia.org/wiki/Vote_électronique#Arguments_en_faveur)
 }
 ```
@@ -180,28 +168,23 @@ les ordinateurs sont devenus des machines de traitement automatique de
 l'information. En français, le mot ordinateur s'est imposé en 1956.
 
 Les premières machines sont réalisées avec des composants
-rudimentaires comme des relais électriques et des lampes à
-vide. Ceux-ci seront par la suite remplacés par des transistors. Elles
-sont très volumineuses et lourdes, consomment énormément d'énergie.
-
-Mais surtout, leur utilisation est complexe car il est nécessaire
+rudimentaires comme des relais électriques et des lampes à vide. Elles
+sont très volumineuses et lourdes, consomment énormément d'énergie. Mais surtout, leur utilisation est complexe car il est nécessaire
 d'écrire les programmes qu'elles exécutent dans un langage très
 technique propre à chacune d'elles : un langage machine. De ce fait,
 leur diffusion et leur commercialisation sont très limitées. Deux
 inventions majeures vont lever ces difficultés : les langages
-informatiques et la miniaturisation. C'est à la fin des années 50 que
+informatiques et la miniaturisation.
+
+C'est à la fin des années 50 que
 les premiers langages informatiques de programmation apparaissent. Ce
 sont des langages artificiels, c'est-à-dire inventés par l'homme,
-facilement lisibles et intelligibles.
-
-Un programme spécifique appelé *compilateur* ou *interprète* se charge
+facilement lisibles et intelligibles. Un programme spécifique appelé *compilateur* ou *interprète* se charge
 de traduire un texte écrit dans ce langage de programmation en langage
 machine. Les conséquences sont importantes : la programmation devient
 accessible à un plus grand nombre d'individus, et l'écriture d'un
 programme n'est plus spécifique à une machine. C'est le début du
-métier de programmeur.
-
-Le changement d'ordinateur pour une autre version plus rapide ou plus
+métier de programmeur. Le changement d'ordinateur pour une autre version plus rapide ou plus
 puissante est facilité et moins coûteux car les programmes ne doivent
 pas être réécrits.
 
@@ -220,9 +203,7 @@ ce processus de miniaturisation. *Le nombre de transistors intégrés
 dans les microprocesseurs doublera tous les 2 ans*. Cette affirmation
 connue sous *la loi de Moore* se vérifie depuis plus de 40 ans. On
 l'interprète dans le grand public comme *la puissance des ordinateurs
-double tous les 2 ans*.
-
-Ce qui signifie en pratique que lorsque vous achetez un ordinateur,
+double tous les 2 ans*. Ce qui signifie en pratique que lorsque vous achetez un ordinateur,
 moins de 2 ans après vous pouvez trouver un autre modèle 2 fois plus
 puissant au même prix.
 
@@ -247,7 +228,7 @@ puissant au même prix.
 ```Activité
 ::La puissance augmente::
 [markdown]**Une histoire de puissance**
-Entre mon ordinateur et l'ordinateur de mon père qui ont 12 ans d'écart, quelle est la différence de puissance à laquelle on peut s'attendre ?
+Entre mon ordinateur et l'ordinateur de mon père qui ont 12 ans d'écart, quelle est la différence de puissance à laquelle on peut s'attendre ? Pensez à utiliser la loi de Moore et pensez à bien écrire la puissance après 2ans, 4 ans, 6 ans, ..., avant de répondre.
 {
 ~Ils sont tous les deux aussi puissants, ça n'a pas changé en 12 ans.#Il faut revoir la vidéo !
 ~Mon ordinateur est environ 20 fois plus puissant.#Bien plus que ça...
@@ -263,8 +244,7 @@ En d'autres mots un traitement qui prenait 30 min avec l'ordinateur de mon père
 
 ::Un bug::
 [markdown]**D'où vient le mot "bug" ?**
-Il est malheureusement courant d'être confronté à des programmes <em>bugués</em>, c'est à dire des programmes qui ne font pas ce qu'ils sont sensés faire.
-Mais savez-vous d'où vient le terme *bug* ?
+Il est malheureusement courant d'être confronté à des programmes <em>bugués</em>, c'est à dire des programmes qui ne font pas ce qu'ils sont sensés faire. Mais savez-vous d'où vient le terme *bug* ?
 {
 =En anglais, bug signifie insecte. Un insecte s'était glissé dans le mécanisme d'un des premiers ordinateurs, ce qui avait fait griller un relais et provoqué une panne.#En effet, il s'agissait d'une mite.
 ~Bug était le surnom d'un des premiers programmeurs chez Microsoft, il était réputé pour commettre beaucoup d'erreurs.#Non, cherchez bien, c'est sur le web ! 
@@ -279,14 +259,13 @@ Mais savez-vous d'où vient le terme *bug* ?
 ::Des personnages importants::
 [markdown]**Des personnages importants**
 Tout ne s'est pas fait en un jour, ...
-Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux **chercheurs** et **ingénieurs** ont contribué au **développement** des **idées** et des **machines**.
-Nous vous proposons de faire une recherche sur **4 personnes**, dont 2 **femmes** qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
+Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux chercheurs et ingénieurs ont contribué au développement des idées et des machines. Nous vous proposons de faire une recherche sur 4 personnes, dont 2 femmes qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
 - [Ada Lovelace](http://fr.wikipedia.org/wiki/Ada_Lovelace)
 - [Grace Hopper](http://fr.wikipedia.org/wiki/Grace_Hopper)
 - [Alan Turing](http://fr.wikipedia.org/wiki/Alan_Turing)
 - [John Von Neuman](http://fr.wikipedia.org/wiki/John_von_Neumann)
-Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, **l'homme** et la **machine**, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
-Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en **quelques lignes** en les resituant chronologiquement.
+Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, l'homme et la machine, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
+Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en quelques lignes en les resituant chronologiquement.
 {## Personnages importants
 ### Ada Lovelace
 ![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
@@ -315,18 +294,17 @@ Grace Hopper a inventé le **premier compilateur**. Elle est aussi à l'origine 
 }
 
 ::La vitesse des ordinateurs::
-Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa **vitesse de calcul**.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliard de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
-En vous aidant par exemple de :
-- [http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs)
-retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
+Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa vitesse de calcul.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliards de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
+En vous aidant par exemple de [cette page](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs), retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
     - l'ENIAC 
     - Apple I
     - IBM PC
     - Ipad (premier modèle)
     - smartphone Samsung Galaxy S4
-Essayez de **tracer un diagramme** ou une courbe pour **représenter** cette **évolution**. Que constatez-vous ?
+Essayez de tracer un diagramme ou une courbe pour représenter cette évolution. Quelle difficulté rencontrez-vous et que pouvez-vous en déduire sur cette évolution ?
 {
 ## la vitesse des ordinateurs
+[markdown]**La vitesse des ordinateurs**
 **L'ENIAC**
 ![ENIAC](media/ENIAC.gif)
 L'un des tout premiers ordinateurs, l'`ENIAC` a été réalisé en **1946**. Il avait une vitesse d'horloge de **100khz**, ce qui signifie qu'il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l'`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C'est toujours le cas pour tous les programmes informatiques.
@@ -349,15 +327,12 @@ Notons, que cette loi *empirique* (constatée, mais pas démontrée) s'arrêtera
 [markdown]
 **L'Ordinateur personnel**
 ![Francois Gernelle](media/FrancoisGernelle.jpg)
-Historiquement, les premiers ordinateurs étaient de **très grosses machines**, appelés *MainFrame*, occupant des salles entières et dédiées à des traitements de gestion. La **miniaturisation** a entraîné l'apparition de nouveaux ordinateurs pouvant simplement être posés sur des **bureaux**. C'est la naissance de la *deuxième ère* de l'informatique.
-C'est au début des années **70**,  qu'un français, **François Gernelle** (photo),  a breveté l'idée d'**ordinateur personnel**.
-Mais c'est au début des années **80**, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d'un **autre modèle** d'ordinateurs personnels qui lui assure un **succès commercial** important et qui marque le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`: le **PC** (*Personnal Computer*).
-À l'aide de ressources telles que :
-- [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia.org/wiki/IBM_PC)
-faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes
-    - En quelle **année** est-il apparu ?
-    - Quelle **quantité** en a-t-on fabriqué ?
-    - Quelle était la taille de son **Disque dur** ?
+Historiquement, les premiers ordinateurs étaient de très grosses machines (appelés *MainFrame* en anglais) occupant des salles entières et dédiés à des traitements de gestion. La miniaturisation a entraîné l'apparition d'ordinateurs pouvant être posés sur des bureaux. C'est la naissance de la *deuxième ère de l'informatique*.
+C'est au début des années 70,  qu'un français, *François Gernelle* (photo),  a breveté l'idée d'**ordinateur personnel**. Mais c'est au début des années 80, qu'une grande entreprise américaine du secteur informatique, `IBM` commence une production massive d'un autre modèle d'ordinateur personnel qui lui assure un succès commercial important qui va marquer le secteur pendant des années. Depuis, on dit souvent que le premier ordinateur personnel a été celui fabriqué par `IBM`, ordinateur appelé *PC* pour *Personnal Computer*.
+Faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes :
+    - En quelle année est-il apparu ?
+    - Quelle quantité en a-t-on fabriqué ?
+    - Quelle était la capacité de son disque dur ?
     - Pourquoi le `PC` d'`IBM` est-il resté dans l'histoire ?
 {## D'où vient le PC ?
 ### Le PC de 1981 à aujourd'hui
@@ -374,18 +349,11 @@ extrait de wikipedia : [http://fr.wikipedia.org/wiki/IBM_PC](http://fr.wikipedia
 
 ::Les interfaces Homme - Machine::
 **Les interfaces Homme - Machine**
-Une branche de la **science informatique** est l'étude des **interactions** entre l'homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des **progrès** technologiques, à des efforts **d'ingénieurs** et à des succès **commerciaux**, mais aussi à des avancées dans les **idées**.
-Le numérique n'a pas toujours été aussi facile d'accès qu'aujourd'hui,... Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
+Une branche de la science informatique est l'étude des interactions entre l'homme et la machine. De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois, à des progrès technologiques, à des efforts d'ingénieurs et à des succès commerciaux, mais aussi à des avancées dans les idées. Nous vous proposons de faire quelques recherches pour appréhender l'évolution des interfaces.
 - Que doit-on à Douglas **Engelbart** ?
 - Qu'est-ce que le  **Palo Alto Research Center** ? Qu'y fait-on ?
-- Qu'est-ce que l'ordinateur **Lisa** ?
-   - Qu'a-t-il apporté de nouveau ?
-   - Qui l'a fabriqué ?
-   - En quelle année est-il apparu ?
-Par ailleurs, les ordinateurs prennent des formes nouvelles et se combinent avec d'autres objets du quotidien, ...
-- Qu'appelle-t-on **l'informatique ubiquitaire** ou *informatique omniprésente* ?
-   - quel objet en est le meilleur représentant ?
-Après avoir effectué vos recherches, répondez aux questions.
+- Qu'est-ce que l'ordinateur **Lisa** ? Qu'a-t-il apporté de nouveau ? Qui l'a fabriqué ? En quelle année est-il apparu ?
+Par ailleurs, les ordinateurs prennent désormais des formes nouvelles et se combinent avec d'autres objets du quotidien. Effectuez des recherches pour dire ce qu'on appelle l'informatique ubiquitaire (ou informatique omniprésente) et donnez un meilleur représentant. 
 {## Évolution des interfaces homme-machine
 ### Les interfaces ont démocratisé l'accès au numérique
 Une branche de la **science informatique** est l'étude des interactions entre l'homme et la machine.
