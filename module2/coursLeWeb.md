@@ -45,7 +45,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 ```activité-avancée
 ::Tim Berners-Lee::[html]<div>
-	<p dir="ltr">En vous aidant par exemple de cette ressource :</p>
+	<p dir="ltr">En vous aidant par exemple de cette ressource : </p>
 	<p dir="ltr">
 	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
 	</p>

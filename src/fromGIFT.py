@@ -103,7 +103,6 @@ class GiftQuestion():
 
     def to_html(self, feedback_option=False):
         """ From a question object, write HTML representation """
-        print("== feedback_option ? %s" % (type(feedback_option)))
         doc, tag, text = Doc().tagtext()
         # FIXME : add comment line here ?
         doc.asis('\n')
@@ -139,18 +138,15 @@ class GiftQuestion():
                                 doc.stag('input', type='checkbox', name="name")
                                 doc.asis(answer['answer_text'])
 
-            # elif self.type == 'TRUEFALSE':
-            #     with tag('ul', klass=self.type.lower()):
-            #         for choice in ['vrai', 'faux']:
-            #             with tag('li'):
-            #                 doc.stag('input', type='radio')
-            #                 text(choice)
             if (feedback_option and len(self.global_feedback) > 1):
                 with tag('div', klass='global_feedback'):
                     doc.asis('<b><em>Feedback:</em></b><br/>'+self.global_feedback)
         doc.asis('\n')
         doc.asis('\n')
-        return(indent(doc.getvalue(), newline='\n'))
+        try:
+            return((doc.getvalue()))
+        except:
+            print("eeror\n"+doc.getvalue())
 
     
     def parse_gift_src(self):
@@ -250,8 +246,10 @@ class GiftQuestion():
     
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
+    question = re.sub('\\:', '', question) # remove \: in src txt
     question = re.sub('\\\:', '', question) # remove \: in src txt
-    question = re.sub('\\\=', '', question) # remove \: in src txt
+    question = re.sub('\\=', '', question) # remove \= in src txt
+    question = re.sub('\\\=', '', question) # remove \= in src txt
 
     return question
 
