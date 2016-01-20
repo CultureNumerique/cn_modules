@@ -103,7 +103,7 @@ class GiftQuestion():
 
     def to_html(self, feedback_option=False):
         """ From a question object, write HTML representation """
-
+        print("== feedback_option ? %s" % (type(feedback_option)))
         doc, tag, text = Doc().tagtext()
         # FIXME : add comment line here ?
         doc.asis('\n')
@@ -115,28 +115,29 @@ class GiftQuestion():
                 if self.text_format == 'html':
                     doc.asis(self.text)
                 else:
-                    logging.info ("printing Markdown/ source = %s " % (self.text))
+                    logging.info ("printing Markdown/ source = %s" % (self.text))
                     html_text = markdown.markdown(self.text, MARKDOWN_EXT)
                     doc.asis(html_text)
             # If type MULTICHOICE, MULTIANSWER give choices
             if self.type in ['MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE']:
                 with tag('ul', klass=self.type.lower()):
                     for answer in self.answers:
-                        
-                        with tag('li'):
-                            if self.type in ['MULTICHOICE', 'TRUEFALSE']:
-                                if answer['is_right'] and feedback_option:
-                                    answer_class = 'right_answer'
-                                else:
-                                    answer_class = ''
-                                doc.stag('input', type='radio', klass=answer_class)
-                            elif self.type == 'MULTIANSWER':
-                                if float(answer['credit']) > 0.0 and feedback_option:
-                                    answer_class = 'right_answer'
-                                else:
-                                    answer_class = ''
-                                doc.stag('input', type='checkbox', klass=answer_class)
-                            doc.asis(answer['answer_text'])
+                        if self.type in ['MULTICHOICE', 'TRUEFALSE']:
+                            if answer['is_right'] and bool(feedback_option):
+                                answer_class = 'right_answer'
+                            else:
+                                answer_class = ''
+                            with tag('li', klass=answer_class):
+                                doc.stag('input', type='radio', name="name")
+                                doc.asis(answer['answer_text'])
+                        elif self.type == 'MULTIANSWER':
+                            if float(answer['credit']) > 0.0 and feedback_option:
+                                answer_class = 'right_answer'
+                            else:
+                                answer_class = ''
+                            with tag('li', klass=answer_class):
+                                doc.stag('input', type='checkbox', name="name")
+                                doc.asis(answer['answer_text'])
 
             # elif self.type == 'TRUEFALSE':
             #     with tag('ul', klass=self.type.lower()):
@@ -144,9 +145,9 @@ class GiftQuestion():
             #             with tag('li'):
             #                 doc.stag('input', type='radio')
             #                 text(choice)
-            if feedback_option:
-                with tag('p', klass='global_feedback'):
-                    text(self.global_feedback)
+            if (feedback_option and len(self.global_feedback) > 1):
+                with tag('div', klass='global_feedback'):
+                    doc.asis('<b><em>Feedback:</em></b><br/>'+self.global_feedback)
         doc.asis('\n')
         doc.asis('\n')
         return(indent(doc.getvalue(), newline='\n'))

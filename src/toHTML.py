@@ -223,7 +223,9 @@ def prepareDestination(outDir):
         try :
             shutil.copytree(d, dest)
         except FileExistsError as e:
-            logging.warn("%s already exists",d)
+            logging.warn("%s already exists, going to overwrite it",d)
+            shutil.rmtree(dest)
+            shutil.copytree(d, dest)
             
 ############### main ################
 if __name__ == "__main__":
@@ -236,7 +238,7 @@ if __name__ == "__main__":
     group.add_argument("-m", "--modules",help="module folders",nargs='*')
     parser.add_argument("-l", "--log", dest="logLevel", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help="Set the logging level", default='WARNING')
     parser.add_argument("-d", "--destination", help="Set the destination dir", default='build')
-    parser.add_argument("-f", "--feedback", action='store_true', help="Set the destination dir", default='False')
+    parser.add_argument("-f", "--feedback", action='store_true', help="Set the destination dir", default=False)
     
     args = parser.parse_args()
     logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))

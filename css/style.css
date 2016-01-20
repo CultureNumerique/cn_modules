@@ -327,19 +327,38 @@ h2.accueil, h3.accueil {
 	padding: 3px;
 }
 
-.multichoice >li {
+/*.multichoice >li {
 	list-style: none;
 }
 
+.truefalse >li {
+	list-style: none;
+}
 .multianswer >li {
 	list-style: none;
-}
+}*/
 
+.question > ul > li{
+	list-style: none;
+}
 .question p.questiontitle {
 	font-weight: bold;
 	color: dark-grey;
 }
 
+.right_answer:before{
+	display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+	margin-right: 0em;
+	margin-left: -1.4em;
+	float:left;
+    content: url('../svg/activite_correction.svg');
+}
+
+.global_feedback{
+	color:darkgray;
+}
 /* ---------  fancyBox for video text in "lessons" main sections display */
 
 .fancybox-opened .fancybox-skin{
