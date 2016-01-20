@@ -143,11 +143,7 @@ class GiftQuestion():
                     doc.asis('<b><em>Feedback:</em></b><br/>'+self.global_feedback)
         doc.asis('\n')
         doc.asis('\n')
-        try:
-            return((doc.getvalue()))
-        except:
-            print("eeror\n"+doc.getvalue())
-
+        return((doc.getvalue()))
     
     def parse_gift_src(self):
         # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
@@ -166,6 +162,7 @@ class GiftQuestion():
                 q_poststate = tmp.split('}', maxsplit=1)[1]
 
         # 2. Process q_prestate
+        print("<<< prestate =\n%s" % (q_prestate))
         r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>[^\]]*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
         m0 = r0.search(q_prestate)
         if m0.group('title'):
@@ -246,10 +243,10 @@ class GiftQuestion():
     
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
-    question = re.sub('\\:', '', question) # remove \: in src txt
-    question = re.sub('\\\:', '', question) # remove \: in src txt
-    question = re.sub('\\=', '', question) # remove \= in src txt
-    question = re.sub('\\\=', '', question) # remove \= in src txt
+    # question = re.sub('\\:', '', question) # remove \: in src txt
+    # question = re.sub('\\\:', '', question) # remove \: in src txt
+    # question = re.sub('\\=', '', question) # remove \= in src txt
+    # question = re.sub('\\\=', '', question) # remove \= in src txt
 
     return question
 
