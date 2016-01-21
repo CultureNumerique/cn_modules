@@ -162,7 +162,6 @@ class GiftQuestion():
                 q_poststate = tmp.split('}', maxsplit=1)[1]
 
         # 2. Process q_prestate
-        print("<<< prestate =\n%s" % (q_prestate))
         r0 = re.compile('(::(?P<title>.*)::){0,1}\s*(\[(?P<text_format>[^\]]*)\]){0,1}(?P<text>.*)', flags=re.M+re.S)
         m0 = r0.search(q_prestate)
         if m0.group('title'):

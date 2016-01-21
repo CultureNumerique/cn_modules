@@ -251,9 +251,7 @@ if __name__ == "__main__":
 
     # check destination
     prepareDestination(args.destination)
-        
-    print ("Feedback arg ? %s" % args.feedback)
-    
+            
     if args.config != None:
         processConfig(args.config,e,args.destination, args.feedback)
     elif args.modules != None:
