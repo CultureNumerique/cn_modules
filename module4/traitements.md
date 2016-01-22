@@ -126,45 +126,48 @@ Pour introduire ces principes de composition, plaçons nous au plus
 près du matériel, c'est-à-dire de la machine qui manipule des 0 et
 des 1. Le modèle de calcul de base de toutes les machines suppose une
 unité de calcul qui sait faire des calculs avec des 0 et des 1 et des
-mémoires dans lesquelles la machine peut ranger des résultats dans
-lesquelles la machine peut aller chercher les valeurs mémorisées. Nous
-supposons que la machine peut ainsi accéder à une table qui donne le
-codage des caractères usuels sur un octet (un octet est constitué de 8
-bits).
+mémoires dans lesquelles la machine peut ranger des résultats et aller
+chercher les valeurs mémorisées. 
 
 Apprenons à notre machine à transformer un caractère majuscule en
-caractère minuscule correspondant. Vous pourrez vérifier dans le cours
-sur les documents que le caractère A a pour nom "Latin Capital Letter
-A" et pour numéro 65 et que pour passer d'une lettre majuscule de
-notre alphabet à la lettre minuscule correspondante, il suffit
-d'ajouter 32 à son numéro. Nous pouvons déjà écrire une suite
-d'instructions pour écrire notre programme de transformation : avec un
-caractère lettre majuscule en entrée,
+caractère minuscule correspondant. Nous supposons que la machine peut
+accéder à une table qui donne le codage des caractères usuels. Vous
+pourrez vérifier dans le cours sur les documents que le caractère A a
+pour nom "Latin Capital Letter A" et pour numéro 65 et que pour passer
+d'une lettre majuscule de notre alphabet à la lettre minuscule
+correspondante, il suffit d'ajouter 32 à son numéro. Nous pouvons déjà
+écrire une suite d'instructions pour écrire notre programme de
+transformation. 
 
-1. aller chercher le code du caractère dans la table des codes
-2. ajouter 32 au code trouvé
-3. aller chercher le caractère correspondant au résultat trouvé dans
+`MAJ2MIN-CARA`
+
+1. un caractère lettre majuscule en entrée
+2. aller chercher le code du caractère dans la table des codes
+3. ajouter 32 au code trouvé
+4. aller chercher le caractère correspondant au résultat trouvé dans
    la table des codes
-4. renvoyer comme résultat le caractère trouvé
+5. renvoyer comme résultat le caractère trouvé
 
 Où sont nos 0 et nos 1 ? Allons les voir puis nous les
 oublierons. Prenons le caractère A de code 65, le nombre 65 se code
 sur un octet par 01000001. Le nombre 32 se code sur un octet
-par 00100000. Il suffit d'ajouter ces deux octets avec un programme
-qui va se comporter comme l'addition que vous avez appris à l'école
-primaire. On additionne les chiffres de la droite vers la gauche avec
-les règles de calcul suivante : 0+0 = 0, 0+1 = 1, 1+0 = 1, 1+1 = 0
-avec une retenue de 1. Ces régles sont facilement calculables par
-notre machine de base et on peut utiliser une mémoire pour mémoriser
-la retenue. On peut donc apprendre à la machine un programme
-d'addition : avec deux octets en entrée
+par 00100000. Il suffit d'ajouter les deux codes ce qui peut être fait
+en ajoutant les deux octets. Il faut donc un programme d'addition de
+deux octets. Le principe est celui de l'addition que vous avez appris
+à l'école primaire. On additionne les chiffres de la droite vers la
+gauche avec les règles de calcul suivante : 0+0 = 0, 0+1 = 1, 1+0 = 1,
+1+1 = 0 avec une retenue de 1. Ces régles sont facilement calculables
+par notre machine de base et on peut utiliser une mémoire pour
+mémoriser la retenue. On peut donc apprendre à la machine un programme
+d'addition
 
-1. pour tous les bits de droite a gauche
-2. ajouter le bit courant du premier octet avec le bit courant du
+1. deux octets en entrée, une retenue qui vaut 0
+2. pour tous les bits de droite a gauche
+3. ajouter le bit courant du premier octet avec le bit courant du
    second octet et avec la retenue courante
-3. donner une valeur au bit courant du résultat et mettre à jour la retenue
-4. fin du pour
-4. renvoyer l'octet résultat
+4. donner une valeur au bit courant du résultat et mettre à jour la retenue
+5. fin du pour
+6. renvoyer l'octet résultat
 
 Et, par conséquent, on peut utiliser ce programme d'addition pour
 ajouter 32 au code de notre lettre majuscule ! Le tour est joué !
@@ -180,19 +183,21 @@ c'est-à-dire on prend le caractère sans le modifier. Peut-on savoir si
 un caractère est une majuscule ? Oui car il suffit de regarder si le
 code du caractère est compris entre 65 (le code de A) et 91 (le code
 de Z) et nous supposons que la machine sait comparer deux nombres
-entiers. Ce qui donne le programme suivant : avec en entrée une
-séquence de caractères,
+entiers. Ce qui donne le programme
 
-1. le résultat est une séquence de caractères vide
-2. pour tous les caractères de la séquence
-3. si le code du caractère courant est compris entre 65 et 91
-4. appeler le programme qui transforme une majuscule en minuscule et
+`MAJ2MIN-CHAINE`
+
+1. Une séquence de caractères en entrée
+2. le résultat est une séquence de caractères vide
+3. pour tous les caractères de la séquence d'entrée
+4. si le code du caractère courant est compris entre 65 et 91
+5. appeler le programme qui transforme une majuscule en minuscule et
    l'ajouter à la séquence résultat
-5. Sinon
-6. ajouter le caractère courant (sans rien faire)
-7. fin du si
-8. fin du pour
-9. renvoyer la séquence résultat
+6. Sinon
+7. ajouter le caractère courant (sans rien faire)
+8. fin du si
+9. fin du pour
+10. renvoyer la séquence résultat
 
 Et voilà ! Notre machine a une nouvelle fonctionnalité : elle sait
 transformer une séquence de caractères en remplaçant toutes les
@@ -204,12 +209,109 @@ section suivante.
 
 ### Les trois compositions de base
 
-suite, sialorssinon, boucle ou itération. Theoreme. note sur
-calculabilité. pointeurs historique et philosophique
+Nous avons fait émerger les opérations de composition dans notre
+exemple sur la transformation de séquences de caractères.  La
+première, la plus évidente, est de combiner les instructions en
+définissant une **suite d'instructions** encore appelée séquence
+d'instructions. Un exemple est `MAJ2MIN-CARA` qui est constitué d'une
+suite d'instructions. L'exécution d'une suite d'instructions se fait
+en exécutant la première instruction, puis la seconde, jusqu'à
+épuisement de la suite d'instructions.
 
-### Composer : la vision ascendante
+Mais on est vite confronté à des situations où l'instruction à
+réaliser peut dépendre de conditions. Par exemple, dans
+`MAJ2MIN-CHAINE` on ne souhaite transformer le caractère que si c'est
+une lettre majuscule. Un autre exemple peut être celui d'un robot qui
+avance si il n'y a pas d'obstacle devant lui et qui tourne
+sinon. Cette opération de composition est appelée **alternative** ou
+**si alors sinon**. Elle s'écrit de façon générale sous la forme `SI
+condition ALORS SuiteInstructionsSi SINON SuiteInstructionsSinon
+FINSI` où condition peut prendre une des deux valeurs `VRAI` ou `FAUX`
+et `SuiteInstructionsSi` et `SuiteInstructionsSinon` sont des suites
+d'instructions. L'exécution d'une alternative se fait en estimant la
+valeur de `condition`, puis si cette valeur est `VRAI` on exécute les
+instructions dans `SuiteInstructionsSi`, si cette valeur est `FAUX` on
+exécute les instructions dans `SuiteInstructionsSinon`.
 
-composer de couche en couche
+La suite d'instructions permet de définir une suite d'instructions
+mais il faut écrire chaque instruction et il faut donc connaître à
+l'avance le nombre d'instructions à exécuter ce qui n'est pas toujours
+le cas. Reprenons l'exemple de `MAJ2MIN-CHAINE`, on ne connait pas la
+longueur de la séquence à l'avance et nous avons utilisé une
+composition de la forme "pour tous les caractères de la séquence
+d'entrée" pour dire que l'on devait appliquer une transformation à
+tous les caractères de la séquence. Un second exemple est le cas du
+robot qu'on souhaite faire avancer dans un environnement inconnu. On
+souhaite qu'il répète l'action d'avancer tant qu'il ne rencontre pas
+d'obstacle. Ces deux exemples ont introduit la troisième et dernière
+opération de composition appelée **itérative** ou **répétition** ou
+**tant que**. Elle s'écrit de façon générale sous la forme `TANTQUE
+condition FAIRE SuiteInstructions FINTANTQUE`. L'exécution se fait en
+estimant la valeur de `condition`, puis si cette valeur est `VRAI`, on
+exécute les instructions dans `SuiteInstructions`, et on revient
+estimer la valeur de `condition`, et on réitère. Dans le cas où la
+valeur de `condition` est `FAUX` on passe à la suite, on dit que "on
+sort du tant que". Ce mode de composition permet de réitérer un même
+traitement un nombre quelconque de fois. Notez bien que il faut
+s'assurer que la condition prenne au bout d'un certain temps la valeur
+`FAUX` pour que l'exécution s'arrête ! Cette opération de composition
+peut aussi s'écrire avec une opération `REPETER` ou avec une opération
+`POURTOUT`.
+
+Voilà, vous savez tout ! ou plus exactement vous connaissez les trois
+modes de composition qui permettent d'écrire toutes les
+applications. En effet, il existe un **théorème** qui affirme que tout
+ce qui est calculable avec une machine peut être défini par quelques
+opérations élémentaires et les opérations de composition que sont la
+suite (ou la séquence), l'alternative et l'itérative. Ce théorème a
+été démontré au milieu du vingtième siècle par des mathématiciens et
+des logiciens. Ceci soulève immédiatement la question : une machine
+peut-elle tout calculer ? La réponse, démontrée à la même époque est
+négative : il existe des problèmes que ne peut pas résoudre une
+machine. Par exemple, il est montré qu'il n'existe pas de machine qui
+prend en entrée une suite d'instructions contenant des alternatives et
+des itératives et qui répond en sortie cette suite d'instructions va
+s'arrêter en un temps fini lorsqu'on l'exécutera. Ces sujets soulèvent
+des problèmes importants qui ont été et sont encore étudiés par les
+mathématiciens, les informaticiens, les logiciens et les
+philosophes. Notons enfin, que savoir qu'un problème est calculable ne
+suffit pas à savoir le traiter car le temps de calcul peut être
+prohibitif.
+
+Question : parler de Variables en lien avec les mémoires données en
+exemple introductif ? 
+
+
+### Créer de nouvelles applications
+
+Nous supposons disposer d'une machine avec des fonctionnalités de
+base. Cela peut être une machine très proche du matériel sachant faire
+des opérations sur des 0 et des 1 ; cela peut être une machine qui
+sait manipuler des nombres, des caractères et des textes ; cela peut
+être un robot qui sait avancer, tourner et repérer des obstacles ;
+cela peut être un logiciel de dessin vectoriel qui sait se repérer sur
+une grille, tracer des segments, des cercles, des courbes et
+colorier. Les exemples sont nombreux, mais, pour tous ces exemples,
+notre objectif est d'ajouter de nouvelles fonctionnalités à notre
+machine. Nous allons décrire deux principes de conception.
+
+Le principe de la **conception ascendante** est de créer de nouvelles
+fonctionnalités en utilisant les modes de composition introduits dans
+la section précédente. Ces nouvelles fonctionnalités peuvent, à leur
+tour, être considérées commes des fonctionnalités de base et on peut
+recommencer le processus de conception de nouvelles fonctionnalités
+encore plus riches. Ceci fait que vous disposez sur les machines
+actuelles d'environnements très riches avec de très nombreuses
+applications. Par conséquent, la plupart des besoins, personnels ou
+professionnels, des utilisateurs sont couverts par une ou plusieurs
+applications. Bien comprendre le fonctionnement des machines et des
+applications permet de se poser les bonnes questions et de choisir la
+meilleure application en fonction des besoins et de critères sociaux,
+financiers, d'usage ou autres. Néanmoins, il se peut qu'un besoin ne
+soit pas couvert, dans ce cas, il sera nécessaire de développer ou
+faire développer une nouvelle fonctionnalité adaptée.
+
+Le principe de la **conception descendante** est
 
 ### Composer : la vision descendante
 
