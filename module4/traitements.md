@@ -278,10 +278,6 @@ philosophes. Notons enfin, que savoir qu'un problème est calculable ne
 suffit pas à savoir le traiter car le temps de calcul peut être
 prohibitif.
 
-Question : parler de Variables en lien avec les mémoires données en
-exemple introductif ? 
-
-
 ### Créer de nouvelles applications
 
 Nous supposons disposer d'une machine avec des fonctionnalités de
@@ -300,31 +296,71 @@ fonctionnalités en utilisant les modes de composition introduits dans
 la section précédente. Ces nouvelles fonctionnalités peuvent, à leur
 tour, être considérées commes des fonctionnalités de base et on peut
 recommencer le processus de conception de nouvelles fonctionnalités
-encore plus riches. Ceci fait que vous disposez sur les machines
-actuelles d'environnements très riches avec de très nombreuses
-applications. Par conséquent, la plupart des besoins, personnels ou
+encore plus riches. On peut comprendre les machines actuelles qui
+disposent de très nombreuses applications comme construites selon ce
+principe en partant de fonctionnalités de base avec un empilement de
+couches successives applicatives de plus en plus riches. Par
+conséquent, aujourd'hui, la plupart des besoins, personnels ou
 professionnels, des utilisateurs sont couverts par une ou plusieurs
-applications. Bien comprendre le fonctionnement des machines et des
-applications permet de se poser les bonnes questions et de choisir la
-meilleure application en fonction des besoins et de critères sociaux,
-financiers, d'usage ou autres. Néanmoins, il se peut qu'un besoin ne
-soit pas couvert, dans ce cas, il sera nécessaire de développer ou
+applications ce qui fait dire, à tort, à certains qu'il est inutile de
+comprendre comment on code des applications. Nous pensons a contrario
+que bien comprendre le fonctionnement des machines et des applications
+permet de se poser les bonnes questions, de comprendre le
+fonctionnement des applications et de pouvoir choisir la meilleure
+application en fonction des besoins et de critères sociaux,
+financiers, d'usage ou autres. De plus, il se peut qu'un besoin ne
+soit pas couvert et, dans ce cas, il sera nécessaire de développer ou
 faire développer une nouvelle fonctionnalité adaptée.
 
-Le principe de la **conception descendante** est
+Le principe de la **conception descendante** est de construire une
+application ou une nouvelle fonctionnalité en décomposant le problème
+en des problèmes plus simples. La décomposition se base toujours sur
+les modes de composition introduits précédemment. On arrête la
+décomposition lorsque tous les sous-problèmes introduits correspondent
+à des fonctionnalités de base de la machine dont on dispose. Il ne
+reste plus alors qu'à écrire les nouvelles fonctionnalités pour notre
+machine. Exemple ? compter les mots d'un texte ? un exemple avec le
+robot ?
 
-### Composer : la vision descendante
-
-résoudre un problème : décomposer
+Concevoir une application est une tâche de conception donc une tâche
+de haut niveau. En effet, un telle tâche comporte de nombreux choix
+sur la façon d'organiser les données, d'organiser les traitements, de
+répondre aux beoisn de l'utilisateur, de répondre aux contraintes en
+particulier légales. On parle d'*analyse informatique* ou de *génie
+logiciel* pour désigner la science de concevoir des
+applications. C'est une tâche souvent réalisée en équipe associant des
+informaticiens, des utilisateurs et des experts métier. Il y a de
+nombreuses méthodes de conception. Les méthodes les plus récentes sont
+les *méthodes agiles* alternant phases de conception, phases de
+développement, phases de mise en oeuvre et de retour des
+utilisateurs. Ce domaine est toujours en expansion et les développeurs
+d'applications sont toujours très recherchés avec actuellement une
+forte demande pour les applications sur petits objets portables tels
+que smartphones et tablettes qui ont des contraintes spécifiques.
 
 ```compréhension
 ::Représenter et manipuler::
 [markdown]
 **Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
-{T}
+Les traitements possibles
+dépendent fortement des choix de représentation {T}
 ```
+
 # Une représentation adaptée pour un traitement
+
+Nous avons introduit les principes généraux de la conception
+d'applications avec les trois compositions de base que sont la suite
+d'instructions, l'alternative et l'itérative. Ces trois opérations
+permettent de définir ce qui est calculbale par une machine. Pour un
+traitement à réaliser, de nombreux choix conceptuels sont
+possibles. Nous allons voir dans cette section que il faut réaliser
+une application qui résout le problème mais il faut que cette
+application satisfasse également des contraintes de rapidité
+d'exécution et de place nécessaire en mémoire. Pour cela, nous allons
+voir différents modes de représentation des données et les traitements
+associés et comparer leur efficacité. Avant cela, une parenthèse sur
+la façon dont on mémorise les données avec la notion de **varaible
+informatique**.
 
 ### Types de données élémentaires
 
@@ -350,7 +386,17 @@ Les traitements possibles dépendent fortement des choix de représentation
 
 ### Le système d'exploitation
 
-Le système d'exploitation est la première couche logicielle de tout ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il cache toute la complexité des calculs en binaire au niveau matériel (vous vous en moquez), la façon dont il range les données dans les mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon dont il gère l'exécution des programmes que vous lancez (il faut que mes applications fonctionnent, plusieurs en même temps) et la façon dont il gère toutes les entrées-sorties, c'est-à-dire toutes les communications avec les périphériques (il saisit ce que je tape au clavier, il comprend mes clicks, il affiche sur l'écran, il envoie mes impressions à l'imprimante, il échange mes données sur le réseau).
+Le système d'exploitation est la première couche logicielle de tout
+ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il
+cache toute la complexité des calculs en binaire au niveau matériel
+(vous vous en moquez), la façon dont il range les données dans les
+mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon
+dont il gère l'exécution des programmes que vous lancez (il faut que
+mes applications fonctionnent, plusieurs en même temps) et la façon
+dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
+communications avec les périphériques (il saisit ce que je tape au
+clavier, il comprend mes clicks, il affiche sur l'écran, il envoie mes
+impressions à l'imprimante, il échange mes données sur le réseau).
 
 Vous vous moquez de la façon dont il travaille mais vous l'utilisez souvent pour lancer vos applications, pour sauvegarder vos fichiers de travail, pour vous connecter au réseau, pour installer un nouveau périphérique. Il se présente comme une interface graphique (depuis les années 90) avec principalement : un gestionnaire d'applications, un gestionnaire de configuration du système, un gestionnaire de fichiers et souvent une console (ou terminal ou fenêtre de commande) permettant de donner des instructions au système. Pour être un utilisateur averti, il est utile de comprendre les principes du système de gestion de fichiers et de savoir manipuler et donc désigner des fichiers dans le système de gestion de fichiers.
 
