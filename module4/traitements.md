@@ -24,8 +24,9 @@ dirigé par l'interface de l'application qu'il utilise et éprouve des
 difficultés à comprendre "ce que fait l'application". Il faut même
 plutôt parler de "ce que fait la machine et les applications" car
 l'exécution d'une application va souvent déclencher le lancement d'un
-grand nombre d'applications en interaction avec la machine et ses
-périphériques. Nous allons donc découvrir l'univers des applications :
+grand nombre d'applications en interaction avec la machine (processeur
+de calcul et mémoire) et ses périphériques (disques, écran, clavier,
+réseau). Nous allons donc découvrir l'univers des applications :
 comment passe-t-on d'une machine "bête" manipulant des 0 et des 1 à
 une machine "intelligente" réalisant des applications complexes. En
 particulier, nous étudions comment composer des opérations pour
@@ -60,20 +61,20 @@ et qu'on cherche le trajet le plus court. Quelles sont les
 informations que doit posséder l'application ? La liste des villes et
 connaître les distances directes (sans étape) entre deux villes. Une
 première remarque importante s'impose : mémoriser tous les itinéraires
-possibles entre toutes les villes dépasserait les capacités
+possibles entre toutes les paires de villes dépasserait les capacités
 mémoire. C'est donc un programme qui va calculer l'itinéraire. Le
 programme ne peut pas non plus calculer tous les itinéraires possibles
-car il y en a trop donc le temps de calcul serait trop long et vous
-n'allez pas de Lille à Paris en passant par Marseille ! Donc le
-programme doit être plus "intelligent".
+entre deux villes choisies car il y en a trop donc le temps de calcul
+serait trop long et vous n'allez pas de Lille à Paris en passant par
+Marseille ! Donc le programme doit être plus "intelligent".
 
 L'idée du programme de calcul d'itinéraire est de représenter les
 villes et routes comme un graphe où les noeuds sont les villes et les
-arêtes sont les routes. Une distance, la distance entre deux villes,
+arêtes sont les routes directes. Une distance, la distance entre deux villes,
 peut être associée à chaque arête. Le problème est de trouver dans le
 graphe le chemin avec le plus petit total des distances entre deux
 villes. Les mathématiciens et informaticiens ont étudié ce problème et
-conçus des algorithmes pour résoudre cette question. Ayant trouvé cet
+conçu des algorithmes pour le résoudre. Ayant trouvé cet
 itinéraire, il reste à l'application sur le serveur à mettre à jour la
 page Web pour que cet itinéraire puisse être affiché dans votre
 navigateur. Ce principe peut être étendu au problème initial entre
@@ -96,15 +97,27 @@ faut remarquer que, malgré les capacités sans cesse croissantes des
 machines, il faut être attentif à la taille des données mémorisées et
 il faut être attentif au temps de calcul des programmes. Enfin, on
 peut noter que l'intelligence supposée de la machine provient
-essentiellement de l'intelligence des hommes et femmes ayant conçus
+essentiellement de l'intelligence des hommes et femmes ayant conçu
 les applications.
 
 ```compréhension
-::Représenter et manipuler::
+::Une application indépendante ?::
 [markdown]
-**Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
+**Une application indépendante ?**
+Lancer une application implique de lancer plusieurs traitements
 {T}
+
+::Application et machine::
+[markdown]
+**Application et machine**
+L'exécution d'une application fait usage de ressources de la machine. Donner des exemples.
+{#### a minima avec le processeur de calcul et les mémoires}
+
+::Application et périphériques::
+[markdown]
+**Application et périphériques**
+L'exécution d'une application peut faire appel à des interactions avec l'extérieur de la machine par des périphériques. Donner des exemples de périphériques.
+{#### réseau, clavier, souris, écran, ...}
 ```
 
 # Composer des actions pour enrichir les compétences
@@ -116,7 +129,7 @@ Dans cette section, nous étudions les principes généraux de
 composition permettant de créer une nouvelle fonctionnalité en
 utilisant des fonctionnalités déjà existantes. Nous montrons également
 que ce principe est général et que les nouvelles fonctionnalités
-peuvent être à leur tour être composées selon ces principes jusqu'à
+peuvent, à leur tour, être composées selon ces principes jusqu'à
 pouvoir concevoir les applications complexes que vous utilisez
 quotidiennement sur un ordinateur, une tablette ou un smartphone et
 même dans de très autres nombreux objets comme votre box ou une montre
@@ -143,10 +156,10 @@ transformation.
 
 1. un caractère lettre majuscule en entrée
 2. aller chercher le code du caractère dans la table des codes
-3. ajouter 32 au code trouvé
-4. aller chercher le caractère correspondant au résultat trouvé dans
+3. ajouter 32 au code
+4. aller chercher le caractère correspondant dans
    la table des codes
-5. renvoyer comme résultat le caractère trouvé
+5. renvoyer le caractère comme résultat
 
 Où sont nos 0 et nos 1 ? Allons les voir puis nous les
 oublierons. Prenons le caractère A de code 65, le nombre 65 se code
@@ -178,12 +191,12 @@ de caractères et qui transforme les majuscules en minuscules et laisse
 tous les autres caractères inchangés. L'idée est de traiter chacun des
 caractères, regarder si c'est une majuscule. Si c'est une majuscule,
 le transformer en la minuscule correspondante ce que notre machine
-sait faire. Si ce n'est pas une majuscule, on ne fait rien,
-c'est-à-dire on prend le caractère sans le modifier. Peut-on savoir si
-un caractère est une majuscule ? Oui car il suffit de regarder si le
-code du caractère est compris entre 65 (le code de A) et 91 (le code
-de Z) et nous supposons que la machine sait comparer deux nombres
-entiers. Ce qui donne le programme
+sait faire (nous lui avons appris). Si ce n'est pas une majuscule, on
+ne fait rien, c'est-à-dire on prend le caractère sans le
+modifier. Peut-on savoir si un caractère est une majuscule ? Oui car
+il suffit de regarder si le code du caractère est compris entre 65 (le
+code de A) et 91 (le code de Z) et nous supposons que la machine sait
+comparer deux nombres entiers. Ce qui donne le programme
 
 `MAJ2MIN-CHAINE`
 
@@ -204,8 +217,7 @@ transformer une séquence de caractères en remplaçant toutes les
 majuscules par des minuscules. Et vous pouvez déjà imaginer que l'on
 puisse ainsi continuer à construire de nouvelles fonctionnalités à
 notre machine pour qu'elle sache faire beaucoup de traitements sur des
-séquences de caractères. Nous allons préciser ces notions dans la
-section suivante.
+séquences de caractères. 
 
 ### Les trois compositions de base
 
