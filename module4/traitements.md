@@ -137,10 +137,11 @@ connectée.
 
 Pour introduire ces principes de composition, plaçons nous au plus
 près du matériel, c'est-à-dire de la machine qui manipule des 0 et
-des 1. Le modèle de calcul de base de toutes les machines suppose une
-unité de calcul qui sait faire des calculs avec des 0 et des 1 et des
-mémoires dans lesquelles la machine peut ranger des résultats et aller
-chercher les valeurs mémorisées. 
+des 1. Le modèle de calcul de base de toutes les machines suppose :
+une *unité de calcul* qui sait faire des calculs avec des 0 et des 1 ;
+des *mémoires* dans lesquelles la machine peut ranger des résultats et
+aller chercher les valeurs mémorisées ; et une *unité de contrôle* qui
+donne les ordres à l'unité de calcul et aux mémoires.
 
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Nous supposons que la machine peut
@@ -350,12 +351,33 @@ d'applications sont toujours très recherchés avec actuellement une
 forte demande pour les applications sur petits objets portables tels
 que smartphones et tablettes qui ont des contraintes spécifiques.
 
-```compréhension
-::Représenter et manipuler::
+```activité
+::Les minuscules en majuscules::
 [markdown]
-**Représenter et manipuler**
-Les traitements possibles
-dépendent fortement des choix de représentation {T}
+**Les minuscules en majuscules**
+On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules. 
+- Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans `MAJ2MIN-CARA` ?
+- Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle instruction ?
+- Expliquez ce qu'il faut changer dans `MAJ2MIN-CHAINE` pour obtenir un programme `MIN2MAJ-CHAINE` qui prend en entrée une séquence de caractères et qui transforme les minuscules en majuscules et laisse tous les autres caractères inchangés.
+{#### retirer 32 au code au
+lieu d'ajouter 32 ; oui, on doit pouvoir apprendre à notre machine à
+faire une soustraction de deux entiers même si cela semble un petit
+peu plus compliqué que l'addition ; tester si le code du caractère est entre 97 et 123 et appeler le programme qui transforme minuscule en majuscule.}
+```
+
+
+```activité
+::Robot::
+[markdown]
+**Programmer un robot simpliste**
+Activité sur le robot ?
+```
+
+```compréhension
+::Exécution de programmes::
+[markdown]
+**Exécution de programmes**
+Des exemples simples de programmes robot pour demander situation finale
 ```
 
 # Une représentation adaptée pour un traitement
@@ -363,20 +385,111 @@ dépendent fortement des choix de représentation {T}
 Nous avons introduit les principes généraux de la conception
 d'applications avec les trois compositions de base que sont la suite
 d'instructions, l'alternative et l'itérative. Ces trois opérations
-permettent de définir ce qui est calculbale par une machine. Pour un
+permettent de définir ce qui est calculable par une machine. Pour un
 traitement à réaliser, de nombreux choix conceptuels sont
-possibles. Nous allons voir dans cette section que il faut réaliser
+possibles. Nous allons voir dans cette section qu'il faut réaliser
 une application qui résout le problème mais il faut que cette
 application satisfasse également des contraintes de rapidité
 d'exécution et de place nécessaire en mémoire. Pour cela, nous allons
 voir différents modes de représentation des données et les traitements
 associés et comparer leur efficacité. Avant cela, une parenthèse sur
-la façon dont on mémorise les données avec la notion de **varaible
+la façon dont on mémorise les données avec la notion de **variable
 informatique**.
+
+Les applications manipulent des caractères, des nombres, des listes,
+des documents, des images. Ces objets doivent pouvoir être mémorisés
+dans la mémoire de la machine et on doit pouvoir les retrouver au
+besoin. La gestion de la mémoire étant complexe, on utilise un
+mécanisme de **nommage avec des variables**. Supposons que
+l'application ait besoin de manipuler un caractère, on peut utiliser
+une variable `caracourant` dans laquelle on va pouvoir mémoriser un
+caractère et avec laquelle je pourrais retrouver le caractère
+mémorisé. On peut, de même, utiliser une variable `note` pour un
+nombre entre 0 et 20, ou encore une variable `montexte` pour une suite
+de caractères. On peut aussi considérer une variable `listenotes` pour
+gérer une liste de notes. Le principe est que, lorsqu'une variable est
+définie, la machine range la valeur (qui peut être complexe) à une
+adresse dans la mémoire et que la machine saura retrouver la valeur
+car elle mémorise l'association entre le nom de la variable et
+l'adresse mémoire. Illustrons ceci sur un exemple de programme simple
+
+`TRAIT2NOTES`
+
+1. `nbnotes` <- 2
+2. saisir une note au clavier et ranger la valeur dans `note1`
+3. saisir une note au clavier et ranger la valeur dans `note2`
+4. afficher le message "la plus petite note est : ", afficher le
+   résultat du calcul `MIN(note1,note2)`
+5. afficher le message "la moyenne est : ", afficher le résultat du
+   calcul `(note1 + note2)/nbnotes`
+
+La première instruction est une *affectation* : on range la valeur 2
+dans la variable `nbnotes`. Les instructions 2 et 3 sont une
+affectation à partir d'une interaction avec l'utilisateur du programme
+qui choisit une première valeur rangée dans `note1` puis une seconde
+valeur rangée dans `note1`. L'instruction 4 correspond à l'affichage
+d'un message et du résultat du calcul du minimum des 2 valeurs qui
+viennent d'être rangées dans `note1` et `note2`. Les variables
+permettent donc de désigner des objets par un nom pour ranger et
+retrouver des valeurs sans que l'utilisateur ait à gérer la complexité
+des accès à la mémoire de la machine. Il faut noter que le concepteur
+du programme utilise des varaibles pour expliquer à la machine ce
+qu'elle doit faire. Par contre, l'utilisateur ne voit pas les
+variables. Par exemple, l'utilisateur de notre programme saisit une
+première valeur, par exemple 12, puis une seconde valeur, par exemple
+14, et tout ce qu'il verra sont les résultats produits, soit sur notre
+exemple, "la plus petite note est : 12", "la moyenne est : 13"
 
 ### Types de données élémentaires
 
-nombres, textes et Booléens
+Nous avons auparavant introduit que nous pouvions étendre les
+capacités de notre machine. En particulier, nous avons vu qu'à partir
+de simples 0 et 1, on pouvait définir des nombres entiers et on
+pouvait définir des caractères en utilisant des codages adéquats. Ceci
+peut être généralisé et nous allons étudier les données élémentaires
+que peut utiliser une machine.
+
+En premier lieu, on peut utiliser des **nombres ou valeurs
+numériques**. Les choix sont divers et diffèrent selon les
+environnements. On distingue souvent les nombres entiers avec le type
+`entier` ou `integer`. Ils peuvent être codés sur 1, 2, 4, ou un
+nombre quelconque d'octets ce qui permet de représenter des ensembles
+plus ou moins grands d'entiers. Par exemple, sur 1 octet on peut coder
+256 valeurs soit les entiers de 0 à 255 si on se limite à utiliser des
+entiers positife, soit les entiers de -128 à +127 sinon. Sur 2 octets,
+on peut coder 65 536 entiers. Pour les nombres avec une partie
+décimale, on définit le type `décimal` ou `réel`. On peut ici encore
+avoir des codages plus ou moins longs qui donnent une précision plus
+ou moins importantes. Pour des calculs scientifiques ou des calculs
+financiers, on utilise des nombres avec une très grande précision. Que
+ce soir pour les entiers ou les réels, on dispose de beaucoup de
+fonctions permettant de mettre en oeuvre de nombreux calculs.
+
+En second lieu, on peut utiliser des **chaînes de caractères**. Ici
+encore les choix sont divers selon le codage des caractères et la
+taille des chaînes considérées. Mais, en règle générale, une chaîne de
+caractères est une suite de caractères indicée de 1 à un indice qui
+est la longueur de la chaîne (parfois on commence à compter à 0) ce
+qui permet de parler du premier caractère, du second caractère, du
+dernier caractère. On dispose souvent d'un grand nombre de fonctions
+comme transformer en majuscules, extraire les premiers caractères,
+compter le nombre d'apparitions d'un caractère, parcourir tous les
+caractères, ...
+
+Enfin, il existe un type pour manipuler les valeurs de vérité que sont
+`VRAI` et `FAUX`, c'est le type **Booléen** ou **Boolean**. Il est
+très utilisé en informatique car il correspond aux valeurs que peut
+prendre une condition et ces conditions sont utilisées dans
+l'alternative (le si alors sinon) et l'itérative (le tant que). On
+dispose d'opérations comme le `NON`, le `ET` et le `OU`. On notera que
+le `OU` logique est disjontif, c'est à dire qu'il vaut `VRAI` si l'un
+des deux ou les deux valent `VRAI`. Par exemple, `être-grand OU
+être-blond` vaut `VRAI` si je suis grand ou blond ou un grand
+blond. Dans la langue française, on utilise le ou comme conjonction de
+coordination avec un sens qui peut être inclusif ou exclusif selon les
+expressions. Les valeurs de vérité et la logique sont utiles également
+pour modéliser le raisonnement comme en intelligence artificielle mais
+nous en parlerons dans un autre cours.
 
 ### Types de données structurées
 
