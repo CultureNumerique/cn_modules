@@ -211,6 +211,9 @@ def loadTemplate(template="index.tmpl"):
 
 def prepareDestination(outDir):
     """ Create outDir and copy mandatory files""" 
+    # first erase exising dir
+    if os.path.exists(outDir):
+        shutil.rmtree(outDir)
     if not os.path.isdir(outDir):
        if not os.path.exists(outDir):
            os.makedirs(outDir)

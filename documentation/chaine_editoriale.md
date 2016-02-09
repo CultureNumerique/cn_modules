@@ -114,6 +114,10 @@ Exemple:
         ~%-100%mettre en gras#l'éditeur ne permet pas d'enregistrer des mises en forme (il est possible toutefois d'écrire des commandes de mise en forme : un mot n'est pas en gras mais un texte dans un langage peut exprimer l'ordre de mettre en gras)
         }
         ```
+<<<<<<< HEAD
+        
+        
+=======
 
 #### HTML et MarkDown dans les questions rédigées en GIFT
 
@@ -153,3 +157,4 @@ Ingrédients<br />
 
 Ces mécanismes sont automatisés grâce aux scripts dont l'utilisation est détaillée dans [la page scripts](scripts.md)
 
+>>>>>>> release_09022015
