@@ -1,0 +1,63 @@
+::Markdown avec Dillinger.io::
+[markdown]
+Un autre langage de description de texte est particulièrement utilisé, il s'agit de `Markdown`. Pour information, le cours que vous suivez a été entièrement rédigé avec cette syntaxe. Nous vous proposons de le découvrir en passant par un site qui permet d'écrire du texte en `markdown`et qui en propose un rendu en html ou des exports dans différents formats. 
+Rendez-vous sur [dillinger.io](http://dillinger.io) et inscrivez-vous. Pour cela, vous pouvez utiliser votre adresse personnelle, [dillinger.io] est un service libre et ouvert, respectueux des données privées.
+Si toutefois, vous ne souhaitez pas prendre un compte sur ce site, vous pouvez utiliser l'éditeur de texte : [atom](https://atom.io/).
+N'hésitez pas à partager vos expériences sur le forum du cours, ...
+Une fois sur le site, *sélectionner* et *effacer* tout le contenu de la page de gauche (l'éditeur), puis *copier/coller* le texte qui se trouve [ici]().
+Sur la partie droite s'affiche un *rendu* du document, soit une *vue de présentation*. En observant cet exemple, répondez aux questions. 
+en `Markdown` comment :
+- mettre des mots en italique ?
+- mettre des mots en gras ?
+- définir un titre de premier niveau ?
+- de deuxième niveau ?
+- faire une liste à puces ?
+- mettre tout un paragraphe en exergue comme une citation?
+- délimiter des paragraphes ?
+{#### italique : encadrer par `*` ; gras : encadrer par `**` ; Titres : un `#` par niveau ; liste à puces : `- `sur une nouvelle ligne ; un paragraphe commençant par un `> ` sera interprété comme une citation ; les paragraphes sont séparés par une ligne vide.}
+
+::Exemple de html::
+[markdown]
+- Ouvrez le fichier `truc.html` dans l'éditeur de texte. Vous voyez que l'éditeur de texte reconnaît que votre texte parle le langage `html` car il colorie les balises `html`.
+- Ouvrez le fichier `truc.html` dans le navigateur. Comparez le résultat affiché dans le navigateur à la description affichée dans l'éditeur
+- Décrivez la structure du document (titre, sections, listes, ...)
+- Regardez dans l'éditeur le texte `html` contenu dans la partie `head` du fichier `truc.html`. Vous pouvez voir les métadonnées : le contenu de la balise title` (aussi affichée dans l'onglet), le codage des caractères, les mots clé associés au document par exemple.
+{}
+
+::Éditeur de textes pour des séquences de caractères:: 
+[markdown]
+Lancer un éditeur de textes (voir activité précédente). Entrer un court texte au clavier. Parcourir les menus et comprendre les fonctionnalités. Vous devez voir apparaître des fonctionnalités pour
+- manipuler les fichiers : ouvrir, enregistrer,
+- manipuler des éléments de textes : couper, copier, coller,
+- rechercher dans le texte : rechercher, remplacer, suivant, précédent,
+- et sans doute des outils complémentaires spécifiques à l'éditeur choisi.
+{}
+
+::Éditeur de textes avec des séquences de caractères dans un langage::
+[markdown]
+Ouvrir dans un éditeur de textes un fichier `HTML` (en mettre un dispo}. Ce texte est une séquence de caractères simple. Cependant, le logiciel "éditeur de texte" grâce, en particulier, à l'extension, reconnaît que ce texte est écrit dans le langage `HTML`. Pour aider l'utilisateur, il colorie les balises `HTML`. C'est ce qui est appelé la coloration syntaxique. Vous pouvez chercher dans les menus et vous constaterez le très grand nombre de langages existants.
+{}
+
+
+::L'éditeur de texte et les fichiers::
+[markdown] Un éditeur de textes peut effectuer des opérations simples sur des textes simples qui sont des séquences de caractères. Lancez un éditeur de textes et ouvrez (ou essayez d'ouvrir) les fichiers suivants :
+- texte simple avec l'extension txt
+- fichier odt
+- fichier html
+- fichier doc
+- texte simple avec l'extension toto
+- fichier pdf
+{}
+
+
+- installer grammalecte sur son LO et jouer avec, on peut
+  donner un texte avec plein d'erreurs et demander combien ont été
+  corrigées par l'outil (typo, grammaire, conjugaison, style).
+- Marc a un texte sur la typographie
+
+
+::La ligne n'est pas vraiment un élément structurel::
+[markdown]Même s'il est possible d'insérer des retours à la ligne, c'est une possibilité rarement utilisée (sauf dans des textes particuliers comme des poèmes par exemple).
+- Continuez l'exercice précédent en modifiant par exemple la taille des caractères des paragraphes et en vérifiant l'impact sur les retours à la ligne. Que concluez-vous ?
+- Essayez de trouver dans des options de mise en forme des lignes : pouvez-vous en trouver ?
+{####Le traitement de texte gère seul le retour à la ligne en fonction de paramètres comme la longueur maximale des lignes, la taille de la feuille de papier et des marges, le choix de l'alignement,... Non, il n'existe pas d'outils de mise en forme de ligne, la ligne n'est pas un élément de structure sur lequel on peut facilement appliquer une mise en forme spécifique.}

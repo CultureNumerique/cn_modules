@@ -1,6 +1,7 @@
 LANGUAGE: fr
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css" />
 TITLE: Le Web
+MENUTITLE: Le Web
 AUTHOR: Culture Numérique
 
 # Introduction
@@ -44,7 +45,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 ```activité-avancée
 ::Tim Berners-Lee::[html]<div>
-	<p dir="ltr">En vous aidant par exemple de cette ressource :</p>
+	<p dir="ltr">En vous aidant par exemple de cette ressource : </p>
 	<p dir="ltr">
 	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
 	</p>
@@ -187,7 +188,7 @@ Que se passe -t-il ?
 
 Mon client interprète ma saisie comme l'interrogation par le protocole `http` du serveur situé sur la machine `culturenumerique.univ-lille3.fr` pour lui demander la ressource `/PageExemple`
 
-Comme nous l'avons vu précédemment, l'adresse `IP` de ma machine sera nécessaire pour communiquer avec le serveur. Mais mon navigateur va également réunir un certain nombre d'autres informations disponibles sur ma machine (informations que nous verrons plus loin) et les joindre à la requête envoyée au serveur qui héberge la ressource.
+Comme nous l'avons vu précédemment, l'adresse `IP` de ma machine sera nécessaire pour communiquer avec le serveur. Mais mon navigateur va également réunir un certain nombre d'autres informations disponibles sur ma machine (informations que nous verrons plus loin) et les joindre à la requête envoyée au serveur qui héberge la ressource. 
 Le serveur reçoit cette requête, la comprend car elle est formulée selon les règles définies dans ce fameux protocole `http`, norme utilisée pour que les clients web et les serveurs web puissent communiquer.
 
 
@@ -340,7 +341,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 282  name: Comprendre les balises
-::Comprendre les balises::[html]<p>Nous vous avons expliqué que les balises <section>... </section> servaient à délimiter les parties, les balises <h1> ... </h1> délimitent les titres de premier niveaux, à votre avis que signifient les balises <p> ... </p> ?</p>{}
+::Comprendre les balises::[markdown]Nous vous avons expliqué que les balises `<section>... </section>` servaient à délimiter les parties, les balises `<h1> ... </h1>` délimitent les titres de premier niveaux, à votre avis que signifient les balises `<p> ... </p>` ?{}
 
 
 // question: 280  name: Repérer la feuille de styles
@@ -788,7 +789,7 @@ puis répondez à la question qui suit.</p>{}
  faut être en haut de la liste et donc apparaître important aux yeux du
  moteur de recherche. 
 
- De bonnes pratiques en matière de conception de pages web peut y
+ De bonnes pratiques en matière de conception de pages web peuvent y
  contribuer. Puisque toute la chaîne de traitement est automatique, les
  ressources que le moteur analyse et indexe doivent être parfaitement
  intelligibles par la machine. Il est donc très important d'écrire

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf8"/>
+    <title>Saisie de SVG</title>
+    <link href="gauchedroite.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="gauche">
+      <h1>Saisie en SVG</h1>
+      <textarea id='input' oninput="doRendu()">
+<svg width="250" height="250">
+   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+   <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+   <rect x="100", y="0" width="100" height="150" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+   Si ceci s'affiche à droite c'est que vous avez un navigateur incompatible avec le svg. 
+</svg>
+      </textarea><br />
+      <button id='rendu' onclick="doRendu()">Rendu</button>
+      <p>Un petit tutoriel rapide est disponible <a href="https://developer.mozilla.org/fr/docs/Web/SVG/Tutoriel">sur MDN</a>. Un autre est sur <a href="http://www.w3schools.com/svg">W3 Schools</p>.
+    </div>
+			    
+    <div id="droite">
+      <h1>Rendu du SVG</h1>
+      <div id="drendu"></div>
+    </div>
+    <script>
+      function doRendu(event) {
+        drendu = document.getElementById('drendu');
+        drendu.innerHTML = document.getElementById('input').value
+      }
+    </script>
+</html>  

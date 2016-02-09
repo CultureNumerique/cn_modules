@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf8"/>
+    <title>Saisie en Markdown</title>
+    <link href="gauchedroite.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="markdown/markdown.js"></script>
+    <div id="gauche">
+      <h1>Saisie en Markdown</h1>
+      <textarea  id="input" oninput="this.editor.update()">
+# Votre titre
+
+Du *texte* et du **texte** 
+
+## Bravo !
+
+- une liste
+- une autre...
+
+> C'est extra, un Moody Blues qui chante la nuit
+
+      </textarea><br />
+      <button id='rendu' onclick="this.editor.update()">Rendu</button>
+    </div>
+			    
+    <div id="droite">
+      <h1>Rendu du Markdown</h1>
+      <div id="preview"></div>
+    </div>
+    <script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("input"), $("preview"));
+    </script>
+</html>  

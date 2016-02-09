@@ -7,12 +7,16 @@ correction/
 cours/
 module*/*.imscc.zip
 module*/*.config.json
-module*.html
 module*/imsmanifest.xml
 module*/*.gift.txt
+module*.html
 
-draft
+draft*
 *.txt.html
+
+# Security files
+.htaccess
+.htpasswd
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
