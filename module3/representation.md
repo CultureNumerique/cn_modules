@@ -321,7 +321,7 @@ Téléchargez le  [document odt](media/representation.odt) sur votre machine. No
 ::La vue qualifiée d'un document texte odt::
 [markdown] 
 **La vue qualifiée d'un document texte odt**
-Ouvrir le document [document odt](representation.odt) dans `LibreOffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
+Ouvrir le document [document odt](media/representation.odt) dans `LibreOffice`. Recherchez dans les menus comment trouver les propriétés suivantes :
 - le titre,
 - le sujet,
 - les mots clef,
