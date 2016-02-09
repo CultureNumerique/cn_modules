@@ -108,8 +108,8 @@ class GiftQuestion():
         doc.asis('\n')
         doc.asis('<!-- New question -->')
         with tag('div', klass='question'):
-#            with tag('p', klass='questiontitle'):
-#                text(self.title)
+            with tag('h3', klass='questiontitle'):
+                text(self.title)
             with tag('p', klass='questiontext'):
                 if self.text_format == 'html':
                     doc.asis(self.text)
@@ -199,9 +199,9 @@ class GiftQuestion():
                 new_answers = [{'answer_text' : 'Vrai', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}, 
                     {'answer_text' : 'Faux', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}]
             else:
-                new_answers = [{'answer_text' : 'Vrai', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}, 
-                    {'answer_text' : 'Faux', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}]
+                new_answers = [{'answer_text' : 'Vrai', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100},                      {'answer_text' : 'Faux', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}]
             self.answers = new_answers
+            return
         ## NUMERIC questions
         elif q_answers.startswith('#'):
             self.type = 'NUMERIC'
@@ -228,7 +228,7 @@ class GiftQuestion():
                 m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
                 if m.group('credit'):
                     new_answer['credit'] = m.group('credit').strip('%')
-                new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
+                new_answer['answer_text'] = m.group('answer').lstrip('~=')
                 new_answer['feedback'] = m.group('feedback').lstrip('#')
             self.answers.append(new_answer)
 

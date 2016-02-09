@@ -326,18 +326,9 @@ h2.accueil, h3.accueil {
 	margin: 5px;
 	padding: 3px;
 }
-
-/*.multichoice >li {
-	list-style: none;
+.question li > p {
+	display: inline;
 }
-
-.truefalse >li {
-	list-style: none;
-}
-.multianswer >li {
-	list-style: none;
-}*/
-
 .question > ul > li{
 	list-style: none;
 }
