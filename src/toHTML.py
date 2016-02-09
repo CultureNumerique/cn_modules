@@ -163,9 +163,9 @@ def generateModuleHtml(data, module, outModuleDir):
     generateMainContent(data,doc,tag,text,module, outModuleDir)
     writeHtml(module, outModuleDir,doc)
 
-def processModule(module,e,outDir):
+def processModule(module,e,outDir, feedback_option):
     # generate config file
-    utils.processModule(module,outDir)
+    utils.processModule(module,outDir, feedback_option)
     outModuleDir = os.path.join(outDir,module)
     # config file for each module is named [module_folder].config.json
     mod_config = os.path.join(outModuleDir, module+'.config.json')
@@ -182,21 +182,21 @@ def processModule(module,e,outDir):
         
     e.append(html.fromstring(strhtml))
     
-def processConfig(fconfig,e,outDir):
+def processConfig(fconfig,e,outDir,feedback_option):
     global_data = json.load(fconfig)
     for module in global_data["modules"]:
-        processModule(module['folder'],e,outDir)
+        processModule(module['folder'],e,outDir, feedback_option)
                       
-def processModules(modules,e,outDir):
+def processModules(modules,e,outDir, feedback_option):
     for module in modules:
         logging.info("Process %s",module)
-        processModule(module,e,outDir)
+        processModule(module,e,outDir, feedback_option)
 
-def processDefault(e,outDir):
+def processDefault(e,outDir, feedback_option):
     import glob
     listt = glob.glob("module[0-9]")
     for module in sorted(listt,key=lambda a: a.lstrip('module')):
-        processModule(module,e,outDir)
+        processModule(module,e,outDir, feedback_option)
 
 
 def loadTemplate(template="index.tmpl"):
@@ -223,7 +223,9 @@ def prepareDestination(outDir):
         try :
             shutil.copytree(d, dest)
         except FileExistsError as e:
-            logging.warn("%s already exists",d)
+            logging.warn("%s already exists, going to overwrite it",d)
+            shutil.rmtree(dest)
+            shutil.copytree(d, dest)
             
 ############### main ################
 if __name__ == "__main__":
@@ -236,6 +238,7 @@ if __name__ == "__main__":
     group.add_argument("-m", "--modules",help="module folders",nargs='*')
     parser.add_argument("-l", "--log", dest="logLevel", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help="Set the logging level", default='WARNING')
     parser.add_argument("-d", "--destination", help="Set the destination dir", default='build')
+    parser.add_argument("-f", "--feedback", action='store_true', help="Set the destination dir", default=False)
     
     args = parser.parse_args()
     logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))
@@ -248,13 +251,12 @@ if __name__ == "__main__":
 
     # check destination
     prepareDestination(args.destination)
-        
-    
+            
     if args.config != None:
-        processConfig(args.config,e,args.destination)
+        processConfig(args.config,e,args.destination, args.feedback)
     elif args.modules != None:
-        processModules(args.modules,e,args.destination)
+        processModules(args.modules,e,args.destination, args.feedback)
     else:
-        processDefault(e,args.destination)
+        processDefault(e,args.destination, args.feedback)
 
     index.write(os.path.join(args.destination, "index.html"),method='html')    

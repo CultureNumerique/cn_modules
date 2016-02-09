@@ -35,7 +35,7 @@ def createDirs(outDir):
             shutil.rmtree(new_folder, ignore_errors=True)
             os.makedirs(new_folder, exist_ok=False)
     
-def processModule(module,outDir=None):
+def processModule(module,outDir=None, feedback_option=False):
     if not outDir:
         outDir = os.path.abspath(module)
     else:
@@ -62,7 +62,7 @@ def processModule(module,outDir=None):
         m = model.Module(md_file, module)
 
     # write html,  XML, and JSon  files
-    m.toHTMLFiles(outDir)
+    m.toHTMLFiles(outDir, feedback_option)
     m.toXMLMoodle(outDir)
     write_file(m.toGift(), outDir, '', module+'.questions_bank.gift.txt')
     write_file(m.toVideoList(), outDir, '', module+'.video_iframe_list.txt')

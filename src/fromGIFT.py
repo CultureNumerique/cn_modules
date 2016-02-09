@@ -101,46 +101,49 @@ class GiftQuestion():
         self.gift_src = new_src
         return new_src
 
-    def to_html(self):
+    def to_html(self, feedback_option=False):
         """ From a question object, write HTML representation """
-
         doc, tag, text = Doc().tagtext()
         # FIXME : add comment line here ?
         doc.asis('\n')
         doc.asis('<!-- New question -->')
         with tag('div', klass='question'):
-#            with tag('p', klass='questiontitle'):
-#                text(self.title)
+            with tag('h3', klass='questiontitle'):
+                text(self.title)
             with tag('p', klass='questiontext'):
                 if self.text_format == 'html':
                     doc.asis(self.text)
                 else:
-                    logging.info ("printing Markdown/ source = %s " % (self.text))
+                    logging.info ("printing Markdown/ source = %s" % (self.text))
                     html_text = markdown.markdown(self.text, MARKDOWN_EXT)
                     doc.asis(html_text)
             # If type MULTICHOICE, MULTIANSWER give choices
-            if self.type in ['MULTICHOICE', 'MULTIANSWER']:
+            if self.type in ['MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE']:
                 with tag('ul', klass=self.type.lower()):
                     for answer in self.answers:
-                        with tag('li'):
-                            if self.type == 'MULTICHOICE':
-                                doc.stag('input', type='radio')
-                            elif self.type == 'MULTIANSWER':
-                                doc.stag('input', type='checkbox')
-                            doc.asis(answer['answer_text'])
+                        if self.type in ['MULTICHOICE', 'TRUEFALSE']:
+                            if answer['is_right'] and bool(feedback_option):
+                                answer_class = 'right_answer'
+                            else:
+                                answer_class = ''
+                            with tag('li', klass=answer_class):
+                                doc.stag('input', type='radio', name="name")
+                                doc.asis(answer['answer_text'])
+                        elif self.type == 'MULTIANSWER':
+                            if float(answer['credit']) > 0.0 and feedback_option:
+                                answer_class = 'right_answer'
+                            else:
+                                answer_class = ''
+                            with tag('li', klass=answer_class):
+                                doc.stag('input', type='checkbox', name="name")
+                                doc.asis(answer['answer_text'])
 
-            elif self.type == 'TRUEFALSE':
-                with tag('ul', klass=self.type.lower()):
-                    for choice in ['vrai', 'faux']:
-                        with tag('li'):
-                            doc.stag('input', type='radio')
-                            text(choice)
-
+            if (feedback_option and len(self.global_feedback) > 1):
+                with tag('div', klass='global_feedback'):
+                    doc.asis('<b><em>Feedback:</em></b><br/>'+self.global_feedback)
         doc.asis('\n')
-        doc.asis('<!-- Globlal feedback :'+self.global_feedback+' -->')
         doc.asis('\n')
-        return(indent(doc.getvalue(), newline='\n'))
-
+        return((doc.getvalue()))
     
     def parse_gift_src(self):
         # 1. Separate in 3 parts: q_prestate { q_answers } q_poststate
@@ -196,9 +199,9 @@ class GiftQuestion():
                 new_answers = [{'answer_text' : 'Vrai', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}, 
                     {'answer_text' : 'Faux', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}]
             else:
-                new_answers = [{'answer_text' : 'Vrai', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100}, 
-                    {'answer_text' : 'Faux', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}]
+                new_answers = [{'answer_text' : 'Vrai', 'is_right' :True, 'feedback' : self.feedback_for_right, 'credit':100},                      {'answer_text' : 'Faux', 'is_right' :False, 'feedback' : self.feedback_for_wrong, 'credit':0}]
             self.answers = new_answers
+            return
         ## NUMERIC questions
         elif q_answers.startswith('#'):
             self.type = 'NUMERIC'
@@ -225,7 +228,7 @@ class GiftQuestion():
                 m = re.search('^[=|~](?P<credit>\%-*\d+\.*\d*\%){0,1}(?P<format>\[[^\]]*\]){0,1}(?P<answer>[^#]*)#*?(?P<feedback>.*)', answer_raw)
                 if m.group('credit'):
                     new_answer['credit'] = m.group('credit').strip('%')
-                new_answer['answer_text'] = m.group('answer').lstrip('~=').strip('<p/>')
+                new_answer['answer_text'] = m.group('answer').lstrip('~=')
                 new_answer['feedback'] = m.group('feedback').lstrip('#')
             self.answers.append(new_answer)
 
@@ -239,7 +242,10 @@ class GiftQuestion():
     
 def clean_question_src(question):
     question = re.sub('<(span|strong)[^>]*>|</(strong|span)>', '', question)
-    question = re.sub('\\\:', '', question) # remove \: in src txt
+    # question = re.sub('\\:', '', question) # remove \: in src txt
+    # question = re.sub('\\\:', '', question) # remove \: in src txt
+    # question = re.sub('\\=', '', question) # remove \= in src txt
+    # question = re.sub('\\\=', '', question) # remove \= in src txt
 
     return question
 

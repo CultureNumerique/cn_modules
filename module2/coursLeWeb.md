@@ -45,7 +45,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 ```activité-avancée
 ::Tim Berners-Lee::[html]<div>
-	<p dir="ltr">En vous aidant par exemple de cette ressource :</p>
+	<p dir="ltr">En vous aidant par exemple de cette ressource : </p>
 	<p dir="ltr">
 	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
 	</p>
@@ -341,7 +341,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 282  name: Comprendre les balises
-::Comprendre les balises::[html]<p>Nous vous avons expliqué que les balises <section>... </section> servaient à délimiter les parties, les balises <h1> ... </h1> délimitent les titres de premier niveaux, à votre avis que signifient les balises <p> ... </p> ?</p>{}
+::Comprendre les balises::[markdown]Nous vous avons expliqué que les balises `<section>... </section>` servaient à délimiter les parties, les balises `<h1> ... </h1>` délimitent les titres de premier niveaux, à votre avis que signifient les balises `<p> ... </p>` ?{}
 
 
 // question: 280  name: Repérer la feuille de styles
