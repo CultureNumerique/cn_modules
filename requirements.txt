@@ -3,4 +3,4 @@ yattag
 python-slugify
 markdown
 MarkdownSuperscript
-requests
+-e git://github.com/mtommasi/pygift/#egg=pygift
