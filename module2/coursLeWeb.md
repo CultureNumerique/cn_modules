@@ -45,11 +45,11 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 ```activité-avancée
 ::Tim Berners-Lee::[html]<div>
-	<p dir="ltr">En vous aidant par exemple de cette ressource : </p>
-	<p dir="ltr">
+	<p>En vous aidant par exemple de cette ressource : </p>
+	<p>
 	<a target="_blank" href="http://home.web.cern.ch/fr/topics/birth-web">http://home.web.cern.ch/fr/topics/birth-web</a>
 	</p>
-	<p dir="ltr">Faites quelques recherches sur <b>Tim Berners-Lee</b> et l'origine du web et répondez aux questions suivantes :
+	<p>Faites quelques recherches sur <b>Tim Berners-Lee</b> et l'origine du web et répondez aux questions suivantes :
 </p>
       <ol>
         <li>Quelle était la spécialité professionnelle de Tim Berners-Lee ?</li>
@@ -76,7 +76,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 <li>Qui en est le fondateur ?</li>
 <li>Exprimez-vous en quelques lignes sur votre position citoyenne (intérêt, légalité, ...) de ce genre de sites.</li>
 </ol>
-{####<p dir="ltr" id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span>association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
+{####<p id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span>association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
 <p dir="ltr">( ref : <a target="_blank" href="https://fr.wikipedia.org/wiki/WikiLeaks">https://fr.wikipedia.org/wiki/WikiLeaks</a>)</p>
 <p dir="ltr"></p>
 <p dir="ltr">Le fondateur est <b>Julian Assange.</b></p>
@@ -166,7 +166,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 
 // question: 272  name: La distribution
-::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l’ait rendue avant de la distribuer à un autre client.</p>{TRUE####<p>Cette notion de  "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
+::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l'ait rendue avant de la distribuer à un autre client.</p>{TRUE####<p>Cette notion de "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
 
 
 ```
@@ -341,7 +341,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 282  name: Comprendre les balises
-::Comprendre les balises::[html]<p>Nous vous avons expliqué que les balises <section>... </section> servaient à délimiter les parties, les balises <h1> ... </h1> délimitent les titres de premier niveaux, à votre avis que signifient les balises <p> ... </p> ?</p>{}
+::Comprendre les balises::[html]<p>Nous vous avons expliqué que les balises &lt;section&gt;... &lt;/section&gt; servaient à délimiter les parties, les balises &lt;h1&gt; ... &lt;/h1&gt; délimitent les titres de premier niveaux, à votre avis que signifient les balises &lt;p&gt; ... &lt;/p&gt; ?</p>{}
 
 
 // question: 280  name: Repérer la feuille de styles
@@ -386,7 +386,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 288  name: Une page Web
-::Une page Web::[html]<p>Pour qu’un client affiche une page Web,...</p><p></p>{
+::Une page Web::[html]<p>Pour qu’un client affiche une page Web,...</p>{
 	~<p>une seule requête vers un unique serveur suffit toujours</p>
 	~<p>parfois plusieurs requêtes sont nécessaires mais toujours vers le même serveur</p>
 	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>#Votre réponse est correcte. 
