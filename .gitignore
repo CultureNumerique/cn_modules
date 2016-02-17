@@ -14,6 +14,10 @@ module*.html
 draft*
 *.txt.html
 
+# Security files
+.htaccess
+.htpasswd
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

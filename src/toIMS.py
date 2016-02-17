@@ -64,6 +64,11 @@ HEADER_TEST = """<?xml version="1.0" encoding="UTF-8"?>
     <questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
     """
 
+DEFAULT_QTI_META = {
+    'cc_profile' : 'cc.exam.v0p1',
+    'qmd_assessmenttype' : 'Examination'
+}
+
 def set_qti_metadata(max_attempts):
     
     qtimetadata = """
