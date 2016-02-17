@@ -18,6 +18,7 @@ import sys
 import re
 import json
 import markdown
+import yattag
 import requests
 import logging
 from unidecode import unidecode
@@ -27,9 +28,13 @@ from lxml import etree
 from lxml import html
 from slugify import slugify
 
+from pygiftparser import parseFile
+
 from fromGIFT import extract_questions, process_questions
 from toIMS import create_ims_test, create_empty_ims_test
 import utils
+
+
 
 MARKDOWN_EXT = ['markdown.extensions.extra', 'superscript']
 VIDEO_THUMB_API_URL = 'https://vimeo.com/api/v2/video/'
@@ -195,7 +200,8 @@ class AnyActivity(Subsection):
         Subsection.__init__(self,section)
         self.src = ''
         self.parse(f)
-        self.questions = process_questions(extract_questions(self.src))
+        #self.questions = process_questions(extract_questions(self.src))
+        self.questions = parseFile(self.src)
 
 
     def parse(self,f):
@@ -213,16 +219,19 @@ class AnyActivity(Subsection):
     
     def toHTML(self, feedback_option=False):
         html_src = ''
+        #html_bit = yattag.Doc()
         for question in self.questions:
             # append each question to html output
-            html_src+=question.to_html(feedback_option)
+            html_bit = question.toHTML(feedbacks=feedback_option)
+            html_src+= html_bit.getvalue()
             if html_src == '': # fallback when question is not yet properly formated
-                html_src = '<p>'+self.src+'</p>'
+                html_src += '<p>'+self.src+'</p>'
             # post-process Gift source replacing markdown formated questions text by html equivalent
-            if question.text_format in (("markdown")):
+            if question.markup in (("markdown")):
                 question.md_src_to_html()
         # change relative media links from media/ to absolute URL since media are 
         #   difficult to pass on when described in GIFT format
+        #html_src = html_bit.getvalue() 
         html_src = html_src.replace('media/', BASE_URL+'/'+self.section.module+'/media/')
         # add "target="_blank" to all anchors
         try:
@@ -233,7 +242,7 @@ class AnyActivity(Subsection):
         except:
             logging.exception("=== Error finding anchors in html src: %s" % html_src)
 
-        return html_src
+        return html_bit.getvalue()
     
     def toXMLMoodle(self,outDir):
         # a) depending on the type, get max number of attempts for the test 
