@@ -28,7 +28,7 @@ from lxml import etree
 from lxml import html
 from slugify import slugify
 
-from pygiftparser import parseFile
+from pygiftparser.parser import parseFile
 
 from fromGIFT import extract_questions, process_questions
 from toIMS import create_ims_test, create_empty_ims_test
@@ -200,8 +200,11 @@ class AnyActivity(Subsection):
         Subsection.__init__(self,section)
         self.src = ''
         self.parse(f)
-        #self.questions = process_questions(extract_questions(self.src))
-        self.questions = parseFile(self.src)
+        #self.questions = process_questions(extract_questions(self.src
+        f = open("tmp.txt", "r+")
+        f.write(self.src) # Write a string to a file        
+        self.questions = parseFile(f)
+        f.close()
 
 
     def parse(self,f):
@@ -214,7 +217,7 @@ class AnyActivity(Subsection):
     def toGift(self):
         gift_src=''
         for question in self.questions:
-            gift_src+='\n'+question.gift_src+'\n'
+            gift_src+='\n'+question.source+'\n'
         return gift_src
     
     def toHTML(self, feedback_option=False):
@@ -226,9 +229,10 @@ class AnyActivity(Subsection):
             html_src+= html_bit.getvalue()
             if html_src == '': # fallback when question is not yet properly formated
                 html_src += '<p>'+self.src+'</p>'
+            # FIXME : see if it is still useful ?
             # post-process Gift source replacing markdown formated questions text by html equivalent
-            if question.markup in (("markdown")):
-                question.md_src_to_html()
+            # if question.markup in (("markdown")):
+            #     question.md_src_to_html()
         # change relative media links from media/ to absolute URL since media are 
         #   difficult to pass on when described in GIFT format
         #html_src = html_bit.getvalue() 
@@ -251,8 +255,8 @@ class AnyActivity(Subsection):
         else:
             max_attempts = 'unlimited'
         # b) write empty xml test file for moodle export FIXME: moodle specific, do it only when asked
-        #xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title, max_attempts)
-        xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
+        xml_src = create_empty_ims_test(self.num+'_'+slugify(self.title), self.num, self.title, max_attempts)
+        #xml_src = create_ims_test(self.questions, self.num+'_'+slugify(self.title), self.title)
         filename = self.getFilename()
         xml_filename = filename.replace('html', 'xml')
         #   write xml file at same location
