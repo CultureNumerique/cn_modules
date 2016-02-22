@@ -13,6 +13,7 @@ module*.html
 
 draft*
 *.txt.html
+tmp.txt
 
 # Security files
 .htaccess
