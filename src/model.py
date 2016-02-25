@@ -198,7 +198,9 @@ class AnyActivity(Subsection):
     """ Abstract class for any activity """
     def __init__(self,section,f):
         Subsection.__init__(self,section)
+        self.src = ''
         self.parse(f)
+        #self.questions = process_questions(extract_questions(self.src
         self.questions = parseFile(iter(self.src.splitlines()))
         
     def parse(self,f):
