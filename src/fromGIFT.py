@@ -73,6 +73,18 @@ class GiftQuestion():
         self.feedback_for_right = '' # for TRUEFALSE questions, given when giving the right answer
         self.feedback_for_wrong = '' # for TRUEFALSE questions, given when giving the wrong answer
     
+    @classmethod
+    def add_target_blank(cls, html_src):
+        try:
+            tree = html.fromstring(html_src)
+            for link in tree.xpath('//a'):
+                link.attrib['target']="_blank"
+            html_src = html.tostring(tree, encoding='utf-8').decode('utf-8')
+        except:
+            logging.exception("=== Error finding anchors in html src: %s" % html_src)
+        return html_src
+        
+    
     def md_src_to_html(self):
         """ Convert question or feedback src from markdown to html ( useful for easier export) """
         new_src = self.gift_src
@@ -81,6 +93,7 @@ class GiftQuestion():
         if m1:
             if m1.group('qtext'):
                 qtext = markdown.markdown(m1.group('qtext'), MARKDOWN_EXT)
+                qtext = GiftQuestion.add_target_blank(qtext)
                 new_src = new_src.replace(m1.group('qtext'), qtext)
             if m1.group('format'):    
                 new_src = new_src.replace(m1.group('format'), '[html]')
@@ -92,6 +105,7 @@ class GiftQuestion():
                 new_src = new_src.replace(m2.group('format'), '[html]')
             if m2.group('gf'):
                 gf = markdown.markdown(m2.group('gf'), MARKDOWN_EXT)
+                gf = GiftQuestion.add_target_blank(gf)
                 pos = m2.start() # replace only in the relevant part of the string and not the entire string
                 new_src = new_src[:pos]+new_src[pos:].replace(m2.group('gf'), gf)
     
@@ -99,7 +113,9 @@ class GiftQuestion():
         # C FIXME : should also check for per-answer feedbacks
         # convert self src
         self.gift_src = new_src
+        
         return new_src
+        
 
     def to_html(self, feedback_option=False):
         """ From a question object, write HTML representation """
