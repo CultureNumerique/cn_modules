@@ -218,11 +218,13 @@ class AnyActivity(Subsection):
     
     def toHTML(self, feedback_option=False):
         html_src = ''
-        html_bit = yattag.Doc()
         for question in self.questions:
             # append each question to html output
             html_bit = question.toHTML(feedbacks=feedback_option)
-            html_src+= html_bit.getvalue()
+            if html_bit == '':
+                pass
+            else:
+                html_src+= html_bit.getvalue()
             if html_src == '': # fallback when question is not yet properly formated
                 html_src += '<p>'+self.src+'</p>'
             # FIXME : see if it is still useful ?
@@ -242,7 +244,7 @@ class AnyActivity(Subsection):
         except:
             logging.exception("=== Error finding anchors in html src: %s" % html_src)
 
-        return html_bit.getvalue()
+        return html_src
     
     def toXMLMoodle(self,outDir):
         # a) depending on the type, get max number of attempts for the test 
