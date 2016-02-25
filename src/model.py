@@ -198,15 +198,9 @@ class AnyActivity(Subsection):
     """ Abstract class for any activity """
     def __init__(self,section,f):
         Subsection.__init__(self,section)
-        self.src = ''
         self.parse(f)
-        #self.questions = process_questions(extract_questions(self.src
-        f = open("tmp.txt", "r+")
-        f.write(self.src) # Write a string to a file        
-        self.questions = parseFile(f)
-        f.close()
-
-
+        self.questions = parseFile(iter(self.src.splitlines()))
+        
     def parse(self,f):
         ''' Read lines in f until the end of the activity '''
         self.lastLine = f.readline()
@@ -222,7 +216,7 @@ class AnyActivity(Subsection):
     
     def toHTML(self, feedback_option=False):
         html_src = ''
-        #html_bit = yattag.Doc()
+        html_bit = yattag.Doc()
         for question in self.questions:
             # append each question to html output
             html_bit = question.toHTML(feedbacks=feedback_option)
