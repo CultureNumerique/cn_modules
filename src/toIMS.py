@@ -189,7 +189,7 @@ def create_ims_test(questions, test_id, test_title):
                                     doc.stag('other')
                                 doc.stag('displayfeedback', feedbacktype="Response", linkrefid='general_fb')
                         ## lister les autres interactions/conditions
-                        if question.type in (('MULTICHOICE', 'MULTIANSWER', 'TRUEFALSE')):
+                        if question.type in (('MULTICHOICE','TRUEFALSE')):
                             for id_a, answer in enumerate(question.answers):
                                 score = 0
                                 if answer['is_right']:
@@ -205,6 +205,34 @@ def create_ims_test(questions, test_id, test_title):
                                     with tag('setvar', varname='SCORE', action='Set'):
                                         text(score)
                                     doc.stag('displayfeedback', feedbacktype='Response', linkrefid='feedb_'+str(id_a))
+                        elif question.type == 'MULTIANSWER':
+                            # Correct combination
+                            with tag('respcondition', title="Correct", kontinue='No'):
+                                with tag('conditionvar'):
+                                    with tag('and'):
+                                        for id_a, answer in enumerate(question.answers):
+                                            score = 0
+                                            try:
+                                                score = answer['credit']
+                                            except:
+                                                pass
+                                            if score == 0:
+                                                with tag('not'):
+                                                    with tag('varequal', case='Yes', respident='response_'+str(question.id)): # respoident is id of response_lid element
+                                                        text('answer_'+str(id_a))
+                                            else:
+                                                with tag('varequal', case='Yes', respident='response_'+str(question.id)): # respoident is id of response_lid element
+                                                    text('answer_'+str(id_a))
+                                with tag('setvar', varname='SCORE', action='Set'):
+                                    text('100')
+                                doc.stag('displayfeedback', feedbacktype='Response', linkrefid='general_fb')
+                            # default processing in any case
+                            for id_a, answer in enumerate(question.answers):    
+                                with tag('respcondition', kontinue='No'):
+                                    with tag('conditionvar'):
+                                        with tag('varequal', respident='response_'+str(question.id), case="Yes"):    
+                                            text('feedb_'+str(id_a))     
+                                    doc.stag('displayfeedback', feedbacktype='Response')      
                         else:
                             pass
                                 
@@ -270,7 +298,7 @@ def create_ims_test(questions, test_id, test_title):
                                 with tag('material'):
                                     with tag('mattext', texttype='text/html'):
                                         text(answer['feedback'])
-                        
+                    ## FIXME add wrong and correct feedbacks for TRUEFALSE
     doc.asis('</questestinterop>\n')
     doc_value = indent(doc.getvalue())
     doc_value = doc_value.replace('kontinue', 'continue')
