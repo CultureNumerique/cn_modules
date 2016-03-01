@@ -8,7 +8,6 @@ import sys
 import zipfile
 import random
 
-
 from lxml import etree
 from lxml import html
 from markdown import markdown
@@ -18,17 +17,11 @@ from yattag import Doc
 
 import model
 
-
 ######
-#
-#   reférences : 
+##   reférences : 
 #       - http://www.imsglobal.org/cc/ccv1p2/imscc_profilev1p2-Implementation.html
 #       - http://www.imsglobal.org/question/qtiv1p2/imsqti_asi_bindv1p2.html
-#
 #############
-
-
-
 
 # Mapping of the types used in culturenumerique with IMSCC types
 FILETYPES = {
@@ -49,7 +42,7 @@ FOLDERS = ['Activite', 'ActiviteAvancee', 'Comprehension', 'webcontent', 'media'
 CC_PROFILES = {
     'MULTICHOICE' : 'cc.multiple_choice.v0p1',
     'MULTIANSWER' : 'cc.multiple_response.v0p1',
-    'TRUEFALSE' : 'cc.true_false.v0p1',
+    'TRUEFALSE' : 'cc.multiple_choice.v0p1', #FIXME : doing that because of a bug in Moodle 3 that can no longer import TRUTRUEFALSE cc.true_false.v0p1
     'ESSAY' : 'cc.essay.v0p1',
     'DESCRIPTION': 'cc.essay.v0p1',
     'MISSINGWORD' : 'cc.fib.v0p1',
@@ -166,10 +159,8 @@ def create_ims_test(questions, test_id, test_title):
                             # rcardinality optional, but a priori 'Single' form MChoice, 'Multiple' for Manswer; 
                             with tag('response_lid', rcardinality=rcardinality, ident='response_'+str(question.id)):
                                 with tag('render_choice', shuffle='No'):
-                                    #if question.type in (('TRUEFALSE')):
-                                    #    question.answers = [{'answer_text':'Vrai'}, {'answer_text':'Faux'}]
                                     for id_a, answer in enumerate(question.answers):
-                                        with tag('response_label', ident='answer_'+str(id_a)):
+                                        with tag('response_label', ident='answer_'+str(question.id)+'_'+str(id_a)):
                                             with tag('material'):
                                                 with tag('mattext', texttype="text/html"):
                                                     text(answer['answer_text'])
@@ -201,7 +192,7 @@ def create_ims_test(questions, test_id, test_title):
                                 with tag('respcondition', title=title):
                                     with tag('conditionvar'):
                                         with tag('varequal', respident='response_'+str(question.id)): # respoident is id of response_lid element
-                                            text('answer_'+str(id_a))
+                                            text('answer_'+str(question.id)+'_'+str(id_a))
                                     with tag('setvar', varname='SCORE', action='Set'):
                                         text(score)
                                     doc.stag('displayfeedback', feedbacktype='Response', linkrefid='feedb_'+str(id_a))
@@ -213,16 +204,16 @@ def create_ims_test(questions, test_id, test_title):
                                         for id_a, answer in enumerate(question.answers):
                                             score = 0
                                             try:
-                                                score = answer['credit']
+                                                score = int(answer['credit'])
                                             except:
                                                 pass
-                                            if score == 0:
+                                            if score <= 0:
                                                 with tag('not'):
                                                     with tag('varequal', case='Yes', respident='response_'+str(question.id)): # respoident is id of response_lid element
-                                                        text('answer_'+str(id_a))
+                                                        text('answer_'+str(question.id)+'_'+str(id_a))
                                             else:
                                                 with tag('varequal', case='Yes', respident='response_'+str(question.id)): # respoident is id of response_lid element
-                                                    text('answer_'+str(id_a))
+                                                    text('answer_'+str(question.id)+'_'+str(id_a))
                                 with tag('setvar', varname='SCORE', action='Set'):
                                     text('100')
                                 doc.stag('displayfeedback', feedbacktype='Response', linkrefid='general_fb')
@@ -231,58 +222,10 @@ def create_ims_test(questions, test_id, test_title):
                                 with tag('respcondition', kontinue='No'):
                                     with tag('conditionvar'):
                                         with tag('varequal', respident='response_'+str(question.id), case="Yes"):    
-                                            text('feedb_'+str(id_a))     
-                                    doc.stag('displayfeedback', feedbacktype='Response')      
+                                            text('answer_'+str(question.id)+'_'+str(id_a))     
+                                    doc.stag('displayfeedback', feedbacktype='Response', linkrefid='feedb_'+str(id_a))      
                         else:
                             pass
-                                
-                            
-                            """
-                            GIFT source:
-                            ::Exemple de mise en forme::[html]<p>Observez la mise en forme du titre principal dans la deuxième version et indiquez les caractéristiques d'affichage qui ont été choisies dans cette feuille de styles (ce qui change par rapport à la première version).</p>{
-                            	~%25%la typo (la police de caractères)
-                            	~l'ordre des mots a été changé
-                            	~%25%la couleur des caractères
-                            	~%25%l'alignement du paragraphe
-                            	~%25%les caractères ont été transformés en majuscule
-                            	~l'orthographe a été modifié
-                            	####<p>Une feuille de styles ne peut pas changer l'ordre des mots ou l'orthographe, cela reviendrait à changer le contenu, seules les caractéristiques graphiques sont possibles, ici la police, la couleur, l'alignement et la 'casse' des caractères (ils sont affichés en majuscule).</p> 
-                            }
-                            
-                            
-                            
-                            <resprocessing>
-                            # condition spéciale qui calcule le score max
-                              <respcondition title="Correct" continue="No">
-                                <conditionvar>
-                                  <and>
-                                    <not>
-                                      <varequal respident="I_75514CB2" case="Yes">I_6A2938F2</varequal>
-                                    </not>
-                                    <not>
-                                      <varequal respident="I_75514CB2" case="Yes">I_B939A15D</varequal>
-                                    </not>
-                                    <varequal respident="I_75514CB2" case="Yes">I_E3B8B19D</varequal>
-                                    <varequal respident="I_75514CB2" case="Yes">I_EAA1CB96</varequal>
-                                    <varequal respident="I_75514CB2" case="Yes">I_C2FE8C74</varequal>
-                                    <varequal respident="I_75514CB2" case="Yes">I_C40C3BDE</varequal>
-                                  </and>
-                                </conditionvar>
-                                <setvar varname="SCORE" action="Set">100</setvar>
-                                <displayfeedback feedbacktype="Response" linkrefid="correct_fb"/>
-                              </respcondition>
-                              
-                              # condition par défaut qui envoie vers general_fb pour chaque réponse:
-                              <respcondition continue="No">
-                                <conditionvar>
-                                  <varequal respident="I_75514CB2" case="Yes">I_E3B8B19D_fb</varequal>
-                                </conditionvar>
-                                <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
-                              </respcondition>
-                              # .... (x6, pour chaque)
-                              
-                            </resprocessing>
-                            """   
                     # liste les feedbacks 
                     ## feedback general
                     if question.global_feedback != '':

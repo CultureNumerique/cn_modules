@@ -205,7 +205,7 @@ class GiftQuestion():
         ## TRUEFALSE questions
         elif q_answers.startswith(('T','F','TRUE','FALSE')):
             self.type = 'TRUEFALSE'
-            r2 = re.compile('#(?P<wrong_fb>[^#]*)#(?P<right_fb>[^#]*)')
+            r2 = re.compile("#{1}(?P<wrong_fb>[^#]*)#{0,1}(?P<right_fb>[^#]*){0,1}")
             m2 = r2.search(q_answers)
             if m2 is not None:
                 self.feedback_for_wrong = m2.group('wrong_fb')
