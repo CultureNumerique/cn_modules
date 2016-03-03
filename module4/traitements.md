@@ -7,92 +7,80 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 # Comprendre les traitements
 
 Pour être un utilisateur averti des machines ultrapuissantes utilisées
-dans le monde numérique, il est utile de comprendre comme "raisonnent"
-ces machines. Nous allons donc dans ce cours étudier les applications
-et voir comment elles sont construites et comment elles peuvent
-manipuler des données complexes.
+dans le monde numérique, il est utile de comprendre comment
+"raisonnent" ces machines. Dans cet objectif, nous allons étudier
+comment les applications fonctionnent, comment elles sont construites,
+comment elles se coordonnent et comment elles manipulent des données
+complexes.
 
-L'utilisation d'un objet numérique connecté passe par l'exécution
-d'applications (ou logiciels ou programmes). L'utilisateur est souvent
-dirigé par l'interface de l'application qu'il utilise et éprouve des
-difficultés à comprendre "ce que fait l'application". Il faut même
-plutôt parler de "ce que fait la machine et les applications" car
-l'exécution d'une application va souvent déclencher le lancement d'un
-grand nombre d'applications en interaction avec la machine (processeur
-de calcul et mémoire) et ses périphériques (disques, écran, clavier,
-réseau). Nous allons donc découvrir l'univers des applications :
-comment passe-t-on d'une machine "bête" manipulant des 0 et des 1 à
-une machine "intelligente" réalisant des applications complexes. En
-particulier, nous étudions comment composer des opérations pour
-définir de nouvelles opérations, comment représenter des données
-complexes, comment sont organisées les applications sur une
-machine. Nous terminons par l'étude de quelques applications : comment
-le navigateur affiche-t-il une page en partant d'un document `html`,
-comment un traitement de texte calcule-t-il une table des matières et
-comment une machine peut-elle jouer aux échecs.
+Pour introduire ce cours, considérons l'exemple de calcul d'itinéraire
+sur un site Web comme Mappy ou Google Maps. Sur mon poste de travail,
+dans le navigateur, je renseigne dans un formulaire (a minima) un lieu
+de départ, un lieu destination et un moyen de transport. Les
+informations saisies sont envoyées en utilisant Internet vers le site
+Web qui récupère donc une adresse de départ, une adresse d'arrivée et
+un moyen de transport. Ces informations sont traitées par des
+programmes qui vont extraire un numéro, un nom de rue et une ville
+pour le départ, de même pour la destination. Parfois, le site dispose
+de programmes qui vont vérifier que les adresses existent et même vous
+suggérer des corrections.
 
-Pour introduire ce cours, partons de l'exemple de calcul d'itinéraire
-sur un site comme Mappy ou Google Maps.  Plaçons-nous du côté du site
-de l'application. Celle-ci doit en premier lieu proposer un formulaire
-de saisie dans lequel l'utilisateur (vous) peut saisir (a minima) un
-lieu de départ, un lieu destination et un moyen de
-transport. L'utilisation de l'application nécessite l'utilisation de
-Internet et du Web et des applications associées étudiés dans d'autres
-cours "Culture numérique" pour les interactions entre votre navigateur
-et le site dédié à l'application. Nous supposons donc que
-l'application itinéraire récupère vos saisies, c'est-à-dire une
-adresse de départ, une adresse d'arrivée et un moyen de transport sous
-forme de chaînes de caractères. Des programmes peuvent alors être
-appliqués et extraire un numéro, un nom de rue et une ville pour le
-départ, de même pour la destination.  Si le site dispose des adresses
-valides, ces informations peuvent être validées ou des suggestions
-proposées si l'adresse est incorrecte.
+Supposons, pour simplifier la présentation, que le site dispose d'une
+ville de départ, d'une ville destination et que le moyen de transport
+choisi est la voiture. Un itinéraire va de ville en ville et nous
+supposons que le site cherche à vous proposer le trajet le plus
+court. Tout d'abord, réfléchissons aux informations que doit posséder
+le site. Tout d'abord, il doit connaître la liste des villes. Peut-il
+connaître tous les itinéraires entre deux villes quelconques ? La
+réponse est négative car mémoriser tous les itinéraires possibles
+entre toutes les paires de villes dépasserait les capacités
+mémoire. C'est donc un programme qui va calculer l'itinéraire à partir
+de la connaissance des distances directes (sans ville étape) entre
+deux villes. Le programme ne peut pas non plus calculer tous les
+itinéraires possibles entre les deux villes que vous avez choisies car
+le temps de calcul serait trop long et vous n'allez pas de Lille à
+Paris en passant par Marseille ! Donc le programme doit être plus
+"intelligent".
 
-Pour simplifier la présentation nous supposons connaître une ville de
-départ, une ville destination et nous supposons que le moyen de
-transport choisi est la voiture et qu'un trajet va de ville en ville
-et qu'on cherche le trajet le plus court. Quelles sont les
-informations que doit posséder l'application ? La liste des villes et
-connaître les distances directes (sans étape) entre deux villes. Une
-première remarque importante s'impose : mémoriser tous les itinéraires
-possibles entre toutes les paires de villes dépasserait les capacités
-mémoire. C'est donc un programme qui va calculer l'itinéraire. Le
-programme ne peut pas non plus calculer tous les itinéraires possibles
-entre deux villes choisies car il y en a trop donc le temps de calcul
-serait trop long et vous n'allez pas de Lille à Paris en passant par
-Marseille ! Donc le programme doit être plus "intelligent".
+Le programme va utiliser un algorithme de recherche de plus court
+chemin. Nous utilisons tous des algorithmes, plus ou moins précis,
+dans notre vie courante, par exemple pour nous rendre de notre
+domicile à un restaurant dont nous connaissons l'adresse. L'algorithme
+utilisé par le programme sera lui très précis et est le résultat des
+travaux de recherche de mathématiciens et informaticiens ayant étudié
+ce problème. Le programme ayant calculé un itinéraire solution, le
+site va l'envoyer vers votre navigateur qui vous affichera la solution
+trouvée. Ce schéma de fonctionnement de l'application peut être étendu
+au problème initial entre deux adresses, étendu à la recherche du
+chemin le plus rapide si on connaît les temps de parcours, étendu à
+d'autres moyens de transports, étendu au cas "temps réel" si vous
+utilisez le programme d'itinéraire dans votre voiture et que vous
+déviez de l'itinéraire proposé.
 
-L'idée du programme de calcul d'itinéraire est de représenter les
-villes et routes comme un graphe où les noeuds sont les villes et les
-arêtes sont les routes directes. Une distance, la distance entre deux villes,
-peut être associée à chaque arête. Le problème est de trouver dans le
-graphe le chemin avec le plus petit total des distances entre deux
-villes. Les mathématiciens et informaticiens ont étudié ce problème et
-conçu des algorithmes pour le résoudre. Ayant trouvé cet
-itinéraire, il reste à l'application sur le serveur à mettre à jour la
-page Web pour que cet itinéraire puisse être affiché dans votre
-navigateur. Ce principe peut être étendu au problème initial entre
-deux adresses, étendu à la recherche du chemin le plus rapide si on
-connaît le temps de parcours pour tous les couples de ville, étendu au
-cas "temps réel" si vous utilisez le programme d'itinéraire dans votre
-voiture et que vous déviez de l'itinéraire proposé.
-
-Cet exemple simplifié avait pour objectif de mettre en lumière
-certains des points qui vont être abordés dans ce cours. Tout d'abord,
-bien comprendre que le principe général de l'informatique est de
-composer des applications pour créer une nouvelle
-application. C'est ce principe qui permet de passer de la machine
-"bête" manipulant des 0 et des 1 à une machine "intelligente"
-calculant un itinéraire en passant par beaucoup de compétences
-intermédiaires : savoir saisir un texte dans un formulaire, savoir
-traiter un texte pour extraire un nom de ville, savoir faire des
-calculs de distances, savoir représenter un graphe, ... Ensuite, il
-faut remarquer que, malgré les capacités sans cesse croissantes des
+En premier lieu, cet exemple montre qu'exécuter une application
+implique l'exécution de nombreux programmes en interaction avec
+l'environnement (utilisateur, périphériques, réseau). Il montre
+également qu'une application est construite en composant d'autres
+applications : récupérer les données saisies, extraire le nom de la
+ville, calculer un itinéraire, ... C'est ce principe de composition
+qui permet de passer d'une machine "bête" manipulant des 0 et des 1 à
+une machine "intelligente" réalisant des applications complexes. C'est
+également ce principe de composition qui permet de définir des
+algorithmes pour résoudre des problèmes. L'exemple a également permis
+de montrer que malgré les capacités sans cesse croissantes des
 machines, il faut être attentif à la taille des données mémorisées et
 il faut être attentif au temps de calcul des programmes. Enfin, on
-peut noter que l'intelligence supposée de la machine provient
-essentiellement de l'intelligence des hommes et femmes ayant conçu
-les applications.
+peut noter que l'intelligence supposée de la machine est due à
+l'intelligence des hommes et femmes ayant conçu les applications.
+
+Dans la suite du cours, nous présentons comment composer des
+opérations pour définir de nouvelles opérations et discutons des
+algorithmes, nous étudions comment représenter des données complexes
+et nous voyons comment sont les machines gèrent le fonctionnement des
+applications. Nous terminons par l'étude de quelques exemples :
+comment le navigateur affiche-t-il une page en partant d'un document
+`html`, comment un traitement de texte calcule-t-il une table des
+matières et comment une machine peut-elle jouer aux échecs.
 
 ```compréhension
 ::Une application indépendante ?::
