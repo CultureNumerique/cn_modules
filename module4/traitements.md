@@ -76,7 +76,7 @@ l'intelligence des hommes et femmes ayant conçu les applications.
 Dans la suite du cours, nous présentons comment composer des
 opérations pour définir de nouvelles opérations et discutons des
 algorithmes, nous étudions comment représenter des données complexes
-et nous voyons comment sont les machines gèrent le fonctionnement des
+et nous voyons comment les machines gèrent le fonctionnement des
 applications. Nous terminons par l'étude de quelques exemples :
 comment le navigateur affiche-t-il une page en partant d'un document
 `html`, comment un traitement de texte calcule-t-il une table des
@@ -102,7 +102,7 @@ L'exécution d'une application peut faire appel à des interactions avec l'exté
 {#### réseau, clavier, souris, écran, ...}
 ```
 
-# Composer des actions pour enrichir les compétences
+# Composer des opérations -- algorithmes
 
 
 ### Introduction
@@ -113,9 +113,7 @@ utilisant des fonctionnalités déjà existantes. Nous montrons également
 que ce principe est général et que les nouvelles fonctionnalités
 peuvent, à leur tour, être composées selon ces principes jusqu'à
 pouvoir concevoir les applications complexes que vous utilisez
-quotidiennement sur un ordinateur, une tablette ou un smartphone et
-même dans de très autres nombreux objets comme votre box ou une montre
-connectée.
+quotidiennement sur un ordinateur, une tablette ou un smartphone.
 
 Pour introduire ces principes de composition, plaçons nous au plus
 près du matériel, c'est-à-dire de la machine qui manipule des 0 et
@@ -127,70 +125,56 @@ donne les ordres à l'unité de calcul et aux mémoires.
 
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Nous supposons que la machine peut
-accéder à une table qui donne le codage des caractères usuels. Vous
+accéder à une table qui donne les numéros des caractères usuels. Vous
 pourrez vérifier dans le cours sur les documents que le caractère A a
 pour nom "Latin Capital Letter A" et pour numéro 65 et que pour passer
 d'une lettre majuscule de notre alphabet à la lettre minuscule
-correspondante, il suffit d'ajouter 32 à son numéro. Nous pouvons déjà
-écrire une suite d'instructions pour écrire notre programme de
-transformation. 
+correspondante, il suffit d'ajouter 32 à son numéro. Nous pouvons
+écrire une suite d'instructions pour réaliser la transformation. 
 
-`MAJ2MIN-CARA`
+`Maj2MinCara`
 
 1. un caractère lettre majuscule en entrée
-2. aller chercher le code du caractère dans la table des codes
-3. ajouter 32 au code
+2. aller chercher le numéro du caractère dans la table
+3. ajouter 32
 4. aller chercher le caractère correspondant dans
-   la table des codes
+   la table
 5. renvoyer le caractère comme résultat
 
-Où sont nos 0 et nos 1 ? Allons les voir puis nous les
-oublierons. Prenons le caractère A de code 65, le nombre 65 se code
-sur un octet par 01000001. Le nombre 32 se code sur un octet
-par 00100000. Il suffit d'ajouter les deux codes ce qui peut être fait
-en ajoutant les deux octets. Il faut donc un programme d'addition de
-deux octets. Le principe est celui de l'addition que vous avez appris
-à l'école primaire. On additionne les chiffres de la droite vers la
-gauche avec les règles de calcul suivante : 0+0 = 0, 0+1 = 1, 1+0 = 1,
-1+1 = 0 avec une retenue de 1. Ces régles sont facilement calculables
-par notre machine de base et on peut utiliser une mémoire pour
-mémoriser la retenue. On peut donc apprendre à la machine un programme
-d'addition
+Où sont les 0 et les 1 ? Allons les voir puis nous les
+oublierons. Chaque caractère a un numéro qui se code sur un octet. Par
+exemple, le caractère A a pour numéro 65 qui se code sur un octet
+par 01000001. Le nombre 32 se code sur un octet par 00100000. Pour
+ajouter 32 au numéro du caractère, il suffit d'ajouter les deux
+octets. Ceci peut être réalisé par un algorithme comme celui que vous
+avez appris à l'école primaire pour ajouter deux nombres. Cet
+algorithme peut être défini dans la machine pour la rendre capable
+d'ajouter deux nombres entiers. Donc nous avons ajouté une nouvelle
+fonctionnalité : notre machine sait transformer une lettre majuscule
+en lettre minuscule !
 
-1. deux octets en entrée, une retenue qui vaut 0
-2. pour tous les bits de droite a gauche
-3. ajouter le bit courant du premier octet avec le bit courant du
-   second octet et avec la retenue courante
-4. donner une valeur au bit courant du résultat et mettre à jour la retenue
-5. fin du pour
-6. renvoyer l'octet résultat
+Encore plus fort! Apprenons à la machine à transformer une séquence de
+caractères en remplaçant les majuscules par des minuscules et en
+laissant les autres caractères inchangés. L'idée est de traiter chacun
+des caractères, regarder si c'est une majuscule et dans ce cas la
+transformer en minuscule ce que notre machine sait faire car nous lui
+avons appris.  Peut-on savoir si un caractère est une majuscule ?  Oui
+car il suffit de regarder si le numéro du caractère est compris entre
+65 (le code de A) et 91 (le code de Z) et nous supposons que la
+machine sait comparer deux nombres entiers. Pour réaliser la
+transformation souhaitée, nous pouvons donc écrire la suite
+d'instructions
 
-Et, par conséquent, on peut utiliser ce programme d'addition pour
-ajouter 32 au code de notre lettre majuscule ! Le tour est joué !
-Notre machine a une nouvelle fonctionnalité : elle sait transformer
-une lettre majuscule en lettre minuscule ! Encore plus fort !
-Apprenons à la machine un programme qui prend en entrée une séquence
-de caractères et qui transforme les majuscules en minuscules et laisse
-tous les autres caractères inchangés. L'idée est de traiter chacun des
-caractères, regarder si c'est une majuscule. Si c'est une majuscule,
-le transformer en la minuscule correspondante ce que notre machine
-sait faire (nous lui avons appris). Si ce n'est pas une majuscule, on
-ne fait rien, c'est-à-dire on prend le caractère sans le
-modifier. Peut-on savoir si un caractère est une majuscule ? Oui car
-il suffit de regarder si le code du caractère est compris entre 65 (le
-code de A) et 91 (le code de Z) et nous supposons que la machine sait
-comparer deux nombres entiers. Ce qui donne le programme
-
-`MAJ2MIN-CHAINE`
+`Maj2MinChaine`
 
 1. Une séquence de caractères en entrée
 2. le résultat est une séquence de caractères vide
 3. pour tous les caractères de la séquence d'entrée
 4. si le code du caractère courant est compris entre 65 et 91
-5. appeler le programme qui transforme une majuscule en minuscule et
-   l'ajouter à la séquence résultat
+5. appeler le programme `Maj2MinCara` et ajouter la minuscule
+         produite à la séquence résultat
 6. Sinon
-7. ajouter le caractère courant (sans rien faire)
+7. ajouter le caractère courant (sans rien faire) à la séquence résultat
 8. fin du si
 9. fin du pour
 10. renvoyer la séquence résultat
@@ -204,35 +188,37 @@ séquences de caractères.
 
 ### Les trois compositions de base
 
-Nous avons fait émerger les opérations de composition dans notre
-exemple sur la transformation de séquences de caractères.  La
-première, la plus évidente, est de combiner les instructions en
-définissant une **suite d'instructions** encore appelée séquence
-d'instructions. Un exemple est `MAJ2MIN-CARA` qui est constitué d'une
-suite d'instructions. L'exécution d'une suite d'instructions se fait
-en exécutant la première instruction, puis la seconde, jusqu'à
-épuisement de la suite d'instructions.
+Nous venons de définir des algorithmes en utilisant des opérations de
+composition des opérations. Nous étudions maintenant quelles sont ces
+opérations de composition. La première, la plus naturelle, est de
+combiner les instructions en définissant une **suite d'instructions**
+encore appelée séquence d'instructions. Un exemple est `Maj2MinCara`
+qui est constitué d'une suite d'instructions. L'exécution d'une suite
+d'instructions se fait en exécutant la première instruction, puis la
+seconde, jusqu'à épuisement de la suite d'instructions.
 
 Mais on est vite confronté à des situations où l'instruction à
 réaliser peut dépendre de conditions. Par exemple, dans
-`MAJ2MIN-CHAINE` on ne souhaite transformer le caractère que si c'est
+`Maj2MinChaine` on ne souhaite transformer le caractère que si c'est
 une lettre majuscule. Un autre exemple peut être celui d'un robot qui
 avance si il n'y a pas d'obstacle devant lui et qui tourne
 sinon. Cette opération de composition est appelée **alternative** ou
-**si alors sinon**. Elle s'écrit de façon générale sous la forme `SI
-condition ALORS SuiteInstructionsSi SINON SuiteInstructionsSinon
-FINSI` où condition peut prendre une des deux valeurs `VRAI` ou `FAUX`
-et `SuiteInstructionsSi` et `SuiteInstructionsSinon` sont des suites
+**si alors sinon**. Elle s'écrit de façon générale sous la forme `Si
+condition Alors InstructionsV Sinon InstructionsF
+Finsi` où condition peut prendre une des deux valeurs `Vrai` ou `Faux`
+et `InstructionsV` et `InstructionsF` sont des suites
 d'instructions. L'exécution d'une alternative se fait en estimant la
-valeur de `condition`, puis si cette valeur est `VRAI` on exécute les
-instructions dans `SuiteInstructionsSi`, si cette valeur est `FAUX` on
-exécute les instructions dans `SuiteInstructionsSinon`.
+valeur de `condition`, puis si cette valeur est `Vrai` on exécute les
+instructions dans `InstructionsV`, si cette valeur est `Faux` on
+exécute les instructions dans `InstructionsF`.
 
 La suite d'instructions permet de définir une suite d'instructions
-mais il faut écrire chaque instruction et il faut donc connaître à
-l'avance le nombre d'instructions à exécuter ce qui n'est pas toujours
-le cas. Reprenons l'exemple de `MAJ2MIN-CHAINE`, on ne connait pas la
-longueur de la séquence à l'avance et nous avons utilisé une
+mais il faut connaître à l'avance le nombre d'instructions à exécuter
+ce qui n'est pas toujours le cas. En effet, reprenons l'exemple de
+`Maj2MinChaine`, notre algorithme doit fonctionner quelle que soit la
+séquence d'entrée. Mais, on ne connait pas la longueur de la séquence
+d'entrée à l'avance, donc on ne sait pas combien de caractères il faut
+transformer. Pour remédier à ce problème, nous avons utilisé une
 composition de la forme "pour tous les caractères de la séquence
 d'entrée" pour dire que l'on devait appliquer une transformation à
 tous les caractères de la séquence. Un second exemple est le cas du
@@ -240,98 +226,55 @@ robot qu'on souhaite faire avancer dans un environnement inconnu. On
 souhaite qu'il répète l'action d'avancer tant qu'il ne rencontre pas
 d'obstacle. Ces deux exemples ont introduit la troisième et dernière
 opération de composition appelée **itérative** ou **répétition** ou
-**tant que**. Elle s'écrit de façon générale sous la forme `TANTQUE
-condition FAIRE SuiteInstructions FINTANTQUE`. L'exécution se fait en
+**tant que**. Elle s'écrit de façon générale sous la forme `Tantque
+condition Faire Instructions Fintantque`. L'exécution se fait en
 estimant la valeur de `condition`, puis si cette valeur est `VRAI`, on
-exécute les instructions dans `SuiteInstructions`, et on revient
-estimer la valeur de `condition`, et on réitère. Dans le cas où la
-valeur de `condition` est `FAUX` on passe à la suite, on dit que "on
-sort du tant que". Ce mode de composition permet de réitérer un même
+exécute les instructions dans `Instructions`, et on revient estimer la
+valeur de `condition`, et on réitère. Dans le cas où la valeur de
+`condition` est `Faux` on passe à la suite, on dit que "on sort du
+tant que". Ce mode de composition permet de réitérer un même
 traitement un nombre quelconque de fois. Notez bien que il faut
 s'assurer que la condition prenne au bout d'un certain temps la valeur
-`FAUX` pour que l'exécution s'arrête ! Cette opération de composition
-peut aussi s'écrire avec une opération `REPETER` ou avec une opération
-`POURTOUT`.
+`Faux` pour que l'exécution s'arrête, sinon on "plante" la machine !
+Les opérateurs `Tantque`, `Répéter` et `Pourtout` sont trois variantes
+possibles de la répétition.
 
-Voilà, vous savez tout ! ou plus exactement vous connaissez les trois
-modes de composition qui permettent d'écrire toutes les
-applications. En effet, il existe un **théorème** qui affirme que tout
-ce qui est calculable avec une machine peut être défini par quelques
-opérations élémentaires et les opérations de composition que sont la
-suite (ou la séquence), l'alternative et l'itérative. Ce théorème a
-été démontré au milieu du vingtième siècle par des mathématiciens et
-des logiciens. Ceci soulève immédiatement la question : une machine
-peut-elle tout calculer ? La réponse, démontrée à la même époque est
-négative : il existe des problèmes que ne peut pas résoudre une
-machine. Par exemple, il est montré qu'il n'existe pas de machine qui
-prend en entrée une suite d'instructions contenant des alternatives et
-des itératives et qui répond en sortie cette suite d'instructions va
-s'arrêter en un temps fini lorsqu'on l'exécutera. Ces sujets soulèvent
-des problèmes importants qui ont été et sont encore étudiés par les
-mathématiciens, les informaticiens, les logiciens et les
-philosophes. Notons enfin, que savoir qu'un problème est calculable ne
-suffit pas à savoir le traiter car le temps de calcul peut être
-prohibitif.
+### Les algorithmes
 
-### Créer de nouvelles applications
+Nous utilisons tous, plus ou moins consciemment, des algorithmes plus
+ou moins précis dans notre quotidien : pour réaliser des calculs, pour
+organiser un déplacement, pour organiser notre journée de travail,
+pour réaliser une tâche complexe. Par exemple, pour aller à pied de
+mon domicile à un restaurant dont je connais l'adresse, je vais suivre
+des rues, tourner à certaines intersections et parcourir la rue du
+restaurant jusqu'à arriver devant sa porte selon un algorithme que je
+me suis fixé, quitte à l'adapter si je me trompe en chemin. C'est
+identique pour les algorithmes pour les machines sauf qu'il faut
+définir ces algorithmes de façon très précise en prévoyant à l'avance
+toutes les situations possibles.
 
-Nous supposons disposer d'une machine avec des fonctionnalités de
-base. Cela peut être une machine très proche du matériel sachant faire
-des opérations sur des 0 et des 1 ; cela peut être une machine qui
-sait manipuler des nombres, des caractères et des textes ; cela peut
-être un robot qui sait avancer, tourner et repérer des obstacles ;
-cela peut être un logiciel de dessin vectoriel qui sait se repérer sur
-une grille, tracer des segments, des cercles, des courbes et
-colorier. Les exemples sont nombreux, mais, pour tous ces exemples,
-notre objectif est d'ajouter de nouvelles fonctionnalités à notre
-machine. Nous allons décrire deux principes de conception.
+On suppose que la machine dispose de fonctionnalités de base. On
+définit une nouvelle fonctionnalité par un algorithme en utilisant les
+trois modes de composition que sont la séquence, l'alternative et
+l'itérative. Est-ce suffisant ? Oui car il existe un **théorème** qui
+affirme que tout ce qui est calculable avec une machine peut être
+défini par quelques opérations élémentaires et les opérations de
+composition que sont la suite (ou la séquence), l'alternative et
+l'itérative. Ce théorème a été démontré au milieu du vingtième siècle
+par des mathématiciens et des logiciens. Ceci soulève immédiatement la
+question : une machine peut-elle tout calculer ? La réponse, démontrée
+à la même époque est négative : il existe des problèmes que ne peut
+pas résoudre une machine. Par exemple, il est montré qu'il n'existe
+pas de machine qui prend en entrée une suite d'instructions contenant
+des alternatives et des itératives et qui répond en sortie cette suite
+d'instructions va s'arrêter en un temps fini lorsqu'on
+l'exécutera. Ces sujets soulèvent des problèmes importants qui ont été
+et sont encore étudiés par les mathématiciens, les informaticiens, les
+logiciens et les philosophes. Notons enfin, que savoir qu'un problème
+est calculable ne suffit pas à savoir le traiter car le temps de
+calcul peut être prohibitif.
 
-Le principe de la **conception ascendante** est de créer de nouvelles
-fonctionnalités en utilisant les modes de composition introduits dans
-la section précédente. Ces nouvelles fonctionnalités peuvent, à leur
-tour, être considérées commes des fonctionnalités de base et on peut
-recommencer le processus de conception de nouvelles fonctionnalités
-encore plus riches. On peut comprendre les machines actuelles qui
-disposent de très nombreuses applications comme construites selon ce
-principe en partant de fonctionnalités de base avec un empilement de
-couches successives applicatives de plus en plus riches. Par
-conséquent, aujourd'hui, la plupart des besoins, personnels ou
-professionnels, des utilisateurs sont couverts par une ou plusieurs
-applications ce qui fait dire, à tort, à certains qu'il est inutile de
-comprendre comment on code des applications. Nous pensons a contrario
-que bien comprendre le fonctionnement des machines et des applications
-permet de se poser les bonnes questions, de comprendre le
-fonctionnement des applications et de pouvoir choisir la meilleure
-application en fonction des besoins et de critères sociaux,
-financiers, d'usage ou autres. De plus, il se peut qu'un besoin ne
-soit pas couvert et, dans ce cas, il sera nécessaire de développer ou
-faire développer une nouvelle fonctionnalité adaptée.
 
-Le principe de la **conception descendante** est de construire une
-application ou une nouvelle fonctionnalité en décomposant le problème
-en des problèmes plus simples. La décomposition se base toujours sur
-les modes de composition introduits précédemment. On arrête la
-décomposition lorsque tous les sous-problèmes introduits correspondent
-à des fonctionnalités de base de la machine dont on dispose. Il ne
-reste plus alors qu'à écrire les nouvelles fonctionnalités pour notre
-machine. Exemple ? compter les mots d'un texte ? un exemple avec le
-robot ?
-
-Concevoir une application est une tâche de conception donc une tâche
-de haut niveau. En effet, un telle tâche comporte de nombreux choix
-sur la façon d'organiser les données, d'organiser les traitements, de
-répondre aux besoins de l'utilisateur, de répondre aux contraintes en
-particulier légales. On parle d'*analyse informatique* ou de *génie
-logiciel* pour désigner la science de concevoir des
-applications. C'est une tâche souvent réalisée en équipe associant des
-informaticiens, des utilisateurs et des experts métier. Il y a de
-nombreuses méthodes de conception. Les méthodes les plus récentes sont
-les *méthodes agiles* alternant phases de conception, phases de
-développement, phases de mise en oeuvre et de retour des
-utilisateurs. Ce domaine est toujours en expansion et les développeurs
-d'applications sont toujours très recherchés avec actuellement une
-forte demande pour les applications sur petits objets portables tels
-que smartphones et tablettes qui ont des contraintes spécifiques.
 
 ```activité
 ::Modèle de machine::
@@ -362,6 +305,117 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 **Programmer un robot simpliste**
 Activité sur le robot ?
 ```
+
+```compréhension
+::Exécution de programmes::
+[markdown]
+**Exécution de programmes**
+Des exemples simples de programmes robot pour demander situation finale
+```
+
+# Conception des applications
+
+### Algorithmes, programmes et langages
+
+Nous avons vu que l'on pouvait définir des algorithmes qui détaillent
+comment composer des fonctionnalités de base pour définir une nouvelle
+fonctionnalité. Une contrainte supplémentaire est de traduire un
+algorithme dans un langage compréhensible par la machine. En effet,
+l'interaction avec la machine passe par un langage commun avec
+l'humain.
+
+Ces langages sont divers. Vous pouvez interagir avec une application
+par un langage graphique à base de menus ou par des clics de souris ou
+par l'action de frapper sur des touches de clavier. Pour apprendre à
+vous servir d'une application, vous allez apprendre ce langage :
+quelle est l'action réalisée par le choix de cet élément de menu,
+quelle est l'effet d'un clic de souris sur cet élément, quel est
+l'effet de l'appui sur cette combinaison de touches. Un langage peut
+être écrit comme c'est le cas pour les langages de description de
+documents comme `html`, de description d'images ou de descriptions de
+sons.
+
+Pour décrire des actions et leur composition, on utilise des langages
+écrits appelés **langages de programmation**. Il en existe de
+nombreux, le choix va dépendre des fonctionnalités de base du langage,
+des besoins de l'application, des performances souhaitées, ... Les
+textes écrits dans ces langages sont des **programmes** qui sont la
+traduction d'algorithmes dans le langage choisi. Ces langages et les
+programmes se doivent d'être compréhensibles par l'informaticien(ne)
+mais comme ils sont destinés à être exécutés par la machine, ils
+respectent des règles très strictes de syntaxe. Ceci explique qu'une
+machine va refuser une commande mal écrite alors qu'un humain
+acceptera une phrase mal formée dès qu'il en comprend le sens. 
+
+### Créer de nouvelles applications
+
+Nous supposons disposer d'une machine avec des fonctionnalités de
+base. Cela peut être une machine très proche du matériel sachant faire
+des opérations sur des 0 et des 1 ; cela peut être une machine qui
+sait manipuler des nombres, des caractères et des textes ; cela peut
+être un robot qui sait avancer, tourner et repérer des obstacles ;
+cela peut être un logiciel de dessin vectoriel qui sait se repérer sur
+une grille, tracer des segments, des cercles, des courbes et
+colorier. On suppose disposer d'un langage de programmation qui
+connaît ces fonctionnalités de base et qui est capable de les composer
+avec les modes de composition. Nous allons décrire deux principes de
+conception. Pour chacun d'eux, on conçoit d'abord des algorithmes puis
+on traduit les algorithmes dans le langage choisi. 
+
+Le principe de la **conception ascendante** est de créer de nouvelles
+fonctionnalités en utilisant les modes de composition introduits dans
+la section précédente. Ces nouvelles fonctionnalités peuvent, à leur
+tour, être considérées commes des fonctionnalités de base et on peut
+recommencer le processus de conception de nouvelles fonctionnalités
+encore plus riches. On peut comprendre les machines actuelles qui
+disposent de très nombreuses applications comme construites selon ce
+principe en partant de fonctionnalités de base avec un empilement de
+couches successives applicatives de plus en plus riches. Par
+conséquent, aujourd'hui, la plupart des besoins, personnels ou
+professionnels, des utilisateurs sont couverts par une ou plusieurs
+applications ce qui fait dire, à tort, à certains qu'il est inutile de
+comprendre comment sont conçues des applications. Nous pensons a contrario
+que bien comprendre le fonctionnement des machines et des applications
+permet de se poser les bonnes questions, de comprendre le
+fonctionnement des applications et de pouvoir choisir la meilleure
+application en fonction des besoins et de critères sociaux,
+financiers, d'usage ou autres. De plus, il se peut qu'un besoin ne
+soit pas couvert et, dans ce cas, il sera nécessaire de développer ou
+faire développer une nouvelle fonctionnalité adaptée.
+
+Le principe de la **conception descendante** est de construire une
+application ou une nouvelle fonctionnalité en décomposant le problème
+en des problèmes plus simples. Notons que c'est une démarche
+courante. en effet,si je dois me rendre de mon domicile à Lille à
+l'hôtel Arosfa à Londres par le train, je vais décomposer le problème
+en problèmes plus simples : aller de mon domicile à la gare TGV,
+prendre le TGV, aller de la gare St Pancras à l'hôtel. Pour
+décomposer, on utilise ici encore la séquence, l'alternative et
+l'itérative. On continue le processus de décomposition. Par exemple,
+aller de la gare St Pancras à l'hôtel peut se décomposer en : se
+rendre au terminus des navettes, si une navette est disponible
+rapidement, prendre la navette, sinon se rendre au métro, ... On
+arrête la décomposition lorsque tous les sous-problèmes introduits
+correspondent à des fonctionnalités de base de notre langage. Il ne
+reste plus alors qu'à traduire les algorithmes dans le langage de
+programmation choisi.
+
+Concevoir une application est une tâche de conception donc une tâche
+de haut niveau. En effet, un telle tâche comporte de nombreux choix
+sur la façon d'organiser les données, d'organiser les traitements en
+concevant les algorithmes, de répondre aux besoins de l'utilisateur,
+de répondre aux contraintes en particulier légales. On parle
+d'*analyse informatique* ou de *génie logiciel* pour désigner la
+science de concevoir des applications. C'est une tâche souvent
+réalisée en équipe associant des informaticiens, des utilisateurs et
+des experts métier. Il y a de nombreuses méthodes de conception. Les
+méthodes les plus récentes sont les *méthodes agiles* alternant phases
+de conception, phases de développement, phases de mise en oeuvre et de
+retour des utilisateurs. Ce domaine est toujours en expansion et les
+développeurs d'applications sont toujours très recherchés avec
+actuellement une forte demande pour les applications sur petits objets
+portables tels que smartphones et tablettes qui ont des contraintes
+spécifiques.
 
 ```compréhension
 ::Exécution de programmes::
