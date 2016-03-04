@@ -15,7 +15,7 @@ complexes.
 
 Pour introduire ce cours, considérons l'exemple de calcul d'itinéraire
 sur un site Web comme Mappy ou Google Maps. Sur mon poste de travail,
-dans le navigateur, je renseigne dans un formulaire (a minima) un lieu
+dans le navigateur, je renseigne dans un formulaire  un lieu
 de départ, un lieu destination et un moyen de transport. Les
 informations saisies sont envoyées en utilisant Internet vers le site
 Web qui récupère donc une adresse de départ, une adresse d'arrivée et
@@ -75,12 +75,13 @@ l'intelligence des hommes et femmes ayant conçu les applications.
 
 Dans la suite du cours, nous présentons comment composer des
 opérations pour définir de nouvelles opérations et discutons des
-algorithmes, nous étudions comment représenter des données complexes
-et nous voyons comment les machines gèrent le fonctionnement des
-applications. Nous terminons par l'étude de quelques exemples :
-comment le navigateur affiche-t-il une page en partant d'un document
-`html`, comment un traitement de texte calcule-t-il une table des
-matières et comment une machine peut-elle jouer aux échecs.
+algorithmes, nous présentons les langages de programmation et la
+traduction des algorithmes en programmes et nous montrons comment les
+machines gèrent le fonctionnement de toutes ces applications. Nous
+terminons par l'étude de quelques exemples : comment le navigateur
+affiche-t-il une page en partant d'un document `html`, comment un
+traitement de texte calcule-t-il une table des matières et comment une
+machine peut-elle jouer aux échecs.
 
 ```compréhension
 ::Une application indépendante ?::
@@ -92,7 +93,7 @@ Lancer une application implique de lancer plusieurs traitements
 ::Application et machine::
 [markdown]
 **Application et machine**
-L'exécution d'une application fait usage de ressources de la machine. Donner des exemples.
+L'exécution d'une application fait usage de ressources de la machine. Donner des exemples de ressources.
 {#### a minima avec le processeur de calcul et les mémoires}
 
 ::Application et périphériques::
@@ -228,7 +229,7 @@ d'obstacle. Ces deux exemples ont introduit la troisième et dernière
 opération de composition appelée **itérative** ou **répétition** ou
 **tant que**. Elle s'écrit de façon générale sous la forme `Tantque
 condition Faire Instructions Fintantque`. L'exécution se fait en
-estimant la valeur de `condition`, puis si cette valeur est `VRAI`, on
+estimant la valeur de `condition`, puis si cette valeur est `Vrai`, on
 exécute les instructions dans `Instructions`, et on revient estimer la
 valeur de `condition`, et on réitère. Dans le cas où la valeur de
 `condition` est `Faux` on passe à la suite, on dit que "on sort du
@@ -248,10 +249,16 @@ pour réaliser une tâche complexe. Par exemple, pour aller à pied de
 mon domicile à un restaurant dont je connais l'adresse, je vais suivre
 des rues, tourner à certaines intersections et parcourir la rue du
 restaurant jusqu'à arriver devant sa porte selon un algorithme que je
-me suis fixé, quitte à l'adapter si je me trompe en chemin. C'est
-identique pour les algorithmes pour les machines sauf qu'il faut
-définir ces algorithmes de façon très précise en prévoyant à l'avance
-toutes les situations possibles.
+me suis fixé, quitte à l'adapter si je me trompe en chemin. Nous
+pouvons noter que nous n'utilisons pas tous le même algorithme et même
+que je peux choisir un algorithme différent selon la météo, ma
+connaissance de la destination, mon humeur ... Quant aux machines, les
+algorithmes devront être définis de façon très précise en prévoyant à
+l'avance toutes les situations possibles. Il existe également
+plusieurs algorithmes possibles pour résoudre un même problème. Le
+choix sera effectué en fonction des compétences du concepteur et de
+contraintes comme l'efficacité de l'algorithme mesurée par le temps de
+calcul.
 
 On suppose que la machine dispose de fonctionnalités de base. On
 définit une nouvelle fonctionnalité par un algorithme en utilisant les
@@ -263,9 +270,9 @@ composition que sont la suite (ou la séquence), l'alternative et
 l'itérative. Ce théorème a été démontré au milieu du vingtième siècle
 par des mathématiciens et des logiciens. Ceci soulève immédiatement la
 question : une machine peut-elle tout calculer ? La réponse, démontrée
-à la même époque est négative : il existe des problèmes que ne peut
+à la même époque, est négative : il existe des problèmes que ne peut
 pas résoudre une machine. Par exemple, il est montré qu'il n'existe
-pas de machine qui prend en entrée une suite d'instructions contenant
+pas d'algorithme qui prend en entrée une suite d'instructions contenant
 des alternatives et des itératives et qui répond en sortie cette suite
 d'instructions va s'arrêter en un temps fini lorsqu'on
 l'exécutera. Ces sujets soulèvent des problèmes importants qui ont été
@@ -274,30 +281,26 @@ logiciens et les philosophes. Notons enfin, que savoir qu'un problème
 est calculable ne suffit pas à savoir le traiter car le temps de
 calcul peut être prohibitif.
 
-
-
 ```activité
 ::Modèle de machine::
 [markdown]
 **Modèle de machine**
-Porposer une ressource simple et poser des questions sur modèle de Von Neuman
+Proposer une ressource simple et poser des questions sur modèle de Von Neuman
 ```
-
 
 ```activité
 ::Les minuscules en majuscules::
 [markdown]
 **Les minuscules en majuscules**
 On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules. 
-- Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans `MAJ2MIN-CARA` ?
+- Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans `Maj2MinCara` ?
 - Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle instruction ?
-- Expliquez ce qu'il faut changer dans `MAJ2MIN-CHAINE` pour obtenir un programme `MIN2MAJ-CHAINE` qui prend en entrée une séquence de caractères et qui transforme les minuscules en majuscules et laisse tous les autres caractères inchangés.
+- Expliquez ce qu'il faut changer dans `Maj2MinChaine` pour obtenir un programme `Min2MajChaine` qui prend en entrée une séquence de caractères et qui transforme les minuscules en majuscules et laisse tous les autres caractères inchangés.
 {#### retirer 32 au code au
 lieu d'ajouter 32 ; oui, on doit pouvoir apprendre à notre machine à
 faire une soustraction de deux entiers même si cela semble un petit
 peu plus compliqué que l'addition ; tester si le code du caractère est entre 97 et 123 et appeler le programme qui transforme minuscule en majuscule.}
 ```
-
 
 ```activité
 ::Robot::
@@ -306,7 +309,19 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 Activité sur le robot ?
 ```
 
+```activité
+::Plusieurs algorithmes pour un même problème::
+[markdown]
+**Plusieurs algorithmes pour un même problème**
+Deux algorithmes sur des chaines de caractères : un efficace et un pas efficace
+```
+
 ```compréhension
+::Conception des algorithmes::
+[markdown]
+**Conception des algorithmes**
+ Pour résoudre un problème il existe un seul algorithme{F}
+ 
 ::Exécution de programmes::
 [markdown]
 **Exécution de programmes**
@@ -319,23 +334,24 @@ Des exemples simples de programmes robot pour demander situation finale
 
 Nous avons vu que l'on pouvait définir des algorithmes qui détaillent
 comment composer des fonctionnalités de base pour définir une nouvelle
-fonctionnalité. Une contrainte supplémentaire est de traduire un
-algorithme dans un langage compréhensible par la machine. En effet,
-l'interaction avec la machine passe par un langage commun avec
-l'humain.
+fonctionnalité. Un algorithme doit ensuite être traduit pour pouvoir
+être exécuté par une machine. Pour cela, il faut traduire l'algorithme
+dans un langage compréhensible par la machine. Il faut donc disposer
+d'un langage commun entre l'humain et la machine. Il existe, en
+réalité, de nombreux langages dépendant du mode d'interaction entre
+l'humain et la machine. Vous pouvez, par exemple, interagir avec une
+application par un langage graphique à base de menus ou par des clics
+de souris ou par l'action de frapper sur des touches de clavier. Pour
+apprendre à vous servir d'une application, vous allez apprendre ce
+langage : quelle est l'action réalisée par le choix de cet élément de
+menu, quelle est l'effet d'un clic de souris sur cet élément, quel est
+l'effet de l'appui sur cette combinaison de touches. Plutôt qu'un
+langage d'actions, on peut préférer utiliser un langage écrit. C'est,
+par exemple, le cas pour les langages de description de documents
+comme `html`, de description d'images ou de descriptions de sons.
 
-Ces langages sont divers. Vous pouvez interagir avec une application
-par un langage graphique à base de menus ou par des clics de souris ou
-par l'action de frapper sur des touches de clavier. Pour apprendre à
-vous servir d'une application, vous allez apprendre ce langage :
-quelle est l'action réalisée par le choix de cet élément de menu,
-quelle est l'effet d'un clic de souris sur cet élément, quel est
-l'effet de l'appui sur cette combinaison de touches. Un langage peut
-être écrit comme c'est le cas pour les langages de description de
-documents comme `html`, de description d'images ou de descriptions de
-sons.
-
-Pour décrire des actions et leur composition, on utilise des langages
+Lorsqu'il s'agit de traduire un algorithme, c'est-à-dire expliquer à
+la machine une combinaison d'instructions, on utilise des langages
 écrits appelés **langages de programmation**. Il en existe de
 nombreux, le choix va dépendre des fonctionnalités de base du langage,
 des besoins de l'application, des performances souhaitées, ... Les
@@ -345,7 +361,11 @@ programmes se doivent d'être compréhensibles par l'informaticien(ne)
 mais comme ils sont destinés à être exécutés par la machine, ils
 respectent des règles très strictes de syntaxe. Ceci explique qu'une
 machine va refuser une commande mal écrite alors qu'un humain
-acceptera une phrase mal formée dès qu'il en comprend le sens. 
+acceptera une phrase mal formée dès qu'il en comprend le sens. Cette
+rigueur nécessaire et la difficulté d'apprendre un langage de
+programmation effraient beaucoup de monde. Cependant, il est important
+de remarquer que le plus difficile est de concevoir un algorithme
+alors que programmer n'est que traduire un algorithme dans un langage.
 
 ### Créer de nouvelles applications
 
@@ -357,80 +377,164 @@ sait manipuler des nombres, des caractères et des textes ; cela peut
 cela peut être un logiciel de dessin vectoriel qui sait se repérer sur
 une grille, tracer des segments, des cercles, des courbes et
 colorier. On suppose disposer d'un langage de programmation qui
-connaît ces fonctionnalités de base et qui est capable de les composer
-avec les modes de composition. Nous allons décrire deux principes de
-conception. Pour chacun d'eux, on conçoit d'abord des algorithmes puis
-on traduit les algorithmes dans le langage choisi. 
+connaît ces fonctionnalités de base et qui est capable de les
+composer. Nous allons décrire deux principes de conception en
+rappelant qu'on conçoit d'abord des algorithmes avant de traduire les
+algorithmes dans le langage choisi.
 
 Le principe de la **conception ascendante** est de créer de nouvelles
-fonctionnalités en utilisant les modes de composition introduits dans
-la section précédente. Ces nouvelles fonctionnalités peuvent, à leur
-tour, être considérées commes des fonctionnalités de base et on peut
-recommencer le processus de conception de nouvelles fonctionnalités
-encore plus riches. On peut comprendre les machines actuelles qui
-disposent de très nombreuses applications comme construites selon ce
-principe en partant de fonctionnalités de base avec un empilement de
-couches successives applicatives de plus en plus riches. Par
-conséquent, aujourd'hui, la plupart des besoins, personnels ou
-professionnels, des utilisateurs sont couverts par une ou plusieurs
-applications ce qui fait dire, à tort, à certains qu'il est inutile de
-comprendre comment sont conçues des applications. Nous pensons a contrario
-que bien comprendre le fonctionnement des machines et des applications
-permet de se poser les bonnes questions, de comprendre le
-fonctionnement des applications et de pouvoir choisir la meilleure
-application en fonction des besoins et de critères sociaux,
-financiers, d'usage ou autres. De plus, il se peut qu'un besoin ne
-soit pas couvert et, dans ce cas, il sera nécessaire de développer ou
-faire développer une nouvelle fonctionnalité adaptée.
+fonctionnalités qui peuvent, à leur tour, être considérées commes des
+fonctionnalités de base ce qui permet de recommencer le processus pour
+créer de nouvelles fonctionnalités encore plus riches. On peut
+comprendre les machines actuelles qui disposent de très nombreuses
+applications comme construites selon ce principe en partant de
+fonctionnalités de base avec un empilement de couches successives
+applicatives de plus en plus riches. Par conséquent, aujourd'hui, la
+plupart des besoins, personnels ou professionnels, des utilisateurs
+sont couverts par une ou plusieurs applications ce qui fait dire, à
+tort, à certains qu'il est inutile de comprendre comment sont conçues
+des applications. Nous pensons, a contrario, que bien comprendre le
+fonctionnement des machines et des applications permet de se poser les
+bonnes questions, de comprendre le fonctionnement des applications et
+de pouvoir choisir la meilleure application en fonction des besoins et
+de critères sociaux, financiers, d'usage ou autres. De plus, il se
+peut qu'un besoin ne soit pas couvert et, dans ce cas, il sera
+nécessaire de développer ou faire développer une nouvelle
+fonctionnalité adaptée.
 
 Le principe de la **conception descendante** est de construire une
 application ou une nouvelle fonctionnalité en décomposant le problème
 en des problèmes plus simples. Notons que c'est une démarche
-courante. en effet,si je dois me rendre de mon domicile à Lille à
+courante. En effet,si je dois me rendre de mon domicile à Lille à
 l'hôtel Arosfa à Londres par le train, je vais décomposer le problème
 en problèmes plus simples : aller de mon domicile à la gare TGV,
-prendre le TGV, aller de la gare St Pancras à l'hôtel. Pour
-décomposer, on utilise ici encore la séquence, l'alternative et
-l'itérative. On continue le processus de décomposition. Par exemple,
-aller de la gare St Pancras à l'hôtel peut se décomposer en : se
-rendre au terminus des navettes, si une navette est disponible
-rapidement, prendre la navette, sinon se rendre au métro, ... On
-arrête la décomposition lorsque tous les sous-problèmes introduits
-correspondent à des fonctionnalités de base de notre langage. Il ne
-reste plus alors qu'à traduire les algorithmes dans le langage de
-programmation choisi.
+prendre le TGV, aller de la gare St Pancras à l'hôtel. On peut alors
+continuer le processus de décomposition. Par exemple, aller de la gare
+St Pancras à l'hôtel peut se décomposer en : se rendre au terminus des
+navettes, si une navette est disponible rapidement, prendre la
+navette, sinon se rendre au métro, ... On arrête la décomposition
+lorsque tous les sous-problèmes introduits correspondent à des
+fonctionnalités de base de notre langage. On utilise ce principe de
+conception descendante pour concevoir un algorithme permettant de
+résoudre un problème, algorithme qui sera ensuite traduit en
+programme.
 
 Concevoir une application est une tâche de conception donc une tâche
 de haut niveau. En effet, un telle tâche comporte de nombreux choix
-sur la façon d'organiser les données, d'organiser les traitements en
-concevant les algorithmes, de répondre aux besoins de l'utilisateur,
-de répondre aux contraintes en particulier légales. On parle
-d'*analyse informatique* ou de *génie logiciel* pour désigner la
+sur la façon d'organiser les données, de concevoir les algorithmes,
+d'organiser les traitements, de répondre aux besoins de l'utilisateur,
+de répondre aux contraintes d'efficacité, de mémoire et légales. On
+parle d'*analyse informatique* ou de *génie logiciel* pour désigner la
 science de concevoir des applications. C'est une tâche souvent
 réalisée en équipe associant des informaticiens, des utilisateurs et
 des experts métier. Il y a de nombreuses méthodes de conception. Les
 méthodes les plus récentes sont les *méthodes agiles* alternant phases
 de conception, phases de développement, phases de mise en oeuvre et de
-retour des utilisateurs. Ce domaine est toujours en expansion et les
-développeurs d'applications sont toujours très recherchés avec
-actuellement une forte demande pour les applications sur petits objets
-portables tels que smartphones et tablettes qui ont des contraintes
-spécifiques.
+retour des utilisateurs.
 
-```compréhension
-::Exécution de programmes::
+```activité
+::Algorithmes et programmes::
 [markdown]
-**Exécution de programmes**
-Des exemples simples de programmes robot pour demander situation finale
+**Algorithmes et programmes**
+Un algo qui affiche 5 fois "Hello World" traduit dans différents langages
 ```
 
-# Une représentation adaptée pour un traitement
+```activité
+::Langages de programmation::
+[markdown]
+**Langages de programmation**
+Il existe de nombreux langages de programmation. En voici quelques exemples
 
-Nous avons introduit, dans la section précédente, les trois opérations
-de composition , à savoir la suite d'instructions, l'alternative et
-l'itérative, qui permettent de définir ce qui est calculable par une
-machine. Mais notre machine avec ses applications doit être capable de
-traiter des objets divers comme des nombres et des chaînes de
+* pour apprendre en s'amusant : lien sur scratch
+* pour la conception artistique : lien vers processing
+* pour le Web : lien vers javascript
+```
+
+
+```compréhension
+::Algorithmique et programmation::
+[markdown]
+**Algorithmique et programmation**
+Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {concevoir algo}
+```
+
+
+# Les applications et les machines
+
+### Le système d'exploitation
+
+Le système d'exploitation est la première couche logicielle de tout
+ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il
+cache toute la complexité des calculs en binaire au niveau matériel
+(vous vous en moquez), la façon dont il range les données dans les
+mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon
+dont il gère l'exécution des programmes que vous lancez (il faut que
+mes applications fonctionnent, plusieurs en même temps) et la façon
+dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
+communications avec les périphériques (il saisit ce que je tape au
+clavier, il comprend mes clicks, il affiche sur l'écran, il envoie mes
+impressions à l'imprimante, il échange mes données sur le réseau).
+
+Vous vous moquez de la façon dont il travaille mais vous l'utilisez souvent pour lancer vos applications, pour sauvegarder vos fichiers de travail, pour vous connecter au réseau, pour installer un nouveau périphérique. Il se présente comme une interface graphique (depuis les années 90) avec principalement : un gestionnaire d'applications, un gestionnaire de configuration du système, un gestionnaire de fichiers et souvent une console (ou terminal ou fenêtre de commande) permettant de donner des instructions au système. Pour être un utilisateur averti, il est utile de comprendre les principes du système de gestion de fichiers et de savoir manipuler et donc désigner des fichiers dans le système de gestion de fichiers.
+
+En effet, en informatique les données et les applications sont rangées dans des fichiers. Malgré certaines tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui ... Ces boîtes sont appelées dossiers ou répertoires. Donc, les fichiers sont organisés dans une hiérarchie de répertoires, chaque répertoire contenant des fichiers et/ou des répertoires. Il faut comprendre que l'on peut se déplacer dans cette hiérarchie avec des commandes ou en ouvrant le répertoire en mode graphique par un double clic. Le répertoire dans lequel on est à un instant donné s'appelle le répertoire courant. Le sommet de la hiérarchie s'appelle la racine.
+
+Les fichiers sont désignés par un nom souvent de la forme préfixe.suffixe. Nous avons vu dans d'autres cours que le suffixe pour un fichier est souvent lié à une application. Dans une utilisation courante, il est conseillé de nommer vos fichiers (et répertoires) avec des noms qui ont un sens (une sémantique), d'utiliser le bon suffixe (il est parfois ajouté automatiquement par le logiciel), d'éviter les espaces et les accents dans les noms et de ranger vos fichiers dans un répertoire où vous saurez le retrouver. Pour désigner un fichier, il faut préciser son nom et où il est rangé. Pour préciser où il est rangé on utilise un chemin permettant de le trouver. Le chemin peut etre relatif (le chemin pour accéder au
+fichier en partant du répertoire courant) ou absolu (en partant de la racine).
+
+### Les langages de programmation
+
+principes généraux, illustrer ce qui précède avec packages, langage
+adapté selon type d'application à développer
+
+### Les applications
+
+la superposition des couches logicielles, fonctionnalités d'une
+application, choisir la bonne application
+```compréhension
+::Représenter et manipuler::
+[markdown]
+**Représenter et manipuler**
+Les traitements possibles dépendent fortement des choix de représentation
+{T}
+```
+
+# Des exemples d'application
+
+### Le navigateur affiche une page Web
+
+lecture du document texte structuré entête et corps, reprendre
+Internet et Web pour aller chercher les ressources, avec toutes les
+ressources comment construire la page, avec la css la mettre en forme
+
+### Un traitement de textes calcule une table des matières
+
+montrer l'importance d'avoir un document structuré, avec la structure
+comment calculer les numéros de section, les numéros de page, ...
+
+### Un jeu d'échec sur ordinateur
+
+représenter le plateau, les pièces, une configuration de jeu. Comment
+choisir un coup étant donné une configuration.
+
+```compréhension
+::Représenter et manipuler::
+[markdown]
+**Représenter et manipuler**
+Les traitements possibles dépendent fortement des choix de représentation
+{T}
+```
+
+# Optionnel -- Représentation des données
+
+Nous avons introduit des notions d'algorithmique et de conception
+d'applicationsmais ceux-ci doivent manipuler des données. Il faut donc
+également considérer les données manipulées et les choix de
+représentation de ces données. En effet, si nous avons signalé les
+contraintes d'efficacité, nous ne les avons pas prises en
+compte. L'efficacité d'un programme est lié au choix de l'algorithme
+mais aussi au choix de la représentation des données. Nos applications
+doivent traiter des objets divers comme des nombres et des chaînes de
 caractères mais aussi des documents, des images, des tableaux,
 ... Nous allons, dans cette section, étudier comment sont définis des
 données complexes à partir de données élémentaires et voir que les
@@ -593,72 +697,6 @@ et permet de définir des styles appropriés si vous êtes amenés à
 modifier l'apparence de pages Web.
 
 ### Les objets
-
-```compréhension
-::Représenter et manipuler::
-[markdown]
-**Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
-{T}
-```
-
-# Les applications et les machines
-
-### Le système d'exploitation
-
-Le système d'exploitation est la première couche logicielle de tout
-ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il
-cache toute la complexité des calculs en binaire au niveau matériel
-(vous vous en moquez), la façon dont il range les données dans les
-mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon
-dont il gère l'exécution des programmes que vous lancez (il faut que
-mes applications fonctionnent, plusieurs en même temps) et la façon
-dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
-communications avec les périphériques (il saisit ce que je tape au
-clavier, il comprend mes clicks, il affiche sur l'écran, il envoie mes
-impressions à l'imprimante, il échange mes données sur le réseau).
-
-Vous vous moquez de la façon dont il travaille mais vous l'utilisez souvent pour lancer vos applications, pour sauvegarder vos fichiers de travail, pour vous connecter au réseau, pour installer un nouveau périphérique. Il se présente comme une interface graphique (depuis les années 90) avec principalement : un gestionnaire d'applications, un gestionnaire de configuration du système, un gestionnaire de fichiers et souvent une console (ou terminal ou fenêtre de commande) permettant de donner des instructions au système. Pour être un utilisateur averti, il est utile de comprendre les principes du système de gestion de fichiers et de savoir manipuler et donc désigner des fichiers dans le système de gestion de fichiers.
-
-En effet, en informatique les données et les applications sont rangées dans des fichiers. Malgré certaines tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui ... Ces boîtes sont appelées dossiers ou répertoires. Donc, les fichiers sont organisés dans une hiérarchie de répertoires, chaque répertoire contenant des fichiers et/ou des répertoires. Il faut comprendre que l'on peut se déplacer dans cette hiérarchie avec des commandes ou en ouvrant le répertoire en mode graphique par un double clic. Le répertoire dans lequel on est à un instant donné s'appelle le répertoire courant. Le sommet de la hiérarchie s'appelle la racine.
-
-Les fichiers sont désignés par un nom souvent de la forme préfixe.suffixe. Nous avons vu dans d'autres cours que le suffixe pour un fichier est souvent lié à une application. Dans une utilisation courante, il est conseillé de nommer vos fichiers (et répertoires) avec des noms qui ont un sens (une sémantique), d'utiliser le bon suffixe (il est parfois ajouté automatiquement par le logiciel), d'éviter les espaces et les accents dans les noms et de ranger vos fichiers dans un répertoire où vous saurez le retrouver. Pour désigner un fichier, il faut préciser son nom et où il est rangé. Pour préciser où il est rangé on utilise un chemin permettant de le trouver. Le chemin peut etre relatif (le chemin pour accéder au
-fichier en partant du répertoire courant) ou absolu (en partant de la racine).
-
-### Les langages de programmation
-
-principes généraux, illustrer ce qui précède avec packages, langage
-adapté selon type d'application à développer
-
-### Les applications
-
-la superposition des couches logicielles, fonctionnalités d'une
-application, choisir la bonne application
-```compréhension
-::Représenter et manipuler::
-[markdown]
-**Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
-{T}
-```
-
-# Des exemples d'application
-
-### Le navigateur affiche une page Web
-
-lecture du document texte structuré entête et corps, reprendre
-Internet et Web pour aller chercher les ressources, avec toutes les
-ressources comment construire la page, avec la css la mettre en forme
-
-### Un traitement de textes calcule une table des matières
-
-montrer l'importance d'avoir un document structuré, avec la structure
-comment calculer les numéros de section, les numéros de page, ...
-
-### Un jeu d'échec sur ordinateur
-
-représenter le plateau, les pièces, une configuration de jeu. Comment
-choisir un coup étant donné une configuration.
 
 ```compréhension
 ::Représenter et manipuler::
