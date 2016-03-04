@@ -461,6 +461,38 @@ Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme e
 
 # Les applications et les machines
 
+### Introduction
+
+Nous avons vu qu'une application telle que vous l'utilisez est
+constituée d'un esemble de programmes. Un programme est la traduction
+dans un langage compréhensible par la machine d'algorithmes très
+précis. Chaque programme peut donc être vu comme une composition
+d'instructions de commandes à la machine. Ceci explique le
+comportement "bête" des machines et des programmes qui ne savent
+qu'appliquer des consignes apprises dans des contextes prévus. En
+particulier, un programme vous enverra un message d'erreur dès qu'il
+rencontrera des conditions inconnues pour lesquelles on ne lui a pas
+expliqué ce qu'il devait faire.
+
+D'un autre point de vue, les machines nous paraissent "intelligentes"
+pour, au moins, deux raisons. La première est le nombre impressionant
+d'applications à notre disposition dans le monde numérique : pour
+communiquer, pour chercher de l'information, pour écouter de la
+musique, pour regarder des vidéos, pour composer de la musique, pour
+dessiner, pour composer des textes ou des pages Web, pour faire des
+calculs, ... la liste est trop longue ! La seconde est que la machine
+contient tout un ensemble de couches applicatives qui fait que nous
+utilisons des applications avec des fonctionnalités de très haut
+niveau en oubliant complètement tous les aspects matériels. En
+particulier, nous oublions comment est gérée la mémoire, comment
+s'exécutent les opérations de base, comment les données sont
+sauvegardées sur disque, comment sont transmises les informations sur
+le réseau, ...
+
+Nous allons, dans cette section, présenter les grandes lignes de la
+gestion des applications et des données par les machines et discuter
+du choix d'une application.
+
 ### Le système d'exploitation
 
 Le système d'exploitation est la première couche logicielle de tout
@@ -472,25 +504,77 @@ dont il gère l'exécution des programmes que vous lancez (il faut que
 mes applications fonctionnent, plusieurs en même temps) et la façon
 dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
 communications avec les périphériques (il saisit ce que je tape au
-clavier, il comprend mes clicks, il affiche sur l'écran, il envoie mes
+clavier, il comprend mes clics, il affiche sur l'écran, il envoie mes
 impressions à l'imprimante, il échange mes données sur le réseau).
+Vous vous moquez de la façon dont il travaille mais vous l'utilisez
+souvent pour lancer vos applications, pour sauvegarder vos fichiers de
+travail, pour vous connecter au réseau, pour installer un nouveau
+périphérique. Il se présente comme une interface graphique (depuis les
+années 90) avec principalement : un gestionnaire de fichiers, un
+gestionnaire d'applications et un gestionnaire de configuration du
+système.
 
-Vous vous moquez de la façon dont il travaille mais vous l'utilisez souvent pour lancer vos applications, pour sauvegarder vos fichiers de travail, pour vous connecter au réseau, pour installer un nouveau périphérique. Il se présente comme une interface graphique (depuis les années 90) avec principalement : un gestionnaire d'applications, un gestionnaire de configuration du système, un gestionnaire de fichiers et souvent une console (ou terminal ou fenêtre de commande) permettant de donner des instructions au système. Pour être un utilisateur averti, il est utile de comprendre les principes du système de gestion de fichiers et de savoir manipuler et donc désigner des fichiers dans le système de gestion de fichiers.
+Le **gestionnaire de fichiers** gère toutes vos données numériques. En
+effet, *tout est fichier*, c'est-à-dire que les données et les
+applications sont toutes rangées dans des fichiers. Malgré certaines
+tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers
+dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui
+... Ces boîtes sont appelées dossiers ou répertoires. Donc, les
+fichiers sont organisés dans une hiérarchie de répertoires, chaque
+répertoire contenant des fichiers et/ou des répertoires. Il faut
+comprendre que l'on peut se déplacer dans cette hiérarchie avec des
+commandes ou en ouvrant le répertoire en mode graphique par un double
+clic. Le répertoire dans lequel on est à un instant donné s'appelle le
+répertoire courant. Le sommet de la hiérarchie s'appelle la racine,
+c'est souvent l'endroit où vous êtes placés en début de session.  Les
+fichiers sont désignés par un nom souvent de la forme
+'préfixe.suffixe', le suffixe est souvent lié à une application comme
+`rapport.doc` ou `mapage.html`. Dans une utilisation courante, il est
+conseillé de nommer vos fichiers (et répertoires) avec des noms qui
+ont un sens (une sémantique), d'utiliser le bon suffixe (il est
+parfois ajouté automatiquement par le logiciel), d'éviter les espaces
+et les accents dans les noms et de ranger vos fichiers dans un
+répertoire où vous saurez le retrouver. Pour désigner un fichier, il
+faut préciser son nom et où il est rangé.
 
-En effet, en informatique les données et les applications sont rangées dans des fichiers. Malgré certaines tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui ... Ces boîtes sont appelées dossiers ou répertoires. Donc, les fichiers sont organisés dans une hiérarchie de répertoires, chaque répertoire contenant des fichiers et/ou des répertoires. Il faut comprendre que l'on peut se déplacer dans cette hiérarchie avec des commandes ou en ouvrant le répertoire en mode graphique par un double clic. Le répertoire dans lequel on est à un instant donné s'appelle le répertoire courant. Le sommet de la hiérarchie s'appelle la racine.
+Le **gestionnaire des tâches** gère les exécutions des
+applications. Il vous permet sur ordinateur de lancer plusieurs
+applications simultanément, de basculer d'une application à l'autre
+soit par des combinaisons de touche soit en cliquant dans la barre des
+tâches, d'arrêter l'exécution d'une application, ... Sur un
+ordinateur, il faut savoir que, sans que vous en soyez conscients, il
+y a un grand nombre de tâches qui s'exécutent en particulier pour que
+vos applications interagissent avec vous et les périphériques que sont
+clavier, souris, écran et réseau. 
 
-Les fichiers sont désignés par un nom souvent de la forme préfixe.suffixe. Nous avons vu dans d'autres cours que le suffixe pour un fichier est souvent lié à une application. Dans une utilisation courante, il est conseillé de nommer vos fichiers (et répertoires) avec des noms qui ont un sens (une sémantique), d'utiliser le bon suffixe (il est parfois ajouté automatiquement par le logiciel), d'éviter les espaces et les accents dans les noms et de ranger vos fichiers dans un répertoire où vous saurez le retrouver. Pour désigner un fichier, il faut préciser son nom et où il est rangé. Pour préciser où il est rangé on utilise un chemin permettant de le trouver. Le chemin peut etre relatif (le chemin pour accéder au
-fichier en partant du répertoire courant) ou absolu (en partant de la racine).
-
-### Les langages de programmation
-
-principes généraux, illustrer ce qui précède avec packages, langage
-adapté selon type d'application à développer
+Le système d'exploitation assure bien d'autres missions comme la
+gestion des périphériques pour gérer les interactions avec
+l'environnement, la gestion des utilisateurs quand on est plusieurs à
+utiliser une même machine, la gestion des droits pour protéger les
+données des utilisateurs.
 
 ### Les applications
 
-la superposition des couches logicielles, fonctionnalités d'une
-application, choisir la bonne application
+Comme dit dans l'introduction, les applications à notre disposition
+sont nombreuses. Pour un même problème, plusieurs applications sont
+souvent disponibles. Comme utilisateur, dans votre vie personnelle,
+vous êtes amenés à choisir une application pour votre ordinateur ou
+téléphone portable. Dans votre vie professionnelle, vous serez amenés
+à choisir ou à participer au choix d'une application. Ce peut être,
+par exemple, le choix d'un logiciel de production de documents écrits,
+le choix d'un logiciel de dessin, le choix d'un logiciel de conception
+de sites Web, le choix d'un langage de programmation, ... Nous
+étudions ici quelques critères principaux participant au bon choix
+d'une application pour un problème donné.
+
+* contraintes techniques : ordinateur ou téléphone, système d'exploitation
+* critères d'usage : logiciels connus, habitudes de travail, utilisateurs,
+  contraintes d'entreprise
+* fonctionnalités
+* type de licence
+* prix
+* support, maintenance, évolutivité
+
 ```compréhension
 ::Représenter et manipuler::
 [markdown]
