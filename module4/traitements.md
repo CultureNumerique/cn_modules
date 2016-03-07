@@ -78,9 +78,9 @@ opérations pour définir de nouvelles opérations et discutons des
 algorithmes, nous présentons les langages de programmation et la
 traduction des algorithmes en programmes et nous montrons comment les
 machines gèrent le fonctionnement de toutes ces applications. Nous
-terminons par l'étude de quelques exemples : comment le navigateur
-affiche-t-il une page en partant d'un document `html`, comment un
-traitement de texte calcule-t-il une table des matières et comment une
+terminons par l'étude de quelques exemples : comment un correcteur
+orthographique peut-il corriger vos fautes, comment le navigateur
+affiche-t-il une page en partant d'un document `html`, et comment une
 machine peut-elle jouer aux échecs.
 
 ```compréhension
@@ -103,7 +103,7 @@ L'exécution d'une application peut faire appel à des interactions avec l'exté
 {#### réseau, clavier, souris, écran, ...}
 ```
 
-# Composer des opérations -- algorithmes
+# Les algorithmes
 
 
 ### Introduction
@@ -147,12 +147,12 @@ oublierons. Chaque caractère a un numéro qui se code sur un octet. Par
 exemple, le caractère A a pour numéro 65 qui se code sur un octet
 par 01000001. Le nombre 32 se code sur un octet par 00100000. Pour
 ajouter 32 au numéro du caractère, il suffit d'ajouter les deux
-octets. Ceci peut être réalisé par un algorithme comme celui que vous
-avez appris à l'école primaire pour ajouter deux nombres. Cet
-algorithme peut être défini dans la machine pour la rendre capable
-d'ajouter deux nombres entiers. Donc nous avons ajouté une nouvelle
-fonctionnalité : notre machine sait transformer une lettre majuscule
-en lettre minuscule !
+octets. Ceci peut être réalisé par un algorithme identique à celui que
+vous avez appris à l'école primaire adapté pour ajouter des
+octets. Cet algorithme peut être défini dans la machine pour la rendre
+capable d'ajouter deux nombres entiers. Donc nous avons ajouté une
+nouvelle fonctionnalité : notre machine sait transformer une lettre
+majuscule en lettre minuscule !
 
 Encore plus fort! Apprenons à la machine à transformer une séquence de
 caractères en remplaçant les majuscules par des minuscules et en
@@ -328,7 +328,7 @@ Deux algorithmes sur des chaines de caractères : un efficace et un pas efficace
 Des exemples simples de programmes robot pour demander situation finale
 ```
 
-# Conception des applications
+# Conception des programmes
 
 ### Algorithmes, programmes et langages
 
@@ -406,7 +406,7 @@ Le principe de la **conception descendante** est de construire une
 application ou une nouvelle fonctionnalité en décomposant le problème
 en des problèmes plus simples. Notons que c'est une démarche
 courante. En effet,si je dois me rendre de mon domicile à Lille à
-l'hôtel Arosfa à Londres par le train, je vais décomposer le problème
+l'hôtel Arosfat à Londres par le train, je vais décomposer le problème
 en problèmes plus simples : aller de mon domicile à la gare TGV,
 prendre le TGV, aller de la gare St Pancras à l'hôtel. On peut alors
 continuer le processus de décomposition. Par exemple, aller de la gare
@@ -458,13 +458,12 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {concevoir algo}
 ```
 
-
-# Les applications et les machines
+# Machines et applications - Choisir une application
 
 ### Introduction
 
 Nous avons vu qu'une application telle que vous l'utilisez est
-constituée d'un esemble de programmes. Un programme est la traduction
+constituée d'un ensemble de programmes. Un programme est la traduction
 dans un langage compréhensible par la machine d'algorithmes très
 précis. Chaque programme peut donc être vu comme une composition
 d'instructions de commandes à la machine. Ceci explique le
@@ -567,13 +566,41 @@ de sites Web, le choix d'un langage de programmation, ... Nous
 étudions ici quelques critères principaux participant au bon choix
 d'une application pour un problème donné.
 
-* contraintes techniques : ordinateur ou téléphone, système d'exploitation
-* critères d'usage : logiciels connus, habitudes de travail, utilisateurs,
-  contraintes d'entreprise
-* fonctionnalités
-* type de licence
-* prix
-* support, maintenance, évolutivité
+* **contraintes techniques : ** la machine utilisée et son système
+  d'exploitation en usage personnel, environnement matériel et
+  logiciel en usage professionnel
+* **critères d'usage : ** vos compétences ou les compétences des
+  utilisateurs, les habitudes de travail
+* **fonctionnalités : ** point essentiel de correspondance entre les
+  besoins, exprimés dans un cahier des charges en contexte
+  professionnel, et les possibilités apportées par le logiciel. Cette
+  étude peut être complexe. Par exemple, pour choisir une application
+  de conception de site Web de nombreuses fonctionnalités sont à
+  mettre en rapport avec les besoins : mise à jour du site, nombre
+  d'usagers, gestion de newsletter, gestion de forums, gestion de
+  paiement en ligne, ... 
+* **type de logiciel : ** nature de la licence, possibilité de
+  développements propres, support fourni (aide à l'installation,
+  conseil, formation, exitence de forums, ...), maintenance du
+  logiciel, son évolutivité 
+* **prix : ** prix incluant les coûts éventuels de support, formation,
+  maintenance et de mise à jour. Prévoir également des coûts matériels
+  et logiciels dérivés.
+
+Cette liste de critères ne prétend pas être exhaustive. Les critères
+ne sont pas indépendants et le choix correspondra en la recherche du
+meilleur compromis entre les besoins et les possibilités fournies par
+l'application.
+
+```activité
+::Systèmes d'exploitation::
+[markdown]
+**Systèmes d'exploitation**
+Discuter des systèmes pour
+
+* pour ordinateur
+* pour smartphone
+```
 
 ```compréhension
 ::Représenter et manipuler::
@@ -583,7 +610,92 @@ Les traitements possibles dépendent fortement des choix de représentation
 {T}
 ```
 
-# Des exemples d'application
+# Exemples d'algorithmes et applications
+
+L'objectif de cette section est d'étudier certaines applications. Pour
+chacune d'elles, un premier objectif est de vous faire comprendre les
+algorithmes qui sont derrière ces applications, de vous montrer que
+cette compréhension vous permet de savoir ce que vous pouvez attendre
+de l'application, c'est-à-dire comprendre ce qu'elle peut faire et ne
+peut pas faire. Un second objectif est de vous montrer les choix
+possibles et en particulier les choix de structuration des données et
+leur influence sur les possibilités de traitements et sur l'efficacité
+des traitements. Le dernier exemple est une introduction à
+l'intelligence artificielle par l'exemple d'un jeu sur ordinateur.
+
+### Un correcteur orthographique en français
+
+Certains traitements de texte incluent une fonctionnalité de
+correction orthographique. Nous considérons la correction
+orthographique simple qui consiste à vérifier que tout mot du texte
+est une forme correcte d'un mot de la langue française. Nous
+discuterons à la fin de cette section la question d'un correcteur
+grammatical qui serait, par exemple, capable de vérifier que les
+conjugaisons ou les accords sont correctement effectués.
+
+Un texte est une séquence de caractères. Il faut tout d'abord définir
+la notion de mot. Pour cela, un algorithme naif est de considérer
+qu'un mot est toute suite de lettres encadrée par des caractères qui
+ne sont pas des lettres. Cet algorithme est mis en échec par des mots
+comme aujourd'hui ou comme les mots composés mais nous supposons
+disposer d'un algorithme définissant la notion de mot. Nous pouvons
+alors considérer que notre texte est une séquence de mots.
+
+Comment le correcteur peut-il fonctionner ? Tout d'abord, il se doit
+de posséder la ressource constituée d'une liste tous les mots de la
+langue française avec leurs formes conjuguées et accordées. Il peut
+également disposer d'une liste de nonmots comme les noms propres, les
+abbréviations, les sigles, ... Un algorithme pour le correcteur peut
+être :
+
+`Correcteur`
+
+1. Une séquence de mots en entrée
+2. pour tous les mots de la séquence d'entrée
+3. chercher le mot dans la liste des mots et dans la liste des nonmots
+4. Si il n'existe pas alors 
+5. le surligner
+6. fin du si
+7. fin du pour
+8. une séquence de mots avec les mots surlignés considérés mal orthographiés
+
+Cet algorithme surligne, c'est-à-dire considère comme mal
+orthographié, tous les mots du texte qui n'apparaissent ni dans la
+liste des mots, ni dans la liste des nonmots. Quelles sont les erreurs
+posibles de cet algorithme ? Une première erreur possible est de
+surligner à tort un mot parce que les listes sont incomplètes comme,
+par exemple, un nom spécifique à un domaine ou un nom propre non
+répertorié. Une seconde erreur possible est de ne pas surligner un mot
+parce que l'erreur est due à une faute d'accord ou de conjugaison
+comme "la vache bleu" ou "je montres".
+
+L'efficacité en temps de calcul du correcteur est liée à la vitesse de
+recherche dans les listes. En effet, la taille de chacune des listes
+est de l'ordre de plusieurs centaines de milliers de mots. Parcourir
+ces listes en séquence pour chercher chacun des mots prendrait trop de
+temps. Il faut donc disposer de méthodes de recherche rapide dans les
+listes. Nous revenons sur cette question dans la section suivante.
+
+Nous terminons par une brève discussion sur la correction grammaticale
+qui est beaucoup plus difficile. Une première possibilité est de doter
+le correcteur de la capacité d'analyser votre phrase pour répondre aux
+questions telles que : quel est le sujet du verbe ? Avec qui s'accorde
+cet adjectif ? Ayant analysé, il doit également connaître les règles
+grammaticales et être capable de vérifier qu'elles sont correctement
+appliquées. Une seconde possibilité est d'utiliser des méthodes dites
+"force brute" qui, au lieu de mémoriser des listes de mots, mémorisent
+des listes de couples de mots, de triplets de mots voire de phrases
+complètes. La difficulté est alors de mémoriser ces listes et de les
+interroger très rapidement.
+
+Les correcteurs utilisés dans les applications sont des correcteurs
+orthographiques au sens vu précédemment et avec le type d'erreur
+signalé précédemment. Parfois, ils font quelques corrections
+grammaticales mais il est difficile de savoir quelles corrections ils
+font. Par conséquent, lorsque vous avez rédigé un texte, vous faites
+passer un correcteur orthographique, corrigez les erreurs si il y a
+lieu, puis vous revérifiez l'orthographe par un humain en se
+concentrant sur les possibles fautes grammaticales restantes.
 
 ### Le navigateur affiche une page Web
 
@@ -591,15 +703,12 @@ lecture du document texte structuré entête et corps, reprendre
 Internet et Web pour aller chercher les ressources, avec toutes les
 ressources comment construire la page, avec la css la mettre en forme
 
-### Un traitement de textes calcule une table des matières
-
-montrer l'importance d'avoir un document structuré, avec la structure
-comment calculer les numéros de section, les numéros de page, ...
-
 ### Un jeu d'échec sur ordinateur
 
 représenter le plateau, les pièces, une configuration de jeu. Comment
 choisir un coup étant donné une configuration.
+
+
 
 ```compréhension
 ::Représenter et manipuler::
