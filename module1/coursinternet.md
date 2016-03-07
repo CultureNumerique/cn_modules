@@ -260,15 +260,18 @@ Il est malheureusement courant d'être confronté à des programmes <em>bugués<
 [markdown]**Des personnages importants**
 Tout ne s'est pas fait en un jour, ...
 Vous connaissez sans doute des personnages importants de l'activité économique liée à l'informatique. Mais de nombreux chercheurs et ingénieurs ont contribué au développement des idées et des machines. Nous vous proposons de faire une recherche sur 4 personnes, dont 2 femmes qui ont largement contribué, chacune à leur façon,  à l'essor de l'informatique :
+\n
 - [Ada Lovelace](http://fr.wikipedia.org/wiki/Ada_Lovelace)
 - [Grace Hopper](http://fr.wikipedia.org/wiki/Grace_Hopper)
 - [Alan Turing](http://fr.wikipedia.org/wiki/Alan_Turing)
 - [John Von Neuman](http://fr.wikipedia.org/wiki/John_von_Neumann)
+\n
 Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, l'homme et la machine, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
 Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en quelques lignes en les resituant chronologiquement.
-{## Personnages importants
+{####[markdown]
+## Personnages importants
 ### Ada Lovelace
-![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
+![Ada Lovelace](media/adalovelace.jpg)\{: .imggauche\}
 *Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
 Ce projet n'aboutira finalement pas dans un succès commercial mais aura contribué à produire les **bases de l'informatique**.
 Le rôle d'Ada Lovelace dans ce projet a été tel qu'elle a été depuis qualifiée de *première programmeuse*.
@@ -293,18 +296,15 @@ C'est à la **fin des années 50** que les premiers **langages** informatiques d
 Grace Hopper a inventé le **premier compilateur**. Elle est aussi à l'origine du langage `Cobol` qui a été énormément utilisé dans l'informatique de gestion. On la voit ici (photo ci-contre) au clavier de l'`UNIVAC`, vers 1960.
 }
 
-::La vitesse des ordinateurs::
-Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa vitesse de calcul.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliards de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
-En vous aidant par exemple de [cette page](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs), retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :
-    - l'ENIAC 
-    - Apple I
-    - IBM PC
-    - Ipad (premier modèle)
-    - smartphone Samsung Galaxy S4
+::La vitesse des ordinateurs::[markdown]Le **microprocesseur** qui réalise les calculs dans un ordinateur déclenche ses opérations à intervalles de temps régulier. C'est **l'horloge** qui a ce rôle de définir la cadence de travail du processeur et donc sa vitesse de calcul.  La fréquence d'horloge se mesure en kiloHertz (kHz, milliers de fois par seconde), en MégaHertz (Mhz, millions de fois par seconde) ou en GigaHertz (GHz, milliards de fois par seconde). Cela correspond au nombre maximal d'opérations élémentaires qu'un ordinateur peut effectuer **en une seconde**. Nous vous proposons de faire quelques recherches pour prendre conscience des *ordres de grandeur* et des évolutions sur les 70 dernières années.
+En vous aidant par exemple de [cette page](http://fr.wikipedia.org/wiki/Histoire_des_ordinateurs), retrouver la **date** d'apparition et la **fréquence** d'horloge (en khz, Mhz ou Ghz) de ces machines emblématiques de leur époque :\n
+- l'ENIAC 
+- Apple I
+- IBM PC
+- Ipad (premier modèle)
+- smartphone Samsung Galaxy S4
 Essayez de tracer un diagramme ou une courbe pour représenter cette évolution. Quelle difficulté rencontrez-vous et que pouvez-vous en déduire sur cette évolution ?
-{
-## la vitesse des ordinateurs
-[markdown]**La vitesse des ordinateurs**
+{####[markdown]**La vitesse des ordinateurs**
 **L'ENIAC**
 ![ENIAC](media/ENIAC.gif)
 L'un des tout premiers ordinateurs, l'`ENIAC` a été réalisé en **1946**. Il avait une vitesse d'horloge de **100khz**, ce qui signifie qu'il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l'`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C'est toujours le cas pour tous les programmes informatiques.

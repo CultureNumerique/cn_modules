@@ -200,8 +200,7 @@ class AnyActivity(Subsection):
         Subsection.__init__(self,section)
         self.src = ''
         self.parse(f)
-        #self.questions = process_questions(extract_questions(self.src
-        self.questions = parseFile(iter(self.src.splitlines()))
+        self.questions = parseFile(iter(self.src.splitlines(True)))
         
     def parse(self,f):
         ''' Read lines in f until the end of the activity '''
