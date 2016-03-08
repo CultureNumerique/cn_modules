@@ -34,12 +34,12 @@ le site. Tout d'abord, il doit connaître la liste des villes. Peut-il
 connaître tous les itinéraires entre deux villes quelconques ? La
 réponse est négative car mémoriser tous les itinéraires possibles
 entre toutes les paires de villes dépasserait les capacités
-mémoire. C'est donc un programme qui va calculer l'itinéraire à partir
+mémoire. C'est un programme qui va calculer l'itinéraire à partir
 de la connaissance des distances directes (sans ville étape) entre
-deux villes. Le programme ne peut pas non plus calculer tous les
+deux villes. Ce programme ne peut pas non plus calculer tous les
 itinéraires possibles entre les deux villes que vous avez choisies car
 le temps de calcul serait trop long et vous n'allez pas de Lille à
-Paris en passant par Marseille ! Donc le programme doit être plus
+Paris en passant par Marseille ! Donc ce programme se doit d'être plus
 "intelligent".
 
 Le programme va utiliser un algorithme de recherche de plus court
@@ -69,9 +69,9 @@ une machine "intelligente" réalisant des applications complexes. C'est
 algorithmes pour résoudre des problèmes. L'exemple a également permis
 de montrer que malgré les capacités sans cesse croissantes des
 machines, il faut être attentif à la taille des données mémorisées et
-il faut être attentif au temps de calcul des programmes. Enfin, on
-peut noter que l'intelligence supposée de la machine est due à
-l'intelligence des hommes et femmes ayant conçu les applications.
+au temps de calcul des programmes. Enfin, on peut noter que
+l'intelligence supposée de la machine est due à l'intelligence des
+hommes et femmes ayant conçu les applications.
 
 Dans la suite du cours, nous présentons comment composer des
 opérations pour définir de nouvelles opérations et discutons des
@@ -689,15 +689,23 @@ complètes. La difficulté est alors de mémoriser ces listes et de les
 interroger très rapidement.
 
 Les correcteurs utilisés dans les applications sont des correcteurs
-orthographiques au sens vu précédemment et avec le type d'erreur
-signalé précédemment. Parfois, ils font quelques corrections
-grammaticales mais il est difficile de savoir quelles corrections ils
-font. Par conséquent, lorsque vous avez rédigé un texte, vous faites
-passer un correcteur orthographique, corrigez les erreurs si il y a
-lieu, puis vous revérifiez l'orthographe par un humain en se
-concentrant sur les possibles fautes grammaticales restantes.
+orthographiques avec le types d'erreur signalés précédemment. Parfois,
+ils font quelques corrections grammaticales mais il est difficile de
+savoir quelles corrections ils font. Par conséquent, lorsque vous avez
+rédigé un texte, vous faites passer un correcteur orthographique,
+corrigez les erreurs si il y a lieu, puis vous revérifiez
+l'orthographe par un humain en se concentrant sur les possibles fautes
+grammaticales restantes.
 
 ### Le navigateur affiche une page Web
+
+Le navigateur est devenu une application très complexe car il est
+l'interface privilégiée d'interaction avec les utilisateurs dans le
+monde numérique. Nous nous limitons ici à une fonctionnalité :
+afficher un document `html` auquel est associé une feuille de style et
+des images. Ce programme est en réalité très complexe mais nous en
+présentons une vue abstraite pour aider à la compréhension et donc
+aider à la conception de sites Web.
 
 lecture du document texte structuré entête et corps, reprendre
 Internet et Web pour aller chercher les ressources, avec toutes les
@@ -729,7 +737,7 @@ compte. L'efficacité d'un programme est lié au choix de l'algorithme
 mais aussi au choix de la représentation des données. Nos applications
 doivent traiter des objets divers comme des nombres et des chaînes de
 caractères mais aussi des documents, des images, des tableaux,
-... Nous allons, dans cette section, étudier comment sont définis des
+... Nous allons, dans cette section, étudier comment sont définies des
 données complexes à partir de données élémentaires et voir que les
 choix d'organisation peuvent être nombreux et influent sur les
 performances d'une application. Avant cela, une parenthèse sur la
@@ -773,7 +781,7 @@ viennent d'être rangées dans `note1` et `note2`. Les variables
 permettent donc de désigner des objets par un nom pour ranger et
 retrouver des valeurs sans que l'utilisateur ait à gérer la complexité
 des accès à la mémoire de la machine. Il faut noter que le concepteur
-du programme utilise des varaibles pour expliquer à la machine ce
+du programme utilise des variables pour expliquer à la machine ce
 qu'elle doit faire. Par contre, l'utilisateur ne voit pas les
 variables. Par exemple, l'utilisateur de notre programme saisit une
 première valeur, par exemple 12, puis une seconde valeur, par exemple
