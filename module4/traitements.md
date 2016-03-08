@@ -707,6 +707,8 @@ des images. Ce programme est en réalité très complexe mais nous en
 présentons une vue abstraite pour aider à la compréhension et donc
 aider à la conception de sites Web.
 
+
+
 lecture du document texte structuré entête et corps, reprendre
 Internet et Web pour aller chercher les ressources, avec toutes les
 ressources comment construire la page, avec la css la mettre en forme
