@@ -43,3 +43,20 @@ $ python3 toIMS.py module_folder
 
 Ce scrit génère un fichier `module_folder.imscc.zip` qui peut être importé dans Moodle en tant que cours (cf [restauration d'un cours depuis une archive IMSCC sous Moodle](https://docs.moodle.org/28/en/IMS_Common_Cartridge_import_and_export))
 
+#### Limitations à l'import d'archives IMS dans Moodle
+
+Cette procédure d'import vers Moodle au format IMS Common Cartridge a quelques limitations :
+
+- un bug affecte la version 3.0 de Moodle et **empêche l'import d'archive IMS si les quiz intégré (au format [XML/IMS-QTI](http://www.imsglobal.org/question/qtiv1p2/imsqti_asi_bindv1p2.html#1439623)) contiennent au moins une question Vrai/Faux**. [Ce bug a été signalé au groupe de developpement de Moodle](https://tracker.moodle.org/browse/MDL-53337); un contournement a été inclu dans le code actuel de toIMS.py qui déclare les questions Vrai/Faux comme des questions à choix multiples (toIMS.py ~l52).
+- les **paramétrages d'achèvement et de revue des quiz ne sont pas conservés**. En effet ces paramètres spécifiques à Moodle ne sont pas capturés dans le format IMS. Le comportement limitant vient surtout de ce que **[les paramètres globaux](https://docs.moodle.org/29/en/Common_module_settings)**, qui normalement sont utilisés comme paramètres par défaut lors de la création d'un nouveau quiz **ne sont pas pris en compte lors de l'import IMSCC**. Ce comportement semble plutôt anormal et [a été signalé également](https://tracker.moodle.org/browse/MDL-53422)
+
+
+### Export vers Open EDX (En cours)
+
+Un script permettant la conversion d'une archive Moodle au format mbz vers le format XML OPenEDX a été démarré [mais n'est plus maintenu](https://github.com/mitocw/moodle2edx).
+
+L'objectif dans ce projet est de produire une archive au format [Open Learning XML (OLX)](http://edx-open-learning-xml.readthedocs.org/en/latest). Ce format est basé sur une architecture modulaire dans laquelle les activités sont décrites dans des blocs de composants "XBlocks"; les types de composants que nous devons développer en priorité sont :
+
+- [composants HTML](http://edx-open-learning-xml.readthedocs.org/en/latest/components/html-components.html#html-components)
+- [composants "Problems"](http://edx-open-learning-xml.readthedocs.org/en/latest/problem-xml/index.html#problems)
+
