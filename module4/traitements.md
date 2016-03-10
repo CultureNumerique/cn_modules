@@ -135,12 +135,12 @@ correspondante, il suffit d'ajouter 32 à son numéro. Nous pouvons
 
 `Maj2MinCara`
 
-1. un caractère lettre majuscule en entrée
+1. **en entrée :** un caractère lettre majuscule
 2. aller chercher le numéro du caractère dans la table
 3. ajouter 32
 4. aller chercher le caractère correspondant dans
    la table
-5. renvoyer le caractère comme résultat
+5. **en sortie :** le caractère résultat
 
 Où sont les 0 et les 1 ? Allons les voir puis nous les
 oublierons. Chaque caractère a un numéro qui se code sur un octet. Par
@@ -168,17 +168,17 @@ d'instructions
 
 `Maj2MinChaine`
 
-1. Une séquence de caractères en entrée
+1. **en entrée :** une séquence de caractères
 2. le résultat est une séquence de caractères vide
-3. pour tous les caractères de la séquence d'entrée
-4. si le code du caractère courant est compris entre 65 et 91
+3. **pour** tous les caractères de la séquence d'entrée
+4. **si** le code du caractère courant est compris entre 65 et 91 **alors**
 5. appeler le programme `Maj2MinCara` et ajouter la minuscule
          produite à la séquence résultat
-6. Sinon
+6. **sinon**
 7. ajouter le caractère courant (sans rien faire) à la séquence résultat
-8. fin du si
-9. fin du pour
-10. renvoyer la séquence résultat
+8. **fin du si**
+9. **fin du pour**
+10. **en sortie :**  la séquence résultat
 
 Et voilà ! Notre machine a une nouvelle fonctionnalité : elle sait
 transformer une séquence de caractères en remplaçant toutes les
@@ -527,7 +527,7 @@ clic. Le répertoire dans lequel on est à un instant donné s'appelle le
 répertoire courant. Le sommet de la hiérarchie s'appelle la racine,
 c'est souvent l'endroit où vous êtes placés en début de session.  Les
 fichiers sont désignés par un nom souvent de la forme
-'préfixe.suffixe', le suffixe est souvent lié à une application comme
+`prefixe.suffixe`, le suffixe est souvent lié à une application comme
 `rapport.doc` ou `mapage.html`. Dans une utilisation courante, il est
 conseillé de nommer vos fichiers (et répertoires) avec des noms qui
 ont un sens (une sémantique), d'utiliser le bon suffixe (il est
@@ -546,11 +546,10 @@ y a un grand nombre de tâches qui s'exécutent en particulier pour que
 vos applications interagissent avec vous et les périphériques que sont
 clavier, souris, écran et réseau. 
 
-Le système d'exploitation assure bien d'autres missions comme la
-gestion des périphériques pour gérer les interactions avec
-l'environnement, la gestion des utilisateurs quand on est plusieurs à
-utiliser une même machine, la gestion des droits pour protéger les
-données des utilisateurs.
+Le système d'exploitation assure bien d'autres missions comme, par
+exemple, la gestion des périphériques, la gestion des utilisateurs
+quand on est plusieurs à utiliser une même machine, la gestion des
+droits pour protéger les données des utilisateurs.
 
 ### Les applications
 
@@ -581,7 +580,7 @@ d'une application pour un problème donné.
   paiement en ligne, ... 
 * **type de logiciel : ** nature de la licence, possibilité de
   développements propres, support fourni (aide à l'installation,
-  conseil, formation, exitence de forums, ...), maintenance du
+  conseil, formation, existence de forums, ...), maintenance du
   logiciel, son évolutivité 
 * **prix : ** prix incluant les coûts éventuels de support, formation,
   maintenance et de mise à jour. Prévoir également des coûts matériels
@@ -626,12 +625,11 @@ l'intelligence artificielle par l'exemple d'un jeu sur ordinateur.
 ### Un correcteur orthographique en français
 
 Certains traitements de texte incluent une fonctionnalité de
-correction orthographique. Nous considérons la correction
-orthographique simple qui consiste à vérifier que tout mot du texte
-est une forme correcte d'un mot de la langue française. Nous
-discuterons à la fin de cette section la question d'un correcteur
-grammatical qui serait, par exemple, capable de vérifier que les
-conjugaisons ou les accords sont correctement effectués.
+correction orthographique. Dans sa forme la plus simple, la correction
+se fait pour chaque mot indépendamment de son contexte, autrement dit
+sans tenir compte des règles de grammaire comme pour l'accord et la
+conjugaison. Le correcteur vérifie que tout mot du texte est une forme
+correcte d'un mot de la langue française. 
 
 Un texte est une séquence de caractères. Il faut tout d'abord définir
 la notion de mot. Pour cela, un algorithme naif est de considérer
@@ -642,60 +640,69 @@ disposer d'un algorithme définissant la notion de mot. Nous pouvons
 alors considérer que notre texte est une séquence de mots.
 
 Comment le correcteur peut-il fonctionner ? Tout d'abord, il se doit
-de posséder la ressource constituée d'une liste tous les mots de la
-langue française avec leurs formes conjuguées et accordées. Il peut
-également disposer d'une liste de nonmots comme les noms propres, les
-abbréviations, les sigles, ... Un algorithme pour le correcteur peut
-être :
+de posséder la ressource constituée d'une liste de tous les mots de la
+langue française avec leurs formes conjuguées et accordées. Il dispose
+également d'une liste de nonmots comme les noms propres, les
+abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
+à sa disposition, nous pouvons proposer l'algorithme suivant :
 
-`Correcteur`
+`Correcteur orthographique`
 
-1. Une séquence de mots en entrée
-2. pour tous les mots de la séquence d'entrée
+1. **en entrée** : une séquence de mots
+2. **pour** tous les mots de la séquence d'entrée
 3. chercher le mot dans la liste des mots et dans la liste des nonmots
-4. Si il n'existe pas alors 
-5. le surligner
-6. fin du si
-7. fin du pour
-8. une séquence de mots avec les mots surlignés considérés mal orthographiés
+4. **si** il n'existe pas **alors**
+5. le souligner
+6. **fin du si**
+7. **fin du pour**
+8. **en sortie** : la séquence de mots avec des mots soulignés qui
+   sont considérés comme mal orthographiés
 
-Cet algorithme surligne, c'est-à-dire considère comme mal
-orthographié, tous les mots du texte qui n'apparaissent ni dans la
-liste des mots, ni dans la liste des nonmots. Quelles sont les erreurs
-posibles de cet algorithme ? Une première erreur possible est de
-surligner à tort un mot parce que les listes sont incomplètes comme,
-par exemple, un nom spécifique à un domaine ou un nom propre non
-répertorié. Une seconde erreur possible est de ne pas surligner un mot
-parce que l'erreur est due à une faute d'accord ou de conjugaison
-comme "la vache bleu" ou "je montres".
+Cet algorithme met-il en évidence toutes les fautes d'orthographe ?  Il
+souligne et donc considère comme mal orthographiés tous les mots du
+texte qui n'apparaissent ni dans la liste des mots, ni dans la liste
+des nonmots. Quelles sont les erreurs possibles de cet algorithme ? Une
+première erreur possible est de souligner à tort un mot parce que les
+listes sont incomplètes comme, par exemple, un nom spécifique à un
+domaine ou un nom propre non répertorié. Une seconde erreur possible
+est de ne pas souligner un mot parce que l'erreur est due à une faute
+d'accord ou de conjugaison comme "la vache bleu" ou "je montres".
 
-L'efficacité en temps de calcul du correcteur est liée à la vitesse de
-recherche dans les listes. En effet, la taille de chacune des listes
-est de l'ordre de plusieurs centaines de milliers de mots. Parcourir
-ces listes en séquence pour chercher chacun des mots prendrait trop de
-temps. Il faut donc disposer de méthodes de recherche rapide dans les
-listes. Nous revenons sur cette question dans la section suivante.
+Cet algorithme est-il efficace en temps de calcul ? Le parcours de
+tous les mots étant obligatoire, le temps de calcul de notre
+algorithme dépend de la vitesse de recherche de chacun des mots dans
+les listes. En effet, la taille de chacune des listes est de l'ordre
+de plusieurs centaines de milliers de mots. Le parcours des listes en
+séquence prendrait trop de temps, il est donc nécessaire de définir
+des méthodes de recherche plus rapides, méthodes qui sont étudiées
+dans le module sur la recherche d'information.
 
-Nous terminons par une brève discussion sur la correction grammaticale
-qui est beaucoup plus difficile. Une première possibilité est de doter
-le correcteur de la capacité d'analyser votre phrase pour répondre aux
-questions telles que : quel est le sujet du verbe ? Avec qui s'accorde
-cet adjectif ? Ayant analysé, il doit également connaître les règles
-grammaticales et être capable de vérifier qu'elles sont correctement
-appliquées. Une seconde possibilité est d'utiliser des méthodes dites
-"force brute" qui, au lieu de mémoriser des listes de mots, mémorisent
-des listes de couples de mots, de triplets de mots voire de phrases
-complètes. La difficulté est alors de mémoriser ces listes et de les
-interroger très rapidement.
+Comment améliorer la qualité de la correction orthographique de notre
+correcteur ?  Une première piste est d'avoir des listes de mots les
+plus complètes et les plus actuelles possibles. Une seconde piste est
+d'enrichir les compétences du correcteur avec la correction
+grammaticale. Une première possibilité est de doter le correcteur de
+la capacité d'analyser votre phrase pour répondre aux questions telles
+que : quel est le sujet du verbe ? Avec qui s'accorde cet adjectif ?
+Ayant analysé, il doit également connaître les règles orthographiques
+et être capable de vérifier qu'elles sont correctement appliquées. La
+difficulté est ici de réaliser ces analyses car ils nécessitent une
+grammaire numérisée de la langue et des programmes d'analyse. Une
+seconde possibilité est d'utiliser des méthodes dites "force brute"
+qui, au lieu de mémoriser des listes de mots, mémorisent des listes de
+couples de mots, de triplets de mots voire de phrases complètes. La
+difficulté, dans ce cas, est d'avoir des listes exhaustives, de
+mémoriser ces listes, de les mettre à jour et de les interroger très
+rapidement.
 
 Les correcteurs utilisés dans les applications sont des correcteurs
-orthographiques avec le types d'erreur signalés précédemment. Parfois,
-ils font quelques corrections grammaticales mais il est difficile de
-savoir quelles corrections ils font. Par conséquent, lorsque vous avez
-rédigé un texte, vous faites passer un correcteur orthographique,
-corrigez les erreurs si il y a lieu, puis vous revérifiez
-l'orthographe par un humain en se concentrant sur les possibles fautes
-grammaticales restantes.
+orthographiques simples. Parfois, ils font des corrections liées à des
+règles grammaticales mais il est difficile de savoir exactement
+quelles corrections ils sont capables de faire. Par conséquent, **en
+pratique**, lorsque vous avez rédigé un texte, vous faites passer un
+correcteur orthographique, vous corrigez les erreurs si il y a lieu, puis
+vous revérifiez l'orthographe par un humain en se concentrant sur les
+possibles fautes grammaticales restantes.
 
 ### Le navigateur affiche une page Web
 
@@ -704,14 +711,60 @@ l'interface privilégiée d'interaction avec les utilisateurs dans le
 monde numérique. Nous nous limitons ici à une fonctionnalité :
 afficher un document `html` auquel est associé une feuille de style et
 des images. Ce programme est en réalité très complexe mais nous en
-présentons une vue abstraite pour aider à la compréhension et donc
-aider à la conception de sites Web.
+présentons ici une vue abstraite pour aider à la compréhension. En
+particulier, nous allons considérer que les programmes s'exécutent
+l'un après l'autre alors que tous les programmes s'exécutent en
+parallèle en interaction les uns avec les autres. En effet, vous avez
+constaté que lors de l'affichage d'une page Web, certaines parties ou
+certains éléments sont affichés alors que le navigateur est en attente
+d'autres ressources.
 
+Le navigateur lit le document `html` qui est un texte, c'est-à-dire
+une suite de caractères. Ce texte contient des caractères particuliers
+qui définissent des balises. Un premier programme qui connaît le
+langage `html` va interpréter ce texte et construire un arbre qui
+correspond à la structure du document : une entête et un corps, le
+corps qui contient des sections, chaque section qui peut contenir un
+titre, des sections, des listes, ... Les éléments de base seront des
+balises comme une balise hyperlien, une balise image, et des portions
+de texte. Certaines balises contiennent des liens vers des ressources
+comme la feuille de style ou des images. Des programmes sont lancés
+pour chercher ces ressources.
 
+Nous pouvons donc supposer que le navigateur a lancé des programmes
+qui ont construit l'arbre représentant le fichier source et permis de
+récupérer la feuille de style et les images. Sans feuille de style, le
+navigateur ferait un affichage par défaut sur fond blanc avec des
+styles par défaut pour le titre, les sections et leurs titres, les
+listes, le haut de page, le bas de page, ..., et bien sur les contenus
+textuels. Cet affichage va être modifié par la feuille de style en
+utilisant l'arbre représentant le document. Tout d'abord, un style
+général va être appliqué à la boîte qui va contenir la page
+affichée. Ce style précise le fond (sa couleur ou une ou plusieurs
+images), les marges (en haut, en bas, à gauche, à droite), la police
+de caractère, la taille des caractères, ... Ensuite, on applique un
+style pour le titre, c'est-à-dire à la boîte qui contient le titre,
+avec encore le fond, les marges, les propriétés des caractères. On
+applique un style aux sections, c'est-à-dire à toutes les boîtes qui
+vont contenir des sections, puis le style aux boîtes à l'intérieur des
+sections comme, par exemple, une boîte contenant une liste ordonnée,
+puis un style pour les items de la liste ... La page est alors
+affichée avec sa structure, la présentation visuelle définie par la
+feuille de style, le contenu textuel et les images.
 
-lecture du document texte structuré entête et corps, reprendre
-Internet et Web pour aller chercher les ressources, avec toutes les
-ressources comment construire la page, avec la css la mettre en forme
+Beaucoup d'éléments un peu complexes ont été oubliés dans la
+description précédente comme le calcul de la taille des boîtes, la
+taille des images et leur positionnement, l'adaptation à la taille de
+l'écran (noter qu'il existe des moyens de définir des styles adaptés
+au support de lecture et à la taille de l'écran), le positionnement
+relatif de tous les éléments, ... Cependant, la compréhension des
+principes généraux de ce programme doivent vous aider à concevoir des
+pages Web même si vous utilisez des outils de type `WYSIWYG`,
+c'est-à-dire des outils de conception guidés par le rendu. En
+particulier, avoir bien compris la structure d'arbre d'un document
+`html` est éclairant, par exemple, pour concevoir des feuilles de
+style avec le principe correspondant de boîtes emboitées les unes dans
+les autres.
 
 ### Un jeu d'échec sur ordinateur
 
