@@ -611,16 +611,16 @@ Les traitements possibles dépendent fortement des choix de représentation
 
 # Exemples d'algorithmes et applications
 
-L'objectif de cette section est d'étudier certaines applications. Pour
-chacune d'elles, un premier objectif est de vous faire comprendre les
-algorithmes qui sont derrière ces applications, de vous montrer que
-cette compréhension vous permet de savoir ce que vous pouvez attendre
-de l'application, c'est-à-dire comprendre ce qu'elle peut faire et ne
-peut pas faire. Un second objectif est de vous montrer les choix
-possibles et en particulier les choix de structuration des données et
-leur influence sur les possibilités de traitements et sur l'efficacité
-des traitements. Le dernier exemple est une introduction à
-l'intelligence artificielle par l'exemple d'un jeu sur ordinateur.
+Dans cette section, nous présentons le fonctionnement de trois
+programmes. Pour chacun d'eux, un premier objectif est de vous faire
+comprendre les algorithmes qui sont derrière ces applications, de vous
+montrer que cette compréhension vous permet de savoir ce que vous
+pouvez attendre de l'application, c'est-à-dire comprendre ce qu'elle
+peut faire et ne peut pas faire. Un second objectif est de vous
+montrer les choix du concepteur de l'application et leur influence sur
+les possibilités de traitements et leur efficacité. Le dernier exemple
+introduit, par l'exemple d'un jeu, un algorithme plus sophistiqué issu
+du domaine de l'intelligence artificielle.
 
 ### Un correcteur orthographique en français
 
@@ -635,14 +635,15 @@ Un texte est une séquence de caractères. Il faut tout d'abord définir
 la notion de mot. Pour cela, un algorithme naif est de considérer
 qu'un mot est toute suite de lettres encadrée par des caractères qui
 ne sont pas des lettres. Cet algorithme est mis en échec par des mots
-comme aujourd'hui ou comme les mots composés mais nous supposons
+comme aujourd'hui ou comme les mots composés qui seraient décomposés
+en plusieurs mots. Cet algorithme peut être amélioré et nous supposons
 disposer d'un algorithme définissant la notion de mot. Nous pouvons
 alors considérer que notre texte est une séquence de mots.
 
 Comment le correcteur peut-il fonctionner ? Tout d'abord, il se doit
 de posséder la ressource constituée d'une liste de tous les mots de la
 langue française avec leurs formes conjuguées et accordées. Il dispose
-également d'une liste de nonmots comme les noms propres, les
+également d'une liste de non mots comme les noms propres, les
 abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
 à sa disposition, nous pouvons proposer l'algorithme suivant :
 
@@ -650,7 +651,7 @@ abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
 
 1. **en entrée** : une séquence de mots
 2. **pour** tous les mots de la séquence d'entrée
-3. chercher le mot dans la liste des mots et dans la liste des nonmots
+3. chercher le mot dans la liste des mots et dans la liste des non mots
 4. **si** il n'existe pas **alors**
 5. le souligner
 6. **fin du si**
@@ -661,7 +662,7 @@ abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
 Cet algorithme met-il en évidence toutes les fautes d'orthographe ?  Il
 souligne et donc considère comme mal orthographiés tous les mots du
 texte qui n'apparaissent ni dans la liste des mots, ni dans la liste
-des nonmots. Quelles sont les erreurs possibles de cet algorithme ? Une
+des non mots. Quelles sont les erreurs possibles de cet algorithme ? Une
 première erreur possible est de souligner à tort un mot parce que les
 listes sont incomplètes comme, par exemple, un nom spécifique à un
 domaine ou un nom propre non répertorié. Une seconde erreur possible
@@ -669,7 +670,7 @@ est de ne pas souligner un mot parce que l'erreur est due à une faute
 d'accord ou de conjugaison comme "la vache bleu" ou "je montres".
 
 Cet algorithme est-il efficace en temps de calcul ? Le parcours de
-tous les mots étant obligatoire, le temps de calcul de notre
+tous les mots étant obligatoire, l'efficacité de notre
 algorithme dépend de la vitesse de recherche de chacun des mots dans
 les listes. En effet, la taille de chacune des listes est de l'ordre
 de plusieurs centaines de milliers de mots. Le parcours des listes en
@@ -763,15 +764,129 @@ pages Web même si vous utilisez des outils de type `WYSIWYG`,
 c'est-à-dire des outils de conception guidés par le rendu. En
 particulier, avoir bien compris la structure d'arbre d'un document
 `html` est éclairant, par exemple, pour concevoir des feuilles de
-style avec le principe correspondant de boîtes emboitées les unes dans
-les autres.
+style avec le principe  de boîtes emboitées les unes dans
+les autres qui correspondent à la structure d'arbre du document `html`.
 
 ### Un jeu d'échec sur ordinateur
 
-représenter le plateau, les pièces, une configuration de jeu. Comment
-choisir un coup étant donné une configuration.
+Le jeu d'échecs est un jeu ancien datant du 10ème siècle
+environ. C'est un jeu de plateau, c'est-à-dire un jeu qui se joue avec
+des pièces positionnées sur un plateau découpé en cases. Le plateau du
+jeu d'échecs est un plateau de 64 cases de forme carrée avec des cases
+blanches et des cases noires. C'est un jeu à deux joueurs. Chacun des
+joueurs dispose de 16 pièces de différente nature : les pions, les
+tours, ..., le roi et la reine. Chacune des pièces a des possibilités
+de déplacement et des possibilités de prise de pièce adverse. Le jeu
+est défini par un ensemble de règles très précises pour les
+déplacements, les prises, le calcul du gagnant.
 
+Nous nous intéressons à la question de faire jouer un ordinateur au
+jeu d'échecs. La réalisation d'un programme de jeu capable de gagner
+contre les humains a été un sujet important de l'intelligence
+artificielle sur toute la seconde moitié du 20ème siècle. Il a fallu
+attendre 1997 pour qu'un ordinateur puisse gagner contre le meilleur
+joueur humain, en l'occurence le programme "Deep Blue" qui gagne
+contre Kasparov en `1997`. Désormais, des programmes, qui peuvent être
+exécutés sur un ordinateur personnel, sont plus forts que tout expert
+humain. Nous allons expliquer les principes algorithmiques qui font
+"l'intelligence" de ces programmes.
 
+Nous laissons complètement de côté toutes les questions liées au
+graphisme, aux interactions entre le joueur humain et le
+programme. Nous supposons que le programme dispose d'une
+représentation numérique du plateau et des pièces, qu'il existe des
+programmes permettant de vérifier qu'un déplacement est autorisé,
+permettant de calculer, pour un état du jeu, tous les déplacements
+possibles du joueur qui doit jouer, permettant de voir si la partie
+est finie et de déclarer le match nul ou le gagnant. Nous nous
+intéressons donc simplement à la question suivante : la partie étant
+dans un certain état après plusieurs coups de chacun des deux joueurs,
+comment le programme peut-il choisir le meilleur coup à jouer ?
+
+Si vous avez déja joué à un jeu de plateau, vous raisonnez très
+certainement de la façon suivante : quels sont les coups possibles ?
+Pour chacun d'eux, voir leur effet, réfléchir à la réponse potentielle
+de mon adversaire, de penser à ce que je pourrais jouer ensuite,
+... Après avoir examiné un certain nombre de coups possibles, je fais
+un choix. Un algorithme va avoir une approche similaire mais très
+systématique. Il va considérer tous les coups possibles de sa part,
+tous les coups possibles de l'adversaire, tous les coups possibles de
+sa part, ... L'objet informatique construit est un arbre : la racine
+est l'état courant du jeu, les fils sont les états du jeu pour chaque
+coup possible, etc. Une première idée est donc de construire cet arbre
+de toutes les suites possibles du jeu à partir de l'état courant,
+calculer le coup qui m'amène le plus souvent dans une situation
+gagnante et le choisir.
+
+Le problème est-il résolu ? Malheureusement non ! Nous avons signalé,
+dans l'introduction de ce module, la notion d'être calculable par une
+machine. Mais il ne suffit pas qu'un problème soit calculable. Il faut
+qu'il le soit avec une mémoire et un temps de calcul raisonnables. Sur
+notre exemple, imaginez qu'il y ait environ 10 coups possibles et
+qu'on souhaite regarder les états possible pour 10 tours de jeu, soit
+pour 20 coups. Il y aurait 10 puissance 20 états possibles, soit
+encore 1 suivi de 20 zéros, soit encore 100 milliards de milliards
+d'états possibles. Il est **impossible** à toute machine de mémoriser
+ces états ou de faire des calculs sur tous ces états. C'est ici qu'il
+faut donc être "intelligent" pour notre programme.
+
+Vu que le programme ne peut pas explorer le jeu pour voir si un coup
+mène sur une position gagnante, nous allons doter le programme d'une
+fonction d'évaluation d'un état du jeu. Dans sa forme la plus simple,
+une valeur est attribuée à chacune des pièces et l'évaluation d'un
+état du jeu consiste à sommer la valeur des pièces dont le joueur
+dispose dans cet état. Cette fonction peut être améliorée par des
+bonus ou malus dépendant de la position de la pièce. Par exemple, on
+va bonifier un pion qui est près du camp adverse car il peut se
+transformer en reine, on va pénaliser un pion isolé car il peut être
+pris facilement. Nous supposons qu'une fonction d'évaluation a été
+choisie.
+
+Faisons le point. Le jeu est dans un certain état (une configuration
+du jeu après plusieurs coups), le programme doit choisir un meilleur
+coup à jouer. La succession des coups que chacun des joueurs peut
+jouer définit un arbre de tous les états possibles. Nous savons qu'il
+est impossible d'explorer cet arbre complètement. L'idée de base de
+l'algorithme est de l'explorer incomplètement mais
+intelligemment. Pour cela, on utilise la fonction d'évaluation pour
+attribuer un score à un état de l'arbre. En effet, on va explorer
+l'arbre en éliminant complètement des sous-arbres lorsqu'on estime que
+les scores dans ce sous-arbre ne seront pas assez bons.  C'est un peu
+ce qu'un joueur humain fait : si je joue ce coup, je perd ma reine et,
+sauf cas particulier, ce coup n'est pas intéressant donc je ne vais
+pas explorer plus loin ce qui peut se passer. C'est ce principe qui a
+été formalisé bien plus précisémment en utilisant les scores sous
+forme d'un algorithme célèbre appelé *algorithme alpha-beta*. 
+
+Vous connaissez maintenant les principes du fonctionnement de
+l'algorithme. Pour avoir un algorithme performant on examinera le plus
+grand nombre d'états possibles dans l'arbre simplifié grace à la
+méthode alpha-beta. Pour avoir un algorithme très performant, on
+ajoute d'autres éléments comme, par exemple, une bibliothèque des
+débuts de partie. C'est-à-dire que le programme pourra mimer des
+débuts de partie classiques des meilleurs joueurs qui sont connues sur
+quelques coups en début de partie. Mais avoir le jeu le plus fort ne
+sera pas le seul critère car un joueur standard n'a pas le niveau du
+champion du monde et ne prendra pas plaisir à perdre toutes les
+parties qu'il joue ! Avoir un jeu qui s'adapte à l'utilisateur est une
+question importante qui est toujours étudiée par les concepteurs de
+jeux.
+
+Il est difficile de ne pas parler du jeu de Go qui défraie la
+chronique au moment de la rédaction de ce cours en 2016. En effet,
+pour la première fois, un programme gagne contre le champion du monde
+du Go alors qu'on croyait le Go hors de portée des machines. En effet,
+le nombre de configurations du Go est encore plus gigantesque que pour
+les échecs et les stratégies des joueurs utilisent une vue spatiale de
+l'état du jeu qu'on pensait réservée au cerveau humain. Le programme
+de Go utilise des techniques d'apprentissage automatique ("machine
+learning" en anglais) avec un programme de jeu qui s'améliore avec
+l'expérience, c'est-à-dire qu'il "apprend" à partir de parties jouées
+(contre un humain ou contre lui-même). Un petit cocorico Lillois (les
+rédacteurs de ce cours sont Lillois) car c'est notre collègue Rémi
+Coulom qui a initié ces recherches sur le Go avec un programme
+champion du monde dans les années 2010, battant même des experts
+humains mais avec handicap.
 
 ```compréhension
 ::Représenter et manipuler::
