@@ -2,12 +2,12 @@
 
 #
 
-source='build'
-dest=vduhal@culturenumerique.univ-lille3.fr:htdocs/staging/
+source='build/last'
+dest=culturenumerique@culturenumerique.univ-lille3.fr
 
 if [ $# -ge 2 ]; then
     echo "$0 [source]"
-    echo "Copy the source dir (default: build) into the destination $dest " 
+    echo "Copy the source dir (default: ./build/last) into the destination $dest " 
     exit 0
 else
     if [ $# -eq 1 ]; then
@@ -15,11 +15,19 @@ else
     fi
 fi
 
+batchfile=/tmp/synchro-$$
+cat <<EOF > $batchfile
+cd /site/staging
+put -r $source
+EOF
+
 if [ -d $source ]; then
-    scp  -r -C $source $dest
+    sftp -C -b $batchfile $dest
     #rsync -avh --delete $source $dest
 else
     echo "Unable to find: " $source
 fi
-   
+
+rm $batchfile
+
 

@@ -567,7 +567,7 @@ une très longue durée, l'usage de formats propriétaires repose sur des
 logiciels qui peuvent disparaître ou changer leur règles
 d'utilisation...
 
-Comme pour les infrastructures, l'état et bien d'autres organisations
+Comme pour les infrastructures, l'État et bien d'autres organisations
 sont conscientes de ces difficultés. Elle produisent souvent des
 directives, circulaires pour inciter à utiliser des formats ouverts et
 libres. Mais il est bien plus difficile de convaincre les utilisateurs
@@ -616,7 +616,7 @@ Un format ouvert facilite l' interopérabilité
 **Le format doc**
 Lisez la page Wikipedia suivante sur [le format doc](https://en.wikipedia.org/wiki/Doc_%28computing%29) et cochez les réponses vraies.
 {~%0% Les fichiers avec l'extension doc désignent  une chose unique. #Non, plusieurs logiciels distincts l'ont utilisé pour stocker la représentation de choses distinctes.
-~%0% Cce format est ouvert. #Non, c'est un format propriétaire fermé.
+~%0% Ce format est ouvert. #Non, c'est un format propriétaire fermé.
 ~%50% Ce format est toujours développé ?#Oui
 ~%50% Ce format a été étendu. #Oui, docx ou Office Open XML
 }
@@ -1085,7 +1085,7 @@ et sont particulièrement adaptées pour représenter des visuels tels
 que des logos.
 
 Les logiciels qui manipulent et affichent ces images vectorielles
-*comprennent* et *interprêtent* les descriptions, c'est-à-dire
+*comprennent* et *interprètent* les descriptions, c'est-à-dire
 calculent le résultat visuel à partir de la description. Un premier
 avantage est qu'une image vectorielle est une description de l'image
 et est donc de plus petite taille qu'une description point par point.
@@ -1301,22 +1301,21 @@ correspond aux technologies des écrans, le CMJN est adapté au monde de l'impre
 À travers cette présentation, vous avez sans doute retenu la distinction entre
 les vues de contenu, structure, présentation et les métadonnées qui
 qualifient un document numérique. Dans les autres types de données
-manipulées par les ordinateurs, comme les images, le son par exemple
+manipulées par les ordinateurs, comme les images et le son par exemple
 on retrouve également ces distinctions.
 
-Une autre distinction que vous pouvez également retenir c'est celle
+Une autre distinction que vous pouvez également retenir est celle
 entre logiciel et donnée. Parfois très liés à cause de formats
 propriétaires, on en arrive de temps à autres à les confondre, mais
-bien-sûr la donnée doit pouvoir exister, suivre son cycle de
+bien-sûr la donnée doit pouvoir exister ainsi que suivre son cycle de
 développement et d'utilisation en dehors du logiciel qui l'a créé.
 
-Par les formats de données libres et ouverts ou propriétaires ou
-fermés, vous voyez également une illustration de la rencontre entre le
-numérique et le droit. Le droit ne s'applique pas qu'aux formats, mais
-aux également aux contenus et aux logiciels. Le domaine du droit du
-numérique sort du périmètre de ce cours mais vous devez toujours vous
-poser la question du droit dès que vous utilisez une ressource pour la
-publier.
+Par les notions de formats de données soit libres et ouverts, soit
+propriétaires ou fermés, vous pouvez également constater une
+illustration de la rencontre entre le numérique et le droit. Le droit
+ne s'applique pas qu'aux formats, mais  également aux contenus et
+aux logiciels. Le domaine du droit du numérique sort du périmètre de
+ce cours mais il est impératif de se poser la question du droit dès lors que vous souhaitez utiliser une ressource pour la publier.
 
 Enfin, sachez que l'idée de la liberté ou de l'ouverture s'applique
 aux contenus par le biais des licences *creative commons* et aux
@@ -1328,7 +1327,7 @@ mouvement qui impacte aujourd'hui toute la société numérique.
 
 ```activité
 ::Les personnages du libre::
-[markdown] Qui est Richard Stallman ? Qui est Laurence Lessig ?
+[markdown] Qui est Richard Stallman ? Qui est Lawrence Lessig ?
 {#### Stallman est un informaticien du fameux MIT à l'origine du projet GNU qui fonde le logiciel libre et de la licence associée GPL. Lessig est un juriste à l'origine de la licence Creative Commons. (Voir les pages correspondantes dans Wikipedia)}
 
 ::Creative Commons::

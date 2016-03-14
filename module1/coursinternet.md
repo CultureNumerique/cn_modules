@@ -88,11 +88,13 @@ ces objets sont équipés de micro-processeurs !</p> }
 
 ``` activité
 ::Le numérique concerne tout le monde:: 
+[markdown]
 **Quels étudiants sont concernés par le numérique ?**
 Le numérique concerne évidemment les étudiants en informatique et plus généralement les étudiants des filières scientifiques.  Mais vous qui êtes inscrits dans une université de sciences humaines et sociales, êtes-vous concernés ?
 Choisissez au moins 3 des domaines suivants et faites des recherches pour voir en quoi ils sont impactés par le numérique : les médias, la santé, l'histoire, la sociologie, la linguistique, les arts, la culture, l'enseignement, l'archéologie.
 Faites une synthèse en quelques lignes de vos recherches en précisant les domaines auxquels vous vous êtes intéressés. Indiquez les liens des sites sur lesquels vous avez trouvé ces informations. La liste est non exhaustive et vous pouvez vous intéresser à d'autres domaines.
-{### Le numérique concerne tout le monde
+{#### 
+# Le numérique concerne tout le monde
 Ces recherches ont dû vous convaincre, si c'était nécessaire, que le numérique **n'est pas réservé** aux informaticiens, il concerne tout le monde, toutes les disciplines.
 S'agissant plus particulièrement des **sciences humaines**, la prise en compte du numérique a fait évoluer les champs disciplinaires pour faire apparaître ce qu'on appelle les **humanités numériques** ( *digital humanities* en anglais). 
 Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'autres exemples dans le forum de discussion :
@@ -112,7 +114,7 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
 ```
  
 ``` activité-avancée
-::Le numérique au quotidien::
+[markdown]::Le numérique au quotidien::
 **Le numérique au quotidien**
 Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
     - Domotique
@@ -120,7 +122,8 @@ Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun de
     - Vêtements
     - Médical / paramédical
 	Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
-{### le numérique au quotidien
+{#### 
+# le numérique au quotidien
 Quelques exemples que nous vous proposons au cas où vous n'auriez rien trouvé, ...
 La **domotique** est un domaine en pleine expansion qui vise à équiper numériquement notre maison :
 - [nest](https://nest.com/fr/)
@@ -142,7 +145,7 @@ Le numérique nous concerne tous en tant que citoyen. Il permet de nouvelles cho
 - En **politique et média** : Qu'est-ce que la vérification par les faits (fact-checking en anglais) ? En quoi le numérique l'a rendue possible / facile ?
 - En **citoyenneté** : Que signifie vote électronique et en quoi cela pose-t-il des questions essentielles ? Trouver au moins un avantage et un inconvénient.
 Après avoir fait vos recherches, répondez aux questions posées en quelques lignes et en indiquant les liens où vous avez trouvé ces informations.
-{####[markdown]
+{####
 Voici quelques liens que nous vous proposons mais que vous avez sûrement trouvés par vous-même :
 - À propos de la troisième révolution industrielle :
   - [Troisième révolution industrielle](http://fr.wikipedia.org/wiki/Troisième_révolution_industrielle)
@@ -266,7 +269,8 @@ Vous connaissez sans doute des personnages importants de l'activité économique
 - [John Von Neuman](http://fr.wikipedia.org/wiki/John_von_Neumann)
 Par ailleurs, l'un de ces personnages est étroitement lié à une machine : **ENIGMA**. Vous chercherez également ce qu'est cette machine et à quoi elle servait. Tous deux, l'homme et la machine, sont les héros du film *The imitation Game* sorti sur les écrans français en janvier 2015.
 Après avoir effectué vos recherches sur ces personnes et cette machine, rédigez une présentation en quelques lignes en les resituant chronologiquement.
-{## Personnages importants
+{####
+## Personnages importants
 ### Ada Lovelace
 ![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
 *Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
@@ -302,7 +306,7 @@ En vous aidant par exemple de [cette page](http://fr.wikipedia.org/wiki/Histoire
     - Ipad (premier modèle)
     - smartphone Samsung Galaxy S4
 Essayez de tracer un diagramme ou une courbe pour représenter cette évolution. Quelle difficulté rencontrez-vous et que pouvez-vous en déduire sur cette évolution ?
-{
+{####
 ## la vitesse des ordinateurs
 [markdown]**La vitesse des ordinateurs**
 **L'ENIAC**
@@ -334,7 +338,8 @@ Faites des recherches sur l'`IBM - PC` pour répondre aux questions suivantes :
     - Quelle quantité en a-t-on fabriqué ?
     - Quelle était la capacité de son disque dur ?
     - Pourquoi le `PC` d'`IBM` est-il resté dans l'histoire ?
-{## D'où vient le PC ?
+{####
+## D'où vient le PC ?
 ### Le PC de 1981 à aujourd'hui
 L'`IBM-PC` a fait son apparition en **1981**. Plusieurs millions d'exemplaires ont été vendu à travers la monde. Le premier modèle ne possédait **pas de disque dur**, seulement des lecteurs de disquettes. Par la suite, d'autres modèles toujours plus puissants et sophistiqués ont vu le jour. À chaque fois les nouveaux modèles étaient compatibles avec les anciens, cela signifie que les programmes qui fonctionnaient sur les anciens modèles pouvaient être réutilisés avec les nouveaux.
 `IBM` s'est associé avec `Microsoft` qui fournissait le système d'exploitation qui s'appelait alors `MS-DOS`. Celui-ci a évolué en même temps que les capacité des machines. La dernière génération connue s'appelle ... `Windows 10` !
@@ -354,7 +359,8 @@ Une branche de la science informatique est l'étude des interactions entre l'hom
 - Qu'est-ce que le  **Palo Alto Research Center** ? Qu'y fait-on ?
 - Qu'est-ce que l'ordinateur **Lisa** ? Qu'a-t-il apporté de nouveau ? Qui l'a fabriqué ? En quelle année est-il apparu ?
 Par ailleurs, les ordinateurs prennent désormais des formes nouvelles et se combinent avec d'autres objets du quotidien. Effectuez des recherches pour dire ce qu'on appelle l'informatique ubiquitaire (ou informatique omniprésente) et donnez un meilleur représentant. 
-{## Évolution des interfaces homme-machine
+{####
+## Évolution des interfaces homme-machine
 ### Les interfaces ont démocratisé l'accès au numérique
 Une branche de la **science informatique** est l'étude des interactions entre l'homme et la machine.
 De ce point de vue, de nombreuses avancées ont été réalisées depuis 1945. Elles sont liées à  la fois à des progrès technologiques, des efforts d'ingénieurs et des succès commerciaux, mais aussi des avancées dans les idées.
@@ -445,7 +451,8 @@ On a parfois une représentation erronée du rôle des différents pays dans la 
 - Qui est Vinton « Vint » Gray Cerf ? Comment est-il parfois surnommé ?
 - Qui est Louis Pouzin ? Qu'était le projet Cyclades ?
 Après vous être documenté sur ces deux personnages importants, rédigez une courte réponse qui résume ce que vous avez appris.
-{## Qui a inventé internet ?
+{####
+## Qui a inventé internet ?
 ### Vinton Gray Cerf
 ![Vinton Cerf](media/vintoncerf.jpg)
 *Dr. Vint Cerf*, photo de Veni Markovski,
@@ -470,7 +477,8 @@ Effectuez des recherches pour répondre aux questions qui suivent. Vous pouvez c
 - Quelle proportion de la population mondiale n'a pas accès à internet ?
 - À l'inverse, quelle proportion a accès à internet en France ? Est-ce supérieur ou inférieur à la moyenne européenne ? Est-ce supérieur ou inférieur à la moyenne aux USA ?
 - En 1 minute, dans le monde, combien de recherche Google ? Combien de mails sont envoyés ? Combien de contenus sont partagés sur Facebook ?
-{## Qui a accès à internet ?
+{####
+## Qui a accès à internet ?
 L'accès à internet a considérablement évolué en quelques années. Néanmoins, de grandes **inégalités** persistent encore.
 Le nombre d'ordinateurs connectés permet de faire une approximation du nombre de personnes qui utilisent internet.
 Il y avait **1000 machines connectées en 1984**, 3 ans plus tard 10 fois plus, c'est à dire **10 000 en 1987**. Cela a encore été multiplié par 10 dans les 2 années qui suivirent, soit **100 000 machines en 1989**. Puis le **million** d'utilisateurs a été franchi en **1992**.
@@ -581,7 +589,8 @@ ordinateur qu'à afficher ce contenu.
 Les fondateurs d'internet n'envisageaient sûrement pas le succès phénoménal qu'il a rencontré. Aussi, le système de numérotation des adresses `IP` n'a pas été prévu suffisamment large pour répondre au nombre d'utilisateurs grandissant. Nous sommes depuis quelques années arrivés à un stade de **pénurie d'adresses IP**. La norme a donc dû évoluer. Aujourd'hui, deux normes cohabitent en attendant que tous les anciens systèmes s'adaptent à la nouvelle. Ces deux normes portent les noms de `IPV4` et `IPV6`. Faites des recherches sur ces normes pour répondre aux 2 questions suivantes :
 - Dans la norme IP version 4 `IPV4`, un numéro est composé de 4 nombres entre 0 et 255. Avec cette norme, y a-t-il plus de numéro IP possibles que d'êtres humains sur terre ?
 - Nouvelle norme IP version 6 `IPV6`. Combien pourrait-on avoir de numéros IPV6 différents par millimètre carré de la surface de la terre ?
-{## Combien y-a-t-il d'adresses IP ?
+{####
+## Combien y-a-t-il d'adresses IP ?
 ### `IP V4` : nombre d'adresses *vs* nombre d'êtres humains
 La population mondiale est supérieure à 7 milliards, or le système `IPV4` ne peut représenter que 4 milliards (4 294 967 296 = (2^^32^ )) d'adresses, ce qui est largement insuffisant.
 L'apparition entre autre des *objets connectés* et des appareils mobiles fait exploser la demande et on entrevoit que cette demande va considérablement augmenter dans un avenir proche.
@@ -607,7 +616,8 @@ La norme qui régit le fonctionnement des serveurs de noms propose une organisat
 - Qui possède ces machines : des états, des organisations, des sociétés privées ?
 - Où se trouvent-elles majoritairement ?
 - Que s'est-il passé en 2002 et 2007 ?
-{## Les serveurs de noms [correction]
+{####
+## Les serveurs de noms [correction]
 ### Les serveur racines de DNS
 Si les serveurs racines de DNS **s'arrêtaient**, alors progressivement les millions de serveurs de noms répartis sur la planète qui en dépendent deviendraient obsolètes et la **correspondance** entre les noms des machines, que nous utilisons et les adresses IP **ne fonctionnerait plus**. En d'autres termes **internet s'arrêterait**.
 Or, il n'existe que **13** serveurs racines, ils sont détenus (sécurisés et entretenus) par des **états**, des sociétés **commerciales** **privées** ou des **organisations**. Les machines qui hébergent ces serveurs sont majoritairement situées sur le **sol américain** et donc soumis au **droit américain**, alors que l'ensemble de la planète en dépend.
@@ -750,7 +760,8 @@ Quelle est l'adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.f
 **Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d'adresse.
 - Que constatez vous ?
 Une fois validé votre rendu, vous pourrez consulter la correction pour vous auto-évaluer, ...
-{## Utiliser les serveurs de noms
+{####
+## Utiliser les serveurs de noms
 ### Votre propre IP
 Grâce à [http://www.monip.fr](http://www.monip.fr) vous avez trouvé votre adresse IP, elle est évidemment différente pour chacun d'entre nous.
 Si vous recommencez depuis une autre machine ou avec la même machine connectée différemment (wifi domicile ou wifi eduroam, connexion filaire à l'université ou eduroam université, connexion wifi ou connexion 3G/4G) vous obtiendrez à chaque fois un résultat **différent**.
@@ -986,7 +997,8 @@ Imaginons plusieurs situations concrètes :
 3/ Je suis en *voiture* (ce n'est pas moi qui conduis) et je veux consulter mes *emails* ou faire une *recherche* sur le net avec mon *smartphone*, ai-je intérêt à me connecter :
         - en wifi
         - avec le réseau de données mobiles de mon opérateur téléphonique
-{## Wifi ou données mobiles ?
+{####
+## Wifi ou données mobiles ?
 ### Wifi ou données mobiles : Comment choisir ?
 1/ Chez moi avec un **smartphone**, j'ai intérêt à me connecter avec le **wifi** de la **Box adsl**.
 En effet, la connexion Wifi a déjà été payée dans le cadre de l'abonnement ADSL, la connexion du smartphone ou de la tablette n'engendre donc pas de frais supplémentaires.
@@ -1013,7 +1025,8 @@ Cela est très pratique pour se connecter avec un ordinateur là où seules des 
 4G -> 4
 H+ -> 3
 E (Edge) -> 1
-### Les normes et leurs sigles
+####
+# Les normes et leurs sigles
 - Les modes de connexion du plus lent au plus rapide.
     - E (Edge) aussi appelé 2G, lent. Ce mode de connexion permet à peine de lire ses mails. Il ne permet pas une navigation fluide sur le Web.
     - 3G (3ème génération) permet de faire des recherches et de surfer sans trop attendre.

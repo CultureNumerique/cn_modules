@@ -195,6 +195,10 @@ class AnyActivity(Subsection):
         Subsection.__init__(self,section)
         self.src = ''
         self.parse(f)
+        # make substitutions:change relative media links from media/ to absolute URL since media are 
+        # difficult to pass on when described in GIFT format
+        self.src = self.src.replace('media/', BASE_URL+'/'+section.module+'/media/')
+        
         self.questions = process_questions(extract_questions(self.src))
 
 
@@ -221,9 +225,6 @@ class AnyActivity(Subsection):
             # post-process Gift source replacing markdown formated questions text by html equivalent
             if question.text_format in (("markdown")):
                 question.md_src_to_html()
-        # change relative media links from media/ to absolute URL since media are 
-        #   difficult to pass on when described in GIFT format
-        html_src = html_src.replace('media/', BASE_URL+'/'+self.section.module+'/media/')
         # add "target="_blank" to all anchors
         try:
             tree = html.fromstring(html_src)
@@ -274,12 +275,12 @@ class ActiviteAvancee(AnyActivity):
 class Section:
     num = 1
 
-    def __init__(self,title,f, module):
+    def __init__(self,title,f,module):
         self.title = title
         self.subsections = []
         self.num = str(Section.num)
-        self.parse(f)
         self.module = module
+        self.parse(f)
         Section.num +=1
         Subsection.num=1 
         
