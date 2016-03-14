@@ -41,7 +41,9 @@ Une fois à la racine du dépôt, éxécuter le script comme suit:
 $ python3 toIMS.py module_folder
 ```
 
-Ce scrit génère un fichier `module_folder.imscc.zip` qui peut être importé dans Moodle en tant que cours (cf [restauration d'un cours depuis une archive IMSCC sous Moodle](https://docs.moodle.org/28/en/IMS_Common_Cartridge_import_and_export))
+Ce scrit génère un fichier `module_folder.imscc.zip` qui peut être importé dans Moodle en tant que cours (cf [restauration d'un cours depuis une archive IMSCC sous Moodle](https://docs.moodle.org/28/en/IMS_Common_Cartridge_import_and_export)). 
+
+Cette archive contient également toutes les activités avec les questions associées déjà intégrées.
 
 #### Limitations à l'import d'archives IMS dans Moodle
 
