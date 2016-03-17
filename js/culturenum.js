@@ -102,22 +102,26 @@ function load_fancybox(){
 
 // ## control of main modules navigation : load selected module and toggle tab-like navigation ##
 $(function(){
+    console.log("module loaded !");
+    navigation();
+    accordion();
+    load_fancybox();
     // load accueil on start
-    $('.module_content').load("accueil.html");
-    $(".module_menu ul li a").click(function(e){
-        e.preventDefault()
-        $('.module_menu ul li a').removeClass('active');
-        $(this).addClass('active');
-        $('.module_content').load($(this).attr('href'), function(){
-            console.log("module loaded !");
-            navigation();
-            accordion();
-            load_fancybox();
-            // triggers click on first subsection
-            setTimeout(function(){
-                //first = $(".accordion ul li a")[0]
-                //first.click();
-            }, 500)
-        });
-    });
+    // $('.module_content').load("accueil.html");
+    // $(".module_menu ul li a").click(function(e){
+    //     e.preventDefault()
+    //     $('.module_menu ul li a').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('.module_content').load($(this).attr('href'), function(){
+    //         console.log("module loaded !");
+    //         navigation();
+    //         accordion();
+    //         load_fancybox();
+    //         // triggers click on first subsection
+    //         setTimeout(function(){
+    //             //first = $(".accordion ul li a")[0]
+    //             //first.click();
+    //         }, 500)
+    //     });
+    // });
 });
