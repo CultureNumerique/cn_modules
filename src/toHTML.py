@@ -82,7 +82,7 @@ def generateVideo(doc,tag,text,videos,display,subsection,subsec_text):
             doc.asis('<br />')
         # add iframe code
         iframe_code = write_iframe_code(video['video_link'])
-        if display: # for very first subsection, keep normal iframe src 
+        if display=="true": # for very first subsection, keep normal iframe src 
             iframe_code = iframe_code.replace('data-src', 'src')
         doc.asis(iframe_code)
         doc.asis("\n\n")

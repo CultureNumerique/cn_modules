@@ -1,5 +1,22 @@
+
+function update_active_menu(){
+    var url = window.location.href;
+    url = url.split("/").reverse()[0]
+    console.log(" update active menu. location =",url);
+    // Will only work if string in href matches with location
+    $('.module_menu ul li a[href="'+ url +'"]').addClass('active');
+    //$(".module_menu ul li a")
+    // Will also work for relative and absolute hrefs
+    $('.module_menu ul li a').filter(function() {
+        return this.href == url;
+    }).addClass('active');
+};
+
 // ## control of Navigation and sections/subsections toggling ##
 function navigation(){
+    
+    
+    
     console.log(" loading navigation ???");
     $(".accordion ul li a").click(function(e){
         console.log("click on ",this)
@@ -106,6 +123,7 @@ $(function(){
     navigation();
     accordion();
     load_fancybox();
+    update_active_menu();
     // load accueil on start
     // $('.module_content').load("accueil.html");
     // $(".module_menu ul li a").click(function(e){
