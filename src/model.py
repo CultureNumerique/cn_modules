@@ -172,7 +172,7 @@ class Cours(Subsection):
             image_link = DEFAULT_VIDEO_THUMB_URL
             new_video = {
                 'video_title':video_match[0],
-                'video_link':video_match[1],
+                'video_link':(video_match[1]).strip(),
                 'video_thumbnail':image_link
             }
             self.videos.append(new_video)

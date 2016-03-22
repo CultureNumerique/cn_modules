@@ -1,5 +1,22 @@
+
+function update_active_menu(){
+    var url = window.location.href;
+    url = url.split("/").reverse()[0]
+    console.log(" update active menu. location =",url);
+    // Will only work if string in href matches with location
+    $('.module_menu ul li a[href="'+ url +'"]').addClass('active');
+    //$(".module_menu ul li a")
+    // Will also work for relative and absolute hrefs
+    $('.module_menu ul li a').filter(function() {
+        return this.href == url;
+    }).addClass('active');
+};
+
 // ## control of Navigation and sections/subsections toggling ##
 function navigation(){
+    
+    
+    
     console.log(" loading navigation ???");
     $(".accordion ul li a").click(function(e){
         console.log("click on ",this)
@@ -102,22 +119,27 @@ function load_fancybox(){
 
 // ## control of main modules navigation : load selected module and toggle tab-like navigation ##
 $(function(){
+    console.log("module loaded !");
+    navigation();
+    accordion();
+    load_fancybox();
+    update_active_menu();
     // load accueil on start
-    $('.module_content').load("accueil.html");
-    $(".module_menu ul li a").click(function(e){
-        e.preventDefault()
-        $('.module_menu ul li a').removeClass('active');
-        $(this).addClass('active');
-        $('.module_content').load($(this).attr('href'), function(){
-            console.log("module loaded !");
-            navigation();
-            accordion();
-            load_fancybox();
-            // triggers click on first subsection
-            setTimeout(function(){
-                //first = $(".accordion ul li a")[0]
-                //first.click();
-            }, 500)
-        });
-    });
+    // $('.module_content').load("accueil.html");
+    // $(".module_menu ul li a").click(function(e){
+    //     e.preventDefault()
+    //     $('.module_menu ul li a').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('.module_content').load($(this).attr('href'), function(){
+    //         console.log("module loaded !");
+    //         navigation();
+    //         accordion();
+    //         load_fancybox();
+    //         // triggers click on first subsection
+    //         setTimeout(function(){
+    //             //first = $(".accordion ul li a")[0]
+    //             //first.click();
+    //         }, 500)
+    //     });
+    // });
 });
