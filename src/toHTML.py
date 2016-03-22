@@ -267,10 +267,11 @@ if __name__ == "__main__":
         args.modules = processDefault(e,args.destination, args.feedback)
     
     #index.write(os.path.join(args.destination, "index.html"),method='html') 
-    # Alternate generation of pure static pages. FIXME : needs to change the menu!
     # Create index.html with accueil.html content
-    content.append(html.parse("accueil.html").getroot())
-    index.write(os.path.join(args.destination, "index.html"),method='html')    
+    with open("accueil.html", 'r') as f:
+        data=f.read()
+    content.append(html.fromstring(data))
+    index.write(os.path.join(args.destination, "index.html"),method='html')  
     # same for modules:
     for module in args.modules:
         module_dir = os.path.join(args.destination, module)

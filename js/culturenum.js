@@ -1,12 +1,10 @@
 
 function update_active_menu(){
     var url = window.location.href;
-    url = url.split("/").reverse()[0]
-    console.log(" update active menu. location =",url);
-    // Will only work if string in href matches with location
-    $('.module_menu ul li a[href="'+ url +'"]').addClass('active');
-    //$(".module_menu ul li a")
-    // Will also work for relative and absolute hrefs
+    url_strip = url.split("/").reverse()[0]
+    if (url_strip.length > 0){
+        $('.module_menu ul li a').removeClass('active');
+    }
     $('.module_menu ul li a').filter(function() {
         return this.href == url;
     }).addClass('active');
