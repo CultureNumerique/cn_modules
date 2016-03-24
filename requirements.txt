@@ -1,6 +1,6 @@
-PyOrgMode
+lxml
 yattag
 python-slugify
 markdown
 MarkdownSuperscript
-requests
+flask
