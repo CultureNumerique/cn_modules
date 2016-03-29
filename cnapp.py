@@ -14,8 +14,7 @@ app.url_map.converters['wildcard'] = WildcardConverter
 
 def launch_build():
     """ start toHTML.py script """
-    print ("Current dir ? %s" % os.getcwd())
-    # cd to src ?
+    # build with toHTML.py
     build_cmd = "python src/toHTML.py -f" 
     subprocess.check_output(build_cmd.split())
 
@@ -39,7 +38,5 @@ def build():
 
 
 if __name__ == '__main__':
-    print ("Current dir ? %s" % app.static_folder)
-    print ("Current dir ? %s" % app.instance_path)
     app.debug = True
     app.run()
