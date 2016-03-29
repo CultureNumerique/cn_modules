@@ -1,6 +1,0 @@
-lxml
-yattag
-python-slugify
-markdown
-MarkdownSuperscript
-flask
