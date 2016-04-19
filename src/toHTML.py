@@ -82,7 +82,7 @@ def generateVideo(doc,tag,text,videos,display,subsection,subsec_text):
             doc.asis('<br />')
         # add iframe code
         iframe_code = write_iframe_code(video['video_link'])
-        if display: # for very first subsection, keep normal iframe src 
+        if display=="true": # for very first subsection, keep normal iframe src 
             iframe_code = iframe_code.replace('data-src', 'src')
         doc.asis(iframe_code)
         doc.asis("\n\n")
@@ -166,8 +166,9 @@ def generateModuleHtml(data, module, outModuleDir):
 def processModule(module,e,outDir, feedback_option):
     # generate config file
     utils.processModule(module,outDir, feedback_option)
-    outModuleDir = os.path.join(outDir,module)
+    
     # config file for each module is named [module_folder].config.json
+    outModuleDir = os.path.join(outDir,module)
     mod_config = os.path.join(outModuleDir, module+'.config.json')
     with open(mod_config, encoding='utf-8') as mod_data_file:
         # load module data from filin
@@ -176,7 +177,7 @@ def processModule(module,e,outDir, feedback_option):
             shortTitle = mod_data['menutitle']
         else:
             shortTitle = mod_data['title']
-        strhtml = '<li><a href="'+module+'/'+module+'.html">'+shortTitle+'</a></li>'
+        strhtml = '<li><a href="'+module+'.html">'+shortTitle+'</a></li>'
 
     generateModuleHtml(mod_data, module, outModuleDir)
         
@@ -195,16 +196,18 @@ def processModules(modules,e,outDir, feedback_option):
 def processDefault(e,outDir, feedback_option):
     import glob
     listt = glob.glob("module[0-9]")
-    for module in sorted(listt,key=lambda a: a.lstrip('module')):
+    modules = sorted(listt,key=lambda a: a.lstrip('module'))
+    for module in modules:
         processModule(module,e,outDir, feedback_option)
-
+    return modules
 
 def loadTemplate(template="index.tmpl"):
     try: 
         parser = etree.HTMLParser()
         tree   = etree.parse(template, parser)
         e_list = tree.xpath("//ul[@id='static-nav']")
-        return tree,e_list[0]
+        content_node_l = tree.xpath("//div[@class='module_content']")
+        return tree,e_list[0],content_node_l[0]
     except OSError:
         print ("html template not found : ",template, file=sys.stderr)
         sys.exit(0)
@@ -229,6 +232,7 @@ def prepareDestination(outDir):
             logging.warn("%s already exists, going to overwrite it",d)
             shutil.rmtree(dest)
             shutil.copytree(d, dest)
+    
             
 ############### main ################
 if __name__ == "__main__":
@@ -247,7 +251,7 @@ if __name__ == "__main__":
     logging.basicConfig(filename='toHTML.log',filemode='w',level=getattr(logging, args.logLevel))
 
     # load the html template
-    index,e = loadTemplate();
+    index,e,content = loadTemplate("index.tmpl");
 
     # add subdirectory to outDir
     args.destination = os.path.join(args.destination, 'last')
@@ -260,6 +264,22 @@ if __name__ == "__main__":
     elif args.modules != None:
         processModules(args.modules,e,args.destination, args.feedback)
     else:
-        processDefault(e,args.destination, args.feedback)
-
-    index.write(os.path.join(args.destination, "index.html"),method='html')    
+        args.modules = processDefault(e,args.destination, args.feedback)
+    
+    #index.write(os.path.join(args.destination, "index.html"),method='html') 
+    # Create index.html with accueil.html content
+    with open("accueil.html", 'r') as f:
+        data=f.read()
+    content.append(html.fromstring(data))
+    index.write(os.path.join(args.destination, "index.html"),method='html')  
+    # same for modules:
+    for module in args.modules:
+        module_dir = os.path.join(args.destination, module)
+        module_file = os.path.join(module_dir, module+".html")
+        content.clear()
+        with open(module_file, 'r') as f:
+            data=f.read()
+        # content.append(html.parse(module_file).getroot())
+        content.append(html.fromstring(data))
+        index.write(os.path.join(args.destination, module+".html"),method='html')    
+        

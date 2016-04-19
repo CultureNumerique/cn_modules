@@ -24,6 +24,13 @@ def write_file(src, current_dir, target_folder, name):
     # if successful
     return True
 
+def stitch_files(files, filename):
+    with open(filename, "wb") as outfile:
+        for f in files:
+            with open(f, "rb") as infile:
+                outfile.write(infile.read())
+    return outfile
+    
 def createDirs(outDir):
     for folder in FOLDERS :
         new_folder = os.path.join(outDir, folder)

@@ -63,6 +63,26 @@ h3 {
     color: #afa70e;
 }
 
+/* ---  email hiding ---- */
+
+.email:after {
+	content: '@univ-lille3.fr';
+}
+
+.email {
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.no_display p {
+	display: none;
+}
+
+.no_display:after {
+	content: '.';
+}
+
 /*  ------  LINKS --------*/
 
 a {
