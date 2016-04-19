@@ -1,6 +1,6 @@
 TITLE: Internet: technologies, usages, société
 MENUTITLE: Internet
-AUTHOR: Culture Numérique
+AUTHOR: Culture Numérique Squad
 LANGUAGE: fr
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
