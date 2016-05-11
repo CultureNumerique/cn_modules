@@ -1,1 +1,1 @@
-Exemple de cours Esc@pad
+Site Vitrine des modules de cours
