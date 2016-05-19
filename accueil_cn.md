@@ -30,17 +30,34 @@ numérique, la formation mixe une approche classique *diffusion de contenu + év
     qui ont pour but de faire réfléchir et prendre du recul face aux
     connaissances abordées.
 
-# Complémentarité avec le C2i 
+# Motivations 
 
-Le `C2i` vise à délivrer un *certificat de compétences*. Bien que les
-    thèmes abordés soient proches, notre démarche est différente. En effet,
-    nous n’abordons pas les sujets par les usages et la manipulation, mais
-    par la compréhension des concepts. Les connaissances acquises permettent
-    alors d’aborder les manipulations avec plus de recul et conduisent à des
-    usages plus responsables. Le `C2i` et les modules de *culture numérique*
-    sont donc complémentaires.
+Ce projet est une initiative d’enseignants de l’Université de Lille3 qui
+ont voulu proposer des contenus de formations à la *culture numérique* à
+tous les étudiants du cycle Licence de leur université de Sciences
+Humaines et Sociales.
 
-# Grain fin et contenus libres pour faciliter la réutilisabilité
+(NDR : présentez les 2 poinst suivants avec 2 icones + texte dépliable en cliquant sur un bouton de type "en savoir plus")
+
+
+## Des usages plus efficaces
+
+Contrairement à ce qu’ont pu croire certains, les nouvelles générations
+ne sont pas beaucoup plus à l’aise avec le numérique que les
+précédentes. Si la technologie ne fait plus peur, elle est rarement
+utilisée de manière efficace. Nous constatons que les étudiants ne
+comprennent pas ce qu’ils font, ne savent pas comment fonctionnent les
+machines ultrapuissantes qui sont dans leurs poches, et passent très
+souvent à côté des opportunités qu’offrent le numérique. Les pratiques
+restent basiques, dirigées par les interfaces et rendent les individus
+prisonniers d’applications ou de logiciels.
+
+## Complémentarité avec le C2i 
+
+Le `C2i` vise à délivrer un *certificat de compétences*. Bien que les thèmes abordés soient proches, notre démarche est différente. En effet, nous n’abordons pas les sujets par les usages et la manipulation, mais par la compréhension des concepts. Les connaissances acquises permettent alors d’aborder les manipulations avec plus de recul et conduisent à des usages plus responsables. Le `C2i` et les modules de *culture numérique* sont donc complémentaires.
+
+
+# Réutilisabilité
 
 Afin de faciliter la réappropriation des contenus par tous les types d’enseignants/formateurs, nous respectons 3 règles fondamentales :
 
@@ -68,25 +85,13 @@ Afin de faciliter la réappropriation des contenus par tous les types d’enseig
 - **des contenus sous licence libre**: Toutes les ressources présentés sur ce site sont déclarées sous la licence *Creative Commons* n°5 ![ccbyncsa.png](media/by-nc-sa.eu.svg): Attribution ![by.svg](media/by.svg) + Pas d’Utilisation Commerciale     ![nc-eu.svg](media/nc-eu.svg) + Partage dans les mêmes conditions ![sa.svg](media/sa.svg) (BY NC SA). **Ce qui signifie** que le titulaire des droits autorise l’exploitation de l’œuvre originale à des fins non commerciales, ainsi que la création d’œuvres dérivées, à condition qu’elles soient distribuées sous une licence identique à celle qui régit l’œuvre originale.
 
 
-# Origine du projet
 
-Ce projet est une initiative d’enseignants de l’Université de Lille3 qui
-ont voulu proposer des contenus de formations à la *culture numérique* à
-tous les étudiants du cycle Licence de leur université de Sciences
-Humaines et Sociales.
 
-Contrairement à ce qu’ont pu croire certains, les nouvelles générations
-ne sont pas beaucoup plus à l’aise avec le numérique que les
-précédentes. Si la technologie ne fait plus peur, elle est rarement
-utilisée de manière efficace. Nous constatons que les étudiants ne
-comprennent pas ce qu’ils font, ne savent pas comment fonctionnent les
-machines ultrapuissantes qui sont dans leurs poches, et passent très
-souvent à côté des opportunités qu’offrent le numérique. Les pratiques
-restent basiques, dirigées par les interfaces et rendent les individus
-prisonniers d’applications ou de logiciels.
+
 
 --------
 # Contacts
 
 alain point preux | valerie point duhal
+
 
