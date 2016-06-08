@@ -67,8 +67,12 @@ pour nom "Latin Capital Letter A" et pour numéro 65.  Croyez-nous, en binaire c
 
 Ce choix de représentation, donc de langage pour représenter les symboles est donc très lié au fonctionnement binaire de la machine et à ses capacités de calcul arithmétique. C'est là l'ingéniosité des personnes qui ont conçu ce langage de représentation des symboles. À partir de cela, on peut facilement imaginer le traitement que doit réaliser la machine pour transformer un symbole stocké dans sa mémoire de majuscule en minuscule. Il suffit d'indiquer l'adresse où ce symbole est stocké. Imaginons que ce soit l'adresse 413. 
 
-    Accéder à la mémoire à l'adresse 413 (retrouver la valeur binaire correspondant au code d'un symbole)
-	Ajouter 32 (c'est-à-dire, dans l'unité de calcul,  changer le 6ème chiffre de 0 en 1.)
+    Accéder à la mémoire à l'adresse 413 (retrouver la valeur binaire 
+	                                      correspondant au code 
+										  d'un symbole)
+	Ajouter 32                           (c'est-à-dire, dans l'unité 
+	                                      de calcul,  changer le 6ème 
+										  chiffre de 0 en 1.)
 	Ranger le résultat dans la mémoire 413 
 
 L'unité de contrôle doit juste assurer que ces 3 instructions soient réalisées successivement dans cet ordre, *en séquence*. Nous n'irons pas dans les détails du langage numérique inventé pour représenter ces 3 instructions, ce n'est pas très important ici. Par contre, les  notions importantes à retenir sont les suivantes. Premièrement nous sommes parvenus à créer un traitement qui porte un sens pour nous, à partir de la représentation numérique d'une information et grâce à une combinaison d'instructions. Deuxièmement, l'ordonnancement en séquence des instructions constitue le premier outil de combinaison. Nous venons de décrire un algorithme simple ! 
@@ -117,7 +121,7 @@ Dans le monde informatique, au fur et à mesure de ces combinaisons, les traitem
 
 À partir des instructions de base de la machine, on construit donc des traitements par un algorithme en utilisant les trois modes de composition que sont la séquence, l'alternative et l'itérative. Est-ce suffisant ? Oui car il existe un **théorème** qui affirme que tout ce qui est calculable avec une machine peut être défini par quelques opérations élémentaires et les opérations de composition que sont la suite (ou la séquence), l'alternative et l'itérative. Ce théorème a été démontré au milieu du vingtième siècle par des mathématiciens et des logiciens. Ceci soulève immédiatement la question : une machine peut-elle tout calculer ? La réponse, démontrée à la même époque, est négative : il existe des problèmes que ne peut pas résoudre une machine. Par exemple, il est montré qu'il n'existe pas d'algorithme qui prend en entrée une suite d'instructions contenant des alternatives et des itératives et qui répond en sortie cette suite d'instructions va s'arrêter en un temps fini lorsqu'on l'exécutera. Ces sujets soulèvent des problèmes importants qui ont été et sont encore étudiés par les mathématiciens, les informaticiens, les logiciens et les philosophes. Notons enfin, que savoir qu'un problème est calculable ne suffit pas à savoir le traiter car le temps de calcul peut être prohibitif.
 
-### Les algorithmes
+## Les algorithmes
 
 Nous utilisons tous, plus ou moins consciemment, des algorithmes plus
 ou moins précis dans notre quotidien : pour réaliser des calculs, pour
@@ -185,8 +189,10 @@ Deux algorithmes sur des chaines de caractères : un efficace et un pas efficace
 Des exemples simples de programmes robot pour demander situation finale
 ```
 
+
 # Conception des programmes
 ## Algorithmes, programmes et langages
+
 
 Nous avons vu que l'on pouvait composer des instructions de base pour définir des traitements. Ces traitements peuvent être à leur tour considérés comme de nouvelles instructions qui pourront à leur tour être composés pour créer des traitements plus complexes. Une telle composition est un algorithme qui fondamentalement décrit un traitement qui permet de résoudre un problème. L'algorithme décrit comment on transforme les données qu'on lui présente, les entrées d'un problème,  pour fournir un résultat. 
 
@@ -195,6 +201,10 @@ Un algorithme est conçu par une femme ou un homme mais doit ensuite être tradu
 Il existe, en réalité, de nombreux langages dépendant du mode d'interaction entre l'humain et la machine. Vous pouvez, par exemple, interagir avec une application par un langage graphique à base de menus ou par des clics de souris ou par l'action de frapper sur des touches de clavier. Pour apprendre à vous servir d'une application, vous allez apprendre ce langage : quelle est l'action réalisée par le choix de cet élément de menu, quelle est l'effet d'un clic de souris sur cet élément, quel est l'effet de l'appui sur cette combinaison de touches. Plutôt qu'un langage d'actions, on peut préférer utiliser un langage écrit. C'est, par exemple, le cas pour les langages de description de documents comme `html`, de description d'images ou de descriptions de sons.
 
 Lorsqu'il s'agit de traduire un algorithme, c'est-à-dire expliquer à la machine une combinaison d'instructions, on utilise des langages écrits appelés **langages de programmation**. Il en existe de nombreux, le choix va dépendre des fonctionnalités de base du langage, des besoins de l'application, des performances souhaitées, ... Les textes écrits dans ces langages sont des **programmes** qui sont la traduction d'algorithmes dans le langage choisi. Ces langages et les programmes se doivent d'être compréhensibles par l'informaticien(ne) mais comme ils sont destinés à être exécutés par la machine, ils respectent des règles très strictes de syntaxe. Ceci explique qu'une machine va refuser une commande mal écrite alors qu'un humain acceptera une phrase mal formée dès qu'il en comprend le sens. Cette rigueur nécessaire et la difficulté d'apprendre un langage de programmation effraient beaucoup de monde. Cependant, il est important de remarquer que le plus difficile est de concevoir un algorithme alors que programmer n'est que traduire un algorithme dans un langage.
+
+
+Ceci explique le comportement "bête" des machines et des programmes qui ne savent
+qu'appliquer des consignes adaptées à des contextes prévus. En particulier, un programme peut s'arrêter, avoir un comportement inattendu ou calculer un mauvais résultat dès qu'il rencontrera des conditions inconnues pour lesquelles on ne lui a pas décrit ce qu'il devait faire. C'est ce que nous appelons un bug. 
 
 
 ## Créer de nouvelles applications
@@ -278,156 +288,7 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {concevoir algo}
 ```
 
-# Machines et applications - Choisir une application
 
-### Introduction
-
-Nous avons vu qu'une application telle que vous l'utilisez est
-constituée d'un ensemble de programmes. Un programme est la traduction
-dans un langage compréhensible par la machine d'algorithmes très
-précis. Chaque programme peut donc être vu comme une composition
-d'instructions de commandes à la machine. Ceci explique le
-comportement "bête" des machines et des programmes qui ne savent
-qu'appliquer des consignes apprises dans des contextes prévus. En
-particulier, un programme vous enverra un message d'erreur dès qu'il
-rencontrera des conditions inconnues pour lesquelles on ne lui a pas
-expliqué ce qu'il devait faire.
-
-D'un autre point de vue, les machines nous paraissent "intelligentes"
-pour, au moins, deux raisons. La première est le nombre impressionant
-d'applications à notre disposition dans le monde numérique : pour
-communiquer, pour chercher de l'information, pour écouter de la
-musique, pour regarder des vidéos, pour composer de la musique, pour
-dessiner, pour composer des textes ou des pages Web, pour faire des
-calculs, ... la liste est trop longue ! La seconde est que la machine
-contient tout un ensemble de couches applicatives qui fait que nous
-utilisons des applications avec des fonctionnalités de très haut
-niveau en oubliant complètement tous les aspects matériels. En
-particulier, nous oublions comment est gérée la mémoire, comment
-s'exécutent les opérations de base, comment les données sont
-sauvegardées sur disque, comment sont transmises les informations sur
-le réseau, ...
-
-Nous allons, dans cette section, présenter les grandes lignes de la
-gestion des applications et des données par les machines et discuter
-du choix d'une application.
-
-### Le système d'exploitation
-
-Le système d'exploitation est la première couche logicielle de tout
-ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il
-cache toute la complexité des calculs en binaire au niveau matériel
-(vous vous en moquez), la façon dont il range les données dans les
-mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon
-dont il gère l'exécution des programmes que vous lancez (il faut que
-mes applications fonctionnent, plusieurs en même temps) et la façon
-dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
-communications avec les périphériques (il saisit ce que je tape au
-clavier, il comprend mes clics, il affiche sur l'écran, il envoie mes
-impressions à l'imprimante, il échange mes données sur le réseau).
-Vous vous moquez de la façon dont il travaille mais vous l'utilisez
-souvent pour lancer vos applications, pour sauvegarder vos fichiers de
-travail, pour vous connecter au réseau, pour installer un nouveau
-périphérique. Il se présente comme une interface graphique (depuis les
-années 90) avec principalement : un gestionnaire de fichiers, un
-gestionnaire d'applications et un gestionnaire de configuration du
-système.
-
-Le **gestionnaire de fichiers** gère toutes vos données numériques. En
-effet, *tout est fichier*, c'est-à-dire que les données et les
-applications sont toutes rangées dans des fichiers. Malgré certaines
-tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers
-dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui
-... Ces boîtes sont appelées dossiers ou répertoires. Donc, les
-fichiers sont organisés dans une hiérarchie de répertoires, chaque
-répertoire contenant des fichiers et/ou des répertoires. Il faut
-comprendre que l'on peut se déplacer dans cette hiérarchie avec des
-commandes ou en ouvrant le répertoire en mode graphique par un double
-clic. Le répertoire dans lequel on est à un instant donné s'appelle le
-répertoire courant. Le sommet de la hiérarchie s'appelle la racine,
-c'est souvent l'endroit où vous êtes placés en début de session.  Les
-fichiers sont désignés par un nom souvent de la forme
-`prefixe.suffixe`, le suffixe est souvent lié à une application comme
-`rapport.doc` ou `mapage.html`. Dans une utilisation courante, il est
-conseillé de nommer vos fichiers (et répertoires) avec des noms qui
-ont un sens (une sémantique), d'utiliser le bon suffixe (il est
-parfois ajouté automatiquement par le logiciel), d'éviter les espaces
-et les accents dans les noms et de ranger vos fichiers dans un
-répertoire où vous saurez le retrouver. Pour désigner un fichier, il
-faut préciser son nom et où il est rangé.
-
-Le **gestionnaire des tâches** gère les exécutions des
-applications. Il vous permet sur ordinateur de lancer plusieurs
-applications simultanément, de basculer d'une application à l'autre
-soit par des combinaisons de touche soit en cliquant dans la barre des
-tâches, d'arrêter l'exécution d'une application, ... Sur un
-ordinateur, il faut savoir que, sans que vous en soyez conscients, il
-y a un grand nombre de tâches qui s'exécutent en particulier pour que
-vos applications interagissent avec vous et les périphériques que sont
-clavier, souris, écran et réseau. 
-
-Le système d'exploitation assure bien d'autres missions comme, par
-exemple, la gestion des périphériques, la gestion des utilisateurs
-quand on est plusieurs à utiliser une même machine, la gestion des
-droits pour protéger les données des utilisateurs.
-
-### Les applications
-
-Comme dit dans l'introduction, les applications à notre disposition
-sont nombreuses. Pour un même problème, plusieurs applications sont
-souvent disponibles. Comme utilisateur, dans votre vie personnelle,
-vous êtes amenés à choisir une application pour votre ordinateur ou
-téléphone portable. Dans votre vie professionnelle, vous serez amenés
-à choisir ou à participer au choix d'une application. Ce peut être,
-par exemple, le choix d'un logiciel de production de documents écrits,
-le choix d'un logiciel de dessin, le choix d'un logiciel de conception
-de sites Web, le choix d'un langage de programmation, ... Nous
-étudions ici quelques critères principaux participant au bon choix
-d'une application pour un problème donné.
-
-* **contraintes techniques : ** la machine utilisée et son système
-  d'exploitation en usage personnel, environnement matériel et
-  logiciel en usage professionnel
-* **critères d'usage : ** vos compétences ou les compétences des
-  utilisateurs, les habitudes de travail
-* **fonctionnalités : ** point essentiel de correspondance entre les
-  besoins, exprimés dans un cahier des charges en contexte
-  professionnel, et les possibilités apportées par le logiciel. Cette
-  étude peut être complexe. Par exemple, pour choisir une application
-  de conception de site Web de nombreuses fonctionnalités sont à
-  mettre en rapport avec les besoins : mise à jour du site, nombre
-  d'usagers, gestion de newsletter, gestion de forums, gestion de
-  paiement en ligne, ... 
-* **type de logiciel : ** nature de la licence, possibilité de
-  développements propres, support fourni (aide à l'installation,
-  conseil, formation, existence de forums, ...), maintenance du
-  logiciel, son évolutivité 
-* **prix : ** prix incluant les coûts éventuels de support, formation,
-  maintenance et de mise à jour. Prévoir également des coûts matériels
-  et logiciels dérivés.
-
-Cette liste de critères ne prétend pas être exhaustive. Les critères
-ne sont pas indépendants et le choix correspondra en la recherche du
-meilleur compromis entre les besoins et les possibilités fournies par
-l'application.
-
-```activité
-::Systèmes d'exploitation::
-[markdown]
-**Systèmes d'exploitation**
-Discuter des systèmes pour
-
-* pour ordinateur
-* pour smartphone
-```
-
-```compréhension
-::Représenter et manipuler::
-[markdown]
-**Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
-{T}
-```
 
 # Exemples d'algorithmes et applications
 
@@ -442,152 +303,82 @@ les possibilités de traitements et leur efficacité. Le dernier exemple
 introduit, par l'exemple d'un jeu, un algorithme plus sophistiqué issu
 du domaine de l'intelligence artificielle.
 
-### Un correcteur orthographique en français
+## Un correcteur orthographique en français
 
 Certains traitements de texte incluent une fonctionnalité de
 correction orthographique. Dans sa forme la plus simple, la correction
 se fait pour chaque mot indépendamment de son contexte, autrement dit
 sans tenir compte des règles de grammaire comme pour l'accord et la
 conjugaison. Le correcteur vérifie que tout mot du texte est une forme
-correcte d'un mot de la langue française. 
+correcte d'un mot de la langue française. Pour décrire cet algorithme, nous allons réaliser plusieurs hypothèses. 
 
-Un texte est une séquence de caractères. Il faut tout d'abord définir
-la notion de mot. Pour cela, un algorithme naif est de considérer
-qu'un mot est toute suite de lettres encadrée par des caractères qui
-ne sont pas des lettres. Cet algorithme est mis en échec par des mots
-comme aujourd'hui ou comme les mots composés qui seraient décomposés
-en plusieurs mots. Cet algorithme peut être amélioré et nous supposons
-disposer d'un algorithme définissant la notion de mot. Nous pouvons
-alors considérer que notre texte est une séquence de mots.
+La première hypothèse porte sur le choix de représentation du texte. Nous allons considérer ici que le texte est une suite de mots. Sachant que certainement, le texte est d'abord une suite de 0 et de 1 représentant des nombres qui sont les code des symboles successifs du texte, l'hypothèse est plutôt que nous avons à disposition d'autres algorithmes capables d'identifier des mots à partir de cette suite. Ces algorithmes peuvent être eux même complexes car un mot ne se définit pas simplement comme une suite de lettres délimitées par des symboles qui ne sont pas des lettres. Pensez à aujourd'hui ou grand-père. 
 
-Comment le correcteur peut-il fonctionner ? Tout d'abord, il se doit
-de posséder la ressource constituée d'une liste de tous les mots de la
-langue française avec leurs formes conjuguées et accordées. Il dispose
-également d'une liste de non mots comme les noms propres, les
-abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
-à sa disposition, nous pouvons proposer l'algorithme suivant :
+La seconde hypothèse, liée à la première donne la liste des instructions de base à disposition. Considérons que nous pouvons lire le premier mot, le mot suivant, et mémoriser ce mot lu comme mot courant. Nous pouvons également  tester la fin du texte, comparer deux mots et souligner un mot (pour indiquer qu'il n'est pas un mot correct. 
+
+Comment le correcteur peut-il fonctionner ? Tout d'abord, il doit posséder un dictionnaire des mots corrects. C'est une ressource constituée d'une liste de tous les mots français avec leurs formes conjuguées et accordées. Elle peut aussi inclure les noms propres, les abréviations, les sigles, ... Avec cette  ressource à disposition, nous pouvons proposer l'algorithme suivant :
 
 `Correcteur orthographique`
 
-1. **en entrée** : une séquence de mots
-2. **pour** tous les mots de la séquence d'entrée
-3. chercher le mot dans la liste des mots et dans la liste des non mots
-4. **si** il n'existe pas **alors**
-5. le souligner
-6. **fin du si**
-7. **fin du pour**
-8. **en sortie** : la séquence de mots avec des mots soulignés qui
-   sont considérés comme mal orthographiés
+     1. **en entrée** : une suite de mots
+     2. lire le premier mot et le mémoriser comme mot courant
+     3. **tant que** ce n'est pas la fin du texte 
+     4.   chercher le mot courant dans le dictionnaire
+     5.   **si** il n'existe pas **alors**
+     6.     souligner le mot courant 
+     7.   **fin du si**
+     8.   lire le mot suivant et le mémoriser comme mot courant
+     9. **fin du tant que**
+    10. **en sortie** : la suite de mots avec des mots soulignés qui
+                        sont considérés comme mal orthographiés
 
-Cet algorithme met-il en évidence toutes les fautes d'orthographe ?  Il
-souligne et donc considère comme mal orthographiés tous les mots du
-texte qui n'apparaissent ni dans la liste des mots, ni dans la liste
-des non mots. Quelles sont les erreurs possibles de cet algorithme ? Une
-première erreur possible est de souligner à tort un mot parce que les
-listes sont incomplètes comme, par exemple, un nom spécifique à un
-domaine ou un nom propre non répertorié. Une seconde erreur possible
-est de ne pas souligner un mot parce que l'erreur est due à une faute
-d'accord ou de conjugaison comme "la vache bleu" ou "je montres".
+
+L'instruction *chercher le mot courant dans le dictionnaire* n'est pas spécifiée. C'est un autre algorithme qui peut répondre à cela. Il pourrait s'écrire
+
+     1. **En entrée**  : un mot à chercher
+     2. lire le premier mot dur dictionnaire et le mémoriser comme mot courant
+     3. **tant que** le mot courant n'est pas le mot cherché et qu'on n'a pas atteint la fin du dictionnaire
+     4.   lire le mot suivant du dictionnaire et le mémoriser comme mot courant
+     5. **fin du tant que**
+     6. **en sortie** : le mot courant est le mot cherché 
+
+Cet algorithme produit en sortie une valeur vraie ou fausse selon que le mot courant est le mot cherché ou non (donc selon que le mot cherché se trouve dans le dictionnaire ou pas). On pourrait l'écrire autrement en organisant le dictionnaire de façon plus ingénieuse que sous la forme d'une suite de mots. 
 
 Cet algorithme est-il efficace en temps de calcul ? Le parcours de
-tous les mots étant obligatoire, l'efficacité de notre
-algorithme dépend de la vitesse de recherche de chacun des mots dans
-les listes. En effet, la taille de chacune des listes est de l'ordre
-de plusieurs centaines de milliers de mots. Le parcours des listes en
-séquence prendrait trop de temps, il est donc nécessaire de définir
-des méthodes de recherche plus rapides, méthodes qui sont étudiées
-dans le module sur la recherche d'information.
+tous les mots du texte est obligatoire. Pour chaque mot du texte il faut faire une recherche dans le dictionnaire. Avec l'algorithme proposé, dans le pire des cas il faut parcourir tous les mots du dictionnaire. Au total le temps de calcul est donc de l'ordre du nombre de mots dans le texte fois le nombre de mots dans le dictionnaire. 
 
-Comment améliorer la qualité de la correction orthographique de notre
-correcteur ?  Une première piste est d'avoir des listes de mots les
-plus complètes et les plus actuelles possibles. Une seconde piste est
-d'enrichir les compétences du correcteur avec la correction
-grammaticale. Une première possibilité est de doter le correcteur de
-la capacité d'analyser votre phrase pour répondre aux questions telles
-que : quel est le sujet du verbe ? Avec qui s'accorde cet adjectif ?
-Ayant analysé, il doit également connaître les règles orthographiques
-et être capable de vérifier qu'elles sont correctement appliquées. La
-difficulté est ici de réaliser ces analyses car ils nécessitent une
-grammaire numérisée de la langue et des programmes d'analyse. Une
-seconde possibilité est d'utiliser des méthodes dites "force brute"
-qui, au lieu de mémoriser des listes de mots, mémorisent des listes de
-couples de mots, de triplets de mots voire de phrases complètes. La
-difficulté, dans ce cas, est d'avoir des listes exhaustives, de
-mémoriser ces listes, de les mettre à jour et de les interroger très
-rapidement.
+Les méthodes ingénieuses d'organisation du dictionnaire permet de réaliser le test de correction d'un mot en presque une seule étape de calcul. Ce qui réduit grandement le temps d'exécution. Elles procèdent de la même façon qu'un index dans un livre. Elles sont aussi utilisées dans les algorithmes des moteurs de recherche. Vous pourriez étudier cette approche si vous suivez le module qui introduit les méthodes de recherche d'information ! 
 
-Les correcteurs utilisés dans les applications sont des correcteurs
-orthographiques simples. Parfois, ils font des corrections liées à des
-règles grammaticales mais il est difficile de savoir exactement
-quelles corrections ils sont capables de faire. Par conséquent, **en
-pratique**, lorsque vous avez rédigé un texte, vous faites passer un
-correcteur orthographique, vous corrigez les erreurs si il y a lieu, puis
-vous revérifiez l'orthographe par un humain en se concentrant sur les
-possibles fautes grammaticales restantes.
+Cet algorithme met-il en évidence toutes les fautes d'orthographe ?  Il souligne et donc considère comme mal orthographiés tous les mots du texte qui n'apparaissent pas dans le dictionnaire. Quelles sont les erreurs possibles de cet algorithme ? Une erreur possible est de souligner à tort un mot parce que les listes sont incomplètes. Des listes de mots les plus complètes et les plus actuelles possibles corrigent ce type d'erreur. Il est par contre incapable de souligner les  fautes d'accord ou de conjugaison comme "la vache bleu" ou "je montres". La méthode pour réaliser ce type de correction et bien différente et nécessite d'autres algorithmes. 
+Il faut doter le correcteur de la capacité d'analyser votre phrase pour répondre aux questions telles que : quel est le sujet du verbe ? Avec qui s'accorde cet adjectif ?
+La difficulté est ici de réaliser ces analyses car ils nécessitent une grammaire numérisée de la langue et des programmes d'analyse. Souvent ces règles de grammaire numérisées sont incomplètes car c'est encore un sujet de recherche actif en (informatique) linguistique d'être capable d'exprimer toutes les règles grammaticales. Une seconde possibilité tout aussi approximative est d'utiliser des méthodes dites "force brute" qui étendent l'approche par dictionnaire utilisée pour l'orthographe. Au lieu de mémoriser des listes de mots, mémorisent des listes de couples de mots, de triplets de mots voire de phrases complètes. La difficulté, dans ce cas, est d'avoir des listes exhaustives, de mémoriser ces listes, de les mettre à jour et de les interroger très rapidement.
 
-### Le navigateur affiche une page Web
+Les correcteurs utilisés dans les applications sont des correcteurs orthographiques simples. Parfois, ils font des corrections liées à des règles grammaticales mais il est difficile de savoir exactement quelles corrections ils sont capables de faire. Par conséquent, **en pratique**, lorsque vous avez rédigé un texte, vous faites passer un correcteur orthographique, vous corrigez les erreurs si il y a lieu, puis vous re-vérifiez l'orthographe  en vous concentrant sur les possibles fautes grammaticales restantes.
 
-Le navigateur est devenu une application très complexe car il est
-l'interface privilégiée d'interaction avec les utilisateurs dans le
-monde numérique. Nous nous limitons ici à une fonctionnalité :
-afficher un document `html` auquel est associé une feuille de style et
-des images. Ce programme est en réalité très complexe mais nous en
-présentons ici une vue abstraite pour aider à la compréhension. En
-particulier, nous allons considérer que les programmes s'exécutent
-l'un après l'autre alors que tous les programmes s'exécutent en
-parallèle en interaction les uns avec les autres. En effet, vous avez
-constaté que lors de l'affichage d'une page Web, certaines parties ou
-certains éléments sont affichés alors que le navigateur est en attente
-d'autres ressources.
+## Classer et apprendre à classer des textes
 
-Le navigateur lit le document `html` qui est un texte, c'est-à-dire
-une suite de caractères. Ce texte contient des caractères particuliers
-qui définissent des balises. Un premier programme qui connaît le
-langage `html` va interpréter ce texte et construire un arbre qui
-correspond à la structure du document : une entête et un corps, le
-corps qui contient des sections, chaque section qui peut contenir un
-titre, des sections, des listes, ... Les éléments de base seront des
-balises comme une balise hyperlien, une balise image, et des portions
-de texte. Certaines balises contiennent des liens vers des ressources
-comme la feuille de style ou des images. Des programmes sont lancés
-pour chercher ces ressources.
+Continuons d'explorer les algorithmes manipulant des textes en langue naturelle. Aujourd'hui les ordinateurs sont capables, étant donné un grand ensemble de textes d'identifier ceux dont le sujet porte sur un thème précis. Ils réalisent cette tâche approximativement, mais en y réfléchissant un peu, nous aussi! La tâche peut être très difficile, et notre méthode, à nous être humains, n'est pas toujours exacte. De plus, la confier à une machine demande d'écrire un algorithme. Or, décrire notre façon de procéder très précisément, ce qui est requis pour écrire un algorithme,  est aussi une tâche très difficile... Alors comment peut-on procéder ?
 
-Nous pouvons donc supposer que le navigateur a lancé des programmes
-qui ont construit l'arbre représentant le fichier source et permis de
-récupérer la feuille de style et les images. Sans feuille de style, le
-navigateur ferait un affichage par défaut sur fond blanc avec des
-styles par défaut pour le titre, les sections et leurs titres, les
-listes, le haut de page, le bas de page, ..., et bien sur les contenus
-textuels. Cet affichage va être modifié par la feuille de style en
-utilisant l'arbre représentant le document. Tout d'abord, un style
-général va être appliqué à la boîte qui va contenir la page
-affichée. Ce style précise le fond (sa couleur ou une ou plusieurs
-images), les marges (en haut, en bas, à gauche, à droite), la police
-de caractère, la taille des caractères, ... Ensuite, on applique un
-style pour le titre, c'est-à-dire à la boîte qui contient le titre,
-avec encore le fond, les marges, les propriétés des caractères. On
-applique un style aux sections, c'est-à-dire à toutes les boîtes qui
-vont contenir des sections, puis le style aux boîtes à l'intérieur des
-sections comme, par exemple, une boîte contenant une liste ordonnée,
-puis un style pour les items de la liste ... La page est alors
-affichée avec sa structure, la présentation visuelle définie par la
-feuille de style, le contenu textuel et les images.
+Parfois des méthodes très simples fonctionnent très bien. Illustrons cela sur un exemple qui est d'identifier des textes parlant de politique. Une méthode idiote est de dire qu'un texte est dans le thème "politique" si et seulement si le mot politique s'y trouve. On pourrait écrire un algorithme comme 
 
-Beaucoup d'éléments un peu complexes ont été oubliés dans la
-description précédente comme le calcul de la taille des boîtes, la
-taille des images et leur positionnement, l'adaptation à la taille de
-l'écran (noter qu'il existe des moyens de définir des styles adaptés
-au support de lecture et à la taille de l'écran), le positionnement
-relatif de tous les éléments, ... Cependant, la compréhension des
-principes généraux de ce programme doivent vous aider à concevoir des
-pages Web même si vous utilisez des outils de type `WYSIWYG`,
-c'est-à-dire des outils de conception guidés par le rendu. En
-particulier, avoir bien compris la structure d'arbre d'un document
-`html` est éclairant, par exemple, pour concevoir des feuilles de
-style avec le principe  de boîtes emboitées les unes dans
-les autres qui correspondent à la structure d'arbre du document `html`.
+     1. **en entrée** : une suite de mots
+     2. lire le premier mot et le mémoriser comme mot courant
+     3. **tant que** ce n'est pas la fin du texte 
+     4.   **si** le mot courant est "politique" **alors**
+     6.     mémoriser que j'ai vu le mot politique
+     7.   **fin du si**
+     8.   lire le mot suivant et le mémoriser comme mot courant
+     9. **fin du tant que**
+    10. **en sortie** : le texte est politique si j'ai mémorisé que j'ai vu 
+                        le mot politique
 
-### Un jeu d'échec sur ordinateur
+L'algorithme est très naïf et n'est pas satisfaisant. On pourrait l'étendre en constituant un dictionnaire des mots parlant de politique (droite, gauche, parlement, assemblée, ...) et s'inspirer de l'algorithme réalisant la correction orthographique. Mais on peut raffiner l'idée sensiblement en constatant que la décision de l'appartenance à ce thème politique peut dépendre aussi bien de la présence que de l'absence de certains mots, ou mieux encore de combien de fois chaque mot est employé... On revient donc à une simple idée de compter.
+
+C'est cette idée qui est souvent employée : l'idée de calculer une représentation du texte par le nombre de fois où chaque mot du dictionnaire apparaît dans le texte. À partir de cette représentation il faut trouver des seuils en dessous ou au delà desquels on dira que le mot parle de politique ou pas. Par exemple 1 fois politique, 2 fois gauche, 2 fois droite et 0 fois chat. 
+
+Comment trouver ces seuils ? C'est là que les big data ou plus simplement des corpus de textes de taille importante parlant de politique, comme des articles de journaux, des discours, et d'autres n'en parlant pas, vont être utiles. Ils serviront à estimer ces seuils.
+
+## Un jeu d'échec sur ordinateur
 
 Le jeu d'échecs est un jeu ancien datant du 10ème siècle
 environ. C'est un jeu de plateau, c'est-à-dire un jeu qui se joue avec
@@ -716,10 +507,15 @@ Les traitements possibles dépendent fortement des choix de représentation
 {T}
 ```
 
+
+
+
+
+
 # Optionnel -- Représentation des données
 
 Nous avons introduit des notions d'algorithmique et de conception
-d'applicationsmais ceux-ci doivent manipuler des données. Il faut donc
+d'applications mais ceux-ci doivent manipuler des données. Il faut donc
 également considérer les données manipulées et les choix de
 représentation de ces données. En effet, si nous avons signalé les
 contraintes d'efficacité, nous ne les avons pas prises en
@@ -896,5 +692,209 @@ modifier l'apparence de pages Web.
 Les traitements possibles dépendent fortement des choix de représentation
 {T}
 ```
+
+# Non utilisé 
+## Machines et applications - Choisir une application
+
+### Introduction
+
+Nous avons vu qu'une application telle que vous l'utilisez est constituée d'un ensemble de programmes. Un programme est la traduction dans un langage compréhensible à la fois par l'homme et par la machine d'algorithmes, description très précise de méthodes pour calculer les solutions d'un problème. Chaque programme peut donc être vu comme une composition d'instructions de commandes à la machine. 
+
+Ceci explique le comportement "bête" des machines et des programmes qui ne savent
+qu'appliquer des consignes adaptées à des contextes prévus. En particulier, un programme peut s'arrêter, avoir un comportement inattendu ou calculer un mauvais résultat dès qu'il rencontrera des conditions inconnues pour lesquelles on ne lui a pas décrit ce qu'il devait faire. C'est ce que nous appelons un bug. 
+
+
+
+D'un autre point de vue, les machines nous paraissent "intelligentes" pour au moins, deux raisons. La première est le nombre impressionnant d'applications à notre disposition dans le monde numérique : pour communiquer, pour chercher de l'information, pour écouter de la musique, pour regarder des vidéos, pour composer de la musique, pour dessiner, pour composer des textes ou des pages Web, pour faire des calculs, ... la liste est trop longue ! La seconde est que la machine
+contient tout un ensemble de couches applicatives qui fait que nous
+utilisons des applications avec des fonctionnalités de très haut
+niveau en oubliant complètement tous les aspects matériels. En
+particulier, nous oublions comment est gérée la mémoire, comment
+s'exécutent les opérations de base, comment les données sont
+sauvegardées sur disque, comment sont transmises les informations sur
+le réseau, ...
+
+Nous allons, dans cette section, présenter les grandes lignes de la
+gestion des applications et des données par les machines et discuter
+du choix d'une application.
+
+### Le système d'exploitation
+
+Le système d'exploitation est la première couche logicielle de tout
+ordinateur qu'il soit fixe ou portable ou tablette ou smartphone. Il
+cache toute la complexité des calculs en binaire au niveau matériel
+(vous vous en moquez), la façon dont il range les données dans les
+mémoires (il faut qu'il retrouve ce que vous lui demandez), la façon
+dont il gère l'exécution des programmes que vous lancez (il faut que
+mes applications fonctionnent, plusieurs en même temps) et la façon
+dont il gère toutes les entrées-sorties, c'est-à-dire toutes les
+communications avec les périphériques (il saisit ce que je tape au
+clavier, il comprend mes clics, il affiche sur l'écran, il envoie mes
+impressions à l'imprimante, il échange mes données sur le réseau).
+Vous vous moquez de la façon dont il travaille mais vous l'utilisez
+souvent pour lancer vos applications, pour sauvegarder vos fichiers de
+travail, pour vous connecter au réseau, pour installer un nouveau
+périphérique. Il se présente comme une interface graphique (depuis les
+années 90) avec principalement : un gestionnaire de fichiers, un
+gestionnaire d'applications et un gestionnaire de configuration du
+système.
+
+Le **gestionnaire de fichiers** gère toutes vos données numériques. En
+effet, *tout est fichier*, c'est-à-dire que les données et les
+applications sont toutes rangées dans des fichiers. Malgré certaines
+tentatives, on n'a pas encore trouvé mieux que de ranger les fichiers
+dans des boîtes qui sont elles-mêmes contenues dans des boîtes qui
+... Ces boîtes sont appelées dossiers ou répertoires. Donc, les
+fichiers sont organisés dans une hiérarchie de répertoires, chaque
+répertoire contenant des fichiers et/ou des répertoires. Il faut
+comprendre que l'on peut se déplacer dans cette hiérarchie avec des
+commandes ou en ouvrant le répertoire en mode graphique par un double
+clic. Le répertoire dans lequel on est à un instant donné s'appelle le
+répertoire courant. Le sommet de la hiérarchie s'appelle la racine,
+c'est souvent l'endroit où vous êtes placés en début de session.  Les
+fichiers sont désignés par un nom souvent de la forme
+`prefixe.suffixe`, le suffixe est souvent lié à une application comme
+`rapport.doc` ou `mapage.html`. Dans une utilisation courante, il est
+conseillé de nommer vos fichiers (et répertoires) avec des noms qui
+ont un sens (une sémantique), d'utiliser le bon suffixe (il est
+parfois ajouté automatiquement par le logiciel), d'éviter les espaces
+et les accents dans les noms et de ranger vos fichiers dans un
+répertoire où vous saurez le retrouver. Pour désigner un fichier, il
+faut préciser son nom et où il est rangé.
+
+Le **gestionnaire des tâches** gère les exécutions des
+applications. Il vous permet sur ordinateur de lancer plusieurs
+applications simultanément, de basculer d'une application à l'autre
+soit par des combinaisons de touche soit en cliquant dans la barre des
+tâches, d'arrêter l'exécution d'une application, ... Sur un
+ordinateur, il faut savoir que, sans que vous en soyez conscients, il
+y a un grand nombre de tâches qui s'exécutent en particulier pour que
+vos applications interagissent avec vous et les périphériques que sont
+clavier, souris, écran et réseau. 
+
+Le système d'exploitation assure bien d'autres missions comme, par
+exemple, la gestion des périphériques, la gestion des utilisateurs
+quand on est plusieurs à utiliser une même machine, la gestion des
+droits pour protéger les données des utilisateurs.
+
+### Les applications
+
+Comme dit dans l'introduction, les applications à notre disposition
+sont nombreuses. Pour un même problème, plusieurs applications sont
+souvent disponibles. Comme utilisateur, dans votre vie personnelle,
+vous êtes amenés à choisir une application pour votre ordinateur ou
+téléphone portable. Dans votre vie professionnelle, vous serez amenés
+à choisir ou à participer au choix d'une application. Ce peut être,
+par exemple, le choix d'un logiciel de production de documents écrits,
+le choix d'un logiciel de dessin, le choix d'un logiciel de conception
+de sites Web, le choix d'un langage de programmation, ... Nous
+étudions ici quelques critères principaux participant au bon choix
+d'une application pour un problème donné.
+
+* **contraintes techniques : ** la machine utilisée et son système
+  d'exploitation en usage personnel, environnement matériel et
+  logiciel en usage professionnel
+* **critères d'usage : ** vos compétences ou les compétences des
+  utilisateurs, les habitudes de travail
+* **fonctionnalités : ** point essentiel de correspondance entre les
+  besoins, exprimés dans un cahier des charges en contexte
+  professionnel, et les possibilités apportées par le logiciel. Cette
+  étude peut être complexe. Par exemple, pour choisir une application
+  de conception de site Web de nombreuses fonctionnalités sont à
+  mettre en rapport avec les besoins : mise à jour du site, nombre
+  d'usagers, gestion de newsletter, gestion de forums, gestion de
+  paiement en ligne, ... 
+* **type de logiciel : ** nature de la licence, possibilité de
+  développements propres, support fourni (aide à l'installation,
+  conseil, formation, existence de forums, ...), maintenance du
+  logiciel, son évolutivité 
+* **prix : ** prix incluant les coûts éventuels de support, formation,
+  maintenance et de mise à jour. Prévoir également des coûts matériels
+  et logiciels dérivés.
+
+Cette liste de critères ne prétend pas être exhaustive. Les critères
+ne sont pas indépendants et le choix correspondra en la recherche du
+meilleur compromis entre les besoins et les possibilités fournies par
+l'application.
+
+```activité
+::Systèmes d'exploitation::
+[markdown]
+**Systèmes d'exploitation**
+Discuter des systèmes pour
+
+* pour ordinateur
+* pour smartphone
+```
+
+```compréhension
+::Représenter et manipuler::
+[markdown]
+**Représenter et manipuler**
+Les traitements possibles dépendent fortement des choix de représentation
+{T}
+```
+## Le navigateur affiche une page Web
+
+Le navigateur est devenu une application très complexe car il est
+l'interface privilégiée d'interaction avec les utilisateurs dans le
+monde numérique. Nous nous limitons ici à une fonctionnalité :
+afficher un document `html` auquel est associé une feuille de style et
+des images. Ce programme est en réalité très complexe mais nous en
+présentons ici une vue abstraite pour aider à la compréhension. En
+particulier, nous allons considérer que les programmes s'exécutent
+l'un après l'autre alors que tous les programmes s'exécutent en
+parallèle en interaction les uns avec les autres. En effet, vous avez
+constaté que lors de l'affichage d'une page Web, certaines parties ou
+certains éléments sont affichés alors que le navigateur est en attente
+d'autres ressources.
+
+Le navigateur lit le document `html` qui est un texte, c'est-à-dire
+une suite de caractères. Ce texte contient des caractères particuliers
+qui définissent des balises. Un premier programme qui connaît le
+langage `html` va interpréter ce texte et construire un arbre qui
+correspond à la structure du document : une entête et un corps, le
+corps qui contient des sections, chaque section qui peut contenir un
+titre, des sections, des listes, ... Les éléments de base seront des
+balises comme une balise hyperlien, une balise image, et des portions
+de texte. Certaines balises contiennent des liens vers des ressources
+comme la feuille de style ou des images. Des programmes sont lancés
+pour chercher ces ressources.
+
+Nous pouvons donc supposer que le navigateur a lancé des programmes
+qui ont construit l'arbre représentant le fichier source et permis de
+récupérer la feuille de style et les images. Sans feuille de style, le
+navigateur ferait un affichage par défaut sur fond blanc avec des
+styles par défaut pour le titre, les sections et leurs titres, les
+listes, le haut de page, le bas de page, ..., et bien sur les contenus
+textuels. Cet affichage va être modifié par la feuille de style en
+utilisant l'arbre représentant le document. Tout d'abord, un style
+général va être appliqué à la boîte qui va contenir la page
+affichée. Ce style précise le fond (sa couleur ou une ou plusieurs
+images), les marges (en haut, en bas, à gauche, à droite), la police
+de caractère, la taille des caractères, ... Ensuite, on applique un
+style pour le titre, c'est-à-dire à la boîte qui contient le titre,
+avec encore le fond, les marges, les propriétés des caractères. On
+applique un style aux sections, c'est-à-dire à toutes les boîtes qui
+vont contenir des sections, puis le style aux boîtes à l'intérieur des
+sections comme, par exemple, une boîte contenant une liste ordonnée,
+puis un style pour les items de la liste ... La page est alors
+affichée avec sa structure, la présentation visuelle définie par la
+feuille de style, le contenu textuel et les images.
+
+Beaucoup d'éléments un peu complexes ont été oubliés dans la
+description précédente comme le calcul de la taille des boîtes, la
+taille des images et leur positionnement, l'adaptation à la taille de
+l'écran (noter qu'il existe des moyens de définir des styles adaptés
+au support de lecture et à la taille de l'écran), le positionnement
+relatif de tous les éléments, ... Cependant, la compréhension des
+principes généraux de ce programme doivent vous aider à concevoir des
+pages Web même si vous utilisez des outils de type `WYSIWYG`,
+c'est-à-dire des outils de conception guidés par le rendu. En
+particulier, avoir bien compris la structure d'arbre d'un document
+`html` est éclairant, par exemple, pour concevoir des feuilles de
+style avec le principe  de boîtes emboitées les unes dans
+les autres qui correspondent à la structure d'arbre du document `html`.
+
 
 [^1]: Faut-il citer des sociétés ?
