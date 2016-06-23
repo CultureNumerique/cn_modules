@@ -27,27 +27,43 @@ Programmes, logiciels {}
 
 # Les algorithmes 
 
+## Expliquer clairement et précisément 
+
+Le mot algorithme a fait irruption dans les médias après que des avancées notables ont été réalisées dans le domaine de l'informatique et ont affecté la société. C'est par exemple la naissance de l'internet et ensuite des moteurs de recherche qui ont posé la question de société de l'accès à la connaissance et des monopoles économiques dans ce domaine:  "Quel algorithme est donc responsable du choix de l'ordre dans lequel les résultats apparaissent". 
+
+La tentative d'une définition scientifique du mot algorithme pourrait effaroucher plus d'un lecteur. Mais pour une introduction à une culture informatique, on peut plus certainement extraire les idées principales derrière ce mot algorithme. L'algorithme c'est d'abord *une explication de comment on résout un problème*. C'est donc pour nous, humains, cette explication, et pas pour les machines. Un célèbre livre d'introduction à l'algorithmique commence par "Before there were computers, there were algorithms.". Car nous passons nos journées à résoudre des petits problèmes du quotidien : pour faire son café le matin, pour organiser un déplacement ou notre journée de travail, ... Et nous sommes capables de les expliquer. "Je prépare mon café en prenant un filtre dans sa boite, le place dans la cafetière, j'y mets autant de cuillers de café que je veux de tasses,  je verse de l'eau dans la réserve tant que le niveau ne correspond pas au nombre de tasses choisi,  j'appuie sur le bouton de marche arrêt. Mais si je veux expliquer ma façon de procéder il faut que je sois clair. Être clair c'est au moins deux choses : il faut que les instructions que je donne soient bien claires et qu'on sache les réaliser. La clarté c'est éviter les ambiguïtés par exemple dans l'ordre dans lequel on doit faire les choses ou dans le sens des mots qu'on utilise. Par exemple "j'y mets" signifie je mets dans le filtre et pas dans un autre compartiment de la cafetière. Qu'on sache réaliser les instruction c'est faire une hypothèse sur ce que peut faire la personne à qui on s'adresse. Par exemple, si vous vous adressez à un invité chez vous, il ne sait peut être pas où vous rangez votre café et pourra pas résoudre son problème de petit déjeuner. 
+
+
+On retrouve ces exigences quand on parle d'algorithme en informatique. Mais tout est exacerbé. Le texte de vos explications  doit être très précis et ne contenir aucune ambiguïté. N'importe qui doit pouvoir réaliser ce que vous décrivez, de façon automatique, sans penser, juger ou réfléchir. *Le but est d’évacuer la pensée du calcul, afin de le rendre exécutable par une machine numérique* dit Gérard Berry. Enlever la pensée, c'est devenir très bête. Imaginez avoir affaire à un imbécile et que le réservoir de votre cafetière était déjà plein. Si vous avez indiqué "je verse de l'eau dans la réserve tant que le niveau ne correspond pas au nombre de tasses choisi" et bien c'est l'inondation assurée si l'imbécile en question ne prépare qu'une tasse. Être clair est précis n'est pas suffisant... Il faut aussi que les explications soient justes dans toutes circonstances, sinon c'est le bug!
+
+Comprendre ce qui se cache derrière ce mot algorithme ne peut être compris sans comprendre comment l'ordinateur fonctionne en tant que machine numérique et comment on interagit avec lui par le langage.
+
+
 ## Les algorithmes, les langages et la machine
 
-Le mot algorithme a fait irruption dans les médias après que des avancées notables ont été réalisées dans le domaine de l'informatique et ont affecté la société. C'est par exemple la naissance de l'internet et ensuite des moteurs de recherche qui ont posé la question de société de l'accès à la connaissance et des monopoles économiques dans ce domaine:  "Quel algorithme est donc responsable du choix de l'ordre dans lequel les résultats apparaissent".  Mais comprendre ce qui se cache derrière ce mot algorithme ne peut être compris sans comprendre comment l'ordinateur fonctionne en tant que machine et comment on interagit avec lui par le langage. 
 
-Le langage doit permettre de représenter des données, mais également des traitements. Nous l'avons abordé dans le module précédent à travers la question de la numérisation des données. Le langage, c'est pluriel et artificiel : il existe de nombreux langages informatiques, inventés par l'homme, et faisant souvent l'objet de normes ou de standards,  parfois de brevets ou parfois laissés libres d'accès et d'évolution à la communauté. Ce qui les distingue des langages (ou langues) naturels (naturelles), c'est qu'ils ont été conçus pour qu'une machine les interprète et non un être humain. Ils doivent donc être précis, formels, plus encore même que la notation musicale qu'on a toujours la possibilité d'interpréter librement. 
-
-```activité
-le rôle des linguistes : qui a inventé le mot ordinateur, qui est larry wall, noam chomsky...{}
-```
-
-La machine c'est l'ordinateur. Le mot inventé par un linguiste dans les années 50, fait référence à l'exécution d'ordres, d'instructions. En anglais le mot computer fait plutôt référence au calcul et les deux notions se retrouvent dans cette machine. Essentiellement la machine repose sur une *unité de calcul* qui fonctionne avec des valeurs représentées par des 0 et des 1. Elle utilise des *mémoires* pour retrouver ou ranger ces valeurs à des emplacements précisé par des numéros : les adresses. Enfin une *unité de contrôle* donne les ordres à l'unité de calcul et aux mémoires. Ce modèle abstrait de machine n'a pas bougé depuis les années 40. Il n'est peut être pas si simple de comprendre comment le réaliser physiquement mais plusieurs l'ont fait depuis le premier dans les années 40, parfois par défi, avec des objets mécaniques du quotidien. L'électricité,  puis l'électronique et  la miniaturisation ont considérablement réduit la taille et augmenté la rapidité de la mémoire,  de l'unité de calcul et l'unité de contrôle. Ces progrès l'ont aussi rendu plus économe et plus résistant. 
+La machine c'est l'ordinateur. Le mot inventé par un linguiste dans les années 50, fait référence à l'exécution d'ordres, d'instructions. En anglais le mot computer fait plutôt référence au calcul et les deux notions se retrouvent dans cette machine. Essentiellement la machine repose sur une *unité de calcul* qui fonctionne avec des valeurs représentées par des 0 et des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs simples comme des additions, comparer des nombres. Elle utilise des *mémoires* pour retrouver ou ranger ces valeurs à des emplacements précisés par des numéros : les adresses. Enfin une *unité de contrôle* donne les ordres à l'unité de calcul et aux mémoires. Ce modèle de machine n'a pas bougé depuis les années 40. Il n'est peut être pas si simple de comprendre comment le réaliser physiquement et cela dépasse le cadre ce cours mais plusieurs l'ont fait depuis le premier dans les années 40 ! L'électricité,  puis l'électronique et  la miniaturisation ont considérablement réduit la taille et augmenté la rapidité de la mémoire,  de l'unité de calcul et l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus économe et plus résistant si bien qu'on le retrouve désormais dans tous les milieux et toutes les situations. 
 
 ```activité
 Trouver le schéma de l'architecture von neumann. {}
 ```
+
+Le langage informatique c'est ce qui permet d'interagir avec la machine. Le langage doit permettre de représenter des données, mais également des traitements. Nous l'avons abordé dans le module précédent à travers la question de la numérisation des données. Le langage, dans l'univers du numérique, c'est pluriel et artificiel : il existe de nombreux langages informatiques, inventés par l'homme, et faisant souvent l'objet de normes ou de standards,  parfois de brevets ou parfois laissés libres d'accès et d'évolution à la communauté. Ce qui les distingue des langages (ou langues) naturels (naturelles), c'est qu'ils ont été conçus pour qu'une machine les interprète et non un être humain. Ils doivent donc être précis, formels, plus encore même que la notation musicale qu'on a toujours la possibilité d'interpréter librement. 
+
+```activité
+le rôle des linguistes : qui a inventé le mot ordinateur, qui est larry wall, noam chomsky...{}
+
+Que pensez vous de la phrase de Harold Abelson dans Structure and Interpretation of Computer Programs : 
+Programs must be written for people to read, and only incidentally for machines to execute. {}
+```
+
+
+
 ## L'illustration par le symbole
 
-Rappelez-vous les conventions de langage dont nous avons parlé au module précédent, introduites pour représenter les caractères. Le caractère A majuscule a
-pour nom "Latin Capital Letter A" et pour numéro 65.  Croyez-nous, en binaire ce 65 s'écrit 01000001.  Le caractère a minuscule a pour numéro 97. En binaire cela s'écrit 01100001. C'est remarquable car c'est juste le 6eme chiffre partant de la droite, un 0,  qui est transformé en 1 pour passer de l'un à l'autre. Et cela est vrai pour toutes les lettres de notre alphabet latin. D'un point de vue arithmétique, l'interprétation du changement de ce 6ème chiffre est simplement d'ajouter ou retirer 32 au numéro. 65 +32 fait bien 97. 
+Rappelez-vous les conventions de langage dont nous avons parlé au module précédent, introduites pour représenter les caractères. Le caractère A majuscule a pour nom "Latin Capital Letter A" et pour numéro 65.  Croyez-nous, en binaire ce 65 s'écrit 01000001.  Le caractère a minuscule a pour numéro 97. En binaire cela s'écrit 01100001. C'est remarquable car c'est juste le 6eme chiffre partant de la droite, un 0,  qui est transformé en 1 pour passer de l'un à l'autre. Et cela est vrai pour toutes les lettres de notre alphabet latin. Le passage de majuscule à minuscule consiste juste à changer un 0 par un 1 à la sixième position. D'un point de vue arithmétique, l'interprétation du changement de ce 6ème chiffre est simplement d'ajouter ou retirer 32 au numéro. 65 +32 fait bien 97. 
 
-Ce choix de représentation, donc de langage pour représenter les symboles est donc très lié au fonctionnement binaire de la machine et à ses capacités de calcul arithmétique. C'est là l'ingéniosité des personnes qui ont conçu ce langage de représentation des symboles. À partir de cela, on peut facilement imaginer le traitement que doit réaliser la machine pour transformer un symbole stocké dans sa mémoire de majuscule en minuscule. Il suffit d'indiquer l'adresse où ce symbole est stocké. Imaginons que ce soit l'adresse 413. 
+Ce choix de représentation, donc de langage pour représenter les symboles est donc très lié au fonctionnement binaire de la machine et à ses capacités de calcul arithmétique. C'est là l'ingéniosité des personnes qui ont conçu ce langage de représentation des symboles. À partir de cela, on peut facilement imaginer le traitement que doit réaliser la machine pour transformer un symbole stocké dans sa mémoire de majuscule en minuscule. Il est nécessaire de connaître l'adresse où ce symbole est stocké. Imaginons que ce soit l'adresse 413. 
 
     Accéder à la mémoire à l'adresse 413 (retrouver la valeur binaire 
 	                                      correspondant au code 
@@ -57,24 +73,26 @@ Ce choix de représentation, donc de langage pour représenter les symboles est 
 										  chiffre de 0 en 1.)
 	Ranger le résultat dans la mémoire 413 
 
-L'unité de contrôle doit juste assurer que ces 3 instructions soient réalisées successivement dans cet ordre, *en séquence*. Nous n'irons pas dans les détails du langage numérique inventé pour représenter ces 3 instructions, ce n'est pas très important ici. Par contre, les  notions importantes à retenir sont les suivantes. Premièrement nous sommes parvenus à créer un traitement qui porte un sens pour nous, à partir de la représentation numérique d'une information et grâce à une combinaison d'instructions. Deuxièmement, l'ordonnancement en séquence des instructions constitue le premier outil de combinaison. Nous venons de décrire un algorithme simple ! 
+Nous retrouvons dans cet exemple l'organisation de la machine avec ses adresses, sa mémoire, son unité de calcul et son unité de contrôle. L'unité de contrôle doit juste assurer que ces 3 instructions soient réalisées successivement dans cet ordre, *en séquence*. Nous n'irons pas dans les détails du langage numérique inventé pour représenter ces 3 instructions, ce n'est pas très important ici. Par contre, les  notions importantes à retenir sont les suivantes. Premièrement nous sommes parvenus à créer un traitement qui porte un sens pour nous, à partir de la représentation numérique d'une information et grâce à une combinaison d'instructions. Deuxièmement, l'ordonnancement en séquence des instructions constitue le premier outil de combinaison. Nous venons de décrire un algorithme simple ! 
 
 
 ## Et si ce n'était pas une lettre majuscule ?
 
-L'ordinateur est d'abord une machine très obéissante et exécute scrupuleusement les ordres qu'on lui donne. Le traitement précédent ajoutera 32 au numéro même si celui-ci n'est pas le numéro d'une lettre majuscule. Par exemple le numéro 64 représente l'arobase @  et si on lui ajoutait 32 cela donnerait une apostrophe inversée (`).  Pour contrôler cela, il faut introduire une vérification que nous pouvons décrire comme :
+L'ordinateur est d'abord une machine très obéissante et exécute scrupuleusement les ordres qu'on lui donne. Le traitement précédent ajoutera 32 au numéro même si celui-ci n'est pas le numéro d'une lettre majuscule. Par exemple le numéro 64 représente l'arobase @  et si on lui ajoutait 32 cela donnerait une apostrophe inversée (`). Cela consisterait en une erreur, un bug, car ce n'est pas ce qui est attendu ! On devrait ne permettre le passage en majuscules ou minuscules qu'aux symboles alphabétiques. Pour contrôler cela, il faut introduire une vérification que nous pouvons décrire comme :
 
     Accéder à la mémoire à l'adresse 413 
 	Si la valeur est comprise entre 65 et 90 Alors 
        Ajouter 32 
 	   Ranger le résultat dans la mémoire 413 
-
+    Fin du Si
+	
+	
 Parmi les instructions de base que l'unité de calcul sait faire, outre les opérations arithmétiques, nous disposons aussi des comparaisons. 
-Le *si* que nous venons d'utiliser très naturellement est la deuxième façon de combiner des instructions. Remarquez que l'algorithme utilise à la fois des *séquences* et un *si*. C'est une combinaison qui permet de considérer différentes  *alternatives* dans le déroulement de l'algorithme, sous certaines conditions. 
+Le *si* que nous venons d'utiliser très naturellement est la deuxième façon de combiner des instructions. Remarquez que l'algorithme utilise à la fois des *séquences* et un *si*. C'est une combinaison qui permet de considérer différentes *alternatives* dans le déroulement de l'algorithme, sous certaines conditions. 
 
 ## Et pour un texte complet ?
 
-Supposons maintenant que ce soit un texte complet que nous voulons mettre en majuscules... Là encore c'est une articulation entre langage de représentation, machines et algorithmes que nous allons illustrer. Dans un premier temps, il faut choisir une représentation du texte. Ce sera une suite de symboles stockés dans la mémoire les uns à la suite des autres et terminés par un symbole spécial représenté en binaire par 0000000. Ce choix de représentation n'est pas normalisé mais est souvent utilisé. De plus, du point de vue de la machine,  l'unité de calcul permet de faire des opérations sur les valeurs aussi bien que sur des adresses (qui sont aussi des valeurs). L'algorithme lui s'écrira :
+Supposons maintenant que ce soit un texte complet que nous voulons mettre en majuscules... Là encore c'est une articulation entre langage de représentation, machines et algorithmes que nous allons illustrer. Dans un premier temps, il faut choisir une représentation du texte. Ce sera une suite de symboles stockés dans la mémoire les uns à la suite des autres et terminés par un symbole spécial représenté en binaire par 0000000. Ce choix de représentation est très souvent utilisé. De plus, du point de vue de la machine, l'unité de calcul permet de faire des opérations sur les valeurs aussi bien que sur des adresses (qui sont aussi des valeurs). L'algorithme lui s'écrira :
 
     L'adresse courante est 413
     Accéder à la mémoire à l'adresse courante
@@ -82,12 +100,12 @@ Supposons maintenant que ce soit un texte complet que nous voulons mettre en maj
   	   Si la valeur est comprise entre 65 et 90 Alors 
           Ajouter 32 
 	      Ranger le résultat dans la mémoire à l'adresse courante
+	   Fin du Si
        Ajouter 1 à l'adresse courante 
        Accéder à la mémoire à l'adresse courante 
-
-Voilà la troisième manière de combiner des instructions : la répétition. Les informaticiens l'appellent *la boucle*, ou *l'itération*. 
-
-
+    Fin de la répétition 
+	
+Voilà la troisième manière de combiner des instructions : la répétition. Les informaticiens l'appellent *la boucle*, ou *l'itération*. Le sens de cette répétition peut être précisé. Lorsque l'unité de contrôle demande à exécuter la répétition, l'unité de calcul vérifie que la valeur n'est pas 00000000. Si tel est le cas tout ce qui se trouve entre la répétition et la fin de répétition sera exécuté, puis on reviendra au point où il faut vérifier la valeur n'est pas 00000000, et ainsi de suite. La répétition s'arrêtera lorsque la valeur sera 00000000. 
 
 ## Les trois combinaisons
 
@@ -103,28 +121,12 @@ Dans le monde informatique, au fur et à mesure de ces combinaisons, les traitem
 
 À partir des instructions de base de la machine, on construit donc des traitements par un algorithme en utilisant les trois modes de composition que sont la séquence, l'alternative et l'itérative. Est-ce suffisant ? Oui car il existe un **théorème** qui affirme que tout ce qui est calculable avec une machine peut être défini par quelques opérations élémentaires et les opérations de composition que sont la suite (ou la séquence), l'alternative et l'itérative. Ce théorème a été démontré au milieu du vingtième siècle par des mathématiciens et des logiciens. Ceci soulève immédiatement la question : une machine peut-elle tout calculer ? La réponse, démontrée à la même époque, est négative : il existe des problèmes que ne peut pas résoudre une machine. Par exemple, il est montré qu'il n'existe pas d'algorithme qui prend en entrée une suite d'instructions contenant des alternatives et des itératives et qui répond en sortie cette suite d'instructions va s'arrêter en un temps fini lorsqu'on l'exécutera. Ces sujets soulèvent des problèmes importants qui ont été et sont encore étudiés par les mathématiciens, les informaticiens, les logiciens et les philosophes. Notons enfin, que savoir qu'un problème est calculable ne suffit pas à savoir le traiter car le temps de calcul peut être prohibitif.
 
-## Les algorithmes
 
-Nous utilisons tous, plus ou moins consciemment, des algorithmes plus
-ou moins précis dans notre quotidien : pour réaliser des calculs, pour
-organiser un déplacement, pour organiser notre journée de travail,
-pour réaliser une tâche complexe. Par exemple, pour aller à pied de
-mon domicile à un restaurant dont je connais l'adresse, je vais suivre
-des rues, tourner à certaines intersections et parcourir la rue du
-restaurant jusqu'à arriver devant sa porte selon un algorithme que je
-me suis fixé, quitte à l'adapter si je me trompe en chemin. Nous
-pouvons noter que nous n'utilisons pas tous le même algorithme et même
-que je peux choisir un algorithme différent selon la météo, ma
-connaissance de la destination, mon humeur ... Quant aux machines, les
-algorithmes devront être définis de façon très précise en prévoyant à
-l'avance toutes les situations possibles. Il existe également
-plusieurs algorithmes possibles pour résoudre un même problème. Le
-choix sera effectué en fonction des compétences du concepteur et de
-contraintes comme l'efficacité de l'algorithme mesurée par le temps de
-calcul.
 
 
 ```activité
+Qu'est-ce qu'un algorithme en 1 minute : https://www.youtube.com/watch?v=u9XEsJypSdc {}
+
 ::Modèle de machine::
 [markdown]
 **Modèle de machine**
