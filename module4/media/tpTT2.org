@@ -1,0 +1,35 @@
+#+OPTIONS: toc:nil
+#+LANGUAGE: fr
+#+TITLE: Traitement de textes
+#+AUTHOR: 
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LaTeX_CLASS_OPTIONS: [11pt]
+#+LaTeX_HEADER: \usepackage[T1]{fontenc} 
+#+LaTeX_HEADER: \usepackage{libertine}\usepackage[height=22cm]{geometry}
+#+LaTeX_HEADER: \renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+#+LaTeX_HEADER: \usepackage{lmodern}
+
+
+* Traitement de textes
+
+Modifier le fichier =texte_brut.odt= de manière à ce qu'il ressemble au fichier =texte_final.pdf=. Il peut subsister de petites différences. 
+
+#+BEGIN_QUOTE
+/Vous ne devez utiliser *aucune mise en forme directe*. Nous ne notons pas l'apparence mais le *moyen* par lequel vous avez obtenu cette apparence.  Toute solution sous forme de mise en forme directe sera comptée comme *fausse*./  
+#+END_QUOTE
+ 
+1. Identifier et déclarer la structure du document
+2. Faire en sorte que le titre principal soit associé à un champ de titre. Lui appliquer le style de titre principal.
+3. Supprimer tous les paragraphes vides et espaces inutiles
+4. Le texte doit être justifié.
+5. Faire un style de caractère intitulé =personne= utilisant une police en petites majuscules (small caps (SC) : rechercher un nom de police contenant *SC* comme /EB Garamond 08 SC/) et l'appliquer aux noms de personnes citées dans la section /Étude systématique/.
+6. Appliquer un retrait de première ligne automatique et un espacement de 0,2cm sous les paragraphes.
+7. Appliquer le traitement des veuves et des orphelines avec le réglage par défaut pour les paragraphes.
+8. Ajouter une note de bas de page "Il ne faut pas confondre ce mathématicien avec un autre auteur perse : Abu-'Abdollâh Mohammad Khuwârizmi qui, lui, est l'auteur de Mafâtih al-'Olum (Les clés des sciences), encyclopédie écrite dans les années 976-997" pour  Al-Khwarizmi.
+9. Ajouter des entrées d'index pour /machine de Turing/ et /terminaison/ et /complétude/.
+10. Numéroter les titres de section
+11. Ajouter une table des matières et une table d'index.
+12. Le document est structuré avec une première page, la page des tables, et le reste du document. Faites en sorte que les styles de page associés soient =Première page=, =index= et =style par défaut=.
+13. Créer un style =UneCitation= et l'appliquer à la citation de Descartes. Elle apparaît avec des marges droites et gauches de 2cm et aligné à gauche, le texte en italique.
+14. Ajouter l'image de Ada Lovelace et ajouter un renvoi à la page de cette illustration dans la mention /(voir l'illustration page )/. (Vérifiez que vous avez bien procédé en observant le changement de la référence lorsque la figure change de page)
+15. Modifiez les méta-données du document en ajoutant le sujet /informatique/ et les mots clefs suivants : Wikipedia, science. 
