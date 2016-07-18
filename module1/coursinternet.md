@@ -272,7 +272,7 @@ Après avoir effectué vos recherches sur ces personnes et cette machine, rédig
 {####
 ## Personnages importants
 ### Ada Lovelace
-![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
+![Ada Lovelace](media/adalovelace.jpg)
 *Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
 Ce projet n'aboutira finalement pas dans un succès commercial mais aura contribué à produire les **bases de l'informatique**.
 Le rôle d'Ada Lovelace dans ce projet a été tel qu'elle a été depuis qualifiée de *première programmeuse*.
