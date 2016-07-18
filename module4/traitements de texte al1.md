@@ -96,7 +96,18 @@ Voici 4 règles fondamentales :
 - faire des fautes, utiliser le correcteur
 - titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
 
->Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
+> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
+> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
+Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
+Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
+
+- montrer
+ - la correction des maj en début de phrase (après point et espace).
+ - la correction DOuble majuscule
+ - l'insertion espace insécable devant ; (avec affichage des car non imprim)
+ - correction d'un mot mal orthographié
+- le panneau de config des paramètres
+- qu'on peut (dés)activer quand on le veut
 
 - enrigistrer (dossier / fichier / extension-format)
 
