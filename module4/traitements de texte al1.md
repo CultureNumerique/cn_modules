@@ -48,6 +48,16 @@ Notons que tous les logiciels de ce type utilisent un abus de langage en parlant
 Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettre d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information... 
 
 ## La saisie
+
+La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux paramètres dont la langue, des dispositifs techniques de saisie et des aides logicielles à la saisie. 
+
+Dans certaines langues, l'ordre d'écriture est de gauche à droite dans d'autres de droite à gauche. La langue définit les caractères, symboles graphiques utilisés, la nature des mots, les règles typographiques, etc. Les documents peuvent être multilingues. Nous nous focalisons ici sur le français.
+
+Les dispositifs techniques influencent la saisie. Le clavier reste le plus répandu, mais se développent aujourd'hui des acquisitions par la voix.  Sur de petits équipements, on pallie l'absence de clavier par des assistances logicielles qui complètent les mots, prévoient le prochain mot etc.
+
+L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
+
+
 ### Repérer les composants du texte
 - les **caractères** visibles et invisibles en particulier les espaces et les fins de paragraphes.
 Il est important d'avoir conscience que les espaces et les retours à la ligne sont des caractères à part entière. Les visualiser peut être intéressant pour bien comprendre ce qui a été saisi.
@@ -58,7 +68,7 @@ Il est important d'avoir conscience que les espaces et les retours à la ligne s
 - les signes de ponctuation qui se combinent avec des espaces en respectant les règles typographiques.
 `fournir une doc *règle de typo*`
 > **règle simple**
-> - les ponctuations simples : pas d'espace avant, une ^[en typographie, le mot *espace* est féminin] espace après
+> - les ponctuations simples : pas d'espace avant, une[^2]  espace après
 > - les ponctuations doubles : espace insécable avant, espace normale après.
 
 - les **paragraphes** qui sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*.
