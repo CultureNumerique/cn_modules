@@ -20,37 +20,32 @@
 
 ## Vidéo 0 - Avant de démarrer
 
-Il existe de nombreux logiciels plus ou moins équivalents dont 3 d'entre eux sont particulièrement répandus :
+Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
 - `Microsoft Word` de la suite `Office`
 - `Writer` de la suite `LibreOffice`
 - `Writer` de la suite `OpenOffice`
 
-Chacun de ces logiciels présente de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Il est impossible de les présenter tous mais peu importe, ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
+Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
 
 Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
 
 En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
-- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité
+- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1]. 
 - le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
 La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
 
 Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
 
-Nous avons choisi pour les démos d'utiliser :
+Nous avons choisi d'utiliser :
 - le format `.odt` pour l'enregistrement des fichiers
 - le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
 
-## Interface
-Tous les logiciels de traitement de texte ressemblent plus ou moins à ça ... Nous trouvons au centre une grande zone représentant une page, en haut les menus et une zone de boutons-raccourcis. La forme, les dessins, les couleurs des boutons et des menus varient d'une version à une autre, d'une machine à une autre mais les fonctionnalités sont globalement les mêmes.
-
-Notons dès à présent que ces boutons qui sont pourtant en bonne place et prêts à être utilisés ne devraient jamais l'être. Ce sont des boutons qui permettent la mise en forme directe du texte, ce qui est à éviter au maximum.
-
-En revanche, il est important de repérer très vite les 2 outils pour structurer le document
-- menu déroulant (seulement les principaux styles)
-- fenêtre permanente (avec filtres)
+## Objectifs de ce cours
+Toutes les interfaces de logiciels de traitement de texte se ressemblent. Nous trouvons au centre une grande zone représentant une page, en haut les menus et une zone de boutons-raccourcis. La forme, les dessins, les couleurs des boutons et des menus varient d'une version à une autre, d'une machine à une autre mais les fonctionnalités sont globalement les mêmes. Le **premier objectif** est la découverte de ces fonctionnalités générales, communes à tous les logiciels, mais qui permettent de comprendre ce qu'est un document numérique, et prendre le recul sur l'usage. 
 
 Notons que tous les logiciels de ce type utilisent un abus de langage en parlant d'outils de styles car ce sont avant tout des outils qui permettent de structurer et de hiérarchiser le document. La mise en forme associée à ces styles introduit de la confusion dans les différentes vues. En premier lieu, les *styles* sont utilisés pour définir les niveaux de titres et de sous-titres pour déclarer la **structure** du document, les aspects de mise en forme liés à la vue de présentation seront également traités avec cet outil d'où la confusion.
 
+Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettre d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information... 
 
 ## La saisie
 ### Repérer les composants du texte
@@ -141,3 +136,5 @@ comparer les formats odt et docx
 
 décompresser un fichier .odt
 ```
+
+[^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
