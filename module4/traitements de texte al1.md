@@ -45,7 +45,7 @@ Toutes les interfaces de logiciels de traitement de texte se ressemblent. Nous t
 
 Notons que tous les logiciels de ce type utilisent un abus de langage en parlant d'outils de styles car ce sont avant tout des outils qui permettent de structurer et de hiérarchiser le document. La mise en forme associée à ces styles introduit de la confusion dans les différentes vues. En premier lieu, les *styles* sont utilisés pour définir les niveaux de titres et de sous-titres pour déclarer la **structure** du document, les aspects de mise en forme liés à la vue de présentation seront également traités avec cet outil d'où la confusion.
 
-Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettre d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information... 
+Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettent d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information... 
 
 ## La saisie
 
@@ -68,21 +68,32 @@ Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. C
 
 Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de Majuscule-Entrée qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
 
+**Les titres**. Ce sont bien des paragraphes, mais le logiciel de traitement de texte permet de les déclarer comme titres en précisant leur niveau. Le niveau est la profondeur une hiérarchie titre (niveau 1), sous-titre (niveau 2), sous-sous-titre (niveau 3), etc. 
+
 Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre une présentation cohérente. Pour assurer cette cohérence, beaucoup de caractéristiques sont définies sous forme de règles afin que le logiciel règle l'apparence des listes. C'est notamment les symboles utilisés pour les listes à puce, les espacements, la numérotation des éléments, etc. La logique est donc de déclarer la liste et laisser la machine régler l'apparence avec les règles de mise en forme que vous indiquez. 
 
+Repérer les composants du texte permet de comprendre la structure d'un document, saisir à la fois le contenu et la structure d'un document et se préparer pour une mise en forme efficace et uniforme du document. 
 
-> **Erreur à ne pas commettre**
->
-> les symboles de puces ou de numérotation ainsi que l'indentation (i.e. le décalage de début de ligne) sont pris en charge par le logiciel, il est est donc tout à fait déconseillé d'insérer des espaces ou une tabulation pour commencer à saisir une liste. La bonne méthode consiste à saisir le texte du premier item et à transformer le paragraphe en liste en utilisant le bouton dédié à cela ou en passant par le menu. Chaque logiciel propose également des raccourcis-clavier permettant d'aller plus vite pour faire la même chose.
+[La saisie](https://owncloud.univ-lille3.fr/index.php/s/OKse8csySXs2GKL){: .lien_video }
+
+[La saisie - Suite](https://owncloud.univ-lille3.fr/index.php/s/HjIIMzOYVPuYmsh){: .lien_video }
+
+
+```activité
+Reproduire l'exemple en vidéo.
+{
+#### On saisit le titre, puis on le déclare comme titre principal.  On saisit le sous titre, puis le titre de niveau 1,  et les premières phrases du premier paragraphe. On remarque que le paragraphe suivant est automatiquement en corps de texte. On remarque aussi l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots ont été identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a également la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. Dans un premier temps, nous laissons la présentation par défaut. 
+L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable.}
+```
 
 ### Respecter des règles de base
 Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
-Voici 4 règles fondamentales :
-- Ne jamais saisir 2 *espaces* l'une derrière l'autre, les enlever s'il en existe.
-- Ne jamais saisir 2 *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide. Les interlignes et l'aération du texte seront bien mieux gérées par des règles de mise en forme.
-- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus ou par les boutons-raccourcis. 
+Voici 5 règles fondamentales :
+- L'espace sépare les mots. On ne doit donc pas saisir plusieurs espaces l'une derrière l'autre.
+- La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide. 
+- Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
+- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis. 
 - Ne pas saisir des valeurs qui sont susceptibles de varier et peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
-
 
 
 ## Vidéo 1 - Saisie des éléments de base
