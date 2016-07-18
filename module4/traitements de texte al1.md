@@ -59,33 +59,29 @@ L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui 
 
 
 ### Repérer les composants du texte
-- les **caractères** visibles et invisibles en particulier les espaces et les fins de paragraphes.
-Il est important d'avoir conscience que les espaces et les retours à la ligne sont des caractères à part entière. Les visualiser peut être intéressant pour bien comprendre ce qui a été saisi.
-> il existe plusieurs sortes d'espaces, retenons surtout les espaces *normales* et les *espaces insécables*.
+
+Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes. 
+
+Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut être intéressant pour bien comprendre ce qui a été saisi.
+
+Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. Certaines règles typographiques définissent l'espace qui doit être placé entre les mots, les symboles de ponctuation, les coupures de ligne. Ces règles sont propres à la langue, par exemple en français une espace précède le signe :, mais pas en anglais. 
+
+Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de Majuscule-Entrée qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
+
+Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre une présentation cohérente. Pour assurer cette cohérence, beaucoup de caractéristiques sont définies sous forme de règles afin que le logiciel règle l'apparence des listes. C'est notamment les symboles utilisés pour les listes à puce, les espacements, la numérotation des éléments, etc. La logique est donc de déclarer la liste et laisser la machine régler l'apparence avec les règles de mise en forme que vous indiquez. 
 
 
-- les **mots**, séparés par des espaces ou des signes de ponctuation
-- les signes de ponctuation qui se combinent avec des espaces en respectant les règles typographiques.
-`fournir une doc *règle de typo*`
-> **règle simple**
-> - les ponctuations simples : pas d'espace avant, une[^2]  espace après
-> - les ponctuations doubles : espace insécable avant, espace normale après.
-
-- les **paragraphes** qui sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*.
-> Du point de vue technique, chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. On peut donc égalmeent avoir des paragraphes vides.
-
-- les **listes** qui peuvent être numérotées ou à puce sont des objets particuliers. Tous les items d'une liste sont reliés entre eux pour permettre une présentation cohérente.
 > **Erreur à ne pas commettre**
 >
 > les symboles de puces ou de numérotation ainsi que l'indentation (i.e. le décalage de début de ligne) sont pris en charge par le logiciel, il est est donc tout à fait déconseillé d'insérer des espaces ou une tabulation pour commencer à saisir une liste. La bonne méthode consiste à saisir le texte du premier item et à transformer le paragraphe en liste en utilisant le bouton dédié à cela ou en passant par le menu. Chaque logiciel propose également des raccourcis-clavier permettant d'aller plus vite pour faire la même chose.
 
 ### Respecter des règles de base
-Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat pour la vue de présentation. En effet, si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
+Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
 Voici 4 règles fondamentales :
 - Ne jamais saisir 2 *espaces* l'une derrière l'autre, les enlever s'il en existe.
-- ne jamais saisir 2 *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide. Les interlignes et l'aération du texte seront bien mieux gérées par la mise en forme automatique.
-- ne pas utiliser la mise en forme directe, que ce soit par le menu ou par les boutons-raccourcis. Ces boutons peuvent d'ailleurs être désactivés de l'affichage, ils ne devraient jamais servir.
-- ne pas saisir des valeurs qui sont susceptibles de varier : références, numéros de page, numéros de chapitre, table des matières, bibliographies. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
+- Ne jamais saisir 2 *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide. Les interlignes et l'aération du texte seront bien mieux gérées par des règles de mise en forme.
+- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus ou par les boutons-raccourcis. 
+- Ne pas saisir des valeurs qui sont susceptibles de varier et peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
 
 
@@ -148,3 +144,4 @@ décompresser un fichier .odt
 ```
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
+[^2]: l'espace en typographie est un nom féminin. 
