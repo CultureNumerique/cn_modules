@@ -94,7 +94,7 @@ Voici 5 règles fondamentales :
 - La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide. 
 - Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
 - Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis. 
-- Ne pas saisir des valeurs qui sont susceptibles de varier et peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
+- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
 
 ## Vidéo 1 - Saisie des éléments de base
@@ -124,8 +124,15 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 
 ## Vidéo 2 - structurer son document
 - reprendre à la fin de vidéo 1
+- ajouter une liste
+[Listes](https://owncloud.univ-lille3.fr/index.php/s/zE11LqwAfsHaxT6){: .lien_video }
+
 - faire apparaître le styleur
+[Styleur](https://owncloud.univ-lille3.fr/index.php/s/WjHVemdZlmkvDng){: .lien_video }
+
 - ajouter quelques définitions de caractères avec accentuation et accentuation forte
+[Style caractères](https://owncloud.univ-lille3.fr/index.php/s/8IbOv6sBSN60K2d){: .lien_video }
+
 - Montrer l'affichage des caractères spéciaux
 - Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe.
 - Montrer que le texte en note de bas de page est en style note de bas de page
