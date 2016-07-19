@@ -104,6 +104,9 @@ Voici 5 règles fondamentales :
 - faire des fautes, utiliser le correcteur
 - titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
 
+[L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
+
+
 > Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
 > Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
 Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
