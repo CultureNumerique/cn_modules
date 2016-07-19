@@ -1,24 +1,12 @@
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Traitements de texte](#traitements-de-texte)
-	- [Vidéo 0 - Avant de démarrer](#vido-0-avant-de-dmarrer)
-	- [Interface](#interface)
-	- [La saisie](#la-saisie)
-		- [Repérer les composants du texte](#reprer-les-composants-du-texte)
-		- [Respecter des règles de base](#respecter-des-rgles-de-base)
-	- [Vidéo 1 - Saisie des éléments de base](#vido-1-saisie-des-lments-de-base)
-	- [Vidéo 2 - structurer son document](#vido-2-structurer-son-document)
-	- [Vidéo 3 - Personnaliser les styles](#vido-3-personnaliser-les-styles)
-	- [Vidéo 4 - insertions](#vido-4-insertions)
-	- [Vidéos 5 - TOC](#vidos-5-toc)
-	- [Video 6 - métadonnées](#video-6-mtadonnes)
-	- [Vidéo 7 -](#vido-7-)
 
 <!-- /TOC -->
+
 # Traitements de texte
 
-## Vidéo 0 - Avant de démarrer
+## Avant de démarrer
 
 Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
 - `Microsoft Word` de la suite `Office`
@@ -48,7 +36,8 @@ Notons que tous les logiciels de ce type utilisent un abus de langage en parlant
 
 Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettent d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information...
 3'30"
-## La saisie
+
+## Vidéo 1 : La saisie
 
 La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux paramètres dont la langue, des dispositifs techniques de saisie et des aides logicielles à la saisie.
 
@@ -96,31 +85,8 @@ Voici 5 règles fondamentales :
 - Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
 - Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
-
-## Vidéo 1 - Saisie des éléments de base
-- débuter un document, page blanche sans styleur
-- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
-- énoncer (voix off) les niveaux de titre sans mise en forme
-- faire des fautes, utiliser le correcteur
-- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
-
 [L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
 
-
-> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
-> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
-Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
-Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
-
-- montrer
- - la correction des maj en début de phrase (après point et espace).
- - la correction DOuble majuscule
- - l'insertion espace insécable devant ; (avec affichage des car non imprim)
- - correction d'un mot mal orthographié
-- le panneau de config des paramètres
-- qu'on peut (dés)activer quand on le veut
-
-- enrigistrer (dossier / fichier / extension-format)
 
 ## Vidéo 2 - structurer son document
  Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphe dans le même élément élément de liste en utilisant la touche Retour arrière une seule fois en début de paragraphe. Deux appuis de retour arrière quittent la structure de liste.
@@ -159,9 +125,8 @@ Par exemple à la page 3 on constate qu'alors qu'il restait un peu de place en b
 Parallèlement on voit à la page 4 que le titre de niveau 2 aurait pu "tenir" en bas de la page précédente. Or, un titre en bas de page nuit à la lisibilité et il est préférable de ne jamais laisser un titre ou un sous-titre en bas de page. Pour cela, il suffit de choisir dans la section enchainement "solidaire avec le paragraphe suivant".
 Ces techniques appliquées à tous les niveaux de titre vous assure une mise en page de grande qualité sans avoir à vérifier chacun des titres.
 
-- enregistrer
 
-## Vidéos 4 - TOC
+## Vidéos 4 - Tables et numérotations 
 
 La numérotation des chapitres est également une opération réalisée automatiquement par le traitement de textes. Il ne faut pas saisir soi-même ces numéros. L'outil de numérotation des chapitres le fait pour vous. Il faut indiquer quelles sont les noms des styles (structures) identifiant les titres. Bien sûr par défaut ce sont les titre 1, titre 2, etc... Ensuite on choisit le style de numérotation et si on doit faire apparaître la hiérarchie dans le numéro en affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres pour comprendre les impacts sur la présentation de ces numéros.
 [Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/KRVOxjyF7Z901XZ){: .lien_video }
@@ -176,9 +141,29 @@ Une fois la structure du document déclarée, l'insertion d'une table des matiè
 Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple les nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet,...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/DId9HvSbnxdG55x){: .lien_video }
 
+## Vidéos avancées
 
+### Travail collaboratif
+Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. 
+[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/PNxcDLXDvXdl8qD){: .lien_video }
 
-## Vidéo 7 -
+En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifiations. 
+[Valider ou refuser les modifications](https://owncloud.univ-lille3.fr/index.php/s/Yn8QFUIPYZDW2ao){: .lien_video }
+
+Une autre fonctionnalité de suivi des versions est illustrée ici. 
+[Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/mELlyV3QsnYRQpc){: .lien_video }
+
+### Autres points possibles à aborder
+- présentation de la création de liste pendant la frappe
+(* , - , 1), a), ...) Insister sur l'automatisation
+- présenter le bouton de liste ((dés)activer puces)
+- détailler puce + retrait
+- un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
+
+- insertion d'image
+- pied de page / entête
+- numeros de page / champs
+
 - bibliographie
 > surement en plusieurs fois
 
@@ -189,27 +174,29 @@ comparer les formats odt et docx
 décompresser un fichier .odt
 ```
 
+## Les restes... 
 
-## Vidéos avancées
+## Vidéo 1 - Saisie des éléments de base
+- débuter un document, page blanche sans styleur
+- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
+- énoncer (voix off) les niveaux de titre sans mise en forme
+- faire des fautes, utiliser le correcteur
+- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
+> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
+> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
+Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
+Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
 
-Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. 
-[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/PNxcDLXDvXdl8qD){: .lien_video }
+- montrer
+ - la correction des maj en début de phrase (après point et espace).
+ - la correction DOuble majuscule
+ - l'insertion espace insécable devant ; (avec affichage des car non imprim)
+ - correction d'un mot mal orthographié
+- le panneau de config des paramètres
+- qu'on peut (dés)activer quand on le veut
 
-En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifiations. 
-[Valider ou refuser les modifications](https://owncloud.univ-lille3.fr/index.php/s/Yn8QFUIPYZDW2ao){: .lien_video }
+- enrigistrer (dossier / fichier / extension-format)
 
-Une autre fonctionnalité de suivi des versions est illustrée ici. 
-[Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/mELlyV3QsnYRQpc){: .lien_video }
-
-- présentation de la création de liste pendant la frappe
-(* , - , 1), a), ...) Insister sur l'automatisation
-- présenter le bouton de liste ((dés)activer puces)
-- détailler puce + retrait
-- un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
-
-- insertion d'image
-- pied de page / entête
-- numeros de page / champs
 
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
