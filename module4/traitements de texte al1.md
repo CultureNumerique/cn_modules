@@ -160,9 +160,11 @@ La structure d'un document c'est aussi une structure en différentes pages. Une 
 Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro. 
 [Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/2HVzcqYl75R1xYD){: .lien_video }
 
-## Video 6 - métadonnées
-- trouver les stats
-- saisir les métadonnées
+## Video 5 - métadonnées
+Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple les nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet,...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
+[Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/DId9HvSbnxdG55x){: .lien_video }
+
+
 
 ## Vidéo 7 -
 - bibliographie
