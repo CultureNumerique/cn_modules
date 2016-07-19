@@ -180,6 +180,15 @@ décompresser un fichier .odt
 
 ## Vidéos avancées
 
+Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. 
+[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/PNxcDLXDvXdl8qD){: .lien_video }
+
+En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifiations. 
+[Valider ou refuser les modifications](https://owncloud.univ-lille3.fr/index.php/s/Yn8QFUIPYZDW2ao){: .lien_video }
+
+Une autre fonctionnalité de suivi des versions est illustrée ici. 
+[Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/mELlyV3QsnYRQpc){: .lien_video }
+
 - présentation de la création de liste pendant la frappe
 (* , - , 1), a), ...) Insister sur l'automatisation
 - présenter le bouton de liste ((dés)activer puces)
