@@ -124,23 +124,24 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 
 ## Vidéo 2 - structurer son document
 - reprendre à la fin de vidéo 1
-- ajouter une liste
+- ajouter une liste : Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphe dans le même élément élément de liste en utilisant la touche Retour arrière une seule fois en début de paragraphe. Deux appuis de retour arrière quittent la structure de liste. 
+
 [Listes](https://owncloud.univ-lille3.fr/index.php/s/zE11LqwAfsHaxT6){: .lien_video }
 
-- faire apparaître le styleur
+- faire apparaître le styleur. La touche F11, le menu Style/Style et formatage ou encore le tiroir de droite permettent d'afficher la liste des styles que nous interprétons ici comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments structure généraux de texte : paragraphes, caractères, cadres (flottants), pages ou listes. 
 [Styleur](https://owncloud.univ-lille3.fr/index.php/s/WjHVemdZlmkvDng){: .lien_video }
 
-- ajouter quelques définitions de caractères avec accentuation et accentuation forte
+- ajouter quelques définitions de caractères avec accentuation et accentuation forte. On associe facilement un style à un élément, ici des caractères en les sélectionnant et cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
 [Style caractères](https://owncloud.univ-lille3.fr/index.php/s/8IbOv6sBSN60K2d){: .lien_video }
 
 - Montrer l'affichage des caractères spéciaux
-- Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe.
+- Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe. Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou spéciaux permet de savoir exactement ce qui a été saisi. On voit les espaces et les fins de paragraphe, on peut déceler des répétitions de ces symboles habituellement invisibles. On voit également la représentation des fins de ligne qui ne sont pas des fins de paragraphes dans cette partie de texte.
 [Caractères spéciaux](https://owncloud.univ-lille3.fr/index.php/s/ARsX7LtVhTFOeO2){: .lien_video }
 
-- Montrer que le texte en note de bas de page est en style note de bas de page
+- Montrer que le texte en note de bas de page est en style note de bas de page. Le logiciel réalise souvent des opérations pour vous aider à bien écrire votre document, comment par exemple ici dans le cas de l'insertion d'une note de bas de page. Le numéro est inséré automatiquement et sera adapté si d'autres notes sont ajoutées. Le style choisi pour la note sera adapté automatiquement.
 [Notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/8KZsw65hiQ6dFf2){: .lien_video }
 
-- Montrer comment insérer des renvois aux textes et illustrations. 
+- Montrer comment insérer des renvois aux textes et illustrations. Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez que la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soit même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents. 
 [Renvoi illustration](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
 [Renvoi repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
 
