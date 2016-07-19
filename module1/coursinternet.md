@@ -114,9 +114,7 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
 ```
  
 ``` activité-avancée
-[markdown]::Le numérique au quotidien::
-**Le numérique au quotidien**
-Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
+::Le numérique au quotidien::[markdown]Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
     - Domotique
     - Transports
     - Vêtements
