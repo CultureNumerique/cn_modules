@@ -6,29 +6,6 @@
 
 # Traitements de texte
 
-## Avant de démarrer
-
-Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
-- `Microsoft Word` de la suite `Office`
-- `Writer` de la suite `LibreOffice`
-- `Writer` de la suite `OpenOffice`
-
-Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
-
-Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
-
-En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
-- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
-- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
-La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
-
-Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
-
-Nous avons choisi d'utiliser :
-- le format `.odt` pour l'enregistrement des fichiers
-- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
-1'45"
-
 ## Objectifs de ce cours
 Toutes les interfaces de logiciels de traitement de texte se ressemblent. Nous trouvons au centre une grande zone représentant une page, en haut les menus et une zone de boutons-raccourcis. La forme, les dessins, les couleurs des boutons et des menus varient d'une version à une autre, d'une machine à une autre mais les fonctionnalités sont globalement les mêmes. Le **premier objectif** est la découverte de ces fonctionnalités générales, communes à tous les logiciels, mais qui permettent de comprendre ce qu'est un document numérique, et prendre le recul sur l'usage.
 
@@ -48,6 +25,16 @@ Les dispositifs techniques influencent la saisie. Le clavier reste le plus répa
 L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
 4'15"
 
+Les cours du  module précédent on introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme titre principal.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement en corps de texte. 
+
+Remarquez aussi l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots ont été identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a également la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
+L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable, elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
+
+[La saisie](https://owncloud.univ-lille3.fr/index.php/s/OKse8csySXs2GKL){: .lien_video }
+
+
+[La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/HjIIMzOYVPuYmsh){: .lien_video }
+
 ### Repérer les composants du texte
 
 Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes.
@@ -64,28 +51,14 @@ Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre u
 
 Repérer les composants du texte permet de comprendre la structure d'un document, saisir à la fois le contenu et la structure d'un document et se préparer pour une mise en forme efficace et uniforme du document.
 
-[La saisie](https://owncloud.univ-lille3.fr/index.php/s/OKse8csySXs2GKL){: .lien_video }
 
-[La saisie - Suite](https://owncloud.univ-lille3.fr/index.php/s/HjIIMzOYVPuYmsh){: .lien_video }
+
 7'
 
 ```activité
 Reproduire l'exemple en vidéo.
-{
-#### On saisit le titre, puis on le déclare comme titre principal.  On saisit le sous titre, puis le titre de niveau 1,  et les premières phrases du premier paragraphe. On remarque que le paragraphe suivant est automatiquement en corps de texte. On remarque aussi l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots ont été identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a également la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. Dans un premier temps, nous laissons la présentation par défaut.
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable, elle a inséré un symbole spécifique pour les points de suspension.}
+{ }
 ```
-
-### Respecter des règles de base
-Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
-Voici 5 règles fondamentales :
-- L'espace sépare les mots. On ne doit donc pas saisir plusieurs espaces l'une derrière l'autre.
-- La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide.
-- Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
-- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
-- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
-
-[L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
 
 
 ## Vidéo 2 - structurer son document
@@ -109,22 +82,41 @@ Un autre type de numéros ou textes gérés automatiquement par le logiciel sont
 [Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
 [Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
 
+### Point d'étape : Respecter des règles de base
+Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
+Voici 5 règles fondamentales :
+- L'espace sépare les mots. On ne doit donc pas saisir plusieurs espaces l'une derrière l'autre.
+- La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide.
+- Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
+- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
+- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
+
+[L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
+
+Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des éléments de présentation. C'est la modification des styles. 
+
 ## Vidéo 3 - Personnaliser les styles
-[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
 
-Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
-Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
-Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
-Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
-Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
+Un document de qualité est justifié. En modifiant la définition du corps de texte, nous définition une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style corps de texte de ce document.
 
-[Modifs de styles enchaînements](https://owncloud.univ-lille3.fr/index.php/s/TPCCJtoBfHhMe85){: .lien_video }
-Nous voici maintenant avec un document dont la présentation a été entièrement revisitée. Nous allons voir que les modifications de styles permettent d'obtenir beaucoup de rigueur dans la présentation.
-Par exemple à la page 3 on constate qu'alors qu'il restait un peu de place en bas de la page, le paragraphe commence sur la page suivante ce qui évite des lignes seules en bas ou en haut de page que l'on appelle des veuves et des orphelines. Pour règler cela, j'ai modifié dans le style les paramètres d'enchainement, en demandant au logiciel de ne pas autoriser lors du calcul de la mise en page de ligne seules pour les paragraphes "corps de texte".
+[Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/kI6hWif4gDsv4K8){: .lien_video }
 
-Parallèlement on voit à la page 4 que le titre de niveau 2 aurait pu "tenir" en bas de la page précédente. Or, un titre en bas de page nuit à la lisibilité et il est préférable de ne jamais laisser un titre ou un sous-titre en bas de page. Pour cela, il suffit de choisir dans la section enchainement "solidaire avec le paragraphe suivant".
-Ces techniques appliquées à tous les niveaux de titre vous assure une mise en page de grande qualité sans avoir à vérifier chacun des titres.
+Des règles de mise en forme s'appliquent aussi sur les caractères comme pour les accentuations, accentuations fortes.
 
+[Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/dcO61Qhqh41RmUr){: .lien_video }
+
+Parfois, certains éléments de structure sont propres à un certain type de document. Par exemple ici, nous avons des noms de logiciels. Déclarer ce nouvel élément de structure ajoute de la sémantique, du sens au document qui pourra être exploité par d'autres logiciels, mais facilitera également l'uniformisation de la présentation. 
+
+[Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/aEFqGSWX2Ju0748){: .lien_video }
+
+Bien sûr, la définition de nouvelles structures, donc de nouveaux style s'applique sur les caractères comme les paragraphes. Ici, ce morceau de code ne doit pas être justifié. Il peut être déclaré et mis en forme spécifiquement. Si d'autres parties de code apparaissent dans le document, il seront aussi déclarés comme tels et donc auront la même apparence. 
+
+[Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/FfzwjK9OgXBEdtp){: .lien_video }
+
+```activité
+Reproduire le document dont un pdf vous est donné ici. Aucune mise en forme directe n'est tolérée !
+{}
+```
 
 ## Vidéos 4 - Tables et numérotations 
 
@@ -137,11 +129,26 @@ La structure d'un document c'est aussi une structure en différentes pages. Une 
 Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro.
 [Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/2HVzcqYl75R1xYD){: .lien_video }
 
+```activité
+Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe des numéros et tables n'est autorisée!
+{}
+```
+
+
 ## Video 5 - métadonnées
 Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple les nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet,...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/DId9HvSbnxdG55x){: .lien_video }
 
 ## Vidéos avancées
+
+### Veuves, orphelines, enchaînements
+Nous voici maintenant avec un document dont la présentation a été entièrement revisitée. Nous allons voir que les modifications de styles permettent d'obtenir beaucoup de rigueur dans la présentation.
+Par exemple à la page 3 on constate qu'alors qu'il restait un peu de place en bas de la page, le paragraphe commence sur la page suivante ce qui évite des lignes seules en bas ou en haut de page que l'on appelle des veuves et des orphelines. Pour règler cela, j'ai modifié dans le style les paramètres d'enchaînement, en demandant au logiciel de ne pas autoriser lors du calcul de la mise en page de ligne seules pour les paragraphes "corps de texte".
+
+Parallèlement on voit à la page 4 que le titre de niveau 2 aurait pu "tenir" en bas de la page précédente. Or, un titre en bas de page nuit à la lisibilité et il est préférable de ne jamais laisser un titre ou un sous-titre en bas de page. Pour cela, il suffit de choisir dans la section enchaînement "solidaire avec le paragraphe suivant".
+Ces techniques appliquées à tous les niveaux de titre vous assure une mise en page de grande qualité sans avoir à vérifier chacun des titres.
+
+[Modifs de styles enchaînements](https://owncloud.univ-lille3.fr/index.php/s/TPCCJtoBfHhMe85){: .lien_video }
 
 ### Travail collaboratif
 Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. 
@@ -176,6 +183,17 @@ décompresser un fichier .odt
 
 ## Les restes... 
 
+[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
+
+Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
+Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
+Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
+Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
+Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
+
+
+
+
 ## Vidéo 1 - Saisie des éléments de base
 - débuter un document, page blanche sans styleur
 - saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
@@ -196,6 +214,29 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 - qu'on peut (dés)activer quand on le veut
 
 - enrigistrer (dossier / fichier / extension-format)
+
+## Avant de démarrer
+
+Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
+- `Microsoft Word` de la suite `Office`
+- `Writer` de la suite `LibreOffice`
+- `Writer` de la suite `OpenOffice`
+
+Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
+
+Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
+
+En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
+- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
+- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
+La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
+
+Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
+
+Nous avons choisi d'utiliser :
+- le format `.odt` pour l'enregistrement des fichiers
+- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
+1'45"
 
 
 
