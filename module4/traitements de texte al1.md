@@ -123,27 +123,25 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 - enrigistrer (dossier / fichier / extension-format)
 
 ## Vidéo 2 - structurer son document
-- reprendre à la fin de vidéo 1
-- ajouter une liste : Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphe dans le même élément élément de liste en utilisant la touche Retour arrière une seule fois en début de paragraphe. Deux appuis de retour arrière quittent la structure de liste. 
+ Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphe dans le même élément élément de liste en utilisant la touche Retour arrière une seule fois en début de paragraphe. Deux appuis de retour arrière quittent la structure de liste. 
 
-[Listes](https://owncloud.univ-lille3.fr/index.php/s/zE11LqwAfsHaxT6){: .lien_video }
+[Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/zE11LqwAfsHaxT6){: .lien_video }
 
-- faire apparaître le styleur. La touche F11, le menu Style/Style et formatage ou encore le tiroir de droite permettent d'afficher la liste des styles que nous interprétons ici comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments structure généraux de texte : paragraphes, caractères, cadres (flottants), pages ou listes. 
-[Styleur](https://owncloud.univ-lille3.fr/index.php/s/WjHVemdZlmkvDng){: .lien_video }
+La touche F11, le menu Style/Style et formatage ou encore le tiroir de droite permettent d'afficher la liste des styles que nous interprétons ici comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments structure généraux de texte : paragraphes, caractères, cadres (flottants), pages ou listes. 
+[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/WjHVemdZlmkvDng){: .lien_video }
 
-- ajouter quelques définitions de caractères avec accentuation et accentuation forte. On associe facilement un style à un élément, ici des caractères en les sélectionnant et cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
-[Style caractères](https://owncloud.univ-lille3.fr/index.php/s/8IbOv6sBSN60K2d){: .lien_video }
+On associe facilement un style à un élément, ici des caractères en les sélectionnant et cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
+[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/8IbOv6sBSN60K2d){: .lien_video }
 
-- Montrer l'affichage des caractères spéciaux
-- Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe. Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou spéciaux permet de savoir exactement ce qui a été saisi. On voit les espaces et les fins de paragraphe, on peut déceler des répétitions de ces symboles habituellement invisibles. On voit également la représentation des fins de ligne qui ne sont pas des fins de paragraphes dans cette partie de texte.
-[Caractères spéciaux](https://owncloud.univ-lille3.fr/index.php/s/ARsX7LtVhTFOeO2){: .lien_video }
+Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou spéciaux permet de savoir exactement ce qui a été saisi. On voit les espaces et les fins de paragraphe, on peut déceler des répétitions de ces symboles habituellement invisibles. On voit également la représentation des fins de ligne qui ne sont pas des fins de paragraphes dans cette partie de texte.
+[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/ARsX7LtVhTFOeO2){: .lien_video }
 
-- Montrer que le texte en note de bas de page est en style note de bas de page. Le logiciel réalise souvent des opérations pour vous aider à bien écrire votre document, comment par exemple ici dans le cas de l'insertion d'une note de bas de page. Le numéro est inséré automatiquement et sera adapté si d'autres notes sont ajoutées. Le style choisi pour la note sera adapté automatiquement.
-[Notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/8KZsw65hiQ6dFf2){: .lien_video }
+Le logiciel réalise souvent des opérations pour vous aider à bien écrire votre document, comment par exemple ici dans le cas de l'insertion d'une note de bas de page. Le numéro est inséré automatiquement et sera adapté si d'autres notes sont ajoutées. Le style choisi pour la note sera adapté automatiquement.
+[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/8KZsw65hiQ6dFf2){: .lien_video }
 
-- Montrer comment insérer des renvois aux textes et illustrations. Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez que la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soit même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents. 
-[Renvoi illustration](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
-[Renvoi repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
+Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez que la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soit même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents. 
+[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
+[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
 
 ## Vidéo 3 - Personnaliser les styles
 - reprendre à la fin de vidéo 2
@@ -151,16 +149,16 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 - modifier les autres styles, espaces avant/après, couleur, interligne, alignement, enchaînements (veuves/orphelines et solidaires avec suivants)
 - enregistrer
 
-## Vidéo 4 - insertions
-- insertion d'image
-- notes de bas de page
-- insertion de lien
-- pied de page / entête
-- numeros de page / champs
+## Vidéos 4 - TOC
 
-## Vidéos 5 - TOC
-- numerotation automatique des chapitres
-- génération d'une TOC
+La numérotation des chapitres est également une opération réalisée automatiquement par le traitement de textes. Il ne faut pas saisir soi-même ces numéros. L'outil de numérotation des chapitres le fait pour vous. Il faut indiquer quelles sont les noms des styles (structures) identifiant les titres. Bien sûr par défaut ce sont les titre 1, titre 2, etc... Ensuite on choisit le style de numérotation et si on doit faire apparaître la hiérarchie dans le numéro en affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres pour comprendre les impacts sur la présentation de ces numéros.
+[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/KRVOxjyF7Z901XZ){: .lien_video }
+
+La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, une liste de pages d'index, de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux quel sera le style de la page suivante et le début de sa numérotation. 
+[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/3vbyItBq0UC6DWc){: .lien_video }
+
+Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro. 
+[Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/2HVzcqYl75R1xYD){: .lien_video }
 
 ## Video 6 - métadonnées
 - trouver les stats
@@ -185,6 +183,10 @@ décompresser un fichier .odt
 - présenter le bouton de liste ((dés)activer puces)
 - détailler puce + retrait
 - un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
+
+- insertion d'image
+- pied de page / entête
+- numeros de page / champs
 
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
