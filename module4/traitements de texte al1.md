@@ -135,8 +135,14 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 
 - Montrer l'affichage des caractères spéciaux
 - Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe.
+[Caractères spéciaux](https://owncloud.univ-lille3.fr/index.php/s/ARsX7LtVhTFOeO2){: .lien_video }
+
 - Montrer que le texte en note de bas de page est en style note de bas de page
+[Notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/8KZsw65hiQ6dFf2){: .lien_video }
+
 - Montrer comment insérer des renvois aux textes et illustrations. 
+[Renvoi illustration](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
+[Renvoi repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
 
 ## Vidéo 3 - Personnaliser les styles
 - reprendre à la fin de vidéo 2
