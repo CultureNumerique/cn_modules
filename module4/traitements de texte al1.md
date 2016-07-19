@@ -84,7 +84,7 @@ Repérer les composants du texte permet de comprendre la structure d'un document
 Reproduire l'exemple en vidéo.
 {
 #### On saisit le titre, puis on le déclare comme titre principal.  On saisit le sous titre, puis le titre de niveau 1,  et les premières phrases du premier paragraphe. On remarque que le paragraphe suivant est automatiquement en corps de texte. On remarque aussi l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots ont été identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a également la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. Dans un premier temps, nous laissons la présentation par défaut. 
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable.}
+L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable, elle a inséré un symbole spécifique pour les points de suspension.}
 ```
 
 ### Respecter des règles de base
@@ -99,7 +99,7 @@ Voici 5 règles fondamentales :
 
 ## Vidéo 1 - Saisie des éléments de base
 - débuter un document, page blanche sans styleur
-- saisir au kilomètre, uniquement les fins de paragraphes
+- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
 - énoncer (voix off) les niveaux de titre sans mise en forme
 - faire des fautes, utiliser le correcteur
 - titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
@@ -121,18 +121,12 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 
 ## Vidéo 2 - structurer son document
 - reprendre à la fin de vidéo 1
-- "On veut maintenant structurer le document"
-- repérer la liste déroulante des styles et faire apparaître le styleur
-- commencer à styler
-"il suffit que le curseur soit placé dans un paragraphe pour que le style s'applique"
-- montrer l'équivalence entre les deux outils
-- présenter le bouton de liste ((dés)activer puces)
-- détailler puce + retrait
-> attention placer le texte en "corps de texte" et ne pas laisser style par défaut car tous les styles héritent de style par défaut
-
-- présentation de la création de liste pendant la frappe
-(* , - , 1), a), ...) Insister sur l'automatisation  
-- enregistrer
+- faire apparaître le styleur
+- ajouter quelques définitions de caractères avec accentuation et accentuation forte
+- Montrer l'affichage des caractères spéciaux
+- Montrer le morceau de code avec les retours à la ligne sans changement de paragraphe.
+- Montrer que le texte en note de bas de page est en style note de bas de page
+- Montrer comment insérer des renvois aux textes et illustrations. 
 
 ## Vidéo 3 - Personnaliser les styles
 - reprendre à la fin de vidéo 2
@@ -166,5 +160,21 @@ comparer les formats odt et docx
 décompresser un fichier .odt
 ```
 
+
+## Vidéos avancées
+
+- présentation de la création de liste pendant la frappe
+(* , - , 1), a), ...) Insister sur l'automatisation
+- présenter le bouton de liste ((dés)activer puces)
+- détailler puce + retrait
+- un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
+
+
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
 [^2]: l'espace en typographie est un nom féminin. 
+
+
+
+
+
+
