@@ -27,10 +27,10 @@ Les dispositifs techniques influencent la saisie. Le clavier reste le plus répa
 
 L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
 
-Les cours du  module précédent ont introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme titre principal.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement en corps de texte. 
+Les cours du  module précédent ont introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement dans le style  `corps de texte`. 
 
 Remarquez l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots sont identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a aussi la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
+L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule la première lettre du mot juste après le point, elle a inséré automatiquement une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
 
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/OKse8csySXs2GKL){: .lien_video }
 
@@ -125,7 +125,7 @@ Reproduire le document dont un pdf vous est donné ici. Aucune mise en forme dir
 La numérotation des chapitres est également une opération réalisée automatiquement par le traitement de textes. Il ne faut pas saisir soi-même ces numéros. L'outil de numérotation des chapitres le fait pour vous. Il faut indiquer quelles sont les noms des styles (structures) identifiant les titres. Bien sûr par défaut ce sont les titre 1, titre 2, etc... Ensuite on choisit le style de numérotation et si on doit faire apparaître la hiérarchie dans le numéro en affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres pour comprendre les impacts sur la présentation de ces numéros.
 [Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/KRVOxjyF7Z901XZ){: .lien_video }
 
-La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, une liste de pages d'index, de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux quel sera le style de la page suivante et le début de sa numérotation.
+La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, des pages d'index ou de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux, puis définir quel sera le style de la page suivante et le début de sa numérotation.
 [Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/3vbyItBq0UC6DWc){: .lien_video }
 
 Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro.
@@ -138,7 +138,7 @@ Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe de
 
 
 ## Video 5 - métadonnées
-Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple les nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet,...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
+Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple le nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet, l'auteur...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/DId9HvSbnxdG55x){: .lien_video }
 
 ## Vidéos avancées
