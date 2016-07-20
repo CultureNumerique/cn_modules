@@ -85,6 +85,10 @@ Un autre type de numéros ou textes gérés automatiquement par le logiciel sont
 [Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
 [Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
 
+Finissons par un examen de la structure arborescente de ce document. La manipulation de cette structure permet de déplacer des sections entières ou de réorganiser le plan. 
+[Réorganiser le plan](){: .lien_video }
+
+
 ### Point d'étape : Respecter des règles de base
 Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
 Voici 5 règles fondamentales :
@@ -100,7 +104,7 @@ Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des él
 
 ## Vidéo 3 - Personnaliser les styles
 
-Un document de qualité est justifié. En modifiant la définition du corps de texte, nous définition une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style corps de texte de ce document.
+Un document de qualité est justifié et une césure des mots est appliquée. En modifiant la définition du corps de texte, nous définition une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style corps de texte de ce document.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/kI6hWif4gDsv4K8){: .lien_video }
 
@@ -270,6 +274,10 @@ Interroger et traiter des tables, c'est par exemple :
 
 C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
 
+
+
+
+
 ## Dans une cellule 
 
 Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
@@ -292,6 +300,11 @@ Faire un traitement c'est
 
 La traduction dans le tableur posera les questions suivantes :  Quelles sont les cellules, les lignes ou les colonnes qui vont  contenir des valeurs en entrée ?  Quelles sont les cellules qui vont contenir des résultats de calcul ?  Comment les organiser ? Comment écrire ces calculs ?
 
+### Analyser un problème 
+Dans l'exemple suivant, fictif, en vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
+
+
+### Décrire les calculs
 
 Le calcul va faire référence à des données en entrée : On utilise des *références* aux cellules. Les références des cellules sont composées par les numéros de ligne et de colonne. Exemple : B7 la cellule en colonne B et ligne 7. Les références peuvent être *relatives* ou *absolues*. Les notions relative/absolue  n'ont de sens que lorsqu'on *copie* une cellule contenant une formule dans une autre cellule. 
 
