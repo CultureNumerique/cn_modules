@@ -1,0 +1,1220 @@
+#+OPTIONS: h:3 toc:nil ':t 
+#+LANGUAGE: fr
+#+STARTUP: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation,smaller]
+#+LATEX_HEADER:  \usepackage{lmodern}\usepackage[french]{babel} 
+
+#+BEAMER_HEADER:\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Plan}\tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide,subsubsectionstyle=hide]\end{frame}}\AtBeginSubsection[]{\begin{frame}<beamer>\frametitle{Plan}\tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide,subsubsectionstyle=hide]\end{frame}}
+
+#+BEAMER_THEME: Boadilla
+#+BEAMER_HEADER: \frenchspacing\hypersetup{colorlinks = true}
+#+BEAMER_HEADER: %\setbeameroption{show notes}
+
+#+TITLE: Notes de cours
+#+AUTHOR: 
+
+* Les espaces de stockage
+** Sauvegarder son travail
+*** Principes
+Un ordinateur utilise plusieurs types de mémoire pour stocker l'information numérique
+**** Note : 							     :B_note:
+    :PROPERTIES:
+    :BEAMER_env: note
+    :END:
+Les quizz de C2i font la différence entre enregistrement et sauvegarde. Sauvegarde est pris sous le sens d'archivage. Mais c'est désuet, d'autant plus que les usages font aussi de l'archive en informatique un terme qui s'éloigne aujourd'hui du sens (archivistique) du documentaliste ou de l'historien. 
+
+**** la mémoire de travail 
+- Elle est utilisée quand la machine traite les données, calcule, ...
+- C'est son contenu que vous voyez dans les fenêtre ouvertes des applications (traitement de texte, tableur, navigateur,...)
+- Elle est volatile : elle disparaît si la machine s'éteint, si le logiciel plante.
+
+**** la mémoire de masse  
+- Elle est utilisée pour conserver l'information si la machine s'éteint, si le logiciel plante.
+- L'opération de /sauvegarde/ (enregistrer/enregistrer sous/exporter sous...) stocke
+  l'information dans la mémoire de masse  dans des *fichiers*
+
+*** Où sauvegarder
+La mémoire de masse  peut être :
+- les disques durs (internes ou externes)
+- les clefs USB
+- accessible localement (branché directement à l'ordinateur) ou sur un réseau 
+
+**** Exemple 
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+- les fichiers stockés dans votre espace personnel (Bureau,
+  Documents,...) dans les salles machines de l'université sont
+  stockées dans le réseau, sur un /serveur de fichiers/
+- ils ne sont pas stockés sur l'ordinateur que vous utilisez 
+- on peut alors y avoir accès quelle que soit la machine utilisée 
+
+** Stratégies de sauvegarde
+*** Besoins et moyens
+On peut demander à la sauvegarde qu'elle permette
+- de conserver temporairement pour reprendre plus tard (une copie de travail)
+- de conserver définitivement : c'est une *archive* (au sens historique de l'archivistique!)
+- de mémoriser et estampiller une *version*
+- de retrouver son travail sur une autre machine (*nomadisme*)
+- d'échanger avec d'autres (*partager*)
+- de relire et écrire très rapidement les informations...
+- d'utiliser peu d'espace (voir la *compression*) 
+- de travailler avec un autre logiciel sur la même information (*exporter* ou *interopérer*) 
+
+Alors différents moyens ou stratégies sont mis en œuvre. 
+
+*** Nomadisme,  échange et partage
+
+- Clé USB (attention à ne pas l'oublier..)
+- mail à soi-même
+- le "cloud" : *Lille 3 met à disposition une solution de cloud : owncloud*
+
+**** Owncloud sur l'ENT
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+
+- Visible de l'extérieur de la fac
+- permet le partage de documents
+- permet de conserver plusieurs versions 
+
+* Les formats de fichier et les logiciels
+
+** Formats de fichiers
+
+*** Fichiers 
+
+- Un fichier contient une représentation numérique d'un ensemble d'informations. Il porte 
+  - un *nom*, 
+  - une partie de ce nom est appelé l'*extension* (partie après le dernier .)
+  - des attributs (son propriétaire, peut être réécrit ou pas etc...)
+- C'est donc comme une boîte qui *contient* des données numériques.
+- Les fichiers sont organisés dans des dossiers
+- Les dossiers contiennent des fichiers ou d'autres dossiers
+- L'ensemble des dossiers forme une *arborescence* 
+
+*** Formats
+- La *nature* des informations rangées dans les fichiers est très variée
+- La *façon* avec laquelle les données numériques sont rangées dans les fichiers est aussi très variée
+- Nature et façon répondent à des *choix* dépendant de *besoins spécifiques*.
+
+**** Exemple							  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+- La nature : image ou texte ou les 2, image formée de dessins géométriques ou de photographies,...
+- La façon : images et texte entrelacés ou séparés, etc... sachant que finalement il faut associer un nombre (binaire) à chaque donnée (numérisation).  *C'est complexe*!
+
+*** Format ouvert ou propriétaire
+
+- Cacher ou dévoiler la nature et la façon de représenter ces données a un fort impact (économique et sociétal)
+- Si tous ces choix sont ouverts, décrits et disponibles pour tous le format est *ouvert*
+- Si tous ces choix sont protégés par des brevets et non disponibles, le format est *propriétaire*.
+
+** Logiciels 
+
+*** Formats et logiciels 
+- formats et logiciels sont très liés 
+- les formats sont utilisés par les logiciels pour lire et écrire les données dans les fichiers.
+- un format propriétaire permet une exclusivité, de forcer à utiliser un logiciel, de protéger un marché
+- un format ouvert permet le développement de nombreux logiciels, de les faire coopérer (*interopérer*).
+
+**** Exemple							  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+Le format HTML (ouvert) des pages internet a permis le développement de nombreux navigateurs mais aussi des moteurs de recherche. 
+
+*** Logiciels libres ou non
+
+- Un logiciel effectue des *traitements* sur une représentation  numérique d'informations 
+- La façon avec laquelle ces traitements sont effectués est décrite dans un *code* ou *programme* informatique.
+- Ce *code* peut être dévoilé, librement distribué ou protégé par brevet et propriétaire
+
+**** Logiciel libre  : quelles libertés ? La gratuité est une conséquence :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+
+- la liberté d'utiliser le logiciel, pour quelque usage que ce soit (liberté 0)
+- la liberté d'étudier le fonctionnement du programme, et de l'adapter à vos propres besoins (liberté 1). 
+- la liberté de redistribuer des copies de façon à pouvoir aider votre voisin (liberté 2)
+- la liberté d'améliorer le programme, et de diffuser vos améliorations au public, de façon à ce que l'ensemble de la communauté en tire avantage (liberté 3). L'accès au code source est une condition pour tout ceci
+
+** Conclusion
+*** Remarques 
+- L'extension du nom de fichier donne souvent une indication sur le format, donc le contenu (Mais cette indication n'est pas une garantie)
+- Un fichier peut être aussi transmis par le réseau et n'être jamais enregistré dans une mémoire de masse. 
+- Le code ou programme informatique est aussi une donnée qui peut être stockée dans un fichier!
+- Des traitements peuvent donc être inclus dans un fichier et "ouvrir" le fichier peut contribuer à exécuter ces traitements : c'est la porte ouverte aux virus! qui peuvent être transmis aussi par les réseaux!
+
+*** 
+**** La liberté c'est important !
+- Préférez les formats ouverts
+
+* Compression, archivage
+
+** Compression et archivage 
+
+*** Archive et archive 
+**** Column 1					      :BMCOL:B_ignoreheading:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
+
+- Dans les début de l'informatique, archiver c'était 
+  - écrire *un ensemble de fichiers* sur une bande magnétique (*un fichier*)
+  - écrire pour une sauvegarde pérenne
+- On la stocke en lieu sûr, on ne la modifie pas, la relit presque jamais
+- Puisque c'est pour archiver, on peut prendre son temps et faire en sorte d'occuper le moins de place possible (*compresser*)
+
+
+**** Column 2					      :BMCOL:B_ignoreheading:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :END:
+     [[./cosmos.jpg]]
+
+
+*** Aujourd'hui, les usages changent
+
+- Les deux sens sont conservés et distingués :
+  1. sauvegarde pérenne, stockage à l'abri du temps en lieu
+     sûr,... Pratique toujours d'actualité dans les centres d'archive.
+  2. combiner plusieurs fichiers et dossiers  dans 1 fichier unique, compressé
+- *Intérêt de 2* :  un seul fichier est plus facile à échanger et transporter.
+- Les ordinateurs sont puissants et compressent et décompressent rapidement.
+
+**** Exemple							  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+Vous échangez 20 photographies. Vous les placez dans un dossier. Vous en faites une archive. Vous diffusez cette archive à vos correspondants.
+
+*** Plusieurs fichiers dans 1 fichier
+
+- Un fichier d'archive contient :
+  - des dossiers
+  - d'autres fichiers 
+- On peut réaliser une compression pour que ce (gros) fichier prenne moins de place
+- Les formats de tels fichiers sont 
+  - zip : le plus courant (fichier zippé), format ouvert
+  - 7z : format ouvert
+  - tgz : format ouvert
+  - rar : n'est pas un format ouvert 
+
+(un format ouvert peut être lu avec de nombreux logiciels, les autres nécessitent un logiciel spécifique, parfois payant, pas disponible sur tous les ordinateurs)
+
+*** Attention à la "transparence"
+
+- Les interfaces utilisateurs ouvrent le logiciel de gestion des archives en cliquant juste sur le fichier (zip ou autre)
+- la présentation est similaire à l'exploration classique des fichiers
+- La similitude peut piéger (*et va vous piéger*) : vous pouvez manipuler les données directement mais *perdre* vos modifications. 
+
+**** Méthode de travail 
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+
+- Extraire le fichier d'archive (éventuellement le supprimer ensuite): /utiliser le menu du bouton droit de la souris!/
+- Travailler dans le dossier obtenu : faire ses modifications
+- Re-créer ensuite un fichier d'archive si nécessaire 
+
+*** Remarques finales
+
+- on peut utiliser les logiciels d'archive juste pour compresser
+- certains documents sont des archives cachées : =docx=, =odt=, =jpg=
+- compresser un fichier déjà compressé n'apporte rien 
+- Remarque : le sujet de TD est ancien et ne correspond plus aux logiciels présents sur les ordinateurs à Lille 3. Tant mieux !!! Si vous a avez compris vous devriez être capable de faire la correspondance entre anciens noms et nouveaux.
+
+** À retenir
+
+*** N'oubliez pas
+
+- Les besoins de stockage sont variés.  
+- Les espaces de stockages sont multiples.
+- Il faut en connaître les caractéristiques pour choisir le moyen le plus adapté à chaque besoin
+- Conseil : dans le cadre du cours, il faut absolument télécharger les
+  archives, extraire leur contenu avant de travailler sur les fichiers
+  contenus dans ces archives.
+
+** Pour le prochain TD 
+
+*** À faire
+
+- Voir le cours moodle
+- Refaire ou terminer les exercice
+- Regarder les cours de [[http://culturenumerique.univ-lille3][culture numérique]].
+- S'informer/se former sur les domaines D1.2, D2.1 et D3.5
+
+
+
+
+* Présentations 
+
+** Présentation assistée par ordinateur
+
+*** Principes
+
+**** Pourquoi faire ? 
+- Sert de support à une présentation orale
+- Support à destination du public et non à destination du présentateur
+- Parfois détourné pour faire des posters...
+**** Approches et outils 
+- de type diapositives : libreoffice impress, S5, LaTeX Beamer, powerpoint
+- de type dynamique : prezi, [[http://sozi.baierouge.fr/pages/10-about.html][Sozi]], [[http://lab.hakim.se/reveal-js/#/][Reveal.js]], ...
+
+**** Note:							     :B_note:
+     :PROPERTIES:
+     :BEAMER_env: note
+     :END:
+
+C'est une partie difficile car le logiciel n'est pas très agréable. La présentation de ce logiciel doit permettre de mettre en place le principe de *séparation entre contenu structure et présentation*. 
+
+Il faut se contenter de l'essentiel, faire passer les messages
+- réfléchir avant d'agir : avoir son plan etc...
+- faire deux fois la même chose = mauvaise pratique
+- éviter la mise en forme directe
+- ...
+
+*** Faire et ne pas faire
+
+**** Oui					       :B_exampleblock:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: exampleblock
+     :END:
+- Répéter oralement, s'entraîner
+- Une idée par diapositive
+- Un début, une fin
+- Regarder le public 
+
+**** Non						 :B_alertblock:BMCOL:
+     :PROPERTIES:
+     :BEAMER_col: 0.45
+     :BEAMER_env: alertblock
+     :END:
+- Ne pas mettre trop de textes
+- Ne pas lire
+- Ne pas surcharger en animations
+- Ne pas regarder son écran 
+**** Les animations					       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+  - L'animation *n'est pas la démonstration de vos capacités de maîtrise du logiciel*
+  - L'animation est un *moyen* de capturer l'attention à un instant voulu
+
+*** Fonctionnalités des outils de diapositives
+
+**** Pour la présentation
+
+ - notes (attention à la lecture!)
+ - différents écrans (notes et diapos)
+ - animations 
+ - chronométrage
+
+**** Pour la conception
+ - masques 
+ - plans 
+ - styles 
+
+** La démarche
+
+*** Comment procéder
+
+- Réfléchir aux messages 
+- Avoir un plan
+  - il existe un outil de créations de diapositives à partir d'un plan.
+- Éviter la mise en forme directe
+- Utiliser les styles
+  - permet de garantir l'uniformité
+  - permet de réutiliser les diapositives
+  - permet de changer les thèmes de présentation facilement
+- Préférer les polices de caractères standard
+- Ne pas multiplier les styles et les polices.
+
+*** La roue de secours
+
+- toujours penser à produire une version PDF
+- le PDF inclut quelques animations : pauses, transitions, ...
+- le PDF permet de visualiser des documents multimédia
+- c'est souvent suffisant!
+- autre roue de secours : le HTML. 
+
+**** Pourquoi une roue de secours ?			       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+- Certains ordinateurs ne disposent pas du logiciel (powerpoint ou impress) dans la bonne version. 
+- Les polices de caractères utilisées ne sont pas disponibles 
+
+*** Quoi et pourquoi 
+
+**** Le mode masque 
+
+- permet de gérer les styles (couleur des titres, des sous-titres, éléments de liste de niveau 1,2,...)
+- permet de positionner les informations dans les pieds de page (numéros de diapos, date etc...)
+- permet d'insérer des éléments récurrents : logos, images de fond
+
+**** Le mode plan 
+
+- permet de structurer la présentation 
+- Attention : uniquement certains blocs sont présentés dans impress
+
+*** Le poids des images
+
+- Attention au poids des images, surtout celles en fond de diapo 
+- Réduire la résolution à une valeur adaptée à un vidéo projecteur (1280x1024)
+  - Vous pouvez charger l'image dans libreoffice draw et la compresser.
+
+*** À Faire chez soi : noté sur 5 points
+
+- Choisissez un sport pour thème et concevez une présentation d'au moins 5 diapos.
+- Nous vous évaluons une première fois, vous avez ensuite 2 semaines pour corriger. 
+
+**** Critères						       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+
++ Utilisation de masque de diapos, des mises en page standard.
++ Utilisation pertinente des transitions et des animations.
++ Choix cohérent entre la couleur de fond et la couleur du texte.
++ Bonne gestion des images insérées (position par rapport au texte, taille, légende ... ).
++ Taille des images adaptée.
++ Bonne lisibilité générale.
++ Présence d'une diapositive de début et d'une diapositive de fin.
++ Version PDF disponible.
+
+
+
+**** Notes :							     :B_note:
+     :PROPERTIES:
+     :BEAMER_env: note
+     :END:
+L'idée ici est de leur permettre d'avoir 5 points facilement. S'ils sont sérieux. Peu de critère et d'effort. Faites un effort et faites une pré-correction pour souligner les erreurs et laissez l'opportunité de corriger ensuite. 
+
+* Traitement de textes
+
+** Qu'est-ce qu'un document ? 
+*** Notes : 							     :B_note:
+    :PROPERTIES:
+    :BEAMER_env: note
+    :END:
+
+Répéter les principes introduits pour la présentation : 
+- Il y a plus que des mots dans un texte. 
+- Séparation des informations de structure, contenu présentation et méta-données.
+- On réfléchit avant d'agir : ici quel type de document ? quel plan ? quelles structures ? quelles informations ? ...
+- On interagit avec la machine par un langage formalisé : dans le cas du traitement de textes, c'est basé sur des interactions graphiques (en opposition à des langages de description, dans un fichier source...)
+- la compréhension du langage d'interaction permet de faire un bon document : exemple = ne pas utiliser entrée pour aérer les paragraphes....
+- on évite la mise en forme directe
+- on ne répète pas 2 fois la même chose, on factorise dans les styles, les modèles, ....
+- on ne saisit pas 2 fois la même info : titre, auteur,
+- on ne met pas en dur des choses variables : références, numéros de page, table des matières, bibliographies,...
+
+
+*** Plusieurs vues, plusieurs approches 
+1. Une suite de caractères : *vue séquentielle*
+2. Un titre, un résumé, intro, thèse anti-thèse, synthèse,
+   conclusion,... *vue structurée* 
+3. Des sections, sous-sections, sous-sous-sections, des listes,
+   sous-listes etc... , *vue hiérarchique, arborescente*
+4. Un auteur, une date de création, des dates de
+   modifications,... *vue qualifiée*
+5. Des pages, des colonnes, des lignes, du gras, de l'italique, des
+   encadrés, ... *vue de l'apparence, la présentation* 
+
+*** Une version numérique
+
+Toutes ces informations sont importantes. On peut les rassembler sous
+4 groupes
+1. *Le contenu* : la suite de caractères
+2. *La structure* : identification des paragraphes, des titres, des
+   sections, etc... et identification de l'organisation de ces
+   éléments.
+3. *La présentation* : Quelle est leur apparence graphique.
+4. *La vue qualifiée* : Quelles sont les informations à propos du document : auteur, titre, résumé, date de création,...
+
+*** De l'importance de chacun
+Contenu, structure et présentation sont importants pour diffuser le
+message porté par le document mais : 
+- le contenu et la structure définissent le document.
+- la présentation peut être changée : pensez à une version en braille,
+  une version pour smartphone, une version à imprimer, ...
+- la vue qualifiée est importante pour des traitements sur des ensembles de documents (ranger, rechercher, ...)
+
+*** Comment (d)écrire un document 
+
+**** Le document est décrit... 				       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+
+ #+BEGIN_CENTER
+  par un *langage* de description !
+ #+END_CENTER
+
+
+**** basé sur des commandes graphiques
+ - des clics dans les menus,
+ - des appuis de touches, etc...
+ - Exemples : libreoffice, word, ...
+
+**** basé sur des commandes textuelles 
+ - un texte *source* décrit le document 
+ - un programme *calcule* le rendu graphique 
+ - exemples : HTML, LaTeX, 
+
+ #+BEGIN_CENTER
+ Parfois des langages graphiques permettent de produire un document source...
+ #+END_CENTER
+
+** Traitement de textes et éditeur de textes
+
+*** Traitement de textes 
+
+Un traitement de textes permet de saisir ces quatre types
+d'information. Il permet aussi d'appliquer des fonctionnalités de haut
+niveau sur ces données (contenu, structure et présentation).
+- Remplacer les a par des e
+- Déclarer un titre
+- Mettre un mot en gras
+- Générer un index, une bilbliographie, une table des matières
+- Réordonner les sections,
+- changer la présentation de tous les titres
+- ...
+
+*** Éditeur de textes
+Un éditeur de texte permet de saisir du contenu uniquement. Parfois ce
+contenu peut être un texte qui *décrit* un document (Cas du HTML,
+LaTeX, ...).
+
+**** Petite démonstration					  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+  Essayez de saisir cet exemple dans un éditeur de textes et de l'enregistrer dans votre espace personnel sous le nom =pageWeb.html= puis de l'ouvrir avec le navigateur.
+
+  #+BEGIN_EXAMPLE
+  <html>
+    <head><title>Bonjour</title></head>
+    <body>
+      <h1>Mon premier document</h1>
+      <p>Bonjour le web</p>
+    </body>
+    </html>
+  #+END_EXAMPLE
+
+** Méthodologie avec un traitement de textes
+
+*** Comment procéder ?
+Principalement, la méthodologie la plus efficace est de faire les
+choses dans l'ordre suivant :
+1. Ajouter du contenu
+2. Effectuer des déclarations de structure,
+3. Effectuer la présentation en se basant sur la structure.
+
+*** Déclaration de la structure
+- La touche espace permet de *séparer* les mots, comme certaines
+  touches de ponctuation. Le mot est l'un des éléments structurels de base.
+- La touche entrée permet de *séparer* des paragraphes.
+- Les titres, listes et autres éléments de structure sont déclarés à
+  l'aide des styles. C'est là un abus de langage : le style et la
+  structure devraient être distingués.
+
+#+BEGIN_CENTER
+#+ATTR_LATEX: :width 2cm 
+#+CAPTION: Liste des structures de base.
+[[file:styles.png]]
+
+#+END_CENTER 
+
+*** Erreurs communes
+
+1. *Ne pas aligner/décaler des parties de textes avec des espace* 
+   - Pourquoi ? le changement de police, de taille etc vont remettre
+     en cause l'alignement ; le traitement de textes peut calculer des
+     espacements en fonction de l'environnement ; ...
+   - Comment ? il faut modifier le format du paragraphe, utiliser des
+     tabulations
+2. *Ne pas aérer les paragraphes ou titres avec des changement de
+   paragraphe (retour à la ligne ou touche  entrée)*
+   - Pourquoi ? Vous risquez de violer le traitement des veuves (titre
+     seul en bas de page) et orphelines (ligne seule en haut de
+     page) ; vous risquez de ne plus commencer les page en haut ; vous
+     avez sans doute besoin de reproduire cela à chaque titre et vous
+     perdez votre temps.
+   - Comment :  il faut modifier le format du paragraphe, utiliser les
+     espacements avant et après.
+3. *Bien suivre les règles de typographie*
+
+** Interopérabilité
+
+*** Pourquoi ? 
+
+- L'information contenue dans un document doit pouvoir être réutilisée
+  dans d'autres contextes. 
+  - Exemple : le moteur de recherche doit avoir accès au contenu des
+    documents sur internet.
+- Elle doit être accessible à tous, même s'ils n'ont pas le logiciel
+  qui a servi à le composer. 
+- Cela peut porter sur le contenu autant que sur la structure,...
+  - Exemple : extraire des titres, tables de matières ou des
+    bibliographies, etc...
+
+*** Différents formats pour différents usages
+- Le format du traitement de textes pour le manipuler (=odt= (Open ou
+  Libre office) ; =doc= (word), =docx= (word plus ouvert))
+- Le format PDF pour le distribuer, dans une version à imprimer
+- Le format HTML pour le diffuser sur Internet,...
+- Le texte (.txt) pour le contenu uniquement. 
+
+*** Les outils
+
+Les formats texte, ou les formats qui *décrivent* les documents comme
+HTML (ou XML), wiki ou LaTeX se manipulent avec un simple *éditeur de
+textes*. 
+- notepad, notepad++
+- sublime
+- emacs
+- ...
+
+** Petit parcours des traitements de textes
+*** Notes :							     :B_note:
+    :PROPERTIES:
+    :BEAMER_env: note
+    :END:
+C'est un parcours assez long qui déborde du temps disponible, mais aussi un support  qui permet de savoir ce qu'on peut faire. On ne peut pas tout dire, mais ils peuvent tout lire! Vous pouvez faire un passage rapide en quelques minutes. J'envisage des screencasts. 
+
+Manque les aspects bibliographiques. Il faudrait un cours en plus sur Zotero et LibreOffice. 
+*** La vue contenu
+- vous saisissez juste le contenu avec le clavier, mais : 
+- oubliez la mise en forme,
+- respectez le sens des touches entrée, espace, tabulation,
+- respectez la typographie.
+
+*** La vue structurée arborescente
+
+Comment agissez-vous sur la structure ? 
+
+- *Pour les définir* :
+  - Malheureusement dans *Format/Style et formatage* ;-( 
+  - L'onglet *Général* de la fenêtre de modification de style : notamment le /style de suite/. 
+- *Pour les ajouter au document*
+  - Par les listes
+  - Dans le menu *Insertion* (saut/section/...)
+- *Pour les exploiter*
+  - Menu *Affichage/Navigateur* permet de voir les éléments structurels prédéfinis et de les manipuler.
+  - L'insertion de tables et index
+
+
+*** Quelles unités structurelles ? 			    
+
+Les définitions de structure peuvent porter sur :
+- des parties qui impliquent une rupture de page : comme par exemple une page de titre, une préface, une table des matières, un index, ... Ces parties s'affichent dans un *flux de pages*
+- des parties qui impliquent un changement de paragraphe : une définition, une citation, ... Ces parties s'affichent dans un *flux de paragraphes*
+- des parties qui impliquent un changement de mot : un mot en exergue, en exemple, en accentuation, un mot technique,... Ces parties s'affichent dans un *flux de caractères*
+- des parties comme des illustrations, tables ou tableaux, qui ne s'inscrivent pas dans un flux de lecture continu : on parle de parties *flottantes* (voir l'onglet /adaptation/ dans la définition du style)
+- À ces dernières les traitements de texte aussi des parties qui s'affichent dans un *flux de liste*
+
+ 
+#+BEGIN_CENTER
+*On retrouve ces définitions dans les différents types de style par exemple*
+#+END_CENTER
+
+**** Note							     :B_note:
+     :PROPERTIES:
+     :BEAMER_env: note
+     :END:
+Les flux c'est la liaison en types de structures et type de présentation visuelle. On retrouve ces flux dans html ou LaTeX de façon plus évidente (inline/block, mbox/vbox,  float,...) C'est évidemment également présent dans les traitements de texte, un peu caché... ou pas. 
+
+*** La vue de présentation
+
+Comment devez-vous agir sur la présentation ?
+
+- À beaucoup d'endroits, mais principalement dans *Format*
+- Évitez un maximum le formatage direct (un menu existe pour l'effacer !)
+- Réfléchissez globalement, en termes de *règles* de formatage
+- Rassemblez vos règles de présentation dans les styles. 
+- (les thèmes de word participent à vous inciter à réfléchir de la sorte).
+
+*** La vue qualifiée
+
+Comment utilisez-vous la vue qualifiée ?
+
+- Dans le menu *Fichier/propriétés* : titre, résumé, ...
+- Dans *Fichier/Options/Données d'identitié* : auteur, ...
+- Dans *Insertion/champs*
+
+** Les modèles
+*** Qu'est-ce qu'un modèle
+
+- Un document contenant 
+  - des styles particuliers (ou pas)
+  - du texte pré-rempli (ou pas)
+- permettant de créer facilement des documents de même
+  structure/présentation. 
+
+
+*** Créer un modèle
+- On crée un nouveau document
+- On y définit les styles qu'on veut, on met ou ne met pas de texte,
+  c'est selon l'utilisation.
+- On enregistre sous forme de modèle
+- Si on veut on doit pouvoir les regrouper dans un répertoire unique
+  pour faciliter leur utilisation
+
+*** Appliquer un modèle
+
+- Sur un document existant, il faut regarder dans la boîte des styles
+  et /charger les styles/ en cochant bien les cases que l'on veut
+  importer et si on veut écraser les styles existants
+- Sur un nouveau document, on crée un nouveau document à partir d'un
+  modèle: /Fichier-Nouveau-Modèles/
+
+** Les liens dans les documents
+*** Notions de liens
+
+- Faire des liens entre différentes entités
+- *Quelles entités ?* 
+- *Comment les identifier ?*
+- *Nature* de ces liens
+
+**** Renvois, inclusions,					  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+- Un *renvoi* vers une page, une citation, un élément d'index.
+- Une *inclusion* d'un autre document : image, figure, table
+
+*** Quelles entités ?
+
+- Partie d'un document : *lien interne* 
+  - Une section,
+  - une page,
+  - un élément de liste,
+  - *tout élément structurel !*
+- Partie d'un autre document : *lien externe*
+  - inclusion d'un autre document textuel,
+  - inclusion d'une table de tableur,
+  - inclusion d'une image, ...
+
+*** Comment les identifier ?
+- L'entité nécessite d'être identifiée pour établir un lien  vers celle-ci.
+- Les références sont ces identifiants. 
+
+**** Références internes 
+- Identification grâce à la structure (sections, figures, ...)
+  - Voir le navigateur de structure du traitement de textes. 
+- Identification grâce à des marques: 
+  - Voir les repères de texte du traitement de textes.
+
+**** Références externes
+- Un nom de fichier
+- Un chemin complet sur son ordinateur 
+- Un chemin à travers le réseau internet : une URL
+
+Note: vous pouvez voir apparaître un message du genre "ce document contient des références externes"...
+
+*** Nature des liens
+- Surtout important pour les liens externes. 
+**** Les liens peuvent être dynamiques
+- C'est aussi ce qu'on appelle des *documents composites*
+- Intérêts : 
+  - partager le document lié dans de nombreux documents
+  - changer le contenu du document lié met à jour le document qui l'inclut. 
+- Inconvénients
+  - quand on le transmet, on doit aussi transmettre les documents inclus
+
+**** Les liens peuvent être statiques
+- Une fois inclus, une *copie* est réalisée dans le document.
+
+** Modifications et révisions
+*** Dans un travail collaboratif
+
+- besoin de faire circuler un document entre plusieurs personnes
+- chaque personne apporte ses *modifications*
+- les modifications apportées sont *validées ou refusées* par le coordinateur
+- les différentes *versions* du document sont conservées.
+
+*** Outils intégrés dans le traitement de textes
+
+- Le traitement de texte permet d'enregistrer les modifications apportées
+  à un document : /édition-modification-enregistrer/
+- Il permet de valider ou refuser les modifications :
+  /édition-modification-accepter ou refuser/
+- Il permet /fichier-versions/
+  - d'enresgistrer des versions
+  - d'afficher des anciennes versions
+  - de comparer des versions 
+
+*** Autres outils
+
+- des outils externes aux traitements de textes et indépendants de
+  ceux-ci existent et sont plus puissants : GED/ECM systèmes de gestion de
+  documents d'entreprise.
+
+*Remarque*
+
+- les pratiques de numérotation  de noms[fn:2] de fichier de document sont
+  primitives, peu fonctionnelles mais toujours très utilisées (car peu
+  savent se servir des outils modernes de suivi de versions !)
+** Les documents maîtres
+
+*** Qu'est-ce qu'un document maître ?
+
+- Un document décomposé en plusieurs sous-documents.
+- Un document maître comprend 
+  - des liens vers d'autres documents,
+  - des tables et indexes et
+  - quelques parties de texte. 
+- C'est utile pour :
+  - les gros documents (thèse, livre, grands mémoires) ou encore
+  - les documents écrits à plusieurs (chacun responsable d'un chapitre)
+
+*** Quelques principes
+
+- Les styles du document maître s'appliquent sur les documents liés.
+- Les styles des documents liés sont écrasés, mais pas dans les
+  documents d'origine
+- Les styles nouveaux des documents liés sont inclus dans le document maître.
+
+- *Avantage* : uniformisation  obtenue /gratuitement/
+
+*** Remarque(s) en vrac
+
+- Si on crée un document maître en incluant des fichiers existants,
+  alors le style du document maître est celui du premier document
+  inclus.
+- Il faut /actualiser/ le document maître pour faire apparaître les
+  modifications faites dans les sous-documents.
+
+
+** Bibliographies						   :noexport:
+*TBD*
+*** Bases de données bibliographiques
+*** Zotero et LibreOffice
+
+* Tableur
+** Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
+*** Un outil pour quoi faire ?
+- *Représenter* pour *interroger* et *traiter* des données.
+- Et *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ...
+
+**** Représenter une relation
+- Les données sont représentées dans une structure de *table* 
+- notions de *ligne* et de *colonne* et de *cellule*,
+- uniformité par colonne des valeurs qui sont de même nature,
+- une ligne représente une *relation* entre des données stockées dans
+  les colonnes.
+
+*** Interroger et traiter
+
+**** Interroger et traiter une relation
+- Sélectionner ou filtrer certaines lignes.
+- Rechercher, extraire des lignes.
+- Agréger, regrouper des lignes.
+- Trier les lignes.
+- En tirer des diagrammes.
+
+**** Traiter par des calculs
+- Des opérations sur des colonnes : sommes, moyennes, comptes,
+- de façon automatique, programmée,
+- représentées par des *formules*.
+
+** Représenter des données 
+*** Les types de données
+**** Que peut on représenter dans un tableur ? 
+- Des valeurs de type *texte*
+- Des valeurs de type *nombre*
+  - On peut observer des différences entre ce qui est contenu dans la
+    cellule et ce qui est affiché
+  - On peut les représenter sous forme de nombre, de pourcentage, de
+    dates...
+- Des *formules* qui sont des règles de calcul
+
+**** Où et comment 
+
+- Les tables sont stockées dans des *feuilles de calcul*
+- Valeurs et formules sont les principales informations stockées dans une table, dans les *cellules*.
+
+ 
+*** Dans une cellule
+**** Que trouve-t-on (simultanément) dans une cellule? 
+- Des valeurs (texte, des nombres, des erreurs) : *ce qui s'affiche
+  dans une cellule*
+- Des formules : *ce qui permet d'obtenir la valeur*
+- Un format : *ce qui permet de présenter cette valeur*
+- Des commentaires : qui peuvent expliquer/commenter une valeur.
+**** Comment entrer des contenus ?
+- Pour le texte ou les valeurs numériques[1]
+- Pour les formules : elles commencent par le signe = 
+
+*** Mise en forme
+
+- Une fois de plus, la mise en forme vient après la conception
+- Comme pour le traitement de textes, il existe des styles pour uniformiser la présentation.
+- Attention à ne pas mettre en péril les traitements par des soucis de présentation. 
+
+**** Un exemple de mauvaise pratique			     :B_exampleblock:
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
+- Insérer des lignes blanches ou avec un fond coloré pour faire des bordures
+  - La logique de table est rompue
+  - Les traitement de filtre, tri, etc... deviennent impossibles
+
+** Traiter des données 
+*** Comment aborder l'analyse d'un problème avec le tableur ?
+**** Faire un traitement c'est
+1. Disposer de données en entrée (des valeurs connues, acquises)
+2. Réaliser des opérations 
+3. Produire des résultats
+
+**** Approche analytique : D'abord "Quoi ?", ensuite "Comment ?"
+1. Identifier les objectifs, les besoins (Quoi)
+2. Faire un recensement des données (Quoi)
+3. Faire un choix d'organisation, dresser une maquette  (Comment)
+4. Réaliser sa maquette
+
+Principe important pour le choix d'organisation : *On s'arrange pour ne pas
+stocker deux fois la même information*
+
+*** Faire un recensement
+**** Établir la liste de toutes les données
+  - Par quel nom peut-on décrire la donnée ?
+  - Quelle est sa définition ?
+  - Est-elle calculée ou est-ce une entrée ?
+  - Quelle est la règle de calcul qui permet de l'obtenir ?
+**** Une classe en voyage 					  :B_example:
+     :PROPERTIES:
+     :BEAMER_env: example
+     :END:
+les élèves de la classe partent en Angleterre avec de
+  l'argent de poche en euros. À combien de livres cela correspond-il?
+  - taux de conversion : combien de livres vaut 1 euro. 
+  - Nom : le nom d'un élève (entrée)
+  - Argent de poche : le montant en euros de ce qu'emmène l'élève (entrée)
+  - Valeur en livres : ce montant transformé en livres (calculé: argent
+    de poche * taux de conversion) 
+*** Traduction dans le tableur 
+1. Quelles sont les cellules, les lignes ou les colonnes qui vont
+   contenir des valeurs en entrée ?
+2. Quelles sont les cellules qui vont contenir des résultats de calcul ?
+3. Comment les organiser ? 
+   - on essaye de stocker une seule fois le taux de conversion
+   - chaque ligne correspond à la relation entre le nom d'un élève, le montant qu'il emporte et sa valeur en livre. 
+4. Comment écrire ces calculs ?
+   - le calcul va faire référence à des données en entrée : On utilise
+     des *références* aux cellules.
+*** Les références 
+- Les références des cellules sont composées par les numéros de ligne
+  et de colonne. Exemple : B7 la cellule en colonne B et ligne 7.
+- Les références peuvent être *relatives* ou *absolues*.
+- Les notions relative/absolue  n'ont de sens que lorsqu'on *copie* une cellule contenant une formule dans une autre cellule. 
+*** Les références relatives 
+#+BEGIN_CENTER
+Lors de la copie d'une cellule, les références relatives
+s'ajustent. 
+#+END_CENTER
+
+**** Exemple
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
+   Si on copie la cellule contenant la référence =B7= de 2 colonnes à
+    droite et 3 lignes vers le bas, la référence devient =D10=
+*** Les références absolues 
+
+    #+BEGIN_CENTER
+ Lors de la copie d'une cellule, les références relatives restent
+ fixes. On peut fixer la ligne ou la colonne ou les deux.     
+    #+END_CENTER
+**** Exemple
+     :PROPERTIES:
+     :BEAMER_env: exampleblock
+     :END:
+   - Si on copie une cellule contenant la référence =B$7= de 2 colonnes à
+     droite et 3 lignes vers le bas, la référence devient =D$7=.
+   - Avec =$B7= la référence devient =$B10=
+   - Avec =$B$7= la référence reste =$B$7=
+
+*** Autres références
+- On peut faire référence à des cellules d'une *autre feuille* avec la
+  syntaxe suivante : 'Nom de Feuille'.reference. 
+  - Exemple : 'Feuille 1'.B7
+- Les références peuvent désigner une *liste* de cellules
+  en donnant les références séparées par des =;=
+  - Exemple : =B3;D$7;$A1;E3=
+- Les références peuvent désigner une *plage rectangulaire* de cellules
+  en donnant les références des coins supérieur gauche
+  et inférieur droit séparés par =:=
+  - Exemples : =B3:D7= ou =$B$3:D7= ou =$B3:D$7= etc.
+- Mais les références peuvent aussi se désigner par des *noms*.
+ 
+*** Opérations sur les tables
+
+On se concentre principalement sur deux opérations
+
+- Le tri : Réordonne les lignes d'une table. En entrée de cette opération, on doit doit désigner :
+  - La table : les lignes à réordonner
+  - Les critères de tri : liste de noms de colonnes
+  - NB: le tri peut être fait sur place ou réaliser un copie des
+    données dans une autre feuille (tout en les liant ou pas)
+- La sélection ou filtre. En entrée de cette opération on doit donner
+  - La table
+  - les critères de filtre : les conditions à vérifier pour qu'une
+    ligne soit sélectionnée ou non.
+*** Filtres complexes
+- Des critères évalués peuvent s'écrire sous forme de petit tableau
+- Les entêtes reprennent des entêtes de colonne de la table à
+  filtrer[fn:1]. Un même entête peut être répété
+- Chaque ligne correspond à une /conjonction/ de conditions. C'est un *ET* logique entre toutes les
+  conditions sur une même ligne.
+- L'ensemble des lignes correspond à une disjonction. C'est un *OU* logique entre toutes les   lignes.
+- Donc une ligne de la table à filtrer est affichée si:
+  - toutes les conditions d'au moins une ligne du petit tableau des
+    critères sont vérifiées. 
+
+*** Exemple						     :B_exampleblock:
+    :PROPERTIES:
+    :BEAMER_env: exampleblock
+    :END:
+Une ligne est présente si : 
+- la classe 1A et dont le montant en euro et entre 10 et 30, 
+- ou alors la classe est 1B 
+
+#+attr_latex: :align |c|c|c|
+|--------+---------+---------|   
+| Classe | En Euro | En Euro |
+|--------+---------+---------|
+| 1A     |     >10 |     <30 |
+|--------+---------+---------|
+| 1B     |         |         |
+|--------+---------+---------|
+
+
+** Représentations graphiques
+
+*** Un graphique pour un message
+
+- Le type de diagramme est important
+- Répartition : Camembert, et barres de pourcentage
+- Les empilements sont des valeurs qui peuvent s'ajouter
+- Les courbes sont des séries continues
+- Les radars pour de nombreuses dimensions
+- ...
+
+#+BEGIN_CENTER
+*Ne pas représenter pour faire beau mais pour informer*
+#+END_CENTER
+
+
+** Construire des formules
+
+*** Syntaxe
+
+- Chaque formule doit commencer par le signe =
+- Derrière le signe = se trouve une expression utilisant des valeurs,
+  des références, des *fonctions*, des opérateurs comme +,-,*,/,...
+- Dans les formules, les valeurs textuelles s'écrivent avec des
+  guillemets
+
+*Exemples*
+#+BEGIN_EXAMPLE 
+    =10
+    ="Bonjour"
+    =10*2+1
+    =(A1*2+1)/$B$2
+#+END_EXAMPLE
+
+
+
+*** Les fonctions 
+
+- Une fonction calcule un résultat (*une sortie*) à partir de données
+  (*les entrées*).
+- Les entrées sont aussi appelés les *paramètres* ou *arguments* de la fonction.
+- On peut enchaîner les fonctions, les enchasser les unes dans les
+  autres. 
+- La fonction peut produire une *erreur* si les arguments sont
+  incorrects. 
+
+*** Les fonctions principales
+
+**** Sur des ensembles de valeurs
+Les fonctions =SOMME=, =MOYENNE=, =MAX=, =MIN=, =NB=, =NBVAL=, portent
+toutes sur des ensembles de valeurs, représentables par des plages de
+cellules.
+
+*Exemple* (additionner toutes les valeurs de deux plages)
+#+BEGIN_EXAMPLE 
+   =SOMME(A1:B25;C1:D25)
+#+END_EXAMPLE
+
+**** la fonction SI
+
+La fonction =SI= est très importante. Elle permet de faire un calcul
+conditionnel. La forme est =SI(critere;valeurVrai;ValeurFaux)=. Exemple : 
+
+*Exemple*
+#+BEGIN_EXAMPLE 
+       =SI(A1>=10;"Bravo";"Recalé")
+#+END_EXAMPLE
+ 
+Si la valeur en =A1= est supérieure ou égale à 10, alors la formule
+prend la valeur "Bravo" (le texte /Bravo/) sinon la formule prend la
+valeur "Recalé". 
+
+* Sécurité etc..						   :noexport:
+*TBD*
+** Sécurisation des données
+
+*** Rien n'est sûr, pas de risque 0
+**** La question					       :B_alertblock:
+     :PROPERTIES:
+     :BEAMER_env: alertblock
+     :END:
+Comment faire en sorte que des données numériques personnelles ne soient pas divulguées à n'importe qui ? 
+
+- Même si les données sont dans un format propriétaire (il est même
+  plus risqué de les perdre si le propriétaire arrête de distribuer
+  ses logiciels)
+- Même si les données sont cryptées : fondamentalement pas de garantie
+  (écoute du bruit de l'ordinateur...)
+- Un peu comme la lutte contre les voleurs chez soi...
+- On prend quand même des précautions
+
+Donc
+- on prend un risque si la donnée est numérisée
+- le risque est encore plus grand si la donnée est sur internet, même
+  protégée. 
+
+*** Ordinateur = machine à copier
+
+- Copie depuis les disques durs dans la mémoire
+- Copie de machine en machine dans le réseau
+- Copie sur la mémoire de la carte vidéo
+- Copie sur la mémoire de la carte son
+
+*** Principes
+
+- confidentialité: les données ne sont pas observées
+- intégrité: les données ne sont pas modifiées
+- authentification: donner la preuve de son identité (vérifier l'identité)
+- identification: connaître l'identité
+
+- identité(s) numérique(s) : on peut la distinguer de son identité
+  sociale, comme celle-ci peut se démarquer de son identité familiale,
+  privée etc...
+
+*** Limiter l'accès
+    
+**** Au niveau du système
+- droits et utilisateurs
+- crypter les données 
+
+**** Extension au réseau
+- mêmes principes. 
+- prise en compte également de ce qui se passe pendant la transmission
+  (interception, Man in middle)
+
+*** Cryptage
+
+- principe général : pas impossible de décrypter : facile avec une
+  clef, très difficile (très lent, essayer toutes les possibilités)
+  quand on ne dispose pas de la clef.
+- La clef peut être différente du mot de passe, parfois celui-ci
+  permet d'accèder à la clef.  
+
+*** Choix de mots de passe
+- Responsabilité : vous n'êtes pas seul; vous donnez l'accès au
+  système et l'intrus peut (par escalade) obtenir éventuellement
+  d'autres droits plus élevés par la  suite. 
+- Pas le seul moyen: reconnaissance digitale, occulaire,
+  faciale,... (biométrie),
+- Pas de mot du dictionnaire, pas de date de naissance, pas de azerty
+  ni 123456,... 
+  https://www.youtube.com/watch?feature=player_embedded&v=0uXbosbLBBQ 
+- Méthodes de choix : phrases, initiales de mots d'une phrase,...
+- Utilisation d'un trousseau de mot de passe : bien protéger le
+  trousseau. 
+
+** Sécurisation des postes de travail
+
+*** Les hommes et les machines
+- Une machine a été faite par les hommes, les logiciels aussi, l'erreur
+  est humaine... Les ordinateurs sont bourrés de fautes humaines.  
+- De telles fautes (bugs) peuvent être exploitées pour avoir accès à des
+  des données interdites, des privilèges extraordinaires. 
+
+#+BEGIN_CENTER
+*Il faut mettre à jour les logiciels (système ou non)* 
+#+END_CENTER
+
+- NB: Il faut s'assurer que la mise à jour ou l'installation d'un
+  logiciel provient bien d'une source connue.
+
+*** Les hommes et les hommes
+Un autre vecteur de perte de sécurité est d'abuser de la crédulité des
+utilisateurs:
+- Attaques sociales (combien as-tu d'enfants, quels sont les prénoms,
+  ils ont quel âge,...)
+- Attaques force brute = essayer toutes les combinaisons, tous le mots
+  du dictionnaire,  tous les prénoms, toutes les dates,...
+- Phishing : /votre boîte est pleine, entrez-ici votre mot de passe.../
+
+*** Les machines et les hommes
+On a fait de nombreux efforts pour faciliter l'accès aux ordinateurs
+(interfaces, interactions simplifiées,...) 
+- automatisation de tâches
+- déclenchement automatique de programmes,
+- installation automatique de logiciels,...
+mais qui peuvent se révéler des pièges: possibilité d'exécuter du code
+à son insu, un peu comme de l'usurpation de l'identité numérique.
+
+- Virus 
+- Chevaux de troie
+exploitent une faille sociale ou technique pour exécuter du code,
+souvent de façon résidente.
+
+Exemple récent: Virus qui crypte le disque dur et demande un rançon
+pour décrypter. 
+https://owncloud.univ-lille3.fr/public.php?service=files&t=53315e9d5282c08dc536d3be03aa2ca3
+
+*** Sur les réseaux
+- protocoles "sécurisés" en S : https, imaps, smtps, ... : pour s'assurer
+  qu'on s'adresse bien au bon serveur ; qu'on utilise un canal crypté
+  pour transférer les données confidentielles comme le mot de passe.  
+- firewall/pare feu : ne laisser passer que quelques services identifiés
+
+- droit à l'oubli 
+- contraintes légales
+- surveillance des réseaux, loi loppsi 1,2, ... 3.
+- économie de l'internet : http://www.huffingtonpost.fr/2014/02/23/valeur-reseaux-sociaux-big-data_n_4831351.html
+
+** Données privées, données publiques
+
+*** Gérer ses traces
+- Voir le site de la http://www.cnil.fr
+- Voir les cookies, cookies tiers
+- Voir le cours d'UE 10.
+- Regardez
+  http://rue89.nouvelobs.com/2015/02/10/si-boulanger-exigeait-lacces-memes-infos-applis-257488
+  et notamment https://www.youtube.com/watch?v=xYZtHIPktQg
+
+
+* Footnotes
+
+[1] pas de difficulté sauf que la virgule dans les nombres est le
+  séparateur décimal (et non le point)
+
+[fn:1] *Attention* l'égalité des entêtes doit être parfait (à
+  l'espace, majuscule, accent près). Mieux vaut procéder par copier/coller
+
+[fn:2] =rapport_v1.doc=, =rapport_v2.doc=, ...
+
+
