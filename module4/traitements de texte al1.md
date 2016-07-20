@@ -3,6 +3,9 @@
 
 
 <!-- /TOC -->
+# Intro
+Travail collaboratif basé sur l'interaction entre les étudiants. Les petites vidéos illustrent les concepts mais ne sont pas des tutoriaux complets. Utilisez e forum, interpellez les tuteurs si vous en avez besoin, pensez à répondre aux questions posées par les autres participants.
+Le web regorge de ressources que vous pouvez aussi mobiliser.
 
 # Traitements de texte
 
