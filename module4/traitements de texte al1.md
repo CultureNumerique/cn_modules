@@ -150,6 +150,14 @@ Ces techniques appliquées à tous les niveaux de titre vous assure une mise en 
 
 [Modifs de styles enchaînements](https://owncloud.univ-lille3.fr/index.php/s/TPCCJtoBfHhMe85){: .lien_video }
 
+### Mise en forme des listes
+
+Les listes en typographie française utilise des tirets demi-cadratins (https://fr.wikipedia.org/wiki/Tiret#Tiret_moyen). On peut définir donc une liste à la française. C'est un peu technique.  
+
+### Faire des tableaux
+
+Pour marquer un peu la différence avec le tableur!
+
 ### Travail collaboratif
 Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. 
 [Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/PNxcDLXDvXdl8qD){: .lien_video }
@@ -194,7 +202,7 @@ Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux p
 
 
 
-## Vidéo 1 - Saisie des éléments de base
+### Vidéo 1 - Saisie des éléments de base
 - débuter un document, page blanche sans styleur
 - saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
 - énoncer (voix off) les niveaux de titre sans mise en forme
@@ -215,7 +223,7 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 
 - enrigistrer (dossier / fichier / extension-format)
 
-## Avant de démarrer
+### Avant de démarrer
 
 Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
 - `Microsoft Word` de la suite `Office`
@@ -238,7 +246,113 @@ Nous avons choisi d'utiliser :
 - le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
 1'45"
 
+# Le tableur
 
+## Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
+
+Le tableur est un outil pour *Représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
+
+Un vocabulaire différent accompagne la manipulation du tableur. 
+
+Pour représenter ses données, le tableur mémorise des  **relations**. Ces relations sont présentées dans des **tables** qui sont structurées en **lignes** et  **colonnes** à l'intersection desquelles se trouvent les  **cellules**. Une ligne représente une *relation* entre des données stockées dans les colonnes. Et dans chaque colonne on trouve une uniformité des valeurs qui sont de même nature. Les tables sont stockées dans des *feuilles de calcul*.
+
+Interroger et traiter des tables, c'est par exemple :
+- Sélectionner ou filtrer certaines lignes.
+- Rechercher, extraire des lignes.
+- Agréger, regrouper des lignes.
+- Trier les lignes.
+- En tirer des diagrammes.
+
+C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
+
+## Dans une cellule 
+
+Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
+
+On peut observer des différences entre ce qui est contenu dans la cellule et ce qui est affiché à cause du choix de format. Par exemple, on peut représenter une valeur sous forme de nombre, de pourcentage, ou même de date.
+
+Les formules commencent par le signe =. C'est ce qui distingue une valeur d'une formule. 
+
+
+## Mise en forme
+
+Comme pour le traitement de textes, il existe des styles pour uniformiser la présentation. Attention à ne pas mettre en péril les traitements par des soucis de présentation. Par exemple insérer des lignes blanches ou avec un fond coloré pour faire des bordures dans une table rompt la logique de table et les traitement de filtre, tri, etc... deviennent impossibles.
+
+## Traiter des données 
+
+Faire un traitement c'est
+1. Disposer de données en entrée (des valeurs connues, acquises)
+2. Réaliser des opérations 
+3. Produire des résultats
+
+La traduction dans le tableur posera les questions suivantes :  Quelles sont les cellules, les lignes ou les colonnes qui vont  contenir des valeurs en entrée ?  Quelles sont les cellules qui vont contenir des résultats de calcul ?  Comment les organiser ? Comment écrire ces calculs ?
+
+
+Le calcul va faire référence à des données en entrée : On utilise des *références* aux cellules. Les références des cellules sont composées par les numéros de ligne et de colonne. Exemple : B7 la cellule en colonne B et ligne 7. Les références peuvent être *relatives* ou *absolues*. Les notions relative/absolue  n'ont de sens que lorsqu'on *copie* une cellule contenant une formule dans une autre cellule. 
+
+Lors de la copie d'une cellule, les références relatives s'ajustent. Par exemple si on copie la cellule contenant la référence B7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D10. 
+
+Lors de la copie d'une cellule, les références relatives restent fixes. On peut fixer la ligne ou la colonne ou les deux en faisant précéder le numéro de ligne ou de colonne par un $. Par exemple, si on copie une cellule contenant la référence B$7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D$7.  Avec $B7 la référence devient $B10. Avec $B$7 la référence reste $B$7.
+
+### Autres références
+- On peut faire référence à des cellules d'une *autre feuille* avec la
+  syntaxe suivante : 'Nom de Feuille'.reference. 
+  - Exemple : 'Feuille 1'.B7
+- Les références peuvent désigner une *liste* de cellules
+  en donnant les références séparées par des =;=
+  - Exemple : =B3;D$7;$A1;E3=
+- Les références peuvent désigner une *plage rectangulaire* de cellules
+  en donnant les références des coins supérieur gauche
+  et inférieur droit séparés par =:=
+  - Exemples : =B3:D7= ou =$B$3:D7= ou =$B3:D$7= etc.
+- Mais les références peuvent aussi se désigner par des *noms*.
+ 
+## Opérations sur les tables
+
+On se concentre principalement sur deux opérations
+
+### Le tri 
+
+Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit doit désigner :
+La table : il suffit de sélectionner une cellule de la table pour cela. Il faut désigner les critères de tri. C'est une liste de noms de colonnes. 
+
+### La sélection ou filtre. 
+
+En entrée de cette opération on doit désigner la table comme pour le tri et les critères de filtre : les conditions à vérifier pour qu'une ligne soit sélectionnée ou non.
+
+
+## Représentations graphiques
+
+Un graphique ou diagramme est utilisé pour porter un message. Le type de diagramme est important car il précise ce message : 
+- Pour une répartition : les camembert, et barres de pourcentage.
+- Pour  des valeurs qui peuvent s'ajouter : les empilements 
+- Pour les séries de valeurs continues : les courbes.
+- Pour les séries de valeurs non continues, les histogrammes
+- Pour les données dans de nombreuses dimensions : les radars.
+
+Rappelez-vous donc qu'on ne peut donc pas représenter pour faire beau mais pour informer.
+
+
+## Construire des formules
+
+Pour construire des formules on suit un langage formel, informatique,  bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe =. Derrière le signe = se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme +,-,*,/,... Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
+
+Par exemple voici 4 formules différentes: 
+
+	=10
+    ="Bonjour"
+    =10*2+1
+    =(A1*2+1)/$B$2
+
+
+Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs : SOMME, MOYENNE, MAX, MIN, NB, NBVAL. La fonction SI est très importante. Elle permet de faire un calcul conditionnel. La forme est =SI(critere;valeurVrai;ValeurFaux)=. Exemple : 
+
+	=SI(A1>=10;"Bravo";"Recalé")
+ 
+Si la valeur en A1 est supérieure ou égale à 10, alors la formule prend la valeur "Bravo" (le texte *Bravo*) sinon la formule prend la valeur "Recalé". 
+
+
+# Le logiciel de présentation
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
 [^2]: l'espace en typographie est un nom féminin.
