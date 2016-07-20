@@ -91,7 +91,7 @@ Voici 5 règles fondamentales :
 - La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide.
 - Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
 - Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
-- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
+- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, index. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
 [L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
 
@@ -99,7 +99,7 @@ Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des él
 
 ## Vidéo 3 - Personnaliser les styles
 
-Un document de qualité est justifié. En modifiant la définition du corps de texte, nous définition une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style corps de texte de ce document.
+Un document de qualité est justifié. En modifiant la définition du corps de texte, nous définissons une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style `corps de texte` de ce document.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/kI6hWif4gDsv4K8){: .lien_video }
 
