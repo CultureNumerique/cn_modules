@@ -192,11 +192,6 @@ Une autre fonctionnalité de suivi des versions est illustrée ici.
 > surement en plusieurs fois
 
 
-```activité recherche
-comparer les formats odt et docx
-décompresser un fichier .odt
-{}
-``` 
 
 
 ## Les restes... 
