@@ -141,6 +141,12 @@ Les meta-données sont des données à propos du document. Elles sont soit calcu
 
 ## Vidéos avancées
 
+### Comprendre la hiérarchie de styles
+
+Les styles sont organisés dans une hiérarchie. Ce n'est pas qu'une façon de catégoriser pour les retrouver ou y accéder plus rapidement. La raison principale tient à un concept qu'on retrouve souvent en informatique, la notion d'*héritage*. Illustrons cette notion par l'exemple. Si la couleur des caractères n'est pas définie au niveau d'un style elle sera alors définie par celle de son style juste au dessus de la hiérarchie. Par exemple en passant le corps de texte en rose, les notes de bas de page le seront aussi, mais pas les titres. Par contre définir cette couleur au style par défaut, sommet de la hiérarchie affectera tous les styles de document (sauf bien sûr si cette propriété a été définie pour un style donné). 
+
+[La hiérarchie de styles](https://owncloud.univ-lille3.fr/index.php/s/Y5XPj0CQldPUkgZ){: .lien_video }
+
 ### Veuves, orphelines, enchaînements
 Nous voici maintenant avec un document dont la présentation a été entièrement revisitée. Nous allons voir que les modifications de styles permettent d'obtenir beaucoup de rigueur dans la présentation.
 Par exemple à la page 3 on constate qu'alors qu'il restait un peu de place en bas de la page, le paragraphe commence sur la page suivante ce qui évite des lignes seules en bas ou en haut de page que l'on appelle des veuves et des orphelines. Pour règler cela, j'ai modifié dans le style les paramètres d'enchaînement, en demandant au logiciel de ne pas autoriser lors du calcul de la mise en page de ligne seules pour les paragraphes "corps de texte".
