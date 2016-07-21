@@ -208,9 +208,6 @@ Interroger et traiter des tables, c'est par exemple :
 C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
 
 
-
-
-
 ## Dans une cellule 
 
 Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
@@ -220,9 +217,15 @@ On peut observer des différences entre ce qui est contenu dans la cellule et ce
 Les formules commencent par le signe =. C'est ce qui distingue une valeur d'une formule. 
 
 
+[Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
+
+
 ## Mise en forme
 
 Comme pour le traitement de textes, il existe des styles pour uniformiser la présentation. Attention à ne pas mettre en péril les traitements par des soucis de présentation. Par exemple insérer des lignes blanches ou avec un fond coloré pour faire des bordures dans une table rompt la logique de table et les traitement de filtre, tri, etc... deviennent impossibles.
+
+[Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
+[Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ## Traiter des données 
 
