@@ -17,7 +17,7 @@ appréhender, sont souvent très mal utilisés. Leur maîtrise est une
 compétence valorisable pour la suite de vos études et votre future
 entrée dans la vie professionnelle.
 
-**Modalités : ** le cours introduit les savoir-faire avec textes et
+**Modalités :** le cours introduit les savoir-faire avec textes et
 vidéos qui n'ont pas la prétention d'être des tutoriaux
 exhaustifs. Vous êtes fortement encouragés à utiliser le forum pour
 poser des questions et répondre aux questions, à interpeller les
@@ -68,29 +68,74 @@ présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
 condition d'avoir préalablement correctement défini la structure de
 votre document.  3'30"
 
-## Vidéo 1 : La saisie
+## Vidéo 1 : Contenu et structure
 
-La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux paramètres dont la langue, des dispositifs techniques de saisie et des aides logicielles à la saisie.
+### Saisie du contenu et structure de base
 
-Dans certaines langues, l'ordre d'écriture est de gauche à droite dans d'autres de droite à gauche. La langue définit les caractères, symboles graphiques utilisés, la nature des mots, les règles typographiques, etc. Les documents peuvent être multilingues. Nous nous focalisons ici sur le français.
+La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
+paramètres dont la langue, les dispositifs de saisie et les aides à la
+saisie. La *langue* définit l'ordre d'écriture, les caractères, les
+symboles graphiques utilisés, la nature des mots, les règles
+typographiques, ... Certains documents peuvent être multilingues. Nous
+nous focalisons ici sur le français. Le *dispositif de saisie* le plus
+répandu reste le clavier mais des systèmes d'acquisition par la voix
+se développent. L'*aide à la saisie*, fréquente sur des objets
+portables, peut prédire la complétion d'un mot, souligner un mot mal
+orthographié, suggérer un mot, ...
 
-Les dispositifs techniques influencent la saisie. Le clavier reste le plus répandu, mais se développent aujourd'hui des acquisitions par la voix.  Sur de petits équipements, on pallie l'absence de clavier par des assistances logicielles qui complètent les mots, prévoient le prochain mot etc.
+La structure de base est définie avec les niveaux de titre : de niveau
+1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
+pouvez faire une saisie complète du contenu puis définir la structure
+de base ou vous pouvez définir cette structure au cours de la saisie
+comme sur l'exemple de video.  Dans cet exemple, on a saisi le texte
+du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le
+sous titre, puis le premier titre de niveau 1, et les premières
+phrases du premier paragraphe. Remarquez que le paragraphe suivant est
+automatiquement dans le style `corps de texte`.
 
-L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
-
-Les cours du  module précédent ont introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement dans le style  `corps de texte`. 
-
-Remarquez l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots sont identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a aussi la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule la première lettre du mot juste après le point, elle a inséré automatiquement une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
+Remarquez aussi l'aide à la saisie qui a souligné un mot mal
+orthographié ou qui a proposé le mot en cours de saisie. On remarque
+également que les mots sont identifiés car ils sont automatiquement
+sélectionnés lors de la correction orthographique. On a aussi la
+possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et
+de supprimer un mot avec CTRL-Retour arrière.  L'assistance à la
+saisie effectue des remplacements automatiques : elle a mis en
+majuscule la première lettre du mot juste après le point, elle a
+inséré automatiquement une espace insécable (c'est-à-dire qui force à
+afficher les symboles à sa droite et à sa gauche sur une même ligne),
+elle a inséré un symbole spécifique pour les points de
+suspension. Jusqu'ici, nous conservons la mise en forme par défaut,
+c'est-à-dire qu'aucune règle de mise en forme n'a été définie donc les
+règles par défaut s'appliquent.
 
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
 
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
-### Repérer les composants du texte
 
-Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes.
+### La structure du document
+
+Les **caractères**. La plupart sont visibles, mais certains sont
+invisibles en particulier les espaces. Certains caractères sont aussi
+interprétés par le logiciel comme une commande ou une déclaration,
+c'est par exemple le caractère qui marque la la fin de paragraphe, ou
+ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui
+qui ajoute une espace insécable. C'est là une première difficulté,
+l'espace par exemple a plusieurs fonctions. Ajouter une espace
+typographique entre deux mots dans un soucis de présentation du
+document. Mais l'espace déclare également la séparation de deux
+mots. Dans la première fonction, on pourrait vouloir augmenter cette
+séparation dans le rendu visuel et donc se faire suivre deux
+espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a
+pas de mot entre ces deux espaces. La convention qui est choisie est
+de ne pas se faire suivre deux espaces et faire confiance au logiciel
+pour réaliser la meilleure présentation. Lorsque deux ou plusieurs
+espaces sont saisis, les fonctions du traitement de texte qui
+proposent une bonne présentation sont mises en difficulté, car les
+conventions de saisie ne sont pas respectées. Le même raisonnement
+s'applique pour les paragraphes.
+
 
 Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut être intéressant pour bien comprendre ce qui a été saisi.
 
@@ -219,6 +264,13 @@ Les listes en typographie française utilisent des tirets demi-cadratins (Code u
 
 [Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
+### Parallèle avec Word
+Nous avons expliqué pourquoi toutes nos démos ont été réalisées avec LibreOffice, mais nous avons égalmeent indiqué que tout ce qui a été décrit est également valable avec les autres logiciels de traitement de textes. Voici un petit exemple avec une version de Word. Nous retrouvons la possibilités d'afficher ou non les caractères non imprimables, un styleur qui permet de structurer les différents éléments du document, que ce soient les paragraphes ou les caractères, la définition de listes à puces ou ordonnées.
+Il est bien sûr également possible de modifier la présentation prédéfinis des styles comme si pour le style `normal` qui sert pour le corps de texte.
+Nous retrouvons aussi l'outil de correction automatique lors de la saisie, les correcteurs orthographique et toutes les aides à la saisie.
+La génération  d'un index ou d'une table des matières suit la même logique, ainsi que l'insertion de marque, de repère ou de renvois de notes.
+Bien sûr chaque logiciel a son interface propre et le nom des menus ou des outils peut varier d'une version à une autre, mais il est important de retenir que les notions vues dans ce cours ne sont pas spécifiques à un logiciel mais communes à tous les traitements de texte.
+[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .lien_video }
 
 ### Autres points possibles à aborder
 - présentation de la création de liste pendant la frappe
@@ -365,6 +417,11 @@ Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs :
 	=SI(A1>=10;"Bravo";"Recalé")
  
 Si la valeur en A1 est supérieure ou égale à 10, alors la formule affiche dans la cellule la valeur "Bravo" (le texte *Bravo*) sinon la formule renvoie la valeur "Recalé". 
+[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){: .lien_video }
+
+Les fonctions peuvent être imbriquées les unes dans les autres. C'est par exemple très intéressant pour faire un calcul avec plusieurs SI correspondant à plus de deux cas possibles. Remarquez également la mise à jour des calculs lorsque les paramètres de seuil évoluent.
+
+[Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
 
 # Le logiciel de présentation
