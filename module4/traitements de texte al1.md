@@ -315,6 +315,11 @@ Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs :
 	=SI(A1>=10;"Bravo";"Recalé")
  
 Si la valeur en A1 est supérieure ou égale à 10, alors la formule affiche dans la cellule la valeur "Bravo" (le texte *Bravo*) sinon la formule renvoie la valeur "Recalé". 
+[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){: .lien_video }
+
+Les fonctions peuvent être imbriquées les unes dans les autres. C'est par exemple très intéressant pour faire un calcul avec plusieurs SI correspondant à plus de deux cas possibles. Remarquez également la mise à jour des calculs lorsque les paramètres de seuil évoluent.
+
+[Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
 
 # Le logiciel de présentation
