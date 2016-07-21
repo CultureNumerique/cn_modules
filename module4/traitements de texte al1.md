@@ -205,7 +205,7 @@ Interroger et traiter des tables, c'est par exemple :
 - Trier les lignes.
 - En tirer des diagrammes.
 
-C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
+C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée.  représentés par des *formules*. Les formules sont comme des règles de calcul.
 
 
 ## Dans une cellule 
@@ -241,10 +241,6 @@ L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londre
 
 Parmi les données manipulées, certaines sont saisies d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
 
-Parfois, ou en phase d'apprentissage,  utiliser un code couleur pour distinguer les cellules contenant des données en entrée ou des paramètres, et les cellules contenant des calculs peut aider. Ici nous avons utilisé le bleu, le cyan et le rouge.
-
-[Exemple coloré](https://owncloud.univ-lille3.fr/index.php/s/2i1fEgCmi41ckvy){: .lien_video }
-
 
 ### Décrire les calculs
 
@@ -254,23 +250,17 @@ Lors de la copie d'une cellule, les références relatives s'ajustent. Par exemp
 
 Lors de la copie d'une cellule, les références relatives restent fixes. On peut fixer la ligne ou la colonne ou les deux en faisant précéder le numéro de ligne ou de colonne par un $. Par exemple, si on copie une cellule contenant la référence B$7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D$7.  Avec $B7 la référence devient $B10. Avec $B$7 la référence reste $B$7.
 
-[Réferences](https://owncloud.univ-lille3.fr/index.php/s/nu0t2Aos3YVX2BQ){: .lien_video }
-[Réferences fixe la colonne](https://owncloud.univ-lille3.fr/index.php/s/o5KNgTy2wljdMng){: .lien_video }
-[Réferences fixe la ligne](https://owncloud.univ-lille3.fr/index.php/s/11C0tKGa3b3UAQt){: .lien_video }
-[Réferences Absolues](https://owncloud.univ-lille3.fr/index.php/s/7x5hjfJXtnJ8TXi){: .lien_video }
-
-
 ### Autres références
 - On peut faire référence à des cellules d'une *autre feuille* avec la
   syntaxe suivante : 'Nom de Feuille'.reference. 
   - Exemple : 'Feuille 1'.B7
 - Les références peuvent désigner une *liste* de cellules
-  en donnant les références séparées par des =;=
-  - Exemple : =B3;D$7;$A1;E3=
+  en donnant les références séparées par des `;`
+  - Exemple : `B3;D$7;$A1;E3`
 - Les références peuvent désigner une *plage rectangulaire* de cellules
   en donnant les références des coins supérieur gauche
-  et inférieur droit séparés par =:=
-  - Exemples : =B3:D7= ou =$B$3:D7= ou =$B3:D$7= etc.
+  et inférieur droit séparés par `:`
+  - Exemples : `B3:D7` ou `$B$3:D7` ou `$B3:D$7` etc.
 - Mais les références peuvent aussi se désigner par des *noms*.
  
 [Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
@@ -282,7 +272,7 @@ On se concentre principalement sur deux opérations
 
 ### Le tri 
 
-Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit doit désigner :
+Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit désigner :
 La table : il suffit de sélectionner une cellule de la table pour cela. Il faut désigner les critères de tri. C'est une liste de noms de colonnes. 
 
 [Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
@@ -303,13 +293,13 @@ Un graphique ou diagramme est utilisé pour porter un message. Le type de diagra
 - Pour les séries de valeurs non continues, les histogrammes
 - Pour les données dans de nombreuses dimensions : les radars.
 
-Rappelez-vous donc qu'on ne peut donc pas représenter pour faire beau mais pour informer.
+Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
 > Ici placer des images seulement pour illustrer le discours. Tous les étudiants se démerderont pour savoir comment faire un diagramme. 
 
 ## Construire des formules
 
-Pour construire des formules on suit un langage formel, informatique,  bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe =. Derrière le signe = se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme +,-,*,/,... Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
+Pour construire des formules on suit un langage formel, informatique, bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe `=`. Derrière le signe `=` se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme `+,-,*,/`, Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
 
 Par exemple voici 4 formules différentes: 
 
@@ -324,7 +314,7 @@ Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs :
 
 	=SI(A1>=10;"Bravo";"Recalé")
  
-Si la valeur en A1 est supérieure ou égale à 10, alors la formule prend la valeur "Bravo" (le texte *Bravo*) sinon la formule prend la valeur "Recalé". 
+Si la valeur en A1 est supérieure ou égale à 10, alors la formule affiche dans la cellule la valeur "Bravo" (le texte *Bravo*) sinon la formule renvoie la valeur "Recalé". 
 
 
 # Le logiciel de présentation
