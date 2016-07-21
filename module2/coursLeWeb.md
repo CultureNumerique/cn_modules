@@ -39,7 +39,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 	~%33.33333%<p>Des ressources</p>
 	~%33.33333%<p>Des images</p>
 	~%33.33333%<p>Des textes</p>
-	####<p>Les trois !</p>\n<p>Dans ce contexte du web, le mot ressource désigne à la fois des textes, des images, des sons, ... C'est ce mot qu'on retrouve dans la signification de l'acronyme URL \: Uniform Resource Locator</p>
+	####<p>Les trois !</p><p>Dans ce contexte du web, le mot ressource désigne à la fois des textes, des images, des sons, ... C'est ce mot qu'on retrouve dans la signification de l'acronyme URL \: Uniform Resource Locator</p>
 }
 ```
 
@@ -86,7 +86,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 # Clients et serveurs
 
-## Le modèle client/serveur
+## Le modèle client/serveur:/
 [video](https://player.vimeo.com/video/138623558){: .lien_video}
 Le Web, et bien d'autres applications d'internet, fonctionnent selon un modèle très simple : le modèle client/serveur.
 
