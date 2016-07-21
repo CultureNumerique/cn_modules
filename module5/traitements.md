@@ -659,24 +659,28 @@ abbréviations, les sigles, ... Le correcteur ayant ces deux ressources
 8. **en sortie** : la séquence de mots avec des mots soulignés qui
    sont considérés comme mal orthographiés
 
-Cet algorithme met-il en évidence toutes les fautes d'orthographe ?  Il
-souligne et donc considère comme mal orthographiés tous les mots du
+Cet algorithme met-il en évidence toutes les fautes d'orthographe ?
+Il souligne et donc considère comme mal orthographiés tous les mots du
 texte qui n'apparaissent ni dans la liste des mots, ni dans la liste
-des non mots. Quelles sont les erreurs possibles de cet algorithme ? Une
-première erreur possible est de souligner à tort un mot parce que les
-listes sont incomplètes comme, par exemple, un nom spécifique à un
-domaine ou un nom propre non répertorié. Une seconde erreur possible
-est de ne pas souligner un mot parce que l'erreur est due à une faute
-d'accord ou de conjugaison comme "la vache bleu" ou "je montres".
+des non mots. Une première erreur possible est de souligner à tort un
+mot parce que les listes sont incomplètes comme, par exemple, un nom
+spécifique à un domaine ou un nom propre non répertorié. Une seconde
+erreur possible est de ne pas souligner un mot parce que l'erreur est
+due à une faute d'accord ou de conjugaison. Par exemple, dans "la
+vache bleu" ou "je montres", tous les mots individuels existent donc
+le correcteur ne voit pas de faute alors qu'il y a des erreurs
+énormes.
 
 Cet algorithme est-il efficace en temps de calcul ? Le parcours de
-tous les mots étant obligatoire, l'efficacité de notre
-algorithme dépend de la vitesse de recherche de chacun des mots dans
-les listes. En effet, la taille de chacune des listes est de l'ordre
-de plusieurs centaines de milliers de mots. Le parcours des listes en
-séquence prendrait trop de temps, il est donc nécessaire de définir
-des méthodes de recherche plus rapides, méthodes qui sont étudiées
-dans le module sur la recherche d'information.
+tous les mots étant obligatoire, l'efficacité de notre algorithme
+dépend de la vitesse de recherche de chacun des mots dans les
+listes. En effet, la taille de chacune des listes est de l'ordre de
+plusieurs centaines de milliers de mots. Si, pour chaque mot du texte,
+il fallait effectuer une recherche séquentielle dans les listes, le
+programme serait trop long en temps de calcul. Il est donc nécessaire
+de définir des méthodes de recherche rapides d'un mot dans une liste,
+méthodes qui sont présentées dans le module sur la recherche
+d'information.
 
 Comment améliorer la qualité de la correction orthographique de notre
 correcteur ?  Une première piste est d'avoir des listes de mots les
@@ -701,9 +705,10 @@ orthographiques simples. Parfois, ils font des corrections liées à des
 règles grammaticales mais il est difficile de savoir exactement
 quelles corrections ils sont capables de faire. Par conséquent, **en
 pratique**, lorsque vous avez rédigé un texte, vous faites passer un
-correcteur orthographique, vous corrigez les erreurs si il y a lieu, puis
-vous revérifiez l'orthographe par un humain en se concentrant sur les
-possibles fautes grammaticales restantes.
+correcteur orthographique, puis vous corrigez, si il y a lieu, les
+erreurs repérées par le correcteur. Enfin, vous revérifiez
+l'orthographe en vous concentrant sur les possibles fautes
+grammaticales restantes.
 
 ### Le navigateur affiche une page Web
 
@@ -821,14 +826,16 @@ gagnante et le choisir.
 Le problème est-il résolu ? Malheureusement non ! Nous avons signalé,
 dans l'introduction de ce module, la notion d'être calculable par une
 machine. Mais il ne suffit pas qu'un problème soit calculable. Il faut
-qu'il le soit avec une mémoire et un temps de calcul raisonnables. Sur
-notre exemple, imaginez qu'il y ait environ 10 coups possibles et
-qu'on souhaite regarder les états possible pour 10 tours de jeu, soit
-pour 20 coups. Il y aurait 10 puissance 20 états possibles, soit
-encore 1 suivi de 20 zéros, soit encore 100 milliards de milliards
-d'états possibles. Il est **impossible** à toute machine de mémoriser
-ces états ou de faire des calculs sur tous ces états. C'est ici qu'il
-faut donc être "intelligent" pour notre programme.
+qu'il le soit avec une mémoire et un temps de calcul
+raisonnables. Supposons qu'il y ait, pour chaque joueur à chaque tour
+de jeu, environ 10 coups possibles et qu'on souhaite regarder les
+états possible pour 10 tours de jeu, soit pour 20 coups joués
+alternativement par un des deux joueurs. Il y aurait alors 10
+puissance 20 états possibles, soit encore 1 suivi de 20 zéros, soit
+encore 100 milliards de milliards états possibles. Il est
+**impossible** à toute machine de mémoriser tous ces états ou même de
+faire des calculs sur tous ces états. C'est ici qu'il faut donc être
+"intelligent" pour notre programme.
 
 Vu que le programme ne peut pas explorer le jeu pour voir si un coup
 mène sur une position gagnante, nous allons doter le programme d'une
@@ -875,14 +882,30 @@ jeux.
 Il est difficile de ne pas parler du jeu de Go qui défraie la
 chronique au moment de la rédaction de ce cours en 2016. En effet,
 pour la première fois, un programme gagne contre le champion du monde
-du Go alors qu'on croyait le Go hors de portée des machines. En effet,
-le nombre de configurations du Go est encore plus gigantesque que pour
-les échecs et les stratégies des joueurs utilisent une vue spatiale de
-l'état du jeu qu'on pensait réservée au cerveau humain. Le programme
-de Go utilise des techniques d'apprentissage automatique ("machine
-learning" en anglais) avec un programme de jeu qui s'améliore avec
-l'expérience, c'est-à-dire qu'il "apprend" à partir de parties jouées
-(contre un humain ou contre lui-même). Un petit cocorico Lillois (les
+de Go alors qu'on croyait le Go hors de portée des machines pour une
+ou deux décennies. En effet, le nombre de configurations du Go est
+encore plus gigantesque que pour les échecs et les stratégies
+utilisées pour les échecs ne s'adaptent pas au Go. De plus, il semble
+que les stratégies des joueurs humains utilisent une vue spatiale de
+l'état du jeu qu'on pensait réservée au cerveau humain. Les progrès
+ont été réalisés en utilisant des techniques d'apprentissage
+automatique ("machine learning" en anglais). Le programme de Go
+s'améliore avec l'expérience, c'est-à-dire qu'il "apprend" à partir de
+parties jouées (contre un humain ou contre lui-même). Il apprend à
+parcourir l'arbre des configurations en utilisant des méthodes de
+Monte Carlo (tirages probabilistes) et en récompensant (augmenter leur
+probabilité) les branches ayant mené au succès.  Il apprend également
+à améliorer sa fonction d'évaluation en utilisant des réseaux de
+neurones profonds avec l'idée de mieux noter les positions pouvant
+mener à un succès. Les analyses de la partie gagnée par l'ordinateur
+montrent que l'ordinateur a "surpris" le champion en l'amenant dans
+des configurations inhabituelles pour l'expert, autrement dit l'expert
+ne les avait jamais rencontré alors que l'ordinateur les avait
+rencontré en jouant des parties contre lui-même. Pour la partie gagnée
+par le champion humain, on voit à l'inverse que l'expert a joué un
+coup très mal évalué (à tort) par l'ordinateur et donc l'ordinateur
+s'est trouvé dans des configurations de jeu très peu explorées dans
+son apprentissage. Nous terminons par un petit cocorico Lillois (les
 rédacteurs de ce cours sont Lillois) car c'est notre collègue Rémi
 Coulom qui a initié ces recherches sur le Go avec un programme
 champion du monde dans les années 2010, battant même des experts
