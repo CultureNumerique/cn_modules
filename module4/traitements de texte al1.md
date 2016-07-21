@@ -220,6 +220,13 @@ Les listes en typographie française utilise des tirets demi-cadratins (Code uni
 
 [Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
+### Parallèle avec Word
+Nous avons expliqué pourquoi toutes nos démos ont été réalisées avec LibreOffice, mais nous avons égalmeent indiqué que tout ce qui a été décrit est également valable avec les autres logiciels de traitement de textes. Voici un petit exemple avec une version de Word. Nous retrouvons la possibilités d'afficher ou non les caractères non imprimables, un styleur qui permet de structurer les différents éléments du document, que ce soient les paragraphes ou les caractères, la définition de listes à puces ou ordonnées.
+Il est bien sûr également possible de modifier la présentation prédéfinis des styles comme si pour le style `normal` qui sert pour le corps de texte.
+Nous retrouvons aussi l'outil de correction automatique lors de la saisie, les correcteurs orthographique et toutes les aides à la saisie.
+La génération  d'un index ou d'une table des matières suit la même logique, ainsi que l'insertion de marque, de repère ou de renvois de notes.
+Bien sûr chaque logiciel a son interface propre et le nom des menus ou des outils peut varier d'une version à une autre, mais il est important de retenir que les notions vues dans ce cours ne sont pas spécifiques à un logiciel mais communes à tous les traitements de texte.
+[petite démo Word](){: .lien_video }
 
 ### Autres points possibles à aborder
 - présentation de la création de liste pendant la frappe
