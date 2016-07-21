@@ -35,7 +35,7 @@ L'assistance à la saisie effectue des remplacements automatiques : elle a mis e
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
 
-[La saisie - un copier-coller]https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
+[La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
 ### Repérer les composants du texte
 
