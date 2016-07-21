@@ -257,7 +257,7 @@ Interroger et traiter des tables, c'est par exemple :
 - Trier les lignes.
 - En tirer des diagrammes.
 
-C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
+C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée.  représentés par des *formules*. Les formules sont comme des règles de calcul.
 
 
 ## Dans une cellule 
@@ -307,26 +307,33 @@ Lors de la copie d'une cellule, les références relatives restent fixes. On peu
   syntaxe suivante : 'Nom de Feuille'.reference. 
   - Exemple : 'Feuille 1'.B7
 - Les références peuvent désigner une *liste* de cellules
-  en donnant les références séparées par des =;=
-  - Exemple : =B3;D$7;$A1;E3=
+  en donnant les références séparées par des `;`
+  - Exemple : `B3;D$7;$A1;E3`
 - Les références peuvent désigner une *plage rectangulaire* de cellules
   en donnant les références des coins supérieur gauche
-  et inférieur droit séparés par =:=
-  - Exemples : =B3:D7= ou =$B$3:D7= ou =$B3:D$7= etc.
+  et inférieur droit séparés par `:`
+  - Exemples : `B3:D7` ou `$B$3:D7` ou `$B3:D$7` etc.
 - Mais les références peuvent aussi se désigner par des *noms*.
  
+[Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
+[Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
+
 ## Opérations sur les tables
 
 On se concentre principalement sur deux opérations
 
 ### Le tri 
 
-Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit doit désigner :
+Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit désigner :
 La table : il suffit de sélectionner une cellule de la table pour cela. Il faut désigner les critères de tri. C'est une liste de noms de colonnes. 
+
+[Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
 
 ### La sélection ou filtre. 
 
 En entrée de cette opération on doit désigner la table comme pour le tri et les critères de filtre : les conditions à vérifier pour qu'une ligne soit sélectionnée ou non.
+
+[Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
 
 ## Représentations graphiques
@@ -338,12 +345,13 @@ Un graphique ou diagramme est utilisé pour porter un message. Le type de diagra
 - Pour les séries de valeurs non continues, les histogrammes
 - Pour les données dans de nombreuses dimensions : les radars.
 
-Rappelez-vous donc qu'on ne peut donc pas représenter pour faire beau mais pour informer.
+Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
+> Ici placer des images seulement pour illustrer le discours. Tous les étudiants se démerderont pour savoir comment faire un diagramme. 
 
 ## Construire des formules
 
-Pour construire des formules on suit un langage formel, informatique,  bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe =. Derrière le signe = se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme +,-,*,/,... Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
+Pour construire des formules on suit un langage formel, informatique, bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe `=`. Derrière le signe `=` se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme `+,-,*,/`, Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
 
 Par exemple voici 4 formules différentes: 
 
@@ -352,12 +360,13 @@ Par exemple voici 4 formules différentes:
     =10*2+1
     =(A1*2+1)/$B$2
 
+[Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
 
 Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs : SOMME, MOYENNE, MAX, MIN, NB, NBVAL. La fonction SI est très importante. Elle permet de faire un calcul conditionnel. La forme est =SI(critere;valeurVrai;ValeurFaux)=. Exemple : 
 
 	=SI(A1>=10;"Bravo";"Recalé")
  
-Si la valeur en A1 est supérieure ou égale à 10, alors la formule prend la valeur "Bravo" (le texte *Bravo*) sinon la formule prend la valeur "Recalé". 
+Si la valeur en A1 est supérieure ou égale à 10, alors la formule affiche dans la cellule la valeur "Bravo" (le texte *Bravo*) sinon la formule renvoie la valeur "Recalé". 
 
 
 # Le logiciel de présentation
