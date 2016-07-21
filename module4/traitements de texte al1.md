@@ -198,63 +198,6 @@ Une autre fonctionnalité de suivi des versions est illustrée ici.
 
 
 
-## Les restes... 
-
-[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
-
-Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
-Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
-Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
-Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
-Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
-
-
-
-
-### Vidéo 1 - Saisie des éléments de base
-- débuter un document, page blanche sans styleur
-- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
-- énoncer (voix off) les niveaux de titre sans mise en forme
-- faire des fautes, utiliser le correcteur
-- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
-> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
-> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
-Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
-Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
-
-- montrer
- - la correction des maj en début de phrase (après point et espace).
- - la correction DOuble majuscule
- - l'insertion espace insécable devant ; (avec affichage des car non imprim)
- - correction d'un mot mal orthographié
-- le panneau de config des paramètres
-- qu'on peut (dés)activer quand on le veut
-
-- enrigistrer (dossier / fichier / extension-format)
-
-### Avant de démarrer
-
-Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
-- `Microsoft Word` de la suite `Office`
-- `Writer` de la suite `LibreOffice`
-- `Writer` de la suite `OpenOffice`
-
-Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
-
-Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
-
-En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
-- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
-- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
-La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
-
-Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
-
-Nous avons choisi d'utiliser :
-- le format `.odt` pour l'enregistrement des fichiers
-- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
-1'45"
-
 # Le tableur
 
 ## Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
@@ -301,7 +244,9 @@ Faire un traitement c'est
 La traduction dans le tableur posera les questions suivantes :  Quelles sont les cellules, les lignes ou les colonnes qui vont  contenir des valeurs en entrée ?  Quelles sont les cellules qui vont contenir des résultats de calcul ?  Comment les organiser ? Comment écrire ces calculs ?
 
 ### Analyser un problème 
-Dans l'exemple suivant, fictif, en vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
+L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
+
+Parmi les données manipulées, certaines sont saisies d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
 
 
 ### Décrire les calculs
@@ -371,6 +316,65 @@ Si la valeur en A1 est supérieure ou égale à 10, alors la formule prend la va
 
 
 # Le logiciel de présentation
+
+# Les restes... 
+
+[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
+
+Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
+Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
+Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
+Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
+Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
+
+
+
+
+### Vidéo 1 - Saisie des éléments de base
+- débuter un document, page blanche sans styleur
+- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
+- énoncer (voix off) les niveaux de titre sans mise en forme
+- faire des fautes, utiliser le correcteur
+- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
+> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
+> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
+Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
+Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
+
+- montrer
+ - la correction des maj en début de phrase (après point et espace).
+ - la correction DOuble majuscule
+ - l'insertion espace insécable devant ; (avec affichage des car non imprim)
+ - correction d'un mot mal orthographié
+- le panneau de config des paramètres
+- qu'on peut (dés)activer quand on le veut
+
+- enrigistrer (dossier / fichier / extension-format)
+
+### Avant de démarrer
+
+Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
+- `Microsoft Word` de la suite `Office`
+- `Writer` de la suite `LibreOffice`
+- `Writer` de la suite `OpenOffice`
+
+Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
+
+Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
+
+En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
+- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
+- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
+La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
+
+Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
+
+Nous avons choisi d'utiliser :
+- le format `.odt` pour l'enregistrement des fichiers
+- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
+1'45"
+
+
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
 [^2]: l'espace en typographie est un nom féminin.
