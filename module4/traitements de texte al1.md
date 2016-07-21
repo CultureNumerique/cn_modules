@@ -260,7 +260,7 @@ Lors de la copie d'une cellule, les références relatives restent fixes. On peu
 - Les références peuvent désigner une *plage rectangulaire* de cellules
   en donnant les références des coins supérieur gauche
   et inférieur droit séparés par `:`
-  - Exemples : =B3:D7= ou =$B$3:D7= ou $B3:D$7` etc.
+  - Exemples : `B3:D7` ou `$B$3:D7` ou `$B3:D$7` etc.
 - Mais les références peuvent aussi se désigner par des *noms*.
  
 ## Opérations sur les tables
