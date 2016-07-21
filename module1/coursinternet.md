@@ -157,7 +157,7 @@ Voici quelques liens que nous vous proposons mais que vous avez sûrement trouv�
 
 # Historique informatique
 
-  [Historique](https://player.vimeo.com/video/122104231){: .lien_video }
+[Historique](https://player.vimeo.com/video/122104231){: .lien_video }
 
 
 Les premiers ordinateurs ont été conçus et réalisés vers la fin de la
@@ -1199,16 +1199,11 @@ ont montré que cette question dépasse largement le cadre Français.
 ```comprehension
 ::Noms de domaine::
 [markdown]**Comment s'appelle l'organisme qui gère les noms de domaine et les adresses IP ?** Précisez votre réponse pour la France et au niveau mondial.
-{
-=Au niveau mondial  -> ICANN
-=Au niveau de la France  -> AFNIC
-= -> CNIL
-####ICANN pour le niveau mondial et l'AFNIC pour la France. }
+{####ICANN pour le niveau mondial et l'AFNIC pour la France.}
 
 ::Qu'est-ce que l'ISO ?::
 [markdown]**L'ISO est l'organisation internationale de normalisation.**
-{
-TRUE#Il faut revoir la vidéo...#Exact !
+{TRUE#Il faut revoir la vidéo...#Exact !
 ####Vrai, l'ISO est bien l'organisation internationale de normalisation (International Organization for Standardization).
 }
 
