@@ -241,6 +241,10 @@ L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londre
 
 Parmi les données manipulées, certaines sont saisies d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
 
+Parfois, ou en phase d'apprentissage,  utiliser un code couleur pour distinguer les cellules contenant des données en entrée ou des paramètres, et les cellules contenant des calculs peut aider. Ici nous avons utilisé le bleu, le cyan et le rouge.
+
+[Exemple coloré](https://owncloud.univ-lille3.fr/index.php/s/2i1fEgCmi41ckvy){: .lien_video }
+
 
 ### Décrire les calculs
 
@@ -249,6 +253,12 @@ Le calcul va faire référence à des données en entrée : On utilise des *réf
 Lors de la copie d'une cellule, les références relatives s'ajustent. Par exemple si on copie la cellule contenant la référence B7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D10. 
 
 Lors de la copie d'une cellule, les références relatives restent fixes. On peut fixer la ligne ou la colonne ou les deux en faisant précéder le numéro de ligne ou de colonne par un $. Par exemple, si on copie une cellule contenant la référence B$7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D$7.  Avec $B7 la référence devient $B10. Avec $B$7 la référence reste $B$7.
+
+[Réferences](https://owncloud.univ-lille3.fr/index.php/s/nu0t2Aos3YVX2BQ){: .lien_video }
+[Réferences fixe la colonne](https://owncloud.univ-lille3.fr/index.php/s/o5KNgTy2wljdMng){: .lien_video }
+[Réferences fixe la ligne](https://owncloud.univ-lille3.fr/index.php/s/11C0tKGa3b3UAQt){: .lien_video }
+[Réferences Absolues](https://owncloud.univ-lille3.fr/index.php/s/7x5hjfJXtnJ8TXi){: .lien_video }
+
 
 ### Autres références
 - On peut faire référence à des cellules d'une *autre feuille* avec la
