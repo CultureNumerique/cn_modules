@@ -273,6 +273,9 @@ Lors de la copie d'une cellule, les références relatives restent fixes. On peu
   - Exemples : =B3:D7= ou =$B$3:D7= ou =$B3:D$7= etc.
 - Mais les références peuvent aussi se désigner par des *noms*.
  
+[Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
+[Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
+
 ## Opérations sur les tables
 
 On se concentre principalement sur deux opérations
@@ -282,9 +285,13 @@ On se concentre principalement sur deux opérations
 Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit doit désigner :
 La table : il suffit de sélectionner une cellule de la table pour cela. Il faut désigner les critères de tri. C'est une liste de noms de colonnes. 
 
+[Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
+
 ### La sélection ou filtre. 
 
 En entrée de cette opération on doit désigner la table comme pour le tri et les critères de filtre : les conditions à vérifier pour qu'une ligne soit sélectionnée ou non.
+
+[Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
 
 ## Représentations graphiques
@@ -298,6 +305,7 @@ Un graphique ou diagramme est utilisé pour porter un message. Le type de diagra
 
 Rappelez-vous donc qu'on ne peut donc pas représenter pour faire beau mais pour informer.
 
+> Ici placer des images seulement pour illustrer le discours. Tous les étudiants se démerderont pour savoir comment faire un diagramme. 
 
 ## Construire des formules
 
@@ -310,6 +318,7 @@ Par exemple voici 4 formules différentes:
     =10*2+1
     =(A1*2+1)/$B$2
 
+[Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
 
 Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs : SOMME, MOYENNE, MAX, MIN, NB, NBVAL. La fonction SI est très importante. Elle permet de faire un calcul conditionnel. La forme est =SI(critere;valeurVrai;ValeurFaux)=. Exemple : 
 
