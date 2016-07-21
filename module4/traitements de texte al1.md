@@ -204,7 +204,7 @@ Une autre fonctionnalité de suivi des versions est illustrée ici.
 
 Le tableur est un outil pour *Représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
 
-Un vocabulaire différent accompagne la manipulation du tableur. 
+Un vocabulaire spécifique accompagne la manipulation du tableur. 
 
 Pour représenter ses données, le tableur mémorise des  **relations**. Ces relations sont présentées dans des **tables** qui sont structurées en **lignes** et  **colonnes** à l'intersection desquelles se trouvent les  **cellules**. Une ligne représente une *relation* entre des données stockées dans les colonnes. Et dans chaque colonne on trouve une uniformité des valeurs qui sont de même nature. Les tables sont stockées dans des *feuilles de calcul*.
 
