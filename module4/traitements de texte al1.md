@@ -68,29 +68,72 @@ présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
 condition d'avoir préalablement correctement défini la structure de
 votre document.  3'30"
 
-## Vidéo 1 : La saisie
+## Vidéo 1 : Contenu et structure
 
-La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux paramètres dont la langue, des dispositifs techniques de saisie et des aides logicielles à la saisie.
+### Saisie du contenu et structure de base
 
-Dans certaines langues, l'ordre d'écriture est de gauche à droite dans d'autres de droite à gauche. La langue définit les caractères, symboles graphiques utilisés, la nature des mots, les règles typographiques, etc. Les documents peuvent être multilingues. Nous nous focalisons ici sur le français.
+La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
+paramètres dont la langue, les dispositifs de saisie et les aides à la
+saisie. La *langue* définit l'ordre d'écriture, les caractères, les
+symboles graphiques utilisés, la nature des mots, les règles
+typographiques, ... Certains documents peuvent être multilingues. Nous
+nous focalisons ici sur le français. Le *dispositif de saisie* le plus
+répandu reste le clavier mais des systèmes d'acquisition par la voix
+se développent. L'*aide à la saisie*, fréquente sur des objets
+portables, peut prédire la complétion d'un mot, souligner un mot mal
+orthographié, suggérer un mot, ...
 
-Les dispositifs techniques influencent la saisie. Le clavier reste le plus répandu, mais se développent aujourd'hui des acquisitions par la voix.  Sur de petits équipements, on pallie l'absence de clavier par des assistances logicielles qui complètent les mots, prévoient le prochain mot etc.
+La structure de base est définie avec les niveaux de titre : de niveau
+1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
+pouvez faire une saisie complète du contenu puis définir la structure
+de base ou vous pouvez définir cette structure au cours de la saisie
+comme sur l'exemple de video.  Dans cet exemple, on a saisi le texte
+du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le
+sous titre, puis le premier titre de niveau 1, et les premières
+phrases du premier paragraphe. Remarquez que le paragraphe suivant est
+automatiquement dans le style `corps de texte`.
 
-L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
-
-Les cours du  module précédent ont introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement dans le style  `corps de texte`. 
-
-Remarquez l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots sont identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a aussi la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule la première lettre du mot juste après le point, elle a inséré automatiquement une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
+Remarquez aussi l'aide à la saisie qui a souligné un mot mal
+orthographié ou qui a proposé le mot en cours de saisie. On remarque
+également que les mots sont identifiés car ils sont automatiquement
+sélectionnés lors de la correction orthographique. On a aussi la
+possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et
+de supprimer un mot avec CTRL-Retour arrière.  L'assistance à la
+saisie effectue des remplacements automatiques : elle a mis en
+majuscule la première lettre du mot juste après le point, elle a
+inséré automatiquement une espace insécable (c'est-à-dire qui force à
+afficher les symboles à sa droite et à sa gauche sur une même ligne),
+elle a inséré un symbole spécifique pour les points de
+suspension. Jusqu'ici, nous conservons la mise en forme par défaut,
+c'est-à-dire qu'aucune règle de mise en forme n'a été définie donc les
+règles par défaut s'appliquent.
 
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
 
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
-### Repérer les composants du texte
+### La structure du document
 
-Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes.
+Les **caractères**. La plupart sont visibles, mais certains sont
+invisibles en particulier les espaces. Certains caractères sont aussi
+interprétés par le logiciel comme une commande ou une déclaration,
+c'est par exemple le caractère qui marque la la fin de paragraphe, ou
+ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui
+qui ajoute une espace insécable. C'est là une première difficulté,
+l'espace par exemple a plusieurs fonctions. Ajouter une espace
+typographique entre deux mots dans un soucis de présentation du
+document. Mais l'espace déclare également la séparation de deux
+mots. Dans la première fonction, on pourrait vouloir augmenter cette
+séparation dans le rendu visuel et donc se faire suivre deux
+espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a
+pas de mot entre ces deux espaces. La convention qui est choisie est
+de ne pas se faire suivre deux espaces et faire confiance au logiciel
+pour réaliser la meilleure présentation. Lorsque deux ou plusieurs
+espaces sont saisis, les fonctions du traitement de texte qui
+proposent une bonne présentation sont mises en difficulté, car les
+conventions de saisie ne sont pas respectées. Le même raisonnement
+s'applique pour les paragraphes.
 
 Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut être intéressant pour bien comprendre ce qui a été saisi.
 
