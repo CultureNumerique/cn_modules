@@ -9,10 +9,9 @@ Ce cours est dirigé vers les savoir-faire autour de deux types de
 logiciels, le traitement de textes et le tableur, qui sont des
 logiciels dont la maîtrise est essentielle dans la vie universitaire,
 la vie associative et votre future vie professionnelle. Ces
-savoir-faire sont basés sur les modules plus orientés culture
-numérique qui présentent les concepts liés à la gestion de données et
-la gestion des documents. En effet, les bonnes pratiques sont basées
-sur une bonne compréhension des concepts pour une utilisation
+savoir-faire sont basés sur les modules liés à la gestion de données
+et la gestion des documents. En effet, les bonnes pratiques sont
+basées sur une bonne compréhension des concepts pour une utilisation
 intelligente des logiciels car ces logiciels, assez faciles à
 appréhender, sont souvent très mal utilisés. Leur maîtrise est une
 compétence valorisable pour la suite de vos études et votre future
@@ -35,9 +34,9 @@ même cours.
 
 L'étude des documents fait apparaître les vues séquentielle (la suite
 de caractères), de structure (titre, section, sous-section, ...), de
-méta-données (taille, date de création, auteur, ...) et de
-présentation. On parle aussi de contenu, structure, forme et de
-méat-données. Nous allons voir comment cette étude va nous permettre
+présentation et de méta-données (taille, date de création, auteur,
+...). On parle aussi de contenu, structure, forme et
+méta-données. Nous allons voir que cette vision va nous permettre
 d'utiliser les traitements de textes au mieux de leurs possibilités.
 
 Le **premier objectif** est la découverte des fonctionnalités
@@ -58,16 +57,16 @@ Le **second objectif** est d'apprendre à définir des *règles de mise
 en forme* associées aux styles. Il est important de noter que les
 boutons raccourcis faciles d'utilisation permettent de réaliser des
 mises en forme directes et rapides. Mais ce sont des mises en forme au
-cas par cas qui ne peuvent pas traiter de grands documents (vous
-mémoires de licence, de master et de doctorat, vos rapports
-d'étude). Les règles de mise en forme sont essentielles pour un bon
-usage des traitements de textes, pour la manipulation de grands
-documents et pour le travail en groupe. Elles permettent, en effet, de
-modifier la mis en forme d'un document complet en une action, de
-numéroter les sections et les pages d'un grand document, d'uniformiser
-la présentation et d'appliquer des thèmes ou une charte graphique à
+cas par cas qui ne peuvent pas traiter de grands documents (vos
+mémoires, vos rapports de stage et vos documents professionnels). Les
+règles de mise en forme sont essentielles pour un bon usage des
+traitements de textes, pour la manipulation de grands documents et
+pour le travail en groupe. Elles permettent, en effet, de modifier la
+mise en forme d'un document complet en une action, de numéroter les
+sections et les pages d'un grand document, d'uniformiser la
+présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
 condition d'avoir préalablement correctement défini la structure de
-votre document.   3'30"
+votre document.  3'30"
 
 ## Vidéo 1 : La saisie
 
