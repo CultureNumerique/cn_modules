@@ -634,6 +634,8 @@ Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_
 
 # Documents numériques textuels
 
+[Documents numériques textuels](https://player.vimeo.com/video/151363295){: .lien_video }
+
 Nous avons analysé ce qu'est un document textuel.  Nous avons mis en
 évidence les quatre vues de contenu, de structure, de forme et
 qualifiée. Nous avons discuté des formats de document. Nous allons

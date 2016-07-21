@@ -26,12 +26,11 @@ Dans certaines langues, l'ordre d'écriture est de gauche à droite dans d'autre
 Les dispositifs techniques influencent la saisie. Le clavier reste le plus répandu, mais se développent aujourd'hui des acquisitions par la voix.  Sur de petits équipements, on pallie l'absence de clavier par des assistances logicielles qui complètent les mots, prévoient le prochain mot etc.
 
 L'assistance logicielle, c'est justement l'ensemble de ces fonctionnalités qui permettent de corriger la frappe, les fautes d'orthographe, compléter ou suggérer les mots, remplacer des abréviations, etc.
-4'15"
 
-Les cours du  module précédent on introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme titre principal.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement en corps de texte. 
+Les cours du  module précédent ont introduit les éléments principaux de structure, contenu, présentation et méta-données qui définissent le document numérique. Lors de la saisie, vous intervenez sur ces éléments. Dans cet exemple, on a saisi le texte du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le sous titre, puis le premier titre de niveau 1,  et les premières phrases du premier paragraphe. Remarquez que le paragraphe suivant est automatiquement dans le style  `corps de texte`. 
 
-Remarquez aussi l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots ont été identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a également la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
-L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule le mot juste après le point, elle a inséré automatiquement un espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
+Remarquez l'assistance à la saisie qui a souligné un mot mal orthographié ou qui a proposé le mot en cours de saisie. On remarque également que les mots sont identifiés car ils sont automatiquement sélectionnés lors de la correction orthographique. On a aussi la possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et de supprimer un mot avec CTRL-Retour arrière. 
+L'assistance à la saisie effectue des remplacements automatiques : elle a mis en majuscule la première lettre du mot juste après le point, elle a inséré automatiquement une espace insécable (c'est-à-dire qui force à afficher les symboles à sa droite et à sa gauche sur une même ligne), elle a inséré un symbole spécifique pour les points de suspension. Jusqu'ici, nous laissons la présentation par défaut. Autrement dit, aucune information de présentation n'a été réalisée. 
 
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/OKse8csySXs2GKL){: .lien_video }
 
@@ -46,11 +45,11 @@ Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut �
 
 Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. Certaines règles typographiques définissent l'espace qui doit être placé entre les mots, les symboles de ponctuation, les coupures de ligne. Ces règles sont propres à la langue, par exemple en français une espace précède le signe :, mais pas en anglais.
 
-Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de Majuscule-Entrée qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
+Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de `Majuscule-Entrée` qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
 
-**Les titres**. Ce sont bien des paragraphes, mais le logiciel de traitement de texte permet de les déclarer comme titres en précisant leur niveau. Le niveau est la profondeur une hiérarchie titre (niveau 1), sous-titre (niveau 2), sous-sous-titre (niveau 3), etc.
+**Les titres**. Ce sont bien des paragraphes, mais le logiciel de traitement de texte permet de les déclarer comme titres en précisant leur niveau. Le niveau est la profondeur dans une hiérarchie : titre (niveau 1), sous-titre (niveau 2), sous-sous-titre (niveau 3), etc.
 
-Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre une présentation cohérente. Pour assurer cette cohérence, beaucoup de caractéristiques sont définies sous forme de règles afin que le logiciel règle l'apparence des listes. C'est notamment les symboles utilisés pour les listes à puce, les espacements, la numérotation des éléments, etc. La logique est donc de déclarer la liste et laisser la machine régler l'apparence avec les règles de mise en forme que vous indiquez.
+Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre une présentation cohérente. Pour assurer cette cohérence, beaucoup de caractéristiques sont définies sous forme de règles utilisées par le logiciel pour l'apparence des listes. C'est notamment les symboles utilisés pour les listes à puce, les espacements, la numérotation des éléments, etc. La logique est donc de déclarer la liste et de laisser le logiciel s'occuper de l'apparence avec les règles de mise en forme que vous indiquez.
 
 Repérer les composants du texte permet de comprendre la structure d'un document, saisir à la fois le contenu et la structure d'un document et se préparer pour une mise en forme efficace et uniforme du document.
 
@@ -65,14 +64,14 @@ Reproduire l'exemple en vidéo.
 
 
 ## Vidéo 2 - structurer son document
- Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphe dans le même élément élément de liste en utilisant la touche Retour arrière une seule fois en début de paragraphe. Deux appuis de retour arrière quittent la structure de liste.
+ Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphes dans le même élément de liste en utilisant la touche `Retour arrière` une seule fois en début de paragraphe. Deux appuis de `retour arrière` quittent la structure de liste.
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/zE11LqwAfsHaxT6){: .lien_video }
 
-La touche F11, le menu Style/Style et formatage ou encore le tiroir de droite permettent d'afficher la liste des styles que nous interprétons ici comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments structure généraux de texte : paragraphes, caractères, cadres (flottants), pages ou listes.
+Les logiciels de traitement de textes offrent tous la possibilité d'afficher la liste des styles disponibles. (avec LibreOffice, on peut utiliser la touche F11, le menu Style/Style et formatage ou encore le tiroir de droite) Nous pouvons voir cette liste de styles comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments de structure du document : paragraphes, caractères, cadres (flottants), pages ou listes.
 [L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/WjHVemdZlmkvDng){: .lien_video }
 
-On associe facilement un style à un élément, ici des caractères en les sélectionnant et cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
+On associe facilement un style à un élément, ici des caractères en les sélectionnant et en cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
 [Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/8IbOv6sBSN60K2d){: .lien_video }
 
 Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou spéciaux permet de savoir exactement ce qui a été saisi. On voit les espaces et les fins de paragraphe, on peut déceler des répétitions de ces symboles habituellement invisibles. On voit également la représentation des fins de ligne qui ne sont pas des fins de paragraphes dans cette partie de texte.
@@ -81,9 +80,13 @@ Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou 
 Le logiciel réalise souvent des opérations pour vous aider à bien écrire votre document, comment par exemple ici dans le cas de l'insertion d'une note de bas de page. Le numéro est inséré automatiquement et sera adapté si d'autres notes sont ajoutées. Le style choisi pour la note sera adapté automatiquement.
 [Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/8KZsw65hiQ6dFf2){: .lien_video }
 
-Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez que la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soit même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents.
+Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soi-même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents.
 [Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/9FZXrtTYPjWQCj2){: .lien_video }
 [Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/da3qiat6uIDocMM){: .lien_video }
+
+Finissons par un examen de la structure arborescente de ce document. La manipulation de cette structure permet de déplacer des sections entières ou de réorganiser le plan. 
+[Réorganiser le plan](){: .lien_video }
+
 
 ### Point d'étape : Respecter des règles de base
 Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
@@ -92,7 +95,7 @@ Voici 5 règles fondamentales :
 - La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide.
 - Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
 - Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
-- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, indexes. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
+- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, index. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
 [L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
 
@@ -100,7 +103,8 @@ Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des él
 
 ## Vidéo 3 - Personnaliser les styles
 
-Un document de qualité est justifié. En modifiant la définition du corps de texte, nous définition une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style corps de texte de ce document.
+
+Un document de qualité est justifié et une césure des mots est appliquée. En modifiant la définition du corps de texte, nous définissons une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style `corps de texte` de ce document.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/kI6hWif4gDsv4K8){: .lien_video }
 
@@ -126,7 +130,7 @@ Reproduire le document dont un pdf vous est donné ici. Aucune mise en forme dir
 La numérotation des chapitres est également une opération réalisée automatiquement par le traitement de textes. Il ne faut pas saisir soi-même ces numéros. L'outil de numérotation des chapitres le fait pour vous. Il faut indiquer quelles sont les noms des styles (structures) identifiant les titres. Bien sûr par défaut ce sont les titre 1, titre 2, etc... Ensuite on choisit le style de numérotation et si on doit faire apparaître la hiérarchie dans le numéro en affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres pour comprendre les impacts sur la présentation de ces numéros.
 [Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/KRVOxjyF7Z901XZ){: .lien_video }
 
-La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, une liste de pages d'index, de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux quel sera le style de la page suivante et le début de sa numérotation.
+La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, des pages d'index ou de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux, puis définir quel sera le style de la page suivante et le début de sa numérotation.
 [Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/3vbyItBq0UC6DWc){: .lien_video }
 
 Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro.
@@ -139,7 +143,7 @@ Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe de
 
 
 ## Video 5 - métadonnées
-Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple les nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet,...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
+Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple le nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet, l'auteur...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/DId9HvSbnxdG55x){: .lien_video }
 
 ## Vidéos avancées
@@ -194,70 +198,13 @@ Une autre fonctionnalité de suivi des versions est illustrée ici.
 
 
 
-## Les restes... 
-
-[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
-
-Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
-Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
-Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
-Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
-Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
-
-
-
-
-### Vidéo 1 - Saisie des éléments de base
-- débuter un document, page blanche sans styleur
-- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
-- énoncer (voix off) les niveaux de titre sans mise en forme
-- faire des fautes, utiliser le correcteur
-- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
-> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
-> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
-Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
-Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
-
-- montrer
- - la correction des maj en début de phrase (après point et espace).
- - la correction DOuble majuscule
- - l'insertion espace insécable devant ; (avec affichage des car non imprim)
- - correction d'un mot mal orthographié
-- le panneau de config des paramètres
-- qu'on peut (dés)activer quand on le veut
-
-- enrigistrer (dossier / fichier / extension-format)
-
-### Avant de démarrer
-
-Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
-- `Microsoft Word` de la suite `Office`
-- `Writer` de la suite `LibreOffice`
-- `Writer` de la suite `OpenOffice`
-
-Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
-
-Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
-
-En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
-- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
-- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
-La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
-
-Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
-
-Nous avons choisi d'utiliser :
-- le format `.odt` pour l'enregistrement des fichiers
-- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
-1'45"
-
 # Le tableur
 
 ## Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
 
 Le tableur est un outil pour *Représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
 
-Un vocabulaire différent accompagne la manipulation du tableur. 
+Un vocabulaire spécifique accompagne la manipulation du tableur. 
 
 Pour représenter ses données, le tableur mémorise des  **relations**. Ces relations sont présentées dans des **tables** qui sont structurées en **lignes** et  **colonnes** à l'intersection desquelles se trouvent les  **cellules**. Une ligne représente une *relation* entre des données stockées dans les colonnes. Et dans chaque colonne on trouve une uniformité des valeurs qui sont de même nature. Les tables sont stockées dans des *feuilles de calcul*.
 
@@ -269,6 +216,10 @@ Interroger et traiter des tables, c'est par exemple :
 - En tirer des diagrammes.
 
 C'est aussi traiter par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, représentés par des *formules*. Les formules sont comme des règles de calcul.
+
+
+
+
 
 ## Dans une cellule 
 
@@ -292,6 +243,13 @@ Faire un traitement c'est
 
 La traduction dans le tableur posera les questions suivantes :  Quelles sont les cellules, les lignes ou les colonnes qui vont  contenir des valeurs en entrée ?  Quelles sont les cellules qui vont contenir des résultats de calcul ?  Comment les organiser ? Comment écrire ces calculs ?
 
+### Analyser un problème 
+L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
+
+Parmi les données manipulées, certaines sont saisies d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
+
+
+### Décrire les calculs
 
 Le calcul va faire référence à des données en entrée : On utilise des *références* aux cellules. Les références des cellules sont composées par les numéros de ligne et de colonne. Exemple : B7 la cellule en colonne B et ligne 7. Les références peuvent être *relatives* ou *absolues*. Les notions relative/absolue  n'ont de sens que lorsqu'on *copie* une cellule contenant une formule dans une autre cellule. 
 
@@ -358,6 +316,65 @@ Si la valeur en A1 est supérieure ou égale à 10, alors la formule prend la va
 
 
 # Le logiciel de présentation
+
+# Les restes... 
+
+[Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
+
+Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
+Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
+Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
+Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
+Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
+
+
+
+
+### Vidéo 1 - Saisie des éléments de base
+- débuter un document, page blanche sans styleur
+- saisir au kilomètre, uniquement les fins de paragraphes et quelques éléments de structure (titres etc.)
+- énoncer (voix off) les niveaux de titre sans mise en forme
+- faire des fautes, utiliser le correcteur
+- titre, sous-titre, titre1, titre2, plusieurs parag de contenu, une liste SANS mise en forme
+> Cette vue est essentiellement séquentielle, les seuls éléments de structure présents sont les paragraphes, mais nous avons déjà utilisé le correcteur orthographique.
+> Les traitements de texte sont des outils puissants qui proposent beaucoup de fonctionalités pour nous aider dans la rédaction, la conception et la présentation de notre travail. Par exemple les correcteurs orthographiques nous alertent en nous signalant des erreurs probables que nous pouvons corriger. Mais d'autres outils existent et s'appliquent parfois automatiquement, ce qui peut être perturbant. En particulier, il existe des fonctionnalités d'auto-correction qui peuvent s'appliquer pendant la frappe. Ces outils sont puissants, il sont capables de corriger à la volée des erreurs de saisie telles que l'oubli d'une majuscule en début de phrase, ou encore l'insertion d'espace insécable devant les ponctuation double afin de respecter les règles typographiques.
+Cet outil est précieux et nous fait gagner du temps tout en amenant de la rigueur. Néanmoins, il faut bien avoir conscience qu'il peut être (dés)activer.
+Par exemple il corrige systématiquement les fautes courantes à partir d'une liste, ou insére une majuscule en début de phrase, tous ces comportements sont paramétrés et nous pouvons choisir de les utiliser ou pas, ils sont en général une aide mais peuvent s'avérer gênants dans certains cas particulier, il est alors imortant de savoir comment les désactiver. Nous vous invitons à regarder de près le paramétrage de cet outil afin d'en comprendre le fonctionnement.
+
+- montrer
+ - la correction des maj en début de phrase (après point et espace).
+ - la correction DOuble majuscule
+ - l'insertion espace insécable devant ; (avec affichage des car non imprim)
+ - correction d'un mot mal orthographié
+- le panneau de config des paramètres
+- qu'on peut (dés)activer quand on le veut
+
+- enrigistrer (dossier / fichier / extension-format)
+
+### Avant de démarrer
+
+Il existe de nombreux logiciels de traitement de textes et trois d'entre eux sont particulièrement répandus :
+- `Microsoft Word` de la suite `Office`
+- `Writer` de la suite `LibreOffice`
+- `Writer` de la suite `OpenOffice`
+
+Tous ces logiciels ont le même objectif et donc les mêmes capacités de traitement (appelées fonctionnalités). Ils présentent de petites différences d'interface en fonction des versions et des systèmes d'exploitation des ordinateurs. Notre objectif n'est pas de les présenter tous, ni même de présenter tout ce dont ils sont capables. Ce que nous voulons que vous reteniez et que vous maîtrisiez est très général et ne dépend pas d'un logiciel en particulier.
+
+Chacun d'entre vous pourra faire les exercices avec le logiciel de son choix à condition de respecter un format de fichier interopérable.
+
+En effet, le choix du logiciel est en fait beaucoup moins important que le format de fichier utilisé. Aujourd'hui 2 grands formats se font concurrence :
+- le format `.odt`(*Open Document Text*) qui est un standard ouvert développé pour l'interopérabilité. Il n'est pas développé par une société particulière mais par un consortium international[^1].
+- le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
+La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
+
+Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
+
+Nous avons choisi d'utiliser :
+- le format `.odt` pour l'enregistrement des fichiers
+- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
+1'45"
+
+
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
 [^2]: l'espace en typographie est un nom féminin.

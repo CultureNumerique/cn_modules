@@ -114,9 +114,7 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
 ```
  
 ``` activité-avancée
-[markdown]::Le numérique au quotidien::
-**Le numérique au quotidien**
-Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
+::Le numérique au quotidien::[markdown]Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
     - Domotique
     - Transports
     - Vêtements
@@ -159,7 +157,7 @@ Voici quelques liens que nous vous proposons mais que vous avez sûrement trouv�
 
 # Historique informatique
 
-  [Historique](https://player.vimeo.com/video/122104231){: .lien_video }
+[Historique](https://player.vimeo.com/video/122104231){: .lien_video }
 
 
 Les premiers ordinateurs ont été conçus et réalisés vers la fin de la
@@ -272,7 +270,7 @@ Après avoir effectué vos recherches sur ces personnes et cette machine, rédig
 {####
 ## Personnages importants
 ### Ada Lovelace
-![Ada Lovelace](media/adalovelace.jpg){: .imggauche}
+![Ada Lovelace](media/adalovelace.jpg)
 *Ada Lovelace* est une **mathématicienne**, fille du poète Lord Byron qui travaille au milieu du **XIXeme** avec Charles **Babbage** sur un projet que nous pourrions qualifier de **premier ordinateur**.
 Ce projet n'aboutira finalement pas dans un succès commercial mais aura contribué à produire les **bases de l'informatique**.
 Le rôle d'Ada Lovelace dans ce projet a été tel qu'elle a été depuis qualifiée de *première programmeuse*.
@@ -313,13 +311,12 @@ Essayez de tracer un diagramme ou une courbe pour représenter cette évolution.
 ![ENIAC](media/ENIAC.gif)
 L'un des tout premiers ordinateurs, l'`ENIAC` a été réalisé en **1946**. Il avait une vitesse d'horloge de **100khz**, ce qui signifie qu'il était capable de faire **100 000 opérations élémentaires par seconde**. Ces opérations étaient par exemple des additions sur des nombres simples. Les actions complexes que l'`ENIAC` réalisait étaient *décomposées* en une multitude d'opérations élémentaires. C'est toujours le cas pour tous les programmes informatiques.
 Ces caractéristiques techniques peuvent nous paraître ridicules mais elles correspondent à calculer en **3s** ce que des mathématiciens sont capables de faire *à la main* en **3 jours**.
-------------------
+### 
 En **1976**, sort l'`Apple I` avec une fréquence d'horloge de **1 Mhz** (1 Million d'opérations élémentaires par seconde). En trente ans, la puissance a été **multipliée par 10** alors que l'encombrement est passé de la taille d'une maison (30 tonnes, 170 m2) à celui d'une machine qui tient sur une table.
-------------------
 L'`IBM-PC` quant à lui apparaît en **1981** et *tourne* à une vitesse de **4,77Mhz**. La vitesse a donc été multipliée par presque 5 en 5 ans.
-------------------
+### 
 En **2010**, une des premières tablettes, l'`IPAD` est proposé sur le marché avec un processeur travaillant à 1Ghz, soit **1 milliards d'opérations élémentaires par seconde**. Notons que ces opérations élémentaires sont de plus en plus complexes, ce qui accentue encore l'augmentation de la puissance des machines. 1Ghz correspond à 200 fois 5Mhz, l'IPAD est donc plus de **200 fois plus puissant** que les premiers PC.
-------------------
+### 
 En **2013**, le `Samsung Galaxy S4` est un *smartphone* qui tient dans la main et dans la poche et qui a une fréquence d'horloge supérieure à **2Ghz**. On pourrait ajouter que ces machines ont plusieurs processeurs qui travaillent ensemble ce qui démultiplie là encore leurs capacités,...
 ![loi de Moore](media/graph_puissance_small.jpg)
 Comme nous l'avons précisé dans la question, la vitesse des processeurs n'est pas le seul élément à prendre en compte, mais il donne une bonne idée de l'évolution de la puissance des machines.
@@ -1202,16 +1199,11 @@ ont montré que cette question dépasse largement le cadre Français.
 ```comprehension
 ::Noms de domaine::
 [markdown]**Comment s'appelle l'organisme qui gère les noms de domaine et les adresses IP ?** Précisez votre réponse pour la France et au niveau mondial.
-{
-=Au niveau mondial  -> ICANN
-=Au niveau de la France  -> AFNIC
-= -> CNIL
-####ICANN pour le niveau mondial et l'AFNIC pour la France. }
+{####ICANN pour le niveau mondial et l'AFNIC pour la France.}
 
 ::Qu'est-ce que l'ISO ?::
 [markdown]**L'ISO est l'organisation internationale de normalisation.**
-{
-TRUE#Il faut revoir la vidéo...#Exact !
+{TRUE#Il faut revoir la vidéo...#Exact !
 ####Vrai, l'ISO est bien l'organisation internationale de normalisation (International Organization for Standardization).
 }
 
