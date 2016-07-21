@@ -269,7 +269,7 @@ Il est bien sûr également possible de modifier la présentation prédéfinis d
 Nous retrouvons aussi l'outil de correction automatique lors de la saisie, les correcteurs orthographique et toutes les aides à la saisie.
 La génération  d'un index ou d'une table des matières suit la même logique, ainsi que l'insertion de marque, de repère ou de renvois de notes.
 Bien sûr chaque logiciel a son interface propre et le nom des menus ou des outils peut varier d'une version à une autre, mais il est important de retenir que les notions vues dans ce cours ne sont pas spécifiques à un logiciel mais communes à tous les traitements de texte.
-[petite démo Word](){: .lien_video }
+[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .lien_video }
 
 ### Autres points possibles à aborder
 - présentation de la création de liste pendant la frappe
