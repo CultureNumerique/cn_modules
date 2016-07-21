@@ -17,7 +17,7 @@ appréhender, sont souvent très mal utilisés. Leur maîtrise est une
 compétence valorisable pour la suite de vos études et votre future
 entrée dans la vie professionnelle.
 
-**Modalités : ** le cours introduit les savoir-faire avec textes et
+**Modalités :** le cours introduit les savoir-faire avec textes et
 vidéos qui n'ont pas la prétention d'être des tutoriaux
 exhaustifs. Vous êtes fortement encouragés à utiliser le forum pour
 poser des questions et répondre aux questions, à interpeller les
