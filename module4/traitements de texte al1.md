@@ -48,7 +48,7 @@ actions, la forme et la couleur des boutons, les icones et
 l'organisation des menus varient d'un logiciel à un autre, d'une
 version à une autre, d'une machine à une autre mais les
 fonctionnalités sont globalement les mêmes. La *structure du document*
-sera définie par l'intermédiaire de *styles* grace aux niveaux de
+sera définie par l'intermédiaire de *styles* grâce aux niveaux de
 titre. Il faut noter l'ambiguité du terme "style" car il sera
 également utilisé pour la mise en forme du document. Cette double
 fonction peut amener à de mauvais usages.
@@ -90,11 +90,11 @@ L'assistance à la saisie effectue des remplacements automatiques : elle a mis e
 
 ### Repérer les composants du texte
 
-Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes.
+Les **caractères**. La plupart sont visibles, mais certains sont invisibles en particulier les espaces. Certains caractères sont aussi interprétés par le logiciel comme une commande ou une déclaration, c'est par exemple le caractère qui marque la fin de paragraphe, ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui qui ajoute une espace insécable. C'est là une première difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une espace typographique entre deux mots dans un soucis de présentation du document. Mais l'espace déclare également la séparation de deux mots. Dans la première fonction, on pourrait vouloir augmenter cette séparation dans le rendu visuel et donc se faire suivre deux espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre ces deux espaces. La convention qui est choisie est de ne pas se faire suivre deux espaces et faire confiance au logiciel pour réaliser la meilleure présentation. Lorsque deux ou plusieurs espaces sont saisis, les fonctions du traitement de texte qui proposent une bonne présentation sont mises en difficulté, car les conventions de saisie ne sont pas respectées. Le même raisonnement s'applique pour les paragraphes.
 
 Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut être intéressant pour bien comprendre ce qui a été saisi.
 
-Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. Certaines règles typographiques définissent l'espace qui doit être placé entre les mots, les symboles de ponctuation, les coupures de ligne. Ces règles sont propres à la langue, par exemple en français une espace précède le signe :, mais pas en anglais.
+Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. Certaines règles typographiques définissent l'espace qui doit être placé entre les mots, les symboles de ponctuation, les coupures de ligne. Ces règles sont propres à la langue, par exemple en français une espace précède le signe `:`, mais pas en anglais.
 
 Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de `Majuscule-Entrée` qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
 
@@ -119,7 +119,7 @@ Reproduire l'exemple en vidéo.
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
-Les logiciels de traitement de textes offrent tous la possibilité d'afficher la liste des styles disponibles. (avec LibreOffice, on peut utiliser la touche F11, le menu Style/Style et formatage ou encore le tiroir de droite) Nous pouvons voir cette liste de styles comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments de structure du document : paragraphes, caractères, cadres (flottants), pages ou listes.
+Les logiciels de traitement de textes offrent tous la possibilité d'afficher la liste des styles disponibles (avec LibreOffice, on peut utiliser la touche F11, le menu Style/Style et formatage ou encore le tiroir de droite). Nous pouvons voir cette liste de styles comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments de structure du document : paragraphes, caractères, cadres (flottants), pages ou listes.
 [L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .lien_video }
 
 On associe facilement un style à un élément, ici des caractères en les sélectionnant et en cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
@@ -154,12 +154,11 @@ Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des él
 
 ## Vidéo 3 - Personnaliser les styles
 
-
-Un document de qualité est justifié et une césure des mots est appliquée. En modifiant la définition du corps de texte, nous définissons une règle générale qui va s'appliquer à tout le document, ou plutôt tous les paragraphes de style `corps de texte` de ce document.
+Un document de qualité est justifié et une césure des mots est appliquée. En modifiant la définition du corps de texte, nous définissons une règle générale qui va s'appliquer à tout le document, ou plutôt à tous les paragraphes de style `corps de texte` de ce document.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
 
-Des règles de mise en forme s'appliquent aussi sur les caractères comme pour les accentuations, accentuations fortes.
+Des règles de mise en forme s'appliquent aussi sur les caractères comme pour les accentuations ou les accentuations fortes.
 
 [Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
 
@@ -167,7 +166,7 @@ Parfois, certains éléments de structure sont propres à un certain type de doc
 
 [Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
 
-Bien sûr, la définition de nouvelles structures, donc de nouveaux style s'applique sur les caractères comme les paragraphes. Ici, ce morceau de code ne doit pas être justifié. Il peut être déclaré et mis en forme spécifiquement. Si d'autres parties de code apparaissent dans le document, il seront aussi déclarés comme tels et donc auront la même apparence. 
+Bien sûr, la définition de nouvelles structures, donc de nouveaux style,  s'applique sur les caractères comme les paragraphes. Ici, ce morceau de code ne doit pas être justifié. Il peut être déclaré et mis en forme spécifiquement. Si d'autres parties de code apparaissent dans le document, il seront aussi déclarés comme tels et donc auront la même apparence. 
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
@@ -200,7 +199,7 @@ Les meta-données sont des données à propos du document. Elles sont soit calcu
 ## Vidéos avancées
 
 ### Travail collaboratif
-Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifiations. 
+Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifications. 
 [Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){: .lien_video }
 
 
@@ -216,7 +215,7 @@ Les styles sont organisés dans une hiérarchie. Ce n'est pas qu'une façon de c
 
 ### Mise en forme des listes
 
-Les listes en typographie française utilise des tirets demi-cadratins (Code unicode 2013, https://fr.wikipedia.org/wiki/Tiret#Tiret_moyen). On peut définir donc une liste à la française. C'est un peu technique. 
+Les listes en typographie française utilisent des tirets demi-cadratins (Code unicode 2013, [Tiret-moyen](https://fr.wikipedia.org/wiki/Tiret#Tiret_moyen)). On peut définir donc une liste à la française. C'est un peu technique. 
 
 [Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
@@ -243,7 +242,7 @@ Les listes en typographie française utilise des tirets demi-cadratins (Code uni
 
 ## Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
 
-Le tableur est un outil pour *Représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
+Le tableur est un outil pour *représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
 
 Un vocabulaire spécifique accompagne la manipulation du tableur. 
 
@@ -256,16 +255,16 @@ Interroger et traiter des tables, c'est par exemple :
 - Trier les lignes.
 - En tirer des diagrammes.
 
-C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée.  représentés par des *formules*. Les formules sont comme des règles de calcul.
+C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, et représentée par des *formules*. Les formules sont comme des règles de calcul.
 
 
 ## Dans une cellule 
 
-Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
+Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (du texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
 
 On peut observer des différences entre ce qui est contenu dans la cellule et ce qui est affiché à cause du choix de format. Par exemple, on peut représenter une valeur sous forme de nombre, de pourcentage, ou même de date.
 
-Les formules commencent par le signe =. C'est ce qui distingue une valeur d'une formule. 
+Les formules commencent par le signe `=`. C'est ce qui distingue une valeur d'une formule. 
 
 
 [Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
@@ -290,7 +289,7 @@ La traduction dans le tableur posera les questions suivantes :  Quelles sont les
 ### Analyser un problème 
 L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
 
-Parmi les données manipulées, certaines sont saisies d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
+Parmi les données manipulées, certaines sont saisies et d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
 
 
 ### Décrire les calculs
@@ -420,11 +419,11 @@ En effet, le choix du logiciel est en fait beaucoup moins important que le forma
 - le format `.docx` qui est la réponse apportée par `Microsoft` au format `.odt`.
 La plupart des logiciels récents savent manipuler (ouvrir et enregister) des fichiers dans les 2 formats.
 
-Notons qu'il reste encore beaucoup de vielles versions de `Word` qui qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
+Notons qu'il reste encore beaucoup de vielles versions de `Word` qui ne savent gérer que des fichiers au format `.doc`. Ce format est propriétaire, fermé, pas du tout interopérable et il est devenu obsolète, nous déconseillons vivement son utilisation.
 
 Nous avons choisi d'utiliser :
 - le format `.odt` pour l'enregistrement des fichiers
-- le logiciel `LibreOffice` pour sa faciliter d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
+- le logiciel `LibreOffice` pour sa facilité d'utilisation et la possibilité pour chacun de l'installer gratuitement et librement sur sa machine.
 1'45"
 
 ### Veuves, orphelines, enchaînements
