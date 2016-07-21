@@ -3,19 +3,71 @@
 
 
 <!-- /TOC -->
-# Intro
-Travail collaboratif basé sur l'interaction entre les étudiants. Les petites vidéos illustrent les concepts mais ne sont pas des tutoriaux complets. Utilisez e forum, interpellez les tuteurs si vous en avez besoin, pensez à répondre aux questions posées par les autres participants.
-Le web regorge de ressources que vous pouvez aussi mobiliser.
+# Introduction
+
+Ce cours est dirigé vers les savoir-faire autour de deux types de
+logiciels, le traitement de textes et le tableur, qui sont des
+logiciels dont la maîtrise est essentielle dans la vie universitaire,
+la vie associative et votre future vie professionnelle. Ces
+savoir-faire sont basés sur les modules plus orientés culture
+numérique qui présentent les concepts liés à la gestion de données et
+la gestion des documents. En effet, les bonnes pratiques sont basées
+sur une bonne compréhension des concepts pour une utilisation
+intelligente des logiciels car ces logiciels, assez faciles à
+appréhender, sont souvent très mal utilisés. Leur maîtrise est une
+compétence valorisable pour la suite de vos études et votre future
+entrée dans la vie professionnelle.
+
+**Modalités : ** le cours introduit les savoir-faire avec textes et
+vidéos qui n'ont pas la prétention d'être des tutoriaux
+exhaustifs. Vous êtes fortement encouragés à utiliser le forum pour
+poser des questions et répondre aux questions, à interpeller les
+tuteurs au besoin, à chercher des réponses sur les forums ou sur des
+tutoriaux existants car le web abonde de ressources. Le cours est
+complété par des exercices simples non évalués et des exercices de
+production (créer un document, créer un classeur) qui seront évalués
+par les pairs, c'est-à-dire par vos collègues étudiants inscrits au
+même cours.
 
 # Traitements de texte
 
-## Objectifs de ce cours
-Toutes les interfaces de logiciels de traitement de texte se ressemblent. Nous trouvons au centre une grande zone représentant une page, en haut les menus et une zone de boutons-raccourcis. La forme, les dessins, les couleurs des boutons et des menus varient d'une version à une autre, d'une machine à une autre mais les fonctionnalités sont globalement les mêmes. Le **premier objectif** est la découverte de ces fonctionnalités générales, communes à tous les logiciels, mais qui permettent de comprendre ce qu'est un document numérique, et prendre le recul sur l'usage.
+## Objectifs
 
-Notons que tous les logiciels de ce type utilisent un abus de langage en parlant d'outils de styles car ce sont avant tout des outils qui permettent de structurer et de hiérarchiser le document. La mise en forme associée à ces styles introduit de la confusion dans les différentes vues. En premier lieu, les *styles* sont utilisés pour définir les niveaux de titres et de sous-titres pour déclarer la **structure** du document, les aspects de mise en forme liés à la vue de présentation seront également traités avec cet outil d'où la confusion.
+L'étude des documents fait apparaître les vues séquentielle (la suite
+de caractères), de structure (titre, section, sous-section, ...), de
+méta-données (taille, date de création, auteur, ...) et de
+présentation. On parle aussi de contenu, structure, forme et de
+méat-données. Nous allons voir comment cette étude va nous permettre
+d'utiliser les traitements de textes au mieux de leurs possibilités.
 
-Notons dès à présent que les boutons raccourcis qui sont en bonne place et prêts à être utilisés sont réservés à réaliser de la mise en forme directe. C'est une mise en forme au cas par cas et qui ne privilégie pas la définition de **règles de mise en forme** comme le permettent les définitions de style. Vous savez tous réaliser une mise en forme au cas par cas à l'aide ces boutons. Ce n'est donc pas l'objet de ce cours. Vous savez moins réaliser des règles et c'est précisément sur ce point que porte le **second objectif** de ce cours. Rappelez-vous que les règles de mise en forme sont essentielles pour la manipulation de grands documents et le travail en groupe. Elles permettent d'uniformiser la présentation et appliquer des thèmes ou une charte graphique. Mais puisqu'elles reposent sur la structuration du document, elles permettent d'initier de bonnes pratiques de déclaration de cette structure. Ainsi d'autres traitements permettant de *valoriser des corpus de documents* peuvent s'appliquer, comme par exemple la recherche et l'indexation d'information...
-3'30"
+Le **premier objectif** est la découverte des fonctionnalités
+générales, communes à tous les traitements de textes, pour la
+définition du contenu et de la structure. Ceci est réalisé dans une
+interface avec, au centre, une grande zone représentant une page, en
+haut les menus et une zone de boutons-raccourcis. Les noms des
+actions, la forme et la couleur des boutons, les icones et
+l'organisation des menus varient d'un logiciel à un autre, d'une
+version à une autre, d'une machine à une autre mais les
+fonctionnalités sont globalement les mêmes. La *structure du document*
+sera définie par l'intermédiaire de *styles* grace aux niveaux de
+titre. Il faut noter l'ambiguité du terme "style" car il sera
+également utilisé pour la mise en forme du document. Cette double
+fonction peut amener à de mauvais usages.
+
+Le **second objectif** est d'apprendre à définir des *règles de mise
+en forme* associées aux styles. Il est important de noter que les
+boutons raccourcis faciles d'utilisation permettent de réaliser des
+mises en forme directes et rapides. Mais ce sont des mises en forme au
+cas par cas qui ne peuvent pas traiter de grands documents (vous
+mémoires de licence, de master et de doctorat, vos rapports
+d'étude). Les règles de mise en forme sont essentielles pour un bon
+usage des traitements de textes, pour la manipulation de grands
+documents et pour le travail en groupe. Elles permettent, en effet, de
+modifier la mis en forme d'un document complet en une action, de
+numéroter les sections et les pages d'un grand document, d'uniformiser
+la présentation et d'appliquer des thèmes ou une charte graphique à
+condition d'avoir préalablement correctement défini la structure de
+votre document.   3'30"
 
 ## Vidéo 1 : La saisie
 
