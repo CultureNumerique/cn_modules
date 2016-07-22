@@ -28,6 +28,15 @@ production (créer un document, créer un classeur) qui seront évalués
 par les pairs, c'est-à-dire par vos collègues étudiants inscrits au
 même cours.
 
+**Note :** Les démonstrations sont réalisées avec LibreOffice Writer
+  pour le traitement de textes et LibreOffice Calc pour le tableur car
+  ils sont gratuits, disponibles sur tous les ordinateurs et faciles à
+  installer. Toutes les notions de ce cours sont transférables dans
+  tout  traitement de texte ou tout tableur de votre choix
+  modulo des changements de noms de menus, des changements de forme
+  des raccourcis, c'est-à-dire des modifications superficielles des
+  interaces des logiciels.
+
 # Traitements de texte
 
 ## Objectifs
@@ -298,14 +307,14 @@ les règles fondamentales suivantes :
   éléments de liste, des chapitres, des pages ; références, table des
   matières, bibliographies, index.
 
-Si vous respectez ces règles, alors le logiciel va pouvoir calculer
-pour la meilleure mise en forme possible l'espacment entre les mots,
-la taille des interlignes, l'espacement entre paragraphes,
-l'espacement avant et après les titres, les marges, les décalages, les
-alignements, ... Vous allez pouvoir agir sur tous ces éléments pour
-**personnaliser la mise en forme en modifiant les styles**. Vous pourrez
-également numéroter automatiquement les sections, créer une table des
-matières, ... C'est l'objet de la suite de notre cours.
+Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
+ meilleure mise en forme possible : l'espacement entre les mots, la
+ taille des interlignes, l'espacement entre paragraphes, l'espacement
+ avant et après les titres, les marges, les décalages, les
+ alignements, ...  Vous pourrez également numéroter automatiquement
+ les sections, créer une table des matières, ... Vous allez pouvoir
+ agir sur tous ces éléments pour **personnaliser la mise en forme en
+ modifiant les styles**, c'est l'objet de la suite de notre cours.
 
 ## Vidéo 3 - Personnaliser les styles
 
