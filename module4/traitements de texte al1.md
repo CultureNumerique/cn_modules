@@ -6,7 +6,7 @@
 # Introduction
 
 Ce cours est dirigé vers les savoir-faire autour de deux types de
-logiciels, le traitement de textes et le tableur, qui sont des
+logiciels, le traitement de texte et le tableur, qui sont des
 logiciels dont la maîtrise est essentielle dans la vie universitaire,
 la vie associative et votre future vie professionnelle. Ces
 savoir-faire sont basés sur les modules liés à la gestion de données
@@ -37,10 +37,10 @@ de caractères), de structure (titre, section, sous-section, ...), de
 présentation et de méta-données (taille, date de création, auteur,
 ...). On parle aussi de contenu, structure, forme et
 méta-données. Nous allons voir que cette vision va nous permettre
-d'utiliser les traitements de textes au mieux de leurs possibilités.
+d'utiliser les traitements de texte au mieux de leurs possibilités.
 
 Le **premier objectif** est la découverte des fonctionnalités
-générales, communes à tous les traitements de textes, pour la
+générales, communes à tous les traitements de texte, pour la
 définition du contenu et de la structure. Ceci est réalisé dans une
 interface avec, au centre, une grande zone représentant une page, en
 haut les menus et une zone de boutons-raccourcis. Les noms des
@@ -60,7 +60,7 @@ mises en forme directes et rapides. Mais ce sont des mises en forme au
 cas par cas qui ne peuvent pas traiter de grands documents (vos
 mémoires, vos rapports de stage et vos documents professionnels). Les
 règles de mise en forme sont essentielles pour un bon usage des
-traitements de textes, pour la manipulation de grands documents et
+traitements de texte, pour la manipulation de grands documents et
 pour le travail en groupe. Elles permettent, en effet, de modifier la
 mise en forme d'un document complet en une action, de numéroter les
 sections et les pages d'un grand document, d'uniformiser la
@@ -68,7 +68,7 @@ présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
 condition d'avoir préalablement correctement défini la structure de
 votre document.  3'30"
 
-## Vidéo 1 : Contenu et structure
+## Vidéo 1 : saisie, contenu et structure
 
 ### Saisie du contenu et structure de base
 
@@ -87,7 +87,7 @@ La structure de base est définie avec les niveaux de titre : de niveau
 1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
 pouvez faire une saisie complète du contenu puis définir la structure
 de base ou vous pouvez définir cette structure au cours de la saisie
-comme sur l'exemple de video.  Dans cet exemple, on a saisi le texte
+comme sur l'exemple de la video.  Dans cet exemple, on a saisi le texte
 du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le
 sous titre, puis le premier titre de niveau 1, et les premières
 phrases du premier paragraphe. Remarquez que le paragraphe suivant est
@@ -113,41 +113,76 @@ règles par défaut s'appliquent.
 
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
+### Saisie et éléments de structure
 
-### La structure du document
+Pour manipuler correctement votre document comme mettre les retours à
+la ligne au bon endroit ou faire les sauts de page correctement, le
+traitement de texte doit pouvoir reconnaître les mots, les
+paragraphes, les listes. nous expliquons ici quelques règles à
+respecter pour ce faire.
 
-Les **caractères**. La plupart sont visibles, mais certains sont
-invisibles en particulier les espaces. Certains caractères sont aussi
+Les **caractères**. La plupart, par exemple, lettres, chiffres et
+symboles de ponctuation, sont visibles, mais certains sont invisibles
+, en particulier, les espaces. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
-c'est par exemple le caractère qui marque la la fin de paragraphe, ou
-ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation), celui
-qui ajoute une espace insécable. C'est là une première difficulté,
-l'espace par exemple a plusieurs fonctions. Ajouter une espace
-typographique entre deux mots dans un soucis de présentation du
-document. Mais l'espace déclare également la séparation de deux
-mots. Dans la première fonction, on pourrait vouloir augmenter cette
-séparation dans le rendu visuel et donc se faire suivre deux
-espaces. Mais on perd le sens de la deuxième fonction puisqu'il n'y a
-pas de mot entre ces deux espaces. La convention qui est choisie est
-de ne pas se faire suivre deux espaces et faire confiance au logiciel
-pour réaliser la meilleure présentation. Lorsque deux ou plusieurs
-espaces sont saisis, les fonctions du traitement de texte qui
-proposent une bonne présentation sont mises en difficulté, car les
-conventions de saisie ne sont pas respectées. Le même raisonnement
-s'applique pour les paragraphes.
+c'est, par exemple, le caractère qui marque la la fin de paragraphe,
+ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation),
+celui qui ajoute une espace insécable. C'est là une première
+difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une
+espace typographique entre deux mots est utile à la présentation du
+document, mais il déclare également la séparation de deux mots. Dans
+la première fonction, on pourrait vouloir augmenter cette séparation
+dans le rendu visuel et donc se faire suivre deux espaces. Mais on
+perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre
+ces deux espaces. La convention choisie est de **ne jamais avoir deux
+espaces consécutifs** et de faire confiance au logiciel pour réaliser
+la meilleure présentation. En effet, si deux ou plusieurs espaces se
+suivent, le traitement de texte est mis en difficulté et la mise en
+forme peut être insatisfaisante. Donc, *visualiser tous les
+caractères*, y compris ceux qui sont invisibles, aide à bien
+comprendre le contenu saisi.
 
+Les **mots**. Le logiciel les reconnaît car ils sont séparés par des
+espaces ou des signes de ponctuation. Des règles typographiques,
+spécifiques à chaque langue, définissent les espaces et symboles de
+ponctuation. Par exemple, en français une espace précède toujours le
+signe `:` alors qu'il n'y pas d'espace avant le signe `:` en
+anglais. Le respect de ces règles est impérative et, souvent, le
+logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
-Donc, visualiser tous les caractères, y compris ceux qui sont invisibles peut être intéressant pour bien comprendre ce qui a été saisi.
+Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
+*fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin
+de ligne dans le rendu du document est calculée par le traitement de
+texte et donc la touche entrée ne marque pas la fin de ligne. Il est
+parfois nécessaire de forcer une fin de ligne dans certains
+paragraphes comme les poèmes. C'est la combinaison de
+`Majuscule-Entrée` qui permet de réaliser une fin de ligne tout en
+gardant le même paragraphe. Puisque chaque appui sur la touche
+*Entrée* crée un nouveau paragraphe, les titres et les sous-titres
+sont donc techniquement des paragraphes comme les paragraphes de
+texte. Comme pour les espaces et les mots, la convention choisie est
+de **ne jamais avoir deux fins de paragraphe consécutives** et de
+faire confiance au logiciel pour réaliser la meilleure
+présentation.
 
-Les **mots**. Ils sont séparés par des espaces ou des signes de ponctuation. Certaines règles typographiques définissent l'espace qui doit être placé entre les mots, les symboles de ponctuation, les coupures de ligne. Ces règles sont propres à la langue, par exemple en français une espace précède le signe `:`, mais pas en anglais.
+Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
+  traitement de texte permet de les déclarer comme titres en précisant
+  leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
+  de niveau 1 pour une section, titre de niveau 2 pour une
+  sous-section, titre de niveau 3 pour une sous-sous-section. 
 
-Les **paragraphes**.  Ce sont des ensembles de mots séparés par des *fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin de ligne est calculée par le traitement de texte et donc la touche entrée ne marque pas la fin de ligne. Il est parfois nécessaire de forcer une fin de ligne dans certains paragraphes comme les poèmes. C'est la combinaison de `Majuscule-Entrée` qui permet de réaliser une fin de ligne tout en gardant le même paragraphe. Puisque chaque appui sur la touche *Entrée* crée un nouveau paragraphe, les titres et les sous-titres sont donc techniquement des paragraphes comme les paragraphes de texte. Comme indiqué ci-dessus, on évite à tout prix les paragraphes vides qui mettent en défaut de nombreuses fonctions du traitement de textes.
+Les **listes**.  Ce sont des suites de paragraphes reliés entre eux
+pour permettre une présentation cohérente. Pour assurer cette
+cohérence, beaucoup de caractéristiques sont définies sous forme de
+règles utilisées par le logiciel pour l'apparence des listes. C'est
+notamment les symboles utilisés pour les listes à puce, les
+espacements, la numérotation des éléments, etc. La logique est donc de
+déclarer la liste et de laisser le logiciel s'occuper de l'apparence
+avec les règles de mise en forme que vous indiquez.
 
-**Les titres**. Ce sont bien des paragraphes, mais le logiciel de traitement de texte permet de les déclarer comme titres en précisant leur niveau. Le niveau est la profondeur dans une hiérarchie : titre (niveau 1), sous-titre (niveau 2), sous-sous-titre (niveau 3), etc.
-
-Les **listes**.  C'est une suite d'éléments reliés entre eux pour permettre une présentation cohérente. Pour assurer cette cohérence, beaucoup de caractéristiques sont définies sous forme de règles utilisées par le logiciel pour l'apparence des listes. C'est notamment les symboles utilisés pour les listes à puce, les espacements, la numérotation des éléments, etc. La logique est donc de déclarer la liste et de laisser le logiciel s'occuper de l'apparence avec les règles de mise en forme que vous indiquez.
-
-Repérer les composants du texte permet de comprendre la structure d'un document, saisir à la fois le contenu et la structure d'un document et se préparer pour une mise en forme efficace et uniforme du document.
+Repérer les composants du texte permet de comprendre la structure d'un
+document, saisir à la fois le contenu et la structure d'un document et
+se préparer pour une mise en forme efficace et uniforme du document.
 
 
 
@@ -159,43 +194,118 @@ Reproduire l'exemple en vidéo.
 ```
 
 
-## Vidéo 2 - structurer son document
- Chaque élément de liste est un paragraphe. On active la structure de liste par ce bouton qui est un raccourci du menu format/puces et numérotation.  On ajoute un nouvel élément en ajoutant un paragraphe. On peut avoir plusieurs paragraphes dans le même élément de liste en utilisant la touche `Retour arrière` une seule fois en début de paragraphe. Deux appuis de `retour arrière` quittent la structure de liste.
+## Vidéo 2 - Styles et structure
+
+Nous avons déja vu comment utiliser les styles pour la structure de
+ base. Nous voyons ici comment définir d'autres éléments de structure
+ en commençant par les listes.
+
+Chaque élément de liste est un paragraphe. On active la structure de
+ liste par ce bouton qui est un raccourci du menu format/puces et
+ numérotation.  On ajoute un nouvel élément en ajoutant un
+ paragraphe. On peut avoir plusieurs paragraphes dans le même élément
+ de liste en utilisant la touche `Retour arrière` une seule fois en
+ début de paragraphe. Deux appuis de `retour arrière` quittent la
+ structure de liste.
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
-Les logiciels de traitement de textes offrent tous la possibilité d'afficher la liste des styles disponibles (avec LibreOffice, on peut utiliser la touche F11, le menu Style/Style et formatage ou encore le tiroir de droite). Nous pouvons voir cette liste de styles comme la liste des structures possibles. Se placer dans un paragraphe du texte permet de voir quel style lui est associé. L'ensemble des styles possibles est très grand et organisé selon une hiérarchie. On peut restreindre cette liste à ceux qui sont appliqués dans le document ou à ceux qui sont souvent utilisés (styles automatiques). Les styles portent sur différents éléments de structure du document : paragraphes, caractères, cadres (flottants), pages ou listes.
-[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .lien_video }
+Les logiciels de traitement de texte offrent tous la possibilité
+d'afficher la liste des styles disponibles (avec LibreOffice, on peut
+utiliser la touche F11, le menu Style/Style et formatage ou encore le
+tiroir de droite). Nous pouvons voir cette liste de styles comme la
+liste des structures possibles. Se placer dans un paragraphe du texte
+permet de voir quel style lui est associé. L'ensemble des styles
+possibles est très grand et organisé selon une hiérarchie. On peut
+restreindre cette liste à ceux qui sont appliqués dans le document ou
+à ceux qui sont souvent utilisés (styles automatiques). Les styles
+portent sur différents éléments de structure du document :
+paragraphes, caractères, cadres (flottants), pages ou listes.
+[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){:
+.lien_video }
 
-On associe facilement un style à un élément, ici des caractères en les sélectionnant et en cliquant deux fois sur le style voulu. Ici, au lieu de mettre en gras et en italique, nous préférons déclarer des texte plus ou moins accentués. Il faut bien comprendre la différence. Même si les textes déclarés en accentuation forte apparaissent en gras, ce n'est pas identique de presser le bouton gras. En les déclarant de cette façon nous ajoutons du sens que les logiciels pourront exploiter dans d'autres situations : rendu oral, autre présentation sur mobile, ou simplement un autre choix de présentation graphique.
-[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){: .lien_video }
+On associe facilement un style à un élément, ici des caractères en les
+sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
+lieu de mettre en gras et en italique, nous préférons déclarer des
+texte plus ou moins accentués. Il faut bien comprendre la
+différence. Même si les textes déclarés en accentuation forte
+apparaissent en gras, ce n'est pas identique de presser le bouton
+gras. En les déclarant de cette façon nous ajoutons du sens que les
+logiciels pourront exploiter dans d'autres situations : rendu oral,
+présentation sur un autre support comme un objet portable, ou
+simplement pouvoir modifier facilement dans tout le texte la mise en
+forme choisie pour les éléments déclarés en style accentuation forte.
+[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){:
+.lien_video }
 
-Comme nous l'avons dit ci-dessus, l'affichage des caractère non imprimables ou spéciaux permet de savoir exactement ce qui a été saisi. On voit les espaces et les fins de paragraphe, on peut déceler des répétitions de ces symboles habituellement invisibles. On voit également la représentation des fins de ligne qui ne sont pas des fins de paragraphes dans cette partie de texte.
-[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){: .lien_video }
+Comme nous l'avons dit ci-dessus, l'affichage des caractères
+invisibles permet de savoir exactement ce qui a été saisi. On voit les
+espaces et les fins de paragraphe, on peut déceler des répétitions de
+ces symboles et les supprimer. On voit également la représentation des
+fins de ligne qui ne sont pas des fins de paragraphes dans cette
+partie de texte.
+[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){:
+.lien_video }
 
-Le logiciel réalise souvent des opérations pour vous aider à bien écrire votre document, comment par exemple ici dans le cas de l'insertion d'une note de bas de page. Le numéro est inséré automatiquement et sera adapté si d'autres notes sont ajoutées. Le style choisi pour la note sera adapté automatiquement.
-[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){: .lien_video }
+Le logiciel réalise souvent des opérations pour vous aider à bien
+écrire votre document, comment, par exemple, l'insertion d'une note de
+bas de page. Le numéro est inséré automatiquement et sera adapté si
+d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
+automatiquement.
+[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){:
+.lien_video }
 
-Un autre type de numéros ou textes gérés automatiquement par le logiciel sont les renvois aux chapitres, illustrations, figures etc. Remarquez la liste des éléments auxquels on peut faire référence. Vous commencez à comprendre en quoi la déclaration de structures est vraiment intéressante et valorisante. Vous voyez les titres, les éléments de liste, les figures, etc... Si ces références ne sont pas suffisantes il reste possible de définir soi-même des positions. Cette technique de déclaration et de renvois est utilisée dans tout langage de description de documents, notamment en HTML. Ce sont les fameux liens HTML qui peuvent être internes aux documents, mais aussi, et c'est là une grande originalité du HTML, entre documents.
-[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){: .lien_video }
-[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){: .lien_video }
+Un autre type de numéros ou textes gérés automatiquement par le
+logiciel sont les renvois aux chapitres, illustrations, figures,
+... Remarquez la liste des éléments auxquels on peut faire
+référence. Vous commencez à comprendre en quoi la déclaration de
+structures est vraiment intéressante et valorisante. Vous voyez les
+titres, les éléments de liste, les figures, etc...  Cette technique de
+déclaration et de renvois est utilisée dans tout langage de
+description de documents. Par exemple, en HTML, on utilise des
+(hyper-)liens qui peuvent être internes au document (renvoi vers une
+partie du document) ou externes (renvoi vers un autre document).
+[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){:
+.lien_video }
+[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){:
+.lien_video }
 
-Finissons par un examen de la structure arborescente de ce document. La manipulation de cette structure permet de déplacer des sections entières ou de réorganiser le plan. 
-[Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){: .lien_video }
+Terminons par un examen de la structure arborescente de ce
+document. La manipulation de cette structure permet de déplacer des
+sections entières ou de réorganiser le plan.
+[Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){:
+.lien_video }
 
-
-### Point d'étape : Respecter des règles de base
-Lorsqu'on récupère un texte à mettre en forme ou qu'on commence à saisir un nouveau texte, il est important de respecter scrupuleusement quelques règles élémentaires qui vont nous permettre à la fois de gagner beaucoup de temps et par ailleurs d'avoir un gage de qualité du résultat. L'élégance du document, sa valorisation, sa réutilisabilité, et votre efficacité pour toutes les opérations de mise à jour et transformation du document seront autant d'illustration de cette qualité. Si nous sommes les seuls responsables du contenu de notre texte, qualité du fond, de la structure, du niveau de langue et de l'orthographe, il vaut mieux laisser au logiciel le travail de mise en forme pour la vue de présentation. Les traitements automatiques sont en général de bien meilleure qualité qu'un travail *à la main*. Cela ne veut pas dire que nous ne pouvons pas choisir la forme du résultat, bien au contraire.
-Voici 5 règles fondamentales :
-- L'espace sépare les mots. On ne doit donc pas saisir plusieurs espaces l'une derrière l'autre.
-- La touche entrée sépare les paragraphes. On ne doit donc pas saisir deux *fins de paragraphes* l'une derrière l'autre, c'est à dire aucune ligne vide.
-- Les interlignes, l'espace entre paragraphes, l'aération du texte, les alinéas, les marges, les décalages, les alignements sont bien mieux gérées par les outils de mise en forme.
-- Éviter autant que possible la mise en forme directe au cas par cas, que ce soit par les menus (format) ou par les boutons-raccourcis.
-- Ne pas saisir des valeurs qui sont susceptibles de varier et qui peuvent être générées par le traitement de textes : numérotation des éléments de liste, des chapitres, des pages ; références, table des matières, bibliographies, index. Tous ces éléments dépendent du contenu principal du document et seront créés automatiquement par le logiciel grâce à des commandes spécifiques.
 
 [L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
 
-Nous pouvons maintenant personnaliser l'apparence du texte en déclarant des éléments de présentation. C'est la modification des styles. 
+## Point d'étape : respecter des règles de base
+
+L'auteur d'un document est en charge du contenu et de sa qualité, du
+niveau de la langue et de l'orthographe, de la structure du
+document. Le traitement de texte réalisera le travail de mise en forme
+à la condition d'avoir correctement défini la structure en respectant
+les règles fondamentales suivantes :
+
+- espace et ponctuation séparent les mots. On ne doit
+  donc **jamais avoir plusieurs espaces consécutifs**.
+- L'appui sur la touche Entrée sépare les paragraphes. On ne doit
+**jamais avoir plusieurs fins de paragraphes consécutives**.
+- Éviter autant que possible la mise en forme directe au cas par cas,
+  que ce soit par les menus (format) ou par les boutons-raccourcis.
+- Ne pas saisir des valeurs qui sont susceptibles de varier et qui
+  peuvent être générées par le traitement de textes : numérotation des
+  éléments de liste, des chapitres, des pages ; références, table des
+  matières, bibliographies, index.
+
+Si vous respectez ces règles, alors le logiciel va pouvoir calculer
+pour la meilleure mise en forme possible l'espacment entre les mots,
+la taille des interlignes, l'espacement entre paragraphes,
+l'espacement avant et après les titres, les marges, les décalages, les
+alignements, ... Vous allez pouvoir agir sur tous ces éléments pour
+**personnaliser la mise en forme en modifiant les styles**. Vous pourrez
+également numéroter automatiquement les sections, créer une table des
+matières, ... C'est l'objet de la suite de notre cours.
 
 ## Vidéo 3 - Personnaliser les styles
 
