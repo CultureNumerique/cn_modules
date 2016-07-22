@@ -35,7 +35,7 @@ même cours.
   tout  traitement de texte ou tout tableur de votre choix
   modulo des changements de noms de menus, des changements de forme
   des raccourcis, c'est-à-dire des modifications superficielles des
-  interaces des logiciels.
+  interfaces des logiciels.
 
 # Traitements de texte
 
@@ -77,7 +77,7 @@ présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
 condition d'avoir préalablement correctement défini la structure de
 votre document.  3'30"
 
-## Vidéo 1 : saisie, contenu et structure
+## Vidéos 1 : saisie, contenu et structure
 
 ### Saisie du contenu et structure de base
 
@@ -203,7 +203,7 @@ Reproduire l'exemple en vidéo.
 ```
 
 
-## Vidéo 2 - Styles et structure
+## Vidéos 2 - styles et structure
 
 Nous avons déja vu comment utiliser les styles pour la structure de
  base. Nous voyons ici comment définir d'autres éléments de structure
@@ -316,21 +316,40 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  agir sur tous ces éléments pour **personnaliser la mise en forme en
  modifiant les styles**, c'est l'objet de la suite de notre cours.
 
-## Vidéo 3 - Personnaliser les styles
+## Vidéos 3 - personnaliser les styles
 
-Un document de qualité est justifié et une césure des mots est appliquée. En modifiant la définition du corps de texte, nous définissons une règle générale qui va s'appliquer à tout le document, ou plutôt à tous les paragraphes de style `corps de texte` de ce document.
+Commeçons par la mise en forme des paragraphes, en modifiant la
+définition du style `corps de texte`, nous définissons une règle
+générale qui va s'appliquer à tout le document, ou plutôt à tous les
+paragraphes de style `corps de texte` de ce document. On chosit
+souvent de justifier des deux côtés pour avoir des marges correctement
+alignées des deux côtés et une césure des mots est appliquée.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
 
-Des règles de mise en forme s'appliquent aussi sur les caractères comme pour les accentuations ou les accentuations fortes.
+On peut également choisir des règles de mise en forme pour les
+caractères comme pour les accentuations ou les accentuations
+fortes. Si vous n'êtes pas satisfait de la règle choisie, vous la
+modifierez pour changer la mise en forme dans tout le document en une
+seule opération.
 
 [Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
 
-Parfois, certains éléments de structure sont propres à un certain type de document. Par exemple ici, nous avons des noms de logiciels. Déclarer ce nouvel élément de structure ajoute de la sémantique, du sens au document qui pourra être exploité par d'autres logiciels, mais facilitera également l'uniformisation de la présentation. 
+Parfois, certains éléments de structure sont propres à un certain type
+de document. Par exemple ici, nous avons des noms de
+logiciels. Déclarer ce nouvel élément de structure ajoute de la
+sémantique, du sens au document qui pourra être exploité par d'autres
+logiciels, mais facilitera également l'uniformisation de la
+présentation de tous les noms de logiciel.
 
 [Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
 
-Bien sûr, la définition de nouvelles structures, donc de nouveaux style,  s'applique sur les caractères comme les paragraphes. Ici, ce morceau de code ne doit pas être justifié. Il peut être déclaré et mis en forme spécifiquement. Si d'autres parties de code apparaissent dans le document, il seront aussi déclarés comme tels et donc auront la même apparence. 
+Bien sûr, la définition de nouvelles structures, donc de nouveaux
+style, s'applique sur les caractères comme les paragraphes. Ici, notre
+document contient un morceau de code qui ne doit pas être justifié. Il
+peut être déclaré et mis en forme spécifiquement. Mais si votre
+document contenait d'autres codes, vous associeriez une structure et
+définiriez une mise en forme commune pour tous ces codes.  
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
@@ -339,15 +358,37 @@ Reproduire le document dont un pdf vous est donné ici. Aucune mise en forme dir
 {}
 ```
 
-## Vidéos 4 - Tables et numérotations 
+## Vidéos 4 - numérotation et tables associées 
 
-La numérotation des chapitres est également une opération réalisée automatiquement par le traitement de textes. Il ne faut pas saisir soi-même ces numéros. L'outil de numérotation des chapitres le fait pour vous. Il faut indiquer quelles sont les noms des styles (structures) identifiant les titres. Bien sûr par défaut ce sont les titre 1, titre 2, etc... Ensuite on choisit le style de numérotation et si on doit faire apparaître la hiérarchie dans le numéro en affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres pour comprendre les impacts sur la présentation de ces numéros.
-[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .lien_video }
+La numérotation des chapitres ne doit jamais être faite manuellement
+car elle est réalisée automatiquement par le traitement de textes à
+partir de la structure.  Il suffit d'indiquer quels sont les noms des
+styles (structures) identifiant les titres, en général, ce sont les
+titre 1, titre 2, etc... Ensuite on choisit le style de numérotation
+et si on doit faire apparaître la hiérarchie dans le numéro en
+affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
+pour comprendre les impacts sur la présentation de ces numéros.
 
-La structure d'un document c'est aussi une structure en différentes pages. Une page de garde, des pages d'index ou de table des matières ou d'illustrations, ... Différents styles de pages identifient cette structure. On peut la déclarer en ajoutant des sauts de page manuels et spéciaux, puis définir quel sera le style de la page suivante et le début de sa numérotation.
-[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){: .lien_video }
+[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){:
+.lien_video }
 
-Une fois la structure du document déclarée, l'insertion d'une table des matières, une table des illustrations,... est très simple, puis hautement paramétrable. Si la numérotation des chapitres a été appliquée alors les numéros seront repris. Des efforts de mise en forme peuvent être nécessaires selon les logiciels comme par exemple ici. Nous ajoutons une espace après chaque numéro.
+La structure d'un document, c'est aussi une structure en différentes
+pages : une page de garde, des pages d'index ou de table des matières
+ou d'illustrations, ... Différents styles de pages identifient cette
+structure. On peut la déclarer en ajoutant des sauts de page manuels
+et spéciaux, puis définir quel sera le style de la page suivante et le
+début de sa numérotation et définir des mises en forme associées à ces pages.
+
+[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){:
+.lien_video }
+
+Une fois la structure du document bien spécifiée, l'insertion d'une
+table des matières, d'une table des illustrations,... est très simple,
+et hautement paramétrable. Si la numérotation des chapitres a été
+appliquée alors les numéros seront repris. Des efforts de mise en
+forme peuvent être nécessaires selon les logiciels comme par exemple
+ici. Par exemple, nous ajoutons une espace après chaque numéro.
+
 [Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/ftcxiFP4X3MKIms){: .lien_video }
 
 ```activité
@@ -355,27 +396,70 @@ Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe de
 {}
 ```
 
-
 ## Video 5 - métadonnées
-Les meta-données sont des données à propos du document. Elles sont soit calculées par le logiciel (par exemple le nombre de mots, la taille etc...) ou déclarées par l'utilisateur (le titre, le sujet, l'auteur...). Les meta-données sont utiles pour le traitement de grands corpus de documents. On les retrouve ici dans le menu des propriétés. Il est aussi possible d'insérer les métadonnées comme contenu textuel du document. 
-[Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){: .lien_video }
+
+Les meta-données sont des données à propos du document. Elles sont
+ calculées par le logiciel (par exemple le nombre de mots, la taille
+ etc...) ou déclarées par l'utilisateur (le titre, le sujet,
+ l'auteur...). Les meta-données sont utiles pour le traitement de
+ corpus de documents. On les retrouve ici dans le menu des
+ propriétés. Il est aussi possible d'insérer les métadonnées comme
+ contenu textuel du document.
+ 
+ [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
+ .lien_video }
+
+## Video 6 - avec un autre logiciel
+
+Nous avons illustré les principes avec LibreOffice Writer et indiqué
+que ceci est général à tout traitement de texte ce que nous illustrons
+avec Microsoft Word. Nous retrouvons la possibilité d'afficher ou non
+les caractères non imprimables, l'aide à la saisie, un styleur pour
+structurer le document et le mettre en forme. On dispose, par exemple
+du style `normal` pour le corps de texte qu'il est possible de
+modifier.  La génération d'un index ou d'une table des matières suit
+la même logique ainsi que l'insertion de marque, de repère ou de
+renvois de notes.  Bien sûr, chaque logiciel a son interface propre et
+le nom des menus ou des outils peut varier d'une version à une autre,
+mais il est important de retenir que les **notions vues dans ce cours
+sont communes à tous les traitements de texte**.
+
+[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .lien_video }
 
 ## Vidéos avancées
 
 ### Travail collaboratif
-Travailler en groupe c'est d'abord communiquer sur l'édition du document. Dans ce cas, on veut commenter des parties. C'est aussi être capable de suivre des modifications. Lisez le texte du document pour mieux comprendre et regardez les différentes possibilités qui vous sont offertes. En situation de travail collaboratif, les modifications auront pu être apportées par différents auteurs et le coordinateur va donc valider ou rejeter les modifications. 
-[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){: .lien_video }
 
+Travailler en groupe c'est d'abord communiquer sur l'édition du
+document. Dans ce cas, on veut commenter des parties. C'est aussi être
+capable de suivre des modifications. Lisez le texte du document pour
+mieux comprendre et regardez les différentes possibilités qui vous
+sont offertes. En situation de travail collaboratif, les modifications
+auront pu être apportées par différents auteurs et le coordinateur va
+donc valider ou rejeter les modifications.
+
+[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:
+.lien_video }
 
 Une autre fonctionnalité de suivi des versions est illustrée ici. 
 [Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/Oaec8mpdueuxlY7){: .lien_video }
 
 ### Comprendre la hiérarchie de styles
 
-Les styles sont organisés dans une hiérarchie. Ce n'est pas qu'une façon de catégoriser pour les retrouver ou y accéder plus rapidement. La raison principale tient à un concept qu'on retrouve souvent en informatique, la notion d'*héritage*. Illustrons cette notion par l'exemple. Si la couleur des caractères n'est pas définie au niveau d'un style elle sera alors définie par celle de son style juste au dessus de la hiérarchie. Par exemple en passant le corps de texte en rose, les notes de bas de page le seront aussi, mais pas les titres. Par contre définir cette couleur au style par défaut, sommet de la hiérarchie affectera tous les styles de document (sauf bien sûr si cette propriété a été définie pour un style donné). 
+Les styles sont organisés dans une hiérarchie. Ce n'est pas qu'une
+façon de catégoriser pour les retrouver ou y accéder plus
+rapidement. En effet, la raison principale tient à un concept qu'on
+retrouve souvent en informatique : la notion d'*héritage*. Illustrons
+cette notion par l'exemple. Si la couleur des caractères n'est pas
+définie au niveau d'un style elle sera alors définie par celle de son
+style juste au dessus de la hiérarchie. Par exemple en passant le
+corps de texte en rose, les notes de bas de page le seront aussi, mais
+pas les titres. Par contre définir cette couleur au style par défaut,
+, c'est-à-dire au sommet de la hiérarchie affectera tous les styles de
+document (sauf bien sûr si cette propriété a été redéfinie pour un style
+donné).
 
 [La hiérarchie de styles](https://owncloud.univ-lille3.fr/index.php/s/PkfPwBzS7OziFfi){: .lien_video }
-
 
 ### Mise en forme des listes
 
@@ -383,51 +467,82 @@ Les listes en typographie française utilisent des tirets demi-cadratins (Code u
 
 [Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
-### Parallèle avec Word
-Nous avons expliqué pourquoi toutes nos démos ont été réalisées avec LibreOffice, mais nous avons égalmeent indiqué que tout ce qui a été décrit est également valable avec les autres logiciels de traitement de textes. Voici un petit exemple avec une version de Word. Nous retrouvons la possibilités d'afficher ou non les caractères non imprimables, un styleur qui permet de structurer les différents éléments du document, que ce soient les paragraphes ou les caractères, la définition de listes à puces ou ordonnées.
-Il est bien sûr également possible de modifier la présentation prédéfinis des styles comme si pour le style `normal` qui sert pour le corps de texte.
-Nous retrouvons aussi l'outil de correction automatique lors de la saisie, les correcteurs orthographique et toutes les aides à la saisie.
-La génération  d'un index ou d'une table des matières suit la même logique, ainsi que l'insertion de marque, de repère ou de renvois de notes.
-Bien sûr chaque logiciel a son interface propre et le nom des menus ou des outils peut varier d'une version à une autre, mais il est important de retenir que les notions vues dans ce cours ne sont pas spécifiques à un logiciel mais communes à tous les traitements de texte.
-[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .lien_video }
+### Autres fonctionnalités
 
-### Autres points possibles à aborder
-- présentation de la création de liste pendant la frappe
-(* , - , 1), a), ...) Insister sur l'automatisation
-- présenter le bouton de liste ((dés)activer puces)
-- détailler puce + retrait
-- un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
-
-- insertion d'image
-- pied de page / entête
-- numeros de page / champs
-- tableaux
-
-- bibliographie
-> surement en plusieurs fois
-
-
-
+Ce n'est pas l'objectif du cours de parcourir toutes les possibilités
+apportées par un traitement de textes mais vous disposez maintenant
+des principes de base pour une bonne utilisation. Il est, par exemple,
+possible de définir des tableaux organisés en lignes et en colonnes,
+d'insérer des images dans des figures avec des légendes et des
+numérotaions. Il est également possible d'intégrer une
+bibliographie. Cette opération est plus complexe mais vous trouverez
+des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
+professionnel, vous serez à amener à utiliser des modèles pour
+respecter une charge graphique de votre employeur. Vous pourrez être
+amenés à réaliser des mailings en insérant des références à des
+fichiers de clients.
 
 # Le tableur
 
-## Qu'est-ce qu'un tableur ? Ce qu'il n'est pas...
+## Objectifs
 
-Le tableur est un outil pour *représenter*, pour *interroger* et *traiter* des données. Ce n'est *pas* pour présenter des tableaux, faire des fiches ou n'importe quelle liste, ... Le logiciel de traitement de textes sait gérer des tableaux. La manipulation d'un tableur est donc une activité de traitement de données, et donc un pas supplémentaire vers l'informatique en tant que science du calcul. 
+L'étude des données et de leur gestion fait apparaître différents
+modes possibles d'organisation des données. Le tableur est un logiciel
+de base pour la gestion de données avec une organisation simple :
+données individuelles et listes de données. Il vous sera utile pour
+gérer des élèves et des notes si vous êtes professeur, gérer des
+adhérents d'une association si vous participez à une association,
+gérer des listes d'objets dans des fouilles si vous êtes archéologue,
+...
 
-Un vocabulaire spécifique accompagne la manipulation du tableur. 
+Le **premier objectif** est la découverte des fonctionnalités
+générales, communes à tous les tableurs, pour faire des calculs et
+manipuler des listes.
 
-Pour représenter ses données, le tableur mémorise des  **relations**. Ces relations sont présentées dans des **tables** qui sont structurées en **lignes** et  **colonnes** à l'intersection desquelles se trouvent les  **cellules**. Une ligne représente une *relation* entre des données stockées dans les colonnes. Et dans chaque colonne on trouve une uniformité des valeurs qui sont de même nature. Les tables sont stockées dans des *feuilles de calcul*.
+Le **second objectif** est d'appréhender les questions liées à une
+bonne organisation des données dans un tableur pour pouvoir atteindre
+vos objectifs d'utilisation de vos données. 
 
-Interroger et traiter des tables, c'est par exemple :
-- Sélectionner ou filtrer certaines lignes.
-- Rechercher, extraire des lignes.
-- Agréger, regrouper des lignes.
-- Trier les lignes.
-- En tirer des diagrammes.
+## découverte du tableur
 
-C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, et représentée par des *formules*. Les formules sont comme des règles de calcul.
+### organisation générale et fonctionnalités
 
+Le tableur est un **outil pour représenter, traiter et interroger des
+données**. Ce n'est pas un outil de présentation des tableaux car le
+traitement de texte gère les tableaux et leur mise en forme. La
+manipulation d'un tableur est donc une activité de traitement de
+données, et donc un pas supplémentaire vers l'informatique en tant que
+science du calcul.
+
+Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
+le tableur, on peut définir un *classeur* qui contient des *feuilles
+de calcul*. Chaque feuille de calcul est organisée en *lignes*
+numérotées 1, 2, ... et en *colonnes* numérotées A, B,
+... L'intersection d'une ligne et d'une colonne est une *cellule* qui
+va pouvoir contenir une donnée élémentaire.
+
+Avec le tableur, on peut gérer les données individuelles contenues
+dans les cellules mais on va également gérer des données organisées
+sous forme de **listes** : une liste d'élèves avec leurs notes, une
+liste d'adhérents avec leurs adresses et leurs cotisations, une liste
+d'objets avec un date de ramassage et des informations de forme,
+taille, poids,... les listes, aussi appelées **relations** ou
+**tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
+un objet (un élève, un membre, un objet). Chaque colonne décrit une
+propriété de l'objet (un nom, un prénom, une note, une date de
+naissance, une taille, un poids).
+
+Les principales fonctionnalités d'un tableur sont :
+
+- mémoriser des données et des listes,
+- faire tous les calculs des plus simples au plus compliqués,
+- sélectionner des objets dans des listes en fonction de critères,
+  comme, par exemple, sélectionner les élèves garçons doublants,
+- trier des listes d'objets, comme, par exemple, trier les élèves par âge,
+- analyser des listes et construire des diagrammes comme, par exemple,
+faire des moyennes de notes par âge d'élève et faire le graphique
+correspondant,
+- produire des rapports mis en forme.
 
 ## Dans une cellule 
 
@@ -435,7 +550,10 @@ Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** 
 
 On peut observer des différences entre ce qui est contenu dans la cellule et ce qui est affiché à cause du choix de format. Par exemple, on peut représenter une valeur sous forme de nombre, de pourcentage, ou même de date.
 
+C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, et représentée par des *formules*. Les formules sont comme des règles de calcul.
+
 Les formules commencent par le signe `=`. C'est ce qui distingue une valeur d'une formule. 
+
 
 
 [Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
@@ -577,7 +695,7 @@ Par exemple il corrige systématiquement les fautes courantes à partir d'une li
 - le panneau de config des paramètres
 - qu'on peut (dés)activer quand on le veut
 
-- enrigistrer (dossier / fichier / extension-format)
+- enregistrer (dossier / fichier / extension-format)
 
 ### Avant de démarrer
 
@@ -614,3 +732,22 @@ Ces techniques appliquées à tous les niveaux de titre vous assure une mise en 
 
 [^1]: OASIS, dont font partie the Document Foundation qui développe LibreOffice, mais aussi de grands acteurs du logiciel comme Microsoft ou ORACLE, des universités, etc.
 [^2]: l'espace en typographie est un nom féminin.
+
+### Autres points possibles à aborder dans traitement de texte
+
+- présentation de la création de liste pendant la frappe
+(* , - , 1), a), ...) Insister sur l'automatisation
+- présenter le bouton de liste ((dés)activer puces)
+- détailler puce + retrait
+- un copier/coller colle le style (exemple coller du texte dans une note de bas de page : on perd souvent le style par défaut de note de bas de page).
+
+- insertion d'image
+- pied de page / entête
+- numeros de page / champs
+- tableaux
+
+- bibliographie
+> surement en plusieurs fois
+
+
+
