@@ -544,24 +544,32 @@ faire des moyennes de notes par âge d'élève et faire le graphique
 correspondant,
 - produire des rapports mis en forme.
 
-## Dans une cellule 
+### Dans une cellule 
 
-Que trouve-t-on (simultanément) dans une cellule ? On y trouve des **valeurs** (du texte, des nombres, et même des messages d'erreur). C'est ce qui s'affiche dans une cellule. Mais on y trouve aussi des formules, (ce qui permet d'obtenir la valeur), et des formats (ce qui permet de présenter cette valeur) ou encore des commentaires qui peuvent expliquer/commenter une valeur.
-
-On peut observer des différences entre ce qui est contenu dans la cellule et ce qui est affiché à cause du choix de format. Par exemple, on peut représenter une valeur sous forme de nombre, de pourcentage, ou même de date.
-
-C'est aussi traiter des données par des calculs (sommes, moyennes, comptes,...) de façon automatique, programmée, et représentée par des *formules*. Les formules sont comme des règles de calcul.
-
-Les formules commencent par le signe `=`. C'est ce qui distingue une valeur d'une formule. 
-
-
+Une cellule contient **une valeur ou une formule**. Une *valeur* va
+être, très souvent, un nombre ou un texte et c'est le tableur qui
+interprète ce contenu. Une *formule* commence par le signe `=` (c'est
+ce qui distingue une valeur d'une formule) suivi d'une expression d'un
+calcul. Une cellule contient également un format de mise en forme et,
+éventuellement, des commentaires expliquant le contenu. Il **faut être
+très attentif** à la distinction entre contenu de la cellule (affiché
+dans la barre de saisie) et ce que vous voyez dans la cellule qui peut
+être le résultat d'une mise en forme avec l'application d'un format de
+nombre, de pourcentage, ou même de date.
 
 [Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
 
-## Mise en forme
+### Mise en forme
 
-Comme pour le traitement de textes, il existe des styles pour uniformiser la présentation. Attention à ne pas mettre en péril les traitements par des soucis de présentation. Par exemple insérer des lignes blanches ou avec un fond coloré pour faire des bordures dans une table rompt la logique de table et les traitement de filtre, tri, etc... deviennent impossibles.
+Comme pour le traitement de texte, on peut faire des mises en forme au
+cas par cas ou utiliser des styles pour uniformiser la
+présentation. **Attention** à ne pas mettre en péril les traitements
+par des soucis de présentation. Par exemple, une liste est définie par
+des lignes et colonnes contigües et insérer des lignes(ou colonnes)
+blanches ou avec un fond coloré pour faire des bordures rompt la
+logique de liste et les traitement  de filtre, tri, etc... deviendraient
+impossibles.
 
 [Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
