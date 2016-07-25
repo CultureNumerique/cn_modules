@@ -626,7 +626,7 @@ Un calcul va utiliser des valeurs connues qui sont contenues dans des
 cellules. Il faut dont pouvoir désigner une cellule et son
 contenu. Dans le tableur on parle de **référence à une cellule**
 désignée par numéro de ligne et de colonne dans la feuille comme, par
-exemple B7 pour la cellule en colonne B et ligne 7.
+exemple `B7` pour la cellule en colonne B et ligne 7.
 
 L'intérêt du tableur, par rapport à une calculatrice, est de pouvoir
 généraliser des formules à une liste d'objets. Sur notre exemple, on
@@ -635,7 +635,7 @@ formule à *tous les enfants* et ceci qu'on ait 10 élèves, 100 élèves
 ou 1000 élèves. Sur notre exemple, on écrira une formule en `E8` pour
 calculer le montant en euros à partir du montant figurant en `D8`. Puis
 on généralisera, on étendra, la formule à toute la plage de E8 jusque
-E108 si on a 100 enfants avec une *copie*. Le tableur va
+`E108` si on a 100 enfants avec une *copie*. Le tableur va
 automatiquement adapter les références et la formule en `E9` fera
 référence à `D9` pour l'enfant en ligne 9, ... Ceci est réalisé avec la
 notion de *référence relative* comme `D8`, `B7`, `E12`, `G2` qui permet de
@@ -651,8 +651,12 @@ taux de conversion, on utilisera la référence absolue `$G$2`.
 Le **mécanisme des références est donc essentiel pour traiter des
 listes**. Vous devez, lorsque vous écrivez une formule, vous poser la
 question suivante : est-ce que ma référence doit être adaptée lorsque
-je copie ma formule. Si oui, vous utilisez une référence relative
-(sans $), si non, vous utilisez une référence absolue avec $. 
+je copie ma formule. Si oui, vous utilisez une référence relative, si
+non, vous utilisez une référence absolue. Sur notre exemple, la
+formule à écrire en `E8` est donc `=D8*$G$2` qu'il suffit de copier
+pour toute la liste d'enfants et en `E12`, nous aurons la formule
+attendue `=E12*$G$2` qui est bien le montant en euros pour l'enfant en
+ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 
 ### Autres références
@@ -672,6 +676,7 @@ je copie ma formule. Si oui, vous utilisez une référence relative
   alors comme une référence absolue.
  
 [Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
+
 [Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
 ## Opérations sur les tables
