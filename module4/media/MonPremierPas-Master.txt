@@ -1,0 +1,109 @@
+﻿Il y a donc plus que des mots dans un texte. On distingue dans un document textuel numérisé des informations de structure, de contenu, de présentation et des métadonnées. Une bonne pratique consiste à identifier et désigner toutes ces informations.
+Pour réaliser cette tâche de désignation, l’utilisateur interagit avec la machine par un langage formalisé : dans le cas du traitement de textes, c’est basé sur des interactions graphiques (en opposition à des langages de description, dans un fichier source…). La compréhension du langage d’interaction permet de faire un bon document. Mais distinguer un bon d’un mauvais document n’est pas si facile. Voici quelques règles que nous vous donnons en introduction :
+ne pas aérer les paragraphes avec la touche entrée,
+éviter la mise en forme directe,
+ne pas répéter deux fois la même manipulation,
+ne pas saisir deux fois la même information comme un titre ou un auteur,
+ne pas saisir des valeurs qui sont susceptibles de varier : références, numéros de page, table des matières, bibliographies…
+Ce sont des règles générales, auxquelles on peut parfois déroger, mais en ayant bien compris l’impact de ne pas les respecter. Par exemple comprendre qu’il ne faut pas utiliser la touche entrée pour aérer les paragraphes ne peut être compris que si on peut comprendre et illustrer les conséquences par exemple sur le rendu imprimé selon différents formats de papier.
+Qu’est-ce qu’un document ?
+Un document c’est :
+Une suite de caractères : vue séquentielle
+Un titre, un résumé, une introduction, une thèse/antithèse/synthèse, une conclusion… vue structurée
+Des sections, sous-sections, sous-sous-sections, des listes, sous-listes… vue hiérarchique, arborescente
+Un auteur, une date de création, des dates de modifications… vue qualifiée
+Des pages, des colonnes, des lignes, du gras, de l’italique, des encadrés… vue de l’apparence, la présentation
+Toutes ces informations sont importantes. On peut les rassembler sous quatre groupes
+1. Le contenu : la suite de caractères
+2. La structure : identification des paragraphes, des titres, des sections, etc. et identification de l’organisation de ces éléments.
+3. La présentation : quelle est leur apparence graphique ?
+4. La vue qualifiée : Quelles sont les informations à propos du document : auteur, titre, résumé, date de création… ?
+Contenu, structure et présentation sont importants pour diffuser le message porté par le document mais le contenu et la structure définissent le document. La présentation peut être changée : pensez à une version en braille, une version pour smartphone, une version à imprimer… La vue qualifiée est importante pour des traitements sur des ensembles de documents (ranger, rechercher…).
+Comment (d)écrire un document ?
+Un document est décrit par un langage de description ! Ce langage peut être basé sur des commandes graphiques comme des clics dans les menus, des appuis de touches, etc. C’est par exemple ce qui est proposé dans les logiciels de traitement de textes comme LibreOffice, Word…
+Un traitement de textes permet de saisir ces quatre types d’information dont nous avons parlé en page 2. Il permet aussi d’appliquer des fonctionnalités de haut niveau sur ces données (contenu, structure et présentation). En voici quelques exemples :
+Remplacer les a par des e,
+déclarer un titre,
+mettre un mot en gras,
+générer un index, une bibliographie, une table des matières,
+réordonner les sections,
+changer la présentation de tous les titres.
+Le langage peut aussi être basé sur des commandes textuelles. Dans ce cas, un texte source décrit le document et un programme calcule le rendu graphique à partir de ce texte source. C’est par exemple : HTML, LaTeX. Un éditeur de texte permet de saisir du contenu uniquement. Parfois ce contenu peut être un texte qui décrit un document. C’est donc avec un éditeur de texte que nous créons des documents HTML ou LaTeX.
+À titre d’exemple, essayez de saisir le texte source (ou encore code source) dans un éditeur de textes et de l’enregistrer dans votre espace personnel sous le nom pageWeb.html puis de l’ouvrir avec le navigateur.
+<html>
+ <head><title>Bonjour</title></head>
+ <body>
+ <h1>Mon premier document</h1>
+ <p>Bonjour le web</p>
+ </body>
+</html>
+Méthodologie avec un traitement de textes
+La méthodologie la plus efficace est de faire les choses dans l’ordre suivant :
+1. Ajouter du contenu. Vous saisissez juste le contenu avec le clavier, mais vous oubliez la mise en forme, vous respectez le sens des touches : entrée, espace, tabulation et vous respectez la typographie, en plus de l’orthographe et la grammaire.
+2. Effectuer des déclarations de structure,
+3. Effectuer la présentation en se basant sur la structure.
+Évidemment, cela ne signifie pas qu’on doive saisir tout le contenu avant de se soucier de l’apparence ou de la structure. Les opérations sont bien plus imbriquées que cela. Mais conserver cet ordre à l’esprit permet de minimiser les erreurs.
+Déclaration de la structure
+La touche espace permet de distinguer les mots, comme certaines touches de ponctuation. Le mot est l’un des éléments structurels de base. La touche entrée permet de distinguer des paragraphes. Les titres, listes et autres éléments de structure sont déclarés à l’aide de ce qui est présenté dans la plupart des logiciels comme des styles. C’est là un abus de langage.
+Les éléments de structure sont affichés selon une certaine logique de flux d’information qui régit l’apparence et l’utilisation du document. Les caractères sont affichés les uns à côté des autres, de gauche à droite et de haut en bas dans notre langue. Les paragraphes viennent les uns sous les autres, après une rupture de ligne donc. Certaines parties impliquent une rupture de page : par exemple une page de titre, une préface, une table des matières, un index… Les listes ont également une logique de flux particulière car elles peuvent être imbriquées. Enfin les cadres, les tableaux, les images et toutes sortes d’illustrations sont souvent placés selon une organisation particulière, relativement indépendante du reste du document. On parle souvent de flottants pour les désigner. On retrouve1 donc un flux de caractères, un flux de paragraphes, un flux de pages, des listes et des flottants. Les différents styles suivent cette catégorisation.
+Erreurs communes
+Ne pas aligner/décaler des parties de textes avec des espaces
+Pourquoi ? les changements de police, de taille, etc. va remettre en cause l’alignement ; le traitement de textes peut calculer des espacements en fonction de l’environnement ;
+Comment ? il faut modifier le format du paragraphe, utiliser des tabulations
+Ne pas aérer les paragraphes ou titres avec des changements de paragraphe (retour à la ligne ou touche entrée)
+Pourquoi ? Vous risquez de violer le traitement des veuves (titre seul en bas de page) et orphelines (ligne seule en haut de page) ; vous risquez de ne plus commencer les pages en haut ; vous avez sans doute besoin de reproduire cela à chaque titre et vous perdez votre temps.
+Comment ? il faut modifier le format du paragraphe, utiliser les espacements avant et après.
+Le traitement de texte propose de nombreux éléments de structure et sans doute tous ceux dont vous avez besoin. Dans certains cas, créer ses propres éléments de structure peut être intéressant. Par exemple, si vous réalisez un manuel, vous avez envie que celui-ci soit parsemé de paragraphes donnant des conseils. Les identifier peut faciliter la compréhension du lecteur et vous allez vouloir les souligner par une mise en forme particulière. Vous allez donc créer une nouvelle structure qui pourrait être intitulée Conseil et qui serait sur fond jaune, en italique et avec des marges réduites.
+La vue de présentation
+Comment devez-vous agir sur la présentation ? Le bon principe est d’agir directement sur l’apparence des structures que vous avez utilisées. Le mauvais principe est d’utiliser le formatage direct, c’est-à-dire d’indiquer directement pour chaque partie de texte, au cas par cas, son apparence. Il faut penser en règles de présentation et non en présentation. Vous pourrez alors passer d’une apparence à une autre beaucoup plus rapidement et efficacement.
+Prenons un exemple. Vous avez saisi un long texte. Sur des expressions importantes vous avez cliqué comme beaucoup sur le bouton gras pour les mettre en évidence. Vous avez envie maintenant d’avoir un document privilégiant les couleurs plutôt que le gras. C’est légitime pour des documents destinés à être lus sur écran, le gras et l’italique sont souvent plus adaptés aux documents imprimés en noir et blanc. Si vous avez déclaré que ces textes doivent être accentués ou fortement accentués plutôt que gras, vous pouvez juste changer la règle de présentation de ces textes accentués. Tout le document sera adapté en une seule opération.
+Comment procéder ? Dans LibreOffice, le menu style et formatage permet de définir ces règles (touche F11).
+La vue qualifiée
+Comment utilisez-vous la vue qualifiée ? Dans le menu Fichier/propriétés vous trouvez la définition du titre du document, le résumé, les mots-clef… Dans Fichier/Options/Données d’identité ce sont les informations à propos de l’auteur. Enfin d’autres métadonnées comme les dates de création sont créées automatiquement. D’autres sont calculées automatiquement comme le nombre de mots utilisés, etc.
+Les informations de la vue qualifiée peuvent être insérées sous forme de contenu dans le document. Pour cela utilisez le menu Insertion/champs.
+Les modèles
+Un modèle de document est lui-même un document, mais contenant des styles particuliers, du contenu pré-rempli (du texte, des images…). Un modèle permet de créer rapidement un document, ou permet d’uniformiser la création de documents. C’est par exemple les lettres de relance, ou encore une façon d’appliquer une charte graphique dans une organisation.
+Créer un modèle
+Il suffit de :
+créer un nouveau document,
+y définir les styles, y ajouter le contenu voulu,
+l’enregistrer sous forme de modèle par Fichier/Modèle/Enregistrer comme modèle.
+Il est possible et judicieux de regrouper les modèles dans un dossier unique pour faciliter leur utilisation.
+Appliquer un modèle
+Pour appliquer un modèle sur un document existant, par exemple pour appliquer une charte graphique recommandée, il faut regarder dans la boîte des styles (F11), et charger les styles en cochant bien les cases correspondant aux éléments que l’on veut importer et si on veut écraser les styles existants. Voir l’illustration 2. Pour créer un nouveau document selon le modèle, il suffit de suivre les indications à partir du menu Fichier-Nouveau-Modèles.
+
+Les liens dans les documents
+La notion de lien est celle d’une relation entre deux entités. Par exemple cela peut être un lien entre les entrées de la table des matières et les titres des sections dans le document. Ce peut être ce qui relie une image sur votre disque dur et le contenu d’un cadre dans votre document. Ce peut être un lien entre un texte qui représente une adresse internet et le document se trouvant à cette adresse.
+Le traitement de texte permet de créer ces liens entre différentes entités. Pour expliquer comment procéder, il faut d’abord préciser ce que peut être une entité, comment on peut l’identifier et quelle peut être la nature de ces liens.
+Quelles entités ?
+Chaque partie de document, chaque élément structurel du document est une entité interne : une section, un paragraphe, un élément de liste… Il est également possible de définir ses propres entités par Insertion/Repère de texte.
+Mais les liens peuvent porter sur des éléments externes au document : un autre document textuel, une table de tableur, une image…
+Comment identifier ces entités ?
+Il existe des normes pour faire référence à des documents externes2. Le plus simple est l’adresse d’un fichier sur votre disque dur. Pour les entités internes le traitement de texte gère les références grâce à la structure et aux repères de texte. Le menu Insertion/Renvoi permet de gérer ces liens.
+La nature des liens
+Les liens peuvent être établis pour effectuer une inclusion d’un autre document (image, diagramme, texte…). Note : vous pouvez voir apparaître un message du genre « ce document contient des références externes »… dans le cas où des inclusions externes ont été effectuées.
+L’autre nature de lien est de permettre un renvoi grâce auquel on pourra afficher une référence, un numéro de page ou d’illustration… et éventuellement suivre ce renvoi en cliquant sur la référence comme on le fait dans les documents du Web.
+Les liens peuvent être statiques. Une fois inclus, une copie est réalisée dans le document.
+Les liens peuvent être dynamiques. C’est-à-dire que si le document lié change, alors votre document qui y fait référence sera changé aussi. C’est aussi ce qu’on appelle des documents composites. Les intérêts sont de partager le même document lié dans de nombreux documents différents plutôt que de faire autant de copies, ou encore de permettre de changer le contenu du document lié. Le document qui l’inclut sera automatiquement mis à jour. L’inconvénient principal est lié à la diffusion. Quand on transmet un document contenant ces inclusions, on doit aussi transmettre les documents inclus.
+Les documents maîtres
+Lors de l’écriture d’un très grand document, ou bien même lorsqu’on veut écrire un rapport composé de plusieurs parties dont chacune doit être réalisée par un auteur différent, on a souvent recours à des documents maîtres. L’idée est la suivante : un document décomposé en plusieurs sous-documents, un document maître comprend rassemble ces parties. Il contient :
+des liens vers d’autres documents,
+des tables et index,
+quelques parties de texte par exemple le résumé.
+L’avantage principal est que vous obtenez sans effort une uniformisation de présentation en présence de plusieurs auteurs !
+Quelques principes régissent les documents maîtres dans LibreOffice :
+Les styles du document maître s’appliquent sur les documents liés. C’est-à-dire que les styles des documents liés sont remplacés par ceux définis dans le maître, mais ils ne sont pas effacés dans les documents d’origine. Ce n’est qu’une règle de priorité. Les styles nouveaux et personnalisés des documents liés sont inclus dans le document maître.
+Si on crée un document maître en incluant des fichiers existants, alors le style du document maître est celui du premier document inclus.
+Il faut /actualiser/ le document maître pour faire apparaître les modifications faites dans les sous-documents.
+Les documents maître sont crées par Fichier/Nouveau/Document maître.
+Modifications et révisions
+Écrire un document ne se fait pas souvent linéairement. Nous y revenons sans cesse. Nous apportons des corrections, nous restructurons. Dans un travail collaboratif, nous sommes plusieurs à effectuer ce travail d’édition, parfois en même temps. Il est important pour cela de suivre les évolutions, pouvoir revenir à une version antérieure, contrôler les modifications apportées par les co-auteurs ou fusionner des corrections. Toutes ces opérations sont réalisées par des outils de suivi de version. Il existe de nombreux logiciels parfois très puissants pour gérer ce cycle de vie des documents. La plupart viennent du monde des développeurs de logiciels car rappelez-vous qu’un texte source, qu’un document, peut être celui qui décrit le fonctionnement d’un programme. Mais ces pratiques se diffusent dans le monde documentaire. Aujourd’hui certaines fonctionnalités pour la gestion des modifications des documents textuels se retrouvent dans les traitements de textes3.
+Ils sont capables de :
+suivre des modifications en mettant en évidence les parties supprimées, insérées…
+valider ou refuser des modifications,
+enregistrer des versions,
+comparer des versions,
+fusionner des versions,
+rétablir des versions antérieures,
+ajouter des commentaires,
+de telle sorte qu’il devient possible de faire circuler un document entre plusieurs personnes beaucoup plus facilement pour travailler de façon collaborative4. Remarquez que beaucoup d’utilisateurs ne connaissent pas ces outils et continuent de s’échanger des documents par mail, avec des pratiques de numérotation de noms de fichier (docV1, docV2…) si bien qu’en quelques échanges on perd très régulièrement une partie du travail.

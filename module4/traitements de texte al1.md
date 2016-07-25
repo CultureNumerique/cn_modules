@@ -194,11 +194,12 @@ document, saisir à la fois le contenu et la structure d'un document et
 se préparer pour une mise en forme efficace et uniforme du document.
 
 
-```activité
-Reproduire l'exemple en vidéo.
+```compréhension
+Reproduire l'exemple en vidéo. Une partie du texte est disponible en suivant ce [lien][lien]. Les images seront traitées plus tard. 
 { }
 ```
 
+[lien]: ./media/MonPremierPas-Master.txt "document brut"
 
 ## Vidéos 2 - styles et structure
 
@@ -358,9 +359,11 @@ définiriez une mise en forme commune pour tous ces codes.
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
 ```activité
-Reproduire le document dont un pdf vous est donné ici. Aucune mise en forme directe n'est tolérée !
+Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués. 
 {}
 ```
+
+[ici]: ./media/texte_final.pdf "document final"
 
 ## Vidéos 4 - numérotation et tables associées 
 
@@ -485,6 +488,16 @@ professionnel, vous serez à amener à utiliser des modèles pour
 respecter une charge graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
+
+```Activité
+Ajouter des  images ([image1][image1], [image2][image2]) dans un cadre avec une légende pour construire les illustrations du cours. 
+{}
+```
+
+[image1]: ./media/styles.png "image styles"
+[image2]: ./media/styleGeneral.png "image style général"
+
+
 
 # Le tableur
 
