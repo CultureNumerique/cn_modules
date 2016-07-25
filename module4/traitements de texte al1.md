@@ -6,19 +6,17 @@
 # Introduction
 
 Ce cours est dirigé vers les savoir-faire autour de deux types de
-logiciels, le traitement de texte et le tableur, qui sont des
-logiciels dont la maîtrise est essentielle dans la vie universitaire,
-la vie associative et votre future vie professionnelle. Ces
-savoir-faire sont basés sur les modules liés à la gestion de données
-et la gestion des documents. En effet, les bonnes pratiques sont
-basées sur une bonne compréhension des concepts pour une utilisation
-intelligente des logiciels car ces logiciels, assez faciles à
-appréhender, sont souvent très mal utilisés. Leur maîtrise est une
-compétence valorisable pour la suite de vos études et votre future
+logiciels, le traitement de texte et le tableur. Ces savoir-faire sont
+basés sur les modules liés à la gestion de données et la gestion des
+documents. En effet, les bonnes pratiques reposent sur une bonne
+compréhension des concepts pour une utilisation intelligente de ces
+logiciels. Car peut-être à cause d'une apparente facilité ces
+logiciels sont parfois très mal utilisés. Pourtant leur maîtrise est
+une compétence essentielle pour la suite de vos études et votre future
 entrée dans la vie professionnelle.
 
-**Modalités :** le cours introduit les savoir-faire avec textes et
-vidéos qui n'ont pas la prétention d'être des tutoriaux
+**Modalités :** le cours introduit ces savoir-faire par le moyen de
+textes et vidéos qui n'ont pas la prétention d'être des tutoriaux
 exhaustifs. Vous êtes fortement encouragés à utiliser le forum pour
 poser des questions et répondre aux questions, à interpeller les
 tuteurs au besoin, à chercher des réponses sur les forums ou sur des
@@ -30,7 +28,7 @@ même cours.
 
 **Note :** Les démonstrations sont réalisées avec LibreOffice Writer
   pour le traitement de textes et LibreOffice Calc pour le tableur car
-  ils sont gratuits, disponibles sur tous les ordinateurs et faciles à
+  ils sont libres, gratuits, disponibles sur tous les ordinateurs et faciles à
   installer. Toutes les notions de ce cours sont transférables dans
   tout  traitement de texte ou tout tableur de votre choix
   modulo des changements de noms de menus, des changements de forme
@@ -43,10 +41,12 @@ même cours.
 
 L'étude des documents fait apparaître les vues séquentielle (la suite
 de caractères), de structure (titre, section, sous-section, ...), de
-présentation et de méta-données (taille, date de création, auteur,
-...). On parle aussi de contenu, structure, forme et
-méta-données. Nous allons voir que cette vision va nous permettre
-d'utiliser les traitements de texte au mieux de leurs possibilités.
+présentation (couleurs, dimensions, ...) et de méta-données (date de
+création, auteur, ...). On parle aussi de contenu, structure, forme et
+méta-données. Nous allons voir que cette vision définit le socle
+commun à tous les logiciels de traitement de textes. Comprendre ce
+socle va nous permettre d'utiliser n'importe quel traitement de texte
+au mieux de ses possibilités, de s'adapter à ses évolutions.
 
 Le **premier objectif** est la découverte des fonctionnalités
 générales, communes à tous les traitements de texte, pour la
@@ -64,18 +64,18 @@ fonction peut amener à de mauvais usages.
 
 Le **second objectif** est d'apprendre à définir des *règles de mise
 en forme* associées aux styles. Il est important de noter que les
-boutons raccourcis faciles d'utilisation permettent de réaliser des
-mises en forme directes et rapides. Mais ce sont des mises en forme au
-cas par cas qui ne peuvent pas traiter de grands documents (vos
-mémoires, vos rapports de stage et vos documents professionnels). Les
-règles de mise en forme sont essentielles pour un bon usage des
-traitements de texte, pour la manipulation de grands documents et
-pour le travail en groupe. Elles permettent, en effet, de modifier la
-mise en forme d'un document complet en une action, de numéroter les
-sections et les pages d'un grand document, d'uniformiser la
-présentation et d'appliquer des thèmes ou une charte graphique. Ceci à
-condition d'avoir préalablement correctement défini la structure de
-votre document.  3'30"
+boutons raccourcis et le menu format, faciles d'utilisation permettent
+de réaliser des mises en forme directes et rapides. Mais ce sont des
+mises en forme au cas par cas qui ne peuvent pas traiter de grands
+documents (vos mémoires, vos rapports de stage et vos documents
+professionnels). Les règles de mise en forme sont essentielles pour un
+bon usage des traitements de texte, pour la manipulation de grands
+documents et pour le travail en groupe. Elles permettent, en effet, de
+modifier la mise en forme d'un document complet en une action, de
+numéroter les sections et les pages d'un grand document, d'uniformiser
+la présentation et d'appliquer des thèmes ou une charte
+graphique. Ceci à condition d'avoir préalablement correctement défini
+la structure de votre document. 
 
 ## Vidéos 1 : saisie, contenu et structure
 
@@ -131,15 +131,15 @@ paragraphes, les listes. nous expliquons ici quelques règles à
 respecter pour ce faire.
 
 Les **caractères**. La plupart, par exemple, lettres, chiffres et
-symboles de ponctuation, sont visibles, mais certains sont invisibles
-, en particulier, les espaces. Certains caractères sont aussi
+symboles de ponctuation, sont visibles, mais certains sont invisibles,
+en particulier, les espaces[^2]. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
 c'est, par exemple, le caractère qui marque la la fin de paragraphe,
-ou ceux qui marquent la fin d'un mot (espace[^2] ou ponctuation),
+ou ceux qui marquent la fin d'un mot (espace ou ponctuation),
 celui qui ajoute une espace insécable. C'est là une première
 difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une
 espace typographique entre deux mots est utile à la présentation du
-document, mais il déclare également la séparation de deux mots. Dans
+document, mais cet ajout déclare également la séparation de deux mots. Dans
 la première fonction, on pourrait vouloir augmenter cette séparation
 dans le rendu visuel et donc se faire suivre deux espaces. Mais on
 perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre
@@ -156,7 +156,7 @@ espaces ou des signes de ponctuation. Des règles typographiques,
 spécifiques à chaque langue, définissent les espaces et symboles de
 ponctuation. Par exemple, en français une espace précède toujours le
 signe `:` alors qu'il n'y pas d'espace avant le signe `:` en
-anglais. Le respect de ces règles est impérative et, souvent, le
+anglais. Le respect de ces règles est impératif et, souvent, le
 logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
 Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
@@ -194,9 +194,6 @@ document, saisir à la fois le contenu et la structure d'un document et
 se préparer pour une mise en forme efficace et uniforme du document.
 
 
-
-7'
-
 ```activité
 Reproduire l'exemple en vidéo.
 { }
@@ -230,6 +227,7 @@ restreindre cette liste à ceux qui sont appliqués dans le document ou
 à ceux qui sont souvent utilisés (styles automatiques). Les styles
 portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
+
 [L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){:
 .lien_video }
 
@@ -244,6 +242,7 @@ logiciels pourront exploiter dans d'autres situations : rendu oral,
 présentation sur un autre support comme un objet portable, ou
 simplement pouvoir modifier facilement dans tout le texte la mise en
 forme choisie pour les éléments déclarés en style accentuation forte.
+
 [Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){:
 .lien_video }
 
@@ -253,6 +252,7 @@ espaces et les fins de paragraphe, on peut déceler des répétitions de
 ces symboles et les supprimer. On voit également la représentation des
 fins de ligne qui ne sont pas des fins de paragraphes dans cette
 partie de texte.
+
 [Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){:
 .lien_video }
 
@@ -261,6 +261,7 @@ Le logiciel réalise souvent des opérations pour vous aider à bien
 bas de page. Le numéro est inséré automatiquement et sera adapté si
 d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
 automatiquement.
+
 [Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){:
 .lien_video }
 
@@ -274,6 +275,7 @@ déclaration et de renvois est utilisée dans tout langage de
 description de documents. Par exemple, en HTML, on utilise des
 (hyper-)liens qui peuvent être internes au document (renvoi vers une
 partie du document) ou externes (renvoi vers un autre document).
+
 [Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){:
 .lien_video }
 [Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){:
@@ -282,6 +284,7 @@ partie du document) ou externes (renvoi vers un autre document).
 Terminons par un examen de la structure arborescente de ce
 document. La manipulation de cette structure permet de déplacer des
 sections entières ou de réorganiser le plan.
+
 [Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){:
 .lien_video }
 
@@ -321,16 +324,17 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 Commeçons par la mise en forme des paragraphes, en modifiant la
 définition du style `corps de texte`, nous définissons une règle
 générale qui va s'appliquer à tout le document, ou plutôt à tous les
-paragraphes de style `corps de texte` de ce document. On chosit
-souvent de justifier des deux côtés pour avoir des marges correctement
-alignées des deux côtés et une césure des mots est appliquée.
+paragraphes de style `corps de texte` de ce document. On choisit
+souvent de *justifier*, c'est-à-dire de régler les espaces entre mots
+pour avoir des marges correctement alignées des deux côtés. Dans ce cas, une
+*césure* des mots est souvent appliquée pour éviter les espaces trop grandes.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
 
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
 fortes. Si vous n'êtes pas satisfait de la règle choisie, vous la
-modifierez pour changer la mise en forme dans tout le document en une
+modifierez pour changer l'apparence dans tout le document en une
 seule opération.
 
 [Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
@@ -345,11 +349,11 @@ présentation de tous les noms de logiciel.
 [Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
 
 Bien sûr, la définition de nouvelles structures, donc de nouveaux
-style, s'applique sur les caractères comme les paragraphes. Ici, notre
+style, s'applique sur les caractères comme sur les paragraphes. Ici, notre
 document contient un morceau de code qui ne doit pas être justifié. Il
 peut être déclaré et mis en forme spécifiquement. Mais si votre
 document contenait d'autres codes, vous associeriez une structure et
-définiriez une mise en forme commune pour tous ces codes.  
+définiriez une mise en forme commune pour tous ces codes.
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
@@ -399,14 +403,14 @@ Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe de
 ## Video 5 - métadonnées
 
 Les meta-données sont des données à propos du document. Elles sont
- calculées par le logiciel (par exemple le nombre de mots, la taille
- etc...) ou déclarées par l'utilisateur (le titre, le sujet,
- l'auteur...). Les meta-données sont utiles pour le traitement de
- corpus de documents. On les retrouve ici dans le menu des
- propriétés. Il est aussi possible d'insérer les métadonnées comme
- contenu textuel du document.
+calculées par le logiciel (par exemple le nombre de mots, la taille
+etc...) ou déclarées par l'utilisateur (le titre, le sujet,
+l'auteur...). Les meta-données sont utiles pour le traitement de
+corpus de documents. On les retrouve ici dans le menu des
+propriétés. Il est aussi possible d'insérer les métadonnées comme
+contenu textuel du document.
  
- [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
+[Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
  .lien_video }
 
 ## Video 6 - avec un autre logiciel
@@ -447,7 +451,7 @@ Une autre fonctionnalité de suivi des versions est illustrée ici.
 ### Comprendre la hiérarchie de styles
 
 Les styles sont organisés dans une hiérarchie. Ce n'est pas qu'une
-façon de catégoriser pour les retrouver ou y accéder plus
+façon de les catégoriser pour les retrouver ou y accéder plus
 rapidement. En effet, la raison principale tient à un concept qu'on
 retrouve souvent en informatique : la notion d'*héritage*. Illustrons
 cette notion par l'exemple. Si la couleur des caractères n'est pas
