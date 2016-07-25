@@ -573,47 +573,104 @@ présentation. **Attention** à ne pas mettre en péril les traitements
 par des soucis de présentation. Par exemple, une liste est définie par
 des lignes et colonnes contigües et insérer des lignes(ou colonnes)
 blanches ou avec un fond coloré pour faire des bordures rompt la
-logique de liste et les traitement  de filtre, tri, etc... deviendraient
-impossibles.
+logique de liste. Les traitements de filtre, tri, etc... deviendraient
+alors impossibles.
 
 [Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
+
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ## Traiter des données 
 
-Faire un traitement c'est
+Faire un traitement de données, c'est
+
 1. Disposer de données en entrée (des valeurs connues, acquises)
-2. Réaliser des opérations 
-3. Produire des résultats
+2. définir des opérations de calcul sur ces données
+3. Produire et afficher les résultats
 
-La traduction dans le tableur posera les questions suivantes :  Quelles sont les cellules, les lignes ou les colonnes qui vont  contenir des valeurs en entrée ?  Quelles sont les cellules qui vont contenir des résultats de calcul ?  Comment les organiser ? Comment écrire ces calculs ?
+La traduction dans le tableur posera les questions suivantes : Quelles
+sont les cellules et les plages de cellules qui vont contenir des
+valeurs en entrée ?  Quelles sont les cellules qui vont contenir des
+résultats de calcul ?  Comment les organiser dans la feuille de calcul
+? Comment écrire les calculs ?
 
-### Analyser un problème 
-L'exemple suivant est évidemment fictif. En vue d'un voyage de classe à Londres, on souhaite mémoriser et analyser la monnaie qu'emportent les enfants. On connaît le taux de conversion, et le seuil maximal en euros qu'un enfant peut emporter. La table que nous allons construire va mettre en relation les noms et prénoms des enfants avec l'argent emporté. Chaque ligne correspond à un enfant. Les colonnes spécifient les noms des données en relation. 
+### Organiser ses données dans le tableur
 
-Parmi les données manipulées, certaines sont saisies et d'autres sont calculées à partir des données saisies. Ici connaissant le taux de conversion et le montant en euros, il est facile de calculer le montant en livres. Connaissant le montant en euros et le seuil, on peut savoir si le montant  dépasse ce seuil. On peut aussi calculer la moyenne, le minimum et le maximum des montants emportés. 
+Nous considérons un exemple fictif simple. En vue d'un voyage de
+classe à Londres, on souhaite mémoriser et analyser la monnaie
+qu'emportent les enfants. On connaît le taux de conversion de la
+livre, et un seuil maximal en euros qu'un enfant peut emporter a été
+fixé par les organisateurs. Nous disposons pour chaque enfant de ses
+nom et prénom, de sa classe et du montant en euros. Nous souhaitons
+pouvoir disposer du montant en livres, pouvoir repérer les montants
+supérieurs au seuil, calculer des montants moyen, minimal et maximal
+de notre groupe d'élèves.
 
+Certaines données vont être *saisies* : le taux, le seuil, les nom,
+prénom, classe et montant en euros pour chacun des enfants. Les autres
+données seront *calculées* : le montant en livres, le dépassement du
+seuil, les montants moyen, minimal et maximal de notre groupe
+d'élèves. Notre feuille de calcul contiendra : une cellule contenant
+le taux de conversion, une cellule contenant le seuil ; une plage de
+cellules rectangulaire avec en ligne les enfants et en colonne les
+propriétés nom, prénom, classe, montant en euros, montant en livres et
+dépassement ; des cellules avec les montants moyen, minimal et
+maximal. Notez aussi qu'on ajoute des contenus textuels dans certaines
+cellules pour expliquer le contenu de la cellule voisine ou pour
+nommer les propriétés de notre liste d'enfants. Il nous reste à
+expliquer comment, après avoir saisi les valeurs, on peut calculer les
+valeurs utiles à notre application.
 
-### Décrire les calculs
+### Expliciter les calculs
 
-Le calcul va faire référence à des données en entrée : On utilise des *références* aux cellules. Les références des cellules sont composées par les numéros de ligne et de colonne. Exemple : B7 la cellule en colonne B et ligne 7. Les références peuvent être *relatives* ou *absolues*. Les notions relative/absolue  n'ont de sens que lorsqu'on *copie* une cellule contenant une formule dans une autre cellule. 
+Un calcul va utiliser des valeurs connues qui sont contenues dans des
+cellules. Il faut dont pouvoir désigner une cellule et son
+contenu. Dans le tableur on parle de **référence à une cellule**
+désignée par numéro de ligne et de colonne dans la feuille comme, par
+exemple B7 pour la cellule en colonne B et ligne 7.
 
-Lors de la copie d'une cellule, les références relatives s'ajustent. Par exemple si on copie la cellule contenant la référence B7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D10. 
+L'intérêt du tableur, par rapport à une calculatrice, est de pouvoir
+généraliser des formules à une liste d'objets. Sur notre exemple, on
+va écrire une formule pour un enfant et on va généraliser cette
+formule à *tous les enfants* et ceci qu'on ait 10 élèves, 100 élèves
+ou 1000 élèves. Sur notre exemple, on écrira une formule en `E8` pour
+calculer le montant en euros à partir du montant figurant en `D8`. Puis
+on généralisera, on étendra, la formule à toute la plage de E8 jusque
+E108 si on a 100 enfants avec une *copie*. Le tableur va
+automatiquement adapter les références et la formule en `E9` fera
+référence à `D9` pour l'enfant en ligne 9, ... Ceci est réalisé avec la
+notion de *référence relative* comme `D8`, `B7`, `E12`, `G2` qui permet de
+traiter des listes, même de grande taille.
 
-Lors de la copie d'une cellule, les références relatives restent fixes. On peut fixer la ligne ou la colonne ou les deux en faisant précéder le numéro de ligne ou de colonne par un $. Par exemple, si on copie une cellule contenant la référence B$7 de 2 colonnes à droite et 3 lignes vers le bas, la référence devient D$7.  Avec $B7 la référence devient $B10. Avec $B$7 la référence reste $B$7.
+Mais parfois, la référence ne doit pas être modifiée lors de la
+copie. C'est le cas de la référence au taux de conversion qui est dans
+une seule cellule, `G2` sur notre exemple. Pour faire la distinction de
+comportement, on utilisera dans notre formule une *référence absolue*
+en utilisant le symbole $. Donc, par exemple, pour faire référence au
+taux de conversion, on utilisera la référence absolue `$G$2`.
+
+Le **mécanisme des références est donc essentiel pour traiter des
+listes**. Vous devez, lorsque vous écrivez une formule, vous poser la
+question suivante : est-ce que ma référence doit être adaptée lorsque
+je copie ma formule. Si oui, vous utilisez une référence relative
+(sans $), si non, vous utilisez une référence absolue avec $. 
+
 
 ### Autres références
-- On peut faire référence à des cellules d'une *autre feuille* avec la
-  syntaxe suivante : 'Nom de Feuille'.reference. 
-  - Exemple : 'Feuille 1'.B7
-- Les références peuvent désigner une *liste* de cellules
-  en donnant les références séparées par des `;`
-  - Exemple : `B3;D$7;$A1;E3`
+
+- On peut avoir besoin d'utiliser, dans certains cas, des références
+  mixtes comme `B$2` ou `$A5` où une composante est relative et l'autre
+  est absolue
 - Les références peuvent désigner une *plage rectangulaire* de cellules
   en donnant les références des coins supérieur gauche
-  et inférieur droit séparés par `:`
-  - Exemples : `B3:D7` ou `$B$3:D7` ou `$B3:D$7` etc.
-- Mais les références peuvent aussi se désigner par des *noms*.
+  et inférieur droit séparés par `:` comme `B3:D7` ou `$B$3:D7` ou `$B3:D$7`
+- On peut faire référence à des cellules d'une *autre feuille* avec la
+  syntaxe suivante : 'Nom de Feuille'.reference comme 'Feuille 1'.B7
+- Les références peuvent désigner une *liste* de cellules en donnant
+  les références séparées par des `;` comme `B3;D$7;$A1;E3`
+- Mais on peut aussi attribuer des noms à des cellules ou plages de
+  cellules. On peut alors y faire référence par le nom qui se comporte
+  alors comme une référence absolue.
  
 [Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
 [Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
