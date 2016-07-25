@@ -491,25 +491,26 @@ fichiers de clients.
 ## Objectifs
 
 L'étude des données et de leur gestion fait apparaître différents
-modes possibles d'organisation des données. Le tableur est un logiciel
-de base pour la gestion de données avec une organisation simple :
-données individuelles et listes de données. Il vous sera utile pour
-gérer des élèves et des notes si vous êtes professeur, gérer des
-adhérents d'une association si vous participez à une association,
-gérer des listes d'objets dans des fouilles si vous êtes archéologue,
-...
+modes possibles d'organisation des données. Parmi celles-ci, la liste
+est largement répandue car elle peut couvrir un grand nombre de
+besoins dans des situations variées. Elle vous sera utile pour gérer
+des élèves et des notes si vous êtes professeur, gérer des adhérents
+d'une association si vous participez à une association, gérer des
+listes d'objets dans des fouilles si vous êtes archéologue, ...  Le
+tableur est un logiciel de base pour la gestion de données numériques
+représentées par des listes.
 
-Le **premier objectif** est la découverte des fonctionnalités
-générales, communes à tous les tableurs, pour faire des calculs et
-manipuler des listes.
+Cette partie de cours est dédiée à l'étude du tableur.  Le **premier
+objectif** est la découverte des fonctionnalités générales, communes à
+tous les tableurs, pour faire des calculs et manipuler des listes. Le
+**second objectif** est d'appréhender les questions liées au choix
+d'organisation des données dans un tableur en réponse à des objectifs
+bien établis.
 
-Le **second objectif** est d'appréhender les questions liées à une
-bonne organisation des données dans un tableur pour pouvoir atteindre
-vos objectifs d'utilisation de vos données. 
 
-## découverte du tableur
+## Découverte du tableur
 
-### organisation générale et fonctionnalités
+### Organisation générale et fonctionnalités
 
 Le tableur est un **outil pour représenter, traiter et interroger des
 données**. Ce n'est pas un outil de présentation des tableaux car le
@@ -518,6 +519,28 @@ manipulation d'un tableur est donc une activité de traitement de
 données, et donc un pas supplémentaire vers l'informatique en tant que
 science du calcul.
 
+Avec le tableur, on peut gérer  des données organisées
+sous forme de **listes** : une liste d'élèves avec leurs notes, une
+liste d'adhérents avec leurs adresses et leurs cotisations, une liste
+d'objets avec un date de ramassage et des informations de forme,
+taille, poids,... Les listes, aussi appelées **relations** ou
+**tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
+un élément (un élève, un membre, un objet). Chaque colonne décrit une
+propriété de l'élément (un nom, un prénom, une note, une date de
+naissance, une taille, un poids).
+
+Les principales fonctionnalités d'un tableur sont :
+
+- mémoriser des données et des listes,
+- faire tous les calculs des plus simples aux plus compliqués,
+- sélectionner des éléments dans des listes en fonction de critères,
+  comme, par exemple, sélectionner les élèves garçons doublants,
+- trier des listes d'éléments, comme, par exemple, trier les élèves par âge,
+- analyser des listes et construire des diagrammes comme, par exemple,
+  faire des moyennes de notes par âge d'élève et faire le graphique
+  correspondant,
+- produire des rapports mis en forme.
+
 Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
 le tableur, on peut définir un *classeur* qui contient des *feuilles
 de calcul*. Chaque feuille de calcul est organisée en *lignes*
@@ -525,44 +548,22 @@ numérotées 1, 2, ... et en *colonnes* numérotées A, B,
 ... L'intersection d'une ligne et d'une colonne est une *cellule* qui
 va pouvoir contenir une donnée élémentaire.
 
-Avec le tableur, on peut gérer les données individuelles contenues
-dans les cellules mais on va également gérer des données organisées
-sous forme de **listes** : une liste d'élèves avec leurs notes, une
-liste d'adhérents avec leurs adresses et leurs cotisations, une liste
-d'objets avec un date de ramassage et des informations de forme,
-taille, poids,... les listes, aussi appelées **relations** ou
-**tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
-un objet (un élève, un membre, un objet). Chaque colonne décrit une
-propriété de l'objet (un nom, un prénom, une note, une date de
-naissance, une taille, un poids).
-
-Les principales fonctionnalités d'un tableur sont :
-
-- mémoriser des données et des listes,
-- faire tous les calculs des plus simples au plus compliqués,
-- sélectionner des objets dans des listes en fonction de critères,
-  comme, par exemple, sélectionner les élèves garçons doublants,
-- trier des listes d'objets, comme, par exemple, trier les élèves par âge,
-- analyser des listes et construire des diagrammes comme, par exemple,
-faire des moyennes de notes par âge d'élève et faire le graphique
-correspondant,
-- produire des rapports mis en forme.
+[Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
 ### Dans une cellule 
 
-Une cellule contient **une valeur ou une formule**. Une *valeur* va
-être, très souvent, un nombre ou un texte et c'est le tableur qui
-interprète ce contenu. Une *formule* commence par le signe `=` (c'est
-ce qui distingue une valeur d'une formule) suivi d'une expression d'un
-calcul. Une cellule contient également un format de mise en forme et,
-éventuellement, des commentaires expliquant le contenu. Il **faut être
-très attentif** à la distinction entre contenu de la cellule (affiché
-dans la barre de saisie) et ce que vous voyez dans la cellule qui peut
-être le résultat d'une mise en forme avec l'application d'un format de
-nombre, de pourcentage, ou même de date.
+La première chose à laquelle il **faut être très attentif** est la
+distinction entre le contenu et ce qui apparaît dans la cellule. Ce qui apparaît est une **valeur** mise en forme. La mise en forme influence énormément l'apparence, notamment pour les valeurs numériques. Par exemple une même valeur numérique peut être interprétée comme un simple nombre, un pourcentage, une somme d'argent ou même une date. 
 
-[Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
+[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
 
+
+La valeur affichée dans la cellule peut également être le résultat d'un calcul exprimé par une *formule*. Une formule commence par le signe `=` suivi d'une expression. On peut examiner la formule dans la *ligne de saisie*. Le tableur recalcule automatiquement les valeurs issues d'un calcul et permet facilement d'ajuster les calculs pour des listes de valeurs. 
+
+En résumé, dans une cellule s'affiche une valeur, mais la cellule contient bien plus d'informations : une valeur, un format, et éventuellement une formule et même un commentaire. 
+
+
+[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
 
 ### Mise en forme
 
