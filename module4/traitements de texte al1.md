@@ -648,7 +648,7 @@ va écrire une formule pour un enfant et on va généraliser cette
 formule à *tous les enfants* et ceci qu'on ait 10 élèves, 100 élèves
 ou 1000 élèves. Sur notre exemple, on écrira une formule en `E8` pour
 calculer le montant en euros à partir du montant figurant en `D8`. Puis
-on généralisera, on étendra, la formule à toute la plage de E8 jusque
+on généralisera, on étendra, la formule à toute la plage de `E8` jusque
 `E108` si on a 100 enfants avec une *copie*. Le tableur va
 automatiquement adapter les références et la formule en `E9` fera
 référence à `D9` pour l'enfant en ligne 9, ... Ceci est réalisé avec la
@@ -672,7 +672,6 @@ pour toute la liste d'enfants et en `E12`, nous aurons la formule
 attendue `=E12*$G$2` qui est bien le montant en euros pour l'enfant en
 ligne 12 multiplié par le taux de conversion situé en `G2`.
 
-
 ### Autres références
 
 - On peut avoir besoin d'utiliser, dans certains cas, des références
@@ -693,60 +692,111 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 [Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
+## Construire des formules
+
+Pour construire des formules on suit un langage formel, informatique,
+bien particulier. Le respect de la syntaxe est essentiel, sinon des
+erreurs apparaissent. Chaque formule doit commencer par le signe
+`=`. Derrière le signe `=` se trouve une expression utilisant des
+valeurs, des références, des opérateurs comme `+,-,*,/`, et des
+*fonctions* comme ARRONDI, MOIS, ... Le tableur contient un
+*générateur de formules* qui peut vous assister dans la création de
+formules. Voici des exmples de formule :
+
+	= 10 / 2 + 3
+	= D8 * $G$2
+    = MOIS(AUJOURDHUI())
+
+[Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
+
+Certaines fonctions, comme les fonctions SOMME, MOYENNE, MAX et NB,
+portent sur des ensembles de valeurs pour vous permettre de calculer
+(respectivement) la somme des valeurs, la moyenne des valeurs, la
+valeur maximale, le nombre de valeurs d'une plage de cellules.
+
+Enfin, une fonction très importante permet de différencier les
+traitements selon les cas. C'est *la fonction SI* qui s'écrit sous la
+forme =SI(critere;valeurVrai;ValeurFaux)=. Par exemple, si vous avez
+une liste d'élèves avec une moyenne des notes en colonne `G` à partir
+de `G5`, si vous souhaitez traiter différemment les élèves ayant une
+note supérieure à 10, vous pourrez écrire en `H5` une formule de la
+forme
+
+	=SI(G5>=10;"Bravo";"Recalé")
+
+puis étendre cette formule à tous les élèves. Si un élève a une
+moyenne inférieure à 10, le message "Bravo" (le texte *Bravo*) sera
+affiché pour cet élève et sinon sera affiché le message "Recalé".
+
+[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){:
+.lien_video }
+
+Les *fonctions peuvent être composées*. C'est, par exemple, très
+intéressant pour composer des SI lorsqu'il y a plus de deux cas
+possibles.
+
+Pour bien comprendre l'intérêt d'un tableur et l'intérêt d'avoir une
+cellule contenant le seuil, remarquez bien sur la video la mise à jour
+automatique des résultats des calculs lorsque les paramètres de seuil
+sont modifiés.
+
+[Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
+
+
+
+
 ## Opérations sur les tables
 
-On se concentre principalement sur deux opérations
+Nous avons vu comment calculer des valeurs qui permettent de
+construire de nouvelles colonnes comme résultats de calcul. On dispose
+donc d'une liste ou table qui est définie par une zone rectangulaire
+avec des objets en ligne et des propriétés en colonne. Il existe
+différentes opérations sur les tables et nous nous limitons ici à deux
+opérations : le tri et la sélection. Une autre opération, non
+présentée ici, consiste à effectuer des synthèses avec des
+tableaux. 
 
 ### Le tri 
 
-Le tri réordonne les lignes d'une table. Pour réaliser cette opération, on doit désigner :
-La table : il suffit de sélectionner une cellule de la table pour cela. Il faut désigner les critères de tri. C'est une liste de noms de colonnes. 
+Le tri *ordonne les lignes* d'une table selon des *critères de
+tri*. Pour réaliser cette opération, on doit :
+
+- désigner la table : soit en se plaçant dans une cellule quelconque
+de la table (le tableur en déduit sur quelle table vous souhaitez
+travailler) ou en la nommant
+- expliciter les critères de tri en donnant les noms des colonnes sur
+lesquelles vous voulez trier et en précisant si vous souhaitez un
+ordre croissant ou décroissant.
 
 [Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
 
 ### La sélection ou filtre. 
 
-En entrée de cette opération on doit désigner la table comme pour le tri et les critères de filtre : les conditions à vérifier pour qu'une ligne soit sélectionnée ou non.
+Cette opération consiste à sélectionner des lignes de la table qui
+vérifient un critère sur les valeurs des colonnes. Par exemple, on
+pourrait, sur notre exemple, souhaiter sélectionner les enfants de
+classe 1A, les enfants de classe 1A ayant plus de 10 euros, ... Pour
+réaliser une sélection, on doit :
+
+- désigner la table comme pour le tri
+- expliciter les critères de filtre.
 
 [Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
-
 ## Représentations graphiques
 
-Un graphique ou diagramme est utilisé pour porter un message. Le type de diagramme est important car il précise ce message : 
-- Pour une répartition : les camembert, et barres de pourcentage.
+Un graphique ou diagramme est utilisé pour porter un message. Le type
+de diagramme est important car il précise ce message :
+
+- Pour une répartition : les camemberts et barres de pourcentage
 - Pour  des valeurs qui peuvent s'ajouter : les empilements 
-- Pour les séries de valeurs continues : les courbes.
-- Pour les séries de valeurs non continues, les histogrammes
+- Pour les séries de valeurs continues : les courbes
+- Pour les séries de valeurs non continues : les histogrammes
 - Pour les données dans de nombreuses dimensions : les radars.
 
 Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
 > Ici placer des images seulement pour illustrer le discours. Tous les étudiants se démerderont pour savoir comment faire un diagramme. 
-
-## Construire des formules
-
-Pour construire des formules on suit un langage formel, informatique, bien particulier. Le respect de la syntaxe est essentiel, sinon des erreurs apparaissent. Chaque formule doit commencer par le signe `=`. Derrière le signe `=` se trouve une expression utilisant des valeurs,  des références, des *fonctions*, des opérateurs comme `+,-,*,/`, Dans les formules, les valeurs textuelles s'écrivent avec des guillemets. 
-
-Par exemple voici 4 formules différentes: 
-
-	=10
-    ="Bonjour"
-    =10*2+1
-    =(A1*2+1)/$B$2
-
-[Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
-
-Parmi les fonctions principales, beaucoup portent sur des ensembles de valeurs : SOMME, MOYENNE, MAX, MIN, NB, NBVAL. La fonction SI est très importante. Elle permet de faire un calcul conditionnel. La forme est =SI(critere;valeurVrai;ValeurFaux)=. Exemple : 
-
-	=SI(A1>=10;"Bravo";"Recalé")
- 
-Si la valeur en A1 est supérieure ou égale à 10, alors la formule affiche dans la cellule la valeur "Bravo" (le texte *Bravo*) sinon la formule renvoie la valeur "Recalé". 
-[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){: .lien_video }
-
-Les fonctions peuvent être imbriquées les unes dans les autres. C'est par exemple très intéressant pour faire un calcul avec plusieurs SI correspondant à plus de deux cas possibles. Remarquez également la mise à jour des calculs lorsque les paramètres de seuil évoluent.
-
-[Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
 
 # Le logiciel de présentation
