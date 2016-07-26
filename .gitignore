@@ -10,7 +10,7 @@ module*/*.config.json
 module*/imsmanifest.xml
 module*/*.gift.txt
 module*.html
-
+.~lock*
 draft*
 *.txt.html
 

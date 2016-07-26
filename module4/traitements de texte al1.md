@@ -524,7 +524,20 @@ Ajouter des  images ([image1][image1], [image2][image2]) dans un cadre avec une 
 [image1]: ./media/styles.png "image styles"
 [image2]: ./media/styleGeneral.png "image style général"
 
+```Activité
+Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
+{}
+```
 
+```Activité avancée
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.
+{}
+```
+
+```activité avancée 
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, faire des modifications avec le suivi des modifications activé, et va créer une version. 
+{}
+```
 
 # Le tableur
 
