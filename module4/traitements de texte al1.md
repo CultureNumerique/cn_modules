@@ -122,6 +122,16 @@ règles par défaut s'appliquent.
 
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
+
+```activité
+Savoir composer un document selon les règles typographiques n'est pas simple. Pour vous en convaincre, vous pouvez vous rendre en bibliothèque consulter les (très beaux) ouvrages qui y sont consacrés. Dans bien des cas, mieux vaut laisser l'ordinateur gérer seul certains choix comme par exemple la taille des espaces. Dans quelques logiciels professionnels des règles de typographie sont implantées, des algorithmes sophistiqués permettent de sélectionner la meilleure organisation des pages pour l'homogénéité, la lisibilité et la cohérence.  Mais certaines règles comme l'accent sur les majuscules, la forme des abréviations ne reposent que sur vous. 
+\n
+Lisez [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons) par Jacques André pour en convaincre et découvrir les fautes les plus courantes. 
+{}
+```
+
+
+
 ### Saisie et éléments de structure
 
 Pour manipuler correctement votre document comme mettre les retours à
@@ -289,8 +299,28 @@ sections entières ou de réorganiser le plan.
 [Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){:
 .lien_video }
 
+```Activité
+Récupérer un texte d'une source par un copié/collé est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
+{
+~%33%Vous avez importé le contenu
+~%33%Vous avez importé la structure
+~%34%Vous avez importé des mises en forme au cas par cas
+}
+```
 
-[L'autocorrection](https://owncloud.univ-lille3.fr/index.php/s/vPHjISuIO7DUx87){: .lien_video }
+```Activité
+En continuant l'activité précédente, vous pouvez maintenant appliquer un collage spécial, texte non formaté. 
+{
+~%100%Vous avez importé le contenu
+~%-33%Vous avez importé la structure
+~%-34%Vous avez importé des mises en forme au cas par cas
+}
+```
+
+```Activité
+Avec le texte de la charte copié selon la méthode de votre choix, préparez un [document mis en forme](./media/Charte.pdf). Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec MAJ-F3. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte. Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). 
+{}
+```
 
 ## Point d'étape : respecter des règles de base
 
@@ -358,12 +388,7 @@ définiriez une mise en forme commune pour tous ces codes.
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
-```activité
-Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués. 
-{}
-```
 
-[ici]: ./media/texte_final.pdf "document final"
 
 ## Vidéos 4 - numérotation et tables associées 
 
@@ -399,9 +424,11 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 [Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/ftcxiFP4X3MKIms){: .lien_video }
 
 ```activité
-Reproduire le document dont un pdf vous est donné ici. Aucune saisie directe des numéros et tables n'est autorisée!
+Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués. 
 {}
 ```
+
+[ici]: ./media/texte_final.pdf "document final"
 
 ## Video 5 - métadonnées
 
