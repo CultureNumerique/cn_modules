@@ -10,7 +10,7 @@ logiciels, le traitement de texte et le tableur. Ces savoir-faire sont
 basés sur les modules liés à la gestion de données et la gestion des
 documents. En effet, les bonnes pratiques reposent sur une bonne
 compréhension des concepts pour une utilisation intelligente de ces
-logiciels. Car peut-être à cause d'une apparente facilité ces
+logiciels. Car, peut-être à cause d'une apparente facilité, ces
 logiciels sont parfois très mal utilisés. Pourtant leur maîtrise est
 une compétence essentielle pour la suite de vos études et votre future
 entrée dans la vie professionnelle.
@@ -27,7 +27,7 @@ par les pairs, c'est-à-dire par vos collègues étudiants inscrits au
 même cours.
 
 **Note :** Les démonstrations sont réalisées avec LibreOffice Writer
-  pour le traitement de textes et LibreOffice Calc pour le tableur car
+  pour le traitement de texte et LibreOffice Calc pour le tableur car
   ils sont libres, gratuits, disponibles sur tous les ordinateurs et faciles à
   installer. Toutes les notions de ce cours sont transférables dans
   tout  traitement de texte ou tout tableur de votre choix
@@ -106,16 +106,17 @@ Remarquez aussi l'aide à la saisie qui a souligné un mot mal
 orthographié ou qui a proposé le mot en cours de saisie. On remarque
 également que les mots sont identifiés car ils sont automatiquement
 sélectionnés lors de la correction orthographique. On a aussi la
-possibilité de se déplacer de mot en mot avec CTRL-droite ou gauche et
-de supprimer un mot avec CTRL-Retour arrière.  L'assistance à la
-saisie effectue des remplacements automatiques : elle a mis en
-majuscule la première lettre du mot juste après le point, elle a
-inséré automatiquement une espace insécable (c'est-à-dire qui force à
-afficher les symboles à sa droite et à sa gauche sur une même ligne),
-elle a inséré un symbole spécifique pour les points de
-suspension. Jusqu'ici, nous conservons la mise en forme par défaut,
-c'est-à-dire qu'aucune règle de mise en forme n'a été définie donc les
-règles par défaut s'appliquent.
+possibilité de se déplacer de mot en mot avec `CTRL-droite` ou
+`CTRL-gauche` et de supprimer un mot avec `CTRL-Retour arrière`.
+L'assistance à la saisie effectue des remplacements automatiques :
+elle a mis en majuscule la première lettre du mot juste après le
+point, elle a inséré automatiquement une espace insécable
+(c'est-à-dire qui force à afficher les symboles à sa droite et à sa
+gauche sur une même ligne), elle a inséré un symbole spécifique pour
+les points de suspension. Jusqu'ici, nous conservons la mise en forme
+par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
+définie donc les règles par défaut (choisies par le concepteur du
+logiciel) s'appliquent.
 
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
@@ -124,11 +125,21 @@ règles par défaut s'appliquent.
 
 
 ```activité
-Savoir composer un document selon les règles typographiques n'est pas simple. Pour vous en convaincre, vous pouvez vous rendre en bibliothèque consulter les (très beaux) ouvrages qui y sont consacrés. Dans bien des cas, mieux vaut laisser l'ordinateur gérer seul certains choix comme par exemple la taille des espaces. Dans quelques logiciels professionnels des règles de typographie sont implantées, des algorithmes sophistiqués permettent de sélectionner la meilleure organisation des pages pour l'homogénéité, la lisibilité et la cohérence.  Mais certaines règles comme l'accent sur les majuscules, la forme des abréviations ne reposent que sur vous. 
-\n
-Lisez [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons) par Jacques André pour en convaincre et découvrir les fautes les plus courantes. 
-{}
-```
+
+Savoir composer un document selon les règles typographiques n'est pas
+simple. Pour vous en convaincre, vous pouvez vous rendre en
+bibliothèque consulter les (très beaux) ouvrages qui y sont
+consacrés. Dans bien des cas, mieux vaut laisser l'ordinateur gérer
+seul certains choix comme, par exemple, la taille des espaces. Dans
+quelques logiciels professionnels des règles de typographie sont
+implantées, des algorithmes sophistiqués permettent de sélectionner la
+meilleure organisation des pages pour l'homogénéité, la lisibilité et
+la cohérence.  Mais certaines règles comme l'accent sur les
+majuscules, la forme des abréviations ne reposent que sur vous.  \n
+Lisez
+[les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
+par Jacques André pour vous en convaincre et découvrir les fautes les plus
+courantes.  {} ```
 
 
 
@@ -170,19 +181,18 @@ anglais. Le respect de ces règles est impératif et, souvent, le
 logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
 Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
-*fins de paragraphes* créés par l'appui sur la touche *Entrée*. La fin
-de ligne dans le rendu du document est calculée par le traitement de
-texte et donc la touche entrée ne marque pas la fin de ligne. Il est
-parfois nécessaire de forcer une fin de ligne dans certains
-paragraphes comme les poèmes. C'est la combinaison de
+*fins de paragraphes* créés par l'appui sur la touche `Entrée`. La fin
+de ligne dans le rendu du document (le retour à la ligne) est calculée
+par le traitement de texte et donc la touche `Entrée` ne marque pas la
+fin de ligne. Il est parfois nécessaire de forcer une fin de ligne
+dans certains paragraphes comme les poèmes. C'est la combinaison de
 `Majuscule-Entrée` qui permet de réaliser une fin de ligne tout en
 gardant le même paragraphe. Puisque chaque appui sur la touche
-*Entrée* crée un nouveau paragraphe, les titres et les sous-titres
+`Entrée` crée un nouveau paragraphe, les titres et les sous-titres
 sont donc techniquement des paragraphes comme les paragraphes de
 texte. Comme pour les espaces et les mots, la convention choisie est
 de **ne jamais avoir deux fins de paragraphe consécutives** et de
-faire confiance au logiciel pour réaliser la meilleure
-présentation.
+faire confiance au logiciel pour réaliser le meilleur rendu visuel. 
 
 Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
   traitement de texte permet de les déclarer comme titres en précisant
@@ -193,32 +203,14 @@ Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
 Les **listes**.  Ce sont des suites de paragraphes reliés entre eux
 pour permettre une présentation cohérente. Pour assurer cette
 cohérence, beaucoup de caractéristiques sont définies sous forme de
-règles utilisées par le logiciel pour l'apparence des listes. C'est
-notamment les symboles utilisés pour les listes à puce, les
-espacements, la numérotation des éléments, etc. La logique est donc de
-déclarer la liste et de laisser le logiciel s'occuper de l'apparence
-avec les règles de mise en forme que vous indiquez.
-
-Repérer les composants du texte permet de comprendre la structure d'un
-document, saisir à la fois le contenu et la structure d'un document et
-se préparer pour une mise en forme efficace et uniforme du document.
-
-
-```compréhension
-Reproduire l'exemple en vidéo. Une partie du texte est disponible en suivant ce [lien][lien]. Les images seront traitées plus tard. 
-{ }
-```
-
-[lien]: ./media/MonPremierPas-Master.txt "document brut"
-
-## Vidéos 2 - styles et structure
-
-Nous avons déja vu comment utiliser les styles pour la structure de
- base. Nous voyons ici comment définir d'autres éléments de structure
- en commençant par les listes.
+règles utilisées par le logiciel pour l'apparence des listes : le
+symbole utilisé pour les items des listes à puce, les espacements, la
+numérotation des éléments, ... La logique est, ici encore, de déclarer
+la liste et de laisser le logiciel s'occuper de l'apparence quitte à
+adapter les règles de mise en forme à vos besoins.
 
 Chaque élément de liste est un paragraphe. On active la structure de
- liste par ce bouton qui est un raccourci du menu format/puces et
+ liste par bouton qui est un raccourci du menu format/puces et
  numérotation.  On ajoute un nouvel élément en ajoutant un
  paragraphe. On peut avoir plusieurs paragraphes dans le même élément
  de liste en utilisant la touche `Retour arrière` une seule fois en
@@ -226,6 +218,18 @@ Chaque élément de liste est un paragraphe. On active la structure de
  structure de liste.
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
+
+```compréhension
+
+Reproduire l'exemple en vidéo. Une partie du texte
+est disponible en suivant ce [lien][lien]. Les images seront traitées
+plus tard.  { } ```
+
+[lien]: ./media/MonPremierPas-Master.txt "document brut"
+
+## Vidéos 2 - styles et structure
+
+
 
 Les logiciels de traitement de texte offrent tous la possibilité
 d'afficher la liste des styles disponibles (avec LibreOffice, on peut
@@ -245,7 +249,7 @@ paragraphes, caractères, cadres (flottants), pages ou listes.
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
 lieu de mettre en gras et en italique, nous préférons déclarer des
-texte plus ou moins accentués. Il faut bien comprendre la
+textes plus ou moins accentués. Il faut bien comprendre la
 différence. Même si les textes déclarés en accentuation forte
 apparaissent en gras, ce n'est pas identique de presser le bouton
 gras. En les déclarant de cette façon nous ajoutons du sens que les
@@ -300,27 +304,35 @@ sections entières ou de réorganiser le plan.
 .lien_video }
 
 ```Activité
-Récupérer un texte d'une source par un copié/collé est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
-{
-~%33%Vous avez importé le contenu
-~%33%Vous avez importé la structure
-~%34%Vous avez importé des mises en forme au cas par cas
-}
-```
+
+Récupérer un texte d'une source par un copier/coler est une opération
+que chacun réalise régulièrement. Cette opération récupère en général
+de nombreuses mises en forme et styles. Par exemple, rendez-vous sur
+la page
+https://www.univ-lille3.fr/portail/charte-informatique/. Copier le
+texte de la page et collez-le dans Libreoffice.  { ~%33%Vous avez
+importé le contenu ~%33%Vous avez importé la structure ~%34%Vous avez
+importé des mises en forme au cas par cas } ```
 
 ```Activité
-En continuant l'activité précédente, vous pouvez maintenant appliquer un collage spécial, texte non formaté. 
-{
-~%100%Vous avez importé le contenu
-~%-33%Vous avez importé la structure
-~%-34%Vous avez importé des mises en forme au cas par cas
-}
-```
+
+En continuant l'activité précédente, vous pouvez maintenant appliquer
+un collage spécial, texte non formaté.  { ~%100%Vous avez importé le
+contenu ~%-33%Vous avez importé la structure ~%-34%Vous avez importé
+des mises en forme au cas par cas } ```
 
 ```Activité
-Avec le texte de la charte copié selon la méthode de votre choix, préparez un [document mis en forme](./media/Charte.pdf). Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec MAJ-F3. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte. Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). 
-{}
-```
+
+Avec le texte de la charte copié selon la méthode de votre choix,
+préparez un [document mis en forme](./media/Charte.pdf). Remplacez le
+texte *En aucun cas les membres de l'université ne vous réclameront
+votre identifiant et / ou votre mot de passe* pour le passer en
+minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les
+titres, les listes. Choisissez un affichage avec petites majuscules
+pour l'accentuation forte. Le haut de page reprend le titre déclaré
+dans les méta-données. Les lignes horizontales sont des bordures. Les
+titres sont bien de bon niveau (titre principal et titre de niveau 1).
+{} ```
 
 ## Point d'étape : respecter des règles de base
 
@@ -352,13 +364,14 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 
 ## Vidéos 3 - personnaliser les styles
 
-Commeçons par la mise en forme des paragraphes, en modifiant la
+Commençons par la mise en forme des paragraphes, en modifiant la
 définition du style `corps de texte`, nous définissons une règle
 générale qui va s'appliquer à tout le document, ou plutôt à tous les
 paragraphes de style `corps de texte` de ce document. On choisit
 souvent de *justifier*, c'est-à-dire de régler les espaces entre mots
-pour avoir des marges correctement alignées des deux côtés. Dans ce cas, une
-*césure* des mots est souvent appliquée pour éviter les espaces trop grandes.
+pour avoir des marges correctement alignées des deux côtés. Dans ce
+cas, une *césure* des mots est souvent appliquée pour éviter les
+espacements trop grands ou trop petits.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
 
@@ -380,7 +393,7 @@ présentation de tous les noms de logiciel.
 [Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
 
 Bien sûr, la définition de nouvelles structures, donc de nouveaux
-style, s'applique sur les caractères comme sur les paragraphes. Ici, notre
+styles, s'applique sur les caractères comme sur les paragraphes. Ici, notre
 document contient un morceau de code qui ne doit pas être justifié. Il
 peut être déclaré et mis en forme spécifiquement. Mais si votre
 document contenait d'autres codes, vous associeriez une structure et
@@ -424,9 +437,17 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 [Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/ftcxiFP4X3MKIms){: .lien_video }
 
 ```activité
-Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués. 
-{}
-```
+
+Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune
+mise en forme directe n'est tolérée ! Dans ce document, nous avons
+utilisé des styles spécifiques pour désigner les personnes et les
+œuvres, le résumé et les citations ; nous avons 3 styles de page avec
+des numérotations en romain pour les pages d'index et de tables ; nous
+avons utilisé les guillemets et les listes françaises. La police de
+caractère est sans doute différente sur votre machine. Ici ce sont les
+polices Latin Modern Roman et Latin Modern Sans pour les versions avec
+et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr
+tous les principes expliqués dans ce cours ont été appliqués.  {} ```
 
 [ici]: ./media/texte_final.pdf "document final"
 
@@ -452,7 +473,7 @@ les caractères non imprimables, l'aide à la saisie, un styleur pour
 structurer le document et le mettre en forme. On dispose, par exemple
 du style `normal` pour le corps de texte qu'il est possible de
 modifier.  La génération d'un index ou d'une table des matières suit
-la même logique ainsi que l'insertion de marque, de repère ou de
+la même logique ainsi que l'insertion de marques, de repères ou de
 renvois de notes.  Bien sûr, chaque logiciel a son interface propre et
 le nom des menus ou des outils peut varier d'une version à une autre,
 mais il est important de retenir que les **notions vues dans ce cours
@@ -497,7 +518,11 @@ donné).
 
 ### Mise en forme des listes
 
-Les listes en typographie française utilisent des tirets demi-cadratins (Code unicode 2013, [Tiret-moyen](https://fr.wikipedia.org/wiki/Tiret#Tiret_moyen)). On peut définir donc une liste à la française. C'est un peu technique. 
+Les listes en typographie française utilisent des tirets
+demi-cadratins (Code unicode 2013,
+[Tiret-moyen](https://fr.wikipedia.org/wiki/Tiret#Tiret_moyen)). On
+peut définir une liste à la française respectant cette convention
+typographique mais c'est un peu technique.
 
 [Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
