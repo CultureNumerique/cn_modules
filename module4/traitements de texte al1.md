@@ -542,6 +542,7 @@ amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
 
 ```Activité
+
 Ajouter des  images ([image1][image1], [image2][image2]) dans un cadre avec une légende pour construire les illustrations du cours. 
 {}
 ```
@@ -550,16 +551,19 @@ Ajouter des  images ([image1][image1], [image2][image2]) dans un cadre avec une 
 [image2]: ./media/styleGeneral.png "image style général"
 
 ```Activité
+
 Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
 {}
 ```
 
 ```Activité avancée
+
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.
 {}
 ```
 
-```activité avancée 
+```activité avancée
+
 Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, faire des modifications avec le suivi des modifications activé, et va créer une version. 
 {}
 ```
@@ -631,14 +635,26 @@ va pouvoir contenir une donnée élémentaire.
 ### Dans une cellule 
 
 La première chose à laquelle il **faut être très attentif** est la
-distinction entre le contenu et ce qui apparaît dans la cellule. Ce qui apparaît est une **valeur** mise en forme. La mise en forme influence énormément l'apparence, notamment pour les valeurs numériques. Par exemple une même valeur numérique peut être interprétée comme un simple nombre, un pourcentage, une somme d'argent ou même une date. 
+distinction entre le contenu et ce qui apparaît dans la cellule. Ce
+qui apparaît est une **valeur** mise en forme. La mise en forme
+influence énormément l'apparence, notamment pour les valeurs
+numériques. Par exemple une même valeur numérique peut être
+interprétée comme un simple nombre, un pourcentage, une somme d'argent
+ou même une date.
 
 [Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
 
 
-La valeur affichée dans la cellule peut également être le résultat d'un calcul exprimé par une *formule*. Une formule commence par le signe `=` suivi d'une expression. On peut examiner la formule dans la *ligne de saisie*. Le tableur recalcule automatiquement les valeurs issues d'un calcul et permet facilement d'ajuster les calculs pour des listes de valeurs. 
+La valeur affichée dans la cellule peut également être le résultat
+d'un calcul exprimé par une *formule*. Une formule commence par le
+signe `=` suivi d'une expression. On peut examiner la formule dans la
+*ligne de saisie*. Le tableur recalcule automatiquement les valeurs
+issues d'un calcul et permet facilement d'ajuster les calculs pour des
+listes de valeurs.
 
-En résumé, dans une cellule s'affiche une valeur, mais la cellule contient bien plus d'informations : une valeur, un format, et éventuellement une formule et même un commentaire. 
+En résumé, dans une cellule s'affiche une valeur, mais la cellule
+contient bien plus d'informations : une valeur, un format, et
+éventuellement une formule et même un commentaire.
 
 
 [Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
@@ -649,7 +665,7 @@ Comme pour le traitement de texte, on peut faire des mises en forme au
 cas par cas ou utiliser des styles pour uniformiser la
 présentation. **Attention** à ne pas mettre en péril les traitements
 par des soucis de présentation. Par exemple, une liste est définie par
-des lignes et colonnes contigües et insérer des lignes(ou colonnes)
+des lignes et colonnes contigües et insérer des lignes (ou colonnes)
 blanches ou avec un fond coloré pour faire des bordures rompt la
 logique de liste. Les traitements de filtre, tri, etc... deviendraient
 alors impossibles.
@@ -739,8 +755,8 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ### Autres références
 
-- On peut avoir besoin d'utiliser, dans certains cas, des références
-  mixtes comme `B$2` ou `$A5` où une composante est relative et l'autre
+- On peut avoir besoin d'utiliser, dans certains cas, des *références
+  mixtes* comme `B$2` ou `$A5` où une composante est relative et l'autre
   est absolue
 - Les références peuvent désigner une *plage rectangulaire* de cellules
   en donnant les références des coins supérieur gauche
@@ -751,7 +767,10 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
   les références séparées par des `;` comme `B3;D$7;$A1;E3`
 - Mais on peut aussi attribuer des noms à des cellules ou plages de
   cellules. On peut alors y faire référence par le nom qui se comporte
-  alors comme une référence absolue.
+  alors comme une référence absolue. On aurait, sur notre exemple, pu
+  nommer la cellule `G2` avec le nom `tauxchange`, écrire en `E8` la
+  formule `=D8*tauxchange`, puis copier cette formule dans la plage
+  `E8:E108`.
  
 [Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
 
@@ -764,7 +783,7 @@ bien particulier. Le respect de la syntaxe est essentiel, sinon des
 erreurs apparaissent. Chaque formule doit commencer par le signe
 `=`. Derrière le signe `=` se trouve une expression utilisant des
 valeurs, des références, des opérateurs comme `+,-,*,/`, et des
-*fonctions* comme ARRONDI, MOIS, ... Le tableur contient un
+*fonctions* comme `ARRONDI`, `MOIS`, ... Le tableur contient un
 *générateur de formules* qui peut vous assister dans la création de
 formules. Voici des exmples de formule :
 
@@ -774,36 +793,39 @@ formules. Voici des exmples de formule :
 
 [Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
 
-Certaines fonctions, comme les fonctions SOMME, MOYENNE, MAX et NB,
-portent sur des ensembles de valeurs pour vous permettre de calculer
-(respectivement) la somme des valeurs, la moyenne des valeurs, la
-valeur maximale, le nombre de valeurs d'une plage de cellules.
+Certaines fonctions, comme les fonctions `SOMME`, `MOYENNE`, `MAX` et
+`NB`, portent sur des ensembles de valeurs pour vous permettre de
+calculer (respectivement) la somme des valeurs, la moyenne des
+valeurs, la valeur maximale, le nombre de valeurs d'une plage de
+cellules.
 
 Enfin, une fonction très importante permet de différencier les
 traitements selon les cas. C'est *la fonction SI* qui s'écrit sous la
-forme =SI(critere;valeurVrai;ValeurFaux)=. Par exemple, si vous avez
+forme `SI(critere;valeurVrai;ValeurFaux)`. Par exemple, si vous avez
 une liste d'élèves avec une moyenne des notes en colonne `G` à partir
-de `G5`, si vous souhaitez traiter différemment les élèves ayant une
-note supérieure à 10, vous pourrez écrire en `H5` une formule de la
-forme
-
-	=SI(G5>=10;"Bravo";"Recalé")
+de `G8`, si vous souhaitez traiter différemment les élèves ayant une
+note supérieure à 10, vous pourrez écrire en `H8` une formule de la
+forme `=SI(G8>=10;"Reçu";"Recalé")`
 
 puis étendre cette formule à tous les élèves. Si un élève a une
-moyenne inférieure à 10, le message "Bravo" (le texte *Bravo*) sera
-affiché pour cet élève et sinon sera affiché le message "Recalé".
+moyenne inférieure à 10, le message "Reçu" sera affiché pour cet élève
+et sinon sera affiché le message "Recalé".
 
 [Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){:
 .lien_video }
 
-Les *fonctions peuvent être composées*. C'est, par exemple, très
-intéressant pour composer des SI lorsqu'il y a plus de deux cas
-possibles.
+Les *fonctions peuvent être composées* comme dans l'exemple `=
+MOIS(AUJOURDHUI())` où on appelle la fonction `AUJOURDHUI()` qui
+calcule la date du jour et au résultat on applique la fonction
+`MOIS()` qui calcule le mois d'une date et donc on affichera le mois
+du jour courant. La composition de fonctions est très utile, par
+exemple, très intéressant pour composer des `SI` lorsqu'il y a plus de
+deux cas possibles comme dans l'exemple suivant :
+`=SI(G8<10;"Recalé";SI(G8<12;"Passable";"Mention"))`
 
-Pour bien comprendre l'intérêt d'un tableur et l'intérêt d'avoir une
-cellule contenant le seuil, remarquez bien sur la video la mise à jour
-automatique des résultats des calculs lorsque les paramètres de seuil
-sont modifiés.
+Ceci est illustré sur l'exemple. **Notez bien** aussi sur la video
+l'intérêt d'avoir des cellules contenant les seuils car il suffit de
+modifier les contenus de ces cellules sans changer les formules pour que les résultats s'adaptent automatiquement à un changement des seuils. 
 
 [Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
@@ -826,10 +848,10 @@ tableaux.
 Le tri *ordonne les lignes* d'une table selon des *critères de
 tri*. Pour réaliser cette opération, on doit :
 
-- désigner la table : soit en se plaçant dans une cellule quelconque
+- *désigner la table* : soit en se plaçant dans une cellule quelconque
 de la table (le tableur en déduit sur quelle table vous souhaitez
 travailler) ou en la nommant
-- expliciter les critères de tri en donnant les noms des colonnes sur
+- *expliciter les critères de tri* en donnant les noms des colonnes sur
 lesquelles vous voulez trier et en précisant si vous souhaitez un
 ordre croissant ou décroissant.
 
@@ -838,13 +860,13 @@ ordre croissant ou décroissant.
 ### La sélection ou filtre. 
 
 Cette opération consiste à sélectionner des lignes de la table qui
-vérifient un critère sur les valeurs des colonnes. Par exemple, on
+vérifient des conditions sur les valeurs des colonnes. Par exemple, on
 pourrait, sur notre exemple, souhaiter sélectionner les enfants de
 classe 1A, les enfants de classe 1A ayant plus de 10 euros, ... Pour
 réaliser une sélection, on doit :
 
-- désigner la table comme pour le tri
-- expliciter les critères de filtre.
+- *désigner la table* comme pour le tri
+- *expliciter les critères de filtre*.
 
 [Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
