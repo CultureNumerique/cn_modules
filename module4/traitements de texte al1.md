@@ -533,7 +533,7 @@ apportées par un traitement de textes mais vous disposez maintenant
 des principes de base pour une bonne utilisation. Il est, par exemple,
 possible de définir des tableaux organisés en lignes et en colonnes,
 d'insérer des images dans des figures avec des légendes et des
-numérotaions. Il est également possible d'intégrer une
+numérotations. Il est également possible d'intégrer une
 bibliographie. Cette opération est plus complexe mais vous trouverez
 des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
 professionnel, vous serez à amener à utiliser des modèles pour
@@ -543,9 +543,8 @@ fichiers de clients.
 
 ```Activité
 
-Ajouter des  images ([image1][image1], [image2][image2]) dans un cadre avec une légende pour construire les illustrations du cours. 
-{}
-```
+Ajouter des images ([image1][image1], [image2][image2]) dans un cadre
+avec une légende pour construire les illustrations du cours.  {} ```
 
 [image1]: ./media/styles.png "image styles"
 [image2]: ./media/styleGeneral.png "image style général"
@@ -558,15 +557,16 @@ Reprendre le document de la charte graphique et appliquer le modèle donné [ici
 
 ```Activité avancée
 
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.
-{}
+Créer un document maître avec ce
+[modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la
+charte comme autant de documents inclus dans le document maître.  {}
 ```
 
 ```activité avancée
 
-Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, faire des modifications avec le suivi des modifications activé, et va créer une version. 
-{}
-```
+Faites circuler un document de votre choix entre 3 d'entre
+vous. Chacun ajoutera un commentaire, faire des modifications avec le
+suivi des modifications activé, et va créer une version.  {} ```
 
 # Le tableur
 
@@ -592,7 +592,7 @@ bien établis.
 
 ## Découverte du tableur
 
-### Organisation générale et fonctionnalités
+### Fonctionnalités
 
 Le tableur est un **outil pour représenter, traiter et interroger des
 données**. Ce n'est pas un outil de présentation des tableaux car le
@@ -604,7 +604,7 @@ science du calcul.
 Avec le tableur, on peut gérer  des données organisées
 sous forme de **listes** : une liste d'élèves avec leurs notes, une
 liste d'adhérents avec leurs adresses et leurs cotisations, une liste
-d'objets avec un date de ramassage et des informations de forme,
+d'objets avec un date de collecte et des informations de forme,
 taille, poids,... Les listes, aussi appelées **relations** ou
 **tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
 un élément (un élève, un membre, un objet). Chaque colonne décrit une
@@ -623,12 +623,20 @@ Les principales fonctionnalités d'un tableur sont :
   correspondant,
 - produire des rapports mis en forme.
 
+### Organisation générale
+
 Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
-le tableur, on peut définir un *classeur* qui contient des *feuilles
-de calcul*. Chaque feuille de calcul est organisée en *lignes*
-numérotées 1, 2, ... et en *colonnes* numérotées A, B,
-... L'intersection d'une ligne et d'une colonne est une *cellule* qui
-va pouvoir contenir une donnée élémentaire.
+le tableur, on définit
+
+- un *classeur* qui sera enregistré dans un fichier au format de 
+`Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par LibreOffice Calc d'extension `ods`
+- un classeur contient des *feuilles de calcul*, chaque feuille de
+  calcul a un nom. Par défaut, en version française, `Feuille 1`,
+  `Feuille 2`, ...
+- chaque feuille de calcul est organisée en *lignes* numérotées 1, 2,
+... et en *colonnes* numérotées A, B, ... L'intersection d'une ligne
+et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
+élémentaire.
 
 [Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
@@ -674,7 +682,14 @@ alors impossibles.
 
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
-## Traiter des données 
+```Activité
+
+Un exemple classique de classeur de calcul de résultats électoraux
+pour inroduire quelques notions
+[modèle](./media/elction.ods). 
+```
+
+## Traiter des données
 
 Faire un traitement de données, c'est
 
