@@ -551,7 +551,8 @@ avec une légende pour construire les illustrations du cours.  {} ```
 
 ```Activité
 
-Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
+Reprendre le document de la charte graphique et appliquer le modèle donné
+[ici](./media/ModeleCN.ott).
 {}
 ```
 
@@ -686,7 +687,13 @@ alors impossibles.
 
 Un exemple classique de classeur de calcul de résultats électoraux
 pour inroduire quelques notions
-[modèle](./media/elction.ods). 
+[Classeur élections](./media/election.ods). {}
+```
+
+```Activité
+
+Un exemple de gestion des cotisations des adhérents d'une association 
+[Classeur association](./media/association.ods).  {}
 ```
 
 ## Traiter des données
