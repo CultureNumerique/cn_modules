@@ -683,18 +683,25 @@ alors impossibles.
 
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
-```Activité
+```Activité avancée
 
 Un exemple classique de classeur de calcul de résultats électoraux
-pour inroduire quelques notions
-[Classeur élections](./media/election.ods). {}
+pour inroduire quelques notions [Classeur élections](./media/election.ods).
+{}
 ```
 
-```Activité
+```Activité avancée
 
-Un exemple de gestion des cotisations des adhérents d'une association 
-[Classeur association](./media/association.ods).  {}
-```
+Un exemple de gestion des cotisations des adhérents d'une association
+[Classeur association](./media/association.ods). Vous pouvez regarder
+l'organisation avec les cellules servant aux calculs (seuils d'âge,
+tarifs de base), des cellules avec des résultats de calcul (montant
+des cotisations), une liste d'adhérents (une ligne par adhérent) avec
+des propriétés (nom, date de naissance, ...). Dans cette liste des
+informations sont saisies et d'autres sont calculées. Vous pouvez
+regarder les formules et les comprendre, modifier des valeurs
+générales (seuils, montant de base) et visualiser l'impact ou modifier
+des valeurs pour un adhérent et voir l'effet.  {} ```
 
 ## Traiter des données
 
@@ -798,6 +805,13 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 [Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
+```Activité avancée
+
+Des exemples d'utilisation pour bien comprendre les références dans ce
+tableur qui contient deux feuilles de calcul s
+[Jeu avec les références](./media/jeureferences.ods).  {} ```
+
+
 ## Construire des formules
 
 Pour construire des formules on suit un langage formel, informatique,
@@ -851,7 +865,12 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 
 [Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
+```Activité avancée
 
+Des formules simples pour commencer avec des additions, des
+multiplications et la fonction `SOMME()` dans ce dans ce classeur qui
+contient deux feuilles de calculs
+[Premières formules](./media/premieresformules.ods).  {} ```
 
 
 ## Opérations sur les tables
