@@ -808,7 +808,7 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 ```Activité avancée
 
 Des exemples d'utilisation pour bien comprendre les références dans ce
-tableur qui contient deux feuilles de calcul s
+classeur qui contient deux feuilles de calcul
 [Jeu avec les références](./media/jeureferences.ods).  {} ```
 
 
@@ -872,6 +872,24 @@ multiplications et la fonction `SOMME()` dans ce dans ce classeur qui
 contient deux feuilles de calculs
 [Premières formules](./media/premieresformules.ods).  {} ```
 
+```Activité avancée
+
+Le tableur dispose d'un très grand nombre de fonctions pour manipuler
+des données comme les nombres avec les fonctions mathématiques, les
+chaînes de caractères pour extraire une sous-chaîne, transformer en
+majuscules , ... Nous allons illustrer ceci avec l'exemple des
+[fonctions sur les dates](./media/fonctionsdates.ods).  {} ```
+
+```Activité avancée
+
+Des formules sur des plages de calcul comme ici pour des calculs de
+moyennes
+[Fonctions de plages](./media/fonctionsplages.ods).  {} ```
+
+```Activité avancée
+
+Des formules avec la 
+[fonction SI](./media/fonctionSI.ods).  {} ```
 
 ## Opérations sur les tables
 
@@ -911,6 +929,16 @@ réaliser une sélection, on doit :
 
 [Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
+```Activité avancée
+
+Des [tris et des filtres](./media/association.ods). Vous pourrez trier
+par ordre alphabétique des noms. Puis trier par ordre croissant des
+âges et noter que l'ordre alphabétique est perdu ! Puis trier par
+tranche d'âge en triant chaque tranche d'âge par âge croissant. Des
+exemples de filtres à réaliser sont : 1. Sélectionner les juniors ;
+2. Sélectionner les juniors femmes ; 3. Sélectionner les membres qui
+ne sont pas à jour de leur cotisation, ... {} ```
+
 ## Représentations graphiques
 
 Un graphique ou diagramme est utilisé pour porter un message. Le type
@@ -924,8 +952,20 @@ de diagramme est important car il précise ce message :
 
 Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
-> Ici placer des images seulement pour illustrer le discours. Tous les étudiants se démerderont pour savoir comment faire un diagramme. 
+```Activité avancée
 
+Des exemples utilisant des graphiques et des fonctionnalités avancées
+comme les filtres élaborés et les tableaux croisés. Parcourez les
+feuilles pour les comprendre. Vous pouvez accéder aux définitions des
+tableaux croisés en vous plaçant dans un tableau et en appelant avec
+le bouton droit le menu
+modifier. [Fonctionnalités avancées](./media/associationplus.ods).
+
+```Activité avancée
+
+Reste à trouver un ou deux exemples ou on leur donne les données
+brutes et les objectifs, ils concoivent un classeur. Ils s'évaleunt
+par les pairs
 
 # Le logiciel de présentation
 
@@ -933,11 +973,23 @@ Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
 [Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
 
-Notre document est maintenant entièrement structuré et stylé. Nous allons nous interessé à la mise en page et à la mise en forme afin d'améliorer la vue de présentation.
-Par exemple, les paragraphes de corps de texte sont alignés à gauche, une présentation justifiée est plus propre dans les documents imprimés. Nous allons donc utilisés le styleur pour modifier les attributs de présentation du style "corps de texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet écran de nombreuses possibilités sont offertes, nous vous laissons les explorer. Je vais simplement modifier l'alignement pour choisir "justifié".
-Je valide et automatiquement TOUS les paragraphes de style "corps de texte" de mon document sont mis à jour.
-Je vais maintenant faire la même chose avec un style de caractères. Choisissons le style "accentuation forte". Je vais cette fois modifier sa couleur. Après validation tous les caractères de ce style sont mis à jour dans l'ensemble de mon document.
-Il ne reste plus qu'à faire la même chose pour chacun des styles que je veux personnaliser.
+Notre document est maintenant entièrement structuré et stylé. Nous
+allons nous interessé à la mise en page et à la mise en forme afin
+d'améliorer la vue de présentation.  Par exemple, les paragraphes de
+corps de texte sont alignés à gauche, une présentation justifiée est
+plus propre dans les documents imprimés. Nous allons donc utilisés le
+styleur pour modifier les attributs de présentation du style "corps de
+texte". À l'aide du clic-droit je choisis "modifier le style". Sur cet
+écran de nombreuses possibilités sont offertes, nous vous laissons les
+explorer. Je vais simplement modifier l'alignement pour choisir
+"justifié".  Je valide et automatiquement TOUS les paragraphes de
+style "corps de texte" de mon document sont mis à jour.  Je vais
+maintenant faire la même chose avec un style de
+caractères. Choisissons le style "accentuation forte". Je vais cette
+fois modifier sa couleur. Après validation tous les caractères de ce
+style sont mis à jour dans l'ensemble de mon document.  Il ne reste
+plus qu'à faire la même chose pour chacun des styles que je veux
+personnaliser.
 
 
 
