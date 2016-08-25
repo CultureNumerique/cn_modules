@@ -545,24 +545,19 @@ avec une légende pour construire les illustrations du cours.
 
 ### Activité
 Reprendre le document de la charte graphique et appliquer le modèle donné
-[ici](./media/ModeleCN.ott).{}
+[ici](./media/ModeleCN.ott).
 
-```Activité avancée
+### Activité avancée
 
 Créer un document maître avec ce
 [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la
-charte comme autant de documents inclus dans le document maître. {}
-```
+charte comme autant de documents inclus dans le document maître.
 
-``` activité avancée
+### Activité avancée
 
 Faites circuler un document de votre choix entre 3 d'entre
-vous. Chacun ajoutera un commentaire, faire des modifications avec le
-suivi des modifications activé, et va créer une version.  {} 
-
-```
-```
-
+vous. Chacun ajoutera un commentaire, fera des modifications avec le
+suivi des modifications activé, et créera une version.
 
 
 # Le tableur
