@@ -58,7 +58,7 @@ culture numérique qui ne se limite pas à l'utilisation d'un traitement
 de texte ou la participation à un réseau. C'est ce que nous allons
 développer dans ces cours.
 
-``` comprehension
+```comprehension
 ::Pourquoi représenter avec des nombres ?::
 [html]<p>Pourquoi faut-il représenter les textes, images, son,
 etc, par des nombres dans un ordinateur ?</p>
@@ -86,7 +86,7 @@ processeur(s) \:</p>{ ~%20%<p>tablettes</p>
 ces objets sont équipés de micro-processeurs !</p> }
 ```
 
-``` activité
+```activité
 ::Le numérique concerne tout le monde:: 
 [markdown]
 **Quels étudiants sont concernés par le numérique ?**
@@ -113,7 +113,7 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
  * [vase qui parle]http://bsa.biblio.univ-lille3.fr/blog/2013/09/exposition-le-vase-qui-parle-au-palais-des-beaux-arts-de-lille/)}
 ```
  
-``` activité-avancée
+```activité-avancée
 ::Le numérique au quotidien::[markdown]Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
     - Domotique
     - Transports
@@ -378,7 +378,7 @@ En **1983**, Apple achète pour 40 000$, une licence pour le brevet de la souris
 
 # Naissance d'internet
 
-  [Naissance d'internet](https://player.vimeo.com/video/122104260){: .lien_video }
+[Naissance d'internet](https://player.vimeo.com/video/122104260){: .lien_video }
 
 Dans les années soixante, il existait aux États-Unis de gros centres
 de calcul abritant de très gros ordinateurs. Ceux-ci étaient reliés
@@ -441,9 +441,8 @@ informations.#Tout à fait !
 ####Parce qu'il peut fonctionner en mode "dégradé"... }
 ```
 
-``` activité-avancée
+```activité-avancée
 ::Qui a inventé internet ?::
-**Qui a inventé internet ?**
 On a parfois une représentation erronée du rôle des différents pays dans la **création** d'internet. Faites des recherches sur les deux personnes suivantes pour rétablir un juste équilibre.
 - Qui est Vinton « Vint » Gray Cerf ? Comment est-il parfois surnommé ?
 - Qui est Louis Pouzin ? Qu'était le projet Cyclades ?
@@ -467,7 +466,6 @@ Si vous voulez écouter son **avis** sur ce qu'est devenu internet, voici une vi
 }
 
 ::Qui a accès à internet ?::
-**Qui a accès à internet ?**
 Effectuez des recherches pour répondre aux questions qui suivent. Vous pouvez commencer vos recherches à partir de  [cette page sur l'histoire](http://fr.wikipedia.org/wiki/Histoire_d'Internet) et [cette page qui donne des statistiques d'utilisation](http://www.blogdumoderateur.com/chiffres-internet/)
 - Combien y avait-il dans le monde d'ordinateurs connectés en 1984 ? En 1987 ? En 1989 ? Aujourd'hui ?
 - en quelle année a-t-on passé la barre du million d'utilisateurs ? 
@@ -491,7 +489,7 @@ Enfin, pour tenter de mesurer l'ampleur des informations échangées sur interne
 
 # Comment ça marche?
 
-  [Comment ça marche ?](https://player.vimeo.com/video/122104315){: .lien_video }
+[Comment ça marche ?](https://player.vimeo.com/video/122104315){: .lien_video }
 
 Regardons un peu plus précisément comment fonctionne internet. Trois
 ingrédients importants interviennent dans le système.
@@ -740,7 +738,9 @@ pour y installer des fonctions de filtrage ?{
 tout... 
 ####Parce que toutes les informations transitent par elle. }
 ```
+
 ```activité
+
 ::Utiliser les serveurs de noms::
 [markdown]
 **Utiliser les serveurs de noms**
@@ -783,6 +783,7 @@ Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence
 ```
 
 ```comprehension
+
 ::La charte informatique de l'université::
 [markdown]**La charte informatique de l'université**
 Pour utiliser les *services numériques* de l'université, vous avez signé une **charte informatique** lors de votre inscription :

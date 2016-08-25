@@ -20,16 +20,15 @@ Le succès du web est sans doute lié à la notion de document hypertexte. C'est
 Cela a été rendu possible grâce à l'utilisation du fameux langage HTML - Hyper Text Markup Language - inventé par Tim Berners Lee en 1991.
 L'ensemble des documents ainsi que les liens qui les relient forment alors un réseau de documents. Cette multitude de liens a fait naître l'image bien connue de la toile d'araignée. En anglais : le web
 
-```activité
-// question: 159977  name: La toile et ses fils
+```compréhension// question: 159977  name: La toile et ses fils
 ::La toile et ses fils::[html]<p>Dans l'image du web représentée par une toile d'araignée, les fils sont \:</p>{
 	=<p>des liens</p>
 	~<p><strong id\="docs-internal-guid-566566e9-d108-1f1b-8d6f-529e33dacd53" style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des câbles du réseau internet</span></strong></p>
 }
 
 
-// question: 159978  name: La toile et ses noeuds
 ::La toile et ses noeuds::[html]<p>Dans l'image du web représentée par une toile d'araignée, les nœuds sont \:</p>{
+// question: 159978  name: La toile et ses noeuds
 	=<p>des ressources</p>
 	~<p><span style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des ordinateurs</span></span></p>
 }
@@ -86,7 +85,8 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 # Clients et serveurs
 
-## Le modèle client/serveur:/
+## Le modèle client/serveur
+
 [video](https://player.vimeo.com/video/138623558){: .lien_video}
 Le Web, et bien d'autres applications d'internet, fonctionnent selon un modèle très simple : le modèle client/serveur.
 
@@ -119,7 +119,8 @@ Une remarque importante doit être signalée. Le terme naviguer peut prêter à 
 Un serveur est un logiciel (un programme) qui s'exécute sur une machine le plus souvent 24/24 et 7/7 et attend qu'un client l'interpelle, par exemple c'est le cas du serveur web www.univ-lille.fr qui distribue les ressources du site de l'université de Lille. Dans ces journaux, de nombreuses informations à propos des clients sont mémorisées : leur adresse IP, des dates de visites, la ressource demandée... Notons que, l'envoi d'une ressource, est en fait l' envoi d'une copie de la ressource, l'original restant disponible pour d'autres requêtes identiques. En plus de ce service de distribution, le serveur garde l' historique de toutes les requêtes qui lui ont été adressées dans des journaux d'activité : les logs en anglais. Ces journaux sont autant de traces que nous laissons et qui peuvent être analysées et exploitées.
 Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui sont stockées sur ses disques, aux clients qui les demandent . 
 
-```activité
+```compréhension
+
 // question: 268  name: Erreur 404!
 ::Erreur 404!::[html]<p>Que signifie le code d'erreur 404 dans le protocole HTTP</p>{
 	~<p>La ressource a été déplacée sur un autre serveur</p>
@@ -213,7 +214,8 @@ Une évolution du protocole `http` remédie à ces problèmes en ajoutant le cry
 
 En conclusion, dès que vous transmettez des données confidentielles veillez bien à la présence du petit verrou qui indique l'utilisation du protocole `https`.
 
-```activité
+```compréhension
+
 // question: 274  name: Composition d'une URL
 ::Composition d'une URL::[html]<p>Quelles informations sont indiquées dans une URL ?</p>{
 	~%33.33333%<p>le nom du serveur</p>
@@ -329,8 +331,7 @@ Il est réalisé par le couple HTML/feuilles de style sur le Web.
 
 Mais une bonne utilisation du traitement de texte passe également par la maîtrise de cette décomposition en 3 parties.
 
-```activité
-
+```compréhension
 // Question vide de type description (sans {}) pour présenter le support des questions suivantes
 ::Exercice::[html]
 <p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant </p>
@@ -401,15 +402,16 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ```activité-avancée
 ::Activité sur les serveurs::[markdown]
 Rendez-vous sur la page :
-(pageServeurs.html)[http://culturenumerique.univ-lille3.fr/activitesWeb/html/pageServeurs.html]
+[pageServeurs.html](http://culturenumerique.univ-lille3.fr/activitesWeb/html/pageServeurs.html)
 Lisez, observez et répondez aux questions posées...
 {}
 ```
 
 
 # Les Cookies
+
 ## Cours
-[video]( https://player.vimeo.com/video/138623890 ){: .lien_video } 
+[video](https://player.vimeo.com/video/138623890 ){: .lien_video } 
 ### Les cookies, une technique très utile...
 
 Rappelons la conclusion importante du chapitre précédent.
@@ -455,7 +457,8 @@ Mais dès lors que ces numéros d'identification sont rapprochés ou unifiés, l
 
 Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour empêcher ou limiter l'usage du numéro de sécurité sociale dans les autres administrations de l'état. Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
 
-```activité
+```compréhension
+
 // question: 289  name: Cookie tiers
 ::Cookie tiers::[html]<p>Un cookie tiers c'est ...</p>{
 	~<p>est un cookie découpé en 3 parties</p>
@@ -518,7 +521,8 @@ De la même manière, vous pouvez paramétrer votre client mail pour envoyer des
 
 Notons qu'une pièce jointe fait partie d'un message, il est envoyé avec le corps du message et ne constitue pas une ressource externe. On peut donc s'échanger des messages avec des images en pièce jointe sans utiliser l'affichage HTML.
 
-```activité
+```compréhension
+
 // question: 292  name: La messagerie électronique et HTML
 ::La messagerie électronique et HTML::[html]<p>Sélectionnez les affirmations vraies.</p>{
 	~<p>les messages électroniques sont toujours écrits en HTML</p>
@@ -647,7 +651,8 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
  associations d'utilisateurs, ou pour interpeller les élus, participer
  aux débats publics sur les questions de respect de la vie privée. 
 
-```activité
+```compréhension
+
 // question: 294  name: Les profils
 ::Les profils::[html]<p>Vrai ou faux ? Pour chaque affirmation ci-dessous cochez la case correspondante pour indiquer qu'elle est vraie.<br></br></p>{
 	=<p>une partie de l'économie du web repose sur la collecte de données personnelles</p>
@@ -826,7 +831,8 @@ puis répondez à la question qui suit.</p>{}
  prochains cours de culture numérique qui aborderont sans doute ces
  questions beaucoup plus précisément. 
 
-```activité
+```compréhension
+
 // question: 299  name: Combien de sites Web ?
 ::Combien de sites Web ?::[html]<p>Quelle est l'estimation actuelle du nombre de sites Web dans le monde ?</p><p>Faites quelques recherches pour trouver un ordre de grandeur.</p>{}
 
@@ -922,7 +928,8 @@ Vous avez néanmoins la possibilité de choisir les traces que vous êtes prêts
 
 Les activités associées à ce module vont entre autre vous permettre de voir comment paramétrer votre navigateur pour faire vos propres choix.
 
-```activité
+```compréhension
+
 // question: 307  name: Les données locales
 ::Les données locales::[html]<p>Cochez les bonnes affirmations dans cette liste<br></br></p>{
 	~%25%<p>le cache permet d'accélérer l'affichage des pages web déjà visitées</p>
