@@ -218,13 +218,11 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
-### Compréhension
+```Activité
 
-Reproduire l'exemple en vidéo. Une partie du texte
-est disponible en suivant ce [lien][lien]. Les images seront traitées
-plus tard.  
-
-[lien]: ./media/MonPremierPas-Master.txt "document brut"
+Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt). 
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+```
 
 ## Vidéos 2 - styles et structure
 
@@ -320,17 +318,6 @@ contenu ~%-33%Vous avez importé la structure ~%-34%Vous avez importé
 des mises en forme au cas par cas } 
 ```
 
-### Activité
-
-Avec le texte de la charte copié selon la méthode de votre choix,
-préparez un [document mis en forme](./media/Charte.pdf). Remplacez le
-texte *En aucun cas les membres de l'université ne vous réclameront
-votre identifiant et / ou votre mot de passe* pour le passer en
-minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les
-titres, les listes. Choisissez un affichage avec petites majuscules
-pour l'accentuation forte. Le haut de page reprend le titre déclaré
-dans les méta-données. Les lignes horizontales sont des bordures. Les
-titres sont bien de bon niveau (titre principal et titre de niveau 1).
 
 
 ## Point d'étape : respecter des règles de base
@@ -360,6 +347,24 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  les sections, créer une table des matières, ... Vous allez pouvoir
  agir sur tous ces éléments pour **personnaliser la mise en forme en
  modifiant les styles**, c'est l'objet de la suite de notre cours.
+ 
+ ```Activité
+Revoir la formulation 
+Avec le texte de la charte copié selon la méthode de votre choix,
+préparez un [document mis en forme](./media/Charte.pdf). 
+
+> Remplacez le
+texte *En aucun cas les membres de l'université ne vous réclameront
+votre identifiant et / ou votre mot de passe* pour le passer en
+minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les
+titres, les listes. Choisissez un affichage avec petites majuscules
+pour l'accentuation forte. 
+
+Le haut de page reprend le titre déclaré
+dans les méta-données. Les lignes horizontales sont des bordures. Les
+titres sont bien de bon niveau (titre principal et titre de niveau 1).
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+```
 
 ## Vidéos 3 - personnaliser les styles
 
