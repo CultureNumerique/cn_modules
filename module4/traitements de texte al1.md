@@ -536,33 +536,38 @@ numérotations. Il est également possible d'intégrer une
 bibliographie. Cette opération est plus complexe mais vous trouverez
 des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
 professionnel, vous serez à amener à utiliser des modèles pour
-respecter une charge graphique de votre employeur. Vous pourrez être
+respecter une charte graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
-fichiers de clients.
+fichiers de clients. 
+Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échanger sur le forum pour vous entraider.
 
-### Activité
+```Activité
 
 Ajouter des images ([image1][image1], [image2][image2]) dans un cadre
-avec une légende pour construire les illustrations du cours.
+avec une légende pour construire les illustrations du cours.{}
+```
 
 [image1]: ./media/styles.png "image styles"
 [image2]: ./media/styleGeneral.png "image style général"
 
-### Activité
+```Activité
 Reprendre le document de la charte graphique et appliquer le modèle donné
-[ici](./media/ModeleCN.ott).
+[ici](./media/ModeleCN.ott).{}
+```
 
-### Activité avancée
+```Activité avancée
 
 Créer un document maître avec ce
 [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la
-charte comme autant de documents inclus dans le document maître.
+charte comme autant de documents inclus dans le document maître.{}
+```
 
-### Activité avancée
+```Activité avancée
 
 Faites circuler un document de votre choix entre 3 d'entre
 vous. Chacun ajoutera un commentaire, fera des modifications avec le
 suivi des modifications activé, et créera une version.
+```
 
 
 # Le tableur
