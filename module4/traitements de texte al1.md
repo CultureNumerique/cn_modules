@@ -124,7 +124,7 @@ logiciel) s'appliquent.
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
 
-```activité
+### Activité
 
 Savoir composer un document selon les règles typographiques n'est pas
 simple. Pour vous en convaincre, vous pouvez vous rendre en
@@ -139,8 +139,7 @@ majuscules, la forme des abréviations ne reposent que sur vous.  \n
 Lisez
 [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
-courantes.  {} ```
-
+courantes.   
 
 
 ### Saisie et éléments de structure
@@ -177,7 +176,7 @@ espaces ou des signes de ponctuation. Des règles typographiques,
 spécifiques à chaque langue, définissent les espaces et symboles de
 ponctuation. Par exemple, en français une espace précède toujours le
 signe `:` alors qu'il n'y pas d'espace avant le signe `:` en
-anglais. Le respect de ces règles est impératif et, souvent, le
+anglais. Le respect de ces règles est impératif et souvent, le
 logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
 Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
@@ -219,21 +218,19 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 [Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
-```compréhension
+### Compréhension
 
 Reproduire l'exemple en vidéo. Une partie du texte
 est disponible en suivant ce [lien][lien]. Les images seront traitées
-plus tard.  { } ```
+plus tard.  
 
 [lien]: ./media/MonPremierPas-Master.txt "document brut"
 
 ## Vidéos 2 - styles et structure
 
-
-
 Les logiciels de traitement de texte offrent tous la possibilité
 d'afficher la liste des styles disponibles (avec LibreOffice, on peut
-utiliser la touche F11, le menu Style/Style et formatage ou encore le
+utiliser la touche `F11`, le menu `Style/Style et formatage `ou encore le
 tiroir de droite). Nous pouvons voir cette liste de styles comme la
 liste des structures possibles. Se placer dans un paragraphe du texte
 permet de voir quel style lui est associé. L'ensemble des styles
@@ -272,7 +269,7 @@ partie de texte.
 .lien_video }
 
 Le logiciel réalise souvent des opérations pour vous aider à bien
-écrire votre document, comment, par exemple, l'insertion d'une note de
+écrire votre document, comme par exemple, l'insertion d'une note de
 bas de page. Le numéro est inséré automatiquement et sera adapté si
 d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
 automatiquement.
@@ -305,23 +302,25 @@ sections entières ou de réorganiser le plan.
 
 ```Activité
 
-Récupérer un texte d'une source par un copier/coler est une opération
+Récupérer un texte d'une source par un copier/coller est une opération
 que chacun réalise régulièrement. Cette opération récupère en général
 de nombreuses mises en forme et styles. Par exemple, rendez-vous sur
 la page
 https://www.univ-lille3.fr/portail/charte-informatique/. Copier le
 texte de la page et collez-le dans Libreoffice.  { ~%33%Vous avez
 importé le contenu ~%33%Vous avez importé la structure ~%34%Vous avez
-importé des mises en forme au cas par cas } ```
+importé des mises en forme au cas par cas } 
+```
 
 ```Activité
 
 En continuant l'activité précédente, vous pouvez maintenant appliquer
-un collage spécial, texte non formaté.  { ~%100%Vous avez importé le
+un `collage spécial, texte non formaté` (dans le menu `Édition`).  { ~%100%Vous avez importé le
 contenu ~%-33%Vous avez importé la structure ~%-34%Vous avez importé
-des mises en forme au cas par cas } ```
+des mises en forme au cas par cas } 
+```
 
-```Activité
+### Activité
 
 Avec le texte de la charte copié selon la méthode de votre choix,
 préparez un [document mis en forme](./media/Charte.pdf). Remplacez le
@@ -332,7 +331,7 @@ titres, les listes. Choisissez un affichage avec petites majuscules
 pour l'accentuation forte. Le haut de page reprend le titre déclaré
 dans les méta-données. Les lignes horizontales sont des bordures. Les
 titres sont bien de bon niveau (titre principal et titre de niveau 1).
-{} ```
+
 
 ## Point d'étape : respecter des règles de base
 
@@ -401,8 +400,6 @@ définiriez une mise en forme commune pour tous ces codes.
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
-
-
 ## Vidéos 4 - numérotation et tables associées 
 
 La numérotation des chapitres ne doit jamais être faite manuellement
@@ -414,8 +411,7 @@ et si on doit faire apparaître la hiérarchie dans le numéro en
 affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
 pour comprendre les impacts sur la présentation de ces numéros.
 
-[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){:
-.lien_video }
+[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .lien_video }
 
 La structure d'un document, c'est aussi une structure en différentes
 pages : une page de garde, des pages d'index ou de table des matières
@@ -424,8 +420,7 @@ structure. On peut la déclarer en ajoutant des sauts de page manuels
 et spéciaux, puis définir quel sera le style de la page suivante et le
 début de sa numérotation et définir des mises en forme associées à ces pages.
 
-[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){:
-.lien_video }
+[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){: .lien_video }
 
 Une fois la structure du document bien spécifiée, l'insertion d'une
 table des matières, d'une table des illustrations,... est très simple,
@@ -438,7 +433,7 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ```activité
 
-Reproduire le document dont un pdf vous est donné [ici][ici]. Aucune
+Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune
 mise en forme directe n'est tolérée ! Dans ce document, nous avons
 utilisé des styles spécifiques pour désigner les personnes et les
 œuvres, le résumé et les citations ; nous avons 3 styles de page avec
@@ -447,9 +442,8 @@ avons utilisé les guillemets et les listes françaises. La police de
 caractère est sans doute différente sur votre machine. Ici ce sont les
 polices Latin Modern Roman et Latin Modern Sans pour les versions avec
 et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr
-tous les principes expliqués dans ce cours ont été appliqués.  {} ```
-
-[ici]: ./media/texte_final.pdf "document final"
+tous les principes expliqués dans ce cours ont été appliqués.  {} 
+```
 
 ## Video 5 - métadonnées
 
@@ -541,33 +535,35 @@ respecter une charge graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
 
-```Activité
+### Activité
 
 Ajouter des images ([image1][image1], [image2][image2]) dans un cadre
-avec une légende pour construire les illustrations du cours.  {} ```
+avec une légende pour construire les illustrations du cours.
 
 [image1]: ./media/styles.png "image styles"
 [image2]: ./media/styleGeneral.png "image style général"
 
-```Activité
-
+### Activité
 Reprendre le document de la charte graphique et appliquer le modèle donné
-[ici](./media/ModeleCN.ott).
-{}
-```
+[ici](./media/ModeleCN.ott).{}
 
 ```Activité avancée
 
 Créer un document maître avec ce
 [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la
-charte comme autant de documents inclus dans le document maître.  {}
+charte comme autant de documents inclus dans le document maître. {}
 ```
 
-```activité avancée
+``` activité avancée
 
 Faites circuler un document de votre choix entre 3 d'entre
 vous. Chacun ajoutera un commentaire, faire des modifications avec le
-suivi des modifications activé, et va créer une version.  {} ```
+suivi des modifications activé, et va créer une version.  {} 
+
+```
+```
+
+
 
 # Le tableur
 
@@ -578,7 +574,7 @@ modes possibles d'organisation des données. Parmi celles-ci, la liste
 est largement répandue car elle peut couvrir un grand nombre de
 besoins dans des situations variées. Elle vous sera utile pour gérer
 des élèves et des notes si vous êtes professeur, gérer des adhérents
-d'une association si vous participez à une association, gérer des
+d'une association, gérer des
 listes d'objets dans des fouilles si vous êtes archéologue, ...  Le
 tableur est un logiciel de base pour la gestion de données numériques
 représentées par des listes.
