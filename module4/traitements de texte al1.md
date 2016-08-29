@@ -769,7 +769,7 @@ copie. C'est le cas de la référence au taux de conversion qui est dans
 une seule cellule, `G2` sur notre exemple. Pour faire la distinction de
 comportement, on utilisera dans notre formule une *référence absolue*
 en utilisant le symbole $. Donc, par exemple, pour faire référence au
-taux de conversion, on utilisera la référence absolue `$G$2`.
+taux de conversion, on uti"image style général"commentisera la référence absolue `$G$2`.
 
 Le **mécanisme des références est donc essentiel pour traiter des
 listes**. Vous devez, lorsque vous écrivez une formule, vous poser la

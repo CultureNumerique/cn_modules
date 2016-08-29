@@ -6,7 +6,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Informatique et numérique
 
-[Informatique et numérique](https://player.vimeo.com/video/122104210){: .cours_video }
+[Informatique et numérique](https://vimeo.com/122104210){: .cours_video }
 
 À l'origine, les ordinateurs étaient réservés aux informaticiens, ou
 plutôt comme cette discipline naissait à peine, aux mathématiciens et
@@ -157,7 +157,7 @@ Voici quelques liens que nous vous proposons mais que vous avez sûrement trouv�
 
 # Historique informatique
 
-[Historique](https://player.vimeo.com/video/122104231){: .cours_video }
+[Historique](https://vimeo.com/122104231){: .cours_video }
 
 
 Les premiers ordinateurs ont été conçus et réalisés vers la fin de la
@@ -378,7 +378,7 @@ En **1983**, Apple achète pour 40 000$, une licence pour le brevet de la souris
 
 # Naissance d'internet
 
-[Naissance d'internet](https://player.vimeo.com/video/122104260){: .cours_video }
+[Naissance d'internet](https://vimeo.com/122104260){: .cours_video }
 
 Dans les années soixante, il existait aux États-Unis de gros centres
 de calcul abritant de très gros ordinateurs. Ceux-ci étaient reliés
@@ -489,7 +489,7 @@ Enfin, pour tenter de mesurer l'ampleur des informations échangées sur interne
 
 # Comment ça marche?
 
-[Comment ça marche ?](https://player.vimeo.com/video/122104315){: .cours_video }
+[Comment ça marche ?](https://vimeo.com/122104315){: .cours_video }
 
 Regardons un peu plus précisément comment fonctionne internet. Trois
 ingrédients importants interviennent dans le système.
@@ -644,7 +644,7 @@ A-C-I-B ; A-C-F-I-B ; A-C-F-H-B ; A-C-F-E-K-H-B ; A-D-E-K-H-B ; A-D-E-F-H-B ; A-
 # Que se passe-t-il quand on se connecte à internet?
 
 ## Cours
-  [Se connecter à internet]( https://player.vimeo.com/video/122104376 ){:.cours_video}
+  [Se connecter à internet]( https://vimeo.com/122104376 ){:.cours_video}
 
 Examinons les conséquences de l'organisation d'internet lorsqu'on veut
 s'y connecter ...
@@ -801,9 +801,9 @@ OUI et OUI, les services numériques en particulier ceux accessibles depuis **l'
 
 ## Cours
 
-[Les supports physiques](https://player.vimeo.com/video/122104443){: .cours_video }
+[Les supports physiques](https://vimeo.com/122104443){: .cours_video }
   
-[Connexions nomades](https://player.vimeo.com/video/122104499){: .cours_video }
+[Connexions nomades](https://vimeo.com/122104499){: .cours_video }
 
 Internet et plus généralement les réseaux informatiques peuvent
 utiliser plusieurs types de supports pour transporter l'information
@@ -1083,7 +1083,7 @@ En conséquence, il ne faut pas être étonné si l'envoi d'un mail avec une gro
 # Société : qui décide sur internet?
 
 ## Cours
-[Internet : Qui décide ?](https://player.vimeo.com/video/122104174){: .cours_video }
+[Internet : Qui décide ?](https://vimeo.com/122104174){: .cours_video }
 
 ### Les normes et instituts de normes
 Pouvons-nous communiquer si nous ne comprenons pas la même langue?

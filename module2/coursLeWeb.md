@@ -7,13 +7,13 @@ AUTHOR: Culture Numérique
 # Introduction
 
 ## Cours 1/2
-[video]( https://player.vimeo.com/video/138623497 ){: .cours_video } 
+[video]( https://vimeo.com/138623497 ){: .cours_video } 
 Le web, c'est sans doute l'application informatique qui a rencontré le plus grand succès.
 
 C'est une utilisation particulière  d'internet. Il a été inventé par Tim Berners Lee au début des années 90. C'est d'abord un moyen de communication entre personnes qui permet de s'échanger des informations décrites dans des documents . Il est fréquent de constater une confusion entre Internet et le Web. Or, si le web utilise Internet, il n'est pas la seule application à le faire, le mail par exemple est un autre service qui utilise Internet. Socialement, le web a pris une place considérable dans nos vies. Sur cette application au départ très simple se sont bâties d'autres applications dans tous les domaines d'activités : pour le commerce, le marketing, la recherche d'emploi, le travail à distance et la collaboration... C'est un vecteur important de développement économique aujourd'hui. C'est aussi par des applications web que l'état et les administrations offrent leurs services aux citoyens. C'est encore par les applications sociales du web que nous communiquons dans notre vie privée. Maîtriser les technologies du web est important pour comprendre les enjeux, saisir des opportunités, éviter des pièges... Naviguer sur le web fait aujourd'hui partie du quotidien de chacun d'entre nous. Ce chapitre propose d'en expliquer le fonctionnement pour nous permettre d'avoir des comportements responsables et de garder la maîtrise de ce que nous faisons.
 
 ## Cours 2/2
-[video]( https://player.vimeo.com/video/138623515 ){: .cours_video } 
+[video]( https://vimeo.com/138623515 ){: .cours_video } 
 
 Alors, qu'est-ce réellement  que le web ? Le Web est avant tout un service qui permet de s'échanger des ressources. Celles-ci peuvent être très variées et prendre de nombreuses formes. Dans un premier temps, nous considérerons pour simplifier que ce sont uniquement des documents qui contiennent soit du texte soit des images.
 Le succès du web est sans doute lié à la notion de document hypertexte. C'est à dire la possibilité d'intégrer à l'intérieur d'un document des liens, qui sont des parties de texte cliquables permettant d'accéder à d'autres ressources.
@@ -87,7 +87,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 
 ## Le modèle client/serveur
 
-[video](https://player.vimeo.com/video/138623558){: .cours_video}
+[video](https://vimeo.com/138623558){: .cours_video}
 Le Web, et bien d'autres applications d'internet, fonctionnent selon un modèle très simple : le modèle client/serveur.
 
 Celui-ci peut s'illustrer par un petit exemple du quotidien. Dans la vie de tous les jours, si je me promène en ville et que j'ai envie d'un café ou d'une boisson rafraîchissante, j'entre dans une brasserie et j'interpelle un serveur. S'engagent alors des échanges, qui suivent un protocole assez convenu dans une langue commune.
@@ -99,7 +99,7 @@ Sur Internet, les clients et les serveurs sont toujours des programmes qui s'ex�
 Dans le cadre du web, les clients sont les navigateurs qui nous permettent d'accéder à des sites constitués de ressources hébergées par des serveurs . Ils respectent pour leurs échanges un langage et des règles communes qu'on appelle le protocole `http` pour hypertext transfer protocol. Chaque ressource fait l'objet d'un échange demande/retour entre le client et le serveur. Certaines demandes n'aboutissent pas, quand  la ressource demandée n'existe pas par exemple. Ce sont les fameuses erreurs 404.
 
 ## Les clients
-[video](https://player.vimeo.com/video/138623609){: .cours_video}
+[video](https://vimeo.com/138623609){: .cours_video}
 
 **Les clients**
 **Le client quant à lui, émet les requêtes vers le serveur et réceptionne les ressources qui sont envoyées en réponse. Les clients que nous utilisons sont les navigateurs web.Ce sont donc des logiciels qui s'exécutent sur nos propres machines sous notre contrôle.**
@@ -114,7 +114,7 @@ Une remarque importante doit être signalée. Le terme naviguer peut prêter à 
 ## Les serveurs
 
 **Les serveurs** 
-[video](https://player.vimeo.com/video/138623583){: .cours_video}
+[video](https://vimeo.com/138623583){: .cours_video}
 
 Un serveur est un logiciel (un programme) qui s'exécute sur une machine le plus souvent 24/24 et 7/7 et attend qu'un client l'interpelle, par exemple c'est le cas du serveur web www.univ-lille.fr qui distribue les ressources du site de l'université de Lille. Dans ces journaux, de nombreuses informations à propos des clients sont mémorisées : leur adresse IP, des dates de visites, la ressource demandée... Notons que, l'envoi d'une ressource, est en fait l' envoi d'une copie de la ressource, l'original restant disponible pour d'autres requêtes identiques. En plus de ce service de distribution, le serveur garde l' historique de toutes les requêtes qui lui ont été adressées dans des journaux d'activité : les logs en anglais. Ces journaux sont autant de traces que nous laissons et qui peuvent être analysées et exploitées.
 Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui sont stockées sur ses disques, aux clients qui les demandent . 
@@ -176,7 +176,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 
 ## Cours
-[video]( https://player.vimeo.com/video/138623678 ){: .cours_video } 
+[video]( https://vimeo.com/138623678 ){: .cours_video } 
 ### Exemple
 
 Commençons par un exemple très simple pour comprendre le mécanisme de base. Si à l'aide d'un client web tel que Firefox, je saisis l'adresse :
@@ -275,7 +275,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 # HTML
 
 ## HTML: contenu, structure, liens
-[video]( https://player.vimeo.com/video/138623721 ){: .cours_video } 
+[video]( https://vimeo.com/138623721 ){: .cours_video } 
 Allons maintenant voir plus en détail le fonctionnement ; le langage `html` a plusieurs caractéristiques très intéressantes. Nous avons vu qu'il permettait d'introduire des hyperliens dans un document, mais il possède d'autres atouts.
 
 
@@ -287,7 +287,7 @@ En français la traduction de `html` est : langage de balisage pour documents hy
 Grâce à la description faite du document et en fonction de ses capacités le navigateur va pouvoir recomposer le document et vous l'afficher. Les pages web que votre navigateur affiche sont des textes avec le plus souvent des images, formant un document complet. En fait ce document est réalisé par l'assemblage de nombreuses ressources. En effet, le langage `html` permet également de spécifier l'insertion d'images (ou d'autres ressources) à différents endroits d'un document. Les images ne sont pas à proprement parler insérées dans le document principal, mais un balisage indique qu'à cet endroit il faudra insérer une image.
 
 ## Rassembler les ressources
-[video]( https://player.vimeo.com/video/138623756 ){: .cours_video } 
+[video]( https://vimeo.com/138623756 ){: .cours_video } 
 
 Rappelons qu'une page affichée dans votre navigateur est en fait un assemblage de nombreuses ressources. Il faut donc dans un premier temps les rassembler.
 
@@ -303,7 +303,7 @@ Cette remarque prendra tout son sens lorsque nous nous intéresserons aux traces
 
 
 ## Mise en forme
-[video]( https://player.vimeo.com/video/138623826 ){: .cours_video } 
+[video]( https://vimeo.com/138623826 ){: .cours_video } 
 
 Revenons maintenant à l'affichage de la page dans mon navigateur.
 
@@ -411,7 +411,7 @@ Lisez, observez et répondez aux questions posées...
 # Les Cookies
 
 ## Cours
-[video](https://player.vimeo.com/video/138623890 ){: .cours_video } 
+[video](https://vimeo.com/138623890 ){: .cours_video } 
 ### Les cookies, une technique très utile...
 
 Rappelons la conclusion importante du chapitre précédent.
@@ -888,7 +888,7 @@ puis répondez à la question qui suit.</p>{}
 
 # Autres informations sensibles et bilan
 ## Autres informations
-[video]( https://player.vimeo.com/video/138623956 ){: .cours_video } 
+[video]( https://vimeo.com/138623956 ){: .cours_video } 
 On voit bien que les techniques qui se sont développées et qui continuent d'évoluer sur le Web sont puissantes et nous rendent beaucoup de services. En revanche, leur utilisation dans certains cas peut poser de graves questions de citoyenneté. Bien souvent, la donnée associée au cookie est un numéro d'identification permettant au serveur de retrouver dans ses bases des données propres à l'utilisateur.
 Dans notre exemple de démarche d'inscription, ce pourrait être, l'étape à laquelle il est arrivé, son nom, ses choix de formation...  
 
@@ -900,7 +900,7 @@ Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour
 Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
 
 ## Bilan: du pour, du contre
-[video]( https://player.vimeo.com/video/139925788 ){: .cours_video } 
+[video]( https://vimeo.com/139925788 ){: .cours_video } 
 
 Il faut donc avoir conscience que la consultation d'une page laisse des traces sur mon disque dur et sur le réseau. 
 Toutes ces traces peuvent être considérées à divers degrés comme des informations personnelles.
