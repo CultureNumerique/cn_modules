@@ -118,7 +118,7 @@ par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
 définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
 
-[La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
+[La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .cours_video }
 
 
 [La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
@@ -239,7 +239,7 @@ portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
 [L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){:
-.lien_video }
+.cours_video }
 
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
@@ -377,7 +377,7 @@ pour avoir des marges correctement alignées des deux côtés. Dans ce
 cas, une *césure* des mots est souvent appliquée pour éviter les
 espacements trop grands ou trop petits.
 
-[Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
+[Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .cours_video }
 
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
@@ -416,7 +416,7 @@ et si on doit faire apparaître la hiérarchie dans le numéro en
 affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
 pour comprendre les impacts sur la présentation de ces numéros.
 
-[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .lien_video }
+[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .cours_video }
 
 La structure d'un document, c'est aussi une structure en différentes
 pages : une page de garde, des pages d'index ou de table des matières
@@ -461,7 +461,7 @@ propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
  
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
- .lien_video }
+ .cours_video }
 
 ## Video 6 - avec un autre logiciel
 
@@ -478,7 +478,7 @@ le nom des menus ou des outils peut varier d'une version à une autre,
 mais il est important de retenir que les **notions vues dans ce cours
 sont communes à tous les traitements de texte**.
 
-[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .lien_video }
+[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .cours_video }
 
 ## Vidéos avancées
 
@@ -543,12 +543,9 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 
 ```Activité
 
-Ajouter des images ([image1][image1], [image2][image2]) dans un cadre
+Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre
 avec une légende pour construire les illustrations du cours.{}
 ```
-
-[image1]: ./media/styles.png "image styles"
-[image2]: ./media/styleGeneral.png "image style général"
 
 ```Activité
 Reprendre le document de la charte graphique et appliquer le modèle donné
@@ -702,7 +699,8 @@ des propriétés (nom, date de naissance, ...). Dans cette liste des
 informations sont saisies et d'autres sont calculées. Vous pouvez
 regarder les formules et les comprendre, modifier des valeurs
 générales (seuils, montant de base) et visualiser l'impact ou modifier
-des valeurs pour un adhérent et voir l'effet.  {} ```
+des valeurs pour un adhérent et voir l'effet.  {} 
+```
 
 ## Traiter des données
 

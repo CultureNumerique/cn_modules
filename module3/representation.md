@@ -6,7 +6,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Représenter c'est choisir...
 
-[Representer c'est choisir](https://player.vimeo.com/video/149277667){: .lien_video }
+[Representer c'est choisir](https://player.vimeo.com/video/149277667){: .cours_video }
 
 Pourquoi représenter l'information sous format numérique ? En premier
 lieu, c'est un changement de support. Par exemple pour un roman, il
@@ -135,7 +135,7 @@ Représenter et normaliser est une tâche complexe : l'exemple de HTML. En vous 
 ```
 
 # Analyse d'un document : plusieurs vues complémentaires
-[Des vues complémentaires](https://player.vimeo.com/video/149277666){: .lien_video }
+[Des vues complémentaires](https://player.vimeo.com/video/149277666){: .cours_video }
 
 ### Introduction
 Dans cette section, nous analysons ce qu'est un document textuel pour
@@ -634,7 +634,7 @@ Lisez la page Wikipedia sur le [format pdf](https://wikipedia.org/wiki/Portable_
 
 # Documents numériques textuels
 
-[Documents numériques textuels](https://player.vimeo.com/video/151363295){: .lien_video }
+[Documents numériques textuels](https://player.vimeo.com/video/151363295){: .cours_video }
 
 Nous avons analysé ce qu'est un document textuel.  Nous avons mis en
 évidence les quatre vues de contenu, de structure, de forme et
