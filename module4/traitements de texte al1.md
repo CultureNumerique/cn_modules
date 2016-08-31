@@ -348,7 +348,8 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  agir sur tous ces éléments pour **personnaliser la mise en forme en
  modifiant les styles**, c'est l'objet de la suite de notre cours.
  
- ```Activité
+ 
+```Activité
 Revoir la formulation 
 Avec le texte de la charte copié selon la méthode de votre choix,
 préparez un [document mis en forme](./media/Charte.pdf). 
@@ -808,7 +809,8 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 Des exemples d'utilisation pour bien comprendre les références dans ce
 classeur qui contient deux feuilles de calcul
-[Jeu avec les références](./media/jeureferences.ods).  {} ```
+[Jeu avec les références](./media/jeureferences.ods).  {} 
+```
 
 
 ## Construire des formules
@@ -869,7 +871,8 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 Des formules simples pour commencer avec des additions, des
 multiplications et la fonction `SOMME()` dans ce dans ce classeur qui
 contient deux feuilles de calculs
-[Premières formules](./media/premieresformules.ods).  {} ```
+[Premières formules](./media/premieresformules.ods).  {} 
+```
 
 ```Activité avancée
 
@@ -877,18 +880,21 @@ Le tableur dispose d'un très grand nombre de fonctions pour manipuler
 des données comme les nombres avec les fonctions mathématiques, les
 chaînes de caractères pour extraire une sous-chaîne, transformer en
 majuscules , ... Nous allons illustrer ceci avec l'exemple des
-[fonctions sur les dates](./media/fonctionsdates.ods).  {} ```
+[fonctions sur les dates](./media/fonctionsdates.ods).  {} 
+```
 
 ```Activité avancée
 
 Des formules sur des plages de calcul comme ici pour des calculs de
 moyennes
-[Fonctions de plages](./media/fonctionsplages.ods).  {} ```
+[Fonctions de plages](./media/fonctionsplages.ods).  {} 
+```
 
 ```Activité avancée
 
 Des formules avec la 
-[fonction SI](./media/fonctionSI.ods).  {} ```
+[fonction SI](./media/fonctionSI.ods).  {} 
+```
 
 ## Opérations sur les tables
 
@@ -936,7 +942,8 @@ par ordre alphabétique des noms. Puis trier par ordre croissant des
 tranche d'âge en triant chaque tranche d'âge par âge croissant. Des
 exemples de filtres à réaliser sont : 1. Sélectionner les juniors ;
 2. Sélectionner les juniors femmes ; 3. Sélectionner les membres qui
-ne sont pas à jour de leur cotisation, ... {} ```
+ne sont pas à jour de leur cotisation, ... {} 
+```
 
 ## Représentations graphiques
 
