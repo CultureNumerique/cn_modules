@@ -252,7 +252,7 @@ présentation sur un autre support comme un objet portable, ou
 simplement pouvoir modifier facilement dans tout le texte la mise en
 forme choisie pour les éléments déclarés en style accentuation forte.
 
-[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){: .lien_video }
+[Les style caractères. Accentuation ou Gras ?](https://vimeo.com/138623497){: .lien_video }
 
 Comme nous l'avons dit ci-dessus, l'affichage des caractères
 invisibles permet de savoir exactement ce qui a été saisi. On voit les
