@@ -238,8 +238,7 @@ restreindre cette liste à ceux qui sont appliqués dans le document ou
 portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
-[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){:
-.cours_video }
+[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .cours_video }
 
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
@@ -253,8 +252,7 @@ présentation sur un autre support comme un objet portable, ou
 simplement pouvoir modifier facilement dans tout le texte la mise en
 forme choisie pour les éléments déclarés en style accentuation forte.
 
-[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){:
-.lien_video }
+[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){: .lien_video }
 
 Comme nous l'avons dit ci-dessus, l'affichage des caractères
 invisibles permet de savoir exactement ce qui a été saisi. On voit les
@@ -263,8 +261,7 @@ ces symboles et les supprimer. On voit également la représentation des
 fins de ligne qui ne sont pas des fins de paragraphes dans cette
 partie de texte.
 
-[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){:
-.lien_video }
+[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){: .lien_video }
 
 Le logiciel réalise souvent des opérations pour vous aider à bien
 écrire votre document, comme par exemple, l'insertion d'une note de
@@ -272,8 +269,7 @@ bas de page. Le numéro est inséré automatiquement et sera adapté si
 d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
 automatiquement.
 
-[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){:
-.lien_video }
+[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){: .lien_video }
 
 Un autre type de numéros ou textes gérés automatiquement par le
 logiciel sont les renvois aux chapitres, illustrations, figures,
@@ -286,17 +282,15 @@ description de documents. Par exemple, en HTML, on utilise des
 (hyper-)liens qui peuvent être internes au document (renvoi vers une
 partie du document) ou externes (renvoi vers un autre document).
 
-[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){:
-.lien_video }
-[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){:
-.lien_video }
+[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){: .lien_video }
+
+[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){: .lien_video }
 
 Terminons par un examen de la structure arborescente de ce
 document. La manipulation de cette structure permet de déplacer des
 sections entières ou de réorganiser le plan.
 
-[Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){:
-.lien_video }
+[Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){: .lien_video }
 
 ```Activité
 
@@ -493,8 +487,7 @@ sont offertes. En situation de travail collaboratif, les modifications
 auront pu être apportées par différents auteurs et le coordinateur va
 donc valider ou rejeter les modifications.
 
-[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:
-.lien_video }
+[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:.lien_video }
 
 Une autre fonctionnalité de suivi des versions est illustrée ici. 
 [Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/Oaec8mpdueuxlY7){: .lien_video }
@@ -848,8 +841,7 @@ puis étendre cette formule à tous les élèves. Si un élève a une
 moyenne inférieure à 10, le message "Reçu" sera affiché pour cet élève
 et sinon sera affiché le message "Recalé".
 
-[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){:
-.lien_video }
+[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){:.lien_video }
 
 Les *fonctions peuvent être composées* comme dans l'exemple `=
 MOIS(AUJOURDHUI())` où on appelle la fonction `AUJOURDHUI()` qui
