@@ -294,10 +294,9 @@ sections entières ou de réorganiser le plan.
 
 ```Activité
 
-Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général
-de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
 { 
-~%33%Vous avezimporté le contenu
+~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
 ~%34%Vous avez importé des mises en forme au cas par cas } 
 
@@ -340,21 +339,11 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  
  
 ```Activité
-Revoir la formulation 
-Avec le texte de la charte copié selon la méthode de votre choix,
-préparez un [document mis en forme](./media/Charte.pdf). 
+Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf). 
 
-> Remplacez le
-texte *En aucun cas les membres de l'université ne vous réclameront
-votre identifiant et / ou votre mot de passe* pour le passer en
-minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les
-titres, les listes. Choisissez un affichage avec petites majuscules
-pour l'accentuation forte. 
+> Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte. 
 
-Le haut de page reprend le titre déclaré
-dans les méta-données. Les lignes horizontales sont des bordures. Les
-titres sont bien de bon niveau (titre principal et titre de niveau 1).
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
 ## Vidéos 3 - personnaliser les styles
