@@ -115,11 +115,13 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
  
 ```activité-avancée
 ::Le numérique au quotidien::[markdown]Les microprocesseurs, les ordinateurs ont envahi notre quotidien. Pour chacun des domaines suivants, cherchez des exemples où le numérique a permis des évolutions notables :
-    - Domotique
-    - Transports
-    - Vêtements
-    - Médical / paramédical
-	Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
+\n
+- Domotique
+- Transports
+- Vêtements
+- Médical / paramédical
+\n
+Après avoir effectué vos recherches, copier dans la fenêtre de rendu 1 lien pour au moins 3 des 4 thèmes proposés (un lien par thème).
 {#### 
 # le numérique au quotidien
 Quelques exemples que nous vous proposons au cas où vous n'auriez rien trouvé, ...

@@ -294,22 +294,18 @@ sections entières ou de réorganiser le plan.
 
 ```Activité
 
-Récupérer un texte d'une source par un copier/coller est une opération
-que chacun réalise régulièrement. Cette opération récupère en général
-de nombreuses mises en forme et styles. Par exemple, rendez-vous sur
-la page
-https://www.univ-lille3.fr/portail/charte-informatique/. Copier le
-texte de la page et collez-le dans Libreoffice.  { ~%33%Vous avez
-importé le contenu ~%33%Vous avez importé la structure ~%34%Vous avez
-importé des mises en forme au cas par cas } 
-```
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général
+de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
+{ 
+~%33%Vous avezimporté le contenu
+~%33%Vous avez importé la structure
+~%34%Vous avez importé des mises en forme au cas par cas } 
 
-```Activité
 
-En continuant l'activité précédente, vous pouvez maintenant appliquer
-un `collage spécial, texte non formaté` (dans le menu `Édition`).  { ~%100%Vous avez importé le
-contenu ~%-33%Vous avez importé la structure ~%-34%Vous avez importé
-des mises en forme au cas par cas } 
+En continuant l'activité précédente, vous pouvez maintenant appliquer un `collage spécial, texte non formaté` (dans le menu `Édition`).  
+{ ~%100%Vous avez importé le contenu 
+~%-33%Vous avez importé la structure 
+~%-34%Vous avez importé des mises en forme au cas par cas } 
 ```
 
 
@@ -537,23 +533,16 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 
 ```Activité
 
-Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre
-avec une légende pour construire les illustrations du cours.{}
-```
+Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.{}
 
-```Activité
-Reprendre le document de la charte graphique et appliquer le modèle donné
-[ici](./media/ModeleCN.ott).{}
+
+Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).{}
 ```
 
 ```Activité avancée
 
-Créer un document maître avec ce
-[modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la
-charte comme autant de documents inclus dans le document maître.{}
-```
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
 
-```Activité avancée
 
 Faites circuler un document de votre choix entre 3 d'entre
 vous. Chacun ajoutera un commentaire, fera des modifications avec le
@@ -680,9 +669,7 @@ alors impossibles.
 Un exemple classique de classeur de calcul de résultats électoraux
 pour inroduire quelques notions [Classeur élections](./media/election.ods).
 {}
-```
 
-```Activité avancée
 
 Un exemple de gestion des cotisations des adhérents d'une association
 [Classeur association](./media/association.ods). Vous pouvez regarder
@@ -864,25 +851,19 @@ Des formules simples pour commencer avec des additions, des
 multiplications et la fonction `SOMME()` dans ce dans ce classeur qui
 contient deux feuilles de calculs
 [Premières formules](./media/premieresformules.ods).  {} 
-```
 
-```Activité avancée
 
 Le tableur dispose d'un très grand nombre de fonctions pour manipuler
 des données comme les nombres avec les fonctions mathématiques, les
 chaînes de caractères pour extraire une sous-chaîne, transformer en
 majuscules , ... Nous allons illustrer ceci avec l'exemple des
 [fonctions sur les dates](./media/fonctionsdates.ods).  {} 
-```
 
-```Activité avancée
 
 Des formules sur des plages de calcul comme ici pour des calculs de
 moyennes
 [Fonctions de plages](./media/fonctionsplages.ods).  {} 
-```
 
-```Activité avancée
 
 Des formules avec la 
 [fonction SI](./media/fonctionSI.ods).  {} 
@@ -959,11 +940,10 @@ tableaux croisés en vous plaçant dans un tableau et en appelant avec
 le bouton droit le menu
 modifier. [Fonctionnalités avancées](./media/associationplus.ods).
 
-```Activité avancée
 
-Reste à trouver un ou deux exemples ou on leur donne les données
+<!-- Reste à trouver un ou deux exemples ou on leur donne les données
 brutes et les objectifs, ils concoivent un classeur. Ils s'évaleunt
-par les pairs
+par les pairs -->
 
 # Le logiciel de présentation
 
