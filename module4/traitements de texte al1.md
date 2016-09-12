@@ -691,8 +691,7 @@ alors impossibles.
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ```Activité avancée
-
-Un exemple classique de classeur de calcul de résultats électoraux pour inroduire quelques notions [Classeur élections](./media/election.ods).
+Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods). 
 {}
 
 
