@@ -418,16 +418,8 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ```activité
 
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune
-mise en forme directe n'est tolérée ! Dans ce document, nous avons
-utilisé des styles spécifiques pour désigner les personnes et les
-œuvres, le résumé et les citations ; nous avons 3 styles de page avec
-des numérotations en romain pour les pages d'index et de tables ; nous
-avons utilisé les guillemets et les listes françaises. La police de
-caractère est sans doute différente sur votre machine. Ici ce sont les
-polices Latin Modern Roman et Latin Modern Sans pour les versions avec
-et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr
-tous les principes expliqués dans ce cours ont été appliqués.  {} 
+Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.  {} 
+
 ```
 
 ## Video 5 - métadonnées
@@ -526,6 +518,7 @@ Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image 
 
 
 Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).{}
+
 ```
 
 ```Activité avancée
@@ -533,9 +526,7 @@ Reprendre le document de la charte graphique et appliquer le modèle donné [ici
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
 
 
-Faites circuler un document de votre choix entre 3 d'entre
-vous. Chacun ajoutera un commentaire, fera des modifications avec le
-suivi des modifications activé, et créera une version.
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version.
 ```
 
 
@@ -655,21 +646,11 @@ alors impossibles.
 
 ```Activité avancée
 
-Un exemple classique de classeur de calcul de résultats électoraux
-pour inroduire quelques notions [Classeur élections](./media/election.ods).
+Un exemple classique de classeur de calcul de résultats électoraux pour inroduire quelques notions [Classeur élections](./media/election.ods).
 {}
 
 
-Un exemple de gestion des cotisations des adhérents d'une association
-[Classeur association](./media/association.ods). Vous pouvez regarder
-l'organisation avec les cellules servant aux calculs (seuils d'âge,
-tarifs de base), des cellules avec des résultats de calcul (montant
-des cotisations), une liste d'adhérents (une ligne par adhérent) avec
-des propriétés (nom, date de naissance, ...). Dans cette liste des
-informations sont saisies et d'autres sont calculées. Vous pouvez
-regarder les formules et les comprendre, modifier des valeurs
-générales (seuils, montant de base) et visualiser l'impact ou modifier
-des valeurs pour un adhérent et voir l'effet.  {} 
+Un exemple de gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods). Vous pouvez regarder l'organisation avec les cellules servant aux calculs (seuils d'âge, tarifs de base), des cellules avec des résultats de calcul (montant des cotisations), une liste d'adhérents (une ligne par adhérent) avec des propriétés (nom, date de naissance, ...). Dans cette liste des informations sont saisies et d'autres sont calculées. Vous pouvez regarder les formules et les comprendre, modifier des valeurs générales (seuils, montant de base) et visualiser l'impact ou modifier des valeurs pour un adhérent et voir l'effet.  {} 
 ```
 
 ## Traiter des données
@@ -776,9 +757,7 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ```Activité avancée
 
-Des exemples d'utilisation pour bien comprendre les références dans ce
-classeur qui contient deux feuilles de calcul
-[Jeu avec les références](./media/jeureferences.ods).  {} 
+Des exemples d'utilisation pour bien comprendre les références dans ce classeur qui contient deux feuilles de calcul [Jeu avec les références](./media/jeureferences.ods).  {} 
 ```
 
 
@@ -836,26 +815,16 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 
 ```Activité avancée
 
-Des formules simples pour commencer avec des additions, des
-multiplications et la fonction `SOMME()` dans ce dans ce classeur qui
-contient deux feuilles de calculs
-[Premières formules](./media/premieresformules.ods).  {} 
+Des formules simples pour commencer avec des additions, des multiplications et la fonction `SOMME()` dans ce dans ce classeur qui contient deux feuilles de calculs [Premières formules](./media/premieresformules.ods).  {}  
+
+Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ... Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {} 
 
 
-Le tableur dispose d'un très grand nombre de fonctions pour manipuler
-des données comme les nombres avec les fonctions mathématiques, les
-chaînes de caractères pour extraire une sous-chaîne, transformer en
-majuscules , ... Nous allons illustrer ceci avec l'exemple des
-[fonctions sur les dates](./media/fonctionsdates.ods).  {} 
-
-
-Des formules sur des plages de calcul comme ici pour des calculs de
-moyennes
+Des formules sur des plages de calcul comme ici pour des calculs de moyennes
 [Fonctions de plages](./media/fonctionsplages.ods).  {} 
 
 
-Des formules avec la 
-[fonction SI](./media/fonctionSI.ods).  {} 
+Des formules avec la  [fonction SI](./media/fonctionSI.ods).  {} 
 ```
 
 ## Opérations sur les tables
@@ -898,13 +867,10 @@ réaliser une sélection, on doit :
 
 ```Activité avancée
 
-Des [tris et des filtres](./media/association.ods). Vous pourrez trier
-par ordre alphabétique des noms. Puis trier par ordre croissant des
-âges et noter que l'ordre alphabétique est perdu ! Puis trier par
-tranche d'âge en triant chaque tranche d'âge par âge croissant. Des
-exemples de filtres à réaliser sont : 1. Sélectionner les juniors ;
-2. Sélectionner les juniors femmes ; 3. Sélectionner les membres qui
-ne sont pas à jour de leur cotisation, ... {} 
+Des [tris et des filtres](./media/association.ods). Vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
+1. Sélectionner les juniors ;
+2. Sélectionner les juniors femmes ;
+3. Sélectionner les membres qui ne sont pas à jour de leur cotisation, ... {} 
 ```
 
 ## Représentations graphiques
@@ -922,13 +888,7 @@ Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
 ```Activité avancée
 
-Des exemples utilisant des graphiques et des fonctionnalités avancées
-comme les filtres élaborés et les tableaux croisés. Parcourez les
-feuilles pour les comprendre. Vous pouvez accéder aux définitions des
-tableaux croisés en vous plaçant dans un tableau et en appelant avec
-le bouton droit le menu
-modifier. [Fonctionnalités avancées](./media/associationplus.ods).
-
+Des exemples utilisant des graphiques et des fonctionnalités avancées comme les filtres élaborés et les tableaux croisés. Parcourez les feuilles pour les comprendre. Vous pouvez accéder aux définitions des tableaux croisés en vous plaçant dans un tableau et en appelant avec le bouton droit le menu modifier. [Fonctionnalités avancées](./media/associationplus.ods). 
 
 <!-- Reste à trouver un ou deux exemples ou on leur donne les données
 brutes et les objectifs, ils concoivent un classeur. Ils s'évaleunt
