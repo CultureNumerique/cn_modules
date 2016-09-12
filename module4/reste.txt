@@ -97,3 +97,15 @@ Ces techniques appliquées à tous les niveaux de titre vous assure une mise en 
 
 - bibliographie
 > surement en plusieurs fois
+
+
+
+Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ...
+Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {}
+
+
+
+Des formules sur des plages de calcul comme ici pour des calculs de moyennes
+[Fonctions de plages](./media/fonctionsplages.ods).  {}
+
+

@@ -708,10 +708,13 @@ alors impossibles.
 
 ```Activité avancée
 
+::Découverte d'un classeur simple::
+[markdown]
 Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods).
 {}
 
-
+::Découverte d'un classeur plus complet::
+[markdown]
 Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods).  {}
 
 ```
@@ -820,6 +823,8 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ```Activité avancée
 
+::Jouer avec le références::
+[markdown]
 Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
 ~Celle en ligne 5
 ~Celle en ligne 9
@@ -882,19 +887,12 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 
 ```Activité avancée
 
-Des formules simples pour commencer avec des additions, des multiplications et la fonction `SOMME()` dans ce dans ce classeur qui contient deux feuilles de calculs [Premières formules](./media/premieresformules.ods).  {}  
+::Premières formules::
+[markdown]
+Dans ce dans le classeur [Premières formules](./media/premieresformules.ods) qui contient deux feuilles de calculs, vous vous entraînerez à écrire des formules avec des additions, des multiplications et la fonction `SOMME()`.  {}
 
 
-Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ...
-Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {}
-
-
-
-Des formules sur des plages de calcul comme ici pour des calculs de moyennes
-[Fonctions de plages](./media/fonctionsplages.ods).  {}
-
-
-Des formules avec la  [fonction SI](./media/fonctionSI.ods).  {}
+Entraînez-vous maintenant avec la [fonction SI](./media/fonctionSI.ods).  {}
 ```
 
 ## Opérations sur les tables
@@ -937,10 +935,12 @@ réaliser une sélection, on doit :
 
 ```Activité avancée
 
-Des [tris et des filtres](./media/association.ods). Vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
+::Tri et filtres::
+En utilisant le [classeur à propos des associations](./media/association.ods),  vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
 1. Sélectionner les juniors ;
 2. Sélectionner les juniors femmes ;
 3. Sélectionner les membres qui ne sont pas à jour de leur cotisation, ... {}
+
 ```
 
 ## Représentations graphiques
@@ -955,13 +955,4 @@ de diagramme est important car il précise ce message :
 - Pour les données dans de nombreuses dimensions : les radars.
 
 Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
-
-```Activité avancée
-
-Des exemples utilisant des graphiques et des fonctionnalités avancées comme les filtres élaborés et les tableaux croisés. Parcourez les feuilles pour les comprendre. Vous pouvez accéder aux définitions des tableaux croisés en vous plaçant dans un tableau et en appelant avec le bouton droit le menu modifier. [Fonctionnalités avancées](./media/associationplus.ods).
-
-<!-- Reste à trouver un ou deux exemples ou on leur donne les données
-brutes et les objectifs, ils concoivent un classeur. Ils s'évaleunt
-par les pairs -->
-```
 
