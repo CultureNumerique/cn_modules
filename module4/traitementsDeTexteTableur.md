@@ -707,11 +707,13 @@ alors impossibles.
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ```Activité avancée
+
 Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods).
 {}
 
 
-Un exemple de gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods). Vous pouvez regarder l'organisation avec les cellules servant aux calculs (seuils d'âge, tarifs de base), des cellules avec des résultats de calcul (montant des cotisations), une liste d'adhérents (une ligne par adhérent) avec des propriétés (nom, date de naissance, ...). Dans cette liste des informations sont saisies et d'autres sont calculées. Vous pouvez regarder les formules et les comprendre, modifier des valeurs générales (seuils, montant de base) et visualiser l'impact ou modifier des valeurs pour un adhérent et voir l'effet.  {}
+Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods).  {}
+
 ```
 
 ## Traiter des données
