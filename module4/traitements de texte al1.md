@@ -141,6 +141,51 @@ Lisez
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
 courantes.   
 
+```compréhension
+::Accents::
+[markdown]
+En français, on accentue les capitales (majuscules). {T}
+
+::Majuscule en début de mot::
+[markdown]
+En français, dans un titre de premier niveau on met une majuscule à chaque début de mot. {F}
+
+::dates::
+[markdown]
+En français, quand on écrit une date, on met une majuscule aux jours et aux mois. {F}
+
+::espaces et deux-points::
+[markdown]
+En français, lorsqu'on utilise le `:`, on doit mettre :
+{
+~ une espace normale avant et une espace normale après,
+~ une espace insécable avant et pas d'espace après,
+= une espace insécable avant et une espace normale après,
+~ pas d'espace avant et une espace insécable après,
+~ pas d'espace avant et une espace normale après.
+#### comme pour les autres signes de ponctuation double `: ; ! ?` la règle est : **espace insécable avant, espace normale après**.}
+
+::espaces et virgule::
+[markdown]
+En français, lorsqu'on utilise une virgule (`,`), on doit mettre :
+{
+~ une espace normale avant et une espace normale après,
+~ une espace insécable avant et pas d'espace après,
+~ une espace insécable avant et une espace normale après,
+~ pas d'espace avant et une espace insécable après,
+= pas d'espace avant et une espace normale après.
+#### les signes de ponctuation simple `, .` sont collés au mot qui précède et sont suivis d'une espace normale.
+}
+
+::guillemets::
+[markdown]
+En français, pour les guillemets, on utilise :
+{
+= les chevrons `<< >>`
+~ les doubles quotes `'' ''`
+~ les simples quotes `' '`
+}
+```
 
 ### Saisie et éléments de structure
 
@@ -220,8 +265,11 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ```Activité
 
+::Refaire la saisie::
+[markdown]
 Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+
 ```
 
 ## Vidéos 2 - styles et structure
@@ -294,20 +342,22 @@ sections entières ou de réorganiser le plan.
 
 ```Activité
 
+::copier-coller::
+[markdown]
 Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice.
 {
 ~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
 ~%34%Vous avez importé des mises en forme au cas par cas }
 
-
+::collage spécial::
+[markdown]
 En continuant l'activité précédente, vous pouvez maintenant appliquer un `collage spécial, texte non formaté` (dans le menu `Édition`).  
 { ~%100%Vous avez importé le contenu
 ~%-33%Vous avez importé la structure
 ~%-34%Vous avez importé des mises en forme au cas par cas }
+
 ```
-
-
 
 ## Point d'étape : respecter des règles de base
 
@@ -338,6 +388,7 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  modifiant les styles**, c'est l'objet de la suite de notre cours.
 
 
+
 ```Activité
 Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf).
 
@@ -345,6 +396,7 @@ Revoir la formulation Avec le texte de la charte copié selon la méthode de vot
 
 Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
+
 
 ## Vidéos 3 - personnaliser les styles
 
@@ -418,7 +470,11 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ```activité
 
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.  {}
+::exercice de styles::
+[markdown]
+Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
+
 
 ```
 
@@ -513,20 +569,26 @@ fichiers de clients.
 Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échanger sur le forum pour vous entraider.
 
 ```Activité
+::ajouter des images::
+[markdown]
+Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
-Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.{}
-
-
-Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).{}
+::Utiliser un modèle::
+[markdown]
+Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
 
 ```Activité avancée
-
+::document maître::
+[markdown]
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
 
-
-Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version.
+::commentaires::
+[markdown]
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
 ```
 
 
@@ -645,8 +707,7 @@ alors impossibles.
 [Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ```Activité avancée
-
-Un exemple classique de classeur de calcul de résultats électoraux pour inroduire quelques notions [Classeur élections](./media/election.ods).
+Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods).
 {}
 
 
@@ -817,8 +878,10 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 
 Des formules simples pour commencer avec des additions, des multiplications et la fonction `SOMME()` dans ce dans ce classeur qui contient deux feuilles de calculs [Premières formules](./media/premieresformules.ods).  {}  
 
+
 Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ...
 Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {}
+
 
 
 Des formules sur des plages de calcul comme ici pour des calculs de moyennes
