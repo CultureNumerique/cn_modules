@@ -820,7 +820,11 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ```Activité avancée
 
-Des exemples d'utilisation pour bien comprendre les références dans ce classeur qui contient deux feuilles de calcul [Jeu avec les références](./media/jeureferences.ods).  {}
+Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
+~Celle en ligne 5
+~Celle en ligne 9
+=Celle en ligne 13}
+
 ```
 
 
