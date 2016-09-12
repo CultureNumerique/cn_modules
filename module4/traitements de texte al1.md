@@ -75,7 +75,7 @@ modifier la mise en forme d'un document complet en une action, de
 numéroter les sections et les pages d'un grand document, d'uniformiser
 la présentation et d'appliquer des thèmes ou une charte
 graphique. Ceci à condition d'avoir préalablement correctement défini
-la structure de votre document. 
+la structure de votre document.
 
 ## Vidéos 1 : saisie, contenu et structure
 
@@ -141,6 +141,51 @@ Lisez
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
 courantes.   
 
+```compréhension
+::Accents::
+[markdown]
+En français, on accentue les capitales (majuscules). {T}
+
+::MAjuscule en début de mot::
+[markdown]
+En français, dans un titre de premier niveau on met une majuscule à chaque début de mot. {F}
+
+::dates::
+[markdown]
+En français, quand on écrit une date, on met une majuscule aux jours et aux mois. {F}
+
+::espaces et deux-points::
+[markdown]
+En français, lorsqu'on utilise le `:`, on doit mettre :
+{
+~ une espace normale avant et une espace normale après,
+~ une espace insécable avant et pas d'espace après,
+= une espace insécable avant et une espace normale après,
+~ pas d'espace avant et une espace insécable après,
+~ pas d'espace avant et une espace normale après.
+#### comme pour les autres signes de ponctuation double `: ; ! ?` la règle est : **espace insécable avant, espace normale après**.}
+
+::espaces et virgule::
+[markdown]
+En français, lorsqu'on utilise une virgule (`,`), on doit mettre :
+{
+~ une espace normale avant et une espace normale après,
+~ une espace insécable avant et pas d'espace après,
+~ une espace insécable avant et une espace normale après,
+~ pas d'espace avant et une espace insécable après,
+= pas d'espace avant et une espace normale après.
+#### les signes de ponctuation simple `, .` sont collés au mot qui précède et sont suivis d'une espace normale.
+}
+
+::guillemets::
+[markdown]
+En français, pour les guillemets, on utilise :
+{
+= les chevrons `<< >>`
+~ les doubles quotes `'' ''`
+~ les simples quotes `' '`
+}
+```
 
 ### Saisie et éléments de structure
 
@@ -191,13 +236,13 @@ gardant le même paragraphe. Puisque chaque appui sur la touche
 sont donc techniquement des paragraphes comme les paragraphes de
 texte. Comme pour les espaces et les mots, la convention choisie est
 de **ne jamais avoir deux fins de paragraphe consécutives** et de
-faire confiance au logiciel pour réaliser le meilleur rendu visuel. 
+faire confiance au logiciel pour réaliser le meilleur rendu visuel.
 
 Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
   traitement de texte permet de les déclarer comme titres en précisant
   leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
   de niveau 1 pour une section, titre de niveau 2 pour une
-  sous-section, titre de niveau 3 pour une sous-sous-section. 
+  sous-section, titre de niveau 3 pour une sous-sous-section.
 
 Les **listes**.  Ce sont des suites de paragraphes reliés entre eux
 pour permettre une présentation cohérente. Pour assurer cette
@@ -220,7 +265,7 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ```Activité
 
-Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt). 
+Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
@@ -294,17 +339,17 @@ sections entières ou de réorganiser le plan.
 
 ```Activité
 
-Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice. 
-{ 
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice.
+{
 ~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
-~%34%Vous avez importé des mises en forme au cas par cas } 
+~%34%Vous avez importé des mises en forme au cas par cas }
 
 
 En continuant l'activité précédente, vous pouvez maintenant appliquer un `collage spécial, texte non formaté` (dans le menu `Édition`).  
-{ ~%100%Vous avez importé le contenu 
-~%-33%Vous avez importé la structure 
-~%-34%Vous avez importé des mises en forme au cas par cas } 
+{ ~%100%Vous avez importé le contenu
+~%-33%Vous avez importé la structure
+~%-34%Vous avez importé des mises en forme au cas par cas }
 ```
 
 
@@ -336,12 +381,12 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
  les sections, créer une table des matières, ... Vous allez pouvoir
  agir sur tous ces éléments pour **personnaliser la mise en forme en
  modifiant les styles**, c'est l'objet de la suite de notre cours.
- 
- 
-```Activité
-Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf). 
 
-> Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte. 
+
+```Activité
+Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf).
+
+> Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
 
 Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
@@ -385,7 +430,7 @@ définiriez une mise en forme commune pour tous ces codes.
 
 [Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
-## Vidéos 4 - numérotation et tables associées 
+## Vidéos 4 - numérotation et tables associées
 
 La numérotation des chapitres ne doit jamais être faite manuellement
 car elle est réalisée automatiquement par le traitement de textes à
@@ -418,7 +463,7 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ```activité
 
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.  {} 
+Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.  {}
 
 ```
 
@@ -431,7 +476,7 @@ l'auteur...). Les meta-données sont utiles pour le traitement de
 corpus de documents. On les retrouve ici dans le menu des
 propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
- 
+
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
  .cours_video }
 
@@ -466,7 +511,7 @@ donc valider ou rejeter les modifications.
 
 [Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:.lien_video }
 
-Une autre fonctionnalité de suivi des versions est illustrée ici. 
+Une autre fonctionnalité de suivi des versions est illustrée ici.
 [Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/Oaec8mpdueuxlY7){: .lien_video }
 
 ### Comprendre la hiérarchie de styles
@@ -509,7 +554,7 @@ des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
 professionnel, vous serez à amener à utiliser des modèles pour
 respecter une charte graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
-fichiers de clients. 
+fichiers de clients.
 Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échanger sur le forum pour vous entraider.
 
 ```Activité
@@ -590,7 +635,7 @@ Les principales fonctionnalités d'un tableur sont :
 Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
 le tableur, on définit
 
-- un *classeur* qui sera enregistré dans un fichier au format de 
+- un *classeur* qui sera enregistré dans un fichier au format de
 `Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par LibreOffice Calc d'extension `ods`
 - un classeur contient des *feuilles de calcul*, chaque feuille de
   calcul a un nom. Par défaut, en version française, `Feuille 1`,
@@ -602,7 +647,7 @@ et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
 
 [Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
-### Dans une cellule 
+### Dans une cellule
 
 La première chose à laquelle il **faut être très attentif** est la
 distinction entre le contenu et ce qui apparaît dans la cellule. Ce
@@ -650,7 +695,7 @@ Un exemple classique de classeur de calcul de résultats électoraux pour inrodu
 {}
 
 
-Un exemple de gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods). Vous pouvez regarder l'organisation avec les cellules servant aux calculs (seuils d'âge, tarifs de base), des cellules avec des résultats de calcul (montant des cotisations), une liste d'adhérents (une ligne par adhérent) avec des propriétés (nom, date de naissance, ...). Dans cette liste des informations sont saisies et d'autres sont calculées. Vous pouvez regarder les formules et les comprendre, modifier des valeurs générales (seuils, montant de base) et visualiser l'impact ou modifier des valeurs pour un adhérent et voir l'effet.  {} 
+Un exemple de gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods). Vous pouvez regarder l'organisation avec les cellules servant aux calculs (seuils d'âge, tarifs de base), des cellules avec des résultats de calcul (montant des cotisations), une liste d'adhérents (une ligne par adhérent) avec des propriétés (nom, date de naissance, ...). Dans cette liste des informations sont saisies et d'autres sont calculées. Vous pouvez regarder les formules et les comprendre, modifier des valeurs générales (seuils, montant de base) et visualiser l'impact ou modifier des valeurs pour un adhérent et voir l'effet.  {}
 ```
 
 ## Traiter des données
@@ -750,14 +795,14 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
   nommer la cellule `G2` avec le nom `tauxchange`, écrire en `E8` la
   formule `=D8*tauxchange`, puis copier cette formule dans la plage
   `E8:E108`.
- 
+
 [Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
 
 [Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
 ```Activité avancée
 
-Des exemples d'utilisation pour bien comprendre les références dans ce classeur qui contient deux feuilles de calcul [Jeu avec les références](./media/jeureferences.ods).  {} 
+Des exemples d'utilisation pour bien comprendre les références dans ce classeur qui contient deux feuilles de calcul [Jeu avec les références](./media/jeureferences.ods).  {}
 ```
 
 
@@ -809,7 +854,7 @@ deux cas possibles comme dans l'exemple suivant :
 
 Ceci est illustré sur l'exemple. **Notez bien** aussi sur la video
 l'intérêt d'avoir des cellules contenant les seuils car il suffit de
-modifier les contenus de ces cellules sans changer les formules pour que les résultats s'adaptent automatiquement à un changement des seuils. 
+modifier les contenus de ces cellules sans changer les formules pour que les résultats s'adaptent automatiquement à un changement des seuils.
 
 [Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
@@ -817,14 +862,14 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 
 Des formules simples pour commencer avec des additions, des multiplications et la fonction `SOMME()` dans ce dans ce classeur qui contient deux feuilles de calculs [Premières formules](./media/premieresformules.ods).  {}  
 
-Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ... Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {} 
+Le tableur dispose d'un très grand nombre de fonctions pour manipuler des données comme les nombres avec les fonctions mathématiques, les chaînes de caractères pour extraire une sous-chaîne, transformer en majuscules , ... Nous allons illustrer ceci avec l'exemple des [fonctions sur les dates](./media/fonctionsdates.ods).  {}
 
 
 Des formules sur des plages de calcul comme ici pour des calculs de moyennes
-[Fonctions de plages](./media/fonctionsplages.ods).  {} 
+[Fonctions de plages](./media/fonctionsplages.ods).  {}
 
 
-Des formules avec la  [fonction SI](./media/fonctionSI.ods).  {} 
+Des formules avec la  [fonction SI](./media/fonctionSI.ods).  {}
 ```
 
 ## Opérations sur les tables
@@ -836,9 +881,9 @@ avec des objets en ligne et des propriétés en colonne. Il existe
 différentes opérations sur les tables et nous nous limitons ici à deux
 opérations : le tri et la sélection. Une autre opération, non
 présentée ici, consiste à effectuer des synthèses avec des
-tableaux. 
+tableaux.
 
-### Le tri 
+### Le tri
 
 Le tri *ordonne les lignes* d'une table selon des *critères de
 tri*. Pour réaliser cette opération, on doit :
@@ -852,7 +897,7 @@ ordre croissant ou décroissant.
 
 [Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
 
-### La sélection ou filtre. 
+### La sélection ou filtre.
 
 Cette opération consiste à sélectionner des lignes de la table qui
 vérifient des conditions sur les valeurs des colonnes. Par exemple, on
@@ -870,7 +915,7 @@ réaliser une sélection, on doit :
 Des [tris et des filtres](./media/association.ods). Vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
 1. Sélectionner les juniors ;
 2. Sélectionner les juniors femmes ;
-3. Sélectionner les membres qui ne sont pas à jour de leur cotisation, ... {} 
+3. Sélectionner les membres qui ne sont pas à jour de leur cotisation, ... {}
 ```
 
 ## Représentations graphiques
@@ -879,7 +924,7 @@ Un graphique ou diagramme est utilisé pour porter un message. Le type
 de diagramme est important car il précise ce message :
 
 - Pour une répartition : les camemberts et barres de pourcentage
-- Pour  des valeurs qui peuvent s'ajouter : les empilements 
+- Pour  des valeurs qui peuvent s'ajouter : les empilements
 - Pour les séries de valeurs continues : les courbes
 - Pour les séries de valeurs non continues : les histogrammes
 - Pour les données dans de nombreuses dimensions : les radars.
@@ -888,7 +933,7 @@ Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
 
 ```Activité avancée
 
-Des exemples utilisant des graphiques et des fonctionnalités avancées comme les filtres élaborés et les tableaux croisés. Parcourez les feuilles pour les comprendre. Vous pouvez accéder aux définitions des tableaux croisés en vous plaçant dans un tableau et en appelant avec le bouton droit le menu modifier. [Fonctionnalités avancées](./media/associationplus.ods). 
+Des exemples utilisant des graphiques et des fonctionnalités avancées comme les filtres élaborés et les tableaux croisés. Parcourez les feuilles pour les comprendre. Vous pouvez accéder aux définitions des tableaux croisés en vous plaçant dans un tableau et en appelant avec le bouton droit le menu modifier. [Fonctionnalités avancées](./media/associationplus.ods).
 
 <!-- Reste à trouver un ou deux exemples ou on leur donne les données
 brutes et les objectifs, ils concoivent un classeur. Ils s'évaleunt
@@ -896,7 +941,7 @@ par les pairs -->
 
 # Le logiciel de présentation
 
-# Les restes... 
+# Les restes...
 
 [Modifs de styles paragraphes et caractères](https://owncloud.univ-lille3.fr/index.php/s/i2lN6EzSCU4XK39){: .lien_video }
 
@@ -993,6 +1038,3 @@ Ces techniques appliquées à tous les niveaux de titre vous assure une mise en 
 
 - bibliographie
 > surement en plusieurs fois
-
-
-
