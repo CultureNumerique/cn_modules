@@ -895,7 +895,7 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 [markdown]
 Dans ce dans le classeur [Premières formules](./media/premieresformules.ods) qui contient deux feuilles de calculs, vous vous entraînerez à écrire des formules avec des additions, des multiplications et la fonction `SOMME()`.  {}
 
-
+::Fonction SI::
 Entraînez-vous maintenant avec la [fonction SI](./media/fonctionSI.ods).  {}
 ```
 
