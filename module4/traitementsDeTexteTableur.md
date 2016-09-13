@@ -940,7 +940,7 @@ réaliser une sélection, on doit :
 ```Activité avancée
 
 ::Tri et filtres::
-En utilisant le [classeur à propos des associations](./media/association.ods),  vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :\n
+En utilisant le [classeur à propos des associations](./media/association.ods),  vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
 \n
 1. Sélectionner les juniors ;
 2. Sélectionner les juniors femmes ;
