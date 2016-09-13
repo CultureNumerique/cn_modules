@@ -669,7 +669,7 @@ Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
 le tableur, on définit
 
 - un *classeur* qui sera enregistré dans un fichier au format de
-`Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par LibreOffice Calc d'extension `ods`
+`Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par `LibreOffice Calc` d'extension `ods`
 - un classeur contient des *feuilles de calcul*, chaque feuille de
   calcul a un nom. Par défaut, en version française, `Feuille 1`,
   `Feuille 2`, ...
@@ -678,7 +678,7 @@ le tableur, on définit
 et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
 élémentaire.
 
-[Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
+[Vidéographie : Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
 ### Dans une cellule
 
@@ -690,7 +690,7 @@ numériques. Par exemple une même valeur numérique peut être
 interprétée comme un simple nombre, un pourcentage, une somme d'argent
 ou même une date.
 
-[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
+[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
 
 
 La valeur affichée dans la cellule peut également être le résultat
@@ -705,7 +705,7 @@ contient bien plus d'informations : une valeur, un format, et
 éventuellement une formule et même un commentaire.
 
 
-[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
+[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
 
 ### Mise en forme
 
@@ -713,25 +713,25 @@ Comme pour le traitement de texte, on peut faire des mises en forme au
 cas par cas ou utiliser des styles pour uniformiser la
 présentation. **Attention** à ne pas mettre en péril les traitements
 par des soucis de présentation. Par exemple, une liste est définie par
-des lignes et colonnes contigües et insérer des lignes (ou colonnes)
+des lignes et colonnes contiguës et insérer des lignes (ou colonnes)
 blanches ou avec un fond coloré pour faire des bordures rompt la
 logique de liste. Les traitements de filtre, tri, etc... deviendraient
 alors impossibles.
 
-[Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
+[Vidéographie : Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
 
-[Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
+[Vidéographie : Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ```Activité avancée
 
 ::Découverte d'un classeur simple::
 [markdown]
-Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods).
+Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux : [Classeur élections](./media/election.ods).
 {}
 
 ::Découverte d'un classeur plus complet::
 [markdown]
-Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods).  {}
+Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association : [Classeur association](./media/association.ods).  {}
 
 ```
 
@@ -739,9 +739,9 @@ Un second exemple plus complet simule la gestion des cotisations des adhérents 
 
 Faire un traitement de données, c'est
 
-1. Disposer de données en entrée (des valeurs connues, acquises)
-2. définir des opérations de calcul sur ces données
-3. Produire et afficher les résultats
+1. Disposer de données en entrée (des valeurs connues, acquises), 
+2. définir des opérations de calcul sur ces données,
+3. produire et afficher les résultats.
 
 La traduction dans le tableur posera les questions suivantes : Quelles
 sont les cellules et les plages de cellules qui vont contenir des
@@ -802,7 +802,7 @@ copie. C'est le cas de la référence au taux de conversion qui est dans
 une seule cellule, `G2` sur notre exemple. Pour faire la distinction de
 comportement, on utilisera dans notre formule une *référence absolue*
 en utilisant le symbole $. Donc, par exemple, pour faire référence au
-taux de conversion, on uti"image style général"commentisera la référence absolue `$G$2`.
+taux de conversion, on utilisera la référence absolue `$G$2`.
 
 Le **mécanisme des références est donc essentiel pour traiter des
 listes**. Vous devez, lorsque vous écrivez une formule, vous poser la
@@ -811,7 +811,7 @@ je copie ma formule. Si oui, vous utilisez une référence relative, si
 non, vous utilisez une référence absolue. Sur notre exemple, la
 formule à écrire en `E8` est donc `=D8*$G$2` qu'il suffit de copier
 pour toute la liste d'enfants et en `E12`, nous aurons la formule
-attendue `=E12*$G$2` qui est bien le montant en euros pour l'enfant en
+attendue `=D12*$G$2` qui est bien le montant en euros pour l'enfant en
 ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ### Autres références
@@ -833,13 +833,13 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
   formule `=D8*tauxchange`, puis copier cette formule dans la plage
   `E8:E108`.
 
-[Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
+[Vidéographie : Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
 
-[Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
+[Vidéographie : Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
 ```Activité avancée
 
-::Jouer avec le références::
+::Jouer avec les références::
 [markdown]
 Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
 ~Celle en ligne 5
@@ -874,7 +874,7 @@ cellules.
 
 Enfin, une fonction très importante permet de différencier les
 traitements selon les cas. C'est *la fonction SI* qui s'écrit sous la
-forme `SI(critere;valeurVrai;ValeurFaux)`. Par exemple, si vous avez
+forme `SI(critere;valeurVrai;valeurFaux)`. Par exemple, si vous avez
 une liste d'élèves avec une moyenne des notes en colonne `G` à partir
 de `G8`, si vous souhaitez traiter différemment les élèves ayant une
 note supérieure à 10, vous pourrez écrire en `H8` une formule de la
@@ -934,7 +934,7 @@ travailler) ou en la nommant
 lesquelles vous voulez trier et en précisant si vous souhaitez un
 ordre croissant ou décroissant.
 
-[Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
+[Vidéographie : Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
 
 ### La sélection ou filtre.
 
@@ -947,7 +947,7 @@ réaliser une sélection, on doit :
 - *désigner la table* comme pour le tri
 - *expliciter les critères de filtre*.
 
-[Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
+[Vidéographie : Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
 ```Activité avancée
 
