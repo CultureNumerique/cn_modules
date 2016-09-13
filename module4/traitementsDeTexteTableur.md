@@ -1,8 +1,9 @@
+LANGUAGE:   fr
+TITLE:   Savoir-faire autour du traitement de texte et du tableur
+MENUTITLE: Traitement de texte et tableur
+AUTHOR:     Culture numérique
+CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-
-<!-- /TOC -->
 # Introduction
 
 Ce cours est dirigé vers les savoir-faire autour de deux types de
