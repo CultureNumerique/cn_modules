@@ -1,8 +1,9 @@
+LANGUAGE:   fr
+TITLE:   Savoir-faire autour du traitement de texte et du tableur
+MENUTITLE: Traitement de texte et tableur
+AUTHOR:     Culture numérique
+CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-
-<!-- /TOC -->
 # Introduction
 
 Ce cours est dirigé vers les savoir-faire autour de deux types de
@@ -81,6 +82,7 @@ la structure de votre document.
 
 ### Saisie du contenu et structure de base
 
+
 La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
 paramètres dont la langue, les dispositifs de saisie et les aides à la
 saisie. La *langue* définit l'ordre d'écriture, les caractères, les
@@ -91,6 +93,8 @@ répandu reste le clavier mais des systèmes d'acquisition par la voix
 se développent. L'*aide à la saisie*, fréquente sur des objets
 portables, peut prédire la complétion d'un mot, souligner un mot mal
 orthographié, suggérer un mot, ...
+
+[Vidéographie : La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
 La structure de base est définie avec les niveaux de titre : de niveau
 1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
@@ -118,14 +122,13 @@ par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
 définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
 
+[Vidéographie : La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
+
 [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .cours_video }
 
-
-[La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
-
-
-### Activité
-
+```compréhension
+::La typographie::
+[markdown]
 Savoir composer un document selon les règles typographiques n'est pas
 simple. Pour vous en convaincre, vous pouvez vous rendre en
 bibliothèque consulter les (très beaux) ouvrages qui y sont
@@ -139,11 +142,8 @@ majuscules, la forme des abréviations ne reposent que sur vous.  \n
 Lisez
 [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
-courantes.   
-
-```compréhension
-::Accents::
-[markdown]
+courantes.
+\n
 En français, on accentue les capitales (majuscules). {T}
 
 ::Majuscule en début de mot::
@@ -197,7 +197,7 @@ respecter pour ce faire.
 
 Les **caractères**. La plupart, par exemple, lettres, chiffres et
 symboles de ponctuation, sont visibles, mais certains sont invisibles,
-en particulier, les espaces[^2]. Certains caractères sont aussi
+en particulier, les espaces. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
 c'est, par exemple, le caractère qui marque la la fin de paragraphe,
 ou ceux qui marquent la fin d'un mot (espace ou ponctuation),
@@ -261,7 +261,7 @@ Chaque élément de liste est un paragraphe. On active la structure de
  début de paragraphe. Deux appuis de `retour arrière` quittent la
  structure de liste.
 
-[Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
+[Vidéographie : Déclarer une structure de liste](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
 ```Activité
 
@@ -289,6 +289,9 @@ paragraphes, caractères, cadres (flottants), pages ou listes.
 
 [L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .cours_video }
 
+[Vidéographie : L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
+
+
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
 lieu de mettre en gras et en italique, nous préférons déclarer des
@@ -301,7 +304,7 @@ présentation sur un autre support comme un objet portable, ou
 simplement pouvoir modifier facilement dans tout le texte la mise en
 forme choisie pour les éléments déclarés en style accentuation forte.
 
-[Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){: .lien_video }
+[Vidéographie : Les style caractères. Accentuation ou Gras ?](https://owncloud.univ-lille3.fr/index.php/s/Oq5OK6UEECh9zaB){: .lien_video }
 
 Comme nous l'avons dit ci-dessus, l'affichage des caractères
 invisibles permet de savoir exactement ce qui a été saisi. On voit les
@@ -310,7 +313,7 @@ ces symboles et les supprimer. On voit également la représentation des
 fins de ligne qui ne sont pas des fins de paragraphes dans cette
 partie de texte.
 
-[Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){: .lien_video }
+[Vidéographie : Affichage des caractères spéciaux dont le retour à la ligne](https://owncloud.univ-lille3.fr/index.php/s/RGeyNGslqj7Hh1C){: .lien_video }
 
 Le logiciel réalise souvent des opérations pour vous aider à bien
 écrire votre document, comme par exemple, l'insertion d'une note de
@@ -331,15 +334,15 @@ description de documents. Par exemple, en HTML, on utilise des
 (hyper-)liens qui peuvent être internes au document (renvoi vers une
 partie du document) ou externes (renvoi vers un autre document).
 
-[Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){: .lien_video }
+[Vidéographie : Insérer des renvois aux textes et illustrations](https://owncloud.univ-lille3.fr/index.php/s/TfxHkw38bFoXuXa){: .lien_video }
 
-[Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){: .lien_video }
+[Vidéographie : Renvoi selon un repère](https://owncloud.univ-lille3.fr/index.php/s/7xk3sKCv7AhP3wl){: .lien_video }
 
 Terminons par un examen de la structure arborescente de ce
 document. La manipulation de cette structure permet de déplacer des
 sections entières ou de réorganiser le plan.
 
-[Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){: .lien_video }
+[Vidéographie : Réorganiser le plan](https://owncloud.univ-lille3.fr/index.php/s/kL4rzZKR6ehpVBF){: .lien_video }
 
 ```Activité
 
@@ -412,13 +415,16 @@ espacements trop grands ou trop petits.
 
 [Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .cours_video }
 
+[Vidéographie : Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
+
+
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
 fortes. Si vous n'êtes pas satisfait de la règle choisie, vous la
 modifierez pour changer l'apparence dans tout le document en une
 seule opération.
 
-[Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
+[Vidéographie : Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
 
 Parfois, certains éléments de structure sont propres à un certain type
 de document. Par exemple ici, nous avons des noms de
@@ -427,7 +433,7 @@ sémantique, du sens au document qui pourra être exploité par d'autres
 logiciels, mais facilitera également l'uniformisation de la
 présentation de tous les noms de logiciel.
 
-[Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
+[Vidéographie : Nouveau style de caractère : logiciel](https://owncloud.univ-lille3.fr/index.php/s/X4vXqDW9P6eKmtk){: .lien_video }
 
 Bien sûr, la définition de nouvelles structures, donc de nouveaux
 styles, s'applique sur les caractères comme sur les paragraphes. Ici, notre
@@ -436,7 +442,7 @@ peut être déclaré et mis en forme spécifiquement. Mais si votre
 document contenait d'autres codes, vous associeriez une structure et
 définiriez une mise en forme commune pour tous ces codes.
 
-[Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
+[Vidéographie : Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
 ## Vidéos 4 - numérotation et tables associées
 
@@ -449,7 +455,9 @@ et si on doit faire apparaître la hiérarchie dans le numéro en
 affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
 pour comprendre les impacts sur la présentation de ces numéros.
 
-[Numerotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .cours_video }
+[Numérotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .cours_video }
+
+[Vidéographie : Numérotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .lien_video }
 
 La structure d'un document, c'est aussi une structure en différentes
 pages : une page de garde, des pages d'index ou de table des matières
@@ -458,7 +466,7 @@ structure. On peut la déclarer en ajoutant des sauts de page manuels
 et spéciaux, puis définir quel sera le style de la page suivante et le
 début de sa numérotation et définir des mises en forme associées à ces pages.
 
-[Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){: .lien_video }
+[Vidéographie : Structuration en liste de pages de natures différentes](https://owncloud.univ-lille3.fr/index.php/s/NC34k8SnyGy85Ye){: .lien_video }
 
 Une fois la structure du document bien spécifiée, l'insertion d'une
 table des matières, d'une table des illustrations,... est très simple,
@@ -467,7 +475,7 @@ appliquée alors les numéros seront repris. Des efforts de mise en
 forme peuvent être nécessaires selon les logiciels comme par exemple
 ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
-[Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/ftcxiFP4X3MKIms){: .lien_video }
+[Vidéographie : Génération d'une table des matières](https://owncloud.univ-lille3.fr/index.php/s/ftcxiFP4X3MKIms){: .lien_video }
 
 ```activité
 
@@ -476,7 +484,6 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
-
 
 ```
 
@@ -492,6 +499,9 @@ contenu textuel du document.
 
 [Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
  .cours_video }
+
+[Vidéographie : Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
+ .lien_video }
 
 ## Video 6 - avec un autre logiciel
 
@@ -510,6 +520,9 @@ sont communes à tous les traitements de texte**.
 
 [petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .cours_video }
 
+[Vidéographie : petite démo Word](){: .lien_video }
+
+
 ## Vidéos avancées
 
 ### Travail collaboratif
@@ -522,10 +535,11 @@ sont offertes. En situation de travail collaboratif, les modifications
 auront pu être apportées par différents auteurs et le coordinateur va
 donc valider ou rejeter les modifications.
 
-[Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:.lien_video }
+[Vidéographie : Commentaires et suivi des modifications](https://owncloud.univ-lille3.fr/index.php/s/rCEsDhJnDCN44Mg){:.lien_video }
 
 Une autre fonctionnalité de suivi des versions est illustrée ici.
-[Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/Oaec8mpdueuxlY7){: .lien_video }
+
+[Vidéographie : Suivi des versions](https://owncloud.univ-lille3.fr/index.php/s/Oaec8mpdueuxlY7){: .lien_video }
 
 ### Comprendre la hiérarchie de styles
 
@@ -538,11 +552,11 @@ définie au niveau d'un style elle sera alors définie par celle de son
 style juste au dessus de la hiérarchie. Par exemple en passant le
 corps de texte en rose, les notes de bas de page le seront aussi, mais
 pas les titres. Par contre définir cette couleur au style par défaut,
-, c'est-à-dire au sommet de la hiérarchie affectera tous les styles de
+c'est-à-dire au sommet de la hiérarchie affectera tous les styles de
 document (sauf bien sûr si cette propriété a été redéfinie pour un style
 donné).
 
-[La hiérarchie de styles](https://owncloud.univ-lille3.fr/index.php/s/PkfPwBzS7OziFfi){: .lien_video }
+[Vidéographie : La hiérarchie de styles](https://owncloud.univ-lille3.fr/index.php/s/PkfPwBzS7OziFfi){: .lien_video }
 
 ### Mise en forme des listes
 
@@ -552,7 +566,7 @@ demi-cadratins (Code unicode 2013,
 peut définir une liste à la française respectant cette convention
 typographique mais c'est un peu technique.
 
-[Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
+[Vidéographie : Listes à la française](https://owncloud.univ-lille3.fr/index.php/s/3FauhABN3VewRHd){: .lien_video }
 
 ### Autres fonctionnalités
 
@@ -568,9 +582,10 @@ professionnel, vous serez à amener à utiliser des modèles pour
 respecter une charte graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
-Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échanger sur le forum pour vous entraider.
+Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échangez sur le forum pour vous entraider.
 
 ```Activité
+
 ::ajouter des images::
 [markdown]
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
@@ -586,6 +601,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 ```
 
 ```Activité avancée
+
 ::document maître::
 [markdown]
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
@@ -593,6 +609,7 @@ Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les 
 ::commentaires::
 [markdown]
 Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
+
 ```
 
 
@@ -657,7 +674,7 @@ Un vocabulaire spécifique accompagne la manipulation du tableur. Avec
 le tableur, on définit
 
 - un *classeur* qui sera enregistré dans un fichier au format de
-`Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par LibreOffice Calc d'extension `ods`
+`Microsoft Excel` d'extension `xlsx` ou au format ouvert utilisé par `LibreOffice Calc` d'extension `ods`
 - un classeur contient des *feuilles de calcul*, chaque feuille de
   calcul a un nom. Par défaut, en version française, `Feuille 1`,
   `Feuille 2`, ...
@@ -666,7 +683,7 @@ le tableur, on définit
 et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
 élémentaire.
 
-[Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
+[Vidéographie : Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
 
 ### Dans une cellule
 
@@ -678,7 +695,7 @@ numériques. Par exemple une même valeur numérique peut être
 interprétée comme un simple nombre, un pourcentage, une somme d'argent
 ou même une date.
 
-[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
+[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
 
 
 La valeur affichée dans la cellule peut également être le résultat
@@ -693,7 +710,7 @@ contient bien plus d'informations : une valeur, un format, et
 éventuellement une formule et même un commentaire.
 
 
-[Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
+[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
 
 ### Mise en forme
 
@@ -701,25 +718,25 @@ Comme pour le traitement de texte, on peut faire des mises en forme au
 cas par cas ou utiliser des styles pour uniformiser la
 présentation. **Attention** à ne pas mettre en péril les traitements
 par des soucis de présentation. Par exemple, une liste est définie par
-des lignes et colonnes contigües et insérer des lignes (ou colonnes)
+des lignes et colonnes contiguës et insérer des lignes (ou colonnes)
 blanches ou avec un fond coloré pour faire des bordures rompt la
 logique de liste. Les traitements de filtre, tri, etc... deviendraient
 alors impossibles.
 
-[Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
+[Vidéographie : Styles](https://owncloud.univ-lille3.fr/index.php/s/wRHYkInBqUjrkD6){: .lien_video }
 
-[Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
+[Vidéographie : Logique de table](https://owncloud.univ-lille3.fr/index.php/s/tcnC1F86vnrkWcQ){: .lien_video }
 
 ```Activité avancée
 
 ::Découverte d'un classeur simple::
 [markdown]
-Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux.  [Classeur élections](./media/election.ods).
+Découvrez en autonomie les premières notions d'un classeur illustrant le calcul de résultats électoraux : [Classeur élections](./media/election.ods).
 {}
 
 ::Découverte d'un classeur plus complet::
 [markdown]
-Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association [Classeur association](./media/association.ods).  {}
+Un second exemple plus complet simule la gestion des cotisations des adhérents d'une association : [Classeur association](./media/association.ods).  {}
 
 ```
 
@@ -727,9 +744,9 @@ Un second exemple plus complet simule la gestion des cotisations des adhérents 
 
 Faire un traitement de données, c'est
 
-1. Disposer de données en entrée (des valeurs connues, acquises)
-2. définir des opérations de calcul sur ces données
-3. Produire et afficher les résultats
+1. Disposer de données en entrée (des valeurs connues, acquises), 
+2. définir des opérations de calcul sur ces données,
+3. produire et afficher les résultats.
 
 La traduction dans le tableur posera les questions suivantes : Quelles
 sont les cellules et les plages de cellules qui vont contenir des
@@ -790,7 +807,7 @@ copie. C'est le cas de la référence au taux de conversion qui est dans
 une seule cellule, `G2` sur notre exemple. Pour faire la distinction de
 comportement, on utilisera dans notre formule une *référence absolue*
 en utilisant le symbole $. Donc, par exemple, pour faire référence au
-taux de conversion, on uti"image style général"commentisera la référence absolue `$G$2`.
+taux de conversion, on utilisera la référence absolue `$G$2`.
 
 Le **mécanisme des références est donc essentiel pour traiter des
 listes**. Vous devez, lorsque vous écrivez une formule, vous poser la
@@ -799,7 +816,7 @@ je copie ma formule. Si oui, vous utilisez une référence relative, si
 non, vous utilisez une référence absolue. Sur notre exemple, la
 formule à écrire en `E8` est donc `=D8*$G$2` qu'il suffit de copier
 pour toute la liste d'enfants et en `E12`, nous aurons la formule
-attendue `=E12*$G$2` qui est bien le montant en euros pour l'enfant en
+attendue `=D12*$G$2` qui est bien le montant en euros pour l'enfant en
 ligne 12 multiplié par le taux de conversion situé en `G2`.
 
 ### Autres références
@@ -821,13 +838,13 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
   formule `=D8*tauxchange`, puis copier cette formule dans la plage
   `E8:E108`.
 
-[Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
+[Vidéographie : Autres références](https://owncloud.univ-lille3.fr/index.php/s/OIPzU7hIZXlYa3s){: .lien_video }
 
-[Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
+[Vidéographie : Nom](https://owncloud.univ-lille3.fr/index.php/s/rN4qu3qhYycb4Kl){: .lien_video }
 
 ```Activité avancée
 
-::Jouer avec le références::
+::Jouer avec les références::
 [markdown]
 Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
 ~Celle en ligne 5
@@ -862,7 +879,7 @@ cellules.
 
 Enfin, une fonction très importante permet de différencier les
 traitements selon les cas. C'est *la fonction SI* qui s'écrit sous la
-forme `SI(critere;valeurVrai;ValeurFaux)`. Par exemple, si vous avez
+forme `SI(critere;valeurVrai;valeurFaux)`. Par exemple, si vous avez
 une liste d'élèves avec une moyenne des notes en colonne `G` à partir
 de `G8`, si vous souhaitez traiter différemment les élèves ayant une
 note supérieure à 10, vous pourrez écrire en `H8` une formule de la
@@ -922,7 +939,7 @@ travailler) ou en la nommant
 lesquelles vous voulez trier et en précisant si vous souhaitez un
 ordre croissant ou décroissant.
 
-[Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
+[Vidéographie : Le tri](https://owncloud.univ-lille3.fr/index.php/s/5e5Euyl25PAmgml){: .lien_video }
 
 ### La sélection ou filtre.
 
@@ -935,7 +952,7 @@ réaliser une sélection, on doit :
 - *désigner la table* comme pour le tri
 - *expliciter les critères de filtre*.
 
-[Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
+[Vidéographie : Le filtre](https://owncloud.univ-lille3.fr/index.php/s/KOYB3fVqeIzI6R4){: .lien_video }
 
 ```Activité avancée
 
