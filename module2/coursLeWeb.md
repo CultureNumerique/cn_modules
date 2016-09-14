@@ -7,13 +7,13 @@ AUTHOR: Culture Numérique
 # Introduction
 
 ## Cours 1/2
-[video]( https://vimeo.com/138623497 ){: .cours_video } 
+[video]( https://vimeo.com/138623497 ){: .cours_video }
 Le web, c'est sans doute l'application informatique qui a rencontré le plus grand succès.
 
 C'est une utilisation particulière  d'internet. Il a été inventé par Tim Berners Lee au début des années 90. C'est d'abord un moyen de communication entre personnes qui permet de s'échanger des informations décrites dans des documents . Il est fréquent de constater une confusion entre Internet et le Web. Or, si le web utilise Internet, il n'est pas la seule application à le faire, le mail par exemple est un autre service qui utilise Internet. Socialement, le web a pris une place considérable dans nos vies. Sur cette application au départ très simple se sont bâties d'autres applications dans tous les domaines d'activités : pour le commerce, le marketing, la recherche d'emploi, le travail à distance et la collaboration... C'est un vecteur important de développement économique aujourd'hui. C'est aussi par des applications web que l'état et les administrations offrent leurs services aux citoyens. C'est encore par les applications sociales du web que nous communiquons dans notre vie privée. Maîtriser les technologies du web est important pour comprendre les enjeux, saisir des opportunités, éviter des pièges... Naviguer sur le web fait aujourd'hui partie du quotidien de chacun d'entre nous. Ce chapitre propose d'en expliquer le fonctionnement pour nous permettre d'avoir des comportements responsables et de garder la maîtrise de ce que nous faisons.
 
 ## Cours 2/2
-[video]( https://vimeo.com/138623515 ){: .cours_video } 
+[video]( https://vimeo.com/138623515 ){: .cours_video }
 
 Alors, qu'est-ce réellement  que le web ? Le Web est avant tout un service qui permet de s'échanger des ressources. Celles-ci peuvent être très variées et prendre de nombreuses formes. Dans un premier temps, nous considérerons pour simplifier que ce sont uniquement des documents qui contiennent soit du texte soit des images.
 Le succès du web est sans doute lié à la notion de document hypertexte. C'est à dire la possibilité d'intégrer à l'intérieur d'un document des liens, qui sont des parties de texte cliquables permettant d'accéder à d'autres ressources.
@@ -57,10 +57,8 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
       </ol>
     </div>
 {####<p>Contrairement à ce qu'on pourrait imaginer, Tim Berners-Lee n'était pas informaticien mais <b>physicien</b>. Il était chercheur en physique nucléaire au CERN dans les années 80. Son objectif était de faciliter le transfert de connaissance dans la communauté scientifique internationale.</p><p>Le premier site réellement opérationnel décrivait les principales caractéristiques du web et expliquait comment accéder aux documents d'autres personnes et comment configurer son propre serveur.</p><p>Les travaux ont démarré en 1989, le premier site a été mis en ligne en <b>1991</b> mais c'est en 1993 que le premier navigateur au sens ou nous les manipulons aujourd'hui est apparu.</p>}
-```
- 
 
-```activité-avancée
+
 ::Qui dirige le Web ?::[html]
 <p>Le 30 avril 1993, le CERN annonce que le « World Wide Web » sera <b>libre d'utilisation</b> pour tout le monde.</p>
 <div class="editor-indent" style="margin-left: 30px;"><i>Ressources :<br /></i></div>
@@ -113,20 +111,20 @@ Une remarque importante doit être signalée. Le terme naviguer peut prêter à 
 
 ## Les serveurs
 
-**Les serveurs** 
+**Les serveurs**
 [video](https://vimeo.com/138623583){: .cours_video}
 
 Un serveur est un logiciel (un programme) qui s'exécute sur une machine le plus souvent 24/24 et 7/7 et attend qu'un client l'interpelle, par exemple c'est le cas du serveur web www.univ-lille.fr qui distribue les ressources du site de l'université de Lille. Dans ces journaux, de nombreuses informations à propos des clients sont mémorisées : leur adresse IP, des dates de visites, la ressource demandée... Notons que, l'envoi d'une ressource, est en fait l' envoi d'une copie de la ressource, l'original restant disponible pour d'autres requêtes identiques. En plus de ce service de distribution, le serveur garde l' historique de toutes les requêtes qui lui ont été adressées dans des journaux d'activité : les logs en anglais. Ces journaux sont autant de traces que nous laissons et qui peuvent être analysées et exploitées.
-Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui sont stockées sur ses disques, aux clients qui les demandent . 
+Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui sont stockées sur ses disques, aux clients qui les demandent .
 
 ```compréhension
 
 // question: 268  name: Erreur 404!
 ::Erreur 404!::[html]<p>Que signifie le code d'erreur 404 dans le protocole HTTP</p>{
 	~<p>La ressource a été déplacée sur un autre serveur</p>
-	=<p>La ressource n’existe pas sur le serveur</p>#<p>Votre réponse est correcte.</p> 
+	=<p>La ressource n’existe pas sur le serveur</p>#<p>Votre réponse est correcte.</p>
 	~<p>Le client de peut pas communiquer avec le serveur</p>
-	####<p>L'erreur 404 apparaît lorsque la ressource demandée n'existe pas sur le serveur. Cela se produit en général lorsqu'il y a une 'faute' dans l'url ou lorsque le gestionnaire du site a déplacé, supprimé ou renommé une ressource. L'url devient alors invalide.</p> 
+	####<p>L'erreur 404 apparaît lorsque la ressource demandée n'existe pas sur le serveur. Cela se produit en général lorsqu'il y a une 'faute' dans l'url ou lorsque le gestionnaire du site a déplacé, supprimé ou renommé une ressource. L'url devient alors invalide.</p>
 }
 
 
@@ -136,8 +134,8 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 	~<p>Internet Explorer</p>
 	~<p>Chrome</p>
 	~<p>Safari</p>
-	=<p>Tous</p>#<p>Votre réponse est correcte.</p> 
-	####<p>Tous les navigateurs sont équivalents de ce point de vue, seuls leur rapidité, leurs fonctionnalités avancées ou leur ergonomie les différencient.</p> 
+	=<p>Tous</p>#<p>Votre réponse est correcte.</p>
+	####<p>Tous les navigateurs sont équivalents de ce point de vue, seuls leur rapidité, leurs fonctionnalités avancées ou leur ergonomie les différencient.</p>
 }
 
 
@@ -152,17 +150,17 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 // question: 271  name: Les logs c'est quoi ?
 ::Les logs c'est quoi ?::[html]<p>Qu'est-ce qu'un fichier de logs d'un serveur web ?</p>{
-	~la liste des noms des gens qui ont consulté le site hébergé sur le serveur#non, sur la plupart des sites nous n'envoyons pas nos noms, les logs conservent les traces des requêtes effectuées par les clients repérés par leur adresse IP ainsi que toutes les activités du serveur dans un journal 
-	=un journal des activités du serveur#Oui, bravo 
-	~la liste de toutes les ressources stockées sur ce serveur#Non, les logs conservent le journal des activités du serveur 
-	####<p>Voici ci dessous quelques lignes extraites d'un journal (log) d'un serveur Web. Chaque ligne correspond à une requête d'un client. Les lignes ont été "anonymisées" \: nous avons remplacé les adresses IP des clients par 127.0.0.1.  </p><p> </p><p>Sur cette ligne vous avez l'adresse IP (anonymisée) du client, suivi de la date et l'heure de la requête et entre guillemets la requête adressée ("GET /polys/...") qui signifie " donne-moi la ressource "/poly/...etc". On voit également le code 200 signalant que la requête a bien été traitée sans erreur et aussi les caractéristiques du client \:  C'est ici le robot du moteur de recherche bing.</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:48 +0200] "GET /polys/access-1997/node66.html HTTP/1.1" 200 2257 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http\://www.bing.com/bingbot.htm)"</code></p><p> </p><p>L'exemple suivant est intéressant car il montre une suite de 5 requêtes. La première est un celle d'un document contenant des liens vers d'autres ressources (feuilles de style CSS et images au format PNG). Les 5 requêtes sont enchaînées car le navigateur (ici Safari) a immédiatement demandé au serveur les ressources nécessaires pour afficher une page web complète.</p><p>    <br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Football/Confrontations/Ajaccio-Clermont.php HTTP/1.1" 200 4836 "https\://www.google.fr/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" </code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-v3.css HTTP/1.1" 200 6692 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-print-v3.css HTTP/1.1" 200 2231 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/valid-html5.png HTTP/1.1" 200 1723 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/FabienTorre.png HTTP/1.1" 200 478 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code></p><p>Un dernier petit exemple pour les hackers \:-). On peut lire avec un peu d'expérience ou de sagacité que la ressource (ici /FAQ-LaTeX/12.3.html) a été demandée depuis une page web (indiquée après le code de succès 200 et la taille de 7444 de cette ressource) qui est une adresse sur les serveurs de Google. En regardant mieux encore, on peut même lire que c'est à la suite d'une recherche à propos de "FAQ-LaTeX"... C'est en partie grâce à cette indication de provenance qu'on peut rémunérer les sites qui font de la publicité vers d'autres sites...</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:30 +0200] "GET /FAQ-LaTeX/12.3.html HTTP/1.1" 200 7444 "http\://www.google.fr/url?sa\=t&rct\=j&q\=&esrc\=s&source\=web&cd\=1&ved\=0CCQQFjAAahUKEwjo6IWtgIrIAhVFOxQKHdjEDfw&url\=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2FFAQ-LaTeX%2F12.3.html&usg\=AFQjCNEtHaKlFbotxdHj6bxRzpkDN3NwkA" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv\:24.0) Gecko/20100101 Firefox/24.0"</code><br /><br /></p> 
+	~la liste des noms des gens qui ont consulté le site hébergé sur le serveur#non, sur la plupart des sites nous n'envoyons pas nos noms, les logs conservent les traces des requêtes effectuées par les clients repérés par leur adresse IP ainsi que toutes les activités du serveur dans un journal
+	=un journal des activités du serveur#Oui, bravo
+	~la liste de toutes les ressources stockées sur ce serveur#Non, les logs conservent le journal des activités du serveur
+	####<p>Voici ci dessous quelques lignes extraites d'un journal (log) d'un serveur Web. Chaque ligne correspond à une requête d'un client. Les lignes ont été "anonymisées" \: nous avons remplacé les adresses IP des clients par 127.0.0.1.  </p><p> </p><p>Sur cette ligne vous avez l'adresse IP (anonymisée) du client, suivi de la date et l'heure de la requête et entre guillemets la requête adressée ("GET /polys/...") qui signifie " donne-moi la ressource "/poly/...etc". On voit également le code 200 signalant que la requête a bien été traitée sans erreur et aussi les caractéristiques du client \:  C'est ici le robot du moteur de recherche bing.</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:48 +0200] "GET /polys/access-1997/node66.html HTTP/1.1" 200 2257 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http\://www.bing.com/bingbot.htm)"</code></p><p> </p><p>L'exemple suivant est intéressant car il montre une suite de 5 requêtes. La première est un celle d'un document contenant des liens vers d'autres ressources (feuilles de style CSS et images au format PNG). Les 5 requêtes sont enchaînées car le navigateur (ici Safari) a immédiatement demandé au serveur les ressources nécessaires pour afficher une page web complète.</p><p>    <br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Football/Confrontations/Ajaccio-Clermont.php HTTP/1.1" 200 4836 "https\://www.google.fr/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" </code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-v3.css HTTP/1.1" 200 6692 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-print-v3.css HTTP/1.1" 200 2231 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/valid-html5.png HTTP/1.1" 200 1723 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/FabienTorre.png HTTP/1.1" 200 478 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code></p><p>Un dernier petit exemple pour les hackers \:-). On peut lire avec un peu d'expérience ou de sagacité que la ressource (ici /FAQ-LaTeX/12.3.html) a été demandée depuis une page web (indiquée après le code de succès 200 et la taille de 7444 de cette ressource) qui est une adresse sur les serveurs de Google. En regardant mieux encore, on peut même lire que c'est à la suite d'une recherche à propos de "FAQ-LaTeX"... C'est en partie grâce à cette indication de provenance qu'on peut rémunérer les sites qui font de la publicité vers d'autres sites...</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:30 +0200] "GET /FAQ-LaTeX/12.3.html HTTP/1.1" 200 7444 "http\://www.google.fr/url?sa\=t&rct\=j&q\=&esrc\=s&source\=web&cd\=1&ved\=0CCQQFjAAahUKEwjo6IWtgIrIAhVFOxQKHdjEDfw&url\=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2FFAQ-LaTeX%2F12.3.html&usg\=AFQjCNEtHaKlFbotxdHj6bxRzpkDN3NwkA" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv\:24.0) Gecko/20100101 Firefox/24.0"</code><br /><br /></p>
 }
 
 
 // question: 269  name: Les protocoles
 ::Les protocoles::[html]<p>Par quel protocole les clients et serveurs dialoguent-ils ? <br></br></p>{
 	~<p>HTML<br></p>
-	=<p><span style\="font-weight\:normal;"><span style\="font-size\:14.666666666666666px;font-family\:Arial;color\:\#434343;background-color\:transparent;font-weight\:400;font-style\:normal;font-variant\:normal;text-decoration\:none;vertical-align\:baseline;white-space\:pre-wrap;">HTTP</span></span></p>#Votre réponse est correcte. 
+	=<p><span style\="font-weight\:normal;"><span style\="font-size\:14.666666666666666px;font-family\:Arial;color\:\#434343;background-color\:transparent;font-weight\:400;font-style\:normal;font-variant\:normal;text-decoration\:none;vertical-align\:baseline;white-space\:pre-wrap;">HTTP</span></span></p>#Votre réponse est correcte.
 }
 
 
@@ -176,7 +174,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 
 ## Cours
-[video]( https://vimeo.com/138623678 ){: .cours_video } 
+[video]( https://vimeo.com/138623678 ){: .cours_video }
 ### Exemple
 
 Commençons par un exemple très simple pour comprendre le mécanisme de base. Si à l'aide d'un client web tel que Firefox, je saisis l'adresse :
@@ -189,7 +187,7 @@ Que se passe -t-il ?
 
 Mon client interprète ma saisie comme l'interrogation par le protocole `http` du serveur situé sur la machine `culturenumerique.univ-lille3.fr` pour lui demander la ressource `/PageExemple`
 
-Comme nous l'avons vu précédemment, l'adresse `IP` de ma machine sera nécessaire pour communiquer avec le serveur. Mais mon navigateur va également réunir un certain nombre d'autres informations disponibles sur ma machine (informations que nous verrons plus loin) et les joindre à la requête envoyée au serveur qui héberge la ressource. 
+Comme nous l'avons vu précédemment, l'adresse `IP` de ma machine sera nécessaire pour communiquer avec le serveur. Mais mon navigateur va également réunir un certain nombre d'autres informations disponibles sur ma machine (informations que nous verrons plus loin) et les joindre à la requête envoyée au serveur qui héberge la ressource.
 Le serveur reçoit cette requête, la comprend car elle est formulée selon les règles définies dans ce fameux protocole `http`, norme utilisée pour que les clients web et les serveurs web puissent communiquer.
 
 
@@ -223,7 +221,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 	~%33.33333%<p>le protocole utilisé</p>
 	~<p>si la ressource est une image ou un texte</p>
 	~<p>l’adresse du client</p>
-	####<p>URL \: Unified Ressource Locator, soit en français \: l'adresse d'une ressource. Elle contient évidemment \:</p><ul><li>le non du serveur sur laquelle elle est stockée</li><li>le nom de la ressource \: le nom du fichier et le 'chemin' (dossier/sousdossier/) pour y accéder</li><li>le protocole utilisé, pour le Web \: http\:// ou https\://</li></ul><p>Elle ne précise pas le type de la ressource et elle est évidemment indépendante de l'adresse des éventuels clients qui feraient une requête...</p> 
+	####<p>URL \: Unified Ressource Locator, soit en français \: l'adresse d'une ressource. Elle contient évidemment \:</p><ul><li>le non du serveur sur laquelle elle est stockée</li><li>le nom de la ressource \: le nom du fichier et le 'chemin' (dossier/sousdossier/) pour y accéder</li><li>le protocole utilisé, pour le Web \: http\:// ou https\://</li></ul><p>Elle ne précise pas le type de la ressource et elle est évidemment indépendante de l'adresse des éventuels clients qui feraient une requête...</p>
 }
 
 
@@ -232,7 +230,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 	~<p>mes communications avec le serveur sont cachées</p>
 	~%50%<p>le contenu de mes communications avec le serveur est crypté</p>
 	~%50%<p>je peux m’assurer que le serveur est celui auquel je veux m’adresser</p>
-	####<p>Le protocole https a 2 fonctions majeures. Il permet \:</p><ul><li>de crypter les échanges (requêtes/réponses) par exemple des mots de passe ou des codes de Carte Banquaire, seul le destinataire pourra les décrypter</li><li>d'authentifier les serveurs, par exemple pour éviter qu'un site pirate cherche à se faire passer pour le site d'une banque</li></ul> 
+	####<p>Le protocole https a 2 fonctions majeures. Il permet \:</p><ul><li>de crypter les échanges (requêtes/réponses) par exemple des mots de passe ou des codes de Carte Banquaire, seul le destinataire pourra les décrypter</li><li>d'authentifier les serveurs, par exemple pour éviter qu'un site pirate cherche à se faire passer pour le site d'une banque</li></ul>
 }
 
 
@@ -250,22 +248,22 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 	~%33.33333%<p>l’adresse IP du client</p>
 	~%33.33333%<p>le nom du navigateur web \: firefox, opera, internet explorer, ….</p>
 	~%33.33333%<p>la page présentée dans le navigateur au moment où la requête est effectuée</p>
-	####<p>l’IP est toujours nécessaire pour indiquer au destinataire à qui il doit répondre. Mais potentiellement les 3 informations peuvent être échangées, et bien d'autres encore !</p> 
+	####<p>l’IP est toujours nécessaire pour indiquer au destinataire à qui il doit répondre. Mais potentiellement les 3 informations peuvent être échangées, et bien d'autres encore !</p>
 }
 
 
 // question: 278  name: Une page web
 ::Une page web::[html]<p>Quand on regarde une page web, toutes les informations viennent du même serveur.</p>{
 	~<p>oui</p><p> </p>
-	=<p>non</p>#<p>Votre réponse est correcte.</p> 
-	####<p>Une page Web est souvent constituée de plusieurs ressources. Chaque ressource fait l'objet d'un échange entre le client et un serveur, pas forcément toujours le même !</p> 
+	=<p>non</p>#<p>Votre réponse est correcte.</p>
+	####<p>Une page Web est souvent constituée de plusieurs ressources. Chaque ressource fait l'objet d'un échange entre le client et un serveur, pas forcément toujours le même !</p>
 }
 
 
 // question: 279  name: Une URL
 ::Une URL::[html]<p>Qu'est-ce qu'une URL ?</p>{
 	~<p>une ressource</p>
-	=<p>l'adresse d'une ressource</p>#<p>Votre réponse est correcte.</p> 
+	=<p>l'adresse d'une ressource</p>#<p>Votre réponse est correcte.</p>
 	~<p>un fichier</p>
 }
 
@@ -275,7 +273,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 # HTML
 
 ## HTML: contenu, structure, liens
-[video]( https://vimeo.com/138623721 ){: .cours_video } 
+[video]( https://vimeo.com/138623721 ){: .cours_video }
 Allons maintenant voir plus en détail le fonctionnement ; le langage `html` a plusieurs caractéristiques très intéressantes. Nous avons vu qu'il permettait d'introduire des hyperliens dans un document, mais il possède d'autres atouts.
 
 
@@ -287,7 +285,7 @@ En français la traduction de `html` est : langage de balisage pour documents hy
 Grâce à la description faite du document et en fonction de ses capacités le navigateur va pouvoir recomposer le document et vous l'afficher. Les pages web que votre navigateur affiche sont des textes avec le plus souvent des images, formant un document complet. En fait ce document est réalisé par l'assemblage de nombreuses ressources. En effet, le langage `html` permet également de spécifier l'insertion d'images (ou d'autres ressources) à différents endroits d'un document. Les images ne sont pas à proprement parler insérées dans le document principal, mais un balisage indique qu'à cet endroit il faudra insérer une image.
 
 ## Rassembler les ressources
-[video]( https://vimeo.com/138623756 ){: .cours_video } 
+[video]( https://vimeo.com/138623756 ){: .cours_video }
 
 Rappelons qu'une page affichée dans votre navigateur est en fait un assemblage de nombreuses ressources. Il faut donc dans un premier temps les rassembler.
 
@@ -303,7 +301,7 @@ Cette remarque prendra tout son sens lorsque nous nous intéresserons aux traces
 
 
 ## Mise en forme
-[video]( https://vimeo.com/138623826 ){: .cours_video } 
+[video]( https://vimeo.com/138623826 ){: .cours_video }
 
 Revenons maintenant à l'affichage de la page dans mon navigateur.
 
@@ -365,7 +363,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 	~%25%l'alignement du paragraphe
 	~%25%les caractères ont été transformés en majuscule
 	~l'orthographe a été modifié
-	####<p>Une feuille de styles ne peut pas changer l'ordre des mots ou l'orthographe, cela reviendrait à changer le contenu, seules les caractéristiques graphiques sont possibles, ici la police, la couleur, l'alignement et la 'casse' des caractères (ils sont affichés en majuscule).</p> 
+	####<p>Une feuille de styles ne peut pas changer l'ordre des mots ou l'orthographe, cela reviendrait à changer le contenu, seules les caractéristiques graphiques sont possibles, ici la police, la couleur, l'alignement et la 'casse' des caractères (ils sont affichés en majuscule).</p>
 }
 
 
@@ -381,7 +379,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 // question: 285  name: Structure et contenu
 ::Structure et contenu::[html]<p>Le langage HTML permet de décrire des documents en indiquant leur structure et leur contenu. Comment la structure est-elle décrite ?</p>{
-	=<p>Par un balisage du texte</p>#Votre réponse est correcte. 
+	=<p>Par un balisage du texte</p>#Votre réponse est correcte.
 	~<p>Par des couleurs et du gras ou la taille des caractères</p>
 }
 
@@ -390,12 +388,12 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ::Une page Web::[html]<p>Pour qu’un client affiche une page Web,...</p>{
 	~<p>une seule requête vers un unique serveur suffit toujours</p>
 	~<p>parfois plusieurs requêtes sont nécessaires mais toujours vers le même serveur</p>
-	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>#Votre réponse est correcte. 
+	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>#Votre réponse est correcte.
 }
 
 
 // question: 287  name: Expressivité de HTML
-::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image. 
+::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image.
 ####[html]En HTML, les images sont représentées dans un format qui leur est propre. Elles sont soit <a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">matricielles</a> ou <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">vectorielles</a>.</p><ul><li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target="_blank">GIF</a>, le <a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank">PNG</a>, le <a href="https://fr.wikipedia.org/wiki/JPEG" target="_blank">JPEG</a>.</li><li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li></ul>}
 ```
 
@@ -403,6 +401,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ::Activité sur les serveurs::[markdown]
 Rendez-vous sur la page :
 [pageServeurs.html](http://culturenumerique.univ-lille3.fr/activitesWeb/html/pageServeurs.html)
+\n
 Lisez, observez et répondez aux questions posées...
 {}
 ```
@@ -411,7 +410,7 @@ Lisez, observez et répondez aux questions posées...
 # Les Cookies
 
 ## Cours
-[video](https://vimeo.com/138623890 ){: .cours_video } 
+[video](https://vimeo.com/138623890 ){: .cours_video }
 ### Les cookies, une technique très utile...
 
 Rappelons la conclusion importante du chapitre précédent.
@@ -463,8 +462,8 @@ Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour
 ::Cookie tiers::[html]<p>Un cookie tiers c'est ...</p>{
 	~<p>est un cookie découpé en 3 parties</p>
 	~<p>un cookie partagé entre trois sites</p>
-	=<p>un cookie déposé à la demande d'un serveur qui n'est pas celui de la page web visitée</p>#<p>Votre réponse est correcte.</p> 
-	####<p>Un cookie tiers est bien un cookie qui est déposé sur notre machine par un serveur qui n'est pas celui de la page Web que l'on visite. C'est une technique très souvent utilisée pour l'affichage de publicité ciblée.</p> 
+	=<p>un cookie déposé à la demande d'un serveur qui n'est pas celui de la page web visitée</p>#<p>Votre réponse est correcte.</p>
+	####<p>Un cookie tiers est bien un cookie qui est déposé sur notre machine par un serveur qui n'est pas celui de la page Web que l'on visite. C'est une technique très souvent utilisée pour l'affichage de publicité ciblée.</p>
 }
 
 
@@ -484,7 +483,7 @@ Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour
 // question: 291  name: Un cookie
 ::Un cookie::[html]<p>Un cookie  est une information<br></br></p>{
 	~<p>stockée sur un serveur web à la demande d'un client</p>
-	=<p>stockée sur un client à la demande d'un serveur</p>#Votre réponse est correcte. 
+	=<p>stockée sur un client à la demande d'un serveur</p>#Votre réponse est correcte.
 }
 
 ```
@@ -529,7 +528,7 @@ Notons qu'une pièce jointe fait partie d'un message, il est envoyé avec le cor
 	~<p>les messages comprenant des pièces jointes sont écrits en HTML</p>
 	~%50%<p>les messages écrits en rose sont en HTML</p>
 	~%50%<p>les messages avec des images dans le texte (pas en pièce jointe) ou dans la signature sont en HTML.</p>
-	####<p>Par défaut, les messages électroniques (email) sont écrits en 'texte simple', donc pas en html. Des pièces jointes peuvent être ajoutés au texte. En revanche, dès que le texte est mis en forme (couleur, style, alignement, etc. ) ou qu'une image est insérée dans le corps du message, cela signifie que le mail est en html avec toutes les conséquences vues dans le cours.</p><p>On peut toujours paramétrer son client mail pour ne pas afficher le contenu HTML, évidemment les mises en page seront perdues, ...</p> 
+	####<p>Par défaut, les messages électroniques (email) sont écrits en 'texte simple', donc pas en html. Des pièces jointes peuvent être ajoutés au texte. En revanche, dès que le texte est mis en forme (couleur, style, alignement, etc. ) ou qu'une image est insérée dans le corps du message, cela signifie que le mail est en html avec toutes les conséquences vues dans le cours.</p><p>On peut toujours paramétrer son client mail pour ne pas afficher le contenu HTML, évidemment les mises en page seront perdues, ...</p>
 }
 
 
@@ -538,8 +537,8 @@ Notons qu'une pièce jointe fait partie d'un message, il est envoyé avec le cor
 	~<p>la lecture d'un message écrit en HTML provoque toujours l'envoi de cookies</p>
 	~<p>la lecture de messages en texte (non HTML) peut provoquer l'envoi de cookies</p>
 	~<p>si la lecture d'un message provoque l'envoi de cookies, c'est uniquement vers l'expéditeur du message</p>
-	=<p>Tout est faux</p>#<p>Votre réponse est correcte.</p> 
-	####<p>Tout est faux \: </p><ul><li>la lecture d'un message écrit en HTML peut provoquer l'envoi de cookies ; </li><li>la lecture de messages en texte ne provoque pas l'envoi de cookies, mais il est parfois difficile de discerner un message en simple texte et un message en HTML ! ; </li><li>un expéditeur de message n'est pas un serveur web (même si l'adresse peut être associée un serveur web) et de plus, si la lecture d'un message provoque l'envoi de cookies, ce cookie peut être un cookie tiers et envoyé à n'importe qui.</li></ul> 
+	=<p>Tout est faux</p>#<p>Votre réponse est correcte.</p>
+	####<p>Tout est faux \: </p><ul><li>la lecture d'un message écrit en HTML peut provoquer l'envoi de cookies ; </li><li>la lecture de messages en texte ne provoque pas l'envoi de cookies, mais il est parfois difficile de discerner un message en simple texte et un message en HTML ! ; </li><li>un expéditeur de message n'est pas un serveur web (même si l'adresse peut être associée un serveur web) et de plus, si la lecture d'un message provoque l'envoi de cookies, ce cookie peut être un cookie tiers et envoyé à n'importe qui.</li></ul>
 }
 ```
 
@@ -550,7 +549,7 @@ Votre âge, votre adresse,   vos achats
 récents, vos goûts musicaux, vos films préférés, vos amis, etc,
 toutes ces données peuvent intéresser de nombreuses sociétés et
 organisations soit pour vous surveiller soit pour vous vendre quelque
-chose. Rassemblées, elles contribuent à définir votre /profil/. 
+chose. Rassemblées, elles contribuent à définir votre /profil/.
 
 ### Profils et cookies
 
@@ -602,7 +601,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
  de l'internaute. En fonction des caractéristiques du profil, les
  annonceurs sont prêts à payer plus ou moins cher cet espace. La
  régie organise donc une vente aux enchères de notre profil. Le plus
- généreux remporte le droit d'afficher sa publicité sur notre écran. 
+ généreux remporte le droit d'afficher sa publicité sur notre écran.
 
  Tout cela se déroule de manière automatique grâce à des algorithmes
  sophistiqués en quelques fractions de seconde. Ainsi la page qui
@@ -619,7 +618,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
  illustré, c'est également un moyen de surveillance pour les états, les
  entreprises. C'est un facteur de dissémination de notre vie privée et
  de collecte d'information à notre sujet, parfois,... souvent, à notre
- insu. 
+ insu.
 
  Vous avez maintenant les clés pour comprendre ces questions. Vous
  pouvez en toute connaissance de cause, et c'est bien le droit de
@@ -649,7 +648,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
  web, c'est sûrement sur le plan juridique que la bataille doit avoir
  lieu. Vous êtes maintenant mieux armés pour rejoindre les différentes
  associations d'utilisateurs, ou pour interpeller les élus, participer
- aux débats publics sur les questions de respect de la vie privée. 
+ aux débats publics sur les questions de respect de la vie privée.
 
 ```compréhension
 
@@ -677,9 +676,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
 // question: 295  name: Pister or not pister ?
 ::Pister or not pister ?::[html]<p>Trouvez-vous normal qu'un réseau social piste ses adhérents sans les prévenir ?</p>{}
 
-```
 
-```activité-avancée
 ::Question de loyauté::[html]<p>Écoutez l'enregistrement "Quand nos smartphones sont espionnés" depuis
 <a href="https://interstices.info/jcms/p_83464/quand-nos-smartphones-sont-espionnes">cette page</a>
 puis répondez à la question qui suit.</p>{}
@@ -718,7 +715,7 @@ puis répondez à la question qui suit.</p>{}
  document qui apparaît dans votre navigateur a évidemment été construit
  juste pour vous, au moment de votre demande.
 
-### Un annuaire de toutes les ressources 
+### Un annuaire de toutes les ressources
  Le web est un immense ensemble de ressources reliées entre
  elles. On pouvait imaginer à ses débuts parcourir cet ensemble et
  trouver son chemin vers la ressource souhaitée. On a donc commencé à
@@ -728,13 +725,13 @@ puis répondez à la question qui suit.</p>{}
  a rapidement été abandonné.  La taille du web a grandi tellement vite
  qu'il est devenu impossible de consigner les adresses de toutes les
  ressources, ou même seulement les plus importantes. C'est alors que
- sont entrés en jeu les moteurs de recherche. 
+ sont entrés en jeu les moteurs de recherche.
 
 ###  Comment fonctionne un moteur de recherche aujourd'hui
  Comment fonctionne un moteur de recherche ? C'est à la fois simple
  dans certains principes généraux et complexe pour de nombreux détails
  importants. C'est à la fois connu dans sa généralité et bien caché
- dans ses détails. Nous nous contentons ici de simples généralités. 
+ dans ses détails. Nous nous contentons ici de simples généralités.
 
  Les moteurs de recherche construisent constamment, car le web évolue
  sans cesse, un index. L'index, c'est comme dans un livre, un moyen
@@ -768,7 +765,7 @@ puis répondez à la question qui suit.</p>{}
  les détails de la construction de l'index mais surtout du programme
  qui permet de l'interroger et de la détermination de l'ordre des URLs
  affichées en retour. Ces détails sont protégés par de nombreux secrets
- industriels. 
+ industriels.
 
 ### Collecte de données d'usage
 
@@ -786,14 +783,14 @@ puis répondez à la question qui suit.</p>{}
  données à propos de vos recherche. La tendance actuelle est de rendre
  les réponses personnalisées, ce qui entraîne une collecte de données
  personnelles rendue possible à la fois par les techniques de cookies
- et l'utilisation de comptes chez ces opérateurs de recherche. 
+ et l'utilisation de comptes chez ces opérateurs de recherche.
 
 ### Modèle économique du moteur de recherche
 
  Pour une institution qui veut être visible sur internet, if faut
  assurer sa présence dans l'index. Mais cela n'est pas suffisant : il
  faut être en haut de la liste et donc apparaître important aux yeux du
- moteur de recherche. 
+ moteur de recherche.
 
  De bonnes pratiques en matière de conception de pages web peuvent y
  contribuer. Puisque toute la chaîne de traitement est automatique, les
@@ -803,7 +800,7 @@ puis répondez à la question qui suit.</p>{}
  que dans le but de se faire comprendre de ses lecteurs
  humains. Parfois des conseillers un peu charlatans tentent de se faire
  passer pour des gourous qui vont propulser des sites en première page
- des résultats de recherche. 
+ des résultats de recherche.
 
  Il faut s'en méfier car pour le moteur de recherche, une des premières
  sources de revenu est de vendre ces places. Cela se traduit
@@ -818,18 +815,18 @@ puis répondez à la question qui suit.</p>{}
 
  Cette petite introduction des moteurs de recherche est volontairement
  très succinte et parcellaire. Des éléments techniques essentiels ne
- sont pas mentionnés comme 
+ sont pas mentionnés comme
  - les pré-traitements des textes et la sélection du vocabulaire, le
-   traitement des majuscules, des accents etc... 
+   traitement des majuscules, des accents etc...
  - le calcul du score de pertinence sur lequel repose cet ordre
    d'affichage des réponses, et bien-sûr
  - l'un des algorithmes les plus connus qu'est PageRank utilisé par
-   Google. 
+   Google.
 
  Nous vous invitons à suivre les cours d'option transversale en
  licence, les options de master sur les humanités numériques, ou les
  prochains cours de culture numérique qui aborderont sans doute ces
- questions beaucoup plus précisément. 
+ questions beaucoup plus précisément.
 
 ```compréhension
 
@@ -863,10 +860,6 @@ puis répondez à la question qui suit.</p>{}
 ::neutralité 3::[html]<p>Le gouvernement français travaille sur un projet de loi "<em>pour une République numérique</em>", consultable sur <a href="https://www.republique-numerique.fr" target="_blank">https://www.republique-numerique.fr</a><br></br>Nous vous invitons à enrichir vos connaissances en consultant ce site en détail.</p><p>Testez vos connaissances en répondant aux 14 questions du quizz (<a href="http://www.gouvernement.fr/quiz-le-projet-de-loi-numerique" target="_blank">http://www.gouvernement.fr/quiz-le-projet-de-loi-numerique</a>) et répondez ci-dessous à la question suivante: <strong>quelles sont les deux questions dont les réponses vous ont le plus surpris ?</strong></p>{}
 
 
-```
-
-
-```activité-avancée
 
 ::Attention, l'abus de Google est dangereux pour la planète !::Attention, vous n'avez droit qu'à une seule tentative. Répondez d'abord dans un document séparé, puis collez les réponses dans la zone prévue une fois votre travail terminé.
 
@@ -874,9 +867,7 @@ puis répondez à la question qui suit.</p>{}
 // question: 305  name: Conséquences d'une recherche
 ::Conséquences d'une recherche::[html]<p>Comparez ces deux usages\:</p><p>1. Dans la barre de recherche (ou barre d'URL) je saisis \:<br></br><em>université de lille 3</em><br></br>et ensuite dans la page de résultats affichée je clique sur le lien vers l'université (lien vers http\://www.univ-lille3.fr)</p><p>2. Dans la barre d'URL (attention de ne pas confondre avec la barre de recherche !), je saisis \:<br></br><em>http\://www.univ-lille3.fr</em>.</p><p><strong>Questions</strong>\: Quelles sont les incidences de ces actions dans chacun des cas. Existe-t-il une différence en terme de consommation énergétique, ou de préservation de la vie privée ?</p>{}
 
-```
 
-```activité-avancée
 ::Des moteurs de recherche moins intrusifs...::Attention, vous n'avez droit qu'à une seule tentative. Répondez d'abord dans un document séparé, puis collez les réponses dans la zone prévue une fois votre travail terminé.
 
 
@@ -888,7 +879,7 @@ puis répondez à la question qui suit.</p>{}
 
 # Autres informations sensibles et bilan
 ## Autres informations
-[video]( https://vimeo.com/138623956 ){: .cours_video } 
+[video]( https://vimeo.com/138623956 ){: .cours_video }
 On voit bien que les techniques qui se sont développées et qui continuent d'évoluer sur le Web sont puissantes et nous rendent beaucoup de services. En revanche, leur utilisation dans certains cas peut poser de graves questions de citoyenneté. Bien souvent, la donnée associée au cookie est un numéro d'identification permettant au serveur de retrouver dans ses bases des données propres à l'utilisateur.
 Dans notre exemple de démarche d'inscription, ce pourrait être, l'étape à laquelle il est arrivé, son nom, ses choix de formation...  
 
@@ -900,18 +891,18 @@ Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour
 Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
 
 ## Bilan: du pour, du contre
-[video]( https://vimeo.com/139925788 ){: .cours_video } 
+[video]( https://vimeo.com/139925788 ){: .cours_video }
 
-Il faut donc avoir conscience que la consultation d'une page laisse des traces sur mon disque dur et sur le réseau. 
+Il faut donc avoir conscience que la consultation d'une page laisse des traces sur mon disque dur et sur le réseau.
 Toutes ces traces peuvent être considérées à divers degrés comme des informations personnelles.
 
 Celles qui résident sur l’ordinateur que vous utilisez, qui peut appartenir à votre employeur, à l’université ou à un cybercafé sont techniquement lisibles par les administrateurs ou les propriétaires de l’ordinateur.
 Les traces qui sont laissées à travers les réseaux, puis sur des serveurs que vous consultez ou des serveurs tiers sont potentiellement exploitables par de nombreux acteurs.
 Il ne s’agit pas de dénoncer ces pratiques comme si elles étaient des malversations.
 
-La mise en cache nous permet de gagner du temps, l’historique est un outil pratique pour rechercher des informations vues récemment, et les cookies sont indispensables au bon fonctionnement d’une très grande quantité de sites. 
+La mise en cache nous permet de gagner du temps, l’historique est un outil pratique pour rechercher des informations vues récemment, et les cookies sont indispensables au bon fonctionnement d’une très grande quantité de sites.
 Par ailleurs, une bonne partie des sites que nous visitons n’existeraient plus si ils n’étaient pas financés par la publicité.
-En revanche, il nous semble important que chacun ait conscience de ce qui se passe. 
+En revanche, il nous semble important que chacun ait conscience de ce qui se passe.
 Aujourd’hui beaucoup croient surfer incognito dès lors qu’on ne voit pas leur écran sans penser qu’un simple clic sur le menu de l’historique peut révéler bien des choses.
 Une infime minorité des internautes a conscience que les pratiques de web-marketing agressives que nous venons de décrire sont abondamment utilisées.
 Une question essentielle dont nous devons tous prendre conscience est celle de la pseudo-gratuité du web :
@@ -924,7 +915,7 @@ Les pratiques de ciblage comportemental vous paraissent-elles légitimes dès lo
 
 On peut tous avoir des avis différents sur ces questions, et chacun devrait être libre de surfer en connaissance de cause.
 Aujourd’hui, pour une bonne part du web, on peut considérer que : “SI C’EST GRATUIT, C’EST QUE LE PRODUIT C’EST VOUS”.
-Vous avez néanmoins la possibilité de choisir les traces que vous êtes prêts à laisser derrière vous. 
+Vous avez néanmoins la possibilité de choisir les traces que vous êtes prêts à laisser derrière vous.
 
 Les activités associées à ce module vont entre autre vous permettre de voir comment paramétrer votre navigateur pour faire vos propres choix.
 
@@ -939,7 +930,7 @@ Les activités associées à ce module vont entre autre vous permettre de voir c
 	~<p>Grâce à l'historique vous pouvez revoir le contenu exact des pages que vous avez visitées récemment</p>
 	~%25%<p>Grâce à l'historique vous pouvez, ré-ouvrir une fenêtre ou un onglet du navigateur récemment fermé</p>
 	~<p>Si une page est dans l'historique, vous pouvez la retrouver dans le cache</p>
-	####<ul><li>Le cache permet d'accélérer l'affichage des pages web  ;</li><li>Si quelqu'un accède à mon ordinateur, il a techniquement la possibilité de connaître les sites web que j'ai récemment visités en regardant le cache et l'historique<br></li><li>Vous pouvez retrouver la liste des sites que vous avez visités récemment dans l'historique. Dans le cache c'est techniquement possible de retrouver de telles informations également.<br></li><li>L'historique permet de ré-ouvrir une fenêtre ou un onglet du navigateur récemment fermé, mais vous ne pouvez pas toujours revoir le contenu exact des pages que vous avez visitées récemment car des données qui s'y trouvent peuvent être calculées en fonction de nombreux paramètres (date, autres visiteurs, etc...) ; <br></li><li>Il est possible qu'une adresse se trouve dans l'historique sans que la page soit stockée dans le cache</li></ul> 
+	####<ul><li>Le cache permet d'accélérer l'affichage des pages web  ;</li><li>Si quelqu'un accède à mon ordinateur, il a techniquement la possibilité de connaître les sites web que j'ai récemment visités en regardant le cache et l'historique<br></li><li>Vous pouvez retrouver la liste des sites que vous avez visités récemment dans l'historique. Dans le cache c'est techniquement possible de retrouver de telles informations également.<br></li><li>L'historique permet de ré-ouvrir une fenêtre ou un onglet du navigateur récemment fermé, mais vous ne pouvez pas toujours revoir le contenu exact des pages que vous avez visitées récemment car des données qui s'y trouvent peuvent être calculées en fonction de nombreux paramètres (date, autres visiteurs, etc...) ; <br></li><li>Il est possible qu'une adresse se trouve dans l'historique sans que la page soit stockée dans le cache</li></ul>
 }
 
 ```
@@ -947,13 +938,10 @@ Les activités associées à ce module vont entre autre vous permettre de voir c
 ```activité-avancée
 ::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Déposez-la dans ce devoir.{}
 
-```
 
-```activité-avancée
 ::L'intermédiation: votre analyse::[html]
 <p>Pour terminer ce cours, nous vous proposons de regarder une vidéo d'une présentation par Stéphane Grumbach qui explique les impacts du web et des données numériques d'un point de vue sociétal.</p>
 <p><a target="_blank" class="moz-txt-link-freetext" href="https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation">https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation</a> (1h11mn).</p>
 <p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>(Attention, vous n'avez droit qu'à une seule tentative. Cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.)</em></p>
 {}
 ```
-

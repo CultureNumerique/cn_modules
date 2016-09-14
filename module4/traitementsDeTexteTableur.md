@@ -303,6 +303,7 @@ Chaque élément de liste est un paragraphe. On active la structure de
 ::Refaire la saisie::
 [markdown]
 Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
+\n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
@@ -433,7 +434,7 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 ```Activité
 Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf).
 
-> Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
+Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
 
 Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
@@ -520,6 +521,7 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 ::exercice de styles::
 [markdown]
 Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
+\n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
 
 ```
@@ -624,11 +626,13 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 ::ajouter des images::
 [markdown]
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
+\n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Utiliser un modèle::
 [markdown]
 Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
+\n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
@@ -944,7 +948,7 @@ modifier les contenus de ces cellules sans changer les formules pour que les ré
 [markdown]
 Dans ce dans le classeur [Premières formules](./media/premieresformules.ods) qui contient deux feuilles de calculs, vous vous entraînerez à écrire des formules avec des additions, des multiplications et la fonction `SOMME()`.  {}
 
-
+::Fonction SI::
 Entraînez-vous maintenant avec la [fonction SI](./media/fonctionSI.ods).  {}
 ```
 
@@ -990,6 +994,7 @@ réaliser une sélection, on doit :
 
 ::Tri et filtres::
 En utilisant le [classeur à propos des associations](./media/association.ods),  vous pourrez trier par ordre alphabétique des noms. Puis trier par ordre croissant des âges et noter que l'ordre alphabétique est perdu ! Puis trier par tranche d'âge en triant chaque tranche d'âge par âge croissant. Des exemples de filtres à réaliser sont :
+\n
 1. Sélectionner les juniors ;
 2. Sélectionner les juniors femmes ;
 3. Sélectionner les membres qui ne sont pas à jour de leur cotisation, ... {}
