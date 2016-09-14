@@ -3,7 +3,43 @@ TITLE:   Savoir-faire autour du traitement de texte et du tableur
 MENUTITLE: Traitement de texte et tableur
 AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
+<!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
+- [Introduction](#introduction)   
+- [Traitements de texte](#traitements-de-texte)   
+   - [Objectifs](#objectifs)   
+   - [Saisie, contenu et structure](#saisie-contenu-et-structure)   
+      - [Saisie du contenu et structure de base](#saisie-du-contenu-et-structure-de-base)   
+      - [Saisie et éléments de structure](#saisie-et-éléments-de-structure)   
+   - [Styles et structure](#styles-et-structure)   
+   - [Point d'étape : respecter des règles de base](#point-détape-respecter-des-règles-de-base)   
+   - [Personnaliser les styles](#personnaliser-les-styles)   
+   - [Numérotation et tables associées](#numérotation-et-tables-associées)   
+   - [Métadonnées](#métadonnées)   
+   - [Video 6 - avec un autre logiciel](#video-6-avec-un-autre-logiciel)   
+   - [Vidéos avancées](#vidéos-avancées)   
+      - [Travail collaboratif](#travail-collaboratif)   
+      - [Comprendre la hiérarchie de styles](#comprendre-la-hiérarchie-de-styles)   
+      - [Mise en forme des listes](#mise-en-forme-des-listes)   
+      - [Autres fonctionnalités](#autres-fonctionnalités)   
+- [Le tableur](#le-tableur)   
+   - [Objectifs](#objectifs-1)   
+   - [Découverte du tableur](#découverte-du-tableur)   
+      - [Fonctionnalités](#fonctionnalités)   
+      - [Organisation générale](#organisation-générale)   
+      - [Dans une cellule](#dans-une-cellule)   
+      - [Mise en forme](#mise-en-forme)   
+   - [Traiter des données](#traiter-des-données)   
+      - [Organiser ses données dans le tableur](#organiser-ses-données-dans-le-tableur)   
+      - [Expliciter les calculs](#expliciter-les-calculs)   
+      - [Autres références](#autres-références)   
+   - [Construire des formules](#construire-des-formules)   
+   - [Opérations sur les tables](#opérations-sur-les-tables)   
+      - [Le tri](#le-tri)   
+      - [La sélection ou filtre.](#la-sélection-ou-filtre)   
+   - [Représentations graphiques](#représentations-graphiques)   
+
+<!-- /MDTOC -->
 # Introduction
 
 Ce cours est dirigé vers les savoir-faire autour de deux types de
@@ -78,10 +114,11 @@ la présentation et d'appliquer des thèmes ou une charte
 graphique. Ceci à condition d'avoir préalablement correctement défini
 la structure de votre document.
 
-## Vidéos 1 : saisie, contenu et structure
+## Saisie, contenu et structure
+
+[la saisie](https://owncloud.univ-lille3.fr/index.php/s/SrVPoMhhheqsf64){: .cours_video}
 
 ### Saisie du contenu et structure de base
-
 
 La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
 paramètres dont la langue, les dispositifs de saisie et les aides à la
@@ -122,9 +159,10 @@ par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
 définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
 
-[Vidéographie : La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
-[La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .cours_video }
+[Vidéographie : La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
+
+[Vidéographie : La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
 ```compréhension
 ::La typographie::
@@ -163,7 +201,8 @@ En français, lorsqu'on utilise le `:`, on doit mettre :
 = une espace insécable avant et une espace normale après,
 ~ pas d'espace avant et une espace insécable après,
 ~ pas d'espace avant et une espace normale après.
-#### comme pour les autres signes de ponctuation double `: ; ! ?` la règle est : **espace insécable avant, espace normale après**.}
+#### comme pour les autres signes de ponctuation double `: ; ! ?` la règle est : **espace insécable avant, espace normale après**.
+}
 
 ::espaces et virgule::
 [markdown]
@@ -181,9 +220,9 @@ En français, lorsqu'on utilise une virgule (`,`), on doit mettre :
 [markdown]
 En français, pour les guillemets, on utilise :
 {
-= les chevrons `<< >>`
-~ les doubles quotes `'' ''`
-~ les simples quotes `' '`
+= les chevrons : «  »
+~ les doubles quotes : ''  ''
+~ les simples quotes : '  '
 }
 ```
 
@@ -272,7 +311,9 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ```
 
-## Vidéos 2 - styles et structure
+## Styles et structure
+
+[Les styles](https://owncloud.univ-lille3.fr/index.php/s/1luQAmTgm3YK4oX) {: .cours_video}
 
 Les logiciels de traitement de texte offrent tous la possibilité
 d'afficher la liste des styles disponibles (avec LibreOffice, on peut
@@ -286,9 +327,10 @@ restreindre cette liste à ceux qui sont appliqués dans le document ou
 portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
-[L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .cours_video }
 
-[Vidéographie : L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
+[Vidéographie : L'utilisation des styles](https://owncloud.univ-lille3.fr/index.php/s/GagbfhWe2hzo5nN){: .lien_video }
+
+[Vidéographie : L'utilisation des listes](https://owncloud.univ-lille3.fr/index.php/s/lr5jK0ryRY9iGZM){: .lien_video }
 
 
 On associe facilement un style à un élément, ici des caractères en les
@@ -401,7 +443,9 @@ Le haut de page reprend le titre déclaré dans les méta-données. Les lignes h
 ```
 
 
-## Vidéos 3 - personnaliser les styles
+## Personnaliser les styles
+
+[La mise en forme](https://owncloud.univ-lille3.fr/index.php/s/WinK5PAnPNvxS5n){: .cours_video}
 
 Commençons par la mise en forme des paragraphes, en modifiant la
 définition du style `corps de texte`, nous définissons une règle
@@ -412,10 +456,7 @@ pour avoir des marges correctement alignées des deux côtés. Dans ce
 cas, une *césure* des mots est souvent appliquée pour éviter les
 espacements trop grands ou trop petits.
 
-[Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .cours_video }
-
 [Vidéographie : Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
-
 
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
@@ -443,7 +484,9 @@ définiriez une mise en forme commune pour tous ces codes.
 
 [Vidéographie : Nouveau style de paragraphe : code](https://owncloud.univ-lille3.fr/index.php/s/H6vMvhj1yldSk4q){: .lien_video }
 
-## Vidéos 4 - numérotation et tables associées
+## Numérotation et tables associées
+
+[Numérotation et tables](https://owncloud.univ-lille3.fr/index.php/s/Qj6vf1vRqNOG95c){: .lien_cours}
 
 La numérotation des chapitres ne doit jamais être faite manuellement
 car elle est réalisée automatiquement par le traitement de textes à
@@ -485,7 +528,8 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ```
 
-## Video 5 - métadonnées
+## Métadonnées
+[Métadonnées](https://owncloud.univ-lille3.fr/index.php/s/UGXAB8kXT5caDFK){: . video_cours}
 
 Les meta-données sont des données à propos du document. Elles sont
 calculées par le logiciel (par exemple le nombre de mots, la taille
@@ -502,6 +546,7 @@ contenu textuel du document.
  .lien_video }
 
 ## Video 6 - avec un autre logiciel
+[Avec d'autres logiciels](https://owncloud.univ-lille3.fr/index.php/s/5bwuYtKOGyTDLx4){: .cours_video}
 
 Nous avons illustré les principes avec LibreOffice Writer et indiqué
 que ceci est général à tout traitement de texte ce que nous illustrons
@@ -516,12 +561,8 @@ le nom des menus ou des outils peut varier d'une version à une autre,
 mais il est important de retenir que les **notions vues dans ce cours
 sont communes à tous les traitements de texte**.
 
-[petite démo Word](https://owncloud.univ-lille3.fr/index.php/s/bxlm4dW5ddCLCmS){: .cours_video }
-
-[Vidéographie : petite démo Word](){: .lien_video }
-
-
 ## Vidéos avancées
+[Pour aller plus loin](https://owncloud.univ-lille3.fr/index.php/s/972vM3GnQJK1cww){: .cours_video}
 
 ### Travail collaboratif
 
@@ -740,7 +781,7 @@ Un second exemple plus complet simule la gestion des cotisations des adhérents 
 
 Faire un traitement de données, c'est
 
-1. Disposer de données en entrée (des valeurs connues, acquises), 
+1. Disposer de données en entrée (des valeurs connues, acquises),
 2. définir des opérations de calcul sur ces données,
 3. produire et afficher les résultats.
 
@@ -972,4 +1013,3 @@ de diagramme est important car il précise ce message :
 - Pour les données dans de nombreuses dimensions : les radars.
 
 Rappelez-vous donc qu'on ne représente pas pour faire beau mais pour informer.
-
