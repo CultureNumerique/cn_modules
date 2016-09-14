@@ -8,16 +8,15 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 - [Introduction](#introduction)   
 - [Traitements de texte](#traitements-de-texte)   
    - [Objectifs](#objectifs)   
-   - [Saisie, contenu et structure](#saisie-contenu-et-structure)   
-      - [Saisie du contenu et structure de base](#saisie-du-contenu-et-structure-de-base)   
-      - [Saisie et éléments de structure](#saisie-et-éléments-de-structure)   
+   - [Saisie du contenu et structure de base](#saisie-du-contenu-et-structure-de-base)   
+   - [Saisie et éléments de structure](#saisie-et-éléments-de-structure)   
    - [Styles et structure](#styles-et-structure)   
    - [Point d'étape : respecter des règles de base](#point-détape-respecter-des-règles-de-base)   
    - [Personnaliser les styles](#personnaliser-les-styles)   
    - [Numérotation et tables associées](#numérotation-et-tables-associées)   
    - [Métadonnées](#métadonnées)   
-   - [Video 6 - avec un autre logiciel](#video-6-avec-un-autre-logiciel)   
-   - [Vidéos avancées](#vidéos-avancées)   
+   - [Avec un autre logiciel](#avec-un-autre-logiciel)   
+   - [Aller plus loin](#aller-plus-loin)   
       - [Travail collaboratif](#travail-collaboratif)   
       - [Comprendre la hiérarchie de styles](#comprendre-la-hiérarchie-de-styles)   
       - [Mise en forme des listes](#mise-en-forme-des-listes)   
@@ -114,11 +113,9 @@ la présentation et d'appliquer des thèmes ou une charte
 graphique. Ceci à condition d'avoir préalablement correctement défini
 la structure de votre document.
 
-## Saisie, contenu et structure
+## Saisie du contenu et structure de base
 
 [la saisie](https://owncloud.univ-lille3.fr/index.php/s/SrVPoMhhheqsf64){: .cours_video}
-
-### Saisie du contenu et structure de base
 
 La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
 paramètres dont la langue, les dispositifs de saisie et les aides à la
@@ -158,9 +155,6 @@ les points de suspension. Jusqu'ici, nous conservons la mise en forme
 par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
 définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
-
-
-[Vidéographie : La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }
 
 [Vidéographie : La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
 
@@ -226,7 +220,7 @@ En français, pour les guillemets, on utilise :
 }
 ```
 
-### Saisie et éléments de structure
+## Saisie et éléments de structure
 
 Pour manipuler correctement votre document comme mettre les retours à
 la ligne au bon endroit ou faire les sauts de page correctement, le
@@ -313,7 +307,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ## Styles et structure
 
-[Les styles](https://owncloud.univ-lille3.fr/index.php/s/1luQAmTgm3YK4oX) {: .cours_video}
+[Les styles](https://owncloud.univ-lille3.fr/index.php/s/1luQAmTgm3YK4oX){: .cours_video}
 
 Les logiciels de traitement de texte offrent tous la possibilité
 d'afficher la liste des styles disponibles (avec LibreOffice, on peut
@@ -362,7 +356,7 @@ bas de page. Le numéro est inséré automatiquement et sera adapté si
 d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
 automatiquement.
 
-[Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){: .lien_video }
+[Vidéographie : Un style adapté et une numérotation automatique des notes bas de page](https://owncloud.univ-lille3.fr/index.php/s/XTMY5MPYZqpp5p2){: .lien_video }
 
 Un autre type de numéros ou textes gérés automatiquement par le
 logiciel sont les renvois aux chapitres, illustrations, figures,
@@ -545,7 +539,7 @@ contenu textuel du document.
 [Vidéographie : Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
  .lien_video }
 
-## Video 6 - avec un autre logiciel
+## Avec un autre logiciel
 [Avec d'autres logiciels](https://owncloud.univ-lille3.fr/index.php/s/5bwuYtKOGyTDLx4){: .cours_video}
 
 Nous avons illustré les principes avec LibreOffice Writer et indiqué
@@ -561,7 +555,7 @@ le nom des menus ou des outils peut varier d'une version à une autre,
 mais il est important de retenir que les **notions vues dans ce cours
 sont communes à tous les traitements de texte**.
 
-## Vidéos avancées
+## Aller plus loin
 [Pour aller plus loin](https://owncloud.univ-lille3.fr/index.php/s/972vM3GnQJK1cww){: .cours_video}
 
 ### Travail collaboratif
@@ -648,7 +642,6 @@ Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les 
 Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
 
 ```
-
 
 # Le tableur
 
