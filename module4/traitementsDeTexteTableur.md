@@ -175,7 +175,9 @@ Lisez
 [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
 courantes.
-\n
+
+::accents capitales::
+[markdown]
 En français, on accentue les capitales (majuscules). {T}
 
 ::Majuscule en début de mot::
