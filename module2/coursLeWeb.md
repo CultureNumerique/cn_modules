@@ -330,7 +330,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 282  name: Comprendre les balises
-::Comprendre les balises::[markdown]Nous vous avons expliqué que les balises `<section>... </section>` servaient à délimiter les parties, les balises `<h1> ... </h1>` délimitent les titres de premier niveaux, à votre avis que signifient les balises `<p> ... </p>` ?{}
+::Comprendre les balises::[markdown]Nous vous avons expliqué que les balises `<`section`>` ... `<`section`/>` servaient à délimiter les parties, les balises `<`h1`>` ...`<`/h1`>` délimitent les titres de premier niveaux, à votre avis que signifient les balises `<`p`>`...`<`/p`>`?{}
 
 
 // question: 280  name: Repérer la feuille de styles
