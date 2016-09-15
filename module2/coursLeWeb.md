@@ -20,7 +20,7 @@ Le succès du web est sans doute lié à la notion de document hypertexte. C'est
 Cela a été rendu possible grâce à l'utilisation du fameux langage HTML - Hyper Text Markup Language - inventé par Tim Berners Lee en 1991.
 L'ensemble des documents ainsi que les liens qui les relient forment alors un réseau de documents. Cette multitude de liens a fait naître l'image bien connue de la toile d'araignée. En anglais : le web
 
-```compréhension// question: 159977  name: La toile et ses fils
+```compréhension
 ::La toile et ses fils::[html]<p>Dans l'image du web représentée par une toile d'araignée, les fils sont \:</p>{
 	=<p>des liens</p>
 	~<p><strong id\="docs-internal-guid-566566e9-d108-1f1b-8d6f-529e33dacd53" style\="font-weight\: normal;"><span style\="font-size\: 14.666666666666666px; font-family\: Arial; color\: \#434343; background-color\: transparent; font-weight\: 400; font-style\: normal; font-variant\: normal; text-decoration\: none; vertical-align\: baseline; white-space\: pre-wrap;">des câbles du réseau internet</span></strong></p>
@@ -306,27 +306,17 @@ Cette remarque prendra tout son sens lorsque nous nous intéresserons aux traces
 Revenons maintenant à l'affichage de la page dans mon navigateur.
 
 Le document que le client/navigateur reçoit contient du texte et des images (en lien) et il est structuré .
-
 Mais a priori aucune indication n'est donnée pour définir comment les éléments doivent être affichés.
-
 Un titre doit-il être en rouge, en noir, en gras, de quelle taille, aligné à gauche ou centré ?
-
 Or, tous les fichiers étant décrit dans une norme commune , le langage HTML , tous les navigateurs proposent une mise en forme par défaut de chacun des éléments possibles d'un document.
-
 Cette mise en forme est généralement basique et pas très esthétique mais elle permet de proposer sur n'importe quelle machine un affichage du contenu.
-
 Lorsque nous surfons tous les jours, nous voyons bien qu'au contraire, les sites proposent des affichages très graphiques beaucoup plus sophistiqués que l'affichage par défaut.
-
 C'est l'utilisation de feuilles de styles qui sont associées au document qui permet cela. Une feuille de styles définit les règles de présentation d'un document.
-
 Ces feuilles de styles, qui constituent à nouveau une ressource avec leur propre url redéfinissent l'affichage des différents éléments de contenu en utilisant par exemple une charte graphique aux couleurs de l'organisation responsable du site.
-
 Concrètement, dans le fichier du document principal, un lien particulier vers une ressource/feuille de style, déclenche pour le navigateur une requête pour obtenir cette feuille de style qui sera utilisée à la place des styles par défaut.
 
 Le triptyque structure/contenu/présentation est fondamental pour la compréhension de ce qu'est un document numérique.
-
 Il est réalisé par le couple HTML/feuilles de style sur le Web.
-
 Mais une bonne utilisation du traitement de texte passe également par la maîtrise de cette décomposition en 3 parties.
 
 ```compréhension
@@ -654,7 +644,7 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
 
 // question: 294  name: Les profils
 ::Les profils::[html]<p>Vrai ou faux ? Pour chaque affirmation ci-dessous cochez la case correspondante pour indiquer qu'elle est vraie.<br></br></p>{
-	=<p>une partie de l'économie du web repose sur la collecte de données personnelles</p>
+	~%100%<p>une partie de l'économie du web repose sur la collecte de données personnelles</p>
 	~<p>quand un service sur le web est gratuit alors il se finance par la collecte de données personnelles</p>
 	~<p>Les cookies et cookies tiers sont les seuls outils de la création de profils</p>
 }
@@ -835,11 +825,14 @@ puis répondez à la question qui suit.</p>{}
 
 
 // question: 300  name: Recherche avancée 1
-::Recherche avancée 1::[html]<p>Faites une recherche Google avec les deux mots \:</p><p><em>université Lille</em></p><p>Notez le nombre de pages trouvées.</p><p>Faites maintenant une recherche avec \:</p><p><em>"université Lille" <br></br></em></p><p>(en incluant les guillemets)</p><p>Avez vous autant de résultats ? Décrivez-les.</p>{}
+::Recherche avancée 1::[markdown]Faites une recherche Google avec les deux mots `université Lille`. Notez le nombre de pages trouvées.
+\n
+Faites maintenant une recherche avec `"université Lille"` (en incluant les guillemets). Avez vous autant de résultats ? Décrivez-les.
+{}
 
 
 // question: 301  name: Recherche avancée 2
-::Recherche avancée 2::[html]<p>Faites une recherche avec \:</p><p><em>"université lille" -3 -2 -1. </em></p><p>Que se passe-t-il ?</p>{}
+::Recherche avancée 2::[markdown]Faites une recherche avec `"université lille" -3 -2 -1`. Que se passe-t-il ?{}
 
 ```
 
