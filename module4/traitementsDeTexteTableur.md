@@ -716,7 +716,7 @@ le tableur, on définit
 et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
 élémentaire.
 
-[Vidéographie : Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1){: .lien_video }
+[Vidéographie : Petit tour d'horizon](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
 
 ### Dans une cellule
 
@@ -728,7 +728,7 @@ numériques. Par exemple une même valeur numérique peut être
 interprétée comme un simple nombre, un pourcentage, une somme d'argent
 ou même une date.
 
-[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
+[Vidéographie : Valeur et apparence1](https://owncloud.univ-lille3.fr/index.php/s/bzYBOBNugvq3GEX){: .lien_video }
 
 
 La valeur affichée dans la cellule peut également être le résultat
@@ -743,7 +743,7 @@ contient bien plus d'informations : une valeur, un format, et
 éventuellement une formule et même un commentaire.
 
 
-[Vidéographie : Valeur et apparence](https://owncloud.univ-lille3.fr/index.php/s/9i8ePDHkTGXLbTx){: .lien_video }
+[Vidéographie : Valeur et apparence2](https://owncloud.univ-lille3.fr/index.php/s/HiN3wyQzb5Hlgr1)){: .lien_video }
 
 ### Mise en forme
 
@@ -902,7 +902,7 @@ formules. Voici des exmples de formule :
 	= D8 * $G$2
     = MOIS(AUJOURDHUI())
 
-[Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
+[Vidéographie : Les expressions](https://owncloud.univ-lille3.fr/index.php/s/wRF50DNBzJ3d8GD){: .lien_video }
 
 Certaines fonctions, comme les fonctions `SOMME`, `MOYENNE`, `MAX` et
 `NB`, portent sur des ensembles de valeurs pour vous permettre de
@@ -922,7 +922,7 @@ puis étendre cette formule à tous les élèves. Si un élève a une
 moyenne inférieure à 10, le message "Reçu" sera affiché pour cet élève
 et sinon sera affiché le message "Recalé".
 
-[Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){:.lien_video }
+[Vidéographie : Le si](https://owncloud.univ-lille3.fr/index.php/s/hTSA04wTrwgCNhd){: .lien_video }
 
 Les *fonctions peuvent être composées* comme dans l'exemple `=
 MOIS(AUJOURDHUI())` où on appelle la fonction `AUJOURDHUI()` qui
@@ -937,7 +937,7 @@ Ceci est illustré sur l'exemple. **Notez bien** aussi sur la video
 l'intérêt d'avoir des cellules contenant les seuils car il suffit de
 modifier les contenus de ces cellules sans changer les formules pour que les résultats s'adaptent automatiquement à un changement des seuils.
 
-[Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
+[Vidéographie : Le si imbriqué](https://owncloud.univ-lille3.fr/index.php/s/Zn49n6f0dOQ47BN){: .lien_video }
 
 ```Activité avancée
 
