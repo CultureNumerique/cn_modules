@@ -115,7 +115,7 @@ la structure de votre document.
 
 ## Saisie du contenu et structure de base
 
-[la saisie](https://owncloud.univ-lille3.fr/index.php/s/SrVPoMhhheqsf64){: .cours_video}
+[la saisie](https://player.vimeo.com/video/182868003){: .cours_video}
 
 La saisie est une fonctionnalité fondamentale. Elle dépend de nombreux
 paramètres dont la langue, les dispositifs de saisie et les aides à la
@@ -157,6 +157,8 @@ définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
 
 [Vidéographie : La saisie - un copier-coller](https://owncloud.univ-lille3.fr/index.php/s/fXsFycEyKbTW9hx){: .lien_video }
+
+[Vidéographie : L'aide à la saisie](https://owncloud.univ-lille3.fr/index.php/s/){: .lien_video }
 
 ```compréhension
 ::La typographie::
@@ -309,7 +311,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ## Styles et structure
 
-[Les styles](https://owncloud.univ-lille3.fr/index.php/s/1luQAmTgm3YK4oX){: .cours_video}
+[Les styles](https://player.vimeo.com/video/182868052){: .cours_video}
 
 Les logiciels de traitement de texte offrent tous la possibilité
 d'afficher la liste des styles disponibles (avec LibreOffice, on peut
@@ -441,7 +443,7 @@ Le haut de page reprend le titre déclaré dans les méta-données. Les lignes h
 
 ## Personnaliser les styles
 
-[La mise en forme](https://owncloud.univ-lille3.fr/index.php/s/WinK5PAnPNvxS5n){: .cours_video}
+[La mise en forme](https://player.vimeo.com/video/182868165){: .cours_video}
 
 Commençons par la mise en forme des paragraphes, en modifiant la
 définition du style `corps de texte`, nous définissons une règle
@@ -452,7 +454,7 @@ pour avoir des marges correctement alignées des deux côtés. Dans ce
 cas, une *césure* des mots est souvent appliquée pour éviter les
 espacements trop grands ou trop petits.
 
-[Vidéographie : Une première règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
+[Vidéographie : Adapter les styles de paragraphes](https://owncloud.univ-lille3.fr/index.php/s/B4odOArZ2nzOPjU){: .lien_video }
 
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
@@ -460,7 +462,7 @@ fortes. Si vous n'êtes pas satisfait de la règle choisie, vous la
 modifierez pour changer l'apparence dans tout le document en une
 seule opération.
 
-[Vidéographie : Une autre règle de mise en forme](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
+[Vidéographie : Adapter les styles de caractères](https://owncloud.univ-lille3.fr/index.php/s/uwVtUNEDijTHcHE){: .lien_video }
 
 Parfois, certains éléments de structure sont propres à un certain type
 de document. Par exemple ici, nous avons des noms de
@@ -482,7 +484,7 @@ définiriez une mise en forme commune pour tous ces codes.
 
 ## Numérotation et tables associées
 
-[Numérotation et tables](https://owncloud.univ-lille3.fr/index.php/s/Qj6vf1vRqNOG95c){: .lien_cours}
+[Numérotation et tables](https://player.vimeo.com/video/182868191){: .cours_video}
 
 La numérotation des chapitres ne doit jamais être faite manuellement
 car elle est réalisée automatiquement par le traitement de textes à
@@ -492,8 +494,6 @@ titre 1, titre 2, etc... Ensuite on choisit le style de numérotation
 et si on doit faire apparaître la hiérarchie dans le numéro en
 affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
 pour comprendre les impacts sur la présentation de ces numéros.
-
-[Numérotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .cours_video }
 
 [Vidéographie : Numérotation automatique des chapitres](https://owncloud.univ-lille3.fr/index.php/s/orItAwe4RtExNOe){: .lien_video }
 
@@ -525,7 +525,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 ```
 
 ## Métadonnées
-[Métadonnées](https://owncloud.univ-lille3.fr/index.php/s/UGXAB8kXT5caDFK){: . video_cours}
+[Métadonnées](https://player.vimeo.com/video/182868218){: .cours_video}
 
 Les meta-données sont des données à propos du document. Elles sont
 calculées par le logiciel (par exemple le nombre de mots, la taille
@@ -535,14 +535,11 @@ corpus de documents. On les retrouve ici dans le menu des
 propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
 
-[Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
- .cours_video }
-
 [Vidéographie : Utilisation des méta-données](https://owncloud.univ-lille3.fr/index.php/s/aNCsseInHQ7Gf2D){:
  .lien_video }
 
 ## Avec un autre logiciel
-[Avec d'autres logiciels](https://owncloud.univ-lille3.fr/index.php/s/5bwuYtKOGyTDLx4){: .cours_video}
+[Avec d'autres logiciels](https://player.vimeo.com/video/182868251){: .cours_video}
 
 Nous avons illustré les principes avec LibreOffice Writer et indiqué
 que ceci est général à tout traitement de texte ce que nous illustrons
@@ -558,7 +555,7 @@ mais il est important de retenir que les **notions vues dans ce cours
 sont communes à tous les traitements de texte**.
 
 ## Aller plus loin
-[Pour aller plus loin](https://owncloud.univ-lille3.fr/index.php/s/972vM3GnQJK1cww){: .cours_video}
+[Pour aller plus loin](https://player.vimeo.com/video/182868392){: .cours_video}
 
 ### Travail collaboratif
 
