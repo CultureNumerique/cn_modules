@@ -670,6 +670,8 @@ bien établis.
 
 ## Découverte du tableur
 
+[Le tableur](https://vimeo.com/183456909){: .cours_video}
+
 ### Fonctionnalités
 
 Le tableur est un **outil pour représenter, traiter et interroger des
