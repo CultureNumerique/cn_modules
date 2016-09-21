@@ -173,9 +173,9 @@ quelques logiciels professionnels des règles de typographie sont
 implantées, des algorithmes sophistiqués permettent de sélectionner la
 meilleure organisation des pages pour l'homogénéité, la lisibilité et
 la cohérence.  Mais certaines règles comme l'accent sur les
-majuscules, la forme des abréviations ne reposent que sur vous.  \n
-Lisez
-[les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
+majuscules, la forme des abréviations ne reposent que sur vous.  
+\n
+Lisez [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
 courantes.
 
