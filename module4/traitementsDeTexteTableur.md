@@ -41,6 +41,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 <!-- /MDTOC -->
 # Introduction
 
+## Présentation du cours  
 Ce cours est dirigé vers les savoir-faire autour de deux types de
 logiciels, le traitement de texte et le tableur. Ces savoir-faire sont
 basés sur les modules liés à la gestion de données et la gestion des
@@ -128,7 +129,7 @@ se développent. L'*aide à la saisie*, fréquente sur des objets
 portables, peut prédire la complétion d'un mot, souligner un mot mal
 orthographié, suggérer un mot, ...
 
-[Vidéographie : La saisie](https://vimeo.com/183312871){: .lien_video }
+[Vidéographie : La saisie](https://player.vimeo.com/video/183312871){: .lien_video }
 
 La structure de base est définie avec les niveaux de titre : de niveau
 1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
@@ -156,12 +157,12 @@ par défaut, c'est-à-dire qu'aucune règle de mise en forme n'a été
 définie donc les règles par défaut (choisies par le concepteur du
 logiciel) s'appliquent.
 
-[Vidéographie : La saisie - un copier-coller](https://vimeo.com/183312874){: .lien_video }
+[Vidéographie : La saisie - un copier-coller](https://player.vimeo.com/video/183312874){: .lien_video }
 
-[Vidéographie : L'aide à la saisie](https://vimeo.com/183312878){: .lien_video }
+[Vidéographie : L'aide à la saisie](https://player.vimeo.com/video/183312878){: .lien_video }
 
 ```compréhension
-::La typographie::
+::Typographie::
 [markdown]
 Savoir composer un document selon les règles typographiques n'est pas
 simple. Pour vous en convaincre, vous pouvez vous rendre en
@@ -178,7 +179,7 @@ Lisez
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
 courantes.
 
-::accents capitales::
+::Accents capitales::
 [markdown]
 En français, on accentue les capitales (majuscules). {T}
 
@@ -186,11 +187,11 @@ En français, on accentue les capitales (majuscules). {T}
 [markdown]
 En français, dans un titre de premier niveau on met une majuscule à chaque début de mot. {F}
 
-::dates::
+::Dates::
 [markdown]
 En français, quand on écrit une date, on met une majuscule aux jours et aux mois. {F}
 
-::espaces et deux-points::
+::Espaces et deux-points::
 [markdown]
 En français, lorsqu'on utilise le `:`, on doit mettre :
 {
@@ -202,7 +203,7 @@ En français, lorsqu'on utilise le `:`, on doit mettre :
 #### comme pour les autres signes de ponctuation double `: ; ! ?` la règle est : **espace insécable avant, espace normale après**.
 }
 
-::espaces et virgule::
+::Espaces et virgule::
 [markdown]
 En français, lorsqu'on utilise une virgule (`,`), on doit mettre :
 {
@@ -214,7 +215,7 @@ En français, lorsqu'on utilise une virgule (`,`), on doit mettre :
 #### les signes de ponctuation simple `, .` sont collés au mot qui précède et sont suivis d'une espace normale.
 }
 
-::guillemets::
+::Guillemets::
 [markdown]
 En français, pour les guillemets, on utilise :
 {
@@ -298,13 +299,13 @@ Chaque élément de liste est un paragraphe. On active la structure de
  début de paragraphe. Deux appuis de `retour arrière` quittent la
  structure de liste.
 
-[Vidéographie : Déclarer une structure de liste](https://vimeo.com/183317268){: .lien_video }
+[Vidéographie : Déclarer une structure de liste](https://player.vimeo.com/video/183317268){: .lien_video }
 
 ```Activité
 
 ::Refaire la saisie::
 [markdown]
-Reproduire l'exemple de cette vidéo [La saisie](https://owncloud.univ-lille3.fr/index.php/s/mI7DtCQqsFWhLqn){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
+Reproduire l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
@@ -327,7 +328,7 @@ portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
 
-[Vidéographie : L'utilisation des styles](https://vimeo.com/183317278){: .lien_video }
+[Vidéographie : L'utilisation des styles](https://player.vimeo.com/video/183317278){: .lien_video }
 
 
 On associe facilement un style à un élément, ici des caractères en les
@@ -342,7 +343,7 @@ présentation sur un autre support comme un objet portable, ou
 simplement pouvoir modifier facilement dans tout le texte la mise en
 forme choisie pour les éléments déclarés en style accentuation forte.
 
-[Vidéographie : Les style caractères. Accentuation ou Gras ?](https://vimeo.com/183312876){: .lien_video }
+[Vidéographie : Les style caractères. Accentuation ou Gras ?](https://player.vimeo.com/video/183312876){: .lien_video }
 
 Comme nous l'avons dit ci-dessus, l'affichage des caractères
 invisibles permet de savoir exactement ce qui a été saisi. On voit les
@@ -351,7 +352,7 @@ ces symboles et les supprimer. On voit également la représentation des
 fins de ligne qui ne sont pas des fins de paragraphes dans cette
 partie de texte.
 
-[Vidéographie : Affichage des caractères spéciaux dont le retour à la ligne](https://vimeo.com/183313474){: .lien_video }
+[Vidéographie : Affichage des caractères spéciaux dont le retour à la ligne](https://player.vimeo.com/video/183313474){: .lien_video }
 
 Le logiciel réalise souvent des opérations pour vous aider à bien
 écrire votre document, comme par exemple, l'insertion d'une note de
@@ -359,7 +360,7 @@ bas de page. Le numéro est inséré automatiquement et sera adapté si
 d'autres notes sont ajoutées. Le style choisi pour la note sera adapté
 automatiquement.
 
-[Vidéographie : Un style adapté et une numérotation automatique des notes bas de page](https://vimeo.com/183312861){: .lien_video }
+[Vidéographie : Un style adapté et une numérotation automatique des notes bas de page](https://player.vimeo.com/video/183312861){: .lien_video }
 
 Un autre type de numéros ou textes gérés automatiquement par le
 logiciel sont les renvois aux chapitres, illustrations, figures,
@@ -372,17 +373,17 @@ description de documents. Par exemple, en HTML, on utilise des
 (hyper-)liens qui peuvent être internes au document (renvoi vers une
 partie du document) ou externes (renvoi vers un autre document).
 
-[Vidéographie : Insérer des renvois aux textes et illustrations](https://vimeo.com/183312867){: .lien_video }
+[Vidéographie : Insérer des renvois aux textes et illustrations](https://player.vimeo.com/video/183312867){: .lien_video }
 
 Terminons par un examen de la structure arborescente de ce
 document. La manipulation de cette structure permet de déplacer des
 sections entières ou de réorganiser le plan.
 
-[Vidéographie : Réorganiser le plan](https://vimeo.com/183312870){: .lien_video }
+[Vidéographie : Réorganiser le plan](https://player.vimeo.com/video/183312870){: .lien_video }
 
 ```Activité
 
-::copier-coller::
+::Copier-coller::
 [markdown]
 Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice.
 {
@@ -390,7 +391,7 @@ Récupérer un texte d'une source par un copier/coller est une opération que ch
 ~%33%Vous avez importé la structure
 ~%34%Vous avez importé des mises en forme au cas par cas }
 
-::collage spécial::
+::Collage spécial::
 [markdown]
 En continuant l'activité précédente, vous pouvez maintenant appliquer un `collage spécial, texte non formaté` (dans le menu `Édition`).  
 { ~%100%Vous avez importé le contenu
@@ -451,7 +452,7 @@ pour avoir des marges correctement alignées des deux côtés. Dans ce
 cas, une *césure* des mots est souvent appliquée pour éviter les
 espacements trop grands ou trop petits.
 
-[Vidéographie : Adapter les styles de paragraphes](https://vimeo.com/183313475){: .lien_video }
+[Vidéographie : Adapter les styles de paragraphes](https://player.vimeo.com/video/183313475){: .lien_video }
 
 On peut également choisir des règles de mise en forme pour les
 caractères comme pour les accentuations ou les accentuations
@@ -459,7 +460,7 @@ fortes. Si vous n'êtes pas satisfait de la règle choisie, vous la
 modifierez pour changer l'apparence dans tout le document en une
 seule opération.
 
-[Vidéographie : Adapter les styles de caractères](https://vimeo.com/183317275){: .lien_video }
+[Vidéographie : Adapter les styles de caractères](https://player.vimeo.com/video/183317275){: .lien_video }
 
 Parfois, certains éléments de structure sont propres à un certain type
 de document. Par exemple ici, nous avons des noms de
@@ -468,7 +469,7 @@ sémantique, du sens au document qui pourra être exploité par d'autres
 logiciels, mais facilitera également l'uniformisation de la
 présentation de tous les noms de logiciel.
 
-[Vidéographie : Nouveau style de caractère - logiciel](https://vimeo.com/183312863){: .lien_video }
+[Vidéographie : Nouveau style de caractère - logiciel](https://player.vimeo.com/video/183312863){: .lien_video }
 
 Bien sûr, la définition de nouvelles structures, donc de nouveaux
 styles, s'applique sur les caractères comme sur les paragraphes. Ici, notre
@@ -477,7 +478,7 @@ peut être déclaré et mis en forme spécifiquement. Mais si votre
 document contenait d'autres codes, vous associeriez une structure et
 définiriez une mise en forme commune pour tous ces codes.
 
-[Vidéographie : Nouveau style de paragraphe - code](https://vimeo.com/183317279){: .lien_video }
+[Vidéographie : Nouveau style de paragraphe - code](https://player.vimeo.com/video/183317279){: .lien_video }
 
 ## Numérotation et tables associées
 
@@ -492,7 +493,7 @@ et si on doit faire apparaître la hiérarchie dans le numéro en
 affichant les sous-niveaux. Amusez-vous à modifier tous les paramètres
 pour comprendre les impacts sur la présentation de ces numéros.
 
-[Vidéographie : Numérotation automatique des chapitres](https://vimeo.com/183312864){: .lien_video }
+[Vidéographie : Numérotation automatique des chapitres](https://player.vimeo.com/video/183312864){: .lien_video }
 
 La structure d'un document, c'est aussi une structure en différentes
 pages : une page de garde, des pages d'index ou de table des matières
@@ -501,7 +502,7 @@ structure. On peut la déclarer en ajoutant des sauts de page manuels
 et spéciaux, puis définir quel sera le style de la page suivante et le
 début de sa numérotation et définir des mises en forme associées à ces pages.
 
-[Vidéographie : Structuration en liste de pages de natures différentes](https://vimeo.com/183312879){: .lien_video }
+[Vidéographie : Structuration en liste de pages de natures différentes](https://player.vimeo.com/video/183312879){: .lien_video }
 
 Une fois la structure du document bien spécifiée, l'insertion d'une
 table des matières, d'une table des illustrations,... est très simple,
@@ -510,11 +511,11 @@ appliquée alors les numéros seront repris. Des efforts de mise en
 forme peuvent être nécessaires selon les logiciels comme par exemple
 ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
-[Vidéographie : Génération d'une table des matières](https://vimeo.com/183312877){: .lien_video }
+[Vidéographie : Génération d'une table des matières](https://player.vimeo.com/video/183312877){: .lien_video }
 
 ```activité
 
-::exercice de styles::
+::Exercice de styles::
 [markdown]
 Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
@@ -533,8 +534,7 @@ corpus de documents. On les retrouve ici dans le menu des
 propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
 
-[Vidéographie : Utilisation des méta-données](https://vimeo.com/183317406){:
- .lien_video }
+[Vidéographie : Utilisation des méta-données](https://player.vimeo.com/video/183317406){: .lien_video }
 
 ## Avec un autre logiciel
 [Avec d'autres logiciels](https://vimeo.com/182868251){: .cours_video}
@@ -565,11 +565,11 @@ sont offertes. En situation de travail collaboratif, les modifications
 auront pu être apportées par différents auteurs et le coordinateur va
 donc valider ou rejeter les modifications.
 
-[Vidéographie : Commentaires et suivi des modifications](https://vimeo.com/183312857){:.lien_video }
+[Vidéographie : Commentaires et suivi des modifications](https://player.vimeo.com/video/183312857){: .lien_video }
 
 Une autre fonctionnalité de suivi des versions est illustrée ici.
 
-[Vidéographie : Suivi des versions](https://vimeo.com/183317276){: .lien_video }
+[Vidéographie : Suivi des versions](https://player.vimeo.com/video/183317276){: .lien_video }
 
 ### Comprendre la hiérarchie de styles
 
@@ -586,7 +586,7 @@ c'est-à-dire au sommet de la hiérarchie affectera tous les styles de
 document (sauf bien sûr si cette propriété a été redéfinie pour un style
 donné).
 
-[Vidéographie : La hiérarchie de styles](https://vimeo.com/183313476){: .lien_video }
+[Vidéographie : La hiérarchie de styles](https://player.vimeo.com/video/183313476){: .lien_video }
 
 ### Mise en forme des listes
 
@@ -596,7 +596,7 @@ demi-cadratins (Code unicode 2013,
 peut définir une liste à la française respectant cette convention
 typographique mais c'est un peu technique.
 
-[Vidéographie : Listes à la française](https://vimeo.com/183312880){: .lien_video }
+[Vidéographie : Listes à la française](https://player.vimeo.com/video/183312880){: .lien_video }
 
 ### Autres fonctionnalités
 
@@ -614,11 +614,11 @@ amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
 Voici quelques activités que nous vous proposons pour découvrir d'autres fonctionnalités plus avancées. Cherchez par vous-même et échangez sur le forum pour vous entraider.
 
-[Vidéographie : Utiliser un modèle](https://vimeo.com/183313473){: .lien_video }
+[Vidéographie : Utiliser un modèle](https://player.vimeo.com/video/183313473){: .lien_video }
 
 ```Activité
 
-::ajouter des images::
+::Ajouter des images::
 [markdown]
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
 \n
@@ -634,11 +634,11 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ```Activité avancée
 
-::document maître::
+::Document maître::
 [markdown]
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
 
-::commentaires::
+::Commentaires::
 [markdown]
 Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
 
@@ -716,7 +716,7 @@ le tableur, on définit
 et d'une colonne est une *cellule* qui va pouvoir contenir une donnée
 élémentaire.
 
-[Vidéographie : Petit tour d'horizon](https://vimeo.com/183320082){: .lien_video }
+[Vidéographie : Petit tour d'horizon](https://player.vimeo.com/video/183320082){: .lien_video }
 
 ### Dans une cellule
 
@@ -728,7 +728,7 @@ numériques. Par exemple une même valeur numérique peut être
 interprétée comme un simple nombre, un pourcentage, une somme d'argent
 ou même une date.
 
-[Vidéographie : Valeur et apparence1](https://vimeo.com/183320080){: .lien_video }
+[Vidéographie : Valeur et apparence1](https://player.vimeo.com/video/183320080){: .lien_video }
 
 La valeur affichée dans la cellule peut également être le résultat
 d'un calcul exprimé par une *formule*. Une formule commence par le
@@ -741,7 +741,7 @@ En résumé, dans une cellule s'affiche une valeur, mais la cellule
 contient bien plus d'informations : une valeur, un format, et
 éventuellement une formule et même un commentaire.
 
-[Vidéographie : Valeur et apparence2](https://vimeo.com/183320079){: .lien_video }
+[Vidéographie : Valeur et apparence2](https://player.vimeo.com/video/183320079){: .lien_video }
 
 ### Mise en forme
 
@@ -754,9 +754,9 @@ blanches ou avec un fond coloré pour faire des bordures rompt la
 logique de liste. Les traitements de filtre, tri, etc... deviendraient
 alors impossibles.
 
-[Vidéographie : Styles](https://vimeo.com/183320077){: .lien_video }
+[Vidéographie : Styles](https://player.vimeo.com/video/183320077){: .lien_video }
 
-[Vidéographie : Logique de table](https://vimeo.com/183320076){: .lien_video }
+[Vidéographie : Logique de table](https://player.vimeo.com/video/183320076){: .lien_video }
 
 ```Activité avancée
 
@@ -869,9 +869,9 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
   formule `=D8*tauxchange`, puis copier cette formule dans la plage
   `E8:E108`.
 
-[Vidéographie : Autres références](https://vimeo.com/183320068){: .lien_video }
+[Vidéographie : Autres références](https://player.vimeo.com/video/183320068){: .lien_video }
 
-[Vidéographie : Nommer des cellules](https://vimeo.com/183320074){: .lien_video }
+[Vidéographie : Nommer des cellules](https://player.vimeo.com/video/183320074){: .lien_video }
 
 ```Activité avancée
 
@@ -900,7 +900,7 @@ formules. Voici des exmples de formule :
 	= D8 * $G$2
     = MOIS(AUJOURDHUI())
 
-[Vidéographie : Les expressions](https://vimeo.com/183320072){: .lien_video }
+[Vidéographie : Les expressions](https://player.vimeo.com/video/183320072){: .lien_video }
 
 Certaines fonctions, comme les fonctions `SOMME`, `MOYENNE`, `MAX` et
 `NB`, portent sur des ensembles de valeurs pour vous permettre de
@@ -920,7 +920,7 @@ puis étendre cette formule à tous les élèves. Si un élève a une
 moyenne inférieure à 10, le message "Reçu" sera affiché pour cet élève
 et sinon sera affiché le message "Recalé".
 
-[Vidéographie : Le si](https://vimeo.com/183320069){: .lien_video }
+[Vidéographie : Le si](https://player.vimeo.com/video/183320069){: .lien_video }
 
 Les *fonctions peuvent être composées* comme dans l'exemple `=
 MOIS(AUJOURDHUI())` où on appelle la fonction `AUJOURDHUI()` qui
@@ -935,7 +935,7 @@ Ceci est illustré sur l'exemple. **Notez bien** aussi sur la video
 l'intérêt d'avoir des cellules contenant les seuils car il suffit de
 modifier les contenus de ces cellules sans changer les formules pour que les résultats s'adaptent automatiquement à un changement des seuils.
 
-[Vidéographie : Le si imbriqué](https://vimeo.com/183320078){: .lien_video }
+[Vidéographie : Le si imbriqué](https://player.vimeo.com/video/183320078){: .lien_video }
 
 ```Activité avancée
 
@@ -970,7 +970,7 @@ travailler) ou en la nommant
 lesquelles vous voulez trier et en précisant si vous souhaitez un
 ordre croissant ou décroissant.
 
-[Vidéographie : Le tri](https://vimeo.com/183320075){: .lien_video }
+[Vidéographie : Le tri](https://player.vimeo.com/video/183320075){: .lien_video }
 
 ### La sélection ou filtre.
 
@@ -983,7 +983,7 @@ réaliser une sélection, on doit :
 - *désigner la table* comme pour le tri
 - *expliciter les critères de filtre*.
 
-[Vidéographie : Le filtre](https://vimeo.com/183320070){: .lien_video }
+[Vidéographie : Le filtre](https://player.vimeo.com/video/183320070){: .lien_video }
 
 ```Activité avancée
 
