@@ -1,6 +1,6 @@
 LANGUAGE:   fr
 TITLE:   Les traitements et les applications
-MENUTITLE: Les traitements
+MENUTITLE: Les traitements Numériques
 AUTHOR:     Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
@@ -207,7 +207,7 @@ were algorithms. But now that there are computers, there are even more
 algorithms, and algorithms lie at the heart of computing" qui montre
 bien l'importance des algorithmes. Nous allons commencer en
 introduisant une machine de base, les principes généraux du calcul et
-en définissant nos premiers algorithmes. 
+en définissant nos premiers algorithmes.
 
 ## Premiers algorithmes sur une machine de base
 
@@ -293,7 +293,7 @@ rangé le symbole à l'adresse `413` :
 
     Accéder à la mémoire à l'adresse 413 (retrouver le codage binaire du numéro du symbole)
 	Ajouter 32 (dans l'unité de calcul, changer le 6ème chiffre de 0 en 1)
-	Ranger le résultat dans la mémoire 413 
+	Ranger le résultat dans la mémoire 413
 
 Nous retrouvons dans cet exemple l'organisation de la machine avec ses
 adresses, sa mémoire, son unité de calcul et son unité de
@@ -319,12 +319,12 @@ invisible ou une erreur ! Pour résoudre ce problème, nous
 allons contrôler que le contenu de la mémoire correspond bien à une
 lettre majuscule avec l'algorithme suivant :
 
-    Accéder à la mémoire à l'adresse 413 
+    Accéder à la mémoire à l'adresse 413
 	Si la valeur est comprise entre 65 et 90 Alors (si c'est une majuscule)
-       Ajouter 32 
-	   Ranger le résultat dans la mémoire 413 
+       Ajouter 32
+	   Ranger le résultat dans la mémoire 413
     Fin du Si (sinon il n'y a rien à faire)
-	
+
 Cet algorithme est une séquence de deux instructions. La seconde
 instruction est un *si* qui est le représentant d'un deuxième mode de
 combinaison appelé *alternative*. En effet, selon le résultat de la
@@ -351,13 +351,13 @@ binaire `00000000`. Notre algorithme peut s'écrire :
 
     Accéder à la mémoire à l'adresse courante
 	Répéter tant que le code binaire n'est pas 00000000
-  	   Si la valeur est comprise entre 65 et 90 Alors 
-          Ajouter 32 
+  	   Si la valeur est comprise entre 65 et 90 Alors
+          Ajouter 32
 	      Ranger le résultat dans la mémoire à l'adresse courante
 	   Fin du Si
-       Ajouter 1 à l'adresse courante 
-       Accéder à la mémoire à l'adresse courante 
-    Fin de la répétition 
+       Ajouter 1 à l'adresse courante
+       Accéder à la mémoire à l'adresse courante
+    Fin de la répétition
 
 Dans cet algorithme, nous utilisons, pour parcourir tous les
 caractères du texte, une *répétition* appelée aussi par les
@@ -411,7 +411,7 @@ permet, si le lieu d'arrivée n'est pas connu ou est imprécis,
 d'afficher un message plutôt que l'itinéraire. L'itération permet de
 poursuivre l'exécution de l'assistant tant que vous n'êtes pas arrivé.
 
-## Calculer et calculable 
+## Calculer et calculable
 
 À partir des instructions de base de la machine, on construit donc des
 traitements par un algorithme en utilisant les trois modes de
@@ -445,7 +445,7 @@ une application interactive à quelques heures pour une application
 scientifique complexe comme la prédiction météorologique. Ces deux
 questions posent des challenges scientifiques majeurs aux chercheurs
 pour déterminer les problèmes qui sont "pratiquables", c'est-à-dire
-calculables en un temps raisonnable. 
+calculables en un temps raisonnable.
 
 
 ```activité
@@ -461,7 +461,7 @@ Proposer une ressource simple et poser des questions sur modèle de Von Neuman
 ::Les minuscules en majuscules::
 [markdown]
 **Les minuscules en majuscules**
-On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules. 
+On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules.
 - Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans `Maj2MinCara` ?
 - Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle instruction ?
 - Expliquez ce qu'il faut changer dans `Maj2MinChaine` pour obtenir un programme `Min2MajChaine` qui prend en entrée une séquence de caractères et qui transforme les minuscules en majuscules et laisse tous les autres caractères inchangés.
@@ -490,7 +490,7 @@ Deux algorithmes sur des chaines de caractères : un efficace et un pas efficace
 [markdown]
 **Conception des algorithmes**
  Pour résoudre un problème il existe un seul algorithme{F}
- 
+
 ::Exécution de programmes::
 [markdown]
 **Exécution de programmes**
@@ -634,7 +634,7 @@ St Pancras à l'hôtel peut se décomposer en : se rendre au terminus des
 navettes, si une navette est disponible rapidement, prendre la
 navette, sinon se rendre au métro, ... On arrête la décomposition
 lorsque tous les sous-problèmes introduits correspondent à des
-fonctionnalités de base de notre langage et de notre machine. 
+fonctionnalités de base de notre langage et de notre machine.
 
 Concevoir une application est une tâche de conception donc une tâche
 de haut niveau. En effet, un telle tâche comporte de nombreux choix
@@ -695,7 +695,7 @@ est le nombre impressionant d'applications à notre disposition dans le
 monde numérique : pour communiquer, pour chercher de l'information,
 pour écouter de la musique, pour regarder des vidéos, pour composer de
 la musique, pour dessiner, pour composer des textes ou des pages Web,
-pour faire des calculs, ... 
+pour faire des calculs, ...
 
 Pour un même besoin, plusieurs applications sont souvent
 disponibles. Comme utilisateur, dans votre vie personnelle, vous êtes
@@ -783,10 +783,10 @@ pouvons proposer l'algorithme suivant :
 
      1. **en entrée** : un texte
      2. lire le premier mot et le mémoriser comme mot courant
-     3. **tant que** ce n'est pas la fin du texte 
+     3. **tant que** ce n'est pas la fin du texte
      4.   chercher le mot courant dans le dictionnaire
      5.   **si** il n'existe pas **alors**
-     6.     souligner le mot courant 
+     6.     souligner le mot courant
      7.   **fin du si**
      8.   lire le mot suivant et le mémoriser comme mot courant
      9. **fin du tant que**
@@ -810,7 +810,7 @@ dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
      3. **tant que** le mot courant n'est pas le mot cherché et qu'on n'a pas atteint la fin du dictionnaire
      4.   lire le mot suivant du dictionnaire et le mémoriser comme mot courant
      5. **fin du tant que**
-	 6. **en sortie** : **si** le mot courant est le mot cherché **alors** existe **sinon** n'existe pas 
+	 6. **en sortie** : **si** le mot courant est le mot cherché **alors** existe **sinon** n'existe pas
 
 En combinant ces deux algorithmes, nous avons un algorithme de
 correction orthographique.  Cet algorithme est-il efficace en temps de
@@ -894,13 +894,13 @@ pourrait écrire un algorithme comme
 
      1. **en entrée** : une suite de mots
      2. lire le premier mot et le mémoriser comme mot courant
-     3. **tant que** ce n'est pas la fin du texte 
+     3. **tant que** ce n'est pas la fin du texte
      4.   **si** le mot courant est "politique" **alors**
      6.     mémoriser que j'ai vu le mot politique
      7.   **fin du si**
      8.   lire le mot suivant et le mémoriser comme mot courant
      9. **fin du tant que**
-    10. **en sortie** : le texte est politique si j'ai mémorisé que j'ai vu 
+    10. **en sortie** : le texte est politique si j'ai mémorisé que j'ai vu
                         le mot politique
 
 Cet algorithme naïf n'est pas satisfaisant car un texte peut être
@@ -1032,7 +1032,7 @@ ce qu'un joueur humain fait : si je joue ce coup, je perd ma reine et,
 sauf cas particulier, ce coup n'est pas intéressant donc je ne vais
 pas explorer plus loin ce qui peut se passer. C'est ce principe qui a
 été formalisé bien plus précisémment en utilisant les scores sous
-forme d'un algorithme célèbre appelé *algorithme alpha-beta*. 
+forme d'un algorithme célèbre appelé *algorithme alpha-beta*.
 
 Vous connaissez maintenant les principes du fonctionnement de
 l'algorithme. Pour avoir un algorithme performant on examinera le plus
@@ -1208,7 +1208,7 @@ les chaînes de caractères. On dispose souvent d'un grand nombre de
 fonctions comme transformer en majuscules, extraire les premiers
 caractères, compter le nombre d'apparitions d'un caractère, parcourir
 tous les caractères. Cette représentation correspond à une *structure
-séquentielle* dont nous allons voir les possibilités. 
+séquentielle* dont nous allons voir les possibilités.
 
 Considérons une application comme un éditeur de textes ou un
 traitement de textes déja considérée dans le cours sur les
@@ -1258,15 +1258,15 @@ Les traitements possibles dépendent fortement des choix de représentation
 {T}
 ```
 
-# Non utilisé 
+# Non utilisé
 ## Machines et applications - Choisir une application
 
 ### Introduction
 
-Nous avons vu qu'une application telle que vous l'utilisez est constituée d'un ensemble de programmes. Un programme est la traduction dans un langage compréhensible à la fois par l'homme et par la machine d'algorithmes, description très précise de méthodes pour calculer les solutions d'un problème. Chaque programme peut donc être vu comme une composition d'instructions de commandes à la machine. 
+Nous avons vu qu'une application telle que vous l'utilisez est constituée d'un ensemble de programmes. Un programme est la traduction dans un langage compréhensible à la fois par l'homme et par la machine d'algorithmes, description très précise de méthodes pour calculer les solutions d'un problème. Chaque programme peut donc être vu comme une composition d'instructions de commandes à la machine.
 
 Ceci explique le comportement "bête" des machines et des programmes qui ne savent
-qu'appliquer des consignes adaptées à des contextes prévus. En particulier, un programme peut s'arrêter, avoir un comportement inattendu ou calculer un mauvais résultat dès qu'il rencontrera des conditions inconnues pour lesquelles on ne lui a pas décrit ce qu'il devait faire. C'est ce que nous appelons un bug. 
+qu'appliquer des consignes adaptées à des contextes prévus. En particulier, un programme peut s'arrêter, avoir un comportement inattendu ou calculer un mauvais résultat dès qu'il rencontrera des conditions inconnues pour lesquelles on ne lui a pas décrit ce qu'il devait faire. C'est ce que nous appelons un bug.
 
 
 
@@ -1335,7 +1335,7 @@ tâches, d'arrêter l'exécution d'une application, ... Sur un
 ordinateur, il faut savoir que, sans que vous en soyez conscients, il
 y a un grand nombre de tâches qui s'exécutent en particulier pour que
 vos applications interagissent avec vous et les périphériques que sont
-clavier, souris, écran et réseau. 
+clavier, souris, écran et réseau.
 
 Le système d'exploitation assure bien d'autres missions comme, par
 exemple, la gestion des périphériques, la gestion des utilisateurs
@@ -1368,11 +1368,11 @@ d'une application pour un problème donné.
   de conception de site Web de nombreuses fonctionnalités sont à
   mettre en rapport avec les besoins : mise à jour du site, nombre
   d'usagers, gestion de newsletter, gestion de forums, gestion de
-  paiement en ligne, ... 
+  paiement en ligne, ...
 * **type de logiciel : ** nature de la licence, possibilité de
   développements propres, support fourni (aide à l'installation,
   conseil, formation, existence de forums, ...), maintenance du
-  logiciel, son évolutivité 
+  logiciel, son évolutivité
 * **prix : ** prix incluant les coûts éventuels de support, formation,
   maintenance et de mise à jour. Prévoir également des coûts matériels
   et logiciels dérivés.
