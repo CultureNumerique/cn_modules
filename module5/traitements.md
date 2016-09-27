@@ -26,6 +26,8 @@ allons étudier, dans ce module, les principes généraux des
 algorithmes, des applications informatique et donc des traitements
 informatique.
 
+**Marc: raisonner me gêne un peu**
+
 En introduction de ce cours, ilustrons ces points sur l'exemple d'une
 application de calcul d'itinéraire par un site Web, une application
 mobile ou encore un petit ordinateur spécifique qu'on appelle
@@ -71,6 +73,9 @@ décrit comment combiner un nombre raisonnable d'opérations
 liste des distances) pour calculer le plus court chemin entre un
 départ et une destination.
 
+
+**Marc: on ne voit pas la combinaison et comment on fait quelque chose de compliqué à partir de choses simples, on ne sait pas non plus pourquoi l'algo est bien génial, mais c'est peut être plus dur à comprendre** 
+
 En premier lieu, cet exemple illustre que la capacité du programme à
 calculer l'itinéraire le plus court repose sur un algorithme et donc
 sur le génie de ses concepteurs. Ensuite, vous pouvez facilement
@@ -94,6 +99,8 @@ routière. Toutefois, ce logiciel ne peut résoudre que des questions
 pour lesquelles il a été programmé et parfois vous prendrez la main et
 choisirez une solution due à votre intelligence propre.
 
+**Marc Je ne comprends pas l'intérêt de cette dernière phrase**
+
 Pour conclure, cet exemple montre qu'une application moderne interagit
 avec l'environnement (utilisateur, périphériques dont système `GPS`,
 réseau). Il montre également qu'une application est construite en
@@ -104,7 +111,7 @@ machine "intelligente" pouvant réaliser des tâches complexes.
 L'exemple a également permis de montrer que malgré les capacités sans
 cesse croissantes des machines, il faut être attentif à la taille des
 données mémorisées et au temps de calcul des programmes. Enfin, nous
-rappellerons que l'intelligence supposée de la machine est due à
+rappelons que l'intelligence supposée de la machine est due à
 l'intelligence des femmes et des hommes ayant conçu les applications.
 
 Dans la suite du cours, nous présentons comment composer des
@@ -214,6 +221,8 @@ en définissant nos premiers algorithmes.
 **Rémi :** pas forcément convaincu par l'ajout de la gestion mémoire
   mais j'ai laissé.
 
+**Marc** Il n'y a plus cette intro mettant en relation machines/langages
+
 Dans cette section, nous étudions les principes généraux de
 composition permettant de créer une nouvelle fonctionnalité en
 utilisant des fonctionnalités déjà existantes. Nous montrons également
@@ -227,6 +236,8 @@ définissant de nouvelles compétences à notre machine avec des
 algorithmes.
 
 ### La machine de base
+
+**Marc : pourquoi de base et algorithmes informatiques?**
 
 Les algorithmes informatique sont destinés à être exécutés par des
 machines. Il nous faut donc d'abord préciser ce qu'on entend par
@@ -250,6 +261,8 @@ capacités et la rapidité de la mémoire, de l'unité de calcul et
 l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
 économe et plus résistant si bien qu'on le retrouve désormais dans
 tous les milieux et toutes les situations.
+
+**Marc: pourquoi nombre et caractères** 
 
 ```activité
 Le modèle décrit précédemment a été inventé par Von Neumann. Trouver une description schématique de ce modèle appelé architecture de Von Neumann
@@ -276,7 +289,7 @@ Letter A" et pour numéro `65`. Le caractère `a` minuscule a pour
 numéro `97`. Pour transformer une lettre majuscule en la minuscule
 correspondante, il suffit donc d'ajouter `32` au numéro du symbole. On
 peut supposer que notre machine sait effectuer cette opération. On
-peut cependant noter que cette opération peut être fait au niveau du
+peut cependant noter que cette opération peut être faite au niveau du
 codage binaire. En effet, en binaire, croyez-nous sur parole, `65`
 s'écrit `01000001` et `97` s'écrit `01100001`. C'est remarquable car,
 pour passer de l'un à l'autre, seul le 6eme chiffre partant de la
@@ -339,6 +352,8 @@ message d'erreur. *L'alternative est le deuxième mode de
 combinaison utile pour décrire des algorithmes*.
 
 ### Transformer un texte complet
+
+**Marc: il ne me semble pas nécessaire de parler d'octets** 
 
 Nous souhaitons appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
@@ -520,6 +535,9 @@ objets complexes. On peut alors écrire des algorithmes avec les trois
 compositions de base utilisant comme instructions de base ces
 opérations sur ces objets complexes.
 
+**Marc: on introduit une ambiguïté car la composition avec les boucles etc ne portent que sur les algos pas sur les données** 
+
+
 Les *langages informatique* permettent l'interaction entre l'humain et
 la machine. Ces langages sont variés et nous avons déja introduit les
 langages permettant de décrire des objets complexes comme des images
@@ -536,6 +554,9 @@ conventions pour dessiner la séquence, l'alternative et la répétition,
 par exemple les
 ["flowchart"](https://en.wikipedia.org/wiki/Flowchart).
 
+**Pas convaincu de l'intérêt de cette partie sur les représentations pseudo-code (et les flowcharts populaires jq dans les années 70 ;-) ). Par contre on peut illustrer pseudo-code et nos présentations d'algos**
+
+
 Mais, si un algorithme est conçu et lu par des humains, il doit
 ensuite être traduit pour pouvoir être exécuté par une machine. Pour
 cela, il faut traduire l'algorithme dans un langage compréhensible par
@@ -543,6 +564,8 @@ la machine. Il faut donc disposer d'un langage commun entre l'humain
 et la machine avec la contrainte forte d'être compréhensible par les
 humains tout en étant suffisamment formel et précis pour ne pas
 laisser d'ambiguïté à la machine.
+
+**Marc Redites**
 
 Il existe, en réalité, de nombreux langages dépendant du mode
 d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
@@ -553,10 +576,11 @@ vous allez apprendre ce langage : quelle est l'action réalisée par le
 choix de cet élément de menu, quelle est l'effet d'un clic de souris
 sur cet élément, quel est l'effet de l'appui sur cette combinaison de
 touches. Mais, il est difficile d'automatiser ces actions dans des
-programmes. On préfère alors utiliser un langage écrit.
+programmes. On préfère alors utiliser un langage écrit. Nous avons
+déja vu l'utilisation du langage écrit pour décrire des documents, par
+exemple `html`, ou pour décrire des images et des sons.
 
-Nous avons déja vu l'utilisation du langage écrit pour décrire des
-documents, par exemple `html`, ou pour décrire des images et des sons.
+
 Lorsqu'il s'agit de traduire un algorithme, c'est-à-dire expliquer à
 la machine une combinaison d'instructions, on utilise des langages
 écrits appelés *langages de programmation*. Il en existe de
@@ -586,6 +610,8 @@ rencontrera des conditions inconnues pour lesquelles on ne lui a pas
 décrit ce qu'il devait faire. C'est ce qu'on appelle un *bug*.
 
 ## Créer de nouvelles applications
+
+**Marc: je ne suis pas convaincu de l'intérêt de cette section** 
 
 Nous supposons disposer d'une machine avec des fonctionnalités de
 base. Cela peut être une machine très proche du matériel sachant faire
@@ -682,6 +708,8 @@ Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme e
 **Rémi :** j'ai rajouté cette section supprimée car je pense qu'elle
   eput être utile aux étudiants
 
+**Marc: à discuter mais ces deux sections portent sur l'analyse informatique, un peu dans la direction gestion de projet info, je crois qu'on s'écarte un peu et font une rupture dans le fil du discours. C'est trop court ou trop long, pas au bon endroit. En tout cas, il ne semblait pas que cela puisse entrer facilement dans ce module** 
+
 Nous avons vu qu'une application telle que vous l'utilisez est
 constituée d'un ensemble de programmes. Un programme est la traduction
 dans un langage compréhensible par la machine d'algorithmes très
@@ -755,7 +783,7 @@ du domaine de l'intelligence artificielle.
 Certains traitements de texte incluent une fonctionnalité de
 correction orthographique. Dans sa forme la plus simple, le correcteur
 vérifie que tout mot du texte est une forme correcte d'un mot de la
-langue française. Pour décrire cet algorithme, nous allons commener
+langue française. Pour décrire cet algorithme, nous allons commencer
 par préciser nos hypothèses sur le langage et la machine. La première
 hypothèse porte sur le choix de représentation du texte. Nous allons
 considérer ici que le texte est une suite de mots. Sachant que le
@@ -764,8 +792,8 @@ codes des caractères constitutifs du texte, cette hypothèse suppose
 que des algorithmes sont capables d'identifier des mots à partir de
 cette suite. Notez que ces algorithmes sont complexes car un mot ne se
 définit pas simplement comme une suite de lettres délimitées par des
-symboles qui ne sont pas des lettres (pensez à des mots aujourd'hui ou
-grand-père). La seconde hypothèse est que nous disposons d'un certian
+symboles qui ne sont pas des lettres (pensez à des mots comme aujourd'hui ou
+grand-père). La seconde hypothèse est que nous disposons d'un certain
 nombre d'instructions de base comme : lire le premier mot, lire le mot
 suivant, repérer la fin du texte, mémoriser un mot, tester si deux
 mots sont égaux et souligner un mot.
@@ -806,7 +834,7 @@ valeur vraie ou fausse selon que le mot à chercher est dans le
 dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
 
      1. **En entrée**  : un mot à chercher
-     2. lire le premier mot dur dictionnaire et le mémoriser comme mot courant
+     2. lire le premier mot du dictionnaire et le mémoriser comme mot courant
      3. **tant que** le mot courant n'est pas le mot cherché et qu'on n'a pas atteint la fin du dictionnaire
      4.   lire le mot suivant du dictionnaire et le mémoriser comme mot courant
      5. **fin du tant que**
@@ -866,6 +894,8 @@ l'orthographe, vous procéderez de la façon suivante :
 2. vous corrigez les erreurs repérées par le correcteur
 3. vous *vérifiez vous-même l'orthographe* en vous concentrant sur les
 *possibles fautes grammaticales restantes*.
+
+**Marc: pourquoi autant insister sur cette pratique?, un peu anecdotique non ?**
 
 ## Classer et apprendre à classer des textes
 
@@ -1073,7 +1103,7 @@ Les traitements possibles dépendent fortement des choix de représentation
 ```
 
 
-
+**Marc: Proposition: j'aurais bien terminé en allant plus vers l'IA, puis des questions de société comme un peu annoncé au début. Pour cela, l'argument général pourrait être (i) des algos qui trouvent le meilleur chemin le plus court grâce à des algos efficaces mais rapides capables de comparer très vite de nombreux cas (ii) des algos qui apprennent par exemple à classer les documents ou des positions de go, le choix de la représentation des données fixées, la puissance des machines capable de regarder de nombreuses données (parties de go ou grands corpus) (iii) ce qui ouvre l'idée de la puissance des données en plus de la puissance des traitements quand on a à sa disposition de nombreuses données de Go ou de grands corpus, qui permet aussi l'apprentissage des représentations présents dans des progrès récents de l'IA (alphago, etc...). (iv) Le champ ouvert vers des applis nouvelles dès lors qu'on a les données : prédire le goût pour la musique, les tendances politiques, D'où le retour vers les questions de la puissance des grands comptes qui accumulent de la donnée, parfois personnelle, parfois avec notre bon vouloir...**
 
 
 
