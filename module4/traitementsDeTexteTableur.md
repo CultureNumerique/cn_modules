@@ -95,7 +95,7 @@ l'organisation des menus varient d'un logiciel à un autre, d'une
 version à une autre, d'une machine à une autre mais les
 fonctionnalités sont globalement les mêmes. La *structure du document*
 sera définie par l'intermédiaire de *styles* grâce aux niveaux de
-titre. Il faut noter l'ambiguité du terme "style" car il sera
+titre. Il faut noter l'ambiguïté du terme "style" car il sera
 également utilisé pour la mise en forme du document. Cette double
 fonction peut amener à de mauvais usages.
 
@@ -237,7 +237,7 @@ Les **caractères**. La plupart, par exemple, lettres, chiffres et
 symboles de ponctuation, sont visibles, mais certains sont invisibles,
 en particulier, les espaces. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
-c'est, par exemple, le caractère qui marque la la fin de paragraphe,
+c'est, par exemple, le caractère qui marque la fin de paragraphe,
 ou ceux qui marquent la fin d'un mot (espace ou ponctuation),
 celui qui ajoute une espace insécable. C'est là une première
 difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une
@@ -247,7 +247,7 @@ la première fonction, on pourrait vouloir augmenter cette séparation
 dans le rendu visuel et donc se faire suivre deux espaces. Mais on
 perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre
 ces deux espaces. La convention choisie est de **ne jamais avoir deux
-espaces consécutifs** et de faire confiance au logiciel pour réaliser
+espaces consécutives** et de faire confiance au logiciel pour réaliser
 la meilleure présentation. En effet, si deux ou plusieurs espaces se
 suivent, le traitement de texte est mis en difficulté et la mise en
 forme peut être insatisfaisante. Donc, *visualiser tous les
@@ -410,7 +410,7 @@ les règles fondamentales suivantes :
 
 - espace et ponctuation séparent les mots. On ne doit
   donc **jamais avoir plusieurs espaces consécutifs**.
-- L'appui sur la touche Entrée sépare les paragraphes. On ne doit
+- L'appui sur la touche `Entrée` sépare les paragraphes. On ne doit
 **jamais avoir plusieurs fins de paragraphes consécutives**.
 - Éviter autant que possible la mise en forme directe au cas par cas,
   que ce soit par les menus (format) ou par les boutons-raccourcis.
@@ -431,10 +431,12 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 
 
 ```Activité
-Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf).
 
-Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
-
+[markdown]
+Avec le texte de la charte copié selon la méthode de votre choix, préparez un document mis en forme] en vous inspirant de [l'exemple que vous nous fournissons](./media/Charte.pdf).
+\n
+Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules. (Remarque : sur certaines versions le raccourci `MAJ-F3` permet d'éviter la refrappe). Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
+\n
 Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
@@ -636,11 +638,15 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ::Document maître::
 [markdown]
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes. Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
+\n
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Commentaires::
 [markdown]
-Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. 
+\n
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
 
@@ -682,7 +688,7 @@ science du calcul.
 Avec le tableur, on peut gérer  des données organisées
 sous forme de **listes** : une liste d'élèves avec leurs notes, une
 liste d'adhérents avec leurs adresses et leurs cotisations, une liste
-d'objets avec un date de collecte et des informations de forme,
+d'objets avec une date de collecte et des informations de forme,
 taille, poids,... Les listes, aussi appelées **relations** ou
 **tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
 un élément (un élève, un membre, un objet). Chaque colonne décrit une
@@ -894,7 +900,7 @@ erreurs apparaissent. Chaque formule doit commencer par le signe
 valeurs, des références, des opérateurs comme `+,-,*,/`, et des
 *fonctions* comme `ARRONDI`, `MOIS`, ... Le tableur contient un
 *générateur de formules* qui peut vous assister dans la création de
-formules. Voici des exmples de formule :
+formules. Voici des exemples de formule :
 
 	= 10 / 2 + 3
 	= D8 * $G$2
