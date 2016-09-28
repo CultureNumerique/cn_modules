@@ -1,0 +1,109 @@
+#+OPTIONS:    \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ':t
+#+LANGUAGE: fr
+* Découverte
+
+** Utiliser un modèle
+
+ 1. Téléchargez le modèle de document disponible sur moodle et enregistrez-le dans votre espace de travail. 
+ 2. Dans LibreOffice, demandez à créer un nouveau document à partir d'un modèle. (Menu /Fichier-Nouveau-Modèles/)
+ 3. Cliquez sur le bouton /importer/ et choisissez le modèle téléchargés.
+ 4. Vous pouvez cliquer ensuite sur le modèle importer pour créer un document selon ce modèle.
+ 5. Modifiez la vue qualifiée en changeant le titre du document (menu /Fichier-propriétés/).
+ 6. Vérifiez les données d'identification pour que vous soyez l'auteur du document.
+ 7. Ajoutez un titre de niveau 1 et deux paragraphes. Voyez comment l'enchaînement des styles s'opère.
+ 8. Mettez à jour la table des matières
+ 9. À l'aide du navigateur de structures (/Affichage-Navigateur/ ou =F5=) échangez l'ordre des deux parties de votre document (Les deux titres 1). Observez que le contenu des section a été déplacé également.
+
+
+** Analyser
+
+ 1. Téléchargez le document [[http://ressources.sesamath.net/coll_docs/cah/valide/manuel_chapitre_6N1.pdf][sesamath pour la 6ème]] au format pdf. Vous pouvez également regarder le site sesamath pour trouver d'autres documents identiques. 
+ 2. Analysez la structure de ce document
+ 3. Nommez les différents éléments structurels :
+    - ce sont des parties bien identifiées, souvent répétées.
+    - trouvez des noms qui ont un sens
+    - pensez aux différents éléments structurels
+ 4. Ouvrez maintenant la version [[http://ressources.sesamath.net/coll_docs/cah/valide/manuel_chapitre_6N1.odt][LibreOffice]] de ces documents.
+    - Dans /style et formatage/ choisissez de montrer uniquement les styles appliqués. 
+    - Examinez la structure à travers la liste des styles.
+    - Comparez avec votre analyse. 
+    - Regardez en particulier les styles de page, de caractères, de listes, et de paragraphes.
+ 5. Placez votre curseur sur différentes parties du texte et observez quels sont les éléments structurels qui ont été déclarés et utilisés. 
+ 6. En fin de document ajoutez un saut de page en choisissant le style des pages d'activité.
+ 7. Changez de style de page et Observez les changements
+ 8. Ajoutez un paragraphe et essayez différents types de liste ou de paragraphe
+ 9. Pensez-vous qu'une mise en forme directe soit une bonne idée pour de tels documents ?
+ 10. Pensez-vous qu'une amélioration aurait pu être envisagée pour les styles de caractères ? 
+
+** Modifier
+
+ 1. Changez la bordure des "à connaître" en enlevant l'ombrage : dans  /style et formatage/ cliquez l'entrée =_Propriétés à connaitre= sur le bouton droit et modifier...
+ 2. Comment pouvez-vous modifier le texte "Méthode 3" page 18 ? Aide : regardez dans les styles de liste.
+
+
+* Mise en forme d'un document texte
+
+Les notions abordées lors de cette manipulation sont 
+- La stratégie de mise en forme d'un texte, 
+- L'utilisation de structures prédéfinies
+- La modification de style associées à ces structures 
+- La création de nouvelles structures et la création des styles associés
+- La notion d'héritage
+- La gestion des numérotations 
+
+Le sujet propose de mettre le document =texteBrut.odt=  en forme de façon à obtenir un document analogue au document fourni nommé =texteFinal.pdf=. Un deuxième sujet sur le même texte vous propose de tout redéfinir par vous-même plutôt que d'utiliser et adapter la plupart des styles prédéfinis.
+
+** Préparation et Observations 
+1. Sauvegarder le document =texteBrut.odt= dans votre dossier personnel sous le nom =prenom­nom-texteFinal.odt=. En remplaçant =prenom­nom= par vos prénom et nom. C'est ce fichier qui sera maintenant utilisé.
+2. Parcourir le document et observer les éléments suivants :
+   - Le document comprend plusieurs parties dont le titre est surligné en couleur "orange". Les titres de sous-parties sont surlignés en couleur "jaune".
+   - Des énumérations sont également présentes dans le document. Elles ont été surlignées en bleu de différentes nuances afin de faire apparaître les imbrications. En couleur "bleu7" pour les énumérations de premier niveau et en couleur "bleu8", plus clair, pour celles de second niveau.
+   - Comment ces surlignages ont-ils été réalisés ?
+
+** Vue qualifiée / Méta-données / Structure 
+1. Modifier les propriétés du fichier en donnant "Le traitement de texte" comme valeur au champ titre. Insérer le champ titre en début de document. Lui appliquer le style de titre prédéfini nommé /titre principal/. 
+2. Définissez les niveaux de titres pour respecter la structure du document.
+3. Appliquer des listes là où c'est nécessaire.
+4. Faites en sorte que les premiers paragraphes suivant un titre soient des /corps de texte/ et les suivants des /Retrait de première ligne/.
+5. Faites afficher les caractères non imprimables et supprimez tous les paragraphes vides.
+6. Faites en sorte d'appliquer une /accentuation/ sur les mots "traitement de texte" et "éditeur de textes" des deux premiers paragraphes.
+7. Faites en sorte d'appliquer une /accentuation forte/ sur le mot "élaboré" du deuxième paragraphe.
+
+** Modification de styles existants et hiérarchie
+1. Changez le style d'affichage du titre principal : Laissez 2cm sous le titre et passez en 32 points
+2. Affichez la liste des styles par hiérarchie
+3. Faites en sorte que les paragraphes  /corps de texte/ soient justifiés
+4. Que se passe-t-il pour les /Retrait de première ligne/ ? Pourquoi ?
+
+
+** Création de styles personnalisés
+Les listes en typographie française utilisent plutôt le tiret. 
+1. Ajouter un style de liste "Liste française".
+2. Sélectionnez Dans /Options/ le style de caractères /caractères de numérotation/ et sélectionnez le caractère tiret (U2013)  
+3. Créer un style de paragraphe /liste française/ héritée de /Liste/, justifié et de 0,1cm d'espacement avant et après chaque paragraphe.
+4. Créer un nouveau style de caractère /Logiciel/ et choisissez une fonte de type =Mono= (e.g. =Libération Mono=). Appliquez ce style à quelques noms de logiciels. 
+
+** Numérotation
+1. Dans le menu /Outils-Numérotation des chapitres/, pour chaque niveau de titre, choisissez la numérotation appropriée (nombre et sous-niveaux).
+
+** Les pages 
+1. Avant le titre, insérer un saut de page manuel :  choisissez le style par défaut et modifiez la numérotation des pages pour recommencer à 1.
+2. Recommencez sur la page blanche, mais cette fois choisissez le style de page index. Reprenez également la numérotation à 1.
+3. Sur cette page d'index, insérez une table des matières (/insertion/index et tables/)
+4. Avec le bouton droit sur la table, modifiez cette table : Entre le numéro et l'entrée ajoutez une espace pour les niveaux 1 et 2.
+5. Dans le style de page /index/, ajoutez un pied de page.
+6. Dans le pied de page de l'index, insérer un champ /numéro de page/, centrez-le et par un double-clic choisissez des chiffres romains pour l'affichage.
+7. Ajoutez des entête et pied de page pour le style standard, le titre dans l'entête et le numéro de page dans le pied.
+8. Modifiez le style de la première page et choisissez /Première page/.
+9. Ajoutez le titre et un sous-titre avec la date. 
+
+
+
+** Avancé
+1. La section 4 commence par une phrase faisant référence à la section 2 par deux fois. Utilisez /insertion Renvoi/ pour reproduire ces références.
+2. Déplacez la section 4 avec le navigateur (touche =F5=) avant la section 2 pour voir l'effet sur ces références. 
+3. Essayez de reproduire ce nouveau style de poème dans la section 4. Remarquez qu'il n'y a qu'un paragraphe et que ce sont des retours à la ligne qui sont insérés avec =MAJ-Entrée=.
+
+
+
+

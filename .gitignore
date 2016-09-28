@@ -1,4 +1,5 @@
 # Build files are in following folders
+export/
 video/
 webcontent/
 devoirs/
@@ -10,7 +11,7 @@ module*/*.config.json
 module*/imsmanifest.xml
 module*/*.gift.txt
 module*.html
-
+.~lock*
 draft*
 *.txt.html
 
