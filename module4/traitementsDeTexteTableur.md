@@ -162,7 +162,7 @@ logiciel) s'appliquent.
 [Vidéographie : L'aide à la saisie](https://player.vimeo.com/video/183312878){: .lien_video }
 
 ```compréhension
-::Typographie::
+::Typographie Accents capitales::
 [markdown]
 Savoir composer un document selon les règles typographiques n'est pas
 simple. Pour vous en convaincre, vous pouvez vous rendre en
@@ -177,10 +177,8 @@ majuscules, la forme des abréviations ne reposent que sur vous.
 \n
 Lisez [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
-courantes.
-
-::Accents capitales::
-[markdown]
+courantes, puis répondez aux questions suivantes :
+\n
 En français, on accentue les capitales (majuscules). {T}
 
 ::Majuscule en début de mot::
@@ -433,11 +431,30 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 ```Activité
 
 [markdown]
-Avec le texte de la charte copié selon la méthode de votre choix, préparez un document mis en forme] en vous inspirant de [l'exemple que vous nous fournissons](./media/Charte.pdf).
+Voici le [texte brut de la charte](.media/charte.txt) des utilisateurs du système d'inforamtion de Lille3. Ouvrez ce texte dans un document LibreOffice par la méthode de votre choix, et utilisez les règles de mises en forme vues dans le cours pour reproduire [l'exemple que vous nous fournissons](./media/Charte.pdf).
+
+Vous noterez bien :
 \n
-Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules. (Remarque : sur certaines versions le raccourci `MAJ-F3` permet d'éviter la refrappe). Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
+les deux niveaux de titre (le titre principal et les titres de niveau1);
 \n
-Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+l'accentuation simple passe les caractères et italique et en rouge;
+\n
+l'accentuation forte transforme les caractères en petites capitales;
+\n
+la justification de tous les paragraphes de texte à l'exception des titres;
+\n
+les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1;
+\n
+le haut de page reprend le titre déclaré dans les méta-données;
+\n
+les lignes horizontales ont été réalisées avec des bordures.
+\n
+N'hésitez pas à échanger sur le forum du cours si vous rencontrez des difficultés, ...
+\n
+À la fin, pour vérifier que vous avez correctement utilisé les styles et non la mise en forme directe, sélectionner l'ensemble de votre texte (ctrl-A), aller dans le menu `format` et sélectionner `effacer le formatage direct`. Votre mise en forme ne doit pas bouger.
+\n
+
+  Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
 
@@ -622,6 +639,8 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 
 ::Ajouter des images::
 [markdown]
+À vous maintenant, ... Nous considérons que vous en savez suffisemment pour pouvoir aller découvrir par vous même d'autres fonctionnalités. Cette section a pour but de vous faire chercher d'autres fonctionnalités du traitement de texte. Encore une fois, n'hésitez pas à utiliser le forum pour échanger entre vous, ...
+\n
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
@@ -638,15 +657,15 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ::Document maître::
 [markdown]
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes. Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice] (https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Commentaires::
 [markdown]
-Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. 
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version.
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Décrivez plusieurs situations ou les commentaires et le suivi des modifications peuvent être des outils très pratiques. {}
 
 ```
 
