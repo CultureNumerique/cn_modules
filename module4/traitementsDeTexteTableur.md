@@ -72,6 +72,15 @@ même cours.
   des raccourcis, c'est-à-dire des modifications superficielles des
   interfaces des logiciels.
 
+**Installer libreOffice :**  Si vous voulez installer LibreOffice, ce que nous vous conseillons, il faut :
+- aller sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et installer le logiciel
+- retourner sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et **exécuter** la traduction française de l'interface (*Translated User interface*)
+- quitter et relancer LibreOffice.
+- le cas échéant, ne pas tenir compte des messages d'erreur concernats JRE.
+
+
 # Traitements de texte
 
 ## Objectifs
@@ -536,7 +545,19 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ::Exercice de styles::
 [markdown]
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
+Reproduire avec votre traitement de texte le document dont un pdf vous est donné [ici](./media/texte_final.pdf) à partir du texte brut fourni [là](./media/texte_final.txt). **Aucune mise en forme directe n'est tolérée !** (*i.e* les boutons de la barre d'outils ).
+\n
+Dans ce document, nous avons utilisé :
+\n
+- des styles spécifiques pour désigner les personnes et les œuvres,
+\n
+- le résumé et les citations,
+\n
+- 3 styles de page avec des numérotations en romain pour les pages d'index et de tables,
+\n
+- les guillemets et les listes françaises.
+\n
+La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. **Vous pouvez prendre celles de votre choix**. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
 
