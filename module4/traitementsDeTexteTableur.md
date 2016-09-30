@@ -435,17 +435,17 @@ Voici le [texte brut de la charte](./media/charte.txt) des utilisateurs du syst�
 
 Vous noterez bien :
 \n
-- les deux niveaux de titre (le titre principal et les titres de niveau1);
+- les deux niveaux de titre (le titre principal et les titres de niveau1) ;
 \n
-- l'accentuation simple passe les caractères et italique et en rouge;
+- l'accentuation simple passe les caractères et italique et en rouge ;
 \n
-- l'accentuation forte transforme les caractères en petites capitales;
+- l'accentuation forte transforme les caractères en petites capitales ;
 \n
-- la justification de tous les paragraphes de texte à l'exception des titres;
+- la justification de tous les paragraphes de texte à l'exception des titres ;
 \n
-- les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1;
+- les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1 ;
 \n
-- le haut de page reprend le titre déclaré dans les métadonnées;
+- le haut de page reprend le titre déclaré dans les métadonnées ;
 \n
 - les lignes horizontales ont été réalisées avec des bordures.
 \n
