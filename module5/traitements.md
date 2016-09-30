@@ -1,7 +1,7 @@
 LANGUAGE:   fr
-TITLE:   Les traitements et les applications
+TITLE:   Les traitements numériques et les applications
 MENUTITLE: Les traitements Numériques
-AUTHOR:     Culture numérique
+AUTHOR: Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Comprendre les traitements
