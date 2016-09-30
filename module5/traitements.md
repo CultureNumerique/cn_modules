@@ -26,7 +26,7 @@ allons étudier, dans ce module, les principes généraux des
 algorithmes, des applications informatique et donc des traitements
 informatique.
 
-<!--**Marc: raisonner me gêne un peu**-->
+**Marc: raisonner me gêne un peu**
 
 En introduction de ce cours, ilustrons ces points sur l'exemple d'une
 application de calcul d'itinéraire par un site Web, une application
