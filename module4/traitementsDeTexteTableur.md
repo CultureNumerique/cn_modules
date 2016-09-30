@@ -303,7 +303,9 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ::Refaire la saisie::
 [markdown]
-Reproduire l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
+Reproduire l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871){: .lien_video }.
+\n
+Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
@@ -657,7 +659,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ::Document maître::
 [markdown]
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice] (https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice](https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
