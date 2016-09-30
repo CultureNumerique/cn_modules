@@ -73,17 +73,12 @@ même cours.
   interfaces des logiciels.
 
 **Installer libreOffice :**  Si vous voulez installer LibreOffice, ce que nous vous conseillons, il faut :
-\n
+
 - aller sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
-\n
 - télécharger et installer le logiciel
-\n
 - retourner sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
-\n
 - télécharger et **exécuter** la traduction française de l'interface (*Translated User interface*)
-\n
 - quitter et relancer LibreOffice.
-\n
 - le cas échéant, ne pas tenir compte des messages d'erreur concernats JRE.
 
 
