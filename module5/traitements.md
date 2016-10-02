@@ -6,27 +6,27 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 # Comprendre les traitements
 
-Pour être un utilisateur averti et un acteur du monde numérique, il
-est utile de comprendre comment "raisonnent" les "machines"
-(ordinateurs, tablettes, ...) de ce monde. En particulier, il s'agit
-de comprendre pourquoi ces machines peuvent apparaître plus précises
-et plus efficaces que nous et peuvent même apparaître
-"intelligentes". Un premier point est que les machines peuvent
-calculer très vite et, par conséquent, traiter de grandes quantités de
-données. Le second point fondamental est leur capacité à combiner des
-traitements pour en définir de nouveaux plus complexes. Et que ce
-principe est général, ces traitements peuvent, à leur tour, être
-combinés pour définir de nouveaux traitements, jusqu'à définir des
-applications sophistiquées que vous utilisez. Ces combinaisons sont
-appelées *algorithmes* et sont donc la base des programmes de vos
-machines. Notons que l'intelligence apparente des machines est le
-résultat de l'intelligence collective des femmes et des hommes qui ont
-conçu les algorithmes et écrits les programmes correspondants. Nous
+Pourquoi les ordinateurs peuvent-ils nous apparaître plus précis et
+plus efficaces que nous et pourquoi peuvent-ils même apparaître
+"intelligents" ?  Une partie de l'explication est technologique. Elle
+tient au fait que les ordinateurs peuvent calculer très vite et, par
+conséquent, traiter rapidement de grandes quantités de données.  Mais
+une autre partie de l'explication est plus fondamentale.  L'ordinateur
+a la capacité de combiner des traitements pour en définir de nouveaux
+plus complexes. Ce principe est général. Les traitements définis par
+combinaison peuvent à leur tour être combinés pour définir de nouveaux
+traitements, jusqu'à définir des applications très sophistiquées que
+vous utilisez. Ces combinaisons sont appelées *algorithmes* et rien
+n'est magique dans ce domaine.  L'intelligence apparente des machines
+est le résultat de ces combinaisons répétées, mais surtout de
+l'intelligence collective des femmes et des hommes qui ont conçu ces
+algorithmes. Les algorithmes sont traduits dans des programmes
+informatiques. Ces programmes, logiciels, ou applications réalisent
+les traitements au sein de vos machines. Et chacun peut être capable
+de comprendre et d'écrire des algorithmes et des programmes. Nous
 allons étudier, dans ce module, les principes généraux des
-algorithmes, des applications informatique et donc des traitements
+algorithmes, des programmes informatique et donc des traitements
 informatique.
-
-**Marc: raisonner me gêne un peu**
 
 En introduction de ce cours, ilustrons ces points sur l'exemple d'une
 application de calcul d'itinéraire par un site Web, une application
@@ -49,14 +49,14 @@ rejoindre la destination mais nous pouvons aussi représenter un
 itinéraire par une suite de villes voisines, toujours par souci de
 simplification.  Le programme peut-il disposer de tous les itinéraires
 possibles entre deux villes quelconques ? La réponse est non car cela
-nécessiterait bien trop de ressources de stockage. Il dispose
-uniquement des distances entre villes voisines (sans étape) ce qui
-représente déjà un volume de données important mais qui peut être
-stocké dans un petit équipement comme un smartphone ou un `GPS`.
+nécessiterait bien trop de ressources de stockage. 
 
-C'est donc un programme qui va calculer, à partir de cette liste, de
-la connaissance du point de départ et de la destination, un
-itinéraire.  Mais un programme ne peut pas non plus calculer tous les
+C'est donc un programme qui va calculer l'itinéraire le plus court
+entre les villes de départ et de destination à partir uniquement des
+distances entre villes voisines (sans étape).  L'ensemble de ces
+distances représente déjà un volume de données important mais peut
+être stocké dans un petit équipement comme un smartphone ou un `GPS`.
+Mais un programme ne peut pas non plus calculer tous les
 itinéraires possibles car, même si une machine calcule vite, le temps
 de calcul serait trop long et vous n'allez pas de Lille à Paris en
 passant par Marseille !  Donc ce programme se doit d'être plus
@@ -70,36 +70,28 @@ algorithme est une explication très précise de *comment* résoudre un
 problème. L'algorithme de Dijkstra est un algorithme ingénieux qui
 décrit comment combiner un nombre raisonnable d'opérations
 élémentaires (des additions, des comparaisons, des recherches dans la
-liste des distances) pour calculer le plus court chemin entre un
+l'ensemble des distances) pour calculer le plus court chemin entre un
 départ et une destination.
 
+Ensuite, vous pouvez facilement imaginer que les idées présentées pour
+l'itinéraire le plus court peuvent être étendues à l'itinéraire le
+plus rapide en remplaçant les distances par des temps de parcours et
+généralisées à d'autres moyens de transport. Ce calcul d'itinéraire va
+pouvoir être à son tour combiné avec d'autres calculs pour la reconnaissance
+vocale, la géolocalisation, ... Ceci va permettre de construire des
+applications complètes qui analysent le son de votre voix, le
+traduisent en mots et phrases, identifient des adresses de départ ou
+de destination, repèrent votre position, interrogent un service web
+connaissant l'état de trafic sur les routes pour vous indiquer, en
+temps réel, le chemin le plus rapide en fonction du trafic. 
 
-**Marc: on ne voit pas la combinaison et comment on fait quelque chose de compliqué à partir de choses simples, on ne sait pas non plus pourquoi l'algo est bien génial, mais c'est peut être plus dur à comprendre** 
-
-En premier lieu, cet exemple illustre que la capacité du programme à
-calculer l'itinéraire le plus court repose sur un algorithme et donc
-sur le génie de ses concepteurs. Ensuite, vous pouvez facilement
-imaginer que les idées présentées pour l'itinéraire le plus court
-peuvent être étendues à l'itinéraire le plus rapide en remplaçant les
-distances par des temps de parcours et généralisées à d'autres moyens de
-transport. Enfin, et c'est pour cela que les capacités des machines
-peuvent nous impressionner, ce calcul d'itinéraire va pouvoir être
-combiné avec d'autres calculs pour la reconnaissance vocale, la
-géolocalisation, ... Ceci va permettre de construire des solutions
-complètes qui analysent le son de votre voix, le transforment en mots
-et phrases, identifient des adresses de départ ou de destination,
-repèrent votre position, interrogent un service web connaissant l'état
-de trafic sur les routes pour vous indiquer, en temps réel, le chemin
-le plus rapide en fonction du trafic. Une telle solution est alors
-devenue un logiciel ou une application qui résout des tâches
-complexes. Sur notre exemple, un assistant de navigation dont les
-compétences sont souvent supérieures à celles d'un passager uniquement
-accompagné de sa vision locale, de ses connaissances et sa carte
-routière. Toutefois, ce logiciel ne peut résoudre que des questions
-pour lesquelles il a été programmé et parfois vous prendrez la main et
-choisirez une solution due à votre intelligence propre.
-
-**Marc Je ne comprends pas l'intérêt de cette dernière phrase**
+Grâce à ces combinaisons nous obtenons une application qui résout des
+tâches complexes, qui peut paraître intelligente car ses capacités
+sont souvent supérieures à celles d'un passager uniquement accompagné
+de sa vision locale, de ses connaissances et sa carte
+routière. Toutefois, ce logiciel ne peut résoudre que des tâches pour
+lesquelles il a été programmé, et repose sur des algorithmes et donc
+sur le génie de ses concepteurs. 
 
 Pour conclure, cet exemple montre qu'une application moderne interagit
 avec l'environnement (utilisateur, périphériques dont système `GPS`,
@@ -112,7 +104,15 @@ L'exemple a également permis de montrer que malgré les capacités sans
 cesse croissantes des machines, il faut être attentif à la taille des
 données mémorisées et au temps de calcul des programmes. Enfin, nous
 rappelons que l'intelligence supposée de la machine est due à
-l'intelligence des femmes et des hommes ayant conçu les applications.
+l'intelligence des femmes et des hommes ayant conçu les
+applications. Mais l'exemple montre également que l'algorithme ou
+l'application a besoin de données pour fonctionner : les distances
+entre villes, l'état du trafic, ... L'intelligence apparente de la
+machine est aussi le résultat de la conjonction de ces données avec
+ces algorithmes. L'industrie moderne du numérique l'a parfaitement
+compris et accorde aujourd'hui bien plus de prix aux données qu'elle
+accumule et partage peu, qu'aux algorithmes qui pour la plupart sont
+publics.
 
 Dans la suite du cours, nous présentons comment composer des
 opérations pour définir de nouvelles opérations et discutons des
@@ -149,109 +149,98 @@ L'exécution d'une application peut faire appel à des interactions avec l'exté
 
 ## Introduction
 
-Avec l'avénement du monde numérique et le développement d'applications
-toujours plus sophistiquées, le mot *algorithme* a fait irruption dans
-les médias. Par exemple, les moteurs de recherche posent la question
-sociétale de l'accès à la connaissance : *quel algorithme choisit
-l'ordre des résultats à une requête dans un moteur de recherche ?* Une
-autre question sociétale concerne l'utilisation des traces de nos
-actions dans le monde numérique : *que peut inférer un algorithme de
-masse de données (big data) sur moi à partir de mes activités sur le
-Web ?* Un dernier exemple concerne l'*intelligence artificielle* avec
-la victoire récente (2016) d'un ordinateur contre le meilleur expert
-humain au jeu de Go qui a soulevé la question suivante : *les
-algorithmes vont-ils permettre l'avènement d'une intelligence
-artificielle ?*
+Bien que la notion soit très ancienne, le mot *algorithme* a récemment
+fait irruption dans les médias, car nous mesurons aujourd'hui plus
+sensiblement l'impact du numérique dans la société. Par exemple, les
+moteurs de recherche posent la question sociétale de l'accès à la
+connaissance : *quel algorithme choisit l'ordre des résultats à une
+requête dans un moteur de recherche ?* Une autre question sociétale
+concerne l'utilisation des traces de nos actions dans le monde
+numérique : *que peut inférer un algorithme de masse de données (big
+data) sur moi à partir de mes activités sur le Web ?* Un dernier
+exemple concerne l'*intelligence artificielle* avec la victoire
+récente (2016) d'un ordinateur contre le meilleur expert humain au jeu
+de Go qui a soulevé la question suivante : *les algorithmes vont-ils
+permettre l'avènement d'une intelligence artificielle ?*
 
-Il nous faut, dans un premier temps, aborder la question de la
-définition du mot algorithme. Dans ce cours de culture numérique,
+
+Qu'est-ce qu'un algorithme ? Dans ce cours de culture numérique,
 plutôt qu'une définition scientifique, nous allons introduire les
 idées principales portées par ce mot. Un
 [célèbre livre d'introduction à l'algorithmique](https://mitpress.mit.edu/books/introduction-algorithms)
 commence par "Before there were computers, there were algorithms". En
 effet, un algorithme est essentiellement *une explication de comment
-on résout un problème* et nous, humains, utilisons régulièrement des
-algorithmes dans toutes nos activités : pour faire la cuisine, pour
-organiser notre journée, pour nous rendre à une adresse, ..., et nous
-sommes, en général, capables de les expliquer. Prenons l'exemple du
-café matinal dans une machine à café à filtres : prendre un filtre
-dans la boîte ; placer le filtre dans la cafetière ; prendre le paquet
-de café ; mettre autant de cuillères de café que de tasses souhaitées
-; mettre de l'eau tant que le niveau ne correspond pas au nombre de
-tasses souhaitées ; démarrer la cafetière. Les instructions doivent
-être suffisamment claires et elles doivent être réalisables. Par
-exemple, l'instruction pour mettre le café suppose que vous sachiez
-que le café doit être placé dans le filtre déposé précédemment sinon
-il faudrait le préciser pour que l'instrucion soit non ambigüe. Quant
-à la réalisation, elle dépend de qui la réalise. En effet, si cet
-algorithme vous convient certainement, il ne conviendra pas à l'ami
-invité chez vous qui ne sait pas où vous rangez vos filtres et votre
-café.
-
-Lorsqu'on passe à la notion d'algorithme en informatique, les
-exigences sont encore plus fortes et l'algorithme qui décrit le
-comment doit être très précis et ne contenir aucune ambiguïté. En
-effet, l'algorithme doit pouvoir être exécuté, de façon automatique,
-sans réfléchir comme le dit
+on résout un problème* et nous, humains, nous résolvons des problèmes
+dans toutes nos activités : pour faire la cuisine, pour organiser
+notre journée, pour nous rendre à une adresse, ..., et nous sommes, en
+général, capables d'expliquer notre façon de procéder, mais cela n'en
+fait pas pour autant toujours un algorithme.  Un algorithme doit être
+très précis et ne contenir aucune ambiguïté car il 
+doit pouvoir être exécuté, de façon automatique, sans juger ni
+réfléchir.  Comme le dit
 [Gérard Berry](http://www.college-de-france.fr/site/gerard-berry/#course) :
 *Le but est d’évacuer la pensée du calcul, afin de le rendre
 exécutable par une machine numérique*.  Enlever la pensée, c'est se
-rendre "bête", c'est-à-dire encore enlever toute possibilité
-d'interpréter les instructions et de se référer à des connaissances
-extérieures. Notre algorithme du café matinal ne satisfait pas les
-contraintes d'un algorithme informatique. Comme nous l'avons vu
-ci-avant, il n'est pas assez clair et se réfère à des connaissances
-extérieures. De plus, il ne fonctionne pas dans toutes les
-circonstances. Pour vous en convaincre, votre invité (très bête,
-convenons-en) n'a pas vu que le réservoir n'était pas vide et il
-ajoute de l'eau sans jamais atteindre le niveau "1 tasse" et déclenche
-une (mini-) inondation ! Votre algorithme a provoqué un bug suite à
-une condition initiale imprévue !
+rendre "bête", c'est-à-dire enlever toute possibilité d'adapter les
+instructions en se référant à des connaissances extérieures.
 
-Nous allons approfondir la notion d'algorithme en informatique. En
+Prenons l'exemple de l'explication de la réalisation du café matinal
+dans une machine à café à filtres : prendre un filtre dans la boîte ;
+placer le filtre dans la cafetière ; prendre le paquet de café ;
+mettre autant de cuillères de café que de tasses souhaitées ; mettre
+de l'eau tant que le niveau ne correspond pas au nombre de tasses
+souhaitées ; démarrer la cafetière. Les instructions ne sont pas
+suffisamment claires. Par exemple, l'instruction pour mettre le café
+suppose que vous sachiez que le café doit être placé dans le filtre
+déposé précédemment sinon il faudrait le préciser pour que
+l'instruction soit non ambiguë. Quant à la réalisation, elle dépend de
+vos connaissances.  Un ami invité chez vous qui ne sait pas où vous
+rangez vos filtres et votre café ne pourra pas la réaliser.
+
+Enlever la pensée, le jugement, c'est aussi s'exposer à des exécutions
+inattendues.  Car un algorithme, bien que précis et non ambigu peut
+pour autant être faux, incomplet ou incorrect. En continuant l'exemple
+du café matinal, votre invité très bête (convenons-en) suit
+scrupuleusement les instructions que vous avez données, quelles que
+soient les conditions. Il n'a pas vu que le réservoir n'était pas vide
+et il ajoute de l'eau sans jamais atteindre le niveau "1 tasse" et
+déclenche une (mini-) inondation !  Dans le monde numérique, ce serait
+un logiciel qui plante, un bug suite à une condition initiale imprévue
+!
+
+Nous allons approfondir la notion d'algorithme et étudier sa relation avec les ordinateurs. En
 effet, la citation complète est : "Before there were computers, there
 were algorithms. But now that there are computers, there are even more
 algorithms, and algorithms lie at the heart of computing" qui montre
-bien l'importance des algorithmes. Nous allons commencer en
-introduisant une machine de base, les principes généraux du calcul et
-en définissant nos premiers algorithmes.
+bien l'importance des algorithmes. 
 
-## Premiers algorithmes sur une machine de base
+## Algorithmes et ordinateurs 
 
-**Rémi :** pas forcément convaincu par l'ajout de la gestion mémoire
-  mais j'ai laissé.
+Nous avons expliqué le principe général de composition permettant de
+créer une nouvelle fonctionnalité en utilisant des fonctionnalités
+déjà existantes. Rappelons également que ce principe est général et
+que les nouvelles fonctionnalités peuvent, à leur tour, être composées
+selon ces principes jusqu'à pouvoir concevoir les applications
+complexes que vous utilisez sur un ordinateur, une tablette ou un
+smartphone. Les règles de composition sont décrites par des
+algorithmes, mais il est avant tout nécessaire de définir quelles
+fonctionnalités dont déjà existantes de base dans un ordinateur.
 
-**Marc** Il n'y a plus cette intro mettant en relation machines/langages
 
-Dans cette section, nous étudions les principes généraux de
-composition permettant de créer une nouvelle fonctionnalité en
-utilisant des fonctionnalités déjà existantes. Nous montrons également
-que ce principe est général et que les nouvelles fonctionnalités
-peuvent, à leur tour, être composées selon ces principes jusqu'à
-pouvoir concevoir les applications complexes que vous utilisez
-quotidiennement sur un ordinateur, une tablette ou un smartphone. Pour
-cela, nous considérons une machine de base avec mémoire, unités de
-calcul et de contrôle et nous introduisons les modes de composition en
-définissant de nouvelles compétences à notre machine avec des
-algorithmes.
+### La machine
 
-### La machine de base
 
-**Marc : pourquoi de base et algorithmes informatiques?**
-
-Les algorithmes informatique sont destinés à être exécutés par des
-machines. Il nous faut donc d'abord préciser ce qu'on entend par
-machine.  La machine c'est l'*ordinateur*. Ce mot inventé par un
-linguiste dans les années 50, fait référence à l'exécution d'ordres,
+*Ordinateur* est un mot inventé par un linguiste dans les
+années 50. Il fait référence à l'exécution d'ordres,
 d'instructions. En anglais le mot *computer* fait plutôt référence au
 calcul et les deux notions se retrouvent dans cette
 machine. Essentiellement, la machine repose sur une *unité de calcul*
-qui fonctionne avec des nombres et caractères représentés (ou codés)
-avec des 0 et des 1. L'unité de calcul sait changer des 0 en 1, faire
-des calculs simples comme des additions, comparer des nombres. Elle
-utilise des *mémoires* pour ranger et retrouver des valeurs. La
-mémoire est organisée avec des emplacements repérés par des numéros
-appelés adresses. On peut alors ranger une valeur à une adresse donnée
+qui fonctionne avec des nombres représentés (ou codés) avec des 0 et
+des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
+simples comme des additions, comparer des nombres. Elle utilise des
+*mémoires* pour ranger et retrouver ces nombres. La mémoire est
+organisée avec des emplacements repérés par des numéros appelés
+adresses. La machine peut alors ranger une valeur à une adresse donnée
 et retrouver une valeur rangée connaissant son adresse. Enfin, une
 *unité de contrôle* donne les ordres à l'unité de calcul et aux
 mémoires. Ce modèle de machine n'a pas évolué depuis les années 40
@@ -262,7 +251,6 @@ l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
 économe et plus résistant si bien qu'on le retrouve désormais dans
 tous les milieux et toutes les situations.
 
-**Marc: pourquoi nombre et caractères** 
 
 ```activité
 Le modèle décrit précédemment a été inventé par Von Neumann. Trouver une description schématique de ce modèle appelé architecture de Von Neumann
@@ -277,32 +265,24 @@ Que pensez vous de la phrase de Harold Abelson dans Structure and Interpretation
 
 ### Transformer une majuscule en minuscule
 
-**Note rémi :** laissé mais pas concaincu par l'ajout de la gestion de
-  la mémoire dans les algos. Cela complique et empêche d'introduire la
-  notion de réutilisation (réutiliser la tarnsformation d'1 caractère).
-
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons-nous les conventions pour
 représenter les caractères introduites dans le module sur les
 documents.  Le caractère `A` majuscule a pour nom "Latin Capital
 Letter A" et pour numéro `65`. Le caractère `a` minuscule a pour
-numéro `97`. Pour transformer une lettre majuscule en la minuscule
-correspondante, il suffit donc d'ajouter `32` au numéro du symbole. On
-peut supposer que notre machine sait effectuer cette opération. On
-peut cependant noter que cette opération peut être faite au niveau du
-codage binaire. En effet, en binaire, croyez-nous sur parole, `65`
-s'écrit `01000001` et `97` s'écrit `01100001`. C'est remarquable car,
-pour passer de l'un à l'autre, seul le 6eme chiffre partant de la
-droite, un `0`, est transformé en `1`. Ceci est vrai pour toutes les
-lettres de notre alphabet latin, donc le passage de majuscule à
-minuscule ou ajouter `32` au numéro consiste juste à changer un `0`
-par un `1` à la sixième position du codage binaire, ce qui nous permet
-de noter que ce codage est astucieux. Une telle opération peut donc
-être réalisé par notre machine et son unité de calcul. Nous sommes
-donc capables de décrire le traitement que doit réaliser la machine
-pour transformer un symbole stocké dans sa mémoire de majuscule en
-minuscule avec l'algorithme suivant où nous supposons que la machine a
-rangé le symbole à l'adresse `413` :
+numéro `97`. Croyez-nous sur parole, `65` s'écrit `01000001` et `97`
+s'écrit `01100001`. C'est remarquable car, pour passer de l'un à
+l'autre, seul le 6ème chiffre partant de la droite, un `0`, est
+transformé en `1`. Ceci est vrai pour toutes les lettres de notre
+alphabet latin et le passage de majuscule à minuscule consiste juste à
+changer un `0` par un `1` à la sixième position. Et l'unité de calcul
+sait réaliser cette opération.  Notons le lien très fort entre le
+codage, très astucieux, et les capacités de la machine. Notons aussi
+que changer ce 6ème chiffre correspond également à ajouter 32 (65+32
+vaut 97). Nous sommes donc capables de décrire le traitement que doit
+réaliser la machine pour transformer un symbole stocké dans sa mémoire
+de majuscule en minuscule avec l'algorithme suivant où nous supposons
+que la machine a rangé le symbole à l'adresse `413` :
 
     Accéder à la mémoire à l'adresse 413 (retrouver le codage binaire du numéro du symbole)
 	Ajouter 32 (dans l'unité de calcul, changer le 6ème chiffre de 0 en 1)
@@ -312,11 +292,11 @@ Nous retrouvons dans cet exemple l'organisation de la machine avec ses
 adresses, sa mémoire, son unité de calcul et son unité de
 contrôle. L'unité de contrôle doit juste assurer que ces 3
 instructions soient réalisées successivement dans cet ordre, *en
-séquence*. Nous sommes donc arrivés à définir sur notre machine de
-base un traitement ayant un sens pour nous (remplacer une majuscule
-par une minuscule) à partir de la représentation numérique d'une
-information et grâce à une combinaison d'instructions en séquence. *La
-séquence est le premier mode de combinaison utile pour décrire des
+séquence*. Nous sommes donc arrivés à définir sur notre ordinateur un
+traitement ayant un sens pour nous (remplacer une majuscule par une
+minuscule) à partir de la représentation numérique d'une information
+et grâce à une combinaison d'instructions en séquence. *La séquence
+est le premier mode de combinaison utile pour décrire des
 algorithmes*.
 
 ### Transformer seulement les majuscules en minuscules
@@ -326,11 +306,11 @@ scrupuleusement les ordres qu'on lui donne. Le traitement précédent
 ajoutera `32` au numéro du caractère en mémoire même si celui-ci n'est
 pas le numéro d'une lettre majuscule. Par exemple, le numéro `64`
 représente l'arobase `@` et si on lui ajoutait `32` cela donnerait une
-apostrophe inversée ` ce qui n'est pas le résultat attendu. On
-pourrait même, selon le contenu de la mémoire, obtenir un caractère
-invisible ou une erreur ! Pour résoudre ce problème, nous
-allons contrôler que le contenu de la mémoire correspond bien à une
-lettre majuscule avec l'algorithme suivant :
+apostrophe inversée ` ce qui n'est pas le résultat attendu, donc un bug ! On devrait
+plutôt ne permettre le passage de majuscules en minuscules qu'en
+présence de majuscules. Pour résoudre ce problème, nous allons
+contrôler que le contenu de la mémoire correspond bien à une lettre
+majuscule avec l'algorithme suivant :
 
     Accéder à la mémoire à l'adresse 413
 	Si la valeur est comprise entre 65 et 90 Alors (si c'est une majuscule)
@@ -340,16 +320,19 @@ lettre majuscule avec l'algorithme suivant :
 
 Cet algorithme est une séquence de deux instructions. La seconde
 instruction est un *si* qui est le représentant d'un deuxième mode de
-combinaison appelé *alternative*. En effet, selon le résultat de la
-*condition* (ou test), la machine exécutera différentes
-instructions. Sur notre algorithme, si le numéro du caractère en
-mémoire est compris entre 65 et 90, c'est-à-dire si le caractère est
-une majuscule, la machine exécutera les deux instructions pour
-remplacer la majuscule par la minuscule correspondante dans la
-mémoire. Dans le cas contraire, on ne fait rien mais nous aurions pu,
-dans la partie sinon, renvoyer un caractère particulier ou renvoyer un
-message d'erreur. *L'alternative est le deuxième mode de
-combinaison utile pour décrire des algorithmes*.
+combinaison appelé *alternative*. L'ordinateur est capable d'exécuter
+cette alternative cela car l'unité de calcul sait faire des
+comparaisons et l'unité de contrôle est capable de brancher
+(sélectionner) la prochaine instruction selon la valeur de cette
+comparaison. Donc selon le résultat de la *condition du si*, la
+machine exécutera différentes instructions. Sur notre algorithme, si
+le numéro du caractère en mémoire est compris entre 65 et 90,
+c'est-à-dire si le caractère est une majuscule, la machine exécutera
+les deux instructions pour remplacer la majuscule par la minuscule
+correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
+mais nous aurions pu en toute généralité réaliser une autre suite
+d'instructions. *L'alternative est le deuxième mode de combinaison
+utile pour décrire des algorithmes*.
 
 ### Transformer un texte complet
 
