@@ -323,7 +323,7 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ::Refaire la saisie::
 [markdown]
-Reproduire avec LibreOffice l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871).
+Reproduire avec LibreOffice l'exemple décrit dans ces 2 vidéos: [La saisie](https://player.vimeo.com/video/183312871), [La saisie - un copier-coller](https://player.vimeo.com/video/183312874).
 \n
 Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
