@@ -165,7 +165,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 
 // question: 272  name: La distribution
-::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l'ait rendue avant de la distribuer à un autre client.</p>{TRUE####<p>Cette notion de "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
+::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l'ait rendue avant de la distribuer à un autre client.</p>{FALSE####<p>Cette notion de "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
 
 
 ```
@@ -277,7 +277,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 Allons maintenant voir plus en détail le fonctionnement ; le langage `html` a plusieurs caractéristiques très intéressantes. Nous avons vu qu'il permettait d'introduire des hyperliens dans un document, mais il possède d'autres atouts.
 
 
-C'est un langage de description de document , c'est à dire qu'il permet d'expliquer comment le document est construit et donc comment un logiciel comme un navigateur peut l'afficher. Concrètement, `html` permet d'ajouter au contenu texte des éléments de structure du type : ce paragraphe est un titre, celui-là est un sous-titre, cet  est une légende, ce mot doit être mis en exergue...
+C'est un langage de description de document , c'est à dire qu'il permet d'expliquer comment le document est construit et donc comment un logiciel comme un navigateur peut l'afficher. Concrètement, `html` permet d'ajouter au contenu texte des éléments de structure du type : ce paragraphe est un titre, celui-là est un sous-titre, c'est  est une légende, ce mot doit être mis en exergue...
 Cette distinction contenu/structure est essentielle, elle est présente dans de nombreux domaine et nous y reviendrons souvent. La structure permet d'ajouter du sens aux parties de textes et à l'aide de règles de résentation de rendre une page `html` affichable sur de nombreux types d'écrans. Le navigateur calcule alors la présentation adaptée, par exemple pour une tablette, un smartphone ou un grand écran d'ordinateur.
 
 En français la traduction de `html` est : langage de balisage pour documents hypertexte. Les balises vont indiquer la structure du document en titres, paragraphes etc ainsi que des liens vers d'autres ressources du Web. Les documents sont donc des textes décrivant des documents hypertexte. Mais que fait ensuite le client, le navigateur avec ce document hypertexte qu'il vient de recevoir ?
@@ -291,9 +291,9 @@ Rappelons qu'une page affichée dans votre navigateur est en fait un assemblage 
 
 Une image est une ressource au même titre que les autres documents. Elle est donc désignée par une URL. Notez bien que ce mécanisme d'URLs permet de désigner des images dans les pages web comme autant de ressources indépendantes. En conséquence, les images ne se trouvent pas forcément sur le même serveur que le document principal.
 
-Examinons alors plus en détail ce qui se passe lorsque je clique sur un lien qui pointe vers une ressource de type texte mais qui cette fois contient des liens vers des images, ce que nous faisons tous les jours et qui constitue l'essentiel des pages que nous consultons. Le début du processus est rigoureusement identique à l'exemple précédent, mais au moment du calcul du résultat, (i.e. de l'affichage de la page Web par le navigateur), le client rencontre dans la description de sa page, un lien vers une ressource image . Il ne peut pas afficher cette image directement puisque le fichier n'est pas inclus , seul le lien vers cette ressource est spécifié.
+Examinons alors plus en détail ce qui se passe lorsque je clique sur un lien qui pointe vers une ressource de type texte mais qui cette fois contient des liens vers des images, ce que nous faisons tous les jours et qui constitue l'essentiel des pages que nous consultons. Le début du processus est rigoureusement identique à l'exemple précédent, mais au moment du calcul du résultat, (i.e. de l'affichage de la page Web par le navigateur), le client rencontre dans la description de sa page, un lien vers une ressource image . Il ne peut pas afficher cette image directement puisque le fichier n'est pas inclus, seul le lien vers cette ressource est spécifié.
 
-Alors, sans rien nous demander , il effectue une autre requête (identique à la précédente mais avec l'url de l'image) pour obtenir cette ressource. La réponse à cette requête est une copie du fichier image indiqué. Le client peut alors l'intégrer à l'affichage de la page.
+Alors, sans rien nous demander, il effectue une autre requête (identique à la précédente mais avec l'url de l'image) pour obtenir cette ressource. La réponse à cette requête est une copie du fichier image demandé. Le client peut alors l'intégrer à l'affichage de la page.
 
 Ce processus se répète autant de fois qu'il y a d'images dans le document et ce, quelles que soient leurs tailles.
 
@@ -444,7 +444,7 @@ Donc bien des numéros nous identifient.
 
 Mais dès lors que ces numéros d'identification sont rapprochés ou unifiés, la technique devient si puissante qu'on l'estime menaçante pour nos libertés.
 
-Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour empêcher ou limiter l'usage du numéro de sécurité sociale dans les autres administrations de l'état. Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
+Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans pour empêcher ou limiter l'usage du numéro de sécurité sociale dans les autres administrations de l'état. Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
 
 ```compréhension
 
