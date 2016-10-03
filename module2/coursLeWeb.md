@@ -56,7 +56,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
         <li>En quelle année a-t-il été créé ?</li>
       </ol>
     </div>
-{####<p>Contrairement à ce qu'on pourrait imaginer, Tim Berners-Lee n'était pas informaticien mais <b>physicien</b>. Il était chercheur en physique nucléaire au CERN dans les années 80. Son objectif était de faciliter le transfert de connaissance dans la communauté scientifique internationale.</p><p>Le premier site réellement opérationnel décrivait les principales caractéristiques du web et expliquait comment accéder aux documents d'autres personnes et comment configurer son propre serveur.</p><p>Les travaux ont démarré en 1989, le premier site a été mis en ligne en <b>1991</b> mais c'est en 1993 que le premier navigateur au sens ou nous les manipulons aujourd'hui est apparu.</p>}
+{####<p>Contrairement à ce qu'on pourrait imaginer, Tim Berners-Lee n'était pas informaticien mais <b>physicien</b>. Il était chercheur en physique nucléaire au CERN dans les années 80. Son objectif était de faciliter le transfert de connaissances dans la communauté scientifique internationale.</p><p>Le premier site réellement opérationnel décrivait les principales caractéristiques du web et expliquait comment accéder aux documents d'autres personnes et comment configurer son propre serveur.</p><p>Les travaux ont démarré en 1989, le premier site a été mis en ligne en <b>1991</b> mais c'est en 1993 que le premier navigateur au sens où nous les manipulons aujourd'hui est apparu.</p>}
 
 
 ::Qui dirige le Web ?::[html]
@@ -73,7 +73,7 @@ L'ensemble des documents ainsi que les liens qui les relient forment alors un r�
 <li>Qui en est le fondateur ?</li>
 <li>Exprimez-vous en quelques lignes sur votre position citoyenne (intérêt, légalité, ...) de ce genre de sites.</li>
 </ol>
-{####<p id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span>association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
+{####<p id="docs-internal-guid-3fe28ae3-d61d-dc88-8eea-c34984c1d971"><b>WikiLeaks</b> (wikileaks.org) est une<a href="https://fr.wikipedia.org/wiki/Association_%C3%A0_but_non_lucratif"> </a><span> association à but non lucratif</span> dont le<span> site web</span><span> lanceur d'alertes</span> publie des documents ainsi que des analyses politiques et sociales. Sa raison d'être est de donner une audience aux<span> fuites d'information</span>, tout en protégeant ses sources.</p>
 <p dir="ltr">( ref : <a target="_blank" href="https://fr.wikipedia.org/wiki/WikiLeaks">https://fr.wikipedia.org/wiki/WikiLeaks</a>)</p>
 <p dir="ltr"></p>
 <p dir="ltr">Le fondateur est <b>Julian Assange.</b></p>
@@ -99,7 +99,7 @@ Dans le cadre du web, les clients sont les navigateurs qui nous permettent d'acc
 ## Les clients
 [video](https://vimeo.com/138623609){: .cours_video}
 
-**Les clients**
+
 **Le client quant à lui, émet les requêtes vers le serveur et réceptionne les ressources qui sont envoyées en réponse. Les clients que nous utilisons sont les navigateurs web.Ce sont donc des logiciels qui s'exécutent sur nos propres machines sous notre contrôle.**
 
 Il en existe des centaines mais les plus connus du grand public sont Firefox, Chrome, Safari, Opera ou Internet Explorer.
@@ -111,7 +111,7 @@ Une remarque importante doit être signalée. Le terme naviguer peut prêter à 
 
 ## Les serveurs
 
-**Les serveurs**
+
 [video](https://vimeo.com/138623583){: .cours_video}
 
 Un serveur est un logiciel (un programme) qui s'exécute sur une machine le plus souvent 24/24 et 7/7 et attend qu'un client l'interpelle, par exemple c'est le cas du serveur web www.univ-lille.fr qui distribue les ressources du site de l'université de Lille. Dans ces journaux, de nombreuses informations à propos des clients sont mémorisées : leur adresse IP, des dates de visites, la ressource demandée... Notons que, l'envoi d'une ressource, est en fait l' envoi d'une copie de la ressource, l'original restant disponible pour d'autres requêtes identiques. En plus de ce service de distribution, le serveur garde l' historique de toutes les requêtes qui lui ont été adressées dans des journaux d'activité : les logs en anglais. Ces journaux sont autant de traces que nous laissons et qui peuvent être analysées et exploitées.
@@ -123,7 +123,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 ::Erreur 404!::[html]<p>Que signifie le code d'erreur 404 dans le protocole HTTP</p>{
 	~<p>La ressource a été déplacée sur un autre serveur</p>
 	=<p>La ressource n’existe pas sur le serveur</p>#<p>Votre réponse est correcte.</p>
-	~<p>Le client de peut pas communiquer avec le serveur</p>
+	~<p>Le client ne peut pas communiquer avec le serveur</p>
 	####<p>L'erreur 404 apparaît lorsque la ressource demandée n'existe pas sur le serveur. Cela se produit en général lorsqu'il y a une 'faute' dans l'url ou lorsque le gestionnaire du site a déplacé, supprimé ou renommé une ressource. L'url devient alors invalide.</p>
 }
 
@@ -153,7 +153,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 	~la liste des noms des gens qui ont consulté le site hébergé sur le serveur#non, sur la plupart des sites nous n'envoyons pas nos noms, les logs conservent les traces des requêtes effectuées par les clients repérés par leur adresse IP ainsi que toutes les activités du serveur dans un journal
 	=un journal des activités du serveur#Oui, bravo
 	~la liste de toutes les ressources stockées sur ce serveur#Non, les logs conservent le journal des activités du serveur
-	####<p>Voici ci dessous quelques lignes extraites d'un journal (log) d'un serveur Web. Chaque ligne correspond à une requête d'un client. Les lignes ont été "anonymisées" \: nous avons remplacé les adresses IP des clients par 127.0.0.1.  </p><p> </p><p>Sur cette ligne vous avez l'adresse IP (anonymisée) du client, suivi de la date et l'heure de la requête et entre guillemets la requête adressée ("GET /polys/...") qui signifie " donne-moi la ressource "/poly/...etc". On voit également le code 200 signalant que la requête a bien été traitée sans erreur et aussi les caractéristiques du client \:  C'est ici le robot du moteur de recherche bing.</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:48 +0200] "GET /polys/access-1997/node66.html HTTP/1.1" 200 2257 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http\://www.bing.com/bingbot.htm)"</code></p><p> </p><p>L'exemple suivant est intéressant car il montre une suite de 5 requêtes. La première est un celle d'un document contenant des liens vers d'autres ressources (feuilles de style CSS et images au format PNG). Les 5 requêtes sont enchaînées car le navigateur (ici Safari) a immédiatement demandé au serveur les ressources nécessaires pour afficher une page web complète.</p><p>    <br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Football/Confrontations/Ajaccio-Clermont.php HTTP/1.1" 200 4836 "https\://www.google.fr/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" </code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-v3.css HTTP/1.1" 200 6692 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-print-v3.css HTTP/1.1" 200 2231 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/valid-html5.png HTTP/1.1" 200 1723 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/FabienTorre.png HTTP/1.1" 200 478 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code></p><p>Un dernier petit exemple pour les hackers \:-). On peut lire avec un peu d'expérience ou de sagacité que la ressource (ici /FAQ-LaTeX/12.3.html) a été demandée depuis une page web (indiquée après le code de succès 200 et la taille de 7444 de cette ressource) qui est une adresse sur les serveurs de Google. En regardant mieux encore, on peut même lire que c'est à la suite d'une recherche à propos de "FAQ-LaTeX"... C'est en partie grâce à cette indication de provenance qu'on peut rémunérer les sites qui font de la publicité vers d'autres sites...</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:30 +0200] "GET /FAQ-LaTeX/12.3.html HTTP/1.1" 200 7444 "http\://www.google.fr/url?sa\=t&rct\=j&q\=&esrc\=s&source\=web&cd\=1&ved\=0CCQQFjAAahUKEwjo6IWtgIrIAhVFOxQKHdjEDfw&url\=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2FFAQ-LaTeX%2F12.3.html&usg\=AFQjCNEtHaKlFbotxdHj6bxRzpkDN3NwkA" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv\:24.0) Gecko/20100101 Firefox/24.0"</code><br /><br /></p>
+	####<p>Voici ci dessous quelques lignes extraites d'un journal (log) d'un serveur Web. Chaque ligne correspond à une requête d'un client. Les lignes ont été "anonymisées" \: nous avons remplacé les adresses IP des clients par 127.0.0.1.  </p><p> </p><p>Sur cette ligne vous avez l'adresse IP (anonymisée) du client, suivie de la date et l'heure de la requête et entre guillemets la requête adressée ("GET /polys/...") qui signifie " donne-moi la ressource "/poly/...etc". On voit également le code 200 signalant que la requête a bien été traitée sans erreur et aussi les caractéristiques du client \:  C'est ici le robot du moteur de recherche bing.</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:48 +0200] "GET /polys/access-1997/node66.html HTTP/1.1" 200 2257 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http\://www.bing.com/bingbot.htm)"</code></p><p> </p><p>L'exemple suivant est intéressant car il montre une suite de 5 requêtes. La première est celle d'un document contenant des liens vers d'autres ressources (feuilles de style CSS et images au format PNG). Les 5 requêtes sont enchaînées car le navigateur (ici Safari) a immédiatement demandé au serveur les ressources nécessaires pour afficher une page web complète.</p><p>    <br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Football/Confrontations/Ajaccio-Clermont.php HTTP/1.1" 200 4836 "https\://www.google.fr/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240" </code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-v3.css HTTP/1.1" 200 6692 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/include/css/ft-print-v3.css HTTP/1.1" 200 2231 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/valid-html5.png HTTP/1.1" 200 1723 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:19\:57 +0200] "GET /\~torre/Images/FabienTorre.png HTTP/1.1" 200 478 "http\://www.grappa.univ-lille3.fr/\~torre/Football/Confrontations/Ajaccio-Clermont.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240"</code></p><p>Un dernier petit exemple pour les hackers \:-). On peut lire avec un peu d'expérience ou de sagacité que la ressource (ici /FAQ-LaTeX/12.3.html) a été demandée depuis une page web (indiquée après le code de succès 200 et la taille de 7444 de cette ressource) qui est une adresse sur les serveurs de Google. En regardant mieux encore, on peut même lire que c'est à la suite d'une recherche à propos de "FAQ-LaTeX"... C'est en partie grâce à cette indication de provenance qu'on peut rémunérer les sites qui font de la publicité vers d'autres sites...</p><p><br /><code>127.0.0.1 - - [22/Sep/2015\:08\:22\:30 +0200] "GET /FAQ-LaTeX/12.3.html HTTP/1.1" 200 7444 "http\://www.google.fr/url?sa\=t&rct\=j&q\=&esrc\=s&source\=web&cd\=1&ved\=0CCQQFjAAahUKEwjo6IWtgIrIAhVFOxQKHdjEDfw&url\=http%3A%2F%2Fwww.grappa.univ-lille3.fr%2FFAQ-LaTeX%2F12.3.html&usg\=AFQjCNEtHaKlFbotxdHj6bxRzpkDN3NwkA" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv\:24.0) Gecko/20100101 Firefox/24.0"</code><br /><br /></p>
 }
 
 
@@ -165,7 +165,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 
 
 // question: 272  name: La distribution
-::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l'ait rendue avant de la distribuer à un autre client.</p>{TRUE####<p>Cette notion de "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
+::La distribution::[html]<p>Quand un serveur a envoyé une image à un client, il doit attendre que ce client l'ait rendue avant de la distribuer à un autre client.</p>{FALSE####<p>Cette notion de "rendre" une ressource n'a pas de sens, à chaque fois les ressources sont copiées et ce sont des copies qui sont envoyées, ...</p><p>Le serveur conserve toujours ses ressources et peut en faire autant de copies que nécessaire.</p> }
 
 
 ```
@@ -234,15 +234,6 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 }
 
 
-// question: 276  name: Les balises HTML
-::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
-	~%50%<p>de délimiter des parties de texte</p>
-	~%50%<p>de décrire la structure des documents</p>
-	~<p>de signaler aux internautes des pages dangereuses</p>
-	~<p>d'accélérer internet</p>
-}
-
-
 // question: 277  name: Les informations échangées entre clients et serveurs
 ::Les informations échangées entre clients et serveurs::[html]<p>Quelles autres informations que l’URL peuvent être échangées dans un échange entre un client et un serveur Web ?</p>{
 	~%33.33333%<p>l’adresse IP du client</p>
@@ -277,8 +268,8 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 Allons maintenant voir plus en détail le fonctionnement ; le langage `html` a plusieurs caractéristiques très intéressantes. Nous avons vu qu'il permettait d'introduire des hyperliens dans un document, mais il possède d'autres atouts.
 
 
-C'est un langage de description de document , c'est à dire qu'il permet d'expliquer comment le document est construit et donc comment un logiciel comme un navigateur peut l'afficher. Concrètement, `html` permet d'ajouter au contenu texte des éléments de structure du type : ce paragraphe est un titre, celui-là est un sous-titre, cet  est une légende, ce mot doit être mis en exergue...
-Cette distinction contenu/structure est essentielle, elle est présente dans de nombreux domaine et nous y reviendrons souvent. La structure permet d'ajouter du sens aux parties de textes et à l'aide de règles de résentation de rendre une page `html` affichable sur de nombreux types d'écrans. Le navigateur calcule alors la présentation adaptée, par exemple pour une tablette, un smartphone ou un grand écran d'ordinateur.
+C'est un langage de description de document , c'est à dire qu'il permet d'expliquer comment le document est construit et donc comment un logiciel comme un navigateur peut l'afficher. Concrètement, `html` permet d'ajouter au contenu texte des éléments de structure du type : ce paragraphe est un titre, celui-là est un sous-titre, c'est une légende, ce mot doit être mis en exergue...
+Cette distinction contenu/structure est essentielle, elle est présente dans de nombreux domaine et nous y reviendrons souvent. La structure permet d'ajouter du sens aux parties de textes et à l'aide de règles de présentation de rendre une page `html` affichable sur de nombreux types d'écrans. Le navigateur calcule alors la présentation adaptée, par exemple pour une tablette, un smartphone ou un grand écran d'ordinateur.
 
 En français la traduction de `html` est : langage de balisage pour documents hypertexte. Les balises vont indiquer la structure du document en titres, paragraphes etc ainsi que des liens vers d'autres ressources du Web. Les documents sont donc des textes décrivant des documents hypertexte. Mais que fait ensuite le client, le navigateur avec ce document hypertexte qu'il vient de recevoir ?
 
@@ -291,9 +282,9 @@ Rappelons qu'une page affichée dans votre navigateur est en fait un assemblage 
 
 Une image est une ressource au même titre que les autres documents. Elle est donc désignée par une URL. Notez bien que ce mécanisme d'URLs permet de désigner des images dans les pages web comme autant de ressources indépendantes. En conséquence, les images ne se trouvent pas forcément sur le même serveur que le document principal.
 
-Examinons alors plus en détail ce qui se passe lorsque je clique sur un lien qui pointe vers une ressource de type texte mais qui cette fois contient des liens vers des images, ce que nous faisons tous les jours et qui constitue l'essentiel des pages que nous consultons. Le début du processus est rigoureusement identique à l'exemple précédent, mais au moment du calcul du résultat, (i.e. de l'affichage de la page Web par le navigateur), le client rencontre dans la description de sa page, un lien vers une ressource image . Il ne peut pas afficher cette image directement puisque le fichier n'est pas inclus , seul le lien vers cette ressource est spécifié.
+Examinons alors plus en détail ce qui se passe lorsque je clique sur un lien qui pointe vers une ressource de type texte mais qui cette fois contient des liens vers des images, ce que nous faisons tous les jours et qui constitue l'essentiel des pages que nous consultons. Le début du processus est rigoureusement identique à l'exemple précédent, mais au moment du calcul du résultat, (i.e. de l'affichage de la page Web par le navigateur), le client rencontre dans la description de sa page, un lien vers une ressource image . Il ne peut pas afficher cette image directement puisque le fichier n'est pas inclus, seul le lien vers cette ressource est spécifié.
 
-Alors, sans rien nous demander , il effectue une autre requête (identique à la précédente mais avec l'url de l'image) pour obtenir cette ressource. La réponse à cette requête est une copie du fichier image indiqué. Le client peut alors l'intégrer à l'affichage de la page.
+Alors, sans rien nous demander, il effectue une autre requête (identique à la précédente mais avec l'url de l'image) pour obtenir cette ressource. La réponse à cette requête est une copie du fichier image demandé. Le client peut alors l'intégrer à l'affichage de la page.
 
 Ce processus se répète autant de fois qu'il y a d'images dans le document et ce, quelles que soient leurs tailles.
 
@@ -324,6 +315,13 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ::Exercice::[html]
 <p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant </p>
 
+// question: 276  name: Les balises HTML
+::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
+	~%50%<p>de délimiter des parties de texte</p>
+	~%50%<p>de décrire la structure des documents</p>
+	~<p>de signaler aux internautes des pages dangereuses</p>
+	~<p>d'accélérer internet</p>
+}
 
 // question: 283  name: Au delà du contenu
 ::Au delà du contenu::[html]<p>Pourquoi peut-on créer facilement une table des matières ou construire la liste des liens d’un document HTML ?</p>{}
@@ -444,7 +442,7 @@ Donc bien des numéros nous identifient.
 
 Mais dès lors que ces numéros d'identification sont rapprochés ou unifiés, la technique devient si puissante qu'on l'estime menaçante pour nos libertés.
 
-Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour empêcher ou limiter l'usage du numéro de sécurité sociale dans les autres administrations de l'état. Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
+Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans pour empêcher ou limiter l'usage du numéro de sécurité sociale dans les autres administrations de l'état. Naturellement, avec l'avènement du numérique ce rapprochement de numéros d'identification devient très facile techniquement. Il convient de redoubler de vigilance...
 
 ```compréhension
 
@@ -483,6 +481,7 @@ Si bien que par exemple, le parlement a dû légiférer il y plus de 30 ans pour
 [html]<p>Rendez-vous sur les pages suivantes, lisez et effectuez les manipulations demandées :</p>
 <ul><li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php</a></li>
 <li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html</a></li></ul>
+Notez si vous le souhaitez vos remarques ci-dessous (réponse non obligatoire)
 {}
 ```
 
@@ -653,10 +652,11 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
 
 ```activité-avancée
 
-::A vous !::Attention, vous n'avez droit qu'à une seule tentative. Pour les questions ouvertes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
 
 // question: 296  name: Cookies tiers or not cookies tiers ?
-::Cookies tiers or not cookies tiers ?::[html]<p>Les navigateurs doivent-ils par défaut autoriser les cookies tiers ?</p>{}
+::Cookies tiers or not cookies tiers ?::[html]<p>Les navigateurs doivent-ils par défaut autoriser les cookies tiers ?</p>
+**Remarque:** pour cette question et les suivantes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
+{}
 
 
 // question: 297  name: J'aime ou j'aime pas ?
@@ -929,12 +929,12 @@ Les activités associées à ce module vont entre autre vous permettre de voir c
 ```
 
 ```activité-avancée
-::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Déposez-la dans ce devoir.{}
+::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Enregistrez l'image sur votre compte owncloud (ou un autre service de partage d'image), puis collez le lien de l'image après en avoir activé le partage par lien public.{}
 
 
 ::L'intermédiation: votre analyse::[html]
 <p>Pour terminer ce cours, nous vous proposons de regarder une vidéo d'une présentation par Stéphane Grumbach qui explique les impacts du web et des données numériques d'un point de vue sociétal.</p>
 <p><a target="_blank" class="moz-txt-link-freetext" href="https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation">https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation</a> (1h11mn).</p>
-<p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>(Attention, vous n'avez droit qu'à une seule tentative. Cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.)</em></p>
+<p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>Remarque: cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.</em></p>
 {}
 ```
