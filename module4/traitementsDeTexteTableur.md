@@ -79,7 +79,7 @@ même cours.
 - retourner sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
 - télécharger et **exécuter** la traduction française de l'interface (*Translated User interface*)
 - quitter et relancer LibreOffice.
-- le cas échéant, ne pas tenir compte des messages d'erreur concernats JRE.
+- le cas échéant, ne pas tenir compte des messages d'erreur concernant *JRE* (un composant facultatif de `libreoffice`).
 
 
 # Traitements de texte
@@ -241,7 +241,9 @@ traitement de texte doit pouvoir reconnaître les mots, les
 paragraphes, les listes. nous expliquons ici quelques règles à
 respecter pour ce faire.
 
-Les **caractères**. La plupart, par exemple, lettres, chiffres et
+**Les caractères**
+
+La plupart, par exemple, lettres, chiffres et
 symboles de ponctuation, sont visibles, mais certains sont invisibles,
 en particulier, les espaces. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
@@ -262,7 +264,9 @@ forme peut être insatisfaisante. Donc, *visualiser tous les
 caractères*, y compris ceux qui sont invisibles, aide à bien
 comprendre le contenu saisi.
 
-Les **mots**. Le logiciel les reconnaît car ils sont séparés par des
+**Les mots**
+
+Le logiciel les reconnaît car ils sont séparés par des
 espaces ou des signes de ponctuation. Des règles typographiques,
 spécifiques à chaque langue, définissent les espaces et symboles de
 ponctuation. Par exemple, en français une espace précède toujours le
@@ -270,7 +274,9 @@ signe `:` alors qu'il n'y pas d'espace avant le signe `:` en
 anglais. Le respect de ces règles est impératif et souvent, le
 logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
-Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
+**Les paragraphes**
+
+Ce sont des ensembles de mots séparés par des
 *fins de paragraphes* créés par l'appui sur la touche `Entrée`. La fin
 de ligne dans le rendu du document (le retour à la ligne) est calculée
 par le traitement de texte et donc la touche `Entrée` ne marque pas la
@@ -284,13 +290,17 @@ texte. Comme pour les espaces et les mots, la convention choisie est
 de **ne jamais avoir deux fins de paragraphe consécutives** et de
 faire confiance au logiciel pour réaliser le meilleur rendu visuel.
 
-Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
-  traitement de texte permet de les déclarer comme titres en précisant
-  leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
-  de niveau 1 pour une section, titre de niveau 2 pour une
-  sous-section, titre de niveau 3 pour une sous-sous-section.
+**Les titres**
 
-Les **listes**.  Ce sont des suites de paragraphes reliés entre eux
+Ce sont bien des paragraphes, mais le logiciel de
+traitement de texte permet de les déclarer comme titres en précisant
+leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
+de niveau 1 pour une section, titre de niveau 2 pour une
+sous-section, titre de niveau 3 pour une sous-sous-section.
+
+**Les listes**
+
+Ce sont des suites de paragraphes reliés entre eux
 pour permettre une présentation cohérente. Pour assurer cette
 cohérence, beaucoup de caractéristiques sont définies sous forme de
 règles utilisées par le logiciel pour l'apparence des listes : le
@@ -679,7 +689,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ::Document maître::
 [markdown]
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice](https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice](https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte.  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
