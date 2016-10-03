@@ -481,6 +481,7 @@ Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans po
 [html]<p>Rendez-vous sur les pages suivantes, lisez et effectuez les manipulations demandées :</p>
 <ul><li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php</a></li>
 <li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html</a></li></ul>
+Notez si vous le souhaitez vos remarques ci-dessous (réponse non obligatoire)
 {}
 ```
 
@@ -651,10 +652,11 @@ Grâce aux cookies contenant des numéros d'identification, des sites ou
 
 ```activité-avancée
 
-::A vous !::Attention, vous n'avez droit qu'à une seule tentative. Pour les questions ouvertes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
 
 // question: 296  name: Cookies tiers or not cookies tiers ?
-::Cookies tiers or not cookies tiers ?::[html]<p>Les navigateurs doivent-ils par défaut autoriser les cookies tiers ?</p>{}
+::Cookies tiers or not cookies tiers ?::[html]<p>Les navigateurs doivent-ils par défaut autoriser les cookies tiers ?</p>
+**Remarque:** pour cette question et les suivantes, répondez d'abord dans un document séparé, puis collez les réponses dans les zones prévues une fois votre travail terminé.
+{}
 
 
 // question: 297  name: J'aime ou j'aime pas ?
@@ -927,12 +929,12 @@ Les activités associées à ce module vont entre autre vous permettre de voir c
 ```
 
 ```activité-avancée
-::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Déposez-la dans ce devoir.{}
+::Vider le cache et l'historique::Faites une capture de la fenêtre du navigateur qui propose de vider le cache et les autres données locales. Enregistrez l'image sur votre compte owncloud (ou un autre service de partage d'image), puis collez le lien de l'image après en avoir activé le partage par lien public.{}
 
 
 ::L'intermédiation: votre analyse::[html]
 <p>Pour terminer ce cours, nous vous proposons de regarder une vidéo d'une présentation par Stéphane Grumbach qui explique les impacts du web et des données numériques d'un point de vue sociétal.</p>
 <p><a target="_blank" class="moz-txt-link-freetext" href="https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation">https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation</a> (1h11mn).</p>
-<p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>(Attention, vous n'avez droit qu'à une seule tentative. Cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.)</em></p>
+<p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>Remarque: cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.</em></p>
 {}
 ```
