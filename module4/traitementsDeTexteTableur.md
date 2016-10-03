@@ -72,15 +72,25 @@ même cours.
   des raccourcis, c'est-à-dire des modifications superficielles des
   interfaces des logiciels.
 
+**Installer libreOffice :**  Si vous voulez installer LibreOffice, ce que nous vous conseillons, il faut :
+
+- aller sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et installer le logiciel
+- retourner sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et **exécuter** la traduction française de l'interface (*Translated User interface*)
+- quitter et relancer LibreOffice.
+- le cas échéant, ne pas tenir compte des messages d'erreur concernats JRE.
+
+
 # Traitements de texte
 
 ## Objectifs
 
 L'étude des documents fait apparaître les vues séquentielle (la suite
 de caractères), de structure (titre, section, sous-section, ...), de
-présentation (couleurs, dimensions, ...) et de méta-données (date de
+présentation (couleurs, dimensions, ...) et de métadonnées (date de
 création, auteur, ...). On parle aussi de contenu, structure, forme et
-méta-données. Nous allons voir que cette vision définit le socle
+métadonnées. Nous allons voir que cette vision définit le socle
 commun à tous les logiciels de traitement de textes. Comprendre ce
 socle va nous permettre d'utiliser n'importe quel traitement de texte
 au mieux de ses possibilités, de s'adapter à ses évolutions.
@@ -90,7 +100,7 @@ générales, communes à tous les traitements de texte, pour la
 définition du contenu et de la structure. Ceci est réalisé dans une
 interface avec, au centre, une grande zone représentant une page, en
 haut les menus et une zone de boutons-raccourcis. Les noms des
-actions, la forme et la couleur des boutons, les icones et
+actions, la forme et la couleur des boutons, les icônes et
 l'organisation des menus varient d'un logiciel à un autre, d'une
 version à une autre, d'une machine à une autre mais les
 fonctionnalités sont globalement les mêmes. La *structure du document*
@@ -135,9 +145,9 @@ La structure de base est définie avec les niveaux de titre : de niveau
 1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
 pouvez faire une saisie complète du contenu puis définir la structure
 de base ou vous pouvez définir cette structure au cours de la saisie
-comme sur l'exemple de la video.  Dans cet exemple, on a saisi le texte
+comme sur l'exemple de la vidéo.  Dans cet exemple, on a saisi le texte
 du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le
-sous titre, puis le premier titre de niveau 1, et les premières
+sous-titre, puis le premier titre de niveau 1, et les premières
 phrases du premier paragraphe. Remarquez que le paragraphe suivant est
 automatiquement dans le style `corps de texte`.
 
@@ -303,7 +313,7 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ::Refaire la saisie::
 [markdown]
-Reproduire l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871){: .lien_video }.
+Reproduire avec LibreOffice l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871).
 \n
 Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
@@ -327,9 +337,7 @@ restreindre cette liste à ceux qui sont appliqués dans le document ou
 portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
-
 [Vidéographie : L'utilisation des styles](https://player.vimeo.com/video/183317278){: .lien_video }
-
 
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
@@ -385,7 +393,7 @@ sections entières ou de réorganiser le plan.
 
 ::Copier-coller::
 [markdown]
-Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice.
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page [https://www.univ-lille3.fr/portail/charte-informatique/](https://www.univ-lille3.fr/portail/charte-informatique/). Copiez le texte de la page et collez-le dans Libreoffice.
 {
 ~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
@@ -433,23 +441,23 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 ```Activité
 
 [markdown]
-Voici le [texte brut de la charte](.media/charte.txt) des utilisateurs du système d'inforamtion de Lille3. Ouvrez ce texte dans un document LibreOffice par la méthode de votre choix, et utilisez les règles de mises en forme vues dans le cours pour reproduire [l'exemple que vous nous fournissons](./media/Charte.pdf).
+Voici le [texte brut de la charte](./media/charte.txt) des utilisateurs du système d'inforamtion de Lille3. Ouvrez ce texte dans un document LibreOffice par la méthode de votre choix, et utilisez les règles de mises en forme vues dans le cours pour reproduire [l'exemple que vous nous fournissons](./media/Charte.pdf).
 
 Vous noterez bien :
 \n
-les deux niveaux de titre (le titre principal et les titres de niveau1);
+- les deux niveaux de titre (le titre principal et les titres de niveau1) ;
 \n
-l'accentuation simple passe les caractères et italique et en rouge;
+- l'accentuation simple passe les caractères et italique et en rouge ;
 \n
-l'accentuation forte transforme les caractères en petites capitales;
+- l'accentuation forte transforme les caractères en petites capitales ;
 \n
-la justification de tous les paragraphes de texte à l'exception des titres;
+- la justification de tous les paragraphes de texte à l'exception des titres ;
 \n
-les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1;
+- les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1 ;
 \n
-le haut de page reprend le titre déclaré dans les méta-données;
+- le haut de page reprend le titre déclaré dans les métadonnées ;
 \n
-les lignes horizontales ont été réalisées avec des bordures.
+- les lignes horizontales ont été réalisées avec des bordures.
 \n
 N'hésitez pas à échanger sur le forum du cours si vous rencontrez des difficultés, ...
 \n
@@ -538,7 +546,19 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ::Exercice de styles::
 [markdown]
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
+Reproduire avec votre traitement de texte le document dont un pdf vous est donné [ici](./media/texte_final.pdf) à partir du texte brut fourni [là](./media/texte_final.txt). **Aucune mise en forme directe n'est tolérée !** (*i.e* les boutons de la barre d'outils ).
+\n
+Dans ce document, nous avons utilisé :
+\n
+- des styles spécifiques pour désigner les personnes et les œuvres,
+\n
+- le résumé et les citations,
+\n
+- 3 styles de page avec des numérotations en romain pour les pages d'index et de tables,
+\n
+- les guillemets et les listes françaises.
+\n
+La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. **Vous pouvez prendre celles de votre choix**. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
 
@@ -547,15 +567,15 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 ## Métadonnées
 [Métadonnées](https://vimeo.com/182868218){: .cours_video}
 
-Les meta-données sont des données à propos du document. Elles sont
+Les métadonnées sont des données à propos du document. Elles sont
 calculées par le logiciel (par exemple le nombre de mots, la taille
 etc...) ou déclarées par l'utilisateur (le titre, le sujet,
-l'auteur...). Les meta-données sont utiles pour le traitement de
+l'auteur...). Les métadonnées sont utiles pour le traitement de
 corpus de documents. On les retrouve ici dans le menu des
 propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
 
-[Vidéographie : Utilisation des méta-données](https://player.vimeo.com/video/183317406){: .lien_video }
+[Vidéographie : Utilisation des métadonnées](https://player.vimeo.com/video/183317406){: .lien_video }
 
 ## Avec un autre logiciel
 [Avec d'autres logiciels](https://vimeo.com/182868251){: .cours_video}
@@ -629,7 +649,7 @@ d'insérer des images dans des figures avec des légendes et des
 numérotations. Il est également possible d'intégrer une
 bibliographie. Cette opération est plus complexe mais vous trouverez
 des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
-professionnel, vous serez à amener à utiliser des modèles pour
+professionnel, vous serez amener à utiliser des modèles pour
 respecter une charte graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
@@ -905,9 +925,9 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 ::Jouer avec les références::
 [markdown]
 Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
-~Celle en ligne 5
-~Celle en ligne 9
-=Celle en ligne 13}
+~ Celle en ligne 5
+~ Celle en ligne 9
+= Celle en ligne 13}
 
 ```
 
