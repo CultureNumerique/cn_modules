@@ -322,13 +322,14 @@ Cet algorithme est une séquence de deux instructions. La seconde
 instruction est un *si* qui est le représentant d'un deuxième mode de
 combinaison appelé *alternative*. L'ordinateur est capable d'exécuter
 cette alternative cela car l'unité de calcul sait faire des
-comparaisons et l'unité de contrôle est capable de brancher
-(sélectionner) la prochaine instruction selon la valeur de cette
-comparaison. Donc selon le résultat de la *condition du si*, la
-machine exécutera différentes instructions. Sur notre algorithme, si
-le numéro du caractère en mémoire est compris entre 65 et 90,
-c'est-à-dire si le caractère est une majuscule, la machine exécutera
-les deux instructions pour remplacer la majuscule par la minuscule
+comparaisons et l'unité de contrôle est capable de sélectionner la
+prochaine instruction à exécuter selon la valeur de cette
+comparaison. Cela fait partie des fonctionnalités existantes de la
+machine.  Donc selon le résultat de la *condition du si*, la machine
+exécutera différentes instructions. Sur notre algorithme, si le numéro
+du caractère en mémoire est compris entre 65 et 90, c'est-à-dire si le
+caractère est une majuscule, la machine exécutera les deux
+instructions pour remplacer la majuscule par la minuscule
 correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
 mais nous aurions pu en toute généralité réaliser une autre suite
 d'instructions. *L'alternative est le deuxième mode de combinaison
@@ -336,19 +337,19 @@ utile pour décrire des algorithmes*.
 
 ### Transformer un texte complet
 
-**Marc: il ne me semble pas nécessaire de parler d'octets** 
 
 Nous souhaitons appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
-supposons que notre texte est une suite de caractères, chacun d'eux
-codé sur 1 octet et rangés les uns à la suite des autres à partir
-d'une adresse connue de la machine. Pour être capable de
-repérer la fin du texte, on choisit d'ajouter après le dernier
-caractère du texte un symbole spécial choisi ici comme ayant pour code
-binaire `00000000`. Notre algorithme peut s'écrire :
+supposons que notre texte est une suite de caractères. Tous les
+caractères de ce texte sont stockés dans la mémoire de l'ordinateur
+les uns à la suite des autres, à des adresses consécutives à partir
+d'un adresse connue.  Pour être capable de repérer la fin du texte, on
+choisit d'ajouter après le dernier caractère du texte un symbole
+spécial choisi ici comme ayant pour code `0`. Notre
+algorithme peut s'écrire :
 
     Accéder à la mémoire à l'adresse courante
-	Répéter tant que le code binaire n'est pas 00000000
+	Répéter tant que la valeur n'est pas 0
   	   Si la valeur est comprise entre 65 et 90 Alors
           Ajouter 32
 	      Ranger le résultat dans la mémoire à l'adresse courante
@@ -359,66 +360,79 @@ binaire `00000000`. Notre algorithme peut s'écrire :
 
 Dans cet algorithme, nous utilisons, pour parcourir tous les
 caractères du texte, une *répétition* appelée aussi par les
-informaticiens une *boucle* ou une *itération*.  Sur notre algorithme,
-lorsque l'unité de contrôle demande à exécuter la répétition, l'unité
-de calcul vérifie que la valeur n'est pas `00000000`. Si tel est le
-cas tout ce qui se trouve entre la répétition et la fin de répétition
-sera exécuté, puis on reviendra tester que la valeur n'est pas
-`00000000`, et ainsi de suite. La répétition s'arrêtera lorsque la
-valeur sera `00000000`. Ce mode de combinaiosn est essentiel car il
-permet d'appliquer un même traitement un grand nombre de fois à une
-série de données. Notez bien qu'il est important de s'assurer que
-l'algorithme s'arrête car sinon nous "plantons" la machine. Sur notre
-exemple, il faut être sur de rencontrer le code `00000000` à la fin du
-texte car sinon notre algorithme tournerait sans fin ! *La répétition
-est le troisième mode de combinaison utile pour décrire des
+informaticiens une *boucle* ou une *itération*.  L'ordinateur est
+capable d'exécuter cet algorithme uniquement à l'aide de ses
+fonctionnalités existantes.  Sur notre algorithme, lorsque l'unité de
+contrôle demande à exécuter la répétition, l'unité de calcul
+effectuera la comparaison avec la valeur `0`. Si tel est le cas
+l'unité de contrôle fera exécuter les ordres jusqu'à la fin de
+répétition puis sélectionnera à nouveau l'instruction de comparaison
+au début l'unité de contrôle, créant ainsi une répétition. Si la
+comparaison est fausse alors l'unité de contrôle fera exécuter
+l'instruction juste *apres* la fin de répétition, terminant alors la
+répétition.
+
+Ce mode de combinaison par une répétition est essentiel car il permet
+d'appliquer un même traitement un grand nombre de fois, par exemple
+comme ici à une série de données. Notez bien qu'il est important de
+s'assurer que l'algorithme s'arrête car sinon nous "plantons" la
+machine. Sur notre exemple, il faut être sûr de rencontrer le code `0`
+à la fin du texte car sinon notre algorithme tournerait sans fin ! *La
+répétition est le troisième mode de combinaison utile pour décrire des
 algorithmes*.
 
 ## Les trois combinaisons de base
 
+
+
 Faisons un point d'étape. Machines, langages et algorithmes sont
 intimement liés et comprendre l'une de ces notions ne peut se faire
-indépendamment des autres. Rappelons que les machines satisfont toutes
-un même modèle comprenant une unité de calcul, de la mémoire et une
-unité de contrôle. Les langages servent à représenter les données et à
-communiquer des instructions à la machine. Sur l'exemple précédent,
-nous avons introduit dans nos algorithmes les trois combinaisons de
-base qui peuvent être définies dans l'unité de contrôle à savoir la
-*séquence* qui fait passer à l'instruction suivante, l'*alternative*
-qui permet de choisir les instructions à exécuter selon la valeur d'un
-test et la *répétition* qui répète des instructions tant qu'un test
-est satisfait.
+indépendamment des autres. D'abord les algorithmes qui définissent des
+traitements à partir de traitement de base et trois modes de
+combinaison à savoir la *séquence* qui fait passer à l'instruction
+suivante, l'*alternative* qui permet de choisir les instructions à
+exécuter selon la valeur d'un test et la *répétition* qui répète des
+instructions tant qu'un test est satisfait. Puis la machine,
+comprenant une unité de calcul, de la mémoire et une unité de contrôle
+capables d'exécuter ces trois modes de combinaison utilisés dans les
+algorithmes. Enfin les langages sont essentiels. Ils servent à
+représenter les données et ces représentations sont très liées aux
+algorithmes. Dans notre exemple ils fixent la représentation des
+caractères et des textes qui conditionnent la définition des
+algorithmes.  Mais ils servent également à communiquer avec la
+machine. Sur l'exemple précédent, nous avons présenté les algorithmes
+en français mais la machine travaille en binaire, même pour la
+définition de ses instructions. Nous verrons que les langages de
+programmation sont là pour combler ce fossé.
 
-Ces combinaisons ont été appliquées sur des instructions simples pour
-définir des algorithmes pour notre machine de base. Cela nous a permis
-de construire une nouvelle fonctionnalité : savoir transformer toutes
-les majuscules d'un texte en minuscules. Mais, une grande force de ces
-combinaisons, et donc des algorithmes, est qu'elles peuvent
-s'appliquer sur des instructions plus évoluées. Nous pourrions, par
-exemple, réutiliser l'algorithme de transformation des majuscules dans
-un nouvel algorithme. Et c'est un vrai jeu de construction ! À la
-manière des Legos où, partant de briques de bases, on construit par
-assemblages successifs des maisons puis des villes, on se trouve
-devant un univers infini de possibilités où toute votre créativité
-peut s'exprimer. En informatique, au fur et à mesure des constructions
-algorithmiques, les traitements deviennent de plus en plus
-sophistiqués.  Par exemple, dans le cas de notre application
-d'assistance routière, on compose en séquence la reconnaissance vocale
-des directions, le calcul d'itinéraire et son affichage. L'alternative
-permet, si le lieu d'arrivée n'est pas connu ou est imprécis,
-d'afficher un message plutôt que l'itinéraire. L'itération permet de
-poursuivre l'exécution de l'assistant tant que vous n'êtes pas arrivé.
+Notre exemple nous a permis d'expliquer comment construire une
+nouvelle fonctionnalité à partir des opérations de base réalisables
+dans un ordinateur : savoir transformer toutes les majuscules d'un
+texte en minuscules. Mais, une grande force de ces combinaisons, et
+donc des algorithmes, est qu'elles peuvent s'appliquer sur des
+instructions plus évoluées. Nous pourrions, par exemple, réutiliser
+l'algorithme de transformation des majuscules dans un nouvel
+algorithme. Et c'est un vrai jeu de construction ! À la manière des
+Legos où, partant de briques de bases, on construit par assemblages
+successifs des maisons puis des villes, on se trouve devant un univers
+infini de possibilités où toute votre créativité peut s'exprimer. En
+informatique, au fur et à mesure des constructions algorithmiques, les
+traitements deviennent de plus en plus sophistiqués.  Par exemple,
+dans le cas de notre application d'assistance routière, on compose en
+séquence la reconnaissance vocale des directions, le calcul
+d'itinéraire et son affichage. L'alternative permet, si le lieu
+d'arrivée n'est pas connu ou est imprécis, d'afficher un message
+plutôt que l'itinéraire. L'itération permet de poursuivre l'exécution
+de l'assistant tant que vous n'êtes pas arrivé.
 
 ## Calculer et calculable
 
-À partir des instructions de base de la machine, on construit donc des
-traitements par un algorithme en utilisant les trois modes de
-composition que sont la séquence, l'alternative et l'itérative. Est-ce
-suffisant ? Oui car il existe un **théorème** qui affirme que tout ce
-qui est calculable avec une machine peut être défini par quelques
-opérations élémentaires et ces trois opérations de composition. Ce
-théorème a été démontré au milieu du vingtième siècle par des
-mathématiciens et des logiciens.
+Est-ce que ces trois modes de composition que sont la séquence,
+l'alternative et l'itérative sont suffisants ? Oui car il existe un
+**théorème** qui affirme que tout ce qui est calculable avec une
+machine peut être défini par quelques opérations élémentaires et ces
+trois opérations de composition. Ce théorème a été démontré au milieu
+du vingtième siècle par des mathématiciens et des logiciens.
 
 Ceci soulève immédiatement la question : *une machine peut-elle tout
 calculer ?* La réponse, démontrée à la même époque, est négative : il
