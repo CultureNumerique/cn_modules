@@ -526,14 +526,11 @@ base travaille avec des 0 et des 1, les langages informatiques
 permettent de décrire, dans ce jeu de construction, avec un niveau
 d'abstraction toujours croissant, les caractères et les nombres, les
 images, les textes et les tableaux de nombres, les documents
-structurés, ... On peut alors définir des opérations sur ces objets
-complexes. On dispose ainsi d'une machine capable de manipuler ces
-objets complexes. On peut alors écrire des algorithmes avec les trois
-compositions de base utilisant comme instructions de base ces
-opérations sur ces objets complexes.
-
-**Marc: on introduit une ambiguïté car la composition avec les boucles etc ne portent que sur les algos pas sur les données** 
-
+structurés, ... Le jeu de construction porte donc sur les objets
+manipulés qui sont de plus en plus complexes et sur les programmes. En
+effet, on peut alors définir des opérations sur ces objets complexes
+et composer ces opérations dans des algorithmes, toujours en utilisant
+les trois compositions de base.
 
 Les *langages informatique* permettent l'interaction entre l'humain et
 la machine. Ces langages sont variés et nous avons déja introduit les
@@ -545,14 +542,7 @@ par des algorithmes conçus par des femmes et des hommes. Ils doivent
 description d'algorithmes. On peut décrire des algorithmes par des
 textes appelés pseudo-code avec des conventions d'écriture pour les
 instructions, la séquence, l'alternative et la répétition. Nous avons
-utilisé un tel langage dans ce cours. D'autres formalismes sont
-visuels et basés sur des représentations graphiques avec des
-conventions pour dessiner la séquence, l'alternative et la répétition,
-par exemple les
-["flowchart"](https://en.wikipedia.org/wiki/Flowchart).
-
-**Pas convaincu de l'intérêt de cette partie sur les représentations pseudo-code (et les flowcharts populaires jq dans les années 70 ;-) ). Par contre on peut illustrer pseudo-code et nos présentations d'algos**
-
+utilisé un tel langage dans ce cours. 
 
 Mais, si un algorithme est conçu et lu par des humains, il doit
 ensuite être traduit pour pouvoir être exécuté par une machine. Pour
@@ -561,8 +551,6 @@ la machine. Il faut donc disposer d'un langage commun entre l'humain
 et la machine avec la contrainte forte d'être compréhensible par les
 humains tout en étant suffisamment formel et précis pour ne pas
 laisser d'ambiguïté à la machine.
-
-**Marc Redites**
 
 Il existe, en réalité, de nombreux langages dépendant du mode
 d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
@@ -576,7 +564,6 @@ touches. Mais, il est difficile d'automatiser ces actions dans des
 programmes. On préfère alors utiliser un langage écrit. Nous avons
 déja vu l'utilisation du langage écrit pour décrire des documents, par
 exemple `html`, ou pour décrire des images et des sons.
-
 
 Lorsqu'il s'agit de traduire un algorithme, c'est-à-dire expliquer à
 la machine une combinaison d'instructions, on utilise des langages
@@ -607,8 +594,6 @@ rencontrera des conditions inconnues pour lesquelles on ne lui a pas
 décrit ce qu'il devait faire. C'est ce qu'on appelle un *bug*.
 
 ## Créer de nouvelles applications
-
-**Marc: je ne suis pas convaincu de l'intérêt de cette section** 
 
 Nous supposons disposer d'une machine avec des fonctionnalités de
 base. Cela peut être une machine très proche du matériel sachant faire
@@ -672,8 +657,6 @@ méthodes les plus récentes sont les *méthodes agiles* alternant phases
 de conception, phases de développement, phases de mise en oeuvre et de
 retour des utilisateurs.
 
-**Rémi :** un mot sur les objets et la programmation orientée objet ?
-
 ```activité
 ::Algorithmes et programmes::
 [markdown]
@@ -701,11 +684,6 @@ Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme e
 ```
 
 ## Choisir une application
-
-**Rémi :** j'ai rajouté cette section supprimée car je pense qu'elle
-  eput être utile aux étudiants
-
-**Marc: à discuter mais ces deux sections portent sur l'analyse informatique, un peu dans la direction gestion de projet info, je crois qu'on s'écarte un peu et font une rupture dans le fil du discours. C'est trop court ou trop long, pas au bon endroit. En tout cas, il ne semblait pas que cela puisse entrer facilement dans ce module** 
 
 Nous avons vu qu'une application telle que vous l'utilisez est
 constituée d'un ensemble de programmes. Un programme est la traduction
@@ -773,9 +751,6 @@ introduit, par l'exemple d'un jeu, un algorithme plus sophistiqué issu
 du domaine de l'intelligence artificielle.
 
 ## Un correcteur orthographique en français
-
-**Rémi :** pas convaincu par le fait d'écrire l'algo de recherche dans
-  le dictionnaire mais j'ai laissé
 
 Certains traitements de texte incluent une fonctionnalité de
 correction orthographique. Dans sa forme la plus simple, le correcteur
@@ -891,8 +866,6 @@ l'orthographe, vous procéderez de la façon suivante :
 2. vous corrigez les erreurs repérées par le correcteur
 3. vous *vérifiez vous-même l'orthographe* en vous concentrant sur les
 *possibles fautes grammaticales restantes*.
-
-**Marc: pourquoi autant insister sur cette pratique?, un peu anecdotique non ?**
 
 ## Classer et apprendre à classer des textes
 
@@ -1098,9 +1071,29 @@ humains mais avec handicap.
 Les traitements possibles dépendent fortement des choix de représentation
 {T}
 ```
+# Conclusion
 
-
-**Marc: Proposition: j'aurais bien terminé en allant plus vers l'IA, puis des questions de société comme un peu annoncé au début. Pour cela, l'argument général pourrait être (i) des algos qui trouvent le meilleur chemin le plus court grâce à des algos efficaces mais rapides capables de comparer très vite de nombreux cas (ii) des algos qui apprennent par exemple à classer les documents ou des positions de go, le choix de la représentation des données fixées, la puissance des machines capable de regarder de nombreuses données (parties de go ou grands corpus) (iii) ce qui ouvre l'idée de la puissance des données en plus de la puissance des traitements quand on a à sa disposition de nombreuses données de Go ou de grands corpus, qui permet aussi l'apprentissage des représentations présents dans des progrès récents de l'IA (alphago, etc...). (iv) Le champ ouvert vers des applis nouvelles dès lors qu'on a les données : prédire le goût pour la musique, les tendances politiques, D'où le retour vers les questions de la puissance des grands comptes qui accumulent de la donnée, parfois personnelle, parfois avec notre bon vouloir...**
+Nous avons étudié les principes des applications informatique et de
+leur construction comme un vaste jeu de construction avec des données
+complexes construites à partir de données de base et des programmes
+construits avec des algorithmes qui peuvent être composés et
+recomposés.  Nous avons présenté des exemples d'application comme la
+recherche d'itinéraire, la correction orthographique, le classement de
+textes et le jeu de Go. Ces exemples montrent comment une machine
+simple peut grace à sa puissance de calcul et à l'inventivité des
+humains se transformer en une machine capable de résoudre des tâches
+de haut niveau. Ils montrent également que l'intelligence supposée des
+machines est obtenue par la capacité de traiter de grands jeux de
+données comme des grands corpus de textes ou des corpus de parties de
+Go. Ceci ouvre des perspectives nouvelles avec le phénomène "Big
+Data". Posséder les données est désormais un enjeu essentiel et les
+grandes entreprises du Web l'ont bien compris car ces données leur
+permettent de développer des applications de prédiction : prédire vos
+goûts musicaux, prédire vos achats et recommander des produits en
+conséquence, suggérer des informations à lire, ... Ce qui amène des
+questions éthiques sur la possession des données souvent personnelles
+et l'utilisateur, trop souvent consentant, doit désormais se poser la
+question de la communication de ses données personnelles.
 
 
 
