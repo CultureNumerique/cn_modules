@@ -1106,7 +1106,7 @@ question de la communication de ses données personnelles.
 
 # Optionnel -- Représentation des données
 
-> [Fdy] Je pense qu'il faudrait remonter cette partie
+> [Fdy] Je pense qu'il faudrait remonter cette partie après l'intro sur les algorithmes, mais avant le déroulé de l'exemple sur le passage majuscule/minuscule qui considère acquises une partie des notions expliquées ici. Idem pour la notion d'arbre évoquée sur la sous-section du jeu d'échec.
 
 Nous avons introduit des notions d'algorithmique et de conception
 d'applications mais ceux-ci doivent manipuler des données. Il faut donc
