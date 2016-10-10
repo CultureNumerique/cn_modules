@@ -49,7 +49,7 @@ rejoindre la destination mais nous pouvons aussi représenter un
 itinéraire par une suite de villes voisines, toujours par souci de
 simplification.  Le programme peut-il disposer de tous les itinéraires
 possibles entre deux villes quelconques ? La réponse est non car cela
-nécessiterait bien trop de ressources de stockage. 
+nécessiterait bien trop de ressources de stockage.
 
 C'est donc un programme qui va calculer l'itinéraire le plus court
 entre les villes de départ et de destination à partir uniquement des
@@ -83,7 +83,7 @@ applications complètes qui analysent le son de votre voix, le
 traduisent en mots et phrases, identifient des adresses de départ ou
 de destination, repèrent votre position, interrogent un service web
 connaissant l'état de trafic sur les routes pour vous indiquer, en
-temps réel, le chemin le plus rapide en fonction du trafic. 
+temps réel, le chemin le plus rapide en fonction du trafic.
 
 Grâce à ces combinaisons nous obtenons une application qui résout des
 tâches complexes, qui peut paraître intelligente car ses capacités
@@ -91,7 +91,7 @@ sont souvent supérieures à celles d'un passager uniquement accompagné
 de sa vision locale, de ses connaissances et sa carte
 routière. Toutefois, ce logiciel ne peut résoudre que des tâches pour
 lesquelles il a été programmé, et repose sur des algorithmes et donc
-sur le génie de ses concepteurs. 
+sur le génie de ses concepteurs.
 
 Pour conclure, cet exemple montre qu'une application moderne interagit
 avec l'environnement (utilisateur, périphériques dont système `GPS`,
@@ -175,7 +175,7 @@ dans toutes nos activités : pour faire la cuisine, pour organiser
 notre journée, pour nous rendre à une adresse, ..., et nous sommes, en
 général, capables d'expliquer notre façon de procéder, mais cela n'en
 fait pas pour autant toujours un algorithme.  Un algorithme doit être
-très précis et ne contenir aucune ambiguïté car il 
+très précis et ne contenir aucune ambiguïté car il
 doit pouvoir être exécuté, de façon automatique, sans juger ni
 réfléchir.  Comme le dit
 [Gérard Berry](http://www.college-de-france.fr/site/gerard-berry/#course) :
@@ -183,6 +183,7 @@ réfléchir.  Comme le dit
 exécutable par une machine numérique*.  Enlever la pensée, c'est se
 rendre "bête", c'est-à-dire enlever toute possibilité d'adapter les
 instructions en se référant à des connaissances extérieures.
+> [Fdy] Bravo pour la synthèse ici. J'aurais juste tendance à préciser un peu les choses ici, surtout sur ce que cache le "sans connaissances extérieures", car les systèmes à bases de connaissances sont une part importante de l'intelligence artificielle. La nuance de taille est bien évidemment que ces systèmes incluent une connaissance formalisée, ce qui est évoqué plus haut avec le rôle des données. En bref, on peut imaginer une note ici ou un encadré, ou un renvoi à une section plus approfondie sur cette question.
 
 Prenons l'exemple de l'explication de la réalisation du café matinal
 dans une machine à café à filtres : prendre un filtre dans la boîte ;
@@ -212,9 +213,9 @@ Nous allons approfondir la notion d'algorithme et étudier sa relation avec les 
 effet, la citation complète est : "Before there were computers, there
 were algorithms. But now that there are computers, there are even more
 algorithms, and algorithms lie at the heart of computing" qui montre
-bien l'importance des algorithmes. 
+bien l'importance des algorithmes.
 
-## Algorithmes et ordinateurs 
+## Algorithmes et ordinateurs
 
 Nous avons expliqué le principe général de composition permettant de
 créer une nouvelle fonctionnalité en utilisant des fonctionnalités
@@ -268,7 +269,10 @@ Que pensez vous de la phrase de Harold Abelson dans Structure and Interpretation
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons-nous les conventions pour
 représenter les caractères introduites dans le module sur les
-documents.  Le caractère `A` majuscule a pour nom "Latin Capital
+documents.
+> [Fdy] j'ajouterais quand même un petit rappel sur l'encodag et UTF-8 car le lecteur qui ne prendrait pas la peine de bien maitriser ces notions sera largué sur le reste de l'explication.  
+
+Le caractère `A` majuscule a pour nom "Latin Capital
 Letter A" et pour numéro `65`. Le caractère `a` minuscule a pour
 numéro `97`. Croyez-nous sur parole, `65` s'écrit `01000001` et `97`
 s'écrit `01100001`. C'est remarquable car, pour passer de l'un à
@@ -304,20 +308,20 @@ algorithmes*.
 L'ordinateur est une machine très obéissante qui exécute
 scrupuleusement les ordres qu'on lui donne. Le traitement précédent
 ajoutera `32` au numéro du caractère en mémoire même si celui-ci n'est
-pas le numéro d'une lettre majuscule. Par exemple, le numéro `64`
-représente l'arobase `@` et si on lui ajoutait `32` cela donnerait une
-apostrophe inversée ` ce qui n'est pas le résultat attendu, donc un bug ! On devrait
+pas le numéro d'une lettre majuscule. Par exemple, le numéro `63`
+représente le point d'intérogarion `?` et si on lui ajoutait `32` cela donnerait le tiret bas (underscore) `_`  ce qui n'est pas le résultat attendu, donc un bug ! On devrait
 plutôt ne permettre le passage de majuscules en minuscules qu'en
 présence de majuscules. Pour résoudre ce problème, nous allons
 contrôler que le contenu de la mémoire correspond bien à une lettre
 majuscule avec l'algorithme suivant :
 
-    Accéder à la mémoire à l'adresse 413
-	Si la valeur est comprise entre 65 et 90 Alors (si c'est une majuscule)
-       Ajouter 32
-	   Ranger le résultat dans la mémoire 413
-    Fin du Si (sinon il n'y a rien à faire)
-
+```
+Accéder à la mémoire à l'adresse 413
+Si la valeur est comprise entre 65 et 90 Alors (si c'est une majuscule)
+Ajouter 32
+Ranger le résultat dans la mémoire 413
+Fin du Si (sinon il n'y a rien à faire)
+```
 Cet algorithme est une séquence de deux instructions. La seconde
 instruction est un *si* qui est le représentant d'un deuxième mode de
 combinaison appelé *alternative*. L'ordinateur est capable d'exécuter
@@ -333,10 +337,10 @@ instructions pour remplacer la majuscule par la minuscule
 correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
 mais nous aurions pu en toute généralité réaliser une autre suite
 d'instructions. *L'alternative est le deuxième mode de combinaison
-utile pour décrire des algorithmes*.
+utile pour décrire des algorithmes*
+
 
 ### Transformer un texte complet
-
 
 Nous souhaitons appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
@@ -440,7 +444,10 @@ existe des problèmes que ne peut pas résoudre une machine. Par
 exemple, il est démontré qu'il n'existe pas d'algorithme qui prend en
 entrée une suite d'instructions contenant des alternatives et des
 itératives et qui répond en sortie cette suite d'instructions va
-s'arrêter en un temps fini lorsqu'on l'exécutera. Ces sujets soulèvent
+s'arrêter en un temps fini lorsqu'on l'exécutera.
+> Cette phrase est un peu confuse selon moi, mais c'est très important de montrer ici l'aspect théorique de l'informatique, et donc d'en faire sentir les limites.
+
+ Ces sujets soulèvent
 des problèmes importants étudiés par les mathématiciens, les
 informaticiens, les logiciens et les philosophes autour des notions de
 calcul et d'intelligence.
@@ -465,14 +472,12 @@ Qu'est-ce qu'un algorithme en 1 minute : https://www.youtube.com/watch?v=u9XEsJy
 
 ::Modèle de machine::
 [markdown]
-**Modèle de machine**
 Proposer une ressource simple et poser des questions sur modèle de Von Neuman
 ```
 
 ```activité
 ::Les minuscules en majuscules::
 [markdown]
-**Les minuscules en majuscules**
 On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules.
 - Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans `Maj2MinCara` ?
 - Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle instruction ?
@@ -489,23 +494,22 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 **Programmer un robot simpliste**
 Activité sur le robot ?
 ```
+> [Fdy] : il faudrait vraiment trouver un outils pour ce genre d'activité qui permette un minimum d'interactivité, comme Scratch par exemple, ou encore mieux Lego Mindstorm :)
 
 ```activité
 ::Plusieurs algorithmes pour un même problème::
 [markdown]
-**Plusieurs algorithmes pour un même problème**
 Deux algorithmes sur des chaines de caractères : un efficace et un pas efficace
 ```
 
 ```compréhension
 ::Conception des algorithmes::
 [markdown]
-**Conception des algorithmes**
+(Pas la peine de répéter le titre)
  Pour résoudre un problème il existe un seul algorithme{F}
 
 ::Exécution de programmes::
 [markdown]
-**Exécution de programmes**
 Des exemples simples de programmes robot pour demander situation finale
 ```
 
@@ -542,7 +546,7 @@ par des algorithmes conçus par des femmes et des hommes. Ils doivent
 description d'algorithmes. On peut décrire des algorithmes par des
 textes appelés pseudo-code avec des conventions d'écriture pour les
 instructions, la séquence, l'alternative et la répétition. Nous avons
-utilisé un tel langage dans ce cours. 
+utilisé un tel langage dans ce cours.
 
 Mais, si un algorithme est conçu et lu par des humains, il doit
 ensuite être traduit pour pouvoir être exécuté par une machine. Pour
@@ -581,10 +585,11 @@ rigueur nécessaire et la difficulté d'apprendre un langage de
 programmation effraient beaucoup de monde. Cependant, il est important
 de remarquer que le plus difficile est de concevoir un algorithme
 alors que programmer n'est que traduire un algorithme dans un langage.
+> [Fdy] c'est anecdoditique, mais p.e rappeler ici qu'on appelle aussi courament cette activité le "codage", histoire de raccrocher avec ce que le lecteur peut connaitre à priori.
 
 Ces programmes sont les éléments constitutifs des applications que
 vous utilisez. Mais notez bien que, quel que soit le niveau de
-sophistication de vos applications, les programmes informatique ne
+sophistication de vos applications, les programmes informatiques ne
 sont que la traduction d'algorithmes pour une machine. Par conséquent,
 ils ne font qu'appliquer des consignes adaptées à des contextes
 prévus.  Ceci explique le comportement "bête" des machines et des
@@ -669,7 +674,7 @@ Un algo qui affiche 5 fois "Hello World" traduit dans différents langages
 [markdown]
 **Langages de programmation**
 Il existe de nombreux langages de programmation. En voici quelques exemples
-
+\n
 * pour apprendre en s'amusant : lien sur scratch
 * pour la conception artistique : lien vers processing
 * pour le Web : lien vers javascript
@@ -680,7 +685,7 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 ::Algorithmique et programmation::
 [markdown]
 **Algorithmique et programmation**
-Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {concevoir algo}
+Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {####concevoir algo}
 ```
 
 ## Choisir une application
@@ -937,7 +942,7 @@ on peut représenter chacun d'eux par les fréquences des mots. On peut
 alors écrire un programme qui apprenne quels sont les seuils pour
 chacun des thèmes et, avec ces seuils, on peut maintenant classer un
 nouveau texte dans un thème. Les détails d'un tel algorithme
-d'apprentissage (ou de fouille de textes) sort du contenu de ce
+d'apprentissage (ou de fouille de textes) sortent du contenu de ce
 cours. Nous espérons cependant vous avoir fait comprendre comment une
 machine pouvait classer des textes avec des résultats souvent
 comparables à celles d'un expert humain.
@@ -987,8 +992,8 @@ de mon adversaire, de penser à ce que je pourrais jouer ensuite,
 un choix. Un algorithme va avoir une approche similaire mais très
 systématique. Il va considérer tous les coups possibles de sa part,
 tous les coups possibles de l'adversaire, tous les coups possibles de
-sa part, ... L'objet informatique construit est un arbre : la racine
-est l'état courant du jeu, les fils sont les états du jeu pour chaque
+sa part en réponse, etc. L'objet informatique ainsi construit est un arbre : la racine
+est l'état courant du jeu, les fils ([Fdy] les branches ?) sont les états du jeu pour chaque
 coup possible, etc. Une première idée est donc de construire cet arbre
 de toutes les suites possibles du jeu à partir de l'état courant,
 calculer le coup qui m'amène le plus souvent dans une situation
@@ -1051,7 +1056,7 @@ jeux.
 Il est difficile de ne pas parler du jeu de Go qui défraie la
 chronique au moment de la rédaction de ce cours en 2016. En effet,
 pour la première fois, un programme gagne contre le champion du monde
-du Go alors qu'on croyait le Go hors de portée des machines. En effet,
+du jeu de Go alors qu'on croyait le Go hors de portée des machines. En effet,
 le nombre de configurations du Go est encore plus gigantesque que pour
 les échecs et les stratégies des joueurs utilisent une vue spatiale de
 l'état du jeu qu'on pensait réservée au cerveau humain. Le programme
@@ -1063,6 +1068,8 @@ rédacteurs de ce cours sont Lillois) car c'est notre collègue Rémi
 Coulom qui a initié ces recherches sur le Go avec un programme
 champion du monde dans les années 2010, battant même des experts
 humains mais avec handicap.
+
+> Il y a sans doutes des liens à rajouter pour permettre d'approfondir les choses évoquées dans cette sous-section
 
 ```compréhension
 ::Représenter et manipuler::
@@ -1098,6 +1105,8 @@ question de la communication de ses données personnelles.
 
 
 # Optionnel -- Représentation des données
+
+> [Fdy] Je pense qu'il faudrait remonter cette partie
 
 Nous avons introduit des notions d'algorithmique et de conception
 d'applications mais ceux-ci doivent manipuler des données. Il faut donc
@@ -1173,9 +1182,16 @@ numériques**. Les choix sont divers et diffèrent selon les
 environnements. On distingue souvent les nombres entiers avec le type
 `entier` ou `integer`. Ils peuvent être codés sur 1, 2, 4, ou un
 nombre quelconque d'octets ce qui permet de représenter des ensembles
-plus ou moins grands d'entiers. Par exemple, sur 1 octet on peut coder
+plus ou moins grands d'entiers.
+> [Fdy] : je pense qu'il faut absolument détailler un peu plus le principe du codage d'un nombre, qui est d'ailleurs considéré comme acquis dès la 2e section avec les exemples de l'algo de passage d'une lettre minuscule à majuscule; p.e que la représentation des données doit être abordées **avant** l'algorithme ?
+
+ Par exemple, sur 1 octet on peut coder
 256 valeurs soit les entiers de 0 à 255 si on se limite à utiliser des
-entiers positifs, soit les entiers de -128 à +127 sinon. Sur 2 octets,
+entiers positifs, soit les entiers de -128 à +127 sinon.
+
+> [Fdy] il faut repréciser ici je pense le lien entre états des bits de données, assemblage sur 8 octets, etc.
+
+ Sur 2 octets,
 on peut coder 65 536 entiers. Pour les nombres avec une partie
 décimale, on définit le type `décimal` ou `réel`. On peut ici encore
 avoir des codages plus ou moins longs qui donnent une précision plus
@@ -1204,11 +1220,14 @@ nous en parlerons dans un autre cours.
 On peut assembler des données élémentaires pour construire des données
 structurées. Par exemple, on peut construire des tableaux de
 nombres. Un tableau de nombres à une dimension contient des nombres et
-on peut accéder à chaque nombre du tableau par son indice. On aura le
+on peut accéder à chaque nombre du tableau par son indice ([Fdy] juste préciser qu'un tableau à 1D peut être compris comme une simple liste?). On aura le
 premier nombre du tableau, le second, le dernier, ... Un tableau à
 deux dimensions sera organisé en lignes et en colonnes, il y aura deux
 indices et on pourra accéder au nombre situé en ligne `i` et en
-colonne `j` du tableau. Ces structures de données sont très utiles dès
+colonne `j` du tableau.
+> [Fdy] un ptit schéma serait indispensable ici
+
+ Ces structures de données sont très utiles dès
 que l'on fait des calculs qu'ils soient scientifiques, économiques ou
 financiers. Il existe bien d'autres structures de données qui se
 distinguent les une des autres par la façon d'organiser les données,
@@ -1269,6 +1288,9 @@ et permet de définir des styles appropriés si vous êtes amenés à
 modifier l'apparence de pages Web.
 
 ### Les objets
+
+
+> [Fdy] encore à écrire donc ? C'est effectivement la suite logique, mais je passerais en priorité d'avantage de temps à expliquer les structures ci-avant (nombre, charactère, liste, tableau, arbre)
 
 ```compréhension
 ::Représenter et manipuler::
@@ -1407,7 +1429,7 @@ l'application.
 [markdown]
 **Systèmes d'exploitation**
 Discuter des systèmes pour
-
+\n
 * pour ordinateur
 * pour smartphone
 ```
