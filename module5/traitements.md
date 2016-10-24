@@ -458,9 +458,9 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 
 ```activité
 ::La répétition par Mark Zuckerberg (Facebook)::
-dans Hour of Code : https://www.youtube.com/watch?v=mgooqyWMTxk
+dans Hour of Code : https://www.youtube.com/watch?v=mgooqyWMTxk  {}
 ::Autres formes de répétition::
-Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu dans la présentation précédente, une autre forme de répétition est le pour. Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même chose
+Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu dans la présentation précédente, une autre forme de répétition est le pour. Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même chose {}
 ::Faut-il apprendre à coder ?::
 L'avis d'un président des Etats-Unis : https://www.youtube.com/watch?v=6XvmhE1J9PY {}
 ::Apprendre les bases de l'algorithmique::
@@ -1034,9 +1034,7 @@ questions éthiques sur la possession des données souvent personnelles
 et l'utilisateur, trop souvent consentant, doit désormais se poser la
 question de la communication de ses données personnelles.
 
-
-
-# Optionnel -- Données et objets
+# Données et objets (optionnel)
 
 Nous avons introduit des notions d'algorithmique et de conception
 d'applications mais ceux-ci doivent manipuler des données. Il faut donc
