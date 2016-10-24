@@ -253,6 +253,7 @@ tous les milieux et toutes les situations.
 [markdown]
 Le modèle décrit précédemment a été inventé par Von Neumann. Trouver une description schématique de ce modèle appelé architecture de Von Neumann
 {}
+
 ::Rôle des linguistes::
 [markdown]
 Qui a inventé le mot ordinateur ? Qui est Larry Wall ? Qui est Noam Chomsky ?
@@ -459,12 +460,16 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 ```activité
 ::La répétition par Mark Zuckerberg (Facebook)::
 dans Hour of Code : https://www.youtube.com/watch?v=mgooqyWMTxk  {}
+
 ::Autres formes de répétition::
 Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu dans la présentation précédente, une autre forme de répétition est le pour. Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même chose {}
+
 ::Faut-il apprendre à coder ?::
 L'avis d'un président des Etats-Unis : https://www.youtube.com/watch?v=6XvmhE1J9PY {}
+
 ::Apprendre les bases de l'algorithmique::
 Parmi les nombreux sites disponibles, pourquoi pas "Hour of Code" : https://code.org/learn
+
 ::Algorithme et programme::
 en une minute par Gérard Berry : https://www.youtube.com/watch?v=u9XEsJypSdc {}
 ```
