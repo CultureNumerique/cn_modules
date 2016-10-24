@@ -1101,7 +1101,7 @@ première valeur, par exemple 12, puis une seconde valeur, par exemple
 14, et tout ce qu'il verra sont les résultats produits, soit sur notre
 exemple, "la plus petite note est : 12", "la moyenne est : 13"
 
-### Types de données élémentaires
+## Types de données élémentaires
 
 Nous avons auparavant introduit que nous pouvions étendre les
 capacités de notre machine. En particulier, nous avons vu qu'à partir
@@ -1141,7 +1141,7 @@ expressions. Les valeurs de vérité et la logique sont utiles également
 pour modéliser le raisonnement comme en intelligence artificielle mais
 nous en parlerons dans un autre cours.
 
-### Types de données structurés
+## Types de données structurés
 
 On peut assembler des données élémentaires pour construire des données
 structurées. Par exemple, on peut construire des tableaux de
@@ -1210,7 +1210,7 @@ pour un utilisateur permet de bien comprendre ce qu'est une page Web
 et permet de définir des styles appropriés si vous êtes amenés à
 modifier l'apparence de pages Web.
 
-### Les objets
+## Les objets
 
 La définition d'*objet* est issue du monde réel dans lequel nous avons
 une définition plus ou moins précise d'un objet du monde réel. Une
