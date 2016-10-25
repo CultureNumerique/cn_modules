@@ -494,59 +494,80 @@ très simple travaillant avec des opérations élémentaires, des
 mémoires, une unité de calcul et un langage de codage des
 caractères. Nous avons signalé que l'informatique s'apparentait à un
 grand jeu de construction. Celui-ci s'applique à la fois pour les
-données et pour les programmes grace à des langages informatiques.
+données et pour les programmes grâce à des langages informatiques.
 
-En effet, si la machine de base travaille avec des 0 et des 1, les
-*langages de description* permettent de décrire, dans ce jeu de
-construction, avec un niveau d'abstraction toujours croissant, les
-caractères et les nombres, les images, les textes et les tableaux de
-nombres, les documents structurés, les documents multimedia. Par
-exemple, le navigateur manipule des documents `html`, des images, des
-videos.
+En effet, en ce qui concerne les données, si la machine de base
+travaille avec des 0 et des 1, les *langages de description*
+permettent de décrire, dans ce jeu de construction, avec un niveau
+d'abstraction toujours croissant, les caractères et les nombres, les
+images, les textes et les tableaux de nombres, les documents
+structurés, les documents multimédia. 
 
-Le jeu de construction porte donc sur les objets manipulés mais aussi
-sur les algorithmes et les programmes. En effet, à partir d'opérations
-de base sur ces objets complexes, on va pouvoir les composer dans des
-algorithmes avec les trois compositions de base. Mais, si un
-algorithme est conçu et lu par des humains, il doit ensuite être
-traduit pour pouvoir être exécuté par une machine. Pour cela, il faut
-traduire l'algorithme dans un langage compréhensible par la
-machine. Il faut donc disposer d'un langage commun entre l'humain et
-la machine avec la contrainte forte d'être compréhensible par les
+Mais nous l'avons vu, le jeu de construction porte aussi sur les
+algorithmes. En effet, à partir d'opérations de base sur ces objets
+complexes, on va pouvoir les composer dans des algorithmes avec les
+trois compositions, la séquence, l'alternative et l'itération. Les
+fonctionnalités de base d'un ordinateur sont très réduites : changer
+des 0 en 1, effectuer des additions des comparaisons,...  Mais les
+fonctionnalités développées par ce jeu de construction, nous pouvons à
+tout moment les considérer comme de nouvelles fonctionnalités de base,
+plus évoluées. On peut même oublier ces 0 et ces 1 et considérer que
+l'ordinateur a des fonctionnalités de base dédiées à différents
+domaines comme manipuler des nombres, des caractères et des
+textes. Cela peut aussi être un robot qui sait avancer, tourner et
+repérer des obstacles ; cela peut être un logiciel de dessin vectoriel
+qui sait se repérer sur une grille, tracer des segments, des cercles,
+des courbes et colorier ; cela peut être un tableur qui sait traiter
+des listes de données ; cela peut être un navigateur qui sait gérer
+des documents du Web. Quelles que soient ces fonctionnalités de base
+le jeu pourra toujours continuer grâce aux structures de composition
+que sont la séquence, l'alternative et la répétition.
+
+Mais, si un algorithme est conçu et lu par des humains, il doit
+ensuite être traduit pour pouvoir être exécuté par une machine. Pour
+cela, il faut traduire l'algorithme dans un langage compréhensible par
+la machine. Il faut donc disposer d'un langage commun entre l'humain
+et la machine avec la contrainte forte d'être compréhensible par les
 humains tout en étant suffisamment formel et précis pour ne pas
 laisser d'ambiguïté à la machine. C'est le rôle des langages
 informatiques pour les traitements.
 
-Il existe, en réalité, de nombreux langages dépendant du mode
+Il existe, en réalité, de nombreux langages dépendants du mode
 d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
 interagir avec une application par un langage graphique à base de
 menus ou par des clics de souris ou par l'action de frapper sur des
 touches de clavier. Pour apprendre à vous servir d'une application,
 vous allez apprendre ce langage : quelle est l'action réalisée par le
-choix de cet élément de menu, quelle est l'effet d'un clic de souris
+choix de cet élément de menu, quel est l'effet d'un clic de souris
 sur cet élément, quel est l'effet de l'appui sur cette combinaison de
 touches. Mais, il est difficile d'automatiser ces actions dans des
 programmes. On préfère alors utiliser un langage écrit.  Lorsqu'il
-s'agit de traduire un algorithme, c'est-à-dire expliquer à la machine
-une combinaison d'instructions, on utilise des langages écrits appelés
-*langages de programmation*. Il en existe de nombreux, le choix va
-dépendre des fonctionnalités de base du langage, des besoins de
-l'application, des performances souhaitées, ... Les textes écrits dans
-ces langages sont des *programmes* qui sont la traduction
-d'algorithmes dans le langage choisi. Ces langages et les programmes
-se doivent d'être compréhensibles par l'informaticien(ne) mais comme
-ils sont destinés à être exécutés par la machine, ils respectent des
-règles très strictes de syntaxe. Ceci explique qu'une machine va
-refuser une commande mal écrite alors qu'un humain acceptera une
-phrase mal formée dès qu'il en comprend le sens. Cette rigueur
-nécessaire et la difficulté d'apprendre un langage de programmation
-effraient beaucoup de monde. 
+s'agit de traduire un algorithme par un texte à destination de la
+machine, on utilise des langages appelés *langages de
+programmation*.
+
+Il existe de nombreux langages de programmation, qui fournissent tous
+ces structures de composition (séquence, alternative, itération) et
+diffèrent par fonctionnalités de base mises à disposition.  Mais comme
+pour les langues naturelles ils diffèrent aussi par leur règles de
+syntaxe et de grammaire. Les textes écrits dans ces langages sont des
+*programmes* qui sont la traduction d'algorithmes dans le langage
+choisi. Le choix d'un langage va donc dépendre des fonctionnalités de
+base du langage, des besoins de l'application, des performances
+souhaitées, ... et des goûts du programmeur. Ces langages et les
+programmes se doivent d'être compréhensibles par l'informaticien(ne)
+mais comme ils sont destinés à être exécutés par la machine, ils
+respectent des règles très strictes de syntaxe. Ceci explique qu'une
+machine va refuser une commande mal écrite alors qu'un humain
+acceptera une phrase mal formée dès qu'il en comprend le sens. Cette
+rigueur nécessaire et la difficulté d'apprendre un langage de
+programmation effraient beaucoup de monde.
 
 ```activité
 ::Algorithmes et programmes::
 [markdown]
 **Algorithmes et programmes**
-Un algo qui affiche 5 fois "Hello World" traduit dans différents langages
+Trouver les traductions dans 5 langages différents d'un algorithme qui affiche 10 fois "Hello World". {}
 ```
 
 ## Coder ou programmer
@@ -556,29 +577,14 @@ des programmes*. Si cette activité est principalement le fait des
 informaticiens, il est important de connaître les notions essentielles
 de la programmation pour être un acteur du monde numérique (voir, par
 exemple, le discours, donné en activité, d'un récent président des
-Etats Unis).
+États-Unis).
 
-Nous supposons disposer d'une machine avec des fonctionnalités de
-base. Cela peut être une machine très proche du matériel sachant faire
-des opérations sur des 0 et des 1 ; cela peut être une machine qui
-sait manipuler des nombres, des caractères et des textes ; cela peut
-être un robot qui sait avancer, tourner et repérer des obstacles ;
-cela peut être un logiciel de dessin vectoriel qui sait se repérer sur
-une grille, tracer des segments, des cercles, des courbes et colorier
-; cela peut être un tableur qui sait traiter des listes de données ;
-cela peut être un navigateur qui sait gérer des documents du Web. On
-suppose disposer d'un langage de programmation qui connaît ces
-fonctionnalités de base et qui dispose d'instructions pour la
-séquence, l'alternative et la répétition.
-
-On souhaite ajouter une nouvelle fonctionnalité. Il faut donc la coder
-(ou la programmer) ce qui va se faire en deux étapes : concevoir un
-algorithme puis écrire le programme correspondant. Nous allons décrire
-deux principes de conception en rappelant qu'on conçoit d'abord des
-algorithmes avant de traduire les algorithmes dans le langage
-choisi. Il est important de remarquer que le plus difficile est de
-concevoir un bon algorithme alors que programmer n'est que traduire
-cet algorithme dans le langage choisi.
+On souhaite ajouter une nouvelle fonctionnalité à une machine. Il faut
+donc la coder (ou la programmer) ce qui va se faire en deux étapes :
+concevoir un algorithme puis écrire le programme correspondant. Il est
+important de remarquer que le plus difficile est de concevoir un bon
+algorithme alors que programmer n'est que traduire cet algorithme dans
+le langage choisi. Nous allons décrire deux principes de conception.
 
 La démarche la plus souvent utilisée est celle de la **conception
 descendante** qui consiste à décomposer le problème en des problèmes
@@ -596,37 +602,41 @@ de notre langage. On peut alors expliciter un algorithme (ou des
 algorithmes) pour définir la fonctionnalité attendue puis les traduire
 dans des programmes.
 
-On observe que les environnements de programmation sont de plus en
-plus riches et disposent de très nombreuses fonctionnalités parfois
-rangées dans des bibliothèques. C'est le principe de la **conception
-ascendante** de créer de nouvelles fonctionnalités qui peuvent, à
-leur tour, être considérées commes des fonctionnalités de base ce qui
-permet de recommencer le processus pour créer de nouvelles
-fonctionnalités encore plus riches. On peut comprendre les machines
-actuelles, qui disposent de très nombreuses applications, comme
-construites selon ce principe en partant de fonctionnalités de base
-avec un empilement de couches applicatives de plus en plus
-riches. Par conséquent, aujourd'hui, la plupart des besoins,
-personnels ou professionnels, des utilisateurs sont couverts par une
-ou plusieurs applications.
+La démarche inverse qui consiste à imaginer sa solution à partir des
+fonctionnalités de base est la **conception ascendante**.  Rappelons
+que les nouvelles fonctionnalités peuvent, à leur tour, être
+considérées commes des fonctionnalités de base ce qui permet de
+recommencer le processus pour créer de nouvelles fonctionnalités
+encore plus riches. Les environnements de programmation permettent de
+ranger l'ensemble de ces fonctionnalités dans des bibliothèques, à
+l'image des livres et des connaissances.
 
-Ceci fait dire à certains qu'il est inutile de savoir coder ou
+On peut comprendre les machines actuelles, comme construites selon ce
+principe en partant de fonctionnalités de base avec un empilement de
+couches applicatives de plus en plus riches. Par conséquent,
+aujourd'hui, la plupart des besoins, personnels ou professionnels, des
+utilisateurs sont couverts par une ou plusieurs applications.  Ceci
+fait dire à certains qu'il est inutile de savoir coder ou
 programmer. Nous pensons, a contrario, que bien comprendre les notions
 de base sur les algorithmes et les programmes permet de bien
-comprendre le fonctionnement des machines et des applications. Et même
-de faire preuve de créativité, car nous pouvons définir de nouvelles
-fonctionnalités si nous savons programmer. Par exemple, la
-*programmation créative* vous permet de définir de nouvelles formes
-d'expressions artistiques sonores ou visuelles.
+comprendre le fonctionnement des machines et des applications. Et
+c'est même oublier que le monde est riche, en perpétuelle évolution et
+demande à chaque évolution de nouveaux développements
+informatiques. Programmer c'est faire preuve de créativité. Le lien
+entre création et numérique est encore rendu plus explicite par la
+*programmation créative* : elle vous permet de définir de nouvelles
+formes d'expressions artistiques sonores ou visuelles.
 
 ```activité
 ::Langages de programmation::
 [markdown]
 Il existe de nombreux langages de programmation. En voici quelques exemples
 
-* pour apprendre en s'amusant : lien sur scratch
-* pour la conception artistique : lien vers processing
-* pour le Web : lien vers javascript
+* [class'code](http://classcode.fr/) pour tout le monde
+* pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
+* pour les artistes, la conception artistique : [processing](http://processing.org)
+* pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+{}
 ```
 
 
