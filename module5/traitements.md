@@ -1,6 +1,6 @@
 LANGUAGE:   fr
 TITLE:   Les traitements numériques et les applications
-MENUTITLE: Les traitements Numériques
+MENUTITLE: Les traitements numériques
 AUTHOR: Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
@@ -132,13 +132,16 @@ Lancer une application implique de lancer plusieurs traitements
 
 ::Application et machine::
 [markdown]
-L'exécution d'une application fait usage de ressources de la machine. Donner des exemples de ressources.
+L'exécution d'une application fait usage de ressources de la machine. 
+Donner des exemples de ressources.
 {#### a minima avec le processeur de calcul et les mémoires}
 
 ::Application et périphériques::
 [markdown]
 **Application et périphériques**
-L'exécution d'une application peut faire appel à des interactions avec l'extérieur de la machine par des périphériques. Donner des exemples de périphériques.
+L'exécution d'une application peut faire appel à des interactions avec
+l'extérieur de la machine par des périphériques. Donner des exemples de
+périphériques.
 {#### réseau, clavier, souris, écran, ...}
 ```
 
@@ -251,13 +254,21 @@ tous les milieux et toutes les situations.
 ```activité
 ::Modèle de l'ordinateur::
 [markdown]
-Le modèle décrit précédemment a été inventé par Von Neumann. Trouver une description schématique de ce modèle appelé architecture de Von Neumann
+Le modèle décrit précédemment a été inventé par Von Neumann. 
+Trouver une description schématique de ce modèle appelé 
+architecture de Von Neumann
 {}
 
 ::Rôle des linguistes::
 [markdown]
-Qui a inventé le mot ordinateur ? Qui est Larry Wall ? Qui est Noam Chomsky ?
-{#### Jacques Perret sur une demande d'IBM de trouver un terme français. Larry Wall est un linguiste qui a inventé un langage de programmation Perl toujours très utilisé pour traiter des (ensembles de) fichiers textes. Noam Chomsky est un linguiste qui a caractérisé les langages formels (utilisés par les machines) et naturels (les langues humaines).}
+Qui a inventé le mot ordinateur ? Qui est Larry Wall ? Qui est 
+Noam Chomsky ?
+{#### Jacques Perret sur une demande d'IBM de trouver un terme 
+français. Larry Wall est un linguiste qui a inventé un langage 
+de programmation Perl toujours très utilisé pour traiter des 
+(ensembles de) fichiers textes. Noam Chomsky est un linguiste 
+qui a caractérisé les langages formels (utilisés par les machines) 
+et naturels (les langues humaines).}
 ```
 
 
@@ -446,14 +457,20 @@ de calcul et en mémoire
 ```activité
 ::Les minuscules en majuscules::
 [markdown]
-On souhaite apprendre à la machine à faire la transformation inverse, à savoir transformer les minuscules en majuscules.
-- Pour transformer un caractère minuscule en majuscule, quelle instruction faut-il changer dans l'algorithme présenté ci-avant ?
-- Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle instruction ?
-- Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en entrée une séquence de caractères et qui transforme les minuscules en majuscules et laisse tous les autres caractères inchangés ?
-{#### retirer 32 au code au
-lieu d'ajouter 32 ; oui, on doit pouvoir apprendre à notre machine à
-faire une soustraction de deux entiers même si cela semble un petit
-peu plus compliqué que l'addition ; tester si le code du caractère est entre 97 et 123 et appeler le programme qui transforme minuscule en majuscule.}
+On souhaite apprendre à la machine à faire la transformation inverse,
+à savoir transformer les minuscules en majuscules.
+- Pour transformer un caractère minuscule en majuscule, quelle instruction
+faut-il changer dans l'algorithme présenté ci-avant ?
+- Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
+instruction ?
+- Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
+entrée une séquence de caractères et qui transforme les minuscules en 
+majuscules et laisse tous les autres caractères inchangés ?
+{#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir 
+apprendre à notre machine à faire une soustraction de deux entiers 
+même si cela semble un petit peu plus compliqué que l'addition ; 
+tester si le code du caractère est entre 97 et 123 et appeler le 
+programme qui transforme minuscule en majuscule.}
 ```
 
 
@@ -462,7 +479,10 @@ peu plus compliqué que l'addition ; tester si le code du caractère est entre 9
 dans Hour of Code : https://www.youtube.com/watch?v=mgooqyWMTxk  {}
 
 ::Autres formes de répétition::
-Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu dans la présentation précédente, une autre forme de répétition est le pour. Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même chose {}
+Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu 
+dans la présentation précédente, une autre forme de répétition est le pour. 
+Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même 
+chose {}
 
 ::Faut-il apprendre à coder ?::
 L'avis d'un président des Etats-Unis : https://www.youtube.com/watch?v=6XvmhE1J9PY {}
@@ -478,7 +498,8 @@ en une minute par Gérard Berry : https://www.youtube.com/watch?v=u9XEsJypSdc {}
 ::Conception des algorithmes::
 [markdown]
 - Pour résoudre un problème il existe un seul algorithme{F}
-- Pour résoudre un problème il existe des algorithmes plus efficaces que d'autres{T}
+- Pour résoudre un problème il existe des algorithmes plus efficaces que 
+d'autres{T}
 - Tout problème peut être résolu par un algorithme{F}
 ```
 
@@ -567,7 +588,8 @@ programmation effraient beaucoup de monde.
 ::Algorithmes et programmes::
 [markdown]
 **Algorithmes et programmes**
-Trouver les traductions dans 5 langages différents d'un algorithme qui affiche 10 fois "Hello World". {}
+Trouver les traductions dans 5 langages différents d'un algorithme qui affiche 
+10 fois "Hello World". {}
 ```
 
 ## Coder ou programmer
@@ -643,7 +665,8 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 ```compréhension
 ::Algorithmique et programmation::
 [markdown]
-Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme en programme ? {####concevoir algo}
+Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme 
+en programme ? {####concevoir algo}
 ```
 
 ## Les applications
@@ -1049,232 +1072,3 @@ questions éthiques sur la possession des données souvent personnelles
 et l'utilisateur, trop souvent consentant, doit désormais se poser la
 question de la communication de ses données personnelles.
 
-# Données et objets (optionnel)
-
-Nous avons introduit des notions d'algorithmique et de conception
-d'applications mais ceux-ci doivent manipuler des données. Il faut donc
-également considérer les données manipulées et les choix de
-représentation de ces données. En effet, si nous avons signalé les
-contraintes d'efficacité, nous ne les avons pas prises en
-compte. L'efficacité d'un programme est lié au choix de l'algorithme
-mais aussi au choix de la représentation des données. Nos applications
-doivent traiter des objets divers comme des nombres et des chaînes de
-caractères mais aussi des documents, des images, des tableaux,
-... Nous allons, dans cette section, étudier comment sont définies des
-données complexes à partir de données élémentaires et voir que les
-choix d'organisation peuvent être nombreux et influent sur les
-performances d'une application. Avant cela, une parenthèse sur la
-façon dont on mémorise les données dans les applications avec la
-notion de **variable informatique**.
-
-Les applications manipulent des caractères, des nombres, des listes,
-des documents, des images. Ces objets doivent pouvoir être mémorisés
-dans la mémoire de la machine et on doit pouvoir les retrouver au
-besoin. La gestion de la mémoire étant complexe, on utilise un
-mécanisme de **nommage avec des variables**. Supposons que
-l'application ait besoin de manipuler un caractère, on peut utiliser
-une variable `caracourant` dans laquelle on va pouvoir mémoriser un
-caractère et avec laquelle je pourrais retrouver le caractère
-mémorisé. On peut, de même, utiliser une variable `note` pour un
-nombre entre 0 et 20, ou encore une variable `montexte` pour une suite
-de caractères. On peut aussi considérer une variable `listenotes` pour
-gérer une liste de notes. Le principe est que, lorsqu'une variable est
-définie, la machine range la valeur (qui peut être complexe) à une
-adresse dans la mémoire et que la machine saura retrouver la valeur
-car elle mémorise l'association entre le nom de la variable et
-l'adresse mémoire. Illustrons ceci sur un exemple de programme simple
-
-`TRAIT2NOTES`
-
-1. `nbnotes` <- 2
-2. saisir une note au clavier et ranger la valeur dans `note1`
-3. saisir une note au clavier et ranger la valeur dans `note2`
-4. afficher le message "la plus petite note est : ", afficher le
-   résultat du calcul `MIN(note1,note2)`
-5. afficher le message "la moyenne est : ", afficher le résultat du
-   calcul `(note1 + note2)/nbnotes`
-
-La première instruction est une *affectation* : on range la valeur 2
-dans la variable `nbnotes`. Les instructions 2 et 3 sont une
-affectation à partir d'une interaction avec l'utilisateur du programme
-qui choisit une première valeur rangée dans `note1` puis une seconde
-valeur rangée dans `note1`. L'instruction 4 correspond à l'affichage
-d'un message et du résultat du calcul du minimum des 2 valeurs qui
-viennent d'être rangées dans `note1` et `note2`. Les variables
-permettent donc de désigner des objets par un nom pour ranger et
-retrouver des valeurs sans que l'utilisateur ait à gérer la complexité
-des accès à la mémoire de la machine. Il faut noter que le concepteur
-du programme utilise des variables pour expliquer à la machine ce
-qu'elle doit faire. Par contre, l'utilisateur ne voit pas les
-variables. Par exemple, l'utilisateur de notre programme saisit une
-première valeur, par exemple 12, puis une seconde valeur, par exemple
-14, et tout ce qu'il verra sont les résultats produits, soit sur notre
-exemple, "la plus petite note est : 12", "la moyenne est : 13"
-
-## Types de données élémentaires
-
-Nous avons auparavant introduit que nous pouvions étendre les
-capacités de notre machine. En particulier, nous avons vu qu'à partir
-de simples 0 et 1, on pouvait définir des nombres entiers et on
-pouvait définir des caractères en utilisant des codages adéquats. Ceci
-peut être généralisé et nous allons étudier les données élémentaires
-que peut utiliser une machine.
-
-On peut utiliser des **nombres ou valeurs
-numériques**. Les choix sont divers et diffèrent selon les
-environnements. On distingue souvent les nombres entiers avec le type
-`entier` ou `integer`. Ils peuvent être codés sur 1, 2, 4, ou un
-nombre quelconque d'octets ce qui permet de représenter des ensembles
-plus ou moins grands d'entiers. Par exemple, sur 1 octet on peut coder
-256 valeurs soit les entiers de 0 à 255 si on se limite à utiliser des
-entiers positifs, soit les entiers de -128 à +127 sinon. Sur 2 octets,
-on peut coder 65 536 entiers. Pour les nombres avec une partie
-décimale, on définit le type `décimal` ou `réel`. On peut ici encore
-avoir des codages plus ou moins longs qui donnent une précision plus
-ou moins importante. Pour des calculs scientifiques ou des calculs
-financiers, on utilise des nombres avec une très grande précision. Que
-ce soit pour les entiers ou les réels, on dispose de beaucoup de
-fonctions permettant de mettre en oeuvre de nombreux calculs.
-
-Ensuite, il existe un type pour manipuler les valeurs de vérité que sont
-`VRAI` et `FAUX`, c'est le type **Booléen** ou **Boolean**. Il est
-très utilisé en informatique car il correspond aux valeurs que peut
-prendre une condition et ces conditions sont utilisées dans
-l'alternative (le si alors sinon) et l'itérative (le tant que). On
-dispose d'opérations comme le `NON`, le `ET` et le `OU`. On notera que
-le `OU` logique est dit inclusif, c'est à dire qu'il vaut `VRAI` si l'un
-des deux ou les deux valent `VRAI`. Par exemple, `être-grand OU
-être-blond` vaut `VRAI` si je suis grand ou blond ou un grand
-blond. Dans la langue française, on utilise le ou comme conjonction de
-coordination avec un sens qui peut être inclusif ou exclusif selon les
-expressions. Les valeurs de vérité et la logique sont utiles également
-pour modéliser le raisonnement comme en intelligence artificielle mais
-nous en parlerons dans un autre cours.
-
-## Types de données structurés
-
-On peut assembler des données élémentaires pour construire des données
-structurées. Par exemple, on peut construire des tableaux de
-nombres. Un tableau de nombres à une dimension contient des nombres et
-on peut accéder à chaque nombre du tableau par son indice. On aura le
-premier nombre du tableau, le second, le dernier, ... Un tableau à
-deux dimensions sera organisé en lignes et en colonnes, il y aura deux
-indices et on pourra accéder au nombre situé en ligne `i` et en
-colonne `j` du tableau. Ces structures de données sont très utiles dès
-que l'on fait des calculs qu'ils soient scientifiques, économiques ou
-financiers. Il existe bien d'autres structures de données qui se
-distinguent les une des autres par la façon d'organiser les données,
-de pouvoir accéder aux données, de pouvoir les parcourir. Chacune des
-structures peut être mieux adaptée qu'une autre en fonction des
-besoins et des performances attendues. Plutôt que de parcourir toutes
-ces structures, nous allons considérer les documents textuels et voir
-l'importance de la structure pour les traitements à réaliser.
-
-Un document peut être représenté par une **chaîne de caractères**. En
-règle générale, une chaîne de caractères est une suite de caractères
-indicée de 1 à un indice qui est la longueur de la chaîne (parfois on
-commence à compter à 0) ce qui permet de parler du premier caractère,
-du second caractère, du dernier caractère. Nous avons vu dans une
-précédente section comment on pouvait définir des fonctionnalités sur
-les chaînes de caractères. On dispose souvent d'un grand nombre de
-fonctions comme transformer en majuscules, extraire les premiers
-caractères, compter le nombre d'apparitions d'un caractère, parcourir
-tous les caractères. Cette représentation correspond à une *structure
-séquentielle* dont nous allons voir les possibilités.
-
-Considérons une application comme un éditeur de textes ou un
-traitement de textes déja considérée dans le cours sur les
-documents. Regardons comment peut-on chercher un mot dans un
-texte. Par exemple, cherchons le mot `taille` dans le texte du cours
-de la section 3 du cours sur les traitements. Un programme de
-recherche va, en gnéral, fonctionner comme suit : il prend une fenêtre
-de longueur 6 (le mot cherché est de longueur 6) se positionne sur le
-premier caractère du texte, teste si la fenêtre contient le mot
-`taille`, si oui il positionne un curseur ou met en couleur le mot
-trouvé, si non il passe à la deuxième position et recommence jusqu'à
-avoir trouvé le mot ou être arrivé à la fin du document. C'est un
-*traitement séquentiel* et le programme doit parcourir tout le
-document. Peut-on faire mieux ? Nous verrons une réponse positive à
-cette question dans le cours sur la recherche d'information.
-
-Considérons maintenant le cas où le document possède une
-structure. C'est, par exemple, le cas pour un document `html` qui est
-un document textuel avec une structure définie à l'aide de
-balises. Une application, comme le navigateur, peut alors représenter
-le document avec une *structure arborescente* : la racine du document
-qui contient une entête ("head") et un corps ("body"), le corps
-contient un titre et des sections, les sections peuvent contenir des
-sections contenant des paragraphes et des listes. Quel avantage
-apporte cette structure en forme d'arbre ? Par exemple, l'application
-peut accéder directement au titre sans parcourir le document,
-l'application peut numéroter facilement les sections ou construire une
-table de navigation sans parcourir tout le document. Le navigateur
-peut appliquer les styles en fonction de cette structure : il applique
-le style de la page (fond, marges, retraits), puis les styles de
-section, puis les styles des titres de section, ... Qu'en est-il de
-notre programme de recherche d'un mot dans la page Web ? On utilise le
-même programme que précédemment pour les contenus textuels aux
-feuilles de l'arbre. La structure arborescente facilite et accélère
-les traitements pour le navigateur. La conscience de cette structure
-pour un utilisateur permet de bien comprendre ce qu'est une page Web
-et permet de définir des styles appropriés si vous êtes amenés à
-modifier l'apparence de pages Web.
-
-## Les objets
-
-La définition d'*objet* est issue du monde réel dans lequel nous avons
-une définition plus ou moins précise d'un objet du monde réel. Une
-voiture possède des propriétés comme avoir 4 roues (souvent), une
-couleur, une marque, un identifiant (le numéro d'immatriculation),
-..., peut réaliser des actions comme démarrer, rouler, freiner, et
-interagit avec d'autres objets comme rouler sur une route, suivre une
-autre voiture, réagit à l'action du chauffeur sur le volant, ... Les
-objets au sens informatique sont des abstractions des objets du monde
-réel mais aussi de tout concept qu'on doit manipuler de façon
-informatique comme un client ou même un sentiment.
-
-Cette abstraction va correspondre à la notion de *classe* qui va définir
-les *propriétés* ou attributs que peut prendre un objet, les *méthodes*
-qui sont les actions possibles et les relations possibles avec
-d'autres classes. Un objet ou instance est une réalisation
-particulière de la classe. On définit la classe des voitures et on
-considérera, par exemple, l'objet voiture de couleur rouge, de marque
-peugeot, immatriculée 235HGR34 qui roule à 55km/h sur la
-départementale 455.
-
-Les objets interagissent les uns avec les autres par des *échanges de
-messages* avec un émetteur, un destinataire et un contenu qui permet de
-transmettre une information pour modifier une propriété ou de demander
-un traitement. Par exemple, l'objet chauffeur demande à l'objet
-voiture de freiner en lui envoyant un message, l'objet voiture peut
-alors modifier sa propriété vitesse.
-
-Un autre point conceptuel important à comprendre est la notion
-d'*encapsulation*. L'idée est de protéger les données et de cacher le
-fonctionnement interne de l'objet. Les attributs et méthodes sont
-contenus dans l'objet et seul l'objet pourra modifier les valeurs. Il
-le fera en réponse à un message. Par exemple, la vitesse est une
-propriété encapsulée, elle ne sera modifiée qu'en réponse à un message
-demandant de freiner ou d'accélérer et les valeurs de la propriété
-vitesse peuvent être contrôlées. Un autre aspect de l'encapsulation
-est de "cacher" comment sont réalisées effectivement les méthodes. Si
-vous avez un objet de classe voiture et que vous savez disposer d'une
-méthode pour freiner, vous pouvez utiliser cette méthode sans vous
-préoccuper de la façon dont est exécuté le freinage.
-
-Une dernière notion utile est de savoir que les classes peuvent
-posséder des relations entre elles. On peut avoir une classe étudiant
-et une classe personnel qui sont des cas particuliers d'une classe
-générale membre université qui elle-même peut être cas particulier
-d'une classe personne. Pour ce type de relation, on peut définir une
-notion d'*héritage*. Par exemple, la classe étudiant peut hériter de la
-classe membre université des propriétés comme accèsENT. Comprendre les
-formes diverses de l'héritage et les autres relations entre classes
-sort du propos de cette introduction.
-
-La *programmation objet* est un mode de programmation basé sur les
-objets. Au premier niveau, on utilise un langage de programmation qui
-va contenir des classes d'objets prédéfinies et on écrit des
-programmes utilisant ces objets. Au second niveau, on définit de
-nouveaux objets avec leurs propriétés et leurs méthodes en vu de
-définir une nouvelle application.
