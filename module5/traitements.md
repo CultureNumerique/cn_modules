@@ -154,7 +154,7 @@ fait irruption dans les médias, car nous mesurons aujourd'hui plus
 sensiblement l'impact du numérique dans la société. Par exemple, les
 moteurs de recherche posent la question sociétale de l'accès à la
 connaissance : *quel algorithme choisit l'ordre des résultats à une
-requête dans un moteur de recherche ?* Une autre question sociétale
+requête dans un moteur de recherche ?* Une autre question de société
 concerne l'utilisation des traces de nos actions dans le monde
 numérique : *que peut inférer un algorithme de masse de données (big
 data) sur moi à partir de mes activités sur le Web ?* Un dernier
@@ -181,9 +181,9 @@ exécuté, de façon automatique, sans juger ni réfléchir.  Comme le dit
 *Le but est d’évacuer la pensée du calcul, afin de le rendre
 exécutable par une machine numérique*.  Enlever la pensée, c'est se
 comporter comme un automate et exécuter les instructions sans faire
-appel à connaissances extérieures.
+appel à des connaissances extérieures.
 
-Prenons l'exemple de l'explication de la réalisation du café matinal
+Prenons l'exemple de la préparation du café matinal
 dans une machine à café à filtres : prendre un filtre dans la boîte ;
 placer le filtre dans la cafetière ; prendre le paquet de café ;
 mettre autant de cuillères de café que de tasses souhaitées ; mettre
@@ -223,7 +223,7 @@ selon ces principes jusqu'à pouvoir concevoir les applications
 complexes que vous utilisez sur un ordinateur, une tablette ou un
 smartphone. Les règles de composition sont décrites par des
 algorithmes, mais il est avant tout nécessaire de définir quelles
-fonctionnalités dont déjà existantes de base dans un ordinateur.
+fonctionnalités sont déjà existantes de base dans un ordinateur.
 
 
 ### La machine
@@ -397,12 +397,12 @@ définir des traitements à partir de traitements de base et trois modes
 de combinaison à savoir la *séquence* qui fait passer à l'instruction
 suivante, l'*alternative* qui permet de choisir les instructions à
 exécuter selon la valeur d'un test et la *répétition* qui répète des
-instructions tant qu'un test est satisfait. La machine qui
+instructions tant qu'un test est satisfait. La machine
 peut exécuter les traitements ainsi définis grace à une unité de
 calcul, de la mémoire et une unité de contrôle. 
 
 Notre exemple nous a permis d'expliquer comment construire une
-nouvelle fonctionnalité à en combinant des opérations simples. Mais,
+nouvelle fonctionnalité en combinant des opérations simples. Mais,
 une grande force de ces combinaisons, et donc des algorithmes, est
 qu'elles peuvent s'appliquer sur des instructions plus évoluées. Nous
 pourrions, par exemple, réutiliser l'algorithme de transformation des
