@@ -477,26 +477,26 @@ de calcul et en mémoire
 
 ```activité
 ::Faut-il apprendre à coder ?::
-[L'avis d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
+L'avis [d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
 pouvez activer, au besoin, les sous-titres en anglais ou en
 français. {}
 
 ::Algorithme et programme::
-[expliqués en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc) {}
+expliqués [en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc) {}
 
 
 ::La répétition par Mark Zuckerberg (Facebook)::
-Mark Zuckerberg, président de Facebook, vous initie à la répétition dans [Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
 
 ::Les minuscules en majuscules::
 [markdown]
 On souhaite apprendre à la machine à faire la transformation inverse,
 à savoir transformer les minuscules en majuscules.
-- Pour transformer un caractère minuscule en majuscule, quelle instruction
+* Pour transformer un caractère minuscule en majuscule, quelle instruction
 faut-il changer dans l'algorithme présenté ci-avant ?
-- Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
+* Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
 instruction ?
-- Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
+* Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
 entrée une séquence de caractères et qui transforme les minuscules en 
 majuscules et laisse tous les autres caractères inchangés ?
 {#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir 
@@ -513,10 +513,10 @@ Le code informatique va être enseigné à l'école et les professeurs des écol
 
 ::Conception des algorithmes::
 [markdown]
-- Pour résoudre un problème il existe un seul algorithme{F}
-- Pour résoudre un problème il existe des algorithmes plus efficaces que 
+* Pour résoudre un problème il existe un seul algorithme{F}
+* Pour résoudre un problème il existe des algorithmes plus efficaces que 
 d'autres{T}
-- Tout problème peut être résolu par un algorithme{F}
+* Tout problème peut être résolu par un algorithme{F}
 ```
 
 
