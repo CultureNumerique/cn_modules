@@ -477,7 +477,8 @@ de calcul et en mémoire
 
 ```activité
 ::Faut-il apprendre à coder ?::
-L'avis [d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
+[markdown]
+[L'avis d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
 pouvez activer, au besoin, les sous-titres en anglais ou en
 français. {}
 
