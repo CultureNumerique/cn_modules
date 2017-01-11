@@ -1062,7 +1062,9 @@ Cochez les réponses vraies
 ~%50% Un programme de classement de textes peut approcher les performances d'un expert humain
 ~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier
 ~ Les humains sont meileurs que les programmes dans les jeux de plateau (dames, échecs, go)
+
 ::Autres jeux::
+[markdown]
 Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
 ```
 # Conclusion
