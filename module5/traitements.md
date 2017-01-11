@@ -493,6 +493,7 @@ Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Ho
 [markdown]
 On souhaite apprendre à la machine à faire la transformation inverse,
 à savoir transformer les minuscules en majuscules.
+\n
 * Pour transformer un caractère minuscule en majuscule, quelle instruction
 faut-il changer dans l'algorithme présenté ci-avant ?
 * Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
@@ -515,8 +516,10 @@ Le code informatique va être enseigné à l'école et les professeurs des écol
 ::Conception des algorithmes::
 [markdown]
 * Pour résoudre un problème il existe un seul algorithme{F}
+\n
 * Pour résoudre un problème il existe des algorithmes plus efficaces que 
 d'autres{T}
+\n
 * Tout problème peut être résolu par un algorithme{F}
 ```
 
