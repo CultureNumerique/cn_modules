@@ -516,6 +516,7 @@ Le code informatique va être enseigné à l'école et les professeurs des écol
 ::Conception des algorithmes::
 [markdown]
 Cochez les affirmations vraies
+
 ~ Pour résoudre un problème il existe un seul algorithme
 ~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que 
 d'autres
@@ -603,14 +604,6 @@ acceptera une phrase mal formée dès qu'il en comprend le sens. Cette
 rigueur nécessaire et la difficulté d'apprendre un langage de
 programmation effraient beaucoup de monde.
 
-```activité
-::Algorithmes et programmes::
-[markdown]
-**Algorithmes et programmes**
-Trouver les traductions dans 5 langages différents d'un algorithme qui affiche 
-10 fois "Hello World". {}
-```
-
 ## Coder ou programmer
 
 Ces deux termes désignent l'activité de *concevoir des algorithmes et
@@ -669,23 +662,21 @@ entre création et numérique est encore rendu plus explicite par la
 formes d'expressions artistiques sonores ou visuelles.
 
 ```activité
-::Langages de programmation::
-[markdown]
-Il existe de nombreux langages de programmation. En voici quelques exemples
-\n
-* [class'code](http://classcode.fr/) pour tout le monde
-* pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
-* pour les artistes, la conception artistique : [processing](http://processing.org)
-* pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-{}
-```
-
-
-```compréhension
 ::Algorithmique et programmation::
 [markdown]
 Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme 
 en programme ? {####concevoir algo}
+::Langages de programmation::
+[markdown]
+Il existe de nombreux langages de programmation. En voici quelques exemples
+\n
+* pour le grand public [class'code](http://classcode.fr/)
+* pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
+* pour les artistes, la conception artistique : [processing](http://processing.org)
+* pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+* pour les informaticiens : le langage C et ses variantes C++ et C#, java, python
+* pour les statisticiens : le langage R
+{}
 ```
 
 ## Les applications
@@ -1061,11 +1052,17 @@ recherches sur le Go avec un programme champion du monde dans les
 années 2010, battant même des experts humains mais avec handicap.
 
 ```compréhension
-::Représenter et manipuler::
+::Les exemples d'applications::
 [markdown]
-**Représenter et manipuler**
-Les traitements possibles dépendent fortement des choix de représentation
-{T}
+Cochez les réponses vraies
+~ Il est possible d'avoir un dictionnaire contenant tous les mots de langue française
+~ Un correcteur orthographique détecte toutes les fautes d'orthographe
+~%50% Un programme qui classe des textes utilise des textes classés par un expert humain
+~%50% Un programme de classement de textes peut approcher les performances d'un expert humain
+~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier
+~ Les humains sont meileurs que les programmes dans les jeux de plateau (dames, échecs, go)
+::Autres jeux::
+Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
 ```
 # Conclusion
 
