@@ -213,6 +213,17 @@ there were computers, there were algorithms. But now that there are
 computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
+```compréhension ::Recettes de cuisine:: [markdown] Un exemple
+classique d'algorithme utilisé dans la vie courante est une recette de
+cuisine comme
+[la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
+Regardez
+cette recette et répondez aux questions suivantes :
+- Décrire les actions de base qu'est supposé savoir faire l'utilisateur de cette recette
+- Décrire les éléments utiles à l'exécution
+{#### actions : fouetter, chauffer, verser, mesurer le temps, ... ; éléments : les ingrédients, une poêle, une plaque de cuisson, ...}
+```
+
 ## Algorithmes et ordinateurs
 
 Nous avons expliqué le principe général de composition permettant de
