@@ -4,6 +4,10 @@ MENUTITLE: Les traitements numériques
 AUTHOR: Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
+<!-- pandoc -t latex -V geometry:margin=3cm --toc traitements.md -o t.pdf -->
+
+<!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc traitements.md -o t.pdf -->
+
 # Comprendre les traitements
 
 Pourquoi les ordinateurs peuvent-ils nous apparaître plus précis et
