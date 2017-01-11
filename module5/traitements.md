@@ -218,14 +218,18 @@ computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
 ```compréhension 
-::Recettes de cuisine:: [markdown] Un exemple
+::Recettes de cuisine::
+[markdown]
+Un exemple
 classique d'algorithme utilisé dans la vie courante est une recette de
 cuisine comme
 [la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
 Regardez
 cette recette et répondez aux questions suivantes :
+
 - Décrire les actions de base qu'est supposé savoir faire l'utilisateur de cette recette
 - Décrire les éléments utiles à l'exécution
+
 {#### actions : fouetter, chauffer, verser, mesurer le temps, ... ; éléments : les ingrédients, une poêle, une plaque de cuisson, ...}
 ```
 
@@ -271,14 +275,16 @@ tous les milieux et toutes les situations.
 ::Modèle de l'ordinateur::
 [markdown]
 Le modèle décrit précédemment a été inventé par Von Neumann. 
-Trouver une description schématique de ce modèle appelé 
-architecture de Von Neumann
-{}
+En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les données et les programmes (instructions) sont-elles considérées de la même manière dans la mémoire ?
+{#### oui et c'est un élément important qui a permis le développement de l'informatique}
 
 ::Rôle des linguistes::
 [markdown]
-Qui a inventé le mot ordinateur ? Qui est Larry Wall ? Qui est 
-Noam Chomsky ?
+Toute la communauté scientifique a participé au développement de l'informatique et, tout particulièrement, les mathématiciens, les logiciens et les physiciensmais aussi les linguistes. En voici trois exemples :
+
+- Qui a inventé le mot ordinateur ?
+- Qui est Larry Wall ?
+- Qui est Noam Chomsky ?
 {#### Jacques Perret sur une demande d'IBM de trouver un terme 
 français. Larry Wall est un linguiste qui a inventé un langage 
 de programmation Perl toujours très utilisé pour traiter des 
@@ -286,7 +292,6 @@ de programmation Perl toujours très utilisé pour traiter des
 qui a caractérisé les langages formels (utilisés par les machines) 
 et naturels (les langues humaines).}
 ```
-
 
 ### La séquence
 
@@ -470,7 +475,23 @@ raisonnable*. Pour ces problèmes, on étudie alors la *complexité des
 algorithmes* pour trouver les algorithmes les plus efficaces en temps
 de calcul et en mémoire
 
+```compréhension
+
+```
+
 ```activité
+::Faut-il apprendre à coder ?::
+[L'avis d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
+pouvez activer, au besoin, les sous-titres en anglais ou en
+français. {}
+
+::Algorithme et programme::
+[expliqués en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc) {}
+
+
+::La répétition par Mark Zuckerberg (Facebook)::
+Mark Zuckerberg, président de Facebook, vous initie à la répétition dans [Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+
 ::Les minuscules en majuscules::
 [markdown]
 On souhaite apprendre à la machine à faire la transformation inverse,
@@ -487,30 +508,13 @@ apprendre à notre machine à faire une soustraction de deux entiers
 même si cela semble un petit peu plus compliqué que l'addition ; 
 tester si le code du caractère est entre 97 et 123 et appeler le 
 programme qui transforme minuscule en majuscule.}
-```
-
-
-```activité
-::La répétition par Mark Zuckerberg (Facebook)::
-dans Hour of Code : https://www.youtube.com/watch?v=mgooqyWMTxk  {}
-
-::Autres formes de répétition::
-Nous avons vu la répétition de la forme tant que. Comme vous l'avez entendu 
-dans la présentation précédente, une autre forme de répétition est le pour. 
-Donnez deux algos simples avec pour et tant que et montrer qu'ils font la même 
-chose {}
-
-::Faut-il apprendre à coder ?::
-L'avis d'un président des Etats-Unis : https://www.youtube.com/watch?v=6XvmhE1J9PY {}
 
 ::Apprendre les bases de l'algorithmique::
-Parmi les nombreux sites disponibles, pourquoi pas "Hour of Code" : https://code.org/learn
+Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
 
-::Algorithme et programme::
-en une minute par Gérard Berry : https://www.youtube.com/watch?v=u9XEsJypSdc {}
-```
+::Informatique à l'école::
+Le code informatique va être enseigné à l'école et les professeurs des écoles et collèges devront enseigner le code. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public
 
-```compréhension
 ::Conception des algorithmes::
 [markdown]
 - Pour résoudre un problème il existe un seul algorithme{F}
