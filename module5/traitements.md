@@ -226,10 +226,9 @@ cuisine comme
 [la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
 Regardez
 cette recette et répondez aux questions suivantes :
-
+\n
 - Décrire les actions de base qu'est supposé savoir faire l'utilisateur de cette recette
 - Décrire les éléments utiles à l'exécution
-
 {#### actions : fouetter, chauffer, verser, mesurer le temps, ... ; éléments : les ingrédients, une poêle, une plaque de cuisson, ...}
 ```
 
@@ -281,7 +280,7 @@ En voici [une description schématique](https://fr.wikipedia.org/wiki/Architectu
 ::Rôle des linguistes::
 [markdown]
 Toute la communauté scientifique a participé au développement de l'informatique et, tout particulièrement, les mathématiciens, les logiciens et les physiciensmais aussi les linguistes. En voici trois exemples :
-
+\n
 - Qui a inventé le mot ordinateur ?
 - Qui est Larry Wall ?
 - Qui est Noam Chomsky ?
@@ -475,9 +474,6 @@ raisonnable*. Pour ces problèmes, on étudie alors la *complexité des
 algorithmes* pour trouver les algorithmes les plus efficaces en temps
 de calcul et en mémoire
 
-```compréhension
-
-```
 
 ```activité
 ::Faut-il apprendre à coder ?::
@@ -673,7 +669,7 @@ formes d'expressions artistiques sonores ou visuelles.
 ::Langages de programmation::
 [markdown]
 Il existe de nombreux langages de programmation. En voici quelques exemples
-
+\n
 * [class'code](http://classcode.fr/) pour tout le monde
 * pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
 * pour les artistes, la conception artistique : [processing](http://processing.org)
