@@ -1055,6 +1055,7 @@ années 2010, battant même des experts humains mais avec handicap.
 ::Les exemples d'applications::
 [markdown]
 Cochez les réponses vraies
+\n
 ~ Il est possible d'avoir un dictionnaire contenant tous les mots de langue française
 ~ Un correcteur orthographique détecte toutes les fautes d'orthographe
 ~%50% Un programme qui classe des textes utilise des textes classés par un expert humain
