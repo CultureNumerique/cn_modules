@@ -515,12 +515,11 @@ Le code informatique va être enseigné à l'école et les professeurs des écol
 
 ::Conception des algorithmes::
 [markdown]
-* Pour résoudre un problème il existe un seul algorithme{F}
-\n
-* Pour résoudre un problème il existe des algorithmes plus efficaces que 
-d'autres{T}
-\n
-* Tout problème peut être résolu par un algorithme{F}
+Cochez les affirmations vraies
+~ Pour résoudre un problème il existe un seul algorithme
+~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que 
+d'autres
+~ Tout problème peut être résolu par un algorithme
 ```
 
 
