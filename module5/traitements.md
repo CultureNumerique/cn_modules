@@ -217,7 +217,8 @@ there were computers, there were algorithms. But now that there are
 computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
-```compréhension ::Recettes de cuisine:: [markdown] Un exemple
+```compréhension 
+::Recettes de cuisine:: [markdown] Un exemple
 classique d'algorithme utilisé dans la vie courante est une recette de
 cuisine comme
 [la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
