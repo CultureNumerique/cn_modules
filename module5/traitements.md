@@ -489,6 +489,19 @@ expliqués [en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9X
 ::La répétition par Mark Zuckerberg (Facebook)::
 Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
 
+::Différentes formes pour la répétition::
+[markdown]
+La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse dans le réservoir :
+\n
+* AlgoPour : Pour i de 1 à 5 Faire Verser1 FinPour
+* AlgoTantQue : TantQue pas arrivé au niveau 5 Faire Verser1 FinTantQue
+* AlgoJusqua : Répéter Verser1 Jusqua arriver au niveau 5
+\n
+* Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
+* Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
+* L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
+{####  Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. Si le réservoir est vide, les trois algorithmes sont équivalents. Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
+
 ::Les minuscules en majuscules::
 [markdown]
 On souhaite apprendre à la machine à faire la transformation inverse,
