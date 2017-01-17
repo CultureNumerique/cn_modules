@@ -495,3 +495,723 @@ Dans l'algorithme précédent combien existe-t-il de séquences ?
 Dans l'algorithme précédent quelle est la longueur de la séquence la plus longue ? 
 {#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
 ```
+
+## Les trois combinaisons de base
+
+Faisons un point d'étape. Les algorithmes permettent de
+définir des traitements à partir de traitements de base et trois modes
+de combinaison à savoir la *séquence* qui fait passer à l'instruction
+suivante, l'*alternative* qui permet de choisir les instructions à
+exécuter selon la valeur d'un test et la *répétition* qui répète des
+instructions tant qu'un test est satisfait. La machine
+peut exécuter les traitements ainsi définis grâce à une unité de
+calcul, de la mémoire et une unité de contrôle. 
+
+Notre exemple nous a permis d'expliquer comment construire une
+nouvelle fonctionnalité en combinant des opérations simples. Mais,
+une grande force de ces combinaisons, et donc des algorithmes, est
+qu'elles peuvent s'appliquer sur des instructions plus évoluées. Nous
+pourrions, par exemple, réutiliser l'algorithme de transformation des
+majuscules dans un nouvel algorithme. Et c'est un vrai jeu de
+construction ! À la manière des Legos où, partant de briques de bases,
+on construit par assemblages successifs des maisons puis des villes,
+on se trouve devant un univers infini de possibilités où toute votre
+créativité peut s'exprimer. En informatique, au fur et à mesure des
+constructions algorithmiques, les traitements deviennent de plus en
+plus sophistiqués.  Par exemple, dans le cas de notre application
+d'assistance routière, on compose en séquence la reconnaissance vocale
+des directions, le calcul d'itinéraire et son affichage. L'alternative
+permet, si le lieu d'arrivée n'est pas connu ou est imprécis,
+d'afficher un message plutôt que l'itinéraire. L'itération permet de
+poursuivre l'exécution de l'assistant tant que vous n'êtes pas arrivé.
+
+## Calculer et calculable
+
+Est-ce que ces trois modes de composition que sont la séquence,
+l'alternative et l'itérative sont suffisants ? Oui car il existe un
+**théorème** qui affirme que tout ce qui est calculable avec une
+machine peut être défini par quelques opérations élémentaires et ces
+trois opérations de composition. Ce théorème a été démontré au milieu
+du vingtième siècle par des mathématiciens et des logiciens.
+
+Ceci soulève immédiatement la question : *une machine peut-elle tout
+calculer ?* La réponse, démontrée à la même époque, est négative : il
+existe des problèmes que ne peut pas résoudre une machine. Par
+exemple, il est démontré qu'*il n'existe pas d'algorithme* qui est
+capable de dire si une suite d'instructions contenant des alternatives
+et des itératives va s'arrêter lorsqu'on l'exécutera. Ces sujets
+soulèvent des problèmes importants étudiés par les mathématiciens, les
+informaticiens, les logiciens et les philosophes autour des notions de
+calcul et d'intelligence.
+
+Mais, savoir qu'un problème est calculable ne suffit pas. En effet, il
+faut alors proposer des représentations des données du problème et des
+algorithmes pour le résoudre. Et, comme nous l'avons signalé dans
+notre exemple de calcul d'itinéraire, il faut que la mémoire
+nécessaire pour représenter les données soit dans les limites des
+capacités des machines car leur mémoire n'est pas infinie. Il faut
+également que le temps de calcul de l'algorithme soit raisonnable et
+adapté au problème : de moins d'une seconde de temps de réponse pour
+une application interactive à quelques heures pour une application
+scientifique complexe comme la prédiction météorologique. Ces deux
+questions posent des challenges scientifiques majeurs aux chercheurs
+pour déterminer les problèmes qui sont *calculables en un temps
+raisonnable*. Pour ces problèmes, on étudie alors la *complexité des
+algorithmes* pour trouver les algorithmes les plus efficaces en temps
+de calcul et en mémoire
+
+
+```activité
+::Différentes formes pour la répétition::
+[markdown]
+La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse et donc augmente de 1 le niveau d'eau dans le réservoir :
+\n
+* AlgoPour : 
+   Pour i de 1 à 5 Faire 
+      Verser1 
+   Fin Pour
+* AlgoTantQue : 
+   Tant Que le niveau est inférieur à 5 Faire 
+     Verser1 
+   Fin Tant Que
+* AlgoJusqua : 
+   Répéter 
+     Verser1 
+   Jusqu'à arriver au niveau 5
+\n
+1. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
+2. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
+3. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
+{####  Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. Si le réservoir est vide, les trois algorithmes sont équivalents. Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
+
+::Les minuscules en majuscules::
+[markdown]
+On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours. 
+\n
+1. Pour transformer un caractère minuscule en majuscule, quelle instruction
+faut-il changer dans l'algorithme présenté ci-avant ?
+2. Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
+instruction ?
+3. Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
+entrée une séquence de caractères et qui transforme les minuscules en 
+majuscules et laisse tous les autres caractères inchangés ?
+{#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir 
+apprendre à notre machine à faire une soustraction de deux entiers 
+même si cela semble un petit peu plus compliqué que l'addition ; 
+tester si le code du caractère est entre 97 et 123 et appeler le 
+programme qui transforme minuscule en majuscule.}
+
+::Informatique à l'école::
+[markdown]
+Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public.
+{}
+
+::Conception des algorithmes::
+[markdown]
+Cochez les affirmations vraies :
+\n
+{
+~ Pour résoudre un problème il existe un seul algorithme.
+~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que 
+d'autres.
+~ Tout problème peut être résolu par un algorithme.
+}
+```
+
+
+# Algorithmes, programmes et applications
+
+## Machines, algorithmes et langages
+
+Rappelons que machines, langages et algorithmes sont intimement liés
+et comprendre l'une de ces notions ne peut se faire indépendamment des
+autres. Nous avons introduit les algorithmes sur une machine de base
+très simple travaillant avec des opérations élémentaires, des
+mémoires, une unité de calcul et un langage de codage des
+caractères. Nous avons signalé que l'informatique s'apparentait à un
+grand jeu de construction. Celui-ci s'applique à la fois pour les
+données et pour les programmes grâce à des langages informatiques.
+
+En effet, en ce qui concerne les données, si la machine de base
+travaille avec des 0 et des 1, les *langages de description*
+permettent de décrire, dans ce jeu de construction, avec un niveau
+d'abstraction toujours croissant, les caractères et les nombres, les
+images, les textes et les tableaux de nombres, les documents
+structurés, les documents multimédia. 
+
+Mais nous l'avons vu, le jeu de construction porte aussi sur les
+algorithmes. En effet, à partir d'opérations de base sur ces objets
+complexes, on va pouvoir les composer dans des algorithmes avec les
+trois compositions, la séquence, l'alternative et l'itération. Les
+fonctionnalités de base d'un ordinateur sont très réduites : changer
+des 0 en 1, effectuer des additions des comparaisons,...  Mais les
+fonctionnalités développées par ce jeu de construction, nous pouvons à
+tout moment les considérer comme de nouvelles fonctionnalités de base,
+plus évoluées. On peut même oublier ces 0 et ces 1 et considérer que
+l'ordinateur a des fonctionnalités de base dédiées à différents
+domaines comme manipuler des nombres, des caractères et des
+textes. Cela peut aussi être un robot qui sait avancer, tourner et
+repérer des obstacles ; cela peut être un logiciel de dessin vectoriel
+qui sait se repérer sur une grille, tracer des segments, des cercles,
+des courbes et colorier ; cela peut être un tableur qui sait traiter
+des listes de données ; cela peut être un navigateur qui sait gérer
+des documents du Web. Quelles que soient ces fonctionnalités de base
+le jeu pourra toujours continuer grâce aux structures de composition
+que sont la séquence, l'alternative et la répétition.
+
+Mais, si un algorithme est conçu et lu par des humains, il doit
+ensuite être traduit pour pouvoir être exécuté par une machine. Pour
+cela, il faut traduire l'algorithme dans un langage compréhensible par
+la machine. Il faut donc disposer d'un langage commun entre l'humain
+et la machine avec la contrainte forte d'être compréhensible par les
+humains tout en étant suffisamment formel et précis pour ne pas
+laisser d'ambiguïté à la machine. C'est le rôle des langages
+informatiques pour les traitements.
+
+Il existe, en réalité, de nombreux langages dépendants du mode
+d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
+interagir avec une application par un langage graphique à base de
+menus ou par des clics de souris ou par l'action de frapper sur des
+touches de clavier. Pour apprendre à vous servir d'une application,
+vous allez apprendre ce langage : quelle est l'action réalisée par le
+choix de cet élément de menu, quel est l'effet d'un clic de souris
+sur cet élément, quel est l'effet de l'appui sur cette combinaison de
+touches. Mais, il est difficile d'automatiser ces actions dans des
+programmes. On préfère alors utiliser un langage écrit.  Lorsqu'il
+s'agit de traduire un algorithme par un texte à destination de la
+machine, on utilise des langages appelés *langages de
+programmation*.
+
+Il existe de nombreux langages de programmation, qui fournissent tous
+ces structures de composition (séquence, alternative, itération) et
+diffèrent par fonctionnalités de base mises à disposition.  Mais comme
+pour les langues naturelles ils diffèrent aussi par leur règles de
+syntaxe et de grammaire. Les textes écrits dans ces langages sont des
+*programmes* qui sont la traduction d'algorithmes dans le langage
+choisi. Le choix d'un langage va donc dépendre des fonctionnalités de
+base du langage, des besoins de l'application, des performances
+souhaitées, ... et des goûts du programmeur. Ces langages et les
+programmes se doivent d'être compréhensibles par l'informaticien(ne)
+mais comme ils sont destinés à être exécutés par la machine, ils
+respectent des règles très strictes de syntaxe. Ceci explique qu'une
+machine va refuser une commande mal écrite alors qu'un humain
+acceptera une phrase mal formée dès qu'il en comprend le sens. Cette
+rigueur nécessaire et la difficulté d'apprendre un langage de
+programmation effraient beaucoup de monde.
+
+```activité
+::Algorithme et programme::
+[markdown]
+Algorithme et programme expliqués [en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc). L'ordinateur pense-t-il?
+{F
+#### voir aussi [l'aphorisme de Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra#Aphorismes) à ce propos.
+}
+
+::Faut-il apprendre à coder ?::
+[markdown]
+[L'avis d'un président des États-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
+pouvez activer, au besoin, les sous-titres en anglais ou en français. {}
+
+::Apprendre à coder::
+[markdown]
+Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
+{}
+
+::La répétition par Mark Zuckerberg (Facebook)::
+Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+```
+
+## Coder ou programmer
+
+Ces deux termes désignent l'activité de *concevoir des algorithmes et
+des programmes*. Si cette activité est principalement le fait des
+informaticiens, il est important de connaître les notions essentielles
+de la programmation pour être un acteur du monde numérique (voir, par
+exemple, le discours, donné en activité, d'un récent président des
+États-Unis).
+
+On souhaite ajouter une nouvelle fonctionnalité à une machine. Il faut
+donc la coder (ou la programmer) ce qui va se faire en deux étapes :
+concevoir un algorithme puis écrire le programme correspondant. Il est
+important de remarquer que le plus difficile est de concevoir un bon
+algorithme alors que programmer n'est que traduire cet algorithme dans
+le langage choisi. Nous allons décrire deux principes de conception.
+
+La démarche la plus souvent utilisée est celle de la **conception
+descendante** qui consiste à décomposer le problème en des problèmes
+de plus en plus simples. Notons que c'est une démarche courante. En
+effet, si je dois me rendre de mon domicile à Lille à l'hôtel Arosfat
+à Londres par le train, je vais décomposer le problème en problèmes
+plus simples : aller de mon domicile à la gare TGV, prendre le TGV,
+aller de la gare St Pancras à l'hôtel. On peut alors continuer le
+processus de décomposition. Par exemple, aller de la gare St Pancras à
+l'hôtel peut se décomposer en : se rendre au terminus des navettes, si
+une navette est disponible rapidement, prendre la navette, sinon se
+rendre au métro, ... On arrête la décomposition lorsque tous les
+sous-problèmes introduits correspondent à des fonctionnalités de base
+de notre langage. On peut alors expliciter un algorithme (ou des
+algorithmes) pour définir la fonctionnalité attendue puis les traduire
+dans des programmes.
+
+La démarche inverse qui consiste à imaginer sa solution à partir des
+fonctionnalités de base est la **conception ascendante**.  Rappelons
+que les nouvelles fonctionnalités peuvent, à leur tour, être
+considérées commes des fonctionnalités de base ce qui permet de
+recommencer le processus pour créer de nouvelles fonctionnalités
+encore plus riches. Les environnements de programmation permettent de
+ranger l'ensemble de ces fonctionnalités dans des bibliothèques, à
+l'image des livres et des connaissances.
+
+On peut comprendre les machines actuelles, comme construites selon ce
+principe en partant de fonctionnalités de base avec un empilement de
+couches applicatives de plus en plus riches. Par conséquent,
+aujourd'hui, la plupart des besoins, personnels ou professionnels, des
+utilisateurs sont couverts par une ou plusieurs applications.  Ceci
+fait dire à certains qu'il est inutile de savoir coder ou
+programmer. Nous pensons, a contrario, que bien comprendre les notions
+de base sur les algorithmes et les programmes permet de bien
+comprendre le fonctionnement des machines et des applications. Et
+c'est même oublier que le monde est riche, en perpétuelle évolution et
+demande à chaque évolution de nouveaux développements
+informatiques. Programmer c'est faire preuve de créativité. Le lien
+entre création et numérique est encore rendu plus explicite par la
+*programmation créative* : elle vous permet de définir de nouvelles
+formes d'expressions artistiques sonores ou visuelles.
+
+```activité
+::Algorithmique et programmation::
+[markdown]
+Le plus difficile est-il de 
+{= concevoir l'algorithme 
+~ traduire l'algorithme en programme ? 
+#### Concevoir est un processus créatif...}
+
+::Langages de programmation::
+[markdown]
+Il existe de nombreux langages de programmation. En voici quelques exemples
+\n
+* pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
+* pour les artistes, la conception artistique : [processing](http://processing.org)
+* pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+* pour les statisticiens : le langage R
+* l'un des plus répandus et des plus anciens : le langage C 
+* l'un des plus populaires pour apprendre : le python
+\n
+Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript. 
+{}
+```
+
+## Les applications
+
+Une application est constituée d'un ensemble de programmes qui
+interagissent. Un programme est la traduction dans un langage
+compréhensible par la machine d'algorithmes très précis. Ceci explique
+que l'application fonctionne correctement pour des situations prévues
+à l'avance. Par contre, une application peut s'arrêter, avoir un
+comportement inattendu ou calculer un mauvais résultat dès qu'elle
+rencontrera des conditions imprévues.
+
+Le jeu de construction informatique fait que les applications
+actuelles ont des fonctionnalités très riches et manipulent des
+données de toute nature. Les solutions étant diverses et les acteurs
+du monde numérique très nombreux, nous disposons d'un nombre
+impressionnant d'applications disponibles dans le monde numérique :
+pour communiquer, pour chercher de l'information, pour écouter de la
+musique, pour regarder des vidéos, pour composer de la musique, pour
+dessiner, pour composer des textes ou des pages Web, pour faire des
+statistiques, etc
+
+Pour un même besoin, plusieurs applications sont souvent
+disponibles. Comme utilisateur, dans votre vie personnelle, vous êtes
+amenés à choisir une application pour votre ordinateur ou téléphone
+portable. Dans votre vie professionnelle, vous serez amenés à choisir
+ou à participer au choix d'une application. Ce peut être, par exemple,
+le choix d'un logiciel de production de documents écrits, le choix
+d'un logiciel de dessin, le choix d'un logiciel de conception de sites
+Web, le choix d'un langage de programmation, ... Nous présentons
+quelques critères principaux participant au choix d'une
+application répondant à un besoin applicatif :
+
+* **contraintes techniques :** environnement matériel et
+  logiciel 
+* **critères d'usage :** compétences des utilisateurs
+* **fonctionnalités :** correspondance entre les besoins et les
+  possibilités du logiciel. 
+* **type de logiciel :** nature de la licence, support, maintenance, évolutivité
+* **prix :**
+
+Cette liste de critères ne prétend pas être exhaustive. Les critères
+ne sont pas indépendants et le choix correspondra en la recherche du
+meilleur compromis entre les besoins et les possibilités fournies par
+l'application.
+
+# Exemples de programmes
+
+Dans cette section, nous présentons le fonctionnement de trois
+programmes. Pour chacun d'eux, un premier objectif est de vous faire
+comprendre les algorithmes qui sont derrière ces applications, de vous
+montrer que cette compréhension vous permet de savoir ce que vous
+pouvez attendre de l'application, c'est-à-dire comprendre ce qu'elle
+peut faire et ne peut pas faire. Un second objectif est de vous
+montrer les choix du concepteur de l'application et leur influence sur
+les possibilités de traitements et leur efficacité. Le dernier exemple
+introduit, par l'exemple d'un jeu, un algorithme plus sophistiqué issu
+du domaine de l'intelligence artificielle.
+
+## Un correcteur orthographique en français
+
+Certains traitements de texte incluent une fonctionnalité de
+correction orthographique. Dans sa forme la plus simple, le correcteur
+vérifie que tout mot du texte est une forme correcte d'un mot de la
+langue française. Pour décrire cet algorithme, nous allons commencer
+par préciser nos hypothèses sur le langage et la machine. La première
+hypothèse porte sur le choix de représentation du texte. Nous allons
+considérer ici que le texte est une suite de mots. Sachant que le
+texte est une suite de 0 et de 1 représentant des nombres qui sont les
+codes des caractères constitutifs du texte, cette hypothèse suppose
+que des algorithmes sont capables d'identifier des mots à partir de
+cette suite. Notez que ces algorithmes sont complexes car un mot ne se
+définit pas simplement comme une suite de lettres délimitées par des
+symboles qui ne sont pas des lettres (pensez à des mots comme aujourd'hui ou
+grand-père). La seconde hypothèse est que nous disposons d'un certain
+nombre d'instructions de base comme : lire le premier mot, lire le mot
+suivant, repérer la fin du texte, mémoriser un mot, tester si deux
+mots sont égaux et souligner un mot.
+
+Avec ces hypothèses, un algorithme de correction orthographique va
+pouvoir parcourir chaque mot du texte. Mais pour vérifier
+l'orthographe, il est également indispensable de posséder un
+dictionnaire des mots corrects. C'est, pour le Français, une ressource
+constituée d'une liste de tous les mots français avec leurs formes
+conjuguées et accordées. Elle peut aussi inclure des noms propres, des
+abréviations, des sigles, ... Avec cette ressource à disposition, nous
+pouvons proposer l'algorithme suivant :
+
+`Correcteur orthographique`
+
+     1. **en entrée** : un texte
+     2. lire le premier mot et le mémoriser comme mot courant
+     3. **tant que** ce n'est pas la fin du texte
+     4.   chercher le mot courant dans le dictionnaire
+     5.   **si** il n'existe pas **alors**
+     6.     souligner le mot courant
+     7.   **fin du si**
+     8.   lire le mot suivant et le mémoriser comme mot courant
+     9. **fin du tant que**
+    10. **en sortie** : le texte avec des mots soulignés qui
+                        sont considérés comme mal orthographiés
+
+
+L'instruction *chercher le mot courant dans le dictionnaire* ne fait
+pas partie de nos instructions de base. Il est donc nécessaire
+d'expliquer à notre machine comment réaliser cette opération. On
+suppose qu'on dispose d'instructions élémentaires pour lire le premier
+mot du dictionnaire, lire le mot suivant et repérer la fin du
+dictionnaire. Nous pouvons alors proposer un algorithme qui recherche
+le mot à chercher en parcourant le dictionnaire un mot après
+l'autre. Si le mot est dans le dictionnaire, l'algorithme renvoie une
+valeur vraie ou fausse selon que le mot à chercher est dans le
+dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
+
+     1. **En entrée**  : un mot à chercher
+     2. lire le premier mot du dictionnaire et le mémoriser comme mot courant
+     3. **tant que** le mot courant n'est pas le mot cherché et qu'on n'a pas atteint la fin du dictionnaire
+     4.   lire le mot suivant du dictionnaire et le mémoriser comme mot courant
+     5. **fin du tant que**
+	 6. **en sortie** : **si** le mot courant est le mot cherché **alors** existe **sinon** n'existe pas
+
+En combinant ces deux algorithmes, nous avons un algorithme de
+correction orthographique.  Cet algorithme est-il efficace en temps de
+calcul ? Le parcours de tous les mots du texte est obligatoire. Pour
+chaque mot du texte, il faut faire une recherche dans le dictionnaire,
+ce qui, avec notre algorithme naïf peut amener à parcourir tous les
+mots du dictionnaire. Ceci peut amener à un temps de calcul assez long
+car un dictionnaire contient de l'ordre de plusieurs centaines de
+milliers de mots et il faut le parcourir pour chaque mot du
+texte. Peut-on faire mieux ? Oui si vous pensez à la façon dont vous
+cherchez dans un dictionnaire qui est rangé dans un ordre
+alphabétique. Il existe des algorithmes rapides de recherche dans un
+dictionnaire et ces algorithmes sont souvent disponibles dans les
+langages de programmation. Vous pourrez en savoir plus en suivant le
+module qui introduit les méthodes de recherche d'information.
+
+Cet algorithme met-il en évidence toutes les fautes d'orthographe ?
+Il souligne et donc considère comme mal orthographiés tous les mots du
+texte qui n'apparaissent pas dans le dictionnaire. Quelles sont les
+erreurs possibles de cet algorithme ? Une erreur possible est de
+souligner à tort un mot parce que les listes sont incomplètes. Des
+listes de mots les plus complètes et les plus actuelles possibles
+corrigent ce type d'erreur. Il est par contre incapable de souligner
+les fautes d'accord ou de conjugaison comme "la vache bleu" ou "je
+montres". La méthode pour réaliser ce type de correction et bien
+différente et nécessite d'autres algorithmes.  Une première
+possibilité serait de doter le correcteur de la capacité d'analyser
+votre phrase pour répondre aux questions telles que : quel est le
+sujet du verbe ? Avec qui s'accorde cet adjectif ? Ceci afin de lui
+permettre de vérifier des règles grammaticales.  La difficulté est de
+réaliser ces analyses car ils nécessitent une grammaire numérisée de
+la langue et des programmes d'analyse. Souvent ces règles de grammaire
+numérisées sont incomplètes car c'est encore un sujet de recherche
+actif en (informatique) linguistique d'être capable d'exprimer toutes
+les règles grammaticales et d'analyser correctement toutes les
+phrases. Une seconde possibilité serait d'utiliser des méthodes dites
+"force brute" qui étendent l'approche par dictionnaire utilisée pour
+l'orthographe. Au lieu de mémoriser des listes de mots, le
+dictionnaire mémorise des listes de couples de mots, de triplets de
+mots voire de phrases complètes. La difficulté, dans ce cas, est
+d'avoir des listes exhaustives, de mémoriser ces listes, de les mettre
+à jour et de les interroger très rapidement.
+
+Ceci explique que les correcteurs disponibles dans les applications
+sont des correcteurs orthographiques simples à base de dictionnaires
+de mots. Parfois, ils font des corrections liées à des règles
+grammaticales mais il est difficile de savoir exactement quelles
+corrections ils sont capables de faire. Par conséquent, **en
+pratique**, lorsque vous avez rédigé un texte et souhaitez en vérifier
+l'orthographe, vous procéderez de la façon suivante :
+
+1. vous *faites passer un correcteur orthographique*
+2. vous corrigez les erreurs repérées par le correcteur
+3. vous *vérifiez vous-même l'orthographe* en vous concentrant sur les
+*possibles fautes grammaticales restantes*.
+
+## Classer et apprendre à classer des textes
+
+Nous poursuivons avec un second algorithme utilisé en traitement
+automatique du langage naturel qui est un domaine à la frontière entre
+linguistique et informatique. En effet, les ordinateurs sont,
+aujourd'hui, capables, d'identifier dans un grand corpus de textes
+ceux dont le sujet porte sur un thème (on parle aussi de catégorie ou
+de classe) précis. Il peut s'agir de classer des nouvelles dans des
+thèmes pour pouvoir les classer sur un site Web. Il peut s'agir de
+diriger automatiquement des mails de réclamation vers le bon service
+pour une entreprise. Il peut s'agir d'attribuer des textes à des
+auteurs ce qui est une question considérée en stylistique. Il est
+intéressant de noter que, si on dispose de corpus de textes de
+différents auteurs, on peut apprendre à classer les textes et qu'un
+tel programme a des résultats étonnamment bons (du niveau d'un expert
+humain) même si, comme nous allons le voir, il ne fait pas une étude
+de style mais se base simplement sur des fréquences d'apparition de
+mots.
+
+Explorons les idées permettant à un algorithme de classer des textes
+en considérant la question de trouver les textes parlant de politique.
+ Une méthode naïve, voire idiote, est de dire qu'un texte est dans le
+thème "politique" si et seulement si le mot politique s'y trouve. On
+pourrait écrire un algorithme comme
+
+     1. **en entrée** : une suite de mots
+     2. lire le premier mot et le mémoriser comme mot courant
+     3. **tant que** ce n'est pas la fin du texte
+     4.   **si** le mot courant est "politique" **alors**
+     6.     mémoriser que j'ai vu le mot politique
+     7.   **fin du si**
+     8.   lire le mot suivant et le mémoriser comme mot courant
+     9. **fin du tant que**
+    10. **en sortie** : le texte est politique si j'ai mémorisé que j'ai vu
+                        le mot politique
+
+Cet algorithme naïf n'est pas satisfaisant car un texte peut être
+considéré comme politique sans contenir le mot politique et un texte
+contenant le mot politique ne parle pas forcément de politique ! On
+peut l'améliorer en constituant un dictionnaire des mots parlant de
+politique (droite, gauche, parlement, assemblée, ...)  et s'inspirer
+de l'algorithme réalisant la correction orthographique. On peut
+poursuivre cette idée sensiblement en constatant que la décision de
+l'appartenance à ce thème politique peut dépendre aussi bien de la
+présence que de l'absence de certains mots, ou mieux encore de combien
+de fois chaque mot est employé. Nous avons l'idée de base qui est que
+*l'appartenance d'un texte à un thème va dépendre de la fréquence
+d'apparition de certains mots*.
+
+C'est cette idée qui est souvent employée. Pour cela, un dictionnaire
+ayant été choisi, on va représenter un texte par le nombre de fois où
+chaque mot du dictionnaire apparaît dans le texte. Au vu des
+algorithmes vus dans ce module, vous êtes capables de comprendre qu'il
+est possible d'écrire un algorithme qui, avec un texte et un
+dictionnaire, construit une telle représentation. À partir de cette
+représentation, il faut trouver des seuils en dessous ou au delà
+desquels on dira que le mot parle d'un thème précis. Par exemple, un
+texte parle de politique si le mot politique apparaît au moins une
+fois, le mot gauche au moins deux fois, le mot droite au moins deux
+fois et le mot chat n'apparaît pas. Mais, comment trouver ces seuils ?
+
+C'est ici qu'interviennent des développements récents autour de
+l'apprentissage artificiel ("Machine Learning") amplifiés par le
+phénomène des masses de données ("Big Data"). En effet, on dispose
+désormais de grands corpus de textes. Les textes peuvent être annotés
+par des experts comme parlant d'un thème. Avec ces corpus de textes,
+on peut représenter chacun d'eux par les fréquences des mots. On peut
+alors écrire un programme qui apprenne quels sont les seuils pour
+chacun des thèmes et, avec ces seuils, on peut maintenant classer un
+nouveau texte dans un thème. Les détails d'un tel algorithme
+d'apprentissage (ou de fouille de textes) sortent du contenu de ce
+cours. Nous espérons cependant vous avoir fait comprendre comment une
+machine pouvait classer des textes avec des résultats souvent
+comparables à celles d'un expert humain.
+
+## Un jeu d'échec sur ordinateur
+
+Le jeu d'échecs est un jeu ancien datant du 10ème siècle
+environ. C'est un jeu de plateau, c'est-à-dire un jeu qui se joue avec
+des pièces positionnées sur un plateau découpé en cases. Le plateau du
+jeu d'échecs est un plateau de 64 cases de forme carrée avec des cases
+blanches et des cases noires. C'est un jeu à deux joueurs. Chacun des
+joueurs dispose de 16 pièces de différente nature : les pions, les
+tours, ..., le roi et la reine. Chacune des pièces a des possibilités
+de déplacement et des possibilités de prise de pièce adverse. Le jeu
+est défini par un ensemble de règles très précises pour les
+déplacements, les prises, le calcul du gagnant.
+
+Nous nous intéressons à la question de faire jouer un ordinateur au
+jeu d'échecs. La réalisation d'un programme de jeu capable de gagner
+contre les humains a été un sujet important de l'intelligence
+artificielle sur toute la seconde moitié du 20ème siècle. Il a fallu
+plus d'un demi-siècle pour qu'un ordinateur puisse gagner contre le meilleur
+joueur humain, en l'occurence le programme "Deep Blue" qui gagne
+contre Kasparov en `1997`. Désormais, des programmes, qui peuvent être
+exécutés sur un ordinateur personnel, sont plus forts que tout expert
+humain. Nous allons expliquer les principes algorithmiques qui font
+"l'intelligence" de ces programmes.
+
+Nous laissons complètement de côté toutes les questions liées au
+graphisme, aux interactions entre le joueur humain et le
+programme. Nous supposons que le programme dispose d'une
+représentation numérique du plateau et des pièces, qu'il existe des
+programmes permettant de vérifier qu'un déplacement est autorisé,
+permettant de calculer, pour un état du jeu, tous les déplacements
+possibles du joueur qui doit jouer, permettant de voir si la partie
+est finie et de déclarer le match nul ou le gagnant. Nous nous
+intéressons donc simplement à la question suivante (la plus
+difficile) : la partie étant dans un certain état après plusieurs
+coups de chacun des deux joueurs, *comment le programme peut-il choisir
+le meilleur coup à jouer ?*
+
+Si vous avez déja joué à un jeu de plateau, vous raisonnez très
+certainement de la façon suivante : quels sont les coups possibles ?
+Pour chacun d'eux, voir leur effet, réfléchir à la réponse potentielle
+de mon adversaire, de penser à ce que je pourrais jouer ensuite,
+... Après avoir examiné un certain nombre de coups possibles, je fais
+un choix. Un algorithme va avoir une approche similaire mais très
+systématique. Il va considérer tous les coups possibles de sa part,
+tous les coups possibles de l'adversaire, tous les coups possibles de
+sa part en réponse, ... On peut ainsi construire une structure,
+appelée arbre en informatique, qui possède une racine pour l'état
+courant du jeu, des fils pour les états du jeu pour chaque coup
+possible, etc. Une première idée est alors de construire cet arbre de
+toutes les suites possibles du jeu à partir de l'état courant, puis de
+calculer le coup qui va me mener à la victoire quoi que fasse
+l'adversaire. 
+
+Le problème est-il résolu ? Malheureusement non ! Nous avons signalé,
+dans l'introduction de ce module, la notion d'être calculable par une
+machine. Mais il ne suffit pas qu'un problème soit calculable. Il faut
+qu'il le soit avec une mémoire et un temps de calcul raisonnables. Sur
+notre exemple, imaginez qu'il y ait environ 10 coups possibles et
+qu'on souhaite regarder les états possible pour 10 tours de jeu, soit
+pour 20 coups. Il y aurait 10 puissance 20 états possibles, soit
+encore 1 suivi de 20 zéros, soit encore 100 milliards de milliards
+d'états possibles. Il est **impossible** à toute machine de mémoriser
+ces états ou de faire des calculs sur tous ces états. C'est ici qu'il
+faut donc être "intelligent" pour notre programme.
+
+Vu que le programme ne peut pas explorer le jeu pour voir si un coup
+mène sur une position gagnante, nous allons doter le programme d'une
+fonction d'évaluation d'un état du jeu. Dans sa forme la plus simple,
+une valeur est attribuée à chacune des pièces et l'évaluation d'un
+état du jeu consiste à sommer la valeur des pièces dont le joueur
+dispose dans cet état. Cette fonction peut être améliorée par des
+bonus ou malus dépendant de la position de la pièce. Par exemple, on
+va bonifier un pion qui est près du camp adverse car il peut se
+transformer en reine, on va pénaliser un pion isolé car il peut être
+pris facilement. Nous supposons qu'une fonction d'évaluation a été
+choisie.
+
+Faisons le point. Le jeu est dans un certain état (une configuration
+du jeu après plusieurs coups), le programme doit choisir un meilleur
+coup à jouer. La succession des coups que chacun des joueurs peut
+jouer définit un arbre de tous les états possibles. Nous savons qu'il
+est impossible d'explorer cet arbre complètement. L'idée de base de
+l'algorithme est de l'explorer incomplètement mais
+intelligemment. Pour cela, on utilise la fonction d'évaluation pour
+attribuer un score à un état de l'arbre. En effet, on va explorer
+l'arbre en éliminant complètement des sous-arbres lorsqu'on estime que
+les scores dans ce sous-arbre ne seront pas assez bons.  C'est un peu
+ce qu'un joueur humain fait : si je joue ce coup, je perd ma reine et,
+sauf cas particulier, ce coup n'est pas intéressant donc je ne vais
+pas explorer plus loin ce qui peut se passer. C'est ce principe qui a
+été formalisé bien plus précisémment en utilisant les scores sous
+forme d'un algorithme célèbre appelé *algorithme alpha-beta*.
+
+Vous connaissez maintenant les principes du fonctionnement de
+l'algorithme. Pour avoir un algorithme performant on examinera le plus
+grand nombre d'états possibles dans l'arbre simplifié grace à la
+méthode alpha-beta. Pour avoir un algorithme très performant, on
+ajoute d'autres éléments comme, par exemple, une bibliothèque des
+débuts de partie. C'est-à-dire que le programme pourra mimer des
+débuts de partie classiques des meilleurs joueurs qui sont connues sur
+quelques coups en début de partie. Mais avoir le jeu le plus fort ne
+sera pas le seul critère car un joueur standard n'a pas le niveau du
+champion du monde et ne prendra pas plaisir à perdre toutes les
+parties qu'il joue ! Avoir un jeu qui s'adapte à l'utilisateur est une
+question importante qui est toujours étudiée par les concepteurs de
+jeux.
+
+Il est difficile de ne pas parler du jeu de Go qui défraie la
+chronique au moment de la rédaction de ce cours en 2016. En effet,
+pour la première fois, un programme a gagné contre le champion du
+monde humain du Go. On croyait le Go hors de portée des machines car
+le nombre de configurations possibles est encore plus gigantesque que
+pour les échecs et les stratégies des joueurs humains utilisent une
+vue spatiale de l'état du jeu. Le programme de Go n'utilise pas les
+stratégies développées par les humains mais utilise des techniques
+d'apprentissage automatique ("machine learning" en anglais) avec un
+programme de jeu qui s'améliore avec l'expérience, c'est-à-dire qu'il
+"apprend" à partir de parties jouées (contre un humain ou contre
+lui-même). Un petit cocorico Lillois (les rédacteurs de ce cours sont
+Lillois) car c'est notre collègue Rémi Coulom qui a initié ces
+recherches sur le Go avec un programme champion du monde dans les
+années 2010, battant même des experts humains mais avec handicap.
+
+```compréhension
+::Les exemples d'applications::
+[markdown]
+Cochez les réponses vraies
+\n
+{
+~ Il est possible d'avoir un dictionnaire contenant tous les mots de langue française
+~ Un correcteur orthographique détecte toutes les fautes d'orthographe
+~%50% Un programme qui classe des textes utilise des textes classés par un expert humain
+~%50% Un programme de classement de textes peut approcher les performances d'un expert humain
+~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier
+~ Les humains sont meileurs que les programmes dans les jeux de plateau (dames, échecs, go)
+}
+
+::Autres jeux::
+[markdown]
+Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
+```
+
+# Conclusion
+
+Nous avons étudié les principes des applications informatiques et de
+leur construction comme un vaste jeu de construction avec des données
+complexes construites à partir de données de base et des programmes
+construits avec des algorithmes qui peuvent être composés et
+recomposés.  Nous avons présenté des exemples d'application comme la
+recherche d'itinéraire, la correction orthographique, le classement de
+textes et le jeu de Go. Ces exemples montrent comment une machine
+simple peut grace à sa puissance de calcul et à l'inventivité des
+humains se transformer en une machine capable de résoudre des tâches
+de haut niveau. Ils montrent également que l'intelligence supposée des
+machines est obtenue par la capacité de traiter de grands jeux de
+données comme des grands corpus de textes ou des corpus de parties de
+Go. Ceci ouvre des perspectives nouvelles avec le phénomène "Big
+Data". Posséder les données est désormais un enjeu essentiel et les
+grandes entreprises du Web l'ont bien compris car ces données leur
+permettent de développer des applications de prédiction : prédire vos
+goûts musicaux, prédire vos achats et recommander des produits en
+conséquence, suggérer des informations à lire, ... Ce qui amène des
+questions éthiques sur la possession des données souvent personnelles
+et l'utilisateur, trop souvent consentant, doit désormais se poser la
+question de la communication de ses données personnelles.
