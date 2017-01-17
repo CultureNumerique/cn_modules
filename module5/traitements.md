@@ -242,6 +242,18 @@ Les premiers algorithmes ont été conçus
 ~ pendant la seconde guerre mondiale
 = bien avant les ordinateurs
 #### Vous avez vous-même appris de nombreux algorithmes bien antérieurs à l'ordinateur comme celui qu'on réalise en posant une addition... et bien d'autres de la vie courante.}
+
+::Recettes de cuisine::
+[markdown]
+Un exemple classique d'algorithme utilisé dans la vie courante est une recette de
+cuisine comme
+[la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
+Regardez
+cette recette et répondez aux questions suivantes :
+\n
+- Décrire les actions de base qu'est supposé savoir faire l'utilisateur de cette recette
+- Décrire les éléments utiles à l'exécution
+{#### actions : fouetter, chauffer, verser, mesurer le temps, ... ; éléments : les ingrédients, une poêle, une plaque de cuisson, ...}
 ```
 
 ## Algorithmes et ordinateurs
@@ -256,3 +268,135 @@ smartphone. Les règles de composition sont décrites par des
 algorithmes, mais il est avant tout nécessaire de définir quelles
 fonctionnalités sont déjà existantes de base dans un ordinateur.
 
+### La machine
+
+
+*Ordinateur* est un mot inventé par un linguiste dans les
+années 50. Il fait référence à l'exécution d'ordres,
+d'instructions. En anglais le mot *computer* fait plutôt référence au
+calcul et les deux notions se retrouvent dans cette
+machine. Essentiellement, la machine repose sur une *unité de calcul*
+qui fonctionne avec des nombres représentés (ou codés) avec des 0 et
+des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
+simples comme des additions, comparer des nombres. Elle utilise des
+*mémoires* pour ranger et retrouver ces nombres. La mémoire est
+organisée avec des emplacements repérés par des numéros appelés
+adresses. La machine peut alors ranger une valeur à une adresse donnée
+et retrouver une valeur rangée connaissant son adresse. Enfin, une
+*unité de contrôle* donne les ordres à l'unité de calcul et aux
+mémoires. Ce modèle de machine n'a pas évolué depuis les années 40
+même si les machines ont évolué. En effet, l'électronique et la
+miniaturisation ont considérablement réduit la taille et augmenté les
+capacités et la rapidité de la mémoire, de l'unité de calcul et
+l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
+économe et plus résistant si bien qu'on le retrouve désormais dans
+tous les milieux et toutes les situations.
+
+```activité
+::Modèle de l'ordinateur::
+[markdown]
+Le modèle décrit précédemment a été inventé par Von Neumann. 
+En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les données et les programmes (instructions) sont-elles considérées de la même manière dans la mémoire ?
+{T
+#### oui et c'est un élément important qui a permis le développement de l'informatique}
+
+::Rôle des linguistes::
+[markdown]
+Toute la communauté scientifique a participé au développement de l'informatique et, tout particulièrement, les mathématiciens, les logiciens et les physiciensmais aussi les linguistes. En voici trois exemples :
+\n
+- Qui a inventé le mot ordinateur ?
+- Qui est Larry Wall ?
+- Qui est Noam Chomsky ?
+{#### Jacques Perret sur une demande d'IBM de trouver un terme 
+français. Larry Wall est un linguiste qui a inventé un langage 
+de programmation Perl toujours très utilisé pour traiter des 
+(ensembles de) fichiers textes. Noam Chomsky est un linguiste 
+qui a caractérisé les langages formels (utilisés par les machines) 
+et naturels (les langues humaines).}
+```
+
+### La séquence
+
+Apprenons à notre machine à transformer un caractère majuscule en
+caractère minuscule correspondant. Rappelons d'abord que, dans les
+codages standards comme `ASCII` et `UTF8`, le caractère `A` majuscule
+a pour nom "Latin Capital Letter A" et pour numéro `65`. Le caractère
+`a` minuscule a pour numéro `97`. Croyez-nous sur parole, `65` s'écrit
+`01000001` et `97` s'écrit `01100001`. C'est remarquable car, pour
+passer de l'un à l'autre, seul le 6ème chiffre partant de la droite,
+un `0`, est transformé en `1`. Ceci est vrai pour toutes les lettres
+de notre alphabet latin et le passage de majuscule à minuscule
+consiste juste à changer un `0` par un `1` à la sixième position. Et
+l'unité de calcul sait réaliser cette opération.  Notons le lien très
+fort entre le codage, très astucieux, et les capacités de la
+machine. Notons aussi que changer ce 6ème chiffre correspond également
+à ajouter 32 (65+32 vaut 97). Nous sommes donc capables de décrire le
+traitement que doit réaliser la machine pour transformer une
+majuscule, dont le code binaire est stocké dans sa mémoire à une
+adresse connue, en minuscule avec l'algorithme suivant :
+
+    Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
+	Ajouter 32 (changer le 6ème chiffre du codage binaire de 0 en 1)
+	Ranger le résultat dans la mémoire à la même adresse
+
+Nous retrouvons dans cet exemple l'organisation de la machine avec ses
+adresses, sa mémoire, son unité de calcul (pour ajouter 32) et son
+unité de contrôle. L'unité de contrôle doit juste assurer que ces 3
+instructions soient réalisées successivement dans cet ordre, *en
+séquence*. Nous sommes donc arrivés à définir sur notre ordinateur un
+traitement ayant un sens pour nous (remplacer une majuscule par une
+minuscule) à partir de la représentation numérique d'une information
+et grâce à une combinaison d'instructions en séquence. *La séquence
+est le premier mode de combinaison utile pour décrire des
+algorithmes*.
+
+
+```compréhension
+::Une séquence::
+[markdown]
+Quelle est la dernière valeur lue dans l'algorithme suivant
+\n 
+  Ranger 4 dans la mémoire à l'adresse 12 
+  Ranger 8 dans la mémoire à l'adresse 5
+  Lire la valeur de la mémoire à l'adresse 12 
+  Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
+  Lire la valeur de la mémoire à l'adresse 12 
+  Lire la valeur de la mémoire à cette valeur
+{#8}
+```
+
+### L'alternative
+
+L'ordinateur est une machine très obéissante qui exécute
+scrupuleusement les ordres qu'on lui donne. Le traitement précédent
+ajoutera `32` au numéro du caractère en mémoire même si celui-ci n'est
+pas le numéro d'une lettre majuscule. Par exemple, le numéro `63`
+représente le point d'interrogation `?` et, si on lui ajoutait `32`,
+on obtiendrait le caractère tiret bas `_`, ce qui n'est pas le
+résultat attendu, donc un bug ! On doit donc ne réaliser cette
+opération que pour une majuscule. Pour cela, nous allons contrôler que
+le contenu de la mémoire correspond bien à une lettre majuscule avec
+l'algorithme suivant :
+
+    Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
+	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
+       Ajouter 32 
+	   Ranger le résultat dans la mémoire a la même adresse
+    Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
+
+Cet algorithme est une séquence de deux instructions. La seconde
+instruction est un *si* qui est le représentant d'un deuxième mode de
+combinaison appelé *alternative*. L'ordinateur est capable d'exécuter
+cette alternative car l'unité de calcul sait faire des
+comparaisons et l'unité de contrôle est capable de sélectionner la
+prochaine instruction à exécuter selon la valeur de cette
+comparaison. Cela fait partie des fonctionnalités existantes de la
+machine.  Donc selon le résultat de la *condition du si*, la machine
+exécutera différentes instructions. Sur notre algorithme, si le numéro
+du caractère en mémoire est compris entre 65 et 90, c'est-à-dire si le
+caractère est une majuscule, la machine exécutera les deux
+instructions pour remplacer la majuscule par la minuscule
+correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
+mais nous aurions pu en toute généralité réaliser une autre suite
+d'instructions. *L'alternative est le deuxième mode de combinaison
+utile pour décrire des algorithmes*
