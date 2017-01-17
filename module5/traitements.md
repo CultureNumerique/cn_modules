@@ -566,20 +566,17 @@ de calcul et en mémoire
 [markdown]
 La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse et donc augmente de 1 le niveau d'eau dans le réservoir :
 \n
-* AlgoPour : 
-\n
+     AlgoPour : 
      Pour i de 1 à 5 Faire 
         Verser1 
      Fin Pour
 \n
-* AlgoTantQue : 
-\n
+     AlgoTantQue : 
      Tant Que le niveau est inférieur à 5 Faire 
        Verser1 
      Fin Tant Que
 \n
-* AlgoJusqua : 
-\n
+     AlgoJusqua : 
      Répéter 
        Verser1 
      Jusqu'à arriver au niveau 5
