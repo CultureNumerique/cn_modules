@@ -129,10 +129,23 @@ go) en battant les experts humains.
 
 
 ```compréhension
+::Des combinaisons::
+[markdown]
+Un programme peut combiner plusieurs traitements pour définir des traitements plus complexes{T} 
+
+::Algorithmes et programmes::
+Un algorithme est:
+~%50% l'expression d'une méthode pour résoudre automatiquement une tâche
+~%50% implanté dans un ordinateur dans un programme informatique
+~ une suite de 0 et de 1
+{#### Un algorithme peut éventuellement être traduit dans un programme lui même traduit en une suite de 0 et de 1,  quand il est implanté dans un ordinateur. }
+
+
 ::Une application indépendante ?::
 [markdown]
 Lancer une application implique de lancer plusieurs traitements
 {T}
+
 
 ::Application et machine::
 [markdown]
@@ -218,10 +231,17 @@ computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
 ```compréhension 
+::Algorithmes et ordinateurs:: 
+Les premiers algorithmes ont été conçus 
+~ sur un ordinateur de type PC
+~ par Dijkstra
+~ pendant la seconde guerre mondiale
+= bien avant les ordinateurs
+{#### Vous avez vous-même appris de nombreux algorithmes bien antérieurs à l'ordinateur comme celui qu'on réalise en posant une addition... et bien d'autres de la vie courante.}
+
 ::Recettes de cuisine::
 [markdown]
-Un exemple
-classique d'algorithme utilisé dans la vie courante est une recette de
+Un exemple classique d'algorithme utilisé dans la vie courante est une recette de
 cuisine comme
 [la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
 Regardez
@@ -275,7 +295,8 @@ tous les milieux et toutes les situations.
 [markdown]
 Le modèle décrit précédemment a été inventé par Von Neumann. 
 En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les données et les programmes (instructions) sont-elles considérées de la même manière dans la mémoire ?
-{#### oui et c'est un élément important qui a permis le développement de l'informatique}
+{T
+#### oui et c'est un élément important qui a permis le développement de l'informatique}
 
 ::Rôle des linguistes::
 [markdown]
@@ -327,6 +348,21 @@ et grâce à une combinaison d'instructions en séquence. *La séquence
 est le premier mode de combinaison utile pour décrire des
 algorithmes*.
 
+
+```compréhension
+::Une séquence::
+[markdown]
+Quelle est la dernière valeur lue dans l'algorithme suivant
+\n 
+  Ranger 4 dans la mémoire à l'adresse 12 
+  Ranger 8 dans la mémoire à l'adresse 5
+  Lire la valeur de la mémoire à l'adresse 12 
+  Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
+  Lire la valeur de la mémoire à l'adresse 12 
+  Lire la valeur de la mémoire à cette valeur
+{#8}
+```
+
 ### L'alternative
 
 L'ordinateur est une machine très obéissante qui exécute
@@ -362,6 +398,43 @@ correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
 mais nous aurions pu en toute généralité réaliser une autre suite
 d'instructions. *L'alternative est le deuxième mode de combinaison
 utile pour décrire des algorithmes*
+
+
+```compréhension
+::combinaison et imbrications::
+[markdown]
+L'exemple précédent du cours montre la combinaison de séquences et d'alternatives. Ces différents modes de combinaison s'imbriquent les uns dans les autres et nous avons signifié cette imbrication en la soulignant par l'écriture, en modifiant les marges gauches devant chaque instruction. Quelles affirmations suivantes sont vraies
+{
+~%33% le si est dans une séquence d'instructions
+~%33% une séquence d'instruction est imbriquée dans le si
+~ il y a 3 instructions en séquence
+~ il y a 4 instructions en séquence 
+~%34% la  séquence la plus longue est de deux instructions 
+#### L'algorithme est une séquence de 2 instructions, la deuxième est un si que nous avons écrit sur 4 lignes. Dans ce si une autre séquence de deux instructions est imbriquée (lignes 3 et 4).}
+
+::Avec des si::
+[markdown]
+On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambiguïté, il faut bien déterminer où les si commencent et se terminent. La fin d'un si correspond au dernier si non encore terminé. 
+\n
+  Si Bertrand vient  alors
+     Si  Yasmine vient  alors
+	    J'invite Robert
+		J'invite Ahmed
+	 Sinon 
+	    J'invite Dimitri
+	 Fin du Si
+  Sinon 
+     J'invite Fan
+  Fin 
+\n
+Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
+{
+~ Robert
+~ Ahmed
+~%100% Dimitri
+~Fan
+}
+```
 
 ### La répétition
 
@@ -410,6 +483,18 @@ machine" car si il ne trouve jamais de 0, notre algorithme tournerait
 sans fin ! *La répétition est le troisième mode de combinaison utile
 pour décrire des algorithmes*.
 
+```compréhension
+::combien de séquences::
+[markdown]
+Dans l'algorithme précédent combien existe-t-il de séquences ? 
+{#3#### une principale, une dans la boucle répéter, une autre dans le si.}
+
+::plus longue séquence::
+[markdown]
+Dans l'algorithme précédent quelle est la longueur de la séquence la plus longue ? 
+{#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
+```
+
 ## Les trois combinaisons de base
 
 Faisons un point d'étape. Les algorithmes permettent de
@@ -418,7 +503,7 @@ de combinaison à savoir la *séquence* qui fait passer à l'instruction
 suivante, l'*alternative* qui permet de choisir les instructions à
 exécuter selon la valeur d'un test et la *répétition* qui répète des
 instructions tant qu'un test est satisfait. La machine
-peut exécuter les traitements ainsi définis grace à une unité de
+peut exécuter les traitements ainsi définis grâce à une unité de
 calcul, de la mémoire et une unité de contrôle. 
 
 Notre exemple nous a permis d'expliquer comment construire une
@@ -476,42 +561,37 @@ de calcul et en mémoire
 
 
 ```activité
-::Faut-il apprendre à coder ?::
-[markdown]
-[L'avis d'un président des Etats-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
-pouvez activer, au besoin, les sous-titres en anglais ou en
-français. {}
-
-::Algorithme et programme::
-expliqués [en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc) {}
-
-
-::La répétition par Mark Zuckerberg (Facebook)::
-Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
-
 ::Différentes formes pour la répétition::
 [markdown]
-La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse dans le réservoir :
+La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse et donc augmente de 1 le niveau d'eau dans le réservoir :
 \n
-* AlgoPour : Pour i de 1 à 5 Faire Verser1 FinPour
-* AlgoTantQue : TantQue pas arrivé au niveau 5 Faire Verser1 FinTantQue
-* AlgoJusqua : Répéter Verser1 Jusqua arriver au niveau 5
+* AlgoPour : 
+   Pour i de 1 à 5 Faire 
+      Verser1 
+   Fin Pour
+* AlgoTantQue : 
+   Tant Que le niveau est inférieur à 5 Faire 
+     Verser1 
+   Fin Tant Que
+* AlgoJusqua : 
+   Répéter 
+     Verser1 
+   Jusqu'à arriver au niveau 5
 \n
-* Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
-* Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
-* L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
+1. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
+2. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
+3. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
 {####  Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. Si le réservoir est vide, les trois algorithmes sont équivalents. Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
 
 ::Les minuscules en majuscules::
 [markdown]
-On souhaite apprendre à la machine à faire la transformation inverse,
-à savoir transformer les minuscules en majuscules.
+On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours. 
 \n
-* Pour transformer un caractère minuscule en majuscule, quelle instruction
+1. Pour transformer un caractère minuscule en majuscule, quelle instruction
 faut-il changer dans l'algorithme présenté ci-avant ?
-* Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
+2. Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
 instruction ?
-* Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
+3. Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
 entrée une séquence de caractères et qui transforme les minuscules en 
 majuscules et laisse tous les autres caractères inchangés ?
 {#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir 
@@ -520,20 +600,21 @@ même si cela semble un petit peu plus compliqué que l'addition ;
 tester si le code du caractère est entre 97 et 123 et appeler le 
 programme qui transforme minuscule en majuscule.}
 
-::Apprendre les bases de l'algorithmique::
-Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
-
 ::Informatique à l'école::
-Le code informatique va être enseigné à l'école et les professeurs des écoles et collèges devront enseigner le code. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public
+[markdown]
+Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public.
+{}
 
 ::Conception des algorithmes::
 [markdown]
-Cochez les affirmations vraies
-
-~ Pour résoudre un problème il existe un seul algorithme
+Cochez les affirmations vraies :
+\n
+{
+~ Pour résoudre un problème il existe un seul algorithme.
 ~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que 
-d'autres
-~ Tout problème peut être résolu par un algorithme
+d'autres.
+~ Tout problème peut être résolu par un algorithme.
+}
 ```
 
 
@@ -617,6 +698,28 @@ acceptera une phrase mal formée dès qu'il en comprend le sens. Cette
 rigueur nécessaire et la difficulté d'apprendre un langage de
 programmation effraient beaucoup de monde.
 
+```activité
+::Algorithme et programme::
+[markdown]
+Algorithme et programme expliqués [en une minute par Gérard Berry](https://www.youtube.com/watch?v=u9XEsJypSdc). L'ordinateur pense-t-il?
+{F
+#### voir aussi [l'aphorisme de Dijkstra](https://fr.wikipedia.org/wiki/Edsger_Dijkstra#Aphorismes) à ce propos.
+}
+
+::Faut-il apprendre à coder ?::
+[markdown]
+[L'avis d'un président des États-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
+pouvez activer, au besoin, les sous-titres en anglais ou en français. {}
+
+::Apprendre à coder::
+[markdown]
+Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
+{}
+
+::La répétition par Mark Zuckerberg (Facebook)::
+Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+```
+
 ## Coder ou programmer
 
 Ces deux termes désignent l'activité de *concevoir des algorithmes et
@@ -677,18 +780,23 @@ formes d'expressions artistiques sonores ou visuelles.
 ```activité
 ::Algorithmique et programmation::
 [markdown]
-Le plus difficile est-il de concevoir l'algorithme ou de traduire l'algorithme 
-en programme ? {####concevoir algo}
+Le plus difficile est-il de 
+{= concevoir l'algorithme 
+~ traduire l'algorithme en programme ? 
+#### Concevoir est un processus créatif...}
+
 ::Langages de programmation::
 [markdown]
 Il existe de nombreux langages de programmation. En voici quelques exemples
 \n
-* pour le grand public [class'code](http://classcode.fr/)
 * pour les enfants, plus ou moins jeunes, apprendre en s'amusant avec [Scratch](https://scratch.mit.edu/)
 * pour les artistes, la conception artistique : [processing](http://processing.org)
 * pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-* pour les informaticiens : le langage C et ses variantes C++ et C#, java, python
 * pour les statisticiens : le langage R
+* l'un des plus répandus et des plus anciens : le langage C 
+* l'un des plus populaires pour apprendre : le python
+\n
+Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript. 
 {}
 ```
 
@@ -1068,18 +1176,21 @@ années 2010, battant même des experts humains mais avec handicap.
 ::Les exemples d'applications::
 [markdown]
 Cochez les réponses vraies
-
+\n
+{
 ~ Il est possible d'avoir un dictionnaire contenant tous les mots de langue française
 ~ Un correcteur orthographique détecte toutes les fautes d'orthographe
 ~%50% Un programme qui classe des textes utilise des textes classés par un expert humain
 ~%50% Un programme de classement de textes peut approcher les performances d'un expert humain
 ~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier
 ~ Les humains sont meileurs que les programmes dans les jeux de plateau (dames, échecs, go)
+}
 
 ::Autres jeux::
 [markdown]
 Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
 ```
+
 # Conclusion
 
 Nous avons étudié les principes des applications informatiques et de
