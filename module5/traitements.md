@@ -436,3 +436,62 @@ Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
 ~Fan
 }
 ```
+
+### La répétition
+
+Nous souhaitons appliquer la transformation à tous les caractères d'un
+texte. Il faut d'abord choisir une représentation du texte. Nous
+supposons que notre texte est une suite de caractères. Tous les
+caractères de ce texte sont stockés dans la mémoire de l'ordinateur
+les uns à la suite des autres, à des adresses consécutives à partir
+d'un adresse connue.  Pour être capable de repérer la fin du texte, on
+choisit d'ajouter après le dernier caractère du texte un symbole
+spécial choisi ici comme ayant pour code `0`. Notre
+algorithme peut s'écrire :
+
+    Accéder à la mémoire à l'adresse du premier caractère du texte
+	Répéter tant que la valeur n'est pas 0
+  	   Si la valeur est comprise entre 65 et 90 Alors
+          Ajouter 32
+	      Ranger le résultat dans la mémoire à l'adresse actuelle
+	   Fin du Si
+       Ajouter 1 à l'adresse actuelle (pour passer au caractère suivant)
+       Accéder à la mémoire à la nouvelle adresse actuelle
+    Fin de la répétition
+
+Dans cet algorithme, nous utilisons, pour parcourir tous les
+caractères du texte, une *répétition* appelée aussi par les
+informaticiens une *boucle* ou une *itération*.  L'ordinateur est
+capable d'exécuter cet algorithme uniquement à l'aide de ses
+fonctionnalités existantes.  Sur notre algorithme, lorsque l'unité de
+contrôle demande à exécuter la répétition, l'unité de calcul
+effectuera la comparaison avec la valeur `0`. Si tel est le cas
+l'unité de contrôle fera exécuter les ordres jusqu'à la fin de
+répétition puis sélectionnera à nouveau l'instruction de comparaison
+au début l'unité de contrôle, créant ainsi une répétition. Si la
+comparaison est fausse alors l'unité de contrôle fera exécuter
+l'instruction juste *apres* la fin de répétition, terminant alors la
+répétition.
+
+Ce mode de combinaison par une répétition est essentiel car il permet
+d'appliquer un même traitement un grand nombre de fois, par exemple
+comme ici à une suite de caractères. Notez bien qu'il est important de
+s'assurer que l'algorithme s'arrête. Sur notre exemple, il faut être
+sûr de rencontrer le code `0` à la fin du texte pour que l'algorithme
+s'arrête à la fin du texte sinon il ferait des opérations inattendues
+dans la mémoire et donc un bug. De plus, il risquerait de "planter la
+machine" car si il ne trouve jamais de 0, notre algorithme tournerait
+sans fin ! *La répétition est le troisième mode de combinaison utile
+pour décrire des algorithmes*.
+
+```compréhension
+::combien de séquences::
+[markdown]
+Dans l'algorithme précédent combien existe-t-il de séquences ? 
+{#3#### une principale, une dans la boucle répéter, une autre dans le si.}
+
+::plus longue séquence::
+[markdown]
+Dans l'algorithme précédent quelle est la longueur de la séquence la plus longue ? 
+{#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
+```
