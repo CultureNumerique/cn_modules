@@ -234,6 +234,7 @@ heart of computing" qui montre bien l'importance des algorithmes.
 
 ```compréhension 
 ::Algorithmes et ordinateurs:: 
+[markdown]
 Les premiers algorithmes ont été conçus 
 {
 ~ sur un ordinateur de type PC
@@ -242,3 +243,16 @@ Les premiers algorithmes ont été conçus
 = bien avant les ordinateurs
 #### Vous avez vous-même appris de nombreux algorithmes bien antérieurs à l'ordinateur comme celui qu'on réalise en posant une addition... et bien d'autres de la vie courante.}
 ```
+
+## Algorithmes et ordinateurs
+
+Nous avons expliqué le principe général de composition permettant de
+créer une nouvelle fonctionnalité en utilisant des fonctionnalités
+déjà existantes. Rappelons également que ce principe est général et
+que les nouvelles fonctionnalités peuvent, à leur tour, être composées
+selon ces principes jusqu'à pouvoir concevoir les applications
+complexes que vous utilisez sur un ordinateur, une tablette ou un
+smartphone. Les règles de composition sont décrites par des
+algorithmes, mais il est avant tout nécessaire de définir quelles
+fonctionnalités sont déjà existantes de base dans un ordinateur.
+
