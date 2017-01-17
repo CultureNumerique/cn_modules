@@ -135,10 +135,11 @@ Un programme peut combiner plusieurs traitements pour définir des traitements p
 
 ::Algorithmes et programmes::
 Un algorithme est:
+{
 ~%50% l'expression d'une méthode pour résoudre automatiquement une tâche
 ~%50% implanté dans un ordinateur dans un programme informatique
 ~ une suite de 0 et de 1
-{#### Un algorithme peut éventuellement être traduit dans un programme lui même traduit en une suite de 0 et de 1,  quand il est implanté dans un ordinateur. }
+#### Un algorithme peut éventuellement être traduit dans un programme lui même traduit en une suite de 0 et de 1,  quand il est implanté dans un ordinateur. }
 
 
 ::Une application indépendante ?::
@@ -162,7 +163,6 @@ périphériques.
 ```
 
 
-<!-- 
 # Les algorithmes
 
 ## Introduction
@@ -1216,4 +1216,3 @@ questions éthiques sur la possession des données souvent personnelles
 et l'utilisateur, trop souvent consentant, doit désormais se poser la
 question de la communication de ses données personnelles.
 
--->
