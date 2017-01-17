@@ -155,13 +155,14 @@ Donner des exemples de ressources.
 
 ::Application et périphériques::
 [markdown]
-**Application et périphériques**
 L'exécution d'une application peut faire appel à des interactions avec
 l'extérieur de la machine par des périphériques. Donner des exemples de
 périphériques.
 {#### réseau, clavier, souris, écran, ...}
 ```
 
+
+<!-- 
 # Les algorithmes
 
 ## Introduction
@@ -1215,3 +1216,4 @@ questions éthiques sur la possession des données souvent personnelles
 et l'utilisateur, trop souvent consentant, doit désormais se poser la
 question de la communication de ses données personnelles.
 
+-->
