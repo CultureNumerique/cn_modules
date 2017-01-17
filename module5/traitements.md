@@ -400,3 +400,39 @@ correspondante dans la mémoire. Dans le cas contraire, on ne fait rien
 mais nous aurions pu en toute généralité réaliser une autre suite
 d'instructions. *L'alternative est le deuxième mode de combinaison
 utile pour décrire des algorithmes*
+
+```compréhension
+::combinaison et imbrications::
+[markdown]
+L'exemple précédent du cours montre la combinaison de séquences et d'alternatives. Ces différents modes de combinaison s'imbriquent les uns dans les autres et nous avons signifié cette imbrication en la soulignant par l'écriture, en modifiant les marges gauches devant chaque instruction. Quelles affirmations suivantes sont vraies
+{
+~%33% le si est dans une séquence d'instructions
+~%33% une séquence d'instruction est imbriquée dans le si
+~ il y a 3 instructions en séquence
+~ il y a 4 instructions en séquence 
+~%34% la  séquence la plus longue est de deux instructions 
+#### L'algorithme est une séquence de 2 instructions, la deuxième est un si que nous avons écrit sur 4 lignes. Dans ce si une autre séquence de deux instructions est imbriquée (lignes 3 et 4).}
+
+::Avec des si::
+[markdown]
+On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambiguïté, il faut bien déterminer où les si commencent et se terminent. La fin d'un si correspond au dernier si non encore terminé. 
+\n
+    Si Bertrand vient  alors
+       Si  Yasmine vient  alors
+	      J'invite Robert
+		  J'invite Ahmed
+	   Sinon 
+	      J'invite Dimitri
+	   Fin du Si
+    Sinon 
+       J'invite Fan
+    Fin 
+\n
+Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
+{
+~ Robert
+~ Ahmed
+~%100% Dimitri
+~Fan
+}
+```
