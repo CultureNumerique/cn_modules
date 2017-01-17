@@ -356,12 +356,12 @@ algorithmes*.
 [markdown]
 Quelle est la dernière valeur lue dans l'algorithme suivant
 \n 
-  Ranger 4 dans la mémoire à l'adresse 12 
-  Ranger 8 dans la mémoire à l'adresse 5
-  Lire la valeur de la mémoire à l'adresse 12 
-  Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
-  Lire la valeur de la mémoire à l'adresse 12 
-  Lire la valeur de la mémoire à cette valeur
+     Ranger 4 dans la mémoire à l'adresse 12 
+     Ranger 8 dans la mémoire à l'adresse 5
+     Lire la valeur de la mémoire à l'adresse 12 
+     Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
+     Lire la valeur de la mémoire à l'adresse 12 
+     Lire la valeur de la mémoire à cette valeur
 {#8}
 ```
 
