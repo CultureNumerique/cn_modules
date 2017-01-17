@@ -231,3 +231,64 @@ there were computers, there were algorithms. But now that there are
 computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
+
+```compréhension 
+::Algorithmes et ordinateurs:: 
+Les premiers algorithmes ont été conçus 
+{
+~ sur un ordinateur de type PC
+~ par Dijkstra
+~ pendant la seconde guerre mondiale
+= bien avant les ordinateurs
+#### Vous avez vous-même appris de nombreux algorithmes bien antérieurs à l'ordinateur comme celui qu'on réalise en posant une addition... et bien d'autres de la vie courante.}
+
+::Recettes de cuisine::
+[markdown]
+Un exemple classique d'algorithme utilisé dans la vie courante est une recette de
+cuisine comme
+[la recette d'une omelette](http://www.lesoeufs.ca/recettes/omelette-de-base).
+Regardez
+cette recette et répondez aux questions suivantes :
+\n
+- Décrire les actions de base qu'est supposé savoir faire l'utilisateur de cette recette
+- Décrire les éléments utiles à l'exécution
+{#### actions : fouetter, chauffer, verser, mesurer le temps, ... ; éléments : les ingrédients, une poêle, une plaque de cuisson, ...}
+```
+
+## Algorithmes et ordinateurs
+
+Nous avons expliqué le principe général de composition permettant de
+créer une nouvelle fonctionnalité en utilisant des fonctionnalités
+déjà existantes. Rappelons également que ce principe est général et
+que les nouvelles fonctionnalités peuvent, à leur tour, être composées
+selon ces principes jusqu'à pouvoir concevoir les applications
+complexes que vous utilisez sur un ordinateur, une tablette ou un
+smartphone. Les règles de composition sont décrites par des
+algorithmes, mais il est avant tout nécessaire de définir quelles
+fonctionnalités sont déjà existantes de base dans un ordinateur.
+
+
+### La machine
+
+
+*Ordinateur* est un mot inventé par un linguiste dans les
+années 50. Il fait référence à l'exécution d'ordres,
+d'instructions. En anglais le mot *computer* fait plutôt référence au
+calcul et les deux notions se retrouvent dans cette
+machine. Essentiellement, la machine repose sur une *unité de calcul*
+qui fonctionne avec des nombres représentés (ou codés) avec des 0 et
+des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
+simples comme des additions, comparer des nombres. Elle utilise des
+*mémoires* pour ranger et retrouver ces nombres. La mémoire est
+organisée avec des emplacements repérés par des numéros appelés
+adresses. La machine peut alors ranger une valeur à une adresse donnée
+et retrouver une valeur rangée connaissant son adresse. Enfin, une
+*unité de contrôle* donne les ordres à l'unité de calcul et aux
+mémoires. Ce modèle de machine n'a pas évolué depuis les années 40
+même si les machines ont évolué. En effet, l'électronique et la
+miniaturisation ont considérablement réduit la taille et augmenté les
+capacités et la rapidité de la mémoire, de l'unité de calcul et
+l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
+économe et plus résistant si bien qu'on le retrouve désormais dans
+tous les milieux et toutes les situations.
+
