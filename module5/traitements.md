@@ -497,7 +497,7 @@ pour décrire des algorithmes*.
 [markdown]
 Dans l'algorithme du cours reproduit ici
 \n
-Accéder à la mémoire à l'adresse du premier caractère du texte
+    Accéder à la mémoire à l'adresse du premier caractère du texte
 	Répéter tant que la valeur n'est pas 0
   	   Si la valeur est comprise entre 65 et 90 Alors
           Ajouter 32
@@ -514,7 +514,7 @@ combien existe-t-il de séquences ?
 [markdown]
 Dans l'algorithme du cours reproduit ici
 \n
-Accéder à la mémoire à l'adresse du premier caractère du texte
+    Accéder à la mémoire à l'adresse du premier caractère du texte
 	Répéter tant que la valeur n'est pas 0
   	   Si la valeur est comprise entre 65 et 90 Alors
           Ajouter 32
@@ -593,7 +593,7 @@ algorithmes* pour trouver les algorithmes les plus efficaces en temps
 de calcul et en mémoire
 
 
-```activité
+```compréhension 
 ::Différentes formes pour la répétition::
 [markdown]
 La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse et donc augmente de 1 le niveau d'eau dans le réservoir :
@@ -645,7 +645,7 @@ programme qui transforme minuscule en majuscule.}
 
 ::Informatique à l'école::
 [markdown]
-Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public. Quelles sont  les instructions de base utilisées dans l'activité "débranchée" à destination des écoles introduites par cette vidéo https://vimeo.com/album/3837202/video/162535311 
+Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public. Quelles sont  les instructions de base utilisées dans l'activité "débranchée" à destination des écoles introduites par [cette vidéo](https://vimeo.com/album/3837202/video/162535311)
 {#### Les flèches vers les 4 directions.}
 
 ::Conception des algorithmes::
@@ -820,14 +820,16 @@ entre création et numérique est encore rendu plus explicite par la
 *programmation créative* : elle vous permet de définir de nouvelles
 formes d'expressions artistiques sonores ou visuelles.
 
-```activité
+```compréhension
 ::Algorithmique et programmation::
 [markdown]
 Le plus difficile est-il de 
 {= concevoir l'algorithme 
 ~ traduire l'algorithme en programme ? 
 #### Concevoir est un processus créatif...}
+```
 
+```activité
 ::Langages de programmation::
 [markdown]
 Il existe de nombreux langages de programmation. En voici quelques exemples
@@ -1225,7 +1227,9 @@ Cochez les affirmations vraies
 ~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier# Non. Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon. 
 ~ Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go.# Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux. 
 }
+```
 
+```activité
 ::Autres jeux::
 [markdown]
 Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
