@@ -309,8 +309,8 @@ de programmation _Perl_ toujours très utilisé pour traiter des
 qui a caractérisé les langages formels (utilisés par les machines)
 et naturels (les langues humaines).}
 ```
-
-### La séquence
+# Combiner les instructions
+## La séquence
 
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons d'abord que, dans les
@@ -359,7 +359,7 @@ Quelle est la dernière valeur lue dans l'algorithme suivant
 {#8}
 ```
 
-### L'alternative
+## L'alternative
 
 L'ordinateur est une machine très obéissante qui exécute
 scrupuleusement les ordres qu'on lui donne. Le traitement précédent
@@ -439,7 +439,7 @@ Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 }
 ```
 
-### La répétition
+## La répétition
 
 Nous souhaitons maintenant appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
@@ -523,7 +523,7 @@ Dans l'algorithme du cours reproduit ici
 quelle est la longueur de la séquence la plus longue ?
 {#### 3 : C'est celle dans la boucle répéter, composée d'un si suivi de deux autres instructions.}
 ```
-
+# Que peut faire un ordinateur ?
 ## Les trois combinaisons de base
 
 Faisons un point d'étape. Les algorithmes permettent de
@@ -1242,6 +1242,7 @@ Pour les jeux, les challenges actuels se situent au niveau des jeux video où de
 ```
 
 # Conclusion
+## Des programmes ... et des données
 
 Nous avons étudié les principes des applications informatiques et de
 leur construction comme un vaste jeu de construction avec des données
