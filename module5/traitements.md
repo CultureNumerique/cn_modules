@@ -148,7 +148,7 @@ Un algorithme est:
 Lancer une application implique de lancer plusieurs traitements
 {T}
 
-::Algorithmes et ordinateurs::
+::Algorithmes et puissance des ordinateurs::
 [markdown]
 Il est nécessaire de disposer d'ordinateurs très puissants pour écrire de bons algorithmes
 {F
@@ -169,20 +169,20 @@ périphériques.
 
 Bien que la notion soit très ancienne, le mot *algorithme* a récemment
 fait irruption dans les médias, car nous mesurons aujourd'hui plus
-sensiblement l'impact du numérique dans la société. Par exemple, les
-moteurs de recherche posent la question sociétale de l'accès à la
-connaissance : *quel algorithme choisit l'ordre des résultats à une
-requête dans un moteur de recherche ?* Une autre question de société
-concerne l'utilisation des traces de nos actions dans le monde
-numérique : *que peut inférer un algorithme de masse de données (big
-data) sur moi à partir de mes activités sur le Web ?* Un dernier
-exemple concerne l'*intelligence artificielle* avec la victoire
+sensiblement l'impact du numérique dans la société. Par exemple:
+- les moteurs de recherche posent la question sociétale de l'accès à la connaissance : *quel algorithme choisit l'ordre des résultats à une
+requête dans un moteur de recherche ?*
+
+- Une autre question de société
+concerne l'utilisation des **traces** de nos actions dans le monde
+numérique : *que peut inférer sur moi un algorithme de masse de données (big data) à partir de mes activités sur le Web ?*
+- Un dernier exemple concerne l'*intelligence artificielle* avec la victoire
 récente (2016) d'un ordinateur contre le meilleur expert humain au jeu
 de Go qui a soulevé la question suivante : *les algorithmes vont-ils
 permettre l'avènement d'une intelligence artificielle ?*
 
 
-Qu'est-ce qu'un algorithme ? Dans ce cours de culture numérique,
+Qu'est-ce qu'un **algorithme** ? Dans ce cours de culture numérique,
 plutôt qu'une définition scientifique, nous allons introduire les
 idées principales portées par ce mot. Un
 [célèbre livre d'introduction à l'algorithmique](https://mitpress.mit.edu/books/introduction-algorithms)
@@ -197,17 +197,22 @@ très précis et ne contenir aucune ambiguïté car il doit pouvoir être
 exécuté, de façon automatique, sans juger ni réfléchir.  Comme le dit
 [Gérard Berry](http://www.college-de-france.fr/site/gerard-berry/#course) :
 *Le but est d’évacuer la pensée du calcul, afin de le rendre
-exécutable par une machine numérique*.  Enlever la pensée, c'est se
+exécutable par une machine numérique*.  
+
+Enlever la pensée, c'est se
 comporter comme un automate et exécuter les instructions sans faire
 appel à des connaissances extérieures.
 
 Prenons l'exemple de la préparation du café matinal
-dans une machine à café à filtres : prendre un filtre dans la boîte ;
-placer le filtre dans la cafetière ; prendre le paquet de café ;
-mettre autant de cuillères de café que de tasses souhaitées ; mettre
-de l'eau tant que le niveau ne correspond pas au nombre de tasses
-souhaitées ; démarrer la cafetière. Les instructions ne sont pas
-suffisamment claires. Par exemple, l'instruction pour mettre le café
+dans une machine à café à filtres :
+- prendre un filtre dans la boîte ;
+- placer le filtre dans la cafetière ;
+- prendre le paquet de café ;
+- mettre autant de cuillères de café que de tasses souhaitées ;
+- mettre de l'eau tant que le niveau ne correspond pas au nombre de tasses souhaitées ;
+- démarrer la cafetière.
+
+Les instructions ne sont pas suffisamment claires. Par exemple, l'instruction pour mettre le café
 suppose que vous sachiez que le café doit être placé dans le filtre
 déposé précédemment sinon il faudrait le préciser pour que
 l'instruction soit non ambiguë. Quant à la réalisation, elle dépend de
@@ -266,51 +271,41 @@ selon ces principes jusqu'à pouvoir concevoir les applications
 complexes que vous utilisez sur un ordinateur, une tablette ou un
 smartphone. Les règles de composition sont décrites par des
 algorithmes, mais il est avant tout nécessaire de définir quelles
-fonctionnalités sont déjà existantes de base dans un ordinateur.
+fonctionnalités sont déjà existantes dans tout ordinateur.
 
 ### La machine
 
-
 *Ordinateur* est un mot inventé par un linguiste dans les
 années 50. Il fait référence à l'exécution d'ordres,
-d'instructions. En anglais le mot *computer* fait plutôt référence au
-calcul et les deux notions se retrouvent dans cette
-machine. Essentiellement, la machine repose sur une *unité de calcul*
-qui fonctionne avec des nombres représentés (ou codés) avec des 0 et
-des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
-simples comme des additions, comparer des nombres. Elle utilise des
-*mémoires* pour ranger et retrouver ces nombres. La mémoire est
-organisée avec des emplacements repérés par des numéros appelés
-adresses. La machine peut alors ranger une valeur à une adresse donnée
-et retrouver une valeur rangée connaissant son adresse. Enfin, une
-*unité de contrôle* donne les ordres à l'unité de calcul et aux
-mémoires. Ce modèle de machine n'a pas évolué depuis les années 40
-même si les machines ont évolué. En effet, l'électronique et la
-miniaturisation ont considérablement réduit la taille et augmenté les
-capacités et la rapidité de la mémoire, de l'unité de calcul et
-l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
-économe et plus résistant si bien qu'on le retrouve désormais dans
-tous les milieux et toutes les situations.
+d'instructions. En anglais le mot *computer* fait plutôt référence au calcul. Les deux notions se retrouvent dans ces machines qui reposent toutes  sur :
+- une *unité de calcul* qui fonctionne avec des nombres représentés (ou codés) avec des 0 et des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
+simples comme des additions, comparer des nombres.
+- des *mémoires* qui sont utilisées par l'unité de calcul pour ranger et retrouver ces nombres. La mémoire est
+organisée avec des emplacements repérés par des numéros appelés adresses. La machine peut alors ranger une valeur à une adresse donnée et retrouver une valeur rangée connaissant son adresse.
+- Une *unité de contrôle* qui donne les ordres à l'unité de calcul et aux mémoires.
+
+Ce modèle de machine n'a pas évolué depuis les années 40
+même si les machines se sont perfectionnées. En effet, l'électronique et la miniaturisation ont considérablement réduit la taille et augmenté les **capacités** et la **rapidité** de la mémoire, de l'unité de calcul et
+l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus économe et plus résistant si bien qu'on le retrouve désormais dans tous les milieux et toutes les situations.
 
 ```activité
 ::Modèle de l'ordinateur::
 [markdown]
-Le modèle décrit précédemment a été inventé par Von Neumann.
-En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les données et les programmes (instructions) sont-elles considérées de la même manière dans la mémoire ?
+Le modèle décrit précédemment a été inventé par **Von Neumann**.
+En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les **données** et les **programmes** (instructions) sont-elles considérées de la même manière dans la mémoire ?
 {T
 #### oui et c'est un élément important qui a permis le développement de l'informatique}
 
 ::Rôle des linguistes::
 [markdown]
-Toute la communauté scientifique a participé au développement de l'informatique et, tout particulièrement, les mathématiciens, les logiciens et les physiciensmais aussi les linguistes. En voici trois exemples :
+Toute la communauté scientifique a participé au développement de l'informatique et tout particulièrement, les mathématiciens, les logiciens et les physiciens mais aussi les linguistes. En voici trois exemples :
 \n
 - Qui a inventé le mot ordinateur ?
 - Qui est Larry Wall ?
 - Qui est Noam Chomsky ?
-{#### Jacques Perret sur une demande d'IBM de trouver un terme
-français. Larry Wall est un linguiste qui a inventé un langage
-de programmation Perl toujours très utilisé pour traiter des
-(ensembles de) fichiers textes. Noam Chomsky est un linguiste
+{#### **Jacques Perret** sur une demande d'IBM de trouver un terme français. **Larry Wall** est un linguiste qui a inventé un langage
+de programmation _Perl_ toujours très utilisé pour traiter des
+(ensembles de) fichiers textes. **Noam Chomsky** est un linguiste
 qui a caractérisé les langages formels (utilisés par les machines)
 et naturels (les langues humaines).}
 ```
@@ -323,12 +318,11 @@ codages standards comme `ASCII` et `UTF8`, le caractère `A` majuscule
 a pour nom "Latin Capital Letter A" et pour numéro `65`. Le caractère
 `a` minuscule a pour numéro `97`. Croyez-nous sur parole, `65` s'écrit
 `01000001` et `97` s'écrit `01100001`. C'est remarquable car, pour
-passer de l'un à l'autre, seul le 6ème chiffre partant de la droite,
+passer de l'un à l'autre, seul le 6ème chiffre en partant de la droite,
 un `0`, est transformé en `1`. Ceci est vrai pour toutes les lettres
 de notre alphabet latin et le passage de majuscule à minuscule
-consiste juste à changer un `0` par un `1` à la sixième position. Et
-l'unité de calcul sait réaliser cette opération.  Notons le lien très
-fort entre le codage, très astucieux, et les capacités de la
+consiste juste à changer un `0` par un `1` à la sixième position. L'unité de calcul **sait** réaliser cette opération.  Notons le lien très
+fort entre le codage, très astucieux qui a été inventé, et les capacités de la
 machine. Notons aussi que changer ce 6ème chiffre correspond également
 à ajouter 32 (65+32 vaut 97). Nous sommes donc capables de décrire le
 traitement que doit réaliser la machine pour transformer une
@@ -336,8 +330,8 @@ majuscule, dont le code binaire est stocké dans sa mémoire à une
 adresse connue, en minuscule avec l'algorithme suivant :
 
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
-	Ajouter 32 (changer le 6ème chiffre du codage binaire de 0 en 1)
-	Ranger le résultat dans la mémoire à la même adresse
+    Ajouter 32 (changer le 6ème chiffre du codage binaire de 0 en 1)
+    Ranger le résultat dans la mémoire à la même adresse
 
 Nous retrouvons dans cet exemple l'organisation de la machine avec ses
 adresses, sa mémoire, son unité de calcul (pour ajouter 32) et son
@@ -436,11 +430,11 @@ On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambigu
        J'invite Fan
     Fin du Si
 \n
-Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
+Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 {
 ~ Robert
 ~ Ahmed
-~%100% Dimitri
+= Dimitri
 ~Fan
 }
 ```
