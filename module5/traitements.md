@@ -9,6 +9,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 <!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc traitements.md -o t.pdf -->
 
 # Comprendre les traitements
+## L'exemple d'une application GPS
 
 Pourquoi les ordinateurs peuvent-ils nous apparaître plus précis et
 plus efficaces que nous et pourquoi peuvent-ils même apparaître
@@ -890,6 +891,7 @@ meilleur compromis entre les besoins et les possibilités fournies par
 l'application.
 
 # Exemples de programmes
+## Introduction
 
 Dans cette section, nous présentons le fonctionnement de trois
 programmes. Pour chacun d'eux, un premier objectif est de vous faire
