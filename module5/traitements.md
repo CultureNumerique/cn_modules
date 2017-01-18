@@ -441,7 +441,7 @@ Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 
 ### La répétition
 
-Nous souhaitons appliquer la transformation à tous les caractères d'un
+Nous souhaitons maintenant appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
 supposons que notre texte est une suite de caractères. Tous les
 caractères de ce texte sont stockés dans la mémoire de l'ordinateur
@@ -466,13 +466,13 @@ caractères du texte, une *répétition* appelée aussi par les
 informaticiens une *boucle* ou une *itération*.  L'ordinateur est
 capable d'exécuter cet algorithme uniquement à l'aide de ses
 fonctionnalités existantes.  Sur notre algorithme, lorsque l'unité de
-contrôle demande à exécuter la répétition, l'unité de calcul
+contrôle demande d'exécuter la répétition, l'unité de calcul
 effectuera la comparaison avec la valeur `0`. Si tel est le cas
 l'unité de contrôle fera exécuter les ordres jusqu'à la fin de
 répétition puis sélectionnera à nouveau l'instruction de comparaison
 au début l'unité de contrôle, créant ainsi une répétition. Si la
 comparaison est fausse alors l'unité de contrôle fera exécuter
-l'instruction juste *apres* la fin de répétition, terminant alors la
+l'instruction juste *après* la fin de répétition, terminant alors la
 répétition.
 
 Ce mode de combinaison par une répétition est essentiel car il permet
@@ -481,9 +481,11 @@ comme ici à une suite de caractères. Notez bien qu'il est important de
 s'assurer que l'algorithme s'arrête. Sur notre exemple, il faut être
 sûr de rencontrer le code `0` à la fin du texte pour que l'algorithme
 s'arrête à la fin du texte sinon il ferait des opérations inattendues
-dans la mémoire et donc un bug. De plus, il risquerait de "planter la
+dans la mémoire et donc générerait un bug. De plus, il risquerait de "planter la
 machine" car si il ne trouve jamais de 0, notre algorithme tournerait
-sans fin ! *La répétition est le troisième mode de combinaison utile
+sans fin !
+
+*La répétition est le troisième mode de combinaison utile
 pour décrire des algorithmes*.
 
 ```compréhension
@@ -502,7 +504,7 @@ Dans l'algorithme du cours reproduit ici
     Fin de la répétition
 \n
 combien existe-t-il de séquences ?
-{#3#### une principale, une dans la boucle répéter, une autre dans le si.}
+{#### 3 : Une principale, une dans la boucle répéter, une autre dans le si.}
 
 ::Plus longue séquence::
 [markdown]
@@ -519,19 +521,23 @@ Dans l'algorithme du cours reproduit ici
     Fin de la répétition
 \n
 quelle est la longueur de la séquence la plus longue ?
-{#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
+{#### 3 : C'est celle dans la boucle répéter, composée d'un si suivi de deux autres instructions.}
 ```
 
 ## Les trois combinaisons de base
 
 Faisons un point d'étape. Les algorithmes permettent de
 définir des traitements à partir de traitements de base et trois modes
-de combinaison à savoir la *séquence* qui fait passer à l'instruction
-suivante, l'*alternative* qui permet de choisir les instructions à
-exécuter selon la valeur d'un test et la *répétition* qui répète des
-instructions tant qu'un test est satisfait. La machine
-peut exécuter les traitements ainsi définis grâce à une unité de
-calcul, de la mémoire et une unité de contrôle.
+de combinaison à savoir :
+- la *séquence* qui fait passer à l'instruction
+suivante,
+- l'*alternative* qui permet de choisir les instructions à
+exécuter selon la valeur d'un test et
+- la *répétition* qui répète des
+instructions tant qu'un test est satisfait.
+
+La machine peut exécuter les traitements ainsi définis grâce à une **unité de
+calcul**, de la **mémoire** et une **unité de contrôle**.
 
 Notre exemple nous a permis d'expliquer comment construire une
 nouvelle fonctionnalité en combinant des opérations simples. Mais,
@@ -609,14 +615,14 @@ La répétition dans les algorithmes et les programmes peut s'écrire de différ
 \n
 Répondez aux questions suivantes :
 \n
-1. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
-2. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
-3. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
-{####  Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. Si le réservoir est vide, les trois algorithmes sont équivalents. Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
+A. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
+B. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
+C. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
+{####  A : Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. \n B : Si le réservoir est vide, les trois algorithmes sont équivalents. \n C : Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
 
 ::Les minuscules en majuscules::
 [markdown]
-On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours:
+On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours que nous rappelons ici:
 \n
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
 	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
@@ -677,10 +683,10 @@ structurés, les documents multimédia.
 
 Mais nous l'avons vu, le jeu de construction porte aussi sur les
 algorithmes. En effet, à partir d'opérations de base sur ces objets
-complexes, on va pouvoir les composer dans des algorithmes avec les
-trois compositions, la séquence, l'alternative et l'itération. Les
+complexes, on va pouvoir les agencer dans des algorithmes avec les
+trois compositions : la séquence, l'alternative et l'itération. Les
 fonctionnalités de base d'un ordinateur sont très réduites : changer
-des 0 en 1, effectuer des additions des comparaisons,...  Mais les
+des 0 en 1, effectuer des additions, des comparaisons,...  Mais les
 fonctionnalités développées par ce jeu de construction, nous pouvons à
 tout moment les considérer comme de nouvelles fonctionnalités de base,
 plus évoluées. On peut même oublier ces 0 et ces 1 et considérer que
@@ -701,8 +707,8 @@ cela, il faut traduire l'algorithme dans un langage compréhensible par
 la machine. Il faut donc disposer d'un langage commun entre l'humain
 et la machine avec la contrainte forte d'être compréhensible par les
 humains tout en étant suffisamment formel et précis pour ne pas
-laisser d'ambiguïté à la machine. C'est le rôle des langages
-informatiques pour les traitements.
+laisser d'ambiguïté à la machine. C'est le rôle des **langages
+informatiques** pour les traitements.
 
 Il existe, en réalité, de nombreux langages dépendants du mode
 d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
@@ -712,7 +718,7 @@ touches de clavier. Pour apprendre à vous servir d'une application,
 vous allez apprendre ce langage : quelle est l'action réalisée par le
 choix de cet élément de menu, quel est l'effet d'un clic de souris
 sur cet élément, quel est l'effet de l'appui sur cette combinaison de
-touches. Mais, il est difficile d'automatiser ces actions dans des
+touches. Mais il est difficile d'automatiser ces actions dans des
 programmes. On préfère alors utiliser un langage écrit.  Lorsqu'il
 s'agit de traduire un algorithme par un texte à destination de la
 machine, on utilise des langages appelés *langages de
@@ -720,7 +726,7 @@ programmation*.
 
 Il existe de nombreux langages de programmation, qui fournissent tous
 ces structures de composition (séquence, alternative, itération) et
-diffèrent par fonctionnalités de base mises à disposition.  Mais comme
+diffèrent par les fonctionnalités de base mises à disposition.  Mais comme
 pour les langues naturelles ils diffèrent aussi par leur règles de
 syntaxe et de grammaire. Les textes écrits dans ces langages sont des
 *programmes* qui sont la traduction d'algorithmes dans le langage
@@ -804,7 +810,7 @@ couches applicatives de plus en plus riches. Par conséquent,
 aujourd'hui, la plupart des besoins, personnels ou professionnels, des
 utilisateurs sont couverts par une ou plusieurs applications.  Ceci
 fait dire à certains qu'il est inutile de savoir coder ou
-programmer. Nous pensons, a contrario, que bien comprendre les notions
+programmer. Nous pensons, _a contrario_, que bien comprendre les notions
 de base sur les algorithmes et les programmes permet de bien
 comprendre le fonctionnement des machines et des applications. Et
 c'est même oublier que le monde est riche, en perpétuelle évolution et
@@ -946,8 +952,8 @@ d'expliquer à notre machine comment réaliser cette opération. On
 suppose qu'on dispose d'instructions élémentaires pour lire le premier
 mot du dictionnaire, lire le mot suivant et repérer la fin du
 dictionnaire. Nous pouvons alors proposer un algorithme qui recherche
-le mot à chercher en parcourant le dictionnaire un mot après
-l'autre. Si le mot est dans le dictionnaire, l'algorithme renvoie une
+un mot en parcourant le dictionnaire un mot après
+l'autre. L'algorithme renvoie une
 valeur vraie ou fausse selon que le mot à chercher est dans le
 dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
 
@@ -959,8 +965,12 @@ dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
 	 6. **en sortie** : **si** le mot courant est le mot cherché **alors** existe **sinon** n'existe pas
 
 En combinant ces deux algorithmes, nous avons un algorithme de
-correction orthographique.  Cet algorithme est-il efficace en temps de
-calcul ? Le parcours de tous les mots du texte est obligatoire. Pour
+correction orthographique.
+
+_Cet algorithme est-il efficace en temps de
+calcul ? _
+
+Le parcours de tous les mots du texte est obligatoire. Pour
 chaque mot du texte, il faut faire une recherche dans le dictionnaire,
 ce qui, avec notre algorithme naïf peut amener à parcourir tous les
 mots du dictionnaire. Ceci peut amener à un temps de calcul assez long
@@ -970,24 +980,23 @@ texte. Peut-on faire mieux ? Oui si vous pensez à la façon dont vous
 cherchez dans un dictionnaire qui est rangé dans un ordre
 alphabétique. Il existe des algorithmes rapides de recherche dans un
 dictionnaire et ces algorithmes sont souvent disponibles dans les
-langages de programmation. Vous pourrez en savoir plus en suivant le
-module qui introduit les méthodes de recherche d'information.
+langages de programmation. Vous pourrez en savoir plus en suivant un cours qui introduit les méthodes de recherche d'information.
 
-Cet algorithme met-il en évidence toutes les fautes d'orthographe ?
+_Cet algorithme met-il en évidence toutes les fautes d'orthographe ?_
+
 Il souligne et donc considère comme mal orthographiés tous les mots du
-texte qui n'apparaissent pas dans le dictionnaire. Quelles sont les
-erreurs possibles de cet algorithme ? Une erreur possible est de
+texte qui n'apparaissent pas dans le dictionnaire. Une erreur possible est de
 souligner à tort un mot parce que les listes sont incomplètes. Des
 listes de mots les plus complètes et les plus actuelles possibles
 corrigent ce type d'erreur. Il est par contre incapable de souligner
 les fautes d'accord ou de conjugaison comme "la vache bleu" ou "je
-montres". La méthode pour réaliser ce type de correction et bien
+montres". La méthode pour réaliser ce type de correction est bien
 différente et nécessite d'autres algorithmes.  Une première
 possibilité serait de doter le correcteur de la capacité d'analyser
 votre phrase pour répondre aux questions telles que : quel est le
 sujet du verbe ? Avec qui s'accorde cet adjectif ? Ceci afin de lui
 permettre de vérifier des règles grammaticales.  La difficulté est de
-réaliser ces analyses car ils nécessitent une grammaire numérisée de
+réaliser ces analyses car elles nécessitent une grammaire numérisée de
 la langue et des programmes d'analyse. Souvent ces règles de grammaire
 numérisées sont incomplètes car c'est encore un sujet de recherche
 actif en (informatique) linguistique d'être capable d'exprimer toutes
@@ -1017,16 +1026,16 @@ l'orthographe, vous procéderez de la façon suivante :
 
 Nous poursuivons avec un second algorithme utilisé en traitement
 automatique du langage naturel qui est un domaine à la frontière entre
-linguistique et informatique. En effet, les ordinateurs sont,
-aujourd'hui, capables, d'identifier dans un grand corpus de textes
-ceux dont le sujet porte sur un thème (on parle aussi de catégorie ou
-de classe) précis. Il peut s'agir de classer des nouvelles dans des
-thèmes pour pouvoir les classer sur un site Web. Il peut s'agir de
+linguistique et informatique. En effet, les ordinateurs sont
+aujourd'hui capables d'identifier dans un grand corpus de textes,
+ceux dont le sujet porte sur un thème précis (on parle aussi de catégorie ou
+de classe). Il peut s'agir de classer des nouvelles dans des
+genres pour pouvoir les classer sur un site Web. Il peut s'agir de
 diriger automatiquement des mails de réclamation vers le bon service
 pour une entreprise. Il peut s'agir d'attribuer des textes à des
-auteurs ce qui est une question considérée en stylistique. Il est
+auteurs, ce qui est une question considérée en stylistique. Il est
 intéressant de noter que, si on dispose de corpus de textes de
-différents auteurs, on peut apprendre à classer les textes et qu'un
+différents auteurs, on peut écrire un programme qui apprenne à classer les textes et qu'un
 tel programme a des résultats étonnamment bons (du niveau d'un expert
 humain) même si, comme nous allons le voir, il ne fait pas une étude
 de style mais se base simplement sur des fréquences d'apparition de
@@ -1034,7 +1043,7 @@ mots.
 
 Explorons les idées permettant à un algorithme de classer des textes
 en considérant la question de trouver les textes parlant de politique.
- Une méthode naïve, voire idiote, est de dire qu'un texte est dans le
+Une méthode naïve, voire idiote, est de dire qu'un texte est dans le
 thème "politique" si et seulement si le mot politique s'y trouve. On
 pourrait écrire un algorithme comme
 
@@ -1055,7 +1064,7 @@ contenant le mot politique ne parle pas forcément de politique ! On
 peut l'améliorer en constituant un dictionnaire des mots parlant de
 politique (droite, gauche, parlement, assemblée, ...)  et s'inspirer
 de l'algorithme réalisant la correction orthographique. On peut
-poursuivre cette idée sensiblement en constatant que la décision de
+poursuivre cette idée en constatant que la décision de
 l'appartenance à ce thème politique peut dépendre aussi bien de la
 présence que de l'absence de certains mots, ou mieux encore de combien
 de fois chaque mot est employé. Nous avons l'idée de base qui est que
@@ -1065,11 +1074,11 @@ d'apparition de certains mots*.
 C'est cette idée qui est souvent employée. Pour cela, un dictionnaire
 ayant été choisi, on va représenter un texte par le nombre de fois où
 chaque mot du dictionnaire apparaît dans le texte. Au vu des
-algorithmes vus dans ce module, vous êtes capables de comprendre qu'il
+algorithmes décrits dans ce module, vous êtes capables de comprendre qu'il
 est possible d'écrire un algorithme qui, avec un texte et un
 dictionnaire, construit une telle représentation. À partir de cette
 représentation, il faut trouver des seuils en dessous ou au delà
-desquels on dira que le mot parle d'un thème précis. Par exemple, un
+desquels on dira que le texte parle d'un thème précis. Par exemple, un
 texte parle de politique si le mot politique apparaît au moins une
 fois, le mot gauche au moins deux fois, le mot droite au moins deux
 fois et le mot chat n'apparaît pas. Mais, comment trouver ces seuils ?
@@ -1128,7 +1137,7 @@ le meilleur coup à jouer ?*
 Si vous avez déja joué à un jeu de plateau, vous raisonnez très
 certainement de la façon suivante : quels sont les coups possibles ?
 Pour chacun d'eux, voir leur effet, réfléchir à la réponse potentielle
-de mon adversaire, de penser à ce que je pourrais jouer ensuite,
+de mon adversaire, penser à ce que je pourrais jouer ensuite,
 ... Après avoir examiné un certain nombre de coups possibles, je fais
 un choix. Un algorithme va avoir une approche similaire mais très
 systématique. Il va considérer tous les coups possibles de sa part,
@@ -1182,9 +1191,9 @@ pas explorer plus loin ce qui peut se passer. C'est ce principe qui a
 forme d'un algorithme célèbre appelé *algorithme alpha-beta*.
 
 Vous connaissez maintenant les principes du fonctionnement de
-l'algorithme. Pour avoir un algorithme performant on examinera le plus
-grand nombre d'états possibles dans l'arbre simplifié grace à la
-méthode alpha-beta. Pour avoir un algorithme très performant, on
+l'algorithme. Pour l'améliorer on examinera le plus
+grand nombre d'états possibles dans l'arbre simplifié grâce à la
+méthode alpha-beta. Pour avoir un algorithme encore plus performant, on
 ajoute d'autres éléments comme, par exemple, une bibliothèque des
 débuts de partie. C'est-à-dire que le programme pourra mimer des
 débuts de partie classiques des meilleurs joueurs qui sont connues sur
@@ -1212,15 +1221,17 @@ recherches sur le Go avec un programme champion du monde dans les
 années 2010, battant même des experts humains mais avec handicap.
 
 ```compréhension
-::Des applications::
+::Application-correcteur::
 [markdown]
-Cochez les affirmations vraies
-\n
-{
-~ Un correcteur orthographique détecte toutes les fautes d'orthographe# Vérifier la présence d'un mot dans le dictionnaire de l'ordinateur est facile et rapide, mais corriger les fautes de grammaire est une opération beaucoup plus difficile à automatiser, car elle demande une analyse plus profonde du langage.
-~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier# Non. Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon.
-~ Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go.# Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux.
-}
+Un correcteur orthographique détecte toutes les fautes d'orthographe{F #### Vérifier la présence d'un mot dans le dictionnaire de l'ordinateur est facile et rapide, mais corriger les fautes de grammaire est une opération beaucoup plus difficile à automatiser, car elle demande une analyse plus profonde du langage.}
+
+::Application-echecs::
+[markdown]
+Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier{F #### Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon.}
+
+::Application-jeux::
+[markdown]
+Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go. {F #### Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux.}
 ```
 
 ```activité
