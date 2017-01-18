@@ -404,7 +404,15 @@ utile pour décrire des algorithmes*
 ```compréhension
 ::combinaison et imbrications::
 [markdown]
-L'exemple précédent du cours montre la combinaison de séquences et d'alternatives. Ces différents modes de combinaison s'imbriquent les uns dans les autres et nous avons signifié cette imbrication en la soulignant par l'écriture, en modifiant les marges gauches devant chaque instruction. Quelles affirmations suivantes sont vraies
+L'exemple précédent du cours montre la combinaison de séquences et d'alternatives. Il est reproduit ici:
+\n
+    Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
+	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
+       Ajouter 32 
+	   Ranger le résultat dans la mémoire a la même adresse
+    Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
+\n
+Ces différents modes de combinaison s'imbriquent les uns dans les autres et nous avons signifié cette imbrication en la soulignant par l'écriture, en modifiant les marges gauches devant chaque instruction. Quelles affirmations suivantes sont vraies
 {
 ~%33% le si est dans une séquence d'instructions
 ~%33% une séquence d'instruction est imbriquée dans le si
@@ -426,7 +434,7 @@ On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambigu
 	   Fin du Si
     Sinon 
        J'invite Fan
-    Fin 
+    Fin du Si
 \n
 Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
 {
@@ -485,14 +493,38 @@ sans fin ! *La répétition est le troisième mode de combinaison utile
 pour décrire des algorithmes*.
 
 ```compréhension
-::combien de séquences::
+::Combien de séquences::
 [markdown]
-Dans l'algorithme précédent combien existe-t-il de séquences ? 
+Dans l'algorithme du cours reproduit ici
+\n
+Accéder à la mémoire à l'adresse du premier caractère du texte
+	Répéter tant que la valeur n'est pas 0
+  	   Si la valeur est comprise entre 65 et 90 Alors
+          Ajouter 32
+	      Ranger le résultat dans la mémoire à l'adresse actuelle
+	   Fin du Si
+       Ajouter 1 à l'adresse actuelle (pour passer au caractère suivant)
+       Accéder à la mémoire à la nouvelle adresse actuelle
+    Fin de la répétition
+\n
+combien existe-t-il de séquences ? 
 {#3#### une principale, une dans la boucle répéter, une autre dans le si.}
 
-::plus longue séquence::
+::Plus longue séquence::
 [markdown]
-Dans l'algorithme précédent quelle est la longueur de la séquence la plus longue ? 
+Dans l'algorithme du cours reproduit ici
+\n
+Accéder à la mémoire à l'adresse du premier caractère du texte
+	Répéter tant que la valeur n'est pas 0
+  	   Si la valeur est comprise entre 65 et 90 Alors
+          Ajouter 32
+	      Ranger le résultat dans la mémoire à l'adresse actuelle
+	   Fin du Si
+       Ajouter 1 à l'adresse actuelle (pour passer au caractère suivant)
+       Accéder à la mémoire à la nouvelle adresse actuelle
+    Fin de la répétition
+\n
+quelle est la longueur de la séquence la plus longue ? 
 {#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
 ```
 
@@ -590,7 +622,13 @@ Répondez aux questions suivantes :
 
 ::Les minuscules en majuscules::
 [markdown]
-On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours. 
+On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours: 
+\n
+    Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
+	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
+       Ajouter 32 
+	   Ranger le résultat dans la mémoire a la même adresse
+    Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
 \n
 1. Pour transformer un caractère minuscule en majuscule, quelle instruction
 faut-il changer dans l'algorithme présenté ci-avant ?
@@ -607,8 +645,8 @@ programme qui transforme minuscule en majuscule.}
 
 ::Informatique à l'école::
 [markdown]
-Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public.
-{}
+Le code informatique va être enseigné à l'école, au collège et au lycée. Les professeurs des écoles et collèges devront être formés et se former pour cet enseignement. De nombreuses initiatives voient le jour. Vous pouvez regarder [class'code](http://classcode.fr/) qui est tout public. Quelles sont  les instructions de base utilisées dans l'activité "débranchée" à destination des écoles introduites par cette vidéo https://vimeo.com/album/3837202/video/162535311 
+{#### Les flèches vers les 4 directions.}
 
 ::Conception des algorithmes::
 [markdown]
@@ -1178,22 +1216,20 @@ recherches sur le Go avec un programme champion du monde dans les
 années 2010, battant même des experts humains mais avec handicap.
 
 ```compréhension
-::Les exemples d'applications::
+::Des applications::
 [markdown]
-Cochez les réponses vraies
+Cochez les affirmations vraies
 \n
 {
-~ Il est possible d'avoir un dictionnaire contenant tous les mots de langue française
-~ Un correcteur orthographique détecte toutes les fautes d'orthographe
-~%50% Un programme qui classe des textes utilise des textes classés par un expert humain
-~%50% Un programme de classement de textes peut approcher les performances d'un expert humain
-~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier
-~ Les humains sont meileurs que les programmes dans les jeux de plateau (dames, échecs, go)
+~ Un correcteur orthographique détecte toutes les fautes d'orthographe# Vérifier la présence d'un mot dans le dictionnaire de l'ordinateur est facile et rapide, mais corriger les fautes de grammaire est une opération beaucoup plus difficile à automatiser, car elle demande une analyse plus profonde du langage.
+~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier# Non. Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon. 
+~ Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go.# Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux. 
 }
 
 ::Autres jeux::
 [markdown]
 Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
+{}
 ```
 
 # Conclusion
