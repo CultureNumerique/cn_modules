@@ -167,7 +167,7 @@ périphériques.
 # Les algorithmes
 
 ## Introduction
-
+[Introduction aux algorithmes](https://vimeo.com/199154380){: .cours_video}
 Bien que la notion soit très ancienne, le mot *algorithme* a récemment
 fait irruption dans les médias, car nous mesurons aujourd'hui plus
 sensiblement l'impact du numérique dans la société. Par exemple:
@@ -263,7 +263,7 @@ cette recette et répondez aux questions suivantes :
 ```
 
 ## Algorithmes et ordinateurs
-
+[Algorithmes et ordinateurs](https://vimeo.com/199154419){: .cours_video}
 Nous avons expliqué le principe général de composition permettant de
 créer une nouvelle fonctionnalité en utilisant des fonctionnalités
 déjà existantes. Rappelons également que ce principe est général et
@@ -312,7 +312,7 @@ et naturels (les langues humaines).}
 ```
 # Combiner les instructions
 ## La séquence
-
+[Les 3 combinaisons de base](https://vimeo.com/199154451){: .cours_video}
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons d'abord que, dans les
 codages standards comme `ASCII` et `UTF8`, le caractère `A` majuscule
@@ -525,8 +525,8 @@ quelle est la longueur de la séquence la plus longue ?
 {#### 3 : C'est celle dans la boucle répéter, composée d'un si suivi de deux autres instructions.}
 ```
 # Que peut faire un ordinateur ?
-## Les trois combinaisons de base
-
+## Récapitulons
+[Récapitulons](https://vimeo.com/199154525){: .cours_video}
 Faisons un point d'étape. Les algorithmes permettent de
 définir des traitements à partir de traitements de base et trois modes
 de combinaison à savoir :
@@ -559,7 +559,7 @@ d'afficher un message plutôt que l'itinéraire. L'itération permet de
 poursuivre l'exécution de l'assistant tant que vous n'êtes pas arrivé.
 
 ## Calculer et calculable
-
+[Calculer et calculable](https://vimeo.com/199154549){: .cours_video}
 Est-ce que ces trois modes de composition que sont la séquence,
 l'alternative et l'itérative sont suffisants ? Oui car il existe un
 **théorème** qui affirme que tout ce qui est calculable avec une
@@ -753,15 +753,15 @@ Algorithme et programme expliqués [en une minute par Gérard Berry](https://www
 ::Faut-il apprendre à coder ?::
 [markdown]
 [L'avis d'un président des États-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
-pouvez activer, au besoin, les sous-titres en anglais ou en français. {}
+pouvez activer, au besoin, les sous-titres en anglais ou en français.\n Êtes-vous convaincu par ce discours ? N'hésitez à échanger vos points de vue sur le forum de ce cours, ... {}
 
 ::Apprendre à coder::
 [markdown]
-Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
+Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program. \n Avez-vous réussi à écrire un programme ?
 {}
 
 ::La répétition par Mark Zuckerberg (Facebook)::
-Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk). \n Cette vidéo vous a-t-elle donné envie d'en apprendre davantage ? {}
 ```
 
 ## Coder ou programmer
@@ -842,7 +842,8 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 * l'un des plus répandus et des plus anciens : le langage C
 * l'un des plus populaires pour apprendre : le python
 \n
-Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript.
+Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript.\n
+Quel est celui que vous préfereriez apprendre ?
 {}
 ```
 
@@ -1100,7 +1101,7 @@ machine pouvait classer des textes avec des résultats souvent
 comparables à celles d'un expert humain.
 
 ## Un jeu d'échec sur ordinateur
-
+[Le jeu d'échecs](https://vimeo.com/199154549){: .cours_video}
 Le jeu d'échecs est un jeu ancien datant du 10ème siècle
 environ. C'est un jeu de plateau, c'est-à-dire un jeu qui se joue avec
 des pièces positionnées sur un plateau découpé en cases. Le plateau du
@@ -1239,7 +1240,8 @@ Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et
 ```activité
 ::Autres jeux::
 [markdown]
-Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
+Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard). \n
+Pensez-vous pouvoir battre les algorithmes sur ce type de jeu ?
 {}
 ```
 
