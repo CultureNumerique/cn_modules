@@ -1,6 +1,6 @@
 LANGUAGE:   fr
 TITLE:   Recherche d'information et référencement Web
-MENUTITLE: Les traitements numériques
+MENUTITLE: Recherche d'information Web
 AUTHOR: Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
