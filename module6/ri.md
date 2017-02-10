@@ -188,18 +188,34 @@ alors on peut accéder rapidement à un mot. **trouver presentation**
 > rapide à un mot, et pour chaque mot de la liste ordonnée par numéro
 > croissant des documents qui contiennent ce mot.
 
-Dans le modèle
-Booléen, l'objectif est de trouver l'ensemble des documants qui
-satisfont une requête. Pour une requête à un mot clé, c'est l'ensemble
-des documents qui contiennent de mot, pour une requête à plusieurs
-mots clés, c'est l'ensemble des documents qui contiennent tous les
-mots clés. La base de documents ayant été prétraitée de façon à
-construire un index,
+Dans le modèle Booléen, l'objectif est de trouver l'ensemble des
+documants qui satisfont une requête. Pour *une requête à un mot clé*,
+c'est l'ensemble des documents qui contiennent de mot. L'index étant
+construit, on peut répondre à la requête de façon éfficace : chercher
+le mot dans le dictionnaire, renvoyer la liste des documents associée
+dans l'index. Pour *une requête à deux mots clés*, on procède comme
+suit : chercher le premier mot dans le dictionnaire, se mettre au
+début de la liste des documents associée, chercher le deuxième mot
+dans le dictionnaire, se mettre au début de la liste des documents
+associée, parcourir les listes et mettre en résultat les documents
+dont les numéros apparaissent dans les deux listes. Ces principes
+peuvent être étendus pour des requêtes à plusieurs mots clés et même
+avec des requêtes contenant des `OU`.
 
-
-principes de la recherche
-séquentielle. Matrices. Introduction des index. Principes des
-algorithmes. Extension aux phrases. Analyse critique.
+Le modèle Booléen est le modèle sous-jacent à la recherche d'ouvrages
+dans une bibliothèque. Dans ce cas, les documents sont souvent résumés
+par des notices bibliographiques construites par les experts du
+domaine et contenant des informations comme titre, éditeur, mais aussi
+un résumé et aussi des mots clés définis par ces experts. On dispose
+alors d'une interface de requêtes qui permet de trouver des listes
+d'ouvrages satisfaisant la requête. Le langage de requêtes contient
+des requêtes à un ou plusieurs mots clés, on peut souvent combiner des
+recherches avec des opérateurs `ET`, `OU` et `NON`, on peut également
+faire des requêtes par position comme : les deux mots cherchés doivent
+être distants de moins de 3 mots. Pour les requêtes par position,
+l'index est enrichi, pour chaque mot et chaque document de la liste
+associée, en ajoutant la liste des positions dans lesquelles le mot
+apparaît.
 
 ## Le modèle vectoriel : attribuer un score de pertinence aux documents
 
