@@ -72,15 +72,25 @@ même cours.
   des raccourcis, c'est-à-dire des modifications superficielles des
   interfaces des logiciels.
 
+**Installer libreOffice :**  Si vous voulez installer LibreOffice, ce que nous vous conseillons, il faut :
+
+- aller sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et installer le logiciel
+- retourner sur [http://www.libreoffice.org/](http://www.libreoffice.org/)
+- télécharger et **exécuter** la traduction française de l'interface (*Translated User interface*)
+- quitter et relancer LibreOffice.
+- le cas échéant, ne pas tenir compte des messages d'erreur concernant *JRE* (un composant facultatif de `libreoffice`).
+
+
 # Traitements de texte
 
 ## Objectifs
 
 L'étude des documents fait apparaître les vues séquentielle (la suite
 de caractères), de structure (titre, section, sous-section, ...), de
-présentation (couleurs, dimensions, ...) et de méta-données (date de
+présentation (couleurs, dimensions, ...) et de métadonnées (date de
 création, auteur, ...). On parle aussi de contenu, structure, forme et
-méta-données. Nous allons voir que cette vision définit le socle
+métadonnées. Nous allons voir que cette vision définit le socle
 commun à tous les logiciels de traitement de textes. Comprendre ce
 socle va nous permettre d'utiliser n'importe quel traitement de texte
 au mieux de ses possibilités, de s'adapter à ses évolutions.
@@ -90,12 +100,12 @@ générales, communes à tous les traitements de texte, pour la
 définition du contenu et de la structure. Ceci est réalisé dans une
 interface avec, au centre, une grande zone représentant une page, en
 haut les menus et une zone de boutons-raccourcis. Les noms des
-actions, la forme et la couleur des boutons, les icones et
+actions, la forme et la couleur des boutons, les icônes et
 l'organisation des menus varient d'un logiciel à un autre, d'une
 version à une autre, d'une machine à une autre mais les
 fonctionnalités sont globalement les mêmes. La *structure du document*
 sera définie par l'intermédiaire de *styles* grâce aux niveaux de
-titre. Il faut noter l'ambiguité du terme "style" car il sera
+titre. Il faut noter l'ambiguïté du terme "style" car il sera
 également utilisé pour la mise en forme du document. Cette double
 fonction peut amener à de mauvais usages.
 
@@ -135,9 +145,9 @@ La structure de base est définie avec les niveaux de titre : de niveau
 1 pour les sections, de niveau 2 pour les sous-sections, ... Vous
 pouvez faire une saisie complète du contenu puis définir la structure
 de base ou vous pouvez définir cette structure au cours de la saisie
-comme sur l'exemple de la video.  Dans cet exemple, on a saisi le texte
+comme sur l'exemple de la vidéo.  Dans cet exemple, on a saisi le texte
 du titre, puis on l'a déclaré comme `titre principal`.  On a saisi le
-sous titre, puis le premier titre de niveau 1, et les premières
+sous-titre, puis le premier titre de niveau 1, et les premières
 phrases du premier paragraphe. Remarquez que le paragraphe suivant est
 automatiquement dans le style `corps de texte`.
 
@@ -162,7 +172,7 @@ logiciel) s'appliquent.
 [Vidéographie : L'aide à la saisie](https://player.vimeo.com/video/183312878){: .lien_video }
 
 ```compréhension
-::Typographie::
+::Typographie Accents capitales::
 [markdown]
 Savoir composer un document selon les règles typographiques n'est pas
 simple. Pour vous en convaincre, vous pouvez vous rendre en
@@ -177,10 +187,8 @@ majuscules, la forme des abréviations ne reposent que sur vous.
 \n
 Lisez [les petites leçons de typographie](http://jacques-andre.fr/ed/index.html#lessons)
 par Jacques André pour vous en convaincre et découvrir les fautes les plus
-courantes.
-
-::Accents capitales::
-[markdown]
+courantes, puis répondez aux questions suivantes :
+\n
 En français, on accentue les capitales (majuscules). {T}
 
 ::Majuscule en début de mot::
@@ -233,11 +241,13 @@ traitement de texte doit pouvoir reconnaître les mots, les
 paragraphes, les listes. nous expliquons ici quelques règles à
 respecter pour ce faire.
 
-Les **caractères**. La plupart, par exemple, lettres, chiffres et
+**Les caractères**
+
+La plupart, par exemple, lettres, chiffres et
 symboles de ponctuation, sont visibles, mais certains sont invisibles,
 en particulier, les espaces. Certains caractères sont aussi
 interprétés par le logiciel comme une commande ou une déclaration,
-c'est, par exemple, le caractère qui marque la la fin de paragraphe,
+c'est, par exemple, le caractère qui marque la fin de paragraphe,
 ou ceux qui marquent la fin d'un mot (espace ou ponctuation),
 celui qui ajoute une espace insécable. C'est là une première
 difficulté, l'espace par exemple a plusieurs fonctions. Ajouter une
@@ -247,14 +257,16 @@ la première fonction, on pourrait vouloir augmenter cette séparation
 dans le rendu visuel et donc se faire suivre deux espaces. Mais on
 perd le sens de la deuxième fonction puisqu'il n'y a pas de mot entre
 ces deux espaces. La convention choisie est de **ne jamais avoir deux
-espaces consécutifs** et de faire confiance au logiciel pour réaliser
+espaces consécutives** et de faire confiance au logiciel pour réaliser
 la meilleure présentation. En effet, si deux ou plusieurs espaces se
 suivent, le traitement de texte est mis en difficulté et la mise en
 forme peut être insatisfaisante. Donc, *visualiser tous les
 caractères*, y compris ceux qui sont invisibles, aide à bien
 comprendre le contenu saisi.
 
-Les **mots**. Le logiciel les reconnaît car ils sont séparés par des
+**Les mots**
+
+Le logiciel les reconnaît car ils sont séparés par des
 espaces ou des signes de ponctuation. Des règles typographiques,
 spécifiques à chaque langue, définissent les espaces et symboles de
 ponctuation. Par exemple, en français une espace précède toujours le
@@ -262,7 +274,9 @@ signe `:` alors qu'il n'y pas d'espace avant le signe `:` en
 anglais. Le respect de ces règles est impératif et souvent, le
 logiciel aide à une saisie correcte en ajoutant les espaces requis.
 
-Les **paragraphes**.  Ce sont des ensembles de mots séparés par des
+**Les paragraphes**
+
+Ce sont des ensembles de mots séparés par des
 *fins de paragraphes* créés par l'appui sur la touche `Entrée`. La fin
 de ligne dans le rendu du document (le retour à la ligne) est calculée
 par le traitement de texte et donc la touche `Entrée` ne marque pas la
@@ -276,13 +290,17 @@ texte. Comme pour les espaces et les mots, la convention choisie est
 de **ne jamais avoir deux fins de paragraphe consécutives** et de
 faire confiance au logiciel pour réaliser le meilleur rendu visuel.
 
-Les **titres**. Ce sont bien des paragraphes, mais le logiciel de
-  traitement de texte permet de les déclarer comme titres en précisant
-  leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
-  de niveau 1 pour une section, titre de niveau 2 pour une
-  sous-section, titre de niveau 3 pour une sous-sous-section.
+**Les titres**
 
-Les **listes**.  Ce sont des suites de paragraphes reliés entre eux
+Ce sont bien des paragraphes, mais le logiciel de
+traitement de texte permet de les déclarer comme titres en précisant
+leur niveau. Le niveau est la profondeur dans une hiérarchie : titre
+de niveau 1 pour une section, titre de niveau 2 pour une
+sous-section, titre de niveau 3 pour une sous-sous-section.
+
+**Les listes**
+
+Ce sont des suites de paragraphes reliés entre eux
 pour permettre une présentation cohérente. Pour assurer cette
 cohérence, beaucoup de caractéristiques sont définies sous forme de
 règles utilisées par le logiciel pour l'apparence des listes : le
@@ -305,7 +323,9 @@ Chaque élément de liste est un paragraphe. On active la structure de
 
 ::Refaire la saisie::
 [markdown]
-Reproduire l'exemple de cette vidéo [La saisie](https://player.vimeo.com/video/183312871){: .lien_video }. Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
+Reproduire avec LibreOffice l'exemple décrit dans ces 2 vidéos: [La saisie](https://player.vimeo.com/video/183312871), [La saisie - un copier-coller](https://player.vimeo.com/video/183312874).
+\n
+Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
@@ -327,9 +347,7 @@ restreindre cette liste à ceux qui sont appliqués dans le document ou
 portent sur différents éléments de structure du document :
 paragraphes, caractères, cadres (flottants), pages ou listes.
 
-
 [Vidéographie : L'utilisation des styles](https://player.vimeo.com/video/183317278){: .lien_video }
-
 
 On associe facilement un style à un élément, ici des caractères en les
 sélectionnant et en cliquant deux fois sur le style voulu. Ici, au
@@ -385,7 +403,7 @@ sections entières ou de réorganiser le plan.
 
 ::Copier-coller::
 [markdown]
-Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page https://www.univ-lille3.fr/portail/charte-informatique/. Copier le texte de la page et collez-le dans Libreoffice.
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page [https://www.univ-lille3.fr/portail/charte-informatique/](https://www.univ-lille3.fr/portail/charte-informatique/). Copiez le texte de la page et collez-le dans Libreoffice.
 {
 ~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
@@ -410,7 +428,7 @@ les règles fondamentales suivantes :
 
 - espace et ponctuation séparent les mots. On ne doit
   donc **jamais avoir plusieurs espaces consécutifs**.
-- L'appui sur la touche Entrée sépare les paragraphes. On ne doit
+- L'appui sur la touche `Entrée` sépare les paragraphes. On ne doit
 **jamais avoir plusieurs fins de paragraphes consécutives**.
 - Éviter autant que possible la mise en forme directe au cas par cas,
   que ce soit par les menus (format) ou par les boutons-raccourcis.
@@ -431,11 +449,32 @@ Si vous respectez ces règles, alors le logiciel va pouvoir calculer la
 
 
 ```Activité
-Revoir la formulation Avec le texte de la charte copié selon la méthode de votre choix,préparez un [document mis en forme](./media/Charte.pdf).
 
-Remplacez le texte *En aucun cas les membres de l'université ne vous réclameront votre identifiant et / ou votre mot de passe* pour le passer en minuscules avec `MAJ-F3`. Appliquer les déclarations d'accentuation, les titres, les listes. Choisissez un affichage avec petites majuscules pour l'accentuation forte.
+[markdown]
+Voici le [texte brut de la charte](./media/charte.txt) des utilisateurs du système d'inforamtion de Lille3. Ouvrez ce texte dans un document LibreOffice par la méthode de votre choix, et utilisez les règles de mises en forme vues dans le cours pour reproduire [l'exemple que vous nous fournissons](./media/Charte.pdf).
 
-Le haut de page reprend le titre déclaré dans les méta-données. Les lignes horizontales sont des bordures. Les titres sont bien de bon niveau (titre principal et titre de niveau 1). Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Vous noterez bien :
+\n
+- les deux niveaux de titre (le titre principal et les titres de niveau1) ;
+\n
+- l'accentuation simple passe les caractères et italique et en rouge ;
+\n
+- l'accentuation forte transforme les caractères en petites capitales ;
+\n
+- la justification de tous les paragraphes de texte à l'exception des titres ;
+\n
+- les espaces verticaux avant les titres ne sont pas des lignes vides mais des paramètres du style titre1 ;
+\n
+- le haut de page reprend le titre déclaré dans les métadonnées ;
+\n
+- les lignes horizontales ont été réalisées avec des bordures.
+\n
+N'hésitez pas à échanger sur le forum du cours si vous rencontrez des difficultés, ...
+\n
+À la fin, pour vérifier que vous avez correctement utilisé les styles et non la mise en forme directe, sélectionner l'ensemble de votre texte (ctrl-A), aller dans le menu `format` et sélectionner `effacer le formatage direct`. Votre mise en forme ne doit pas bouger.
+\n
+
+  Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
 
@@ -517,7 +556,19 @@ ici. Par exemple, nous ajoutons une espace après chaque numéro.
 
 ::Exercice de styles::
 [markdown]
-Reproduire le document dont un pdf vous est donné [ici](./media/texte_final.pdf). Aucune mise en forme directe n'est tolérée ! Dans ce document, nous avons utilisé des styles spécifiques pour désigner les personnes et les œuvres, le résumé et les citations ; nous avons 3 styles de page avec des numérotations en romain pour les pages d'index et de tables ; nous avons utilisé les guillemets et les listes françaises. La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. Vous pouvez prendre celles de votre choix. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
+Reproduire avec votre traitement de texte le document dont un pdf vous est donné [ici](./media/texte_final.pdf) à partir du texte brut fourni [là](./media/texte_final.txt). **Aucune mise en forme directe n'est tolérée !** (*i.e* les boutons de la barre d'outils ).
+\n
+Dans ce document, nous avons utilisé :
+\n
+- des styles spécifiques pour désigner les personnes et les œuvres,
+\n
+- le résumé et les citations,
+\n
+- 3 styles de page avec des numérotations en romain pour les pages d'index et de tables,
+\n
+- les guillemets et les listes françaises.
+\n
+La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. **Vous pouvez prendre celles de votre choix**. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
 
@@ -526,15 +577,15 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 ## Métadonnées
 [Métadonnées](https://vimeo.com/182868218){: .cours_video}
 
-Les meta-données sont des données à propos du document. Elles sont
+Les métadonnées sont des données à propos du document. Elles sont
 calculées par le logiciel (par exemple le nombre de mots, la taille
 etc...) ou déclarées par l'utilisateur (le titre, le sujet,
-l'auteur...). Les meta-données sont utiles pour le traitement de
+l'auteur...). Les métadonnées sont utiles pour le traitement de
 corpus de documents. On les retrouve ici dans le menu des
 propriétés. Il est aussi possible d'insérer les métadonnées comme
 contenu textuel du document.
 
-[Vidéographie : Utilisation des méta-données](https://player.vimeo.com/video/183317406){: .lien_video }
+[Vidéographie : Utilisation des métadonnées](https://player.vimeo.com/video/183317406){: .lien_video }
 
 ## Avec un autre logiciel
 [Avec d'autres logiciels](https://vimeo.com/182868251){: .cours_video}
@@ -608,7 +659,7 @@ d'insérer des images dans des figures avec des légendes et des
 numérotations. Il est également possible d'intégrer une
 bibliographie. Cette opération est plus complexe mais vous trouverez
 des tutoriaux sur le Web pour en réaliser. Enfin, dans un cadre
-professionnel, vous serez à amener à utiliser des modèles pour
+professionnel, vous serez amener à utiliser des modèles pour
 respecter une charte graphique de votre employeur. Vous pourrez être
 amenés à réaliser des mailings en insérant des références à des
 fichiers de clients.
@@ -620,6 +671,8 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 
 ::Ajouter des images::
 [markdown]
+À vous maintenant, ... Nous considérons que vous en savez suffisemment pour pouvoir aller découvrir par vous même d'autres fonctionnalités. Cette section a pour but de vous faire chercher d'autres fonctionnalités du traitement de texte. Encore une fois, n'hésitez pas à utiliser le forum pour échanger entre vous, ...
+\n
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
 \n
 Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
@@ -636,11 +689,15 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 
 ::Document maître::
 [markdown]
-Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître.{}
+Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice](https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte.  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
+\n
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Commentaires::
 [markdown]
-Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version. {}
+Faites circuler un document de votre choix entre 3 d'entre vous. Chacun ajoutera un commentaire, fera des modifications avec le suivi des modifications activé, et créera une version.
+\n
+Décrivez plusieurs situations ou les commentaires et le suivi des modifications peuvent être des outils très pratiques. {}
 
 ```
 
@@ -682,7 +739,7 @@ science du calcul.
 Avec le tableur, on peut gérer  des données organisées
 sous forme de **listes** : une liste d'élèves avec leurs notes, une
 liste d'adhérents avec leurs adresses et leurs cotisations, une liste
-d'objets avec un date de collecte et des informations de forme,
+d'objets avec une date de collecte et des informations de forme,
 taille, poids,... Les listes, aussi appelées **relations** ou
 **tables**, sont organisées en lignes et colonnes. Chaque ligne décrit
 un élément (un élève, un membre, un objet). Chaque colonne décrit une
@@ -878,9 +935,9 @@ ligne 12 multiplié par le taux de conversion situé en `G2`.
 ::Jouer avec les références::
 [markdown]
 Le classeur [Jeu avec les références](./media/jeureferences.ods) contient deux feuilles de calcul. Suivez les instructions qui s'y trouvent. Quelle est la bonne formule à utiliser dans l'onglet Références2 ?  {
-~Celle en ligne 5
-~Celle en ligne 9
-=Celle en ligne 13}
+~ Celle en ligne 5
+~ Celle en ligne 9
+= Celle en ligne 13}
 
 ```
 
@@ -894,7 +951,7 @@ erreurs apparaissent. Chaque formule doit commencer par le signe
 valeurs, des références, des opérateurs comme `+,-,*,/`, et des
 *fonctions* comme `ARRONDI`, `MOIS`, ... Le tableur contient un
 *générateur de formules* qui peut vous assister dans la création de
-formules. Voici des exmples de formule :
+formules. Voici des exemples de formule :
 
 	= 10 / 2 + 3
 	= D8 * $G$2

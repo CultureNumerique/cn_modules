@@ -1,0 +1,38 @@
+﻿Charte d’utilisation du système d’information de l’Université Lille3
+Dernière mise à jour : 18 novembre 2010
+Préambule
+Dans l’exercice de ses missions, l’Université propose aux utilisateurs (personnels, étudiants, personnels hébergés, personnes invitées) des services en lien avec les technologies de l’information et de la communication. La présente charte, attachée au règlement intérieur de l’Université, décrit les conditions générales d’utilisation de ces technologies. Cette charte précise les droits et les devoirs des utilisateurs lors de l’usage des services numériques de l’Université.
+L’utilisation des services numériques et principalement ceux accessibles par les réseaux informatiques de l’Université et de l’Internet est soumise à plusieurs réglementations et dispositions légales. L’Université et ses utilisateurs sont tenus de respecter ces législations et ces règlementations.
+Champs d’application
+La présente charte s’applique aux utilisateurs des services numériques de l’Université Lille 3 – Charles de Gaulle. Elle concerne les services numériques et les moyens informatiques fournis par l’Université. Les ressources informatiques qui sont la propriété des utilisateurs (ordinateur portable, téléphone, etc.), quand elles sont connectées aux réseaux informatiques de l’Université, sont aussi concernées par cette charte.
+Les engagements de l’Université
+L’Université s’engage à ce que le système d’information destiné aux utilisateurs soit sûr et sécurisé. Elle vérifie que les utilisateurs respectent la présente charte. Les déclarations et formalités réglementaires préalables à la mise en œuvre des services numériques sont assurées par l’Université. Réglementairement, l’Université recueille et conserve les informations sur les accès à ses services numériques. L’Université peut être obligée de fournir ces informations lors d’une enquête judiciaire.
+Compte et sécurité
+Les utilisateurs sont autorisés à accéder au système d’information de l’Université après qu’ils se sont identifiés. Cette identification est possible dès lors qu’ils auront activé leur compte d’accès en suivant une procédure sécurisée. Le déroulement de cette procédure est associé à la validation de la présente charte par l’utilisateur. À la fin de la procédure, l’utilisateur reçoit un identifiant et un mot de passe qu’il aura choisi. Cet identifiant et ce mot de passe sont strictement personnels et ils doivent rester confidentiels. EN AUCUN CAS LES MEMBRES DE L’UNIVERSITÉ NE VOUS RÉCLAMERONT VOTRE IDENTIFIANT ET / OU VOTRE MOT DE PASSE.
+Droits et devoirs de l’utilisateur
+Le droit d’accès au système d’information de l’Université est personnel et incessible. Ce droit temporaire peut être suspendu si l’utilisateur ne respecte pas les dispositions de la présente charte. Pour chaque utilisateur, l’identifiant du compte d’accès est unique. Cet identifiant est valable durant tout le parcours de l’étudiant, toute la période d’emploi du personnel à l’Université. Dès lors que l’utilisateur ne répond plus aux critères d’attribution, son compte d’accès est désactivé après un délai fixé à 3 mois.
+Conformément aux articles 39 et suivants de la loi n° 78-17 du 6 janvier 1978 modifiée en 2004 relative à l’informatique, aux fichiers et aux libertés, l’utilisateur peut obtenir communication et, le cas échéant, rectification des informations le concernant.
+Les obligations de l’utilisateur
+Cette charte rappelle de façon non exhaustive les droits et règles qui ont trait à l’usage des TIC et de l’Internet. Elle sensibilise l’utilisateur à respecter ces réglementations et s’efforce de prévenir les actes illicites. Sont interdits et le cas échant sanctionnés pénalement :
+L’atteinte à la vie privée d’autrui ;
+La diffamation et l’injure ;
+La provocation de mineurs à commettre des actes illicites ou dangereux, le fait de favoriser la corruption d’un mineur, l’exploitation à caractère pornographique de l’image d’un mineur, la diffusion de messages à caractère violent ou pornographique susceptibles d’être perçus par un mineur ;
+L’incitation à la consommation de substances interdites ;
+La provocation aux crimes et délits et la provocation au suicide, la provocation à la discrimination, à la haine raciale ou à la violence ;
+L’apologie de tous les crimes, notamment meurtre, viol, crime de guerre et crime contre l’humanité ; la négation de crimes contre l’humanité ;
+La contrefaçon de marque ;
+La reproduction, représentation ou diffusion d’une œuvre de l’esprit ou d’une prestation de droits voisins en violation des droits d’auteur, du titulaire de droits voisins et / ou du titulaire des droits de propriété intellectuelle ;
+Les copies de logiciels propriétaires pour quelque usage que ce soit, hormis une copie de sauvegarde dans les conditions prévues par le code de la propriété intellectuelle.
+Adresse électronique
+L’Université met à la disposition de l’utilisateur une adresse électronique. Cette adresse est composée des nom et prénom de l’utilisateur associés au nom de domaine de l’Université. Une règle d’attribution spécifique est mise en œuvre en cas d’homonymie.
+Les courriels d’information à destination de l’étudiant sont transmis par l’Université prioritairement à son adresse électronique universitaire.
+Les courriels d’information à destination d’un personnel sont transmis par l’Université à son adresse électronique universitaire.
+L’utilisateur s’engage à utiliser raisonnablement et maintenir ce canal de communication. Hors du champ de sa communication, l’Université n’est pas responsable du contenu reçu à (ou émis depuis) l’adresse électronique de l’utilisateur.
+Vie privée
+Le respect de la vie privée est un droit de l’utilisateur. Il doit protéger le secret de ses correspondances privées. L’utilisateur, responsable de ses messages, doit en garantir leur sauvegarde.
+L’Université met à la disposition de l’utilisateur un espace :
+Pour enregistrer les documents utiles aux activités universitaires ;
+Pour recevoir les messages à destination de son adresse de messagerie universitaire.
+Le droit à la vie privée s’applique sur cet espace pour les documents et les dossiers portants la mention « privé ».
+L’utilisateur encourt des sanctions pénales s’il ne respecte pas la législation.
+L’Université peut appliquer des sanctions disciplinaires si l’utilisateur ne respecte pas la présente charte.

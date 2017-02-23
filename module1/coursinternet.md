@@ -60,7 +60,7 @@ développer dans ces cours.
 
 ```comprehension
 ::Pourquoi représenter avec des nombres ?::
-[html]<p>Pourquoi faut-il représenter les textes, images, son,
+[html]<p>Pourquoi faut-il représenter les textes, images, sons,
 etc, par des nombres dans un ordinateur ?</p>
 {
 ~<p>C'est un choix industriel.</p>#<p>Non, les industriels n'avaient pas le choix.</p>
