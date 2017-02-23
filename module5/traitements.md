@@ -9,6 +9,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 <!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc traitements.md -o t.pdf -->
 
 # Comprendre les traitements
+## L'exemple d'une application GPS
 
 Pourquoi les ordinateurs peuvent-ils nous apparaître plus précis et
 plus efficaces que nous et pourquoi peuvent-ils même apparaître
@@ -41,9 +42,9 @@ abusivement `GPS`
 les coordonnées d'une position exacte sur terre). Tout d'abord,
 réfléchissons aux informations que doit posséder le programme en
 pensant à quoi nous aurions besoin si nous devions réaliser cette
-tâche nous même. Tout d'abord, il faut connaître le point de départ
+tâche nous même. Il faut connaître le point de départ
 qui peut être obtenu par un dispositif technique comme un `GPS` ou
-être renseigné par vos soins. Il faut également renseigner la
+être renseigné par vos soins. Il faut également indiquer la
 destination et le moyen de transport choisi.  Supposons, pour
 simplifier la présentation, que le logiciel dispose d'une ville de
 départ, d'une ville destination, que le moyen de transport choisi est
@@ -68,47 +69,47 @@ cela, il utilise un algorithme de recherche de plus court chemin comme
 l'[algorithme de Dijkstra](https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra),
 issu des travaux de recherche des mathématiciens et informaticiens
 ayant étudié ce problème. Mais qu'est-ce-qu'un algorithme ? Nous y
-reviendrons dans ce cours, mais, pour l'instant, considérons qu'un
+reviendrons dans ce cours, pour l'instant, considérons qu'un
 algorithme est une explication très précise de *comment* résoudre un
-problème. L'algorithme de Dijkstra est un algorithme ingénieux qui
-décrit comment combiner un nombre raisonnable d'opérations
+problème. L'algorithme de Dijkstra est très ingénieux, il décrit comment combiner un nombre raisonnable d'opérations
 élémentaires (des additions, des comparaisons, des recherches dans
 l'ensemble des distances) pour calculer le plus court chemin entre un
 départ et une destination.
 
 Le coeur de notre application de calcul d'itinéraire est donc basé sur
-un algorithme de recherche de plus court chemin qui peut être adapté
+un algorithme de recherche du chemin le plus court qui peut être adapté
 pour calculer le chemin le plus rapide en remplaçant les distances par
 des temps de parcours. Il peut également être appliqué avec d'autres
 moyens de transports. Ces algorithmes vont pouvoir être intégrés dans
 des applications en les combinant avec d'autres calculs pour la
 reconnaissance vocale, la géolocalisation, etc On construira, par
-exemple, ainsi une application qui analyse le son de votre voix, le
-traduit vos paroles en mots et phrases, identifie des adresses de
-départ ou de destination, repère votre position, interroge un service
-web sur l'état du trafic routier pour vous indiquer, en temps réel, le
+exemple, une application qui
+- analyse le son de votre voix,
+- traduit vos paroles en mots et phrases,
+- identifie des adresses de départ ou de destination,
+- repère votre position,
+- interroge un service web sur l'état du trafic routier pour finalement vous indiquer, en temps réel, le
 chemin le plus rapide. Grâce à ces combinaisons nous obtenons une
 application qui résout des tâches complexes, qui peut paraître
 intelligente car ses capacités sont souvent supérieures à celles d'un
 passager uniquement accompagné de sa vision locale, de ses
 connaissances et sa carte routière. Toutefois, ce logiciel, reposant
-sur le génie de ses concepteurs, ne peut résoudre que des tâches pour
+sur le génie de ses concepteurs, ne peut résoudre que les tâches pour
 lesquelles il a été programmé et ne pourra pas gérer des situations
 imprévues.
 
-Pour conclure, cet exemple montre qu'une application moderne interagit
-avec l'environnement (utilisateur, périphériques dont système `GPS`,
-réseau). Il montre également qu'une application est construite en
-composant d'autres applications.  C'est ce principe de composition qui
-permet de définir des algorithmes pour résoudre des problèmes et qui
-permet de passer d'une machine "bête" manipulant des 0 et des 1 à une
-machine "intelligente" pouvant réaliser des tâches complexes.
+Pour conclure, cet exemple montre qu'une application moderne :
+- interagit avec l'environnement (utilisateur, périphériques dont système `GPS`, réseau).
+- qu'elle est construite en composant d'autres applications.  C'est ce principe de composition qui permet de définir des algorithmes pour résoudre des problèmes complexes et qui permet de passer d'une machine "bête" manipulant des 0 et des 1 à une machine "intelligente" pouvant réaliser des tâches complexes.
+
 L'exemple a également permis de montrer que malgré les capacités sans
 cesse croissantes des machines, il faut être attentif à la taille des
 données mémorisées et au temps de calcul des programmes. Enfin, nous
 rappelons que l'intelligence supposée de la machine est due à
 l'intelligence des femmes et des hommes ayant conçu les
-applications. Mais l'exemple montre également que l'algorithme ou
+applications.
+
+Enfin, l'exemple montre également que l'algorithme ou
 l'application a besoin de données pour fonctionner : les distances
 entre villes, l'état du trafic, ... L'intelligence apparente de la
 machine est aussi le résultat de la conjonction de ces données avec
@@ -131,15 +132,16 @@ go) en battant les experts humains.
 ```compréhension
 ::Des combinaisons::
 [markdown]
-Un programme peut combiner plusieurs traitements pour définir des traitements plus complexes{T} 
+Un programme peut combiner plusieurs traitements pour définir des traitements plus complexes{T}
+
 
 ::Algorithmes et programmes::
 Un algorithme est:
 {
 ~%50% l'expression d'une méthode pour résoudre automatiquement une tâche
-~%50% implanté dans un ordinateur dans un programme informatique
+~%50% traduit en un programme informatique et implanté dans un ordinateur
 ~ une suite de 0 et de 1
-#### Un algorithme peut éventuellement être traduit dans un programme lui même traduit en une suite de 0 et de 1,  quand il est implanté dans un ordinateur. }
+#### Un algorithme est l'écriture formalisée d'une méthode de résolution d'un problème. Il peut éventuellement être traduit dans un programme lui même traduit en une suite de 0 et de 1,  quand il est implanté dans un ordinateur. }
 
 
 ::Une application indépendante ?::
@@ -147,42 +149,41 @@ Un algorithme est:
 Lancer une application implique de lancer plusieurs traitements
 {T}
 
-
-::Application et machine::
+::Algorithmes et puissance des ordinateurs::
 [markdown]
-L'exécution d'une application fait usage de ressources de la machine. 
-Donner des exemples de ressources.
-{#### a minima avec le processeur de calcul et les mémoires}
+Il est nécessaire de disposer d'ordinateurs très puissants pour écrire de bons algorithmes
+{F
+#### Pas du tout, la plupart des algorithmes sont écrits *à la main* sans l'aide d'ordinateur. }
 
 ::Application et périphériques::
 [markdown]
 L'exécution d'une application peut faire appel à des interactions avec
 l'extérieur de la machine par des périphériques. Donner des exemples de
 périphériques.
-{#### réseau, clavier, souris, écran, ...}
+{#### réseau, clavier, souris, écran, capteur, camera, gps, antenne, ...}
 ```
 
 
 # Les algorithmes
 
 ## Introduction
-
+[Introduction aux algorithmes](https://vimeo.com/199154380){: .cours_video}
 Bien que la notion soit très ancienne, le mot *algorithme* a récemment
 fait irruption dans les médias, car nous mesurons aujourd'hui plus
-sensiblement l'impact du numérique dans la société. Par exemple, les
-moteurs de recherche posent la question sociétale de l'accès à la
-connaissance : *quel algorithme choisit l'ordre des résultats à une
-requête dans un moteur de recherche ?* Une autre question de société
-concerne l'utilisation des traces de nos actions dans le monde
-numérique : *que peut inférer un algorithme de masse de données (big
-data) sur moi à partir de mes activités sur le Web ?* Un dernier
-exemple concerne l'*intelligence artificielle* avec la victoire
+sensiblement l'impact du numérique dans la société. Par exemple:
+- les moteurs de recherche posent la question sociétale de l'accès à la connaissance : *quel algorithme choisit l'ordre des résultats à une
+requête dans un moteur de recherche ?*
+
+- Une autre question de société
+concerne l'utilisation des **traces** de nos actions dans le monde
+numérique : *que peut inférer sur moi un algorithme de masse de données (big data) à partir de mes activités sur le Web ?*
+- Un dernier exemple concerne l'*intelligence artificielle* avec la victoire
 récente (2016) d'un ordinateur contre le meilleur expert humain au jeu
 de Go qui a soulevé la question suivante : *les algorithmes vont-ils
 permettre l'avènement d'une intelligence artificielle ?*
 
 
-Qu'est-ce qu'un algorithme ? Dans ce cours de culture numérique,
+Qu'est-ce qu'un **algorithme** ? Dans ce cours de culture numérique,
 plutôt qu'une définition scientifique, nous allons introduire les
 idées principales portées par ce mot. Un
 [célèbre livre d'introduction à l'algorithmique](https://mitpress.mit.edu/books/introduction-algorithms)
@@ -197,17 +198,22 @@ très précis et ne contenir aucune ambiguïté car il doit pouvoir être
 exécuté, de façon automatique, sans juger ni réfléchir.  Comme le dit
 [Gérard Berry](http://www.college-de-france.fr/site/gerard-berry/#course) :
 *Le but est d’évacuer la pensée du calcul, afin de le rendre
-exécutable par une machine numérique*.  Enlever la pensée, c'est se
+exécutable par une machine numérique*.  
+
+Enlever la pensée, c'est se
 comporter comme un automate et exécuter les instructions sans faire
 appel à des connaissances extérieures.
 
 Prenons l'exemple de la préparation du café matinal
-dans une machine à café à filtres : prendre un filtre dans la boîte ;
-placer le filtre dans la cafetière ; prendre le paquet de café ;
-mettre autant de cuillères de café que de tasses souhaitées ; mettre
-de l'eau tant que le niveau ne correspond pas au nombre de tasses
-souhaitées ; démarrer la cafetière. Les instructions ne sont pas
-suffisamment claires. Par exemple, l'instruction pour mettre le café
+dans une machine à café à filtres :
+- prendre un filtre dans la boîte ;
+- placer le filtre dans la cafetière ;
+- prendre le paquet de café ;
+- mettre autant de cuillères de café que de tasses souhaitées ;
+- mettre de l'eau tant que le niveau ne correspond pas au nombre de tasses souhaitées ;
+- démarrer la cafetière.
+
+Les instructions ne sont pas suffisamment claires. Par exemple, l'instruction pour mettre le café
 suppose que vous sachiez que le café doit être placé dans le filtre
 déposé précédemment sinon il faudrait le préciser pour que
 l'instruction soit non ambiguë. Quant à la réalisation, elle dépend de
@@ -232,10 +238,10 @@ computers, there are even more algorithms, and algorithms lie at the
 heart of computing" qui montre bien l'importance des algorithmes.
 
 
-```compréhension 
-::Algorithmes et ordinateurs:: 
+```compréhension
+::Algorithmes et ordinateurs::
 [markdown]
-Les premiers algorithmes ont été conçus 
+Les premiers algorithmes ont été conçus
 {
 ~ sur un ordinateur de type PC
 ~ par Dijkstra
@@ -257,7 +263,7 @@ cette recette et répondez aux questions suivantes :
 ```
 
 ## Algorithmes et ordinateurs
-
+[Algorithmes et ordinateurs](https://vimeo.com/199154419){: .cours_video}
 Nous avons expliqué le principe général de composition permettant de
 créer une nouvelle fonctionnalité en utilisant des fonctionnalités
 déjà existantes. Rappelons également que ce principe est général et
@@ -266,69 +272,58 @@ selon ces principes jusqu'à pouvoir concevoir les applications
 complexes que vous utilisez sur un ordinateur, une tablette ou un
 smartphone. Les règles de composition sont décrites par des
 algorithmes, mais il est avant tout nécessaire de définir quelles
-fonctionnalités sont déjà existantes de base dans un ordinateur.
+fonctionnalités sont déjà existantes dans tout ordinateur.
 
 ### La machine
 
-
 *Ordinateur* est un mot inventé par un linguiste dans les
 années 50. Il fait référence à l'exécution d'ordres,
-d'instructions. En anglais le mot *computer* fait plutôt référence au
-calcul et les deux notions se retrouvent dans cette
-machine. Essentiellement, la machine repose sur une *unité de calcul*
-qui fonctionne avec des nombres représentés (ou codés) avec des 0 et
-des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
-simples comme des additions, comparer des nombres. Elle utilise des
-*mémoires* pour ranger et retrouver ces nombres. La mémoire est
-organisée avec des emplacements repérés par des numéros appelés
-adresses. La machine peut alors ranger une valeur à une adresse donnée
-et retrouver une valeur rangée connaissant son adresse. Enfin, une
-*unité de contrôle* donne les ordres à l'unité de calcul et aux
-mémoires. Ce modèle de machine n'a pas évolué depuis les années 40
-même si les machines ont évolué. En effet, l'électronique et la
-miniaturisation ont considérablement réduit la taille et augmenté les
-capacités et la rapidité de la mémoire, de l'unité de calcul et
-l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus
-économe et plus résistant si bien qu'on le retrouve désormais dans
-tous les milieux et toutes les situations.
+d'instructions. En anglais le mot *computer* fait plutôt référence au calcul. Les deux notions se retrouvent dans ces machines qui reposent toutes  sur :
+- une *unité de calcul* qui fonctionne avec des nombres représentés (ou codés) avec des 0 et des 1. L'unité de calcul sait changer des 0 en 1, faire des calculs
+simples comme des additions, comparer des nombres.
+- des *mémoires* qui sont utilisées par l'unité de calcul pour ranger et retrouver ces nombres. La mémoire est
+organisée avec des emplacements repérés par des numéros appelés adresses. La machine peut alors ranger une valeur à une adresse donnée et retrouver une valeur rangée connaissant son adresse.
+- Une *unité de contrôle* qui donne les ordres à l'unité de calcul et aux mémoires.
+
+Ce modèle de machine n'a pas évolué depuis les années 40
+même si les machines se sont perfectionnées. En effet, l'électronique et la miniaturisation ont considérablement réduit la taille et augmenté les **capacités** et la **rapidité** de la mémoire, de l'unité de calcul et
+l'unité de contrôle. Ces progrès ont aussi rendu l'ordinateur plus économe et plus résistant si bien qu'on le retrouve désormais dans tous les milieux et toutes les situations.
 
 ```activité
 ::Modèle de l'ordinateur::
 [markdown]
-Le modèle décrit précédemment a été inventé par Von Neumann. 
-En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les données et les programmes (instructions) sont-elles considérées de la même manière dans la mémoire ?
+Le modèle décrit précédemment a été inventé par **Von Neumann**.
+En voici [une description schématique](https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann). Les **données** et les **programmes** (instructions) sont-elles considérées de la même manière dans la mémoire ?
 {T
 #### oui et c'est un élément important qui a permis le développement de l'informatique}
 
 ::Rôle des linguistes::
 [markdown]
-Toute la communauté scientifique a participé au développement de l'informatique et, tout particulièrement, les mathématiciens, les logiciens et les physiciensmais aussi les linguistes. En voici trois exemples :
+Toute la communauté scientifique a participé au développement de l'informatique et tout particulièrement, les mathématiciens, les logiciens et les physiciens mais aussi les linguistes. En voici trois exemples :
 \n
 - Qui a inventé le mot ordinateur ?
 - Qui est Larry Wall ?
 - Qui est Noam Chomsky ?
-{#### Jacques Perret sur une demande d'IBM de trouver un terme 
-français. Larry Wall est un linguiste qui a inventé un langage 
-de programmation Perl toujours très utilisé pour traiter des 
-(ensembles de) fichiers textes. Noam Chomsky est un linguiste 
-qui a caractérisé les langages formels (utilisés par les machines) 
+{#### **Jacques Perret** sur une demande d'IBM de trouver un terme français. **Larry Wall** est un linguiste qui a inventé un langage
+de programmation _Perl_ toujours très utilisé pour traiter des
+(ensembles de) fichiers textes. **Noam Chomsky** est un linguiste
+qui a caractérisé les langages formels (utilisés par les machines)
 et naturels (les langues humaines).}
 ```
-
-### La séquence
-
+# Combiner les instructions
+## La séquence
+[La séquence](https://vimeo.com/199154451){: .cours_video}
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons d'abord que, dans les
 codages standards comme `ASCII` et `UTF8`, le caractère `A` majuscule
 a pour nom "Latin Capital Letter A" et pour numéro `65`. Le caractère
 `a` minuscule a pour numéro `97`. Croyez-nous sur parole, `65` s'écrit
 `01000001` et `97` s'écrit `01100001`. C'est remarquable car, pour
-passer de l'un à l'autre, seul le 6ème chiffre partant de la droite,
+passer de l'un à l'autre, seul le 6ème chiffre en partant de la droite,
 un `0`, est transformé en `1`. Ceci est vrai pour toutes les lettres
 de notre alphabet latin et le passage de majuscule à minuscule
-consiste juste à changer un `0` par un `1` à la sixième position. Et
-l'unité de calcul sait réaliser cette opération.  Notons le lien très
-fort entre le codage, très astucieux, et les capacités de la
+consiste juste à changer un `0` par un `1` à la sixième position. L'unité de calcul **sait** réaliser cette opération.  Notons le lien très
+fort entre le codage, très astucieux qui a été inventé, et les capacités de la
 machine. Notons aussi que changer ce 6ème chiffre correspond également
 à ajouter 32 (65+32 vaut 97). Nous sommes donc capables de décrire le
 traitement que doit réaliser la machine pour transformer une
@@ -336,8 +331,8 @@ majuscule, dont le code binaire est stocké dans sa mémoire à une
 adresse connue, en minuscule avec l'algorithme suivant :
 
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
-	Ajouter 32 (changer le 6ème chiffre du codage binaire de 0 en 1)
-	Ranger le résultat dans la mémoire à la même adresse
+    Ajouter 32 (changer le 6ème chiffre du codage binaire de 0 en 1)
+    Ranger le résultat dans la mémoire à la même adresse
 
 Nous retrouvons dans cet exemple l'organisation de la machine avec ses
 adresses, sa mémoire, son unité de calcul (pour ajouter 32) et son
@@ -355,17 +350,18 @@ algorithmes*.
 ::Une séquence::
 [markdown]
 Quelle est la dernière valeur lue dans l'algorithme suivant
-\n 
-     Ranger 4 dans la mémoire à l'adresse 12 
+\n
+     Ranger 4 dans la mémoire à l'adresse 12
      Ranger 8 dans la mémoire à l'adresse 5
-     Lire la valeur de la mémoire à l'adresse 12 
+     Lire la valeur de la mémoire à l'adresse 12
      Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
-     Lire la valeur de la mémoire à l'adresse 12 
+     Lire la valeur de la mémoire à l'adresse 12
      Lire la valeur de la mémoire à cette valeur
 {#8}
 ```
 
-### L'alternative
+## L'alternative
+[L'alternative](https://vimeo.com/199154451){: .cours_video}
 
 L'ordinateur est une machine très obéissante qui exécute
 scrupuleusement les ordres qu'on lui donne. Le traitement précédent
@@ -380,7 +376,7 @@ l'algorithme suivant :
 
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
 	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
-       Ajouter 32 
+       Ajouter 32
 	   Ranger le résultat dans la mémoire a la même adresse
     Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
 
@@ -408,7 +404,7 @@ L'exemple précédent du cours montre la combinaison de séquences et d'alternat
 \n
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
 	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
-       Ajouter 32 
+       Ajouter 32
 	   Ranger le résultat dans la mémoire a la même adresse
     Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
 \n
@@ -417,37 +413,37 @@ Ces différents modes de combinaison s'imbriquent les uns dans les autres et nou
 ~%33% le si est dans une séquence d'instructions
 ~%33% une séquence d'instruction est imbriquée dans le si
 ~ il y a 3 instructions en séquence
-~ il y a 4 instructions en séquence 
-~%34% la  séquence la plus longue est de deux instructions 
+~ il y a 4 instructions en séquence
+~%34% la  séquence la plus longue est de deux instructions
 #### L'algorithme est une séquence de 2 instructions, la deuxième est un si que nous avons écrit sur 4 lignes. Dans ce si une autre séquence de deux instructions est imbriquée (lignes 3 et 4).}
 
 ::Avec des si::
 [markdown]
-On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambiguïté, il faut bien déterminer où les si commencent et se terminent. La fin d'un si correspond au dernier si non encore terminé. 
+On peut combiner des si avec d'autres si. Dans ce cas, pour éviter toute ambiguïté, il faut bien déterminer où les si commencent et se terminent. La fin d'un si correspond au dernier si non encore terminé.
 \n
     Si Bertrand vient  alors
        Si  Yasmine vient  alors
 	      J'invite Robert
 		  J'invite Ahmed
-	   Sinon 
+	   Sinon
 	      J'invite Dimitri
 	   Fin du Si
-    Sinon 
+    Sinon
        J'invite Fan
     Fin du Si
 \n
-Imaginons que Bertrand vient mais pas Yasmine, qui dois-je inviter ?
+Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 {
 ~ Robert
 ~ Ahmed
-~%100% Dimitri
+= Dimitri
 ~Fan
 }
 ```
 
-### La répétition
-
-Nous souhaitons appliquer la transformation à tous les caractères d'un
+## La répétition
+[La répétition](https://vimeo.com/199154451){: .cours_video}
+Nous souhaitons maintenant appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
 supposons que notre texte est une suite de caractères. Tous les
 caractères de ce texte sont stockés dans la mémoire de l'ordinateur
@@ -472,13 +468,13 @@ caractères du texte, une *répétition* appelée aussi par les
 informaticiens une *boucle* ou une *itération*.  L'ordinateur est
 capable d'exécuter cet algorithme uniquement à l'aide de ses
 fonctionnalités existantes.  Sur notre algorithme, lorsque l'unité de
-contrôle demande à exécuter la répétition, l'unité de calcul
+contrôle demande d'exécuter la répétition, l'unité de calcul
 effectuera la comparaison avec la valeur `0`. Si tel est le cas
 l'unité de contrôle fera exécuter les ordres jusqu'à la fin de
 répétition puis sélectionnera à nouveau l'instruction de comparaison
 au début l'unité de contrôle, créant ainsi une répétition. Si la
 comparaison est fausse alors l'unité de contrôle fera exécuter
-l'instruction juste *apres* la fin de répétition, terminant alors la
+l'instruction juste *après* la fin de répétition, terminant alors la
 répétition.
 
 Ce mode de combinaison par une répétition est essentiel car il permet
@@ -487,9 +483,11 @@ comme ici à une suite de caractères. Notez bien qu'il est important de
 s'assurer que l'algorithme s'arrête. Sur notre exemple, il faut être
 sûr de rencontrer le code `0` à la fin du texte pour que l'algorithme
 s'arrête à la fin du texte sinon il ferait des opérations inattendues
-dans la mémoire et donc un bug. De plus, il risquerait de "planter la
+dans la mémoire et donc générerait un bug. De plus, il risquerait de "planter la
 machine" car si il ne trouve jamais de 0, notre algorithme tournerait
-sans fin ! *La répétition est le troisième mode de combinaison utile
+sans fin !
+
+*La répétition est le troisième mode de combinaison utile
 pour décrire des algorithmes*.
 
 ```compréhension
@@ -507,8 +505,8 @@ Dans l'algorithme du cours reproduit ici
        Accéder à la mémoire à la nouvelle adresse actuelle
     Fin de la répétition
 \n
-combien existe-t-il de séquences ? 
-{#3#### une principale, une dans la boucle répéter, une autre dans le si.}
+combien existe-t-il de séquences ?
+{#### 3 : Une principale, une dans la boucle répéter, une autre dans le si.}
 
 ::Plus longue séquence::
 [markdown]
@@ -524,20 +522,24 @@ Dans l'algorithme du cours reproduit ici
        Accéder à la mémoire à la nouvelle adresse actuelle
     Fin de la répétition
 \n
-quelle est la longueur de la séquence la plus longue ? 
-{#3#### C'est celle dans la boucle répéter,  composée d'un si suivi de deux autres instructions.}
+quelle est la longueur de la séquence la plus longue ?
+{#### 3 : C'est celle dans la boucle répéter, composée d'un si suivi de deux autres instructions.}
 ```
-
-## Les trois combinaisons de base
-
+# Que peut faire un ordinateur ?
+## Récapitulons
+[Récapitulons](https://vimeo.com/199154525){: .cours_video}
 Faisons un point d'étape. Les algorithmes permettent de
 définir des traitements à partir de traitements de base et trois modes
-de combinaison à savoir la *séquence* qui fait passer à l'instruction
-suivante, l'*alternative* qui permet de choisir les instructions à
-exécuter selon la valeur d'un test et la *répétition* qui répète des
-instructions tant qu'un test est satisfait. La machine
-peut exécuter les traitements ainsi définis grâce à une unité de
-calcul, de la mémoire et une unité de contrôle. 
+de combinaison à savoir :
+- la *séquence* qui fait passer à l'instruction
+suivante,
+- l'*alternative* qui permet de choisir les instructions à
+exécuter selon la valeur d'un test et
+- la *répétition* qui répète des
+instructions tant qu'un test est satisfait.
+
+La machine peut exécuter les traitements ainsi définis grâce à une **unité de
+calcul**, de la **mémoire** et une **unité de contrôle**.
 
 Notre exemple nous a permis d'expliquer comment construire une
 nouvelle fonctionnalité en combinant des opérations simples. Mais,
@@ -558,7 +560,7 @@ d'afficher un message plutôt que l'itinéraire. L'itération permet de
 poursuivre l'exécution de l'assistant tant que vous n'êtes pas arrivé.
 
 ## Calculer et calculable
-
+[Calculer et calculable](https://vimeo.com/199154549){: .cours_video}
 Est-ce que ces trois modes de composition que sont la séquence,
 l'alternative et l'itérative sont suffisants ? Oui car il existe un
 **théorème** qui affirme que tout ce qui est calculable avec une
@@ -593,40 +595,40 @@ algorithmes* pour trouver les algorithmes les plus efficaces en temps
 de calcul et en mémoire
 
 
-```compréhension 
+```compréhension
 ::Différentes formes pour la répétition::
 [markdown]
 La répétition dans les algorithmes et les programmes peut s'écrire de différentes façons au choix du concepteur de l'algorithme. Reprenons l'exemple de la machine à café contenant un réservoir d'eau gradué en niveau 1 tasse, 2 tasses, ... Considérons les algorithmes suivants qui utilisent une forme de répétition et l'action élémentaire `Verser1` qui verse une tasse et donc augmente de 1 le niveau d'eau dans le réservoir :
 \n
-     AlgoPour : 
-     Pour i de 1 à 5 Faire 
-        Verser1 
+     AlgoPour :
+     Pour i de 1 à 5 Faire
+        Verser1
      Fin Pour
 \n
-     AlgoTantQue : 
-     Tant Que le niveau est inférieur à 5 Faire 
-       Verser1 
+     AlgoTantQue :
+     Tant Que le niveau est inférieur à 5 Faire
+       Verser1
      Fin Tant Que
 \n
-     AlgoJusqua : 
-     Répéter 
-       Verser1 
+     AlgoJusqua :
+     Répéter
+       Verser1
      Jusqu'à arriver au niveau 5
 \n
 Répondez aux questions suivantes :
 \n
-1. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
-2. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
-3. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
-{####  Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. Si le réservoir est vide, les trois algorithmes sont équivalents. Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
+A. Que font ces trois algorithmes si on commence avec un réservoir avec de l'eau au niveau 2 ?
+B. Donner une condition initiale sur le réservoir pour que les trois algorithmes ajoutent de l'eau jusqu'au niveau 5
+C. L'eau étant déja au niveau 5, quel est le seul des 3 algorithmes qui laisse le niveau d'eau inchangé ?
+{####  A : Si le réservoir est au niveau 2, AlgoPour met de l'eau jusqu'au niveau 7, AlgoTantQue et AlgoJusqua mettent de l'eau jusqu'au niveau 5. \n B : Si le réservoir est vide, les trois algorithmes sont équivalents. \n C : Si le réservoir est au niveau 5, seul l'algorithme AlgoTantQue laissera le niveau d'eau inchangé}
 
 ::Les minuscules en majuscules::
 [markdown]
-On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours: 
+On souhaite que la machine fasse la transformation de minuscules en majuscules, c'est-à-dire l'inverse de notre exemple illustrant le cours que nous rappelons ici:
 \n
     Accéder à l'adresse mémoire pour trouver le codage du numéro du symbole
 	Si le numéro est compris entre 65 et 90 Alors (si c'est une majuscule)
-       Ajouter 32 
+       Ajouter 32
 	   Ranger le résultat dans la mémoire a la même adresse
     Fin du Si (sinon rien à faire -- laisser le contenu inchangé)
 \n
@@ -634,13 +636,13 @@ On souhaite que la machine fasse la transformation de minuscules en majuscules, 
 faut-il changer dans l'algorithme présenté ci-avant ?
 2. Pensez-vous qu'on puisse apprendre à une machine à faire cette nouvelle
 instruction ?
-3. Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en 
-entrée une séquence de caractères et qui transforme les minuscules en 
+3. Expliquez ce qu'il faut changer  pour obtenir un algorithme qui prend en
+entrée une séquence de caractères et qui transforme les minuscules en
 majuscules et laisse tous les autres caractères inchangés ?
-{#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir 
-apprendre à notre machine à faire une soustraction de deux entiers 
-même si cela semble un petit peu plus compliqué que l'addition ; 
-tester si le code du caractère est entre 97 et 123 et appeler le 
+{#### retirer 32 au code au lieu d'ajouter 32 ; oui, on doit pouvoir
+apprendre à notre machine à faire une soustraction de deux entiers
+même si cela semble un petit peu plus compliqué que l'addition ;
+tester si le code du caractère est entre 97 et 123 et appeler le
 programme qui transforme minuscule en majuscule.}
 
 ::Informatique à l'école::
@@ -654,7 +656,7 @@ Cochez les affirmations vraies :
 \n
 {
 ~ Pour résoudre un problème il existe un seul algorithme.
-~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que 
+~%100% Pour résoudre un problème il existe des algorithmes plus efficaces que
 d'autres.
 ~ Tout problème peut être résolu par un algorithme.
 }
@@ -679,14 +681,14 @@ travaille avec des 0 et des 1, les *langages de description*
 permettent de décrire, dans ce jeu de construction, avec un niveau
 d'abstraction toujours croissant, les caractères et les nombres, les
 images, les textes et les tableaux de nombres, les documents
-structurés, les documents multimédia. 
+structurés, les documents multimédia.
 
 Mais nous l'avons vu, le jeu de construction porte aussi sur les
 algorithmes. En effet, à partir d'opérations de base sur ces objets
-complexes, on va pouvoir les composer dans des algorithmes avec les
-trois compositions, la séquence, l'alternative et l'itération. Les
+complexes, on va pouvoir les agencer dans des algorithmes avec les
+trois compositions : la séquence, l'alternative et l'itération. Les
 fonctionnalités de base d'un ordinateur sont très réduites : changer
-des 0 en 1, effectuer des additions des comparaisons,...  Mais les
+des 0 en 1, effectuer des additions, des comparaisons,...  Mais les
 fonctionnalités développées par ce jeu de construction, nous pouvons à
 tout moment les considérer comme de nouvelles fonctionnalités de base,
 plus évoluées. On peut même oublier ces 0 et ces 1 et considérer que
@@ -707,8 +709,8 @@ cela, il faut traduire l'algorithme dans un langage compréhensible par
 la machine. Il faut donc disposer d'un langage commun entre l'humain
 et la machine avec la contrainte forte d'être compréhensible par les
 humains tout en étant suffisamment formel et précis pour ne pas
-laisser d'ambiguïté à la machine. C'est le rôle des langages
-informatiques pour les traitements.
+laisser d'ambiguïté à la machine. C'est le rôle des **langages
+informatiques** pour les traitements.
 
 Il existe, en réalité, de nombreux langages dépendants du mode
 d'interaction entre l'humain et la machine. Vous pouvez, par exemple,
@@ -718,7 +720,7 @@ touches de clavier. Pour apprendre à vous servir d'une application,
 vous allez apprendre ce langage : quelle est l'action réalisée par le
 choix de cet élément de menu, quel est l'effet d'un clic de souris
 sur cet élément, quel est l'effet de l'appui sur cette combinaison de
-touches. Mais, il est difficile d'automatiser ces actions dans des
+touches. Mais il est difficile d'automatiser ces actions dans des
 programmes. On préfère alors utiliser un langage écrit.  Lorsqu'il
 s'agit de traduire un algorithme par un texte à destination de la
 machine, on utilise des langages appelés *langages de
@@ -726,7 +728,7 @@ programmation*.
 
 Il existe de nombreux langages de programmation, qui fournissent tous
 ces structures de composition (séquence, alternative, itération) et
-diffèrent par fonctionnalités de base mises à disposition.  Mais comme
+diffèrent par les fonctionnalités de base mises à disposition.  Mais comme
 pour les langues naturelles ils diffèrent aussi par leur règles de
 syntaxe et de grammaire. Les textes écrits dans ces langages sont des
 *programmes* qui sont la traduction d'algorithmes dans le langage
@@ -752,15 +754,15 @@ Algorithme et programme expliqués [en une minute par Gérard Berry](https://www
 ::Faut-il apprendre à coder ?::
 [markdown]
 [L'avis d'un président des États-Unis](https://www.youtube.com/watch?v=6XvmhE1J9PY). Vous
-pouvez activer, au besoin, les sous-titres en anglais ou en français. {}
+pouvez activer, au besoin, les sous-titres en anglais ou en français.\n Êtes-vous convaincu par ce discours ? N'hésitez à échanger vos points de vue sur le forum de ce cours, ... {}
 
 ::Apprendre à coder::
 [markdown]
-Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program.
+Parmi les nombreux sites disponibles, pourquoi pas [Hour of Code](https://code.org/learn) où vous pouvez commencer par le module intitulé : Write your first computer program. \n Avez-vous réussi à écrire un programme ?
 {}
 
 ::La répétition par Mark Zuckerberg (Facebook)::
-Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk)  {}
+Mark Zuckerberg, président de Facebook, vous initie à la [répétition dans Hour of Code](https://www.youtube.com/watch?v=mgooqyWMTxk). \n Cette vidéo vous a-t-elle donné envie d'en apprendre davantage ? {}
 ```
 
 ## Coder ou programmer
@@ -810,7 +812,7 @@ couches applicatives de plus en plus riches. Par conséquent,
 aujourd'hui, la plupart des besoins, personnels ou professionnels, des
 utilisateurs sont couverts par une ou plusieurs applications.  Ceci
 fait dire à certains qu'il est inutile de savoir coder ou
-programmer. Nous pensons, a contrario, que bien comprendre les notions
+programmer. Nous pensons, _a contrario_, que bien comprendre les notions
 de base sur les algorithmes et les programmes permet de bien
 comprendre le fonctionnement des machines et des applications. Et
 c'est même oublier que le monde est riche, en perpétuelle évolution et
@@ -823,9 +825,9 @@ formes d'expressions artistiques sonores ou visuelles.
 ```compréhension
 ::Algorithmique et programmation::
 [markdown]
-Le plus difficile est-il de 
-{= concevoir l'algorithme 
-~ traduire l'algorithme en programme ? 
+Le plus difficile est-il de
+{= concevoir l'algorithme
+~ traduire l'algorithme en programme ?
 #### Concevoir est un processus créatif...}
 ```
 
@@ -838,10 +840,11 @@ Il existe de nombreux langages de programmation. En voici quelques exemples
 * pour les artistes, la conception artistique : [processing](http://processing.org)
 * pour le Web : [javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 * pour les statisticiens : le langage R
-* l'un des plus répandus et des plus anciens : le langage C 
+* l'un des plus répandus et des plus anciens : le langage C
 * l'un des plus populaires pour apprendre : le python
 \n
-Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript. 
+Le programme le plus traditionnel et simple pour introduire un langage consiste à afficher "Bonjour" ou "Hello world" en anglais. Trouver comment s'écrit un tel programme en C, en python  et javascript.\n
+Quel est celui que vous préfereriez apprendre ?
 {}
 ```
 
@@ -877,10 +880,10 @@ quelques critères principaux participant au choix d'une
 application répondant à un besoin applicatif :
 
 * **contraintes techniques :** environnement matériel et
-  logiciel 
+  logiciel
 * **critères d'usage :** compétences des utilisateurs
 * **fonctionnalités :** correspondance entre les besoins et les
-  possibilités du logiciel. 
+  possibilités du logiciel.
 * **type de logiciel :** nature de la licence, support, maintenance, évolutivité
 * **prix :**
 
@@ -890,6 +893,7 @@ meilleur compromis entre les besoins et les possibilités fournies par
 l'application.
 
 # Exemples de programmes
+## Introduction
 
 Dans cette section, nous présentons le fonctionnement de trois
 programmes. Pour chacun d'eux, un premier objectif est de vous faire
@@ -952,8 +956,8 @@ d'expliquer à notre machine comment réaliser cette opération. On
 suppose qu'on dispose d'instructions élémentaires pour lire le premier
 mot du dictionnaire, lire le mot suivant et repérer la fin du
 dictionnaire. Nous pouvons alors proposer un algorithme qui recherche
-le mot à chercher en parcourant le dictionnaire un mot après
-l'autre. Si le mot est dans le dictionnaire, l'algorithme renvoie une
+un mot en parcourant le dictionnaire un mot après
+l'autre. L'algorithme renvoie une
 valeur vraie ou fausse selon que le mot à chercher est dans le
 dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
 
@@ -965,8 +969,12 @@ dictionnaire ou pas. Ce qui donne l'algorithme naïf suivant :
 	 6. **en sortie** : **si** le mot courant est le mot cherché **alors** existe **sinon** n'existe pas
 
 En combinant ces deux algorithmes, nous avons un algorithme de
-correction orthographique.  Cet algorithme est-il efficace en temps de
-calcul ? Le parcours de tous les mots du texte est obligatoire. Pour
+correction orthographique.
+
+_Cet algorithme est-il efficace en temps de
+calcul ? _
+
+Le parcours de tous les mots du texte est obligatoire. Pour
 chaque mot du texte, il faut faire une recherche dans le dictionnaire,
 ce qui, avec notre algorithme naïf peut amener à parcourir tous les
 mots du dictionnaire. Ceci peut amener à un temps de calcul assez long
@@ -976,24 +984,23 @@ texte. Peut-on faire mieux ? Oui si vous pensez à la façon dont vous
 cherchez dans un dictionnaire qui est rangé dans un ordre
 alphabétique. Il existe des algorithmes rapides de recherche dans un
 dictionnaire et ces algorithmes sont souvent disponibles dans les
-langages de programmation. Vous pourrez en savoir plus en suivant le
-module qui introduit les méthodes de recherche d'information.
+langages de programmation. Vous pourrez en savoir plus en suivant un cours qui introduit les méthodes de recherche d'information.
 
-Cet algorithme met-il en évidence toutes les fautes d'orthographe ?
+_Cet algorithme met-il en évidence toutes les fautes d'orthographe ?_
+
 Il souligne et donc considère comme mal orthographiés tous les mots du
-texte qui n'apparaissent pas dans le dictionnaire. Quelles sont les
-erreurs possibles de cet algorithme ? Une erreur possible est de
+texte qui n'apparaissent pas dans le dictionnaire. Une erreur possible est de
 souligner à tort un mot parce que les listes sont incomplètes. Des
 listes de mots les plus complètes et les plus actuelles possibles
 corrigent ce type d'erreur. Il est par contre incapable de souligner
 les fautes d'accord ou de conjugaison comme "la vache bleu" ou "je
-montres". La méthode pour réaliser ce type de correction et bien
+montres". La méthode pour réaliser ce type de correction est bien
 différente et nécessite d'autres algorithmes.  Une première
 possibilité serait de doter le correcteur de la capacité d'analyser
 votre phrase pour répondre aux questions telles que : quel est le
 sujet du verbe ? Avec qui s'accorde cet adjectif ? Ceci afin de lui
 permettre de vérifier des règles grammaticales.  La difficulté est de
-réaliser ces analyses car ils nécessitent une grammaire numérisée de
+réaliser ces analyses car elles nécessitent une grammaire numérisée de
 la langue et des programmes d'analyse. Souvent ces règles de grammaire
 numérisées sont incomplètes car c'est encore un sujet de recherche
 actif en (informatique) linguistique d'être capable d'exprimer toutes
@@ -1023,16 +1030,16 @@ l'orthographe, vous procéderez de la façon suivante :
 
 Nous poursuivons avec un second algorithme utilisé en traitement
 automatique du langage naturel qui est un domaine à la frontière entre
-linguistique et informatique. En effet, les ordinateurs sont,
-aujourd'hui, capables, d'identifier dans un grand corpus de textes
-ceux dont le sujet porte sur un thème (on parle aussi de catégorie ou
-de classe) précis. Il peut s'agir de classer des nouvelles dans des
-thèmes pour pouvoir les classer sur un site Web. Il peut s'agir de
+linguistique et informatique. En effet, les ordinateurs sont
+aujourd'hui capables d'identifier dans un grand corpus de textes,
+ceux dont le sujet porte sur un thème précis (on parle aussi de catégorie ou
+de classe). Il peut s'agir de classer des nouvelles dans des
+genres pour pouvoir les classer sur un site Web. Il peut s'agir de
 diriger automatiquement des mails de réclamation vers le bon service
 pour une entreprise. Il peut s'agir d'attribuer des textes à des
-auteurs ce qui est une question considérée en stylistique. Il est
+auteurs, ce qui est une question considérée en stylistique. Il est
 intéressant de noter que, si on dispose de corpus de textes de
-différents auteurs, on peut apprendre à classer les textes et qu'un
+différents auteurs, on peut écrire un programme qui apprenne à classer les textes et qu'un
 tel programme a des résultats étonnamment bons (du niveau d'un expert
 humain) même si, comme nous allons le voir, il ne fait pas une étude
 de style mais se base simplement sur des fréquences d'apparition de
@@ -1040,7 +1047,7 @@ mots.
 
 Explorons les idées permettant à un algorithme de classer des textes
 en considérant la question de trouver les textes parlant de politique.
- Une méthode naïve, voire idiote, est de dire qu'un texte est dans le
+Une méthode naïve, voire idiote, est de dire qu'un texte est dans le
 thème "politique" si et seulement si le mot politique s'y trouve. On
 pourrait écrire un algorithme comme
 
@@ -1061,7 +1068,7 @@ contenant le mot politique ne parle pas forcément de politique ! On
 peut l'améliorer en constituant un dictionnaire des mots parlant de
 politique (droite, gauche, parlement, assemblée, ...)  et s'inspirer
 de l'algorithme réalisant la correction orthographique. On peut
-poursuivre cette idée sensiblement en constatant que la décision de
+poursuivre cette idée en constatant que la décision de
 l'appartenance à ce thème politique peut dépendre aussi bien de la
 présence que de l'absence de certains mots, ou mieux encore de combien
 de fois chaque mot est employé. Nous avons l'idée de base qui est que
@@ -1071,11 +1078,11 @@ d'apparition de certains mots*.
 C'est cette idée qui est souvent employée. Pour cela, un dictionnaire
 ayant été choisi, on va représenter un texte par le nombre de fois où
 chaque mot du dictionnaire apparaît dans le texte. Au vu des
-algorithmes vus dans ce module, vous êtes capables de comprendre qu'il
+algorithmes décrits dans ce module, vous êtes capables de comprendre qu'il
 est possible d'écrire un algorithme qui, avec un texte et un
 dictionnaire, construit une telle représentation. À partir de cette
 représentation, il faut trouver des seuils en dessous ou au delà
-desquels on dira que le mot parle d'un thème précis. Par exemple, un
+desquels on dira que le texte parle d'un thème précis. Par exemple, un
 texte parle de politique si le mot politique apparaît au moins une
 fois, le mot gauche au moins deux fois, le mot droite au moins deux
 fois et le mot chat n'apparaît pas. Mais, comment trouver ces seuils ?
@@ -1095,7 +1102,7 @@ machine pouvait classer des textes avec des résultats souvent
 comparables à celles d'un expert humain.
 
 ## Un jeu d'échec sur ordinateur
-
+[Le jeu d'échecs](https://vimeo.com/199154549){: .cours_video}
 Le jeu d'échecs est un jeu ancien datant du 10ème siècle
 environ. C'est un jeu de plateau, c'est-à-dire un jeu qui se joue avec
 des pièces positionnées sur un plateau découpé en cases. Le plateau du
@@ -1134,7 +1141,7 @@ le meilleur coup à jouer ?*
 Si vous avez déja joué à un jeu de plateau, vous raisonnez très
 certainement de la façon suivante : quels sont les coups possibles ?
 Pour chacun d'eux, voir leur effet, réfléchir à la réponse potentielle
-de mon adversaire, de penser à ce que je pourrais jouer ensuite,
+de mon adversaire, penser à ce que je pourrais jouer ensuite,
 ... Après avoir examiné un certain nombre de coups possibles, je fais
 un choix. Un algorithme va avoir une approche similaire mais très
 systématique. Il va considérer tous les coups possibles de sa part,
@@ -1145,7 +1152,7 @@ courant du jeu, des fils pour les états du jeu pour chaque coup
 possible, etc. Une première idée est alors de construire cet arbre de
 toutes les suites possibles du jeu à partir de l'état courant, puis de
 calculer le coup qui va me mener à la victoire quoi que fasse
-l'adversaire. 
+l'adversaire.
 
 Le problème est-il résolu ? Malheureusement non ! Nous avons signalé,
 dans l'introduction de ce module, la notion d'être calculable par une
@@ -1188,9 +1195,9 @@ pas explorer plus loin ce qui peut se passer. C'est ce principe qui a
 forme d'un algorithme célèbre appelé *algorithme alpha-beta*.
 
 Vous connaissez maintenant les principes du fonctionnement de
-l'algorithme. Pour avoir un algorithme performant on examinera le plus
-grand nombre d'états possibles dans l'arbre simplifié grace à la
-méthode alpha-beta. Pour avoir un algorithme très performant, on
+l'algorithme. Pour l'améliorer on examinera le plus
+grand nombre d'états possibles dans l'arbre simplifié grâce à la
+méthode alpha-beta. Pour avoir un algorithme encore plus performant, on
 ajoute d'autres éléments comme, par exemple, une bibliothèque des
 débuts de partie. C'est-à-dire que le programme pourra mimer des
 débuts de partie classiques des meilleurs joueurs qui sont connues sur
@@ -1218,25 +1225,29 @@ recherches sur le Go avec un programme champion du monde dans les
 années 2010, battant même des experts humains mais avec handicap.
 
 ```compréhension
-::Des applications::
+::Application-correcteur::
 [markdown]
-Cochez les affirmations vraies
-\n
-{
-~ Un correcteur orthographique détecte toutes les fautes d'orthographe# Vérifier la présence d'un mot dans le dictionnaire de l'ordinateur est facile et rapide, mais corriger les fautes de grammaire est une opération beaucoup plus difficile à automatiser, car elle demande une analyse plus profonde du langage.
-~ Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier# Non. Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon. 
-~ Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go.# Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux. 
-}
+Un correcteur orthographique détecte toutes les fautes d'orthographe{F #### Vérifier la présence d'un mot dans le dictionnaire de l'ordinateur est facile et rapide, mais corriger les fautes de grammaire est une opération beaucoup plus difficile à automatiser, car elle demande une analyse plus profonde du langage.}
+
+::Application-echecs::
+[markdown]
+Un ordinateur peut explorer toutes les positions possibles des pièces sur un échiquier{F #### Même si on peut concevoir une procédure automatique pour cela, elle prendrait bien trop de temps à s'exécuter, car l'ensemble des positions possibles aux échecs est trop élevé pour que l'ordinateur ait le temps de toutes les parcourir : voir https://fr.wikipedia.org/wiki/Nombre_de_Shannon.}
+
+::Application-jeux::
+[markdown]
+Les humains sont meilleurs que les programmes dans les jeux de dames, échecs et go. {F #### Non bien que les programmes ne puissent pas étudier tous les coups possibles, des algorithmes très ingénieux sont désormais capables de battre les meilleurs joueurs aujourd'hui à ces jeux.}
 ```
 
 ```activité
 ::Autres jeux::
 [markdown]
-Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard)
+Pour les jeux, les challenges actuels se situent au niveau des jeux video où des programmes apprennent à jouer. Par exemple, des équipes de recherche en intelligence artificielle développent des programmes pour [Minecraft](http://www.theverge.com/2016/3/15/11232304/minecraft-ai-testing) ou [StarCraft](http://www.theverge.com/2016/11/4/13518210/deepmind-starcraft-ai-google-blizzard). \n
+Pensez-vous pouvoir battre les algorithmes sur ce type de jeu ?
 {}
 ```
 
 # Conclusion
+## Des programmes ... et des données
 
 Nous avons étudié les principes des applications informatiques et de
 leur construction comme un vaste jeu de construction avec des données
