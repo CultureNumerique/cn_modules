@@ -258,47 +258,55 @@ comment on peut définir un score par un calcul sur ces vecteurs.
 
 ### Représenter des documents par des vecteurs
 
-Un document est une suite de mots du dictionnaire. Une première
-représentation vectorielle se base sur la *term frequency* qui est le
-nombre d'apparitions d'un mot dans le document. En effet, on peut
-définir, pour un document, un (très grand) vecteur où chaque
-composante du vecteur correspond à un mot et la valeur est le nombre
-d'occurences du mot dans le document. Pour illustrer, considérons un
---très petit-- document "Un oiseau est un animal. Un oiseau vole" sur
-le --très petit-- dictionnaire {aboie, animal, chien, fidèle, oiseau,
-plumes, vole}, le document sera représenté par le vecteur (0, 1, 0, 0,
-2, 0, 1) qui signifie que le mot aboie apparaît 0 fois, le mot animal
-1 fois, le mot chien 0 fois, ... Avec cette représentation vectorielle
-d'un document, on mémorise les mots qui apparaissent avec leur
-fréquence d'apparition et on se doute que ceci est important pour
-calculer un score de pertinence.
+Un document est une suite de mots du dictionnaire. La plus simple des
+représentations vectorielles, appelée **Boolean frequency**, consiste
+à représenter un document par un (très grand) vecteur où chaque
+composante du vecteur correspond à un mot du dictionnaire et la valeur
+est 1 si le mot apparaît dans le document et 0 sinon. Prenons
+l'exemple d'un dictionnaire contenant les mots de langue française et
+du document textuel `citoyennes tricoteuses - les femmes du peuple à
+paris pendant la révolution française`. Ce document sera représenté
+par un vecteur avec une composante par mot du dictionnaire et toutes
+les composantes valent 0 sauf les composantes pour les mots `à`,
+`citoyennes`, ..., `tricoteuses` qui valent 1. On mémorise donc la
+*présence ou l'absence* d'un mot du dictionnaire dans le document. La
+seconde, appelée **Term frequency**, représente un document par
+vecteur où chaque composante du vecteur correspond à un mot du
+dictionnaire et la valeur est le nombre d'occurrences (d'apparitions)
+du mot dans le document. Par exemple, le document `réflexions sur la
+révolution de france suivi d'un choix de textes de burke sur la
+révolution` aurait la valeur 2 pour la composante du mot
+`révolution`.
 
 Mais, lorsque vous écrivez des requêtes sur le web, vous savez que des
 mots trop fréquents, vont vous retourner trop de réponses donc vous
 essayez de trouver des mots ou termes plus pertinents pour écrire
-votre requête. Pertinent dans le sens où il y a moins de documents
-contenant ce mot. Pour tenir compte de ceci, on peut intégrer dans la
-représentation vectorielle un facteur qui dépend de la fréquence du
-socument dans la base de documents. C'est la représentation **tf-idf**
-pour **term frequency -- inverse document frequency**. On multiplie la
-fréquence d'apparition par un facteur qui va
+votre requête, où pertinent est pris dans le sens où il y a moins de
+documents contenant ce mot. Pour tenir compte de ceci, on peut
+intégrer dans la représentation vectorielle un facteur qui dépend de
+la fréquence du document dans la base de documents. C'est la
+représentation **term frequency -- inverse document frequency
+(tf-idf)**. dans cette représentation, on multiplie la fréquence
+d'apparition (le tf) par un facteur (l'idf), dont nous ne donnons pas
+l'expression mathématique, mais qui 
 
-- augmenter la valeur pour un mot qui apparaît dans peu de documents
-- baisser la valeur pour un mot qui apparaît dans beaucoup de documents
+- est *grand pour un mot rare*, i.e. qui apparaît dans peu de documents
+- est *petit pour un mot fréquent*, i.e. qui apparaît dans beaucoup de
+  documents
 
-Par exemple, considérons le --très petit-- document "la révolution
-française". Sa représentation avec les fréquences aurait 1 pour le mot
+Par exemple, considérons le --très petit-- document `la révolution
+française`. Sa représentation tf avec les fréquences aurait 1 pour le mot
 la, 1 pour le mot révolution et 1 pour le mot française. Sa
 représentation tf-idf aurait une valeur très petite pour le mot la
 (car la est très fréquent) disons 0,01, plus grande pour le mot
-révolution disons 0.25, et moyenne pour française (plus fréquent que
+révolution disons 0,25, et moyenne pour française (plus fréquent que
 révolution) disons 0,14. Cette représentation permet de renforcer la
 valeur pour les mots discriminants qui apparaissent dans peu de
 documents.
 
-Il existe beaucoup de variantes de ces représentations vectorielles
+Il existe de nombreuses variantes de ces représentations vectorielles
 qui ont été étudiées et dont on a comparé les performances en
-recherche d'information. Mais les deux représentations présentées ici
+recherche d'information. Mais les représentations présentées ici
 sont suffisantes pour notre propos.
 
 ### Score de pertinence entre un document et une requête
