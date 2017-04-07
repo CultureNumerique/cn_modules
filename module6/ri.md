@@ -248,7 +248,7 @@ document et une requête.
 ## Le modèle vectoriel : attribuer un score de pertinence aux documents
 
 On suppose toujours un grand ensemble de documents dont chacun d'eux
-possède un identifiant. On suppose que chaque document est un ensemble
+possède un identifiant. On suppose que chaque document est une suite
 de mots d'un dictionnaire. On suppose avoir construit un index. On
 considère une requête à plusieurs mots clé, nous allons expliquer
 comment **renvoyer une liste de documents ordonnée par un score de
@@ -275,7 +275,7 @@ vecteur où chaque composante du vecteur correspond à un mot du
 dictionnaire et la valeur est le nombre d'occurrences (d'apparitions)
 du mot dans le document. Par exemple, le document `réflexions sur la
 révolution de france suivi d'un choix de textes de burke sur la
-révolution` aurait la valeur 2 pour la composante du mot
+révolution` aurait la valeur 2 pour les composante des mots `la` et
 `révolution`.
 
 Mais, lorsque vous écrivez des requêtes sur le web, vous savez que des
@@ -295,48 +295,140 @@ l'expression mathématique, mais qui
   documents
 
 Par exemple, considérons le --très petit-- document `la révolution
-française`. Sa représentation tf avec les fréquences aurait 1 pour le mot
-la, 1 pour le mot révolution et 1 pour le mot française. Sa
+française`. Sa représentation tf avec les fréquences aurait 1 pour le
+mot la, 1 pour le mot révolution et 1 pour le mot française. Sa
 représentation tf-idf aurait une valeur très petite pour le mot la
-(car la est très fréquent) disons 0,01, plus grande pour le mot
-révolution disons 0,25, et moyenne pour française (plus fréquent que
-révolution) disons 0,14. Cette représentation permet de renforcer la
-valeur pour les mots discriminants qui apparaissent dans peu de
-documents.
+(car la est très fréquent) disons 0,01, moyenne pour française disons
+0,14 et plus grande pour le mot révolution disons 0,25 (révolution est
+le plus rare des 3 mots). Cette représentation permet de renforcer la
+valeur pour les mots qui apparaissent dans peu de documents car ces
+mots vont aider à trouver les bons documents.
 
 Il existe de nombreuses variantes de ces représentations vectorielles
 qui ont été étudiées et dont on a comparé les performances en
-recherche d'information. Mais les représentations présentées ici
-sont suffisantes pour notre propos.
+recherche d'information. 
 
 ### Score de pertinence entre un document et une requête
 
-score de similarité entre deux documents avec Cosinus, score de
-pertinence d wrt q, algorithme, extension aux phrases.
+Il faut définir une similarité entre un document et une requête
+composée de plusieurs mots clé. Intuitivement, un document sera
+similaire à une requête si il contient les mots de la requête et si
+ses mots apparaissent fréquemment. Un document contenant un mot de la
+requête qui apparaît dans peu de documents doit aussi voir son score
+renforcé. Plusieurs mesures de pertinence ont été introduites mais une
+des plus utilisées que nous expliquons ici est la **Cosine
+similarity** qui consiste à calculer le cosinus de l'angle entre les
+vecteurs représentant la requête et le document. Le calcul consiste à
+multiplier les composantes deux à deux et à faire la somme. Comme la
+requête est un petit document, toutes les composantes du vecteur
+associé sont nulles sauf pour les mots de la requête donc seuls les
+mots de la requête sont utiles pour le calcul ce que nous illustrons
+par l'exemple suivant.
+
+- la requête `la révolution française` avec la représentation tf-idf
+est représenté par le vecteur (0,01 ; 0,25 ; 0,14) où les composantes
+correspondent dans l'ordre aux mots `la`, `révolution` et `française`.
+- le document `l'économie française dans la compétition internationale
+au XXe siècle` avec la représentation tf est représenté par le vecteur
+(1 ; 0 ; 1). Son score est 1x0,01 + 0x0,25 + 1x0,14 = 0,15
+- le document `citoyennes tricoteuses - les femmes du peuple à paris
+pendant la révolution française` avec la représentation tf est
+représenté par le vecteur (1 ; 1 ; 1). Son score est 1x0,01 + 1x0,25 +
+1x0,14 = 0,40
+- le document `réflexions sur la révolution de france suivi d'un choix
+de textes de burke sur la révolution` avec la représentation tf est
+représenté par le vecteur (2 ; 2 ; 0). Son score est 2x0,01 + 2x0,25 +
+0x0,14 = 0,52
+
+On voit sur cet exemple que le score mesure bien la pertinence des
+documents relativement à la requête. On voit également que l'usage du
+tf-idf va privilégier les mots rares dans le calcul du score de
+pertinence. Le calcul de la Cosine similarity est un peu plus
+compliqué car il faut prendre en compte la longueur des documents. En
+effet, il faut interdire la tricherie qui consisterait à répéter
+beaucoup de fois certains mots dans des documents avec pour seul
+objectif d'obtenir un meilleur score. Ceci est réalisé par une
+normalisation que nous ne présentons pas.
+
 
 # Recherche d'information sur le Web
 
+Nous avons présenté l'indexation et la calcul de score de pertinence
+d'un document textuel relativement à une requête. Nous allons voir
+comment ceci est réalisé sur le Web. Nous présentons ensuite le score
+de notoriété qui mesure l'importance d'un site Web. C'est ce score
+introduit par Google qui a donné un avantage significatif à `Google`
+dans les années 1990. Nous en déduirons les éléments principaux du
+calcul du score d'un document Web relativement à une requête.
+
 ## Indexation du web
 
-taille de la base de documents
-
-Les documents sont hétérogènes et dans des formats divers, comme
-`doc`, `docx`, `pdf` ou encore `html`, une première opération est de
-transformer les documents en des textes qui sont des suites de
-caractères.  Ceci est réalisé avec des logiciels spécialisés pour
-chacun des formats existants.
-
-taille du dictionnaire
-
-robots et construction de l'index
+- l'**indexation du Web** est réalisé par des **programmes appelés
+robots** qui parcourent les sites Web et suivent les liens. Ces
+programmes récupèrent les informations utiles à la construction de
+l'index comme les mots qui apparaissent, leur nombre d'apparitions,
+...
+- tous les documents du Web sont indexés quel que soit leur format :
+  pages Web au format `html`, documents imprimables au format `pdf`,
+  documents au format `doc`, ... ce qui mène à un **nombre de documents
+  de l'ordre de 60 000 milliards** en 2016
+- tous les mots qui apparaissent sur le Web sont indexés ce qui amène
+  à un dictionnaire contenant **plusieurs millions de mots**
+- l'index est réparti sur des fermes de calcul (un grand nombre
+  d'ordinateurs de grande capacité) réparties dans le monde entier. On
+  peut noter que celà implique une très grande consommation d'énergie
+  et donc le Web n'est pas si écologique qu'on veut nous le faire
+  croire.
 
 ## Score de pertinence
 
-combinaison de scores de pertinence de différentes parties du document.
+Considérons un document du Web -- une page web -- au format `html`. Un
+tel document a un contenu mais aussi une structure définie un titre
+principal et des sections ayant des titres. L'apparition d'un mot de
+la requête dans un titre est plus important que son apparition dans le
+contenu. Ceci doit donc être pris en compte dans le calcul de
+pertinence. Un deuxième élément qui est spécifique au Web concerne les
+liens (ou hyperliens). En effet, lorsqu'un lien sur une page web est
+créé, il est associé à un texte qui contient de l'information sur la
+page. Par exemple, un site Web qui souhaite mettre un lien sur ce
+module définira un texte cliquable comme `cours introduction à la
+recherche information` qui est très informatif sur le contenu de la
+page. Par conséquent, le score de pertinence d'une page web va prendre
+en compte des scores de pertinence calculés sur différentes vues sur
+la page Web dont les principales sont :
+
+- le contenu textuel de la page
+- les titres de la page
+- les mots clé associés à la page et définis dans son entête
+- l'adresse du document (un texte de la forme
+  `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
+- les textes des liens qui pointent sur la page
+
+Pour chacune de ces vues un score de pertinence peut être calculé avec
+la méthode introduite auparavant. Il reste à combiner ces scores avec
+une formule de la forme : un pourcentage du score de contenu + un
+pourcentage du score de titre + ... **La formule de combinaison est
+secrète !**. On sait qu'elle évolue. Par exemple, l'influence du score
+de pertinence des mots clés a été nettement diminué suite à de
+nombreux abus de concepteurs de pages Web qui pouvaient mettre des
+mots clé fictifs sur leur page pour essayer d'améliorer leur score.
 
 ## Score de notoriété
 
-introduction de PageRank. Hubs et Authorities.
+Le Web a une structure de réseau ou de graphe avec des pages Web qui
+pointent les unes vers les autres avec les hyperliens. L'idée est
+d'utiliser cette structure pour mesurer la **notoriété** des pages. On
+souhaite donc un **score de notoriété** qui va mesurer à quel point
+une page est souvent visitée par les internautes. Une première
+tentative de définition de score de notoriété d'une page pourrait être
+le nombre de pages qui pointent sur elle. Cette définition n'est pas
+robuste car on peut tricher (cela a été fait) : pour renforcer le
+score de notoriété de ma page, je crée des (beaucoup) de pages
+artificielles qui pointent sur ma page. La définition doit donc être
+plus intelligente et la bonne définition est la suivante :
+
+> Une page a **une forte notoriété** si beaucoup de pages **ayant une
+> forte notoriété** pointent sur elle
 
 ## Score Web
 
