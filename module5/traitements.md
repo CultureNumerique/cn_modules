@@ -313,6 +313,7 @@ et naturels (les langues humaines).}
 # Combiner les instructions
 ## La séquence
 [La séquence](https://vimeo.com/199154451){: .cours_video}
+
 Apprenons à notre machine à transformer un caractère majuscule en
 caractère minuscule correspondant. Rappelons d'abord que, dans les
 codages standards comme `ASCII` et `UTF8`, le caractère `A` majuscule
@@ -357,12 +358,11 @@ Quelle est la dernière valeur lue dans l'algorithme suivant
      Ajouter 1 à cette valeur et la ranger dans la mémoire à l'adresse 12
      Lire la valeur de la mémoire à l'adresse 12
      Lire la valeur de la mémoire à cette valeur
-{#8}
+{#### 8}
 ```
 
 ## L'alternative
-[L'alternative](https://vimeo.com/199154451){: .cours_video}
-
+[L'alternative](https://vimeo.com/200177929){: .cours_video}
 L'ordinateur est une machine très obéissante qui exécute
 scrupuleusement les ordres qu'on lui donne. Le traitement précédent
 ajoutera `32` au numéro du caractère en mémoire même si celui-ci n'est
@@ -442,7 +442,7 @@ Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 ```
 
 ## La répétition
-[La répétition](https://vimeo.com/199154451){: .cours_video}
+[La répétition](https://vimeo.com/200177944){: .cours_video}
 Nous souhaitons maintenant appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
 supposons que notre texte est une suite de caractères. Tous les

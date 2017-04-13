@@ -313,7 +313,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ```compréhension
 // Question vide de type description (sans {}) pour présenter le support des questions suivantes
 ::Exercice::[html]
-<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant </p>
+<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant. Il n'y a rien à répondre ici, ... </p{}
 
 // question: 276  name: Les balises HTML
 ::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
@@ -381,8 +381,10 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 
 // question: 287  name: Expressivité de HTML
-::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image.
-####[html]En HTML, les images sont représentées dans un format qui leur est propre. Elles sont soit <a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">matricielles</a> ou <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">vectorielles</a>.</p><ul><li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target="_blank">GIF</a>, le <a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank">PNG</a>, le <a href="https://fr.wikipedia.org/wiki/JPEG" target="_blank">JPEG</a>.</li><li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li></ul>}
+::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE
+####[html]
+#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image.</p><p>
+En HTML, les images sont représentées dans un format qui leur est propre. Elles sont soit <a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">matricielles</a> ou <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">vectorielles</a>.</p><ul><li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target="_blank">GIF</a>, le <a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank">PNG</a>, le <a href="https://fr.wikipedia.org/wiki/JPEG" target="_blank">JPEG</a>.</li><li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li></ul>}
 ```
 
 ```activité-avancée
