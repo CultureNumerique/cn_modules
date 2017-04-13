@@ -122,7 +122,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 // question: 268  name: Erreur 404!
 ::Erreur 404!::[html]<p>Que signifie le code d'erreur 404 dans le protocole HTTP</p>{
 	~<p>La ressource a été déplacée sur un autre serveur</p>
-	=<p>La ressource n’existe pas sur le serveur</p>#<p>Votre réponse est correcte.</p>
+	=<p>La ressource n’existe pas sur le serveur</p>
 	~<p>Le client ne peut pas communiquer avec le serveur</p>
 	####<p>L'erreur 404 apparaît lorsque la ressource demandée n'existe pas sur le serveur. Cela se produit en général lorsqu'il y a une 'faute' dans l'url ou lorsque le gestionnaire du site a déplacé, supprimé ou renommé une ressource. L'url devient alors invalide.</p>
 }
@@ -134,7 +134,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 	~<p>Internet Explorer</p>
 	~<p>Chrome</p>
 	~<p>Safari</p>
-	=<p>Tous</p>#<p>Votre réponse est correcte.</p>
+	=<p>Tous</p>
 	####<p>Tous les navigateurs sont équivalents de ce point de vue, seuls leur rapidité, leurs fonctionnalités avancées ou leur ergonomie les différencient.</p>
 }
 
@@ -160,7 +160,7 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 // question: 269  name: Les protocoles
 ::Les protocoles::[html]<p>Par quel protocole les clients et serveurs dialoguent-ils ? <br></br></p>{
 	~<p>HTML<br></p>
-	=<p><span style\="font-weight\:normal;"><span style\="font-size\:14.666666666666666px;font-family\:Arial;color\:\#434343;background-color\:transparent;font-weight\:400;font-style\:normal;font-variant\:normal;text-decoration\:none;vertical-align\:baseline;white-space\:pre-wrap;">HTTP</span></span></p>#Votre réponse est correcte.
+	=<p><span style\="font-weight\:normal;"><span style\="font-size\:14.666666666666666px;font-family\:Arial;color\:\#434343;background-color\:transparent;font-weight\:400;font-style\:normal;font-variant\:normal;text-decoration\:none;vertical-align\:baseline;white-space\:pre-wrap;">HTTP</span></span></p>
 }
 
 
@@ -246,7 +246,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 // question: 278  name: Une page web
 ::Une page web::[html]<p>Quand on regarde une page web, toutes les informations viennent du même serveur.</p>{
 	~<p>oui</p><p> </p>
-	=<p>non</p>#<p>Votre réponse est correcte.</p>
+	=<p>non</p>
 	####<p>Une page Web est souvent constituée de plusieurs ressources. Chaque ressource fait l'objet d'un échange entre le client et un serveur, pas forcément toujours le même !</p>
 }
 
@@ -254,7 +254,7 @@ En conclusion, dès que vous transmettez des données confidentielles veillez bi
 // question: 279  name: Une URL
 ::Une URL::[html]<p>Qu'est-ce qu'une URL ?</p>{
 	~<p>une ressource</p>
-	=<p>l'adresse d'une ressource</p>#<p>Votre réponse est correcte.</p>
+	=<p>l'adresse d'une ressource</p>
 	~<p>un fichier</p>
 }
 
@@ -313,7 +313,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ```compréhension
 // Question vide de type description (sans {}) pour présenter le support des questions suivantes
 ::Exercice::[html]
-<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant </p>
+<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant. Il n'y a rien à répondre ici, ... </p{}
 
 // question: 276  name: Les balises HTML
 ::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
@@ -367,7 +367,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 
 // question: 285  name: Structure et contenu
 ::Structure et contenu::[html]<p>Le langage HTML permet de décrire des documents en indiquant leur structure et leur contenu. Comment la structure est-elle décrite ?</p>{
-	=<p>Par un balisage du texte</p>#Votre réponse est correcte.
+	=<p>Par un balisage du texte</p>
 	~<p>Par des couleurs et du gras ou la taille des caractères</p>
 }
 
@@ -376,13 +376,15 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ::Une page Web::[html]<p>Pour qu’un client affiche une page Web,...</p>{
 	~<p>une seule requête vers un unique serveur suffit toujours</p>
 	~<p>parfois plusieurs requêtes sont nécessaires mais toujours vers le même serveur</p>
-	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>#Votre réponse est correcte.
+	=<p>parfois plusieurs requêtes vers plusieurs serveurs sont nécessaires</p>
 }
 
 
 // question: 287  name: Expressivité de HTML
-::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image.
-####[html]En HTML, les images sont représentées dans un format qui leur est propre. Elles sont soit <a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">matricielles</a> ou <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">vectorielles</a>.</p><ul><li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target="_blank">GIF</a>, le <a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank">PNG</a>, le <a href="https://fr.wikipedia.org/wiki/JPEG" target="_blank">JPEG</a>.</li><li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li></ul>}
+::Expressivité de HTML::[html]<p>Le langage HTML permet de représenter une image.</p>{TRUE
+####[html]
+#<p>Les images ne sont pas décrites en HTML. HTML ne permet que d'indiquer qu'à un certain endroit dans un document, se trouve une image.</p><p>
+En HTML, les images sont représentées dans un format qui leur est propre. Elles sont soit <a href="https://fr.wikipedia.org/wiki/Image_matricielle" target="_blank">matricielles</a> ou <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" target="_blank">vectorielles</a>.</p><ul><li>Les images matricielles décrivent une image comme un assemblage de points de couleur, généralement dans un rectangle de dimensions données par des nombres de points en largeur et en hauteur. Les formats de représentation de ces images matricielles utilisées sur le web sont par exemple le <a href="https://fr.wikipedia.org/wiki/Graphics_Interchange_Format" target="_blank">GIF</a>, le <a href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank">PNG</a>, le <a href="https://fr.wikipedia.org/wiki/JPEG" target="_blank">JPEG</a>.</li><li>Les images vectorielles sont la description d'une image par des formes et des opérations géométriques. Le format <a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">SVG</a> est utilisé sur le web. Peu d'autres le sont. </li></ul>}
 ```
 
 ```activité-avancée
@@ -450,7 +452,7 @@ Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans po
 ::Cookie tiers::[html]<p>Un cookie tiers c'est ...</p>{
 	~<p>est un cookie découpé en 3 parties</p>
 	~<p>un cookie partagé entre trois sites</p>
-	=<p>un cookie déposé à la demande d'un serveur qui n'est pas celui de la page web visitée</p>#<p>Votre réponse est correcte.</p>
+	=<p>un cookie déposé à la demande d'un serveur qui n'est pas celui de la page web visitée</p>
 	####<p>Un cookie tiers est bien un cookie qui est déposé sur notre machine par un serveur qui n'est pas celui de la page Web que l'on visite. C'est une technique très souvent utilisée pour l'affichage de publicité ciblée.</p>
 }
 
@@ -471,7 +473,7 @@ Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans po
 // question: 291  name: Un cookie
 ::Un cookie::[html]<p>Un cookie  est une information<br></br></p>{
 	~<p>stockée sur un serveur web à la demande d'un client</p>
-	=<p>stockée sur un client à la demande d'un serveur</p>#Votre réponse est correcte.
+	=<p>stockée sur un client à la demande d'un serveur</p>
 }
 
 ```
@@ -526,7 +528,7 @@ Notons qu'une pièce jointe fait partie d'un message, il est envoyé avec le cor
 	~<p>la lecture d'un message écrit en HTML provoque toujours l'envoi de cookies</p>
 	~<p>la lecture de messages en texte (non HTML) peut provoquer l'envoi de cookies</p>
 	~<p>si la lecture d'un message provoque l'envoi de cookies, c'est uniquement vers l'expéditeur du message</p>
-	=<p>Tout est faux</p>#<p>Votre réponse est correcte.</p>
+	=<p>Tout est faux</p>
 	####<p>Tout est faux \: </p><ul><li>la lecture d'un message écrit en HTML peut provoquer l'envoi de cookies ; </li><li>la lecture de messages en texte ne provoque pas l'envoi de cookies, mais il est parfois difficile de discerner un message en simple texte et un message en HTML ! ; </li><li>un expéditeur de message n'est pas un serveur web (même si l'adresse peut être associée un serveur web) et de plus, si la lecture d'un message provoque l'envoi de cookies, ce cookie peut être un cookie tiers et envoyé à n'importe qui.</li></ul>
 }
 ```
