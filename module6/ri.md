@@ -273,36 +273,44 @@ les composantes valent 0 sauf les composantes pour les mots `à`,
 seconde, appelée **Term frequency**, représente un document par
 vecteur où chaque composante du vecteur correspond à un mot du
 dictionnaire et la valeur est le nombre d'occurrences (d'apparitions)
-du mot dans le document. Par exemple, le document `réflexions sur la
-révolution de france suivi d'un choix de textes de burke sur la
-révolution` aurait la valeur 2 pour les composante des mots `la` et
-`révolution`.
+du mot dans le document. Par exemple, considérons le document
+`réflexions sur la révolution de france suivi d'un choix de textes de
+burke sur la révolution`.  Il sera représenté par un vecteur avec une
+composante par mot du dictionnaire et toutes les composantes valent 0
+sauf les composantes pour les mots `réflexions`, `france` qui valent 1
+et les composantes pour les mots `la`, `révolution` et `sur` qui
+valent 2 car ils apparaissent deux fois.
 
 Mais, lorsque vous écrivez des requêtes sur le web, vous savez que des
 mots trop fréquents, vont vous retourner trop de réponses donc vous
-essayez de trouver des mots ou termes plus pertinents pour écrire
-votre requête, où pertinent est pris dans le sens où il y a moins de
-documents contenant ce mot. Pour tenir compte de ceci, on peut
-intégrer dans la représentation vectorielle un facteur qui dépend de
-la fréquence du document dans la base de documents. C'est la
-représentation **term frequency -- inverse document frequency
-(tf-idf)**. dans cette représentation, on multiplie la fréquence
-d'apparition (le tf) par un facteur (l'idf), dont nous ne donnons pas
-l'expression mathématique, mais qui 
+essayez de trouver des mots ou termes *plus pertinents* pour écrire
+votre requête. Cette notion de pertinence correspond à mieux préciser
+ce que je recherche, c'est-à-dire encore qu'il y a moins de documents
+contenant ce mot. Pour tenir compte de ceci, on peut intégrer dans la
+représentation vectorielle un facteur qui dépend de la fréquence du
+document dans la base de documents. C'est la représentation **term
+frequency -- inverse document frequency (tf-idf)**. dans cette
+représentation, on multiplie la fréquence d'apparition (le tf pour
+term frequency) par un facteur (l'idf ou inverse document
+frequency). Nous ne donnons pas la définition mathématique de l'idf
+mais il suffit de retenir que l'idf d'un mot 
 
 - est *grand pour un mot rare*, i.e. qui apparaît dans peu de documents
 - est *petit pour un mot fréquent*, i.e. qui apparaît dans beaucoup de
   documents
 
-Par exemple, considérons le --très petit-- document `la révolution
-française`. Sa représentation tf avec les fréquences aurait 1 pour le
-mot la, 1 pour le mot révolution et 1 pour le mot française. Sa
-représentation tf-idf aurait une valeur très petite pour le mot la
-(car la est très fréquent) disons 0,01, moyenne pour française disons
-0,14 et plus grande pour le mot révolution disons 0,25 (révolution est
-le plus rare des 3 mots). Cette représentation permet de renforcer la
-valeur pour les mots qui apparaissent dans peu de documents car ces
-mots vont aider à trouver les bons documents.
+Par conséquent, la multiplication par l'idf va augmenter la valeur
+pour les mots peu fréquents et la diminuer pour les mots
+fréquents. Par exemple, considérons le --très petit-- document `la
+révolution française`. Sa représentation tf avec les fréquences aurait
+1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot
+`française`. Sa représentation tf-idf aurait une valeur très petite
+pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour
+le mot `française` disons 0,14 et plus grande pour le mot `révolution`
+disons 0,25 (révolution est le moins fréquent des 3 mots). La
+représentation tf-idf permet donc bien de renforcer la valeur pour les
+mots qui apparaissent dans peu de documents ce qui va aider à trouver
+les documents les plus pertinents.
 
 Il existe de nombreuses variantes de ces représentations vectorielles
 qui ont été étudiées et dont on a comparé les performances en
@@ -315,7 +323,9 @@ composée de plusieurs mots clé. Intuitivement, un document sera
 similaire à une requête si il contient les mots de la requête et si
 ses mots apparaissent fréquemment. Un document contenant un mot de la
 requête qui apparaît dans peu de documents doit aussi voir son score
-renforcé. Plusieurs mesures de pertinence ont été introduites mais une
+renforcé. Pour cela, on représente, en général, un document
+avec la représentation tf et la requête avec la représentation
+tf-idf. Plusieurs mesures de pertinence ont été introduites mais une
 des plus utilisées que nous expliquons ici est la **Cosine
 similarity** qui consiste à calculer le cosinus de l'angle entre les
 vecteurs représentant la requête et le document. Le calcul consiste à
@@ -327,28 +337,35 @@ par l'exemple suivant.
 
 - la requête `la révolution française` avec la représentation tf-idf
 est représenté par le vecteur (0,01 ; 0,25 ; 0,14) où les composantes
-correspondent dans l'ordre aux mots `la`, `révolution` et `française`.
+correspondent dans l'ordre aux mots `la`, `révolution` et `française`
+et 0 pour tous les autres mots du dictionnaire.
 - le document `l'économie française dans la compétition internationale
 au XXe siècle` avec la représentation tf est représenté par le vecteur
-(1 ; 0 ; 1). Son score est 1x0,01 + 0x0,25 + 1x0,14 = 0,15
+(1 ; 0 ; 1) où les composantes correspondent dans l'ordre aux mots
+`la`, `révolution` et `française`. Son score, relativement à la
+requête `la révolution française` est donc : 1x0,01 + 0x0,25 + 1x0,14
+= 0,15
 - le document `citoyennes tricoteuses - les femmes du peuple à paris
 pendant la révolution française` avec la représentation tf est
-représenté par le vecteur (1 ; 1 ; 1). Son score est 1x0,01 + 1x0,25 +
-1x0,14 = 0,40
+représenté par le vecteur (1 ; 1 ; 1). Son score est donc : 1x0,01 +
+1x0,25 + 1x0,14 = 0,40
 - le document `réflexions sur la révolution de france suivi d'un choix
 de textes de burke sur la révolution` avec la représentation tf est
-représenté par le vecteur (2 ; 2 ; 0). Son score est 2x0,01 + 2x0,25 +
+représenté par le vecteur (2 ; 2 ; 0). Son score est donc : 2x0,01 + 2x0,25 +
 0x0,14 = 0,52
 
 On voit sur cet exemple que le score mesure bien la pertinence des
 documents relativement à la requête. On voit également que l'usage du
-tf-idf va privilégier les mots rares dans le calcul du score de
-pertinence. Le calcul de la Cosine similarity est un peu plus
-compliqué car il faut prendre en compte la longueur des documents. En
-effet, il faut interdire la tricherie qui consisterait à répéter
-beaucoup de fois certains mots dans des documents avec pour seul
-objectif d'obtenir un meilleur score. Ceci est réalisé par une
-normalisation que nous ne présentons pas.
+tf-idf permet de privilégier le mot `révolution` qui est celui qui
+apparaît dans le moins de documents et de limiter l'influence du mot
+`la` qui ne sert pas à discriminer les documents pertinents. Le calcul
+de la Cosine similarity est, en réalité, un peu plus compliqué car il
+faut prendre en compte la longueur des documents. En effet, il faut
+interdire la tricherie qui consisterait à répéter beaucoup de fois
+certains mots dans des documents avec pour seul objectif d'obtenir un
+meilleur score. Le calcul de la pertinence fait donc intervenir une
+normalisation qui revient à considérer une même longueur pour tous les
+documents.
 
 
 # Recherche d'information sur le Web
@@ -377,8 +394,7 @@ l'index comme les mots qui apparaissent, leur nombre d'apparitions,
 - l'index est réparti sur des fermes de calcul (un grand nombre
   d'ordinateurs de grande capacité) réparties dans le monde entier. On
   peut noter que celà implique une très grande consommation d'énergie
-  et donc le Web n'est pas si écologique qu'on veut nous le faire
-  croire.
+  et donc le Web n'est pas si écologique qu'on pourrait le croire.
 
 ## Score de pertinence
 
@@ -391,11 +407,11 @@ pertinence. Un deuxième élément qui est spécifique au Web concerne les
 liens (ou hyperliens). En effet, lorsqu'un lien sur une page web est
 créé, il est associé à un texte qui contient de l'information sur la
 page. Par exemple, un site Web qui souhaite mettre un lien sur ce
-module définira un texte cliquable comme `cours introduction à la
+module définira un texte cliquable comme `cours d'introduction à la
 recherche information` qui est très informatif sur le contenu de la
 page. Par conséquent, le score de pertinence d'une page web va prendre
-en compte des scores de pertinence calculés sur différentes vues sur
-la page Web dont les principales sont :
+en compte des scores de pertinence calculés sur **différentes vues sur
+la page Web** dont les principales sont :
 
 - le contenu textuel de la page
 - les titres de la page
@@ -404,14 +420,15 @@ la page Web dont les principales sont :
   `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
 - les textes des liens qui pointent sur la page
 
-Pour chacune de ces vues un score de pertinence peut être calculé avec
-la méthode introduite auparavant. Il reste à combiner ces scores avec
-une formule de la forme : un pourcentage du score de contenu + un
+Pour chacune de ces vues, un score de pertinence peut être calculé
+avec la méthode introduite auparavant. Il reste à combiner ces scores
+avec une formule de la forme : un pourcentage du score de contenu + un
 pourcentage du score de titre + ... **La formule de combinaison est
-secrète !**. On sait qu'elle évolue. Par exemple, l'influence du score
-de pertinence des mots clés a été nettement diminué suite à de
-nombreux abus de concepteurs de pages Web qui pouvaient mettre des
-mots clé fictifs sur leur page pour essayer d'améliorer leur score.
+secrète !** On sait qu'elle existe et qu'elle évolue. Par exemple,
+l'influence du score de pertinence des mots clés a été nettement
+diminué suite à de nombreux abus de concepteurs de pages Web qui
+pouvaient mettre des mots clé fictifs sur leur page pour essayer
+d'améliorer arificiellement leur score.
 
 ## Score de notoriété
 
@@ -429,6 +446,33 @@ plus intelligente et la bonne définition est la suivante :
 
 > Une page a **une forte notoriété** si beaucoup de pages **ayant une
 > forte notoriété** pointent sur elle
+
+Définir la notoriété n'est pas si simple car on voit que pour définir
+une page de forte notoriété il faut déjà savoir calculer la
+notoriété. C'est un exemple de définition récursive où on définit la
+notoriété à partir d'elle-même. Mais ceci est fréquent en mathématique
+et en informatique. Il est donc possible de définir des objets
+mathématiques et des calculs mathématiques qui vont permettre de
+définir et de calculer la notoriété d'une page Web. Nous allons tenter
+d'en donner une vision plus pragmatique avec la notion de **surfeur
+aléatoire**. L'idée est d'imaginer qu'un surfeur se promène sur le
+Web. Pour cela,
+
+- il peut choisir une page au hasard sur le Web ce qui correspond à
+émettre une requête et suivre un lien pour arriver à une page
+- lorsqu'il est sur une page Web, il peut suivre un des liens présents
+  sur la page d'où le nom de surfeur car il surfe sur le web
+
+Le surfeur aléatoire choisit une page au hasard, suit des liens puis
+recommence en rechoisissant une nouvelle page au hasard. Le score de
+notoriété est alors le nombre de visites sur une page. Ceci modélise
+bien l'idée 'importance de la page car en surfant sur le Web on passe
+souvent sur cette page. On peut montrer également que ceci correspond
+à une modélisation mathématique et algorithmique solide. L'algorithme
+correspondant est appelé **algorithme PageRank** et il a été introduit
+par les fondateurs de Google dand le milieu des années 1990. Cet
+algorithme permet d'**attribuer à toute page web un score de
+notoriété**.
 
 ## Score Web
 
