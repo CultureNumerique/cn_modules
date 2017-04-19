@@ -382,19 +382,21 @@ calcul du score d'un document Web relativement à une requête.
 
 - l'**indexation du Web** est réalisé par des **programmes appelés
 robots** qui parcourent les sites Web et suivent les liens. Ces
-programmes récupèrent les informations utiles à la construction de
-l'index comme les mots qui apparaissent, leur nombre d'apparitions,
-...
+programmes récupèrent les informations utiles comme les mots qui
+apparaissent, leur nombre d'apparitions, ...
 - tous les documents du Web sont indexés quel que soit leur format :
   pages Web au format `html`, documents imprimables au format `pdf`,
   documents au format `doc`, ... ce qui mène à un **nombre de documents
   de l'ordre de 60 000 milliards** en 2016
 - tous les mots qui apparaissent sur le Web sont indexés ce qui amène
   à un dictionnaire contenant **plusieurs millions de mots**
+- ceci permet de construire un **index de très grande taille** qui est
+  mis à jour régulièrement avec les informations récupérées par les robots
 - l'index est réparti sur des fermes de calcul (un grand nombre
-  d'ordinateurs de grande capacité) réparties dans le monde entier. On
-  peut noter que celà implique une très grande consommation d'énergie
-  et donc le Web n'est pas si écologique qu'on pourrait le croire.
+  d'ordinateurs de grande capacité en réesau) réparties dans le monde
+  entier. On peut noter que celà implique une très grande consommation
+  d'énergie et donc le Web n'est pas si écologique qu'on pourrait le
+  croire.
 
 ## Score de pertinence
 
@@ -409,9 +411,11 @@ créé, il est associé à un texte qui contient de l'information sur la
 page. Par exemple, un site Web qui souhaite mettre un lien sur ce
 module définira un texte cliquable comme `cours d'introduction à la
 recherche information` qui est très informatif sur le contenu de la
-page. Par conséquent, le score de pertinence d'une page web va prendre
-en compte des scores de pertinence calculés sur **différentes vues sur
-la page Web** dont les principales sont :
+page et doit être pris en compte pour le calcul de pertinence.
+
+Par conséquent, le score de pertinence d'une page web va prendre en
+compte des scores de pertinence calculés sur **différentes vues sur la
+page Web** dont les principales sont :
 
 - le contenu textuel de la page
 - les titres de la page
@@ -424,11 +428,13 @@ Pour chacune de ces vues, un score de pertinence peut être calculé
 avec la méthode introduite auparavant. Il reste à combiner ces scores
 avec une formule de la forme : un pourcentage du score de contenu + un
 pourcentage du score de titre + ... **La formule de combinaison est
-secrète !** On sait qu'elle existe et qu'elle évolue. Par exemple,
-l'influence du score de pertinence des mots clés a été nettement
-diminué suite à de nombreux abus de concepteurs de pages Web qui
-pouvaient mettre des mots clé fictifs sur leur page pour essayer
-d'améliorer arificiellement leur score.
+secrète !**, c'est-à-dire que l'on ne connaît pas les pourcentages
+utilisés dans la formule. On sait qu'elle existe et qu'elle
+évolue. Par exemple, l'influence du score de pertinence des mots clés
+a été nettement diminuée suite à de nombreux abus de concepteurs de
+pages Web qui ajoutaient des mots clé fictifs sur leur page pour
+essayer d'améliorer artificiellement leur score, et donc on sait que
+le pourcentage pour le score de pertinence ds mots clé a été diminué.
 
 ## Score de notoriété
 
@@ -452,35 +458,159 @@ une page de forte notoriété il faut déjà savoir calculer la
 notoriété. C'est un exemple de définition récursive où on définit la
 notoriété à partir d'elle-même. Mais ceci est fréquent en mathématique
 et en informatique. Il est donc possible de définir des objets
-mathématiques et des calculs mathématiques qui vont permettre de
-définir et de calculer la notoriété d'une page Web. Nous allons tenter
-d'en donner une vision plus pragmatique avec la notion de **surfeur
+mathématiques, des calculs et des algorithmes qui vont permettre de
+définir et de calculer la notoriété d'une page Web. Nous allons donner
+une autre vision de la notoriété avec la notion de **surfeur
 aléatoire**. L'idée est d'imaginer qu'un surfeur se promène sur le
 Web. Pour cela,
 
 - il peut choisir une page au hasard sur le Web ce qui correspond à
-émettre une requête et suivre un lien pour arriver à une page
-- lorsqu'il est sur une page Web, il peut suivre un des liens présents
-  sur la page d'où le nom de surfeur car il surfe sur le web
+émettre une requête, choisir un lien pour arriver à une page
+- lorsqu'il est sur une page Web, il peut choisir et suivre un des
+  liens présents sur la page d'où le nom de surfeur car il surfe sur
+  le web
 
-Le surfeur aléatoire choisit une page au hasard, suit des liens puis
-recommence en rechoisissant une nouvelle page au hasard. Le score de
-notoriété est alors le nombre de visites sur une page. Ceci modélise
-bien l'idée 'importance de la page car en surfant sur le Web on passe
-souvent sur cette page. On peut montrer également que ceci correspond
-à une modélisation mathématique et algorithmique solide. L'algorithme
-correspondant est appelé **algorithme PageRank** et il a été introduit
-par les fondateurs de Google dand le milieu des années 1990. Cet
-algorithme permet d'**attribuer à toute page web un score de
-notoriété**.
+Le surfeur aléatoire choisit donc une page au hasard, il suit des
+liens en partant de cette page puis recommence en rechoisissant une
+nouvelle page au hasard. Si on répète un très grand nombre de fois
+cette opération, toutes les pages Web seront visitées et plus souvent
+elles sont visitées plus elles sont importantes. Le score de notoriété
+d'une page correspond donc à la fréquence de visite de cette page par
+le surfeur alétaoire. Ceci peut être modélisé de façon mathématique et
+calculé par des algorithmes. Un algorithme pour calculer le score de
+notoriété, appelé **algorithme PageRank**, a été introduit par les
+fondateurs de Google au milieu des années 1990. Cet algorithme permet
+d'**attribuer à toute page web un score de notoriété**.
+
+C'est, en réalité, une amélioration de cet algorithme qui est utilisé
+pour lequel on distingue deux types de pages : les *"hubs"* et les
+*"authorities"*. Un hub est une page qui contient beaucoup de liens
+comme une page de synthèse sur un sujet qui renvoie à toutes les pages
+sur ce sujet. Une authority est une page de référence sur laquelle
+beaucoup de pages pointent. Un exemple typique, dans le domaine des
+conaissances générales, est une page `Wikipedia`. On peut alors
+calculer un score de hub et un score d'authority et combiner ces deux
+scores pour obtenir un score de notoriété.
 
 ## Score Web
 
-combinaison score de pertinence et de notoriété. Autres éléments.
+Une requête sur le Web dans un moteur de recherche d'information est
+très souvent exprimée comme une suite de mots clés. Le **score Web
+d'un document Web relativement à une requête** est calculé commune
+combinaison de la forme : un pourcentage du score de pertinence de la
+page relativement à la requête + un pourcentage de score de notoriété
+de la page. Ici encore la formule de combinaison n'est pas connue !
+Ici encore, on sait qu'elle existe et qu'elle évolue. Par exemple, on
+observe que le score de notoriété a pris ces dernières années une
+importance de plus en plus grande car les résultats en première page
+de réponse sont souvent des sites avec une forte notoriété comme
+Wikipedia, des sites de journaux et, plus généralement, des sites de
+référence.
+
+Si les deux éléments essentiels sont le score de pertinence et le
+score de notoriété, le score Web fait intervenir d'autres éléments
+sans qu'on sache exactement comment ils interviennent dans le calcul
+du score web. Les éléments principaux intervenant dans le calcul sont :
+
+- la langue d'interrogation
+- le pays du site du moteur
+- le media d'interrogation (ordinateur ou téléphone portable)
+- la localisation du media d'interrogation
+- l'historique des recherches et des liens suivis quand on est identifié
+
+Rappelons également qu'il existe différents moteurs de recherche
+d'information et que chacun d'eux a développé ses propes algorithmes
+et formules de calcul et donc que les résultats proposés en une
+réponse à une requête peuvent différer selon le moteur choisi.
+
+La plupart des requêtes posées sur le Web sont des requêtes avec une
+suite de mots clés mais un autre type de requête correspond aux
+requêtes par phrase. Rappelons qu'une requête par phrase consiste à
+rechercher les documents contenant exactement la phrase saisie. La
+convention usuelle est de mettre la phrase entre guillemets dans la
+barre de saisie. Par exemple, on peut considérer la requête par phrase
+`"la révolution française"`. Pour cette requête, on va retourner par
+ordre de partinence les documents contenant les trois mots
+consécutifs. Notez que cette requête donnera donc des résultats
+différents de la requête à trois mots clé `la révolution française`
+pour laquelle la position des mots n'intervient pas. Pour réaliser
+ceci, l'index contient également les positions des mots dans les
+documents où ils apparaissent. Souvent il existe des possibilités de
+requête avancée qui sont très peu utilisés en pratique.
+
+# Evolutions, conclusion et discussion
+
+## Evolutions en cours
+
+### Web des données
+
+Une première évolution est apparue en 2014. Vous avez certainement
+remarqué que lorsque vous tapez le nom d'une entité du monde que ce
+soit un groupe de musique (essayez `Led Zeppelin`), un personnage
+célèbre (essayez `Larry Page`), un lieu géographique (essayez
+`Middelburg`) ou encore un nom de fleur (essayez `rose`), vous voyez
+apparaître en résultat à votre requête un cadre présentant des
+informations factuelles sur l'entité. Par exemple, pour `Led
+Zeppelin`, vous trouvez une description du groupe, sa composition, le
+genre de musique, les principales chansons, les principaux albums,
+... Donc, contrairement au résultat qui fournit des liens vers des
+pages que vous pouvez aller lire dans le graphe des pages Web, ici on
+**extrait des données sur l'entité**. Ceci est rendu possible grace au
+*Web des données et connaissances* encore appelé *"knowledge graph"*.
+
+Le Web et les moteurs de recherche d'information étaient jusqu'alors
+destinés à des utilisateurs humains qui posaient des requêtes et
+allaient consulter les pages en fonction des résultats. Pour trouver
+une réponse à une question factuelle comme `âge des candidats à la
+présidence aux élections françaises en 2017`, il faut taper une
+requête et chercher la réponse sur la bonne page. On a souhaité
+enrichir les capacités des moteurs pour qu'ils soient capables de
+répondre à une telle question factuelle. Il faut donc connaître l'âge
+des candidats. Vous pouvez taper une requête comme `âge de X` où vous
+remplacez X par votre candidat préféré ou détesté pour vérifier que la
+réponse est connu. Un deuxième objectif que nous verrons dans la
+section suivante est que si on souhaite résoudre des tâches plus
+complexes sur le Web, il faut que les machines sachent extraire les
+données, les comprennent et les utilisent. Pour cela, s'est développé
+le Web des données et connaissances.
+
+Ceci a été réalisé conjointement par des communautés spécialisées
+comme en musique comme `MusicBrainz` et en géographie comme
+`GeoNames`, des communautés d'utilisateurs et de chercheurs pour des
+bases généralistes avec `Wikidata` et `DBpedia`, des bases pour
+normaliser la description des données comme `foaf` puis repris (voire
+pillé) par les grands acteurs du domaine comme `Google`. L'idée est
+donc de construire des bases de données de connaissances exploitables
+sur le Web. Les données sont décrites sous forme de triplets de la
+forme **(sujet, propriété, objet)** comme, par exemple, `(Led
+Zeppelin, IsA, MusicGroup` ou `(Jimmy Page, IsMemberOf, Led
+Zeppelin)`. Ces bases, comme dit précédemment, ont été construites par
+des communautés et sont désormais possédées par les grands acteurs du
+domaine. Elles sont complétées par des données ajoutées sur les pages
+Web. Par exemple, un site web de restaurant va ajouter des données
+comme sa latitude et sa longitude qui permettront de calculer des
+distances et savoir si le restaurant est proche de votre
+géoloalisation ou encore des heures et jours d'ouverture pour que vous
+sachiez si le restaurant est ouvert.
+
+### Moteurs intelligents
+
+WE à Londres, parole et langage naturel
+
+## Conclusion et discussion
+
+### Le secret des moteurs
+
+formules cachées, formules qui évoluent, compréhension des scores de
+moins en moins faciles.
+
+### Les liens payants
+
+
 
 # Le référencement
 
-objrctifs et principes
+objectifs et principes
 
 ## Une bonne indexation des documents
 
@@ -493,9 +623,3 @@ bons mots aux bonxs endroits
 ## Un bon score de notoriété
 
 bon contenu pour attirer les liens
-
-# Conclusion
-
-formules cachées, formules qui évoluent, évolutions vers le langage
-naturel, le Web des données
-
