@@ -496,9 +496,9 @@ scores pour obtenir un score de notoriété.
 
 Une requête sur le Web dans un moteur de recherche d'information est
 très souvent exprimée comme une suite de mots clés. Le **score Web
-d'un document Web relativement à une requête** est calculé commune
+d'un document Web relativement à une requête** est calculé comme  une
 combinaison de la forme : un pourcentage du score de pertinence de la
-page relativement à la requête + un pourcentage de score de notoriété
+page relativement à la requête + un pourcentage du score de notoriété
 de la page. Ici encore la formule de combinaison n'est pas connue !
 Ici encore, on sait qu'elle existe et qu'elle évolue. Par exemple, on
 observe que le score de notoriété a pris ces dernières années une
@@ -519,7 +519,7 @@ du score web. Les éléments principaux intervenant dans le calcul sont :
 - l'historique des recherches et des liens suivis quand on est identifié
 
 Rappelons également qu'il existe différents moteurs de recherche
-d'information et que chacun d'eux a développé ses propes algorithmes
+d'information et que chacun d'eux a développé ses propres algorithmes
 et formules de calcul et donc que les résultats proposés en une
 réponse à une requête peuvent différer selon le moteur choisi.
 
@@ -530,7 +530,7 @@ rechercher les documents contenant exactement la phrase saisie. La
 convention usuelle est de mettre la phrase entre guillemets dans la
 barre de saisie. Par exemple, on peut considérer la requête par phrase
 `"la révolution française"`. Pour cette requête, on va retourner par
-ordre de partinence les documents contenant les trois mots
+ordre de pertinence les documents contenant les trois mots
 consécutifs. Notez que cette requête donnera donc des résultats
 différents de la requête à trois mots clé `la révolution française`
 pour laquelle la position des mots n'intervient pas. Pour réaliser
@@ -568,30 +568,34 @@ enrichir les capacités des moteurs pour qu'ils soient capables de
 répondre à une telle question factuelle. Il faut donc connaître l'âge
 des candidats. Vous pouvez taper une requête comme `âge de X` où vous
 remplacez X par votre candidat préféré ou détesté pour vérifier que la
-réponse est connu. Un deuxième objectif que nous verrons dans la
-section suivante est que si on souhaite résoudre des tâches plus
-complexes sur le Web, il faut que les machines sachent extraire les
-données, les comprennent et les utilisent. Pour cela, s'est développé
-le Web des données et connaissances.
+réponse est connue et affichée. Un deuxième objectif que nous verrons
+dans la section suivante est que si on souhaite résoudre des tâches
+plus complexes sur le Web, il faut que les machines sachent extraire
+les données, les comprennent et les utilisent. Pour cela, s'est
+développé le Web des données et connaissances.
 
 Ceci a été réalisé conjointement par des communautés spécialisées
 comme en musique comme `MusicBrainz` et en géographie comme
 `GeoNames`, des communautés d'utilisateurs et de chercheurs pour des
 bases généralistes avec `Wikidata` et `DBpedia`, des bases pour
-normaliser la description des données comme `foaf` puis repris (voire
-pillé) par les grands acteurs du domaine comme `Google`. L'idée est
-donc de construire des bases de données de connaissances exploitables
-sur le Web. Les données sont décrites sous forme de triplets de la
-forme **(sujet, propriété, objet)** comme, par exemple, `(Led
-Zeppelin, IsA, MusicGroup` ou `(Jimmy Page, IsMemberOf, Led
-Zeppelin)`. Ces bases, comme dit précédemment, ont été construites par
-des communautés et sont désormais possédées par les grands acteurs du
-domaine. Elles sont complétées par des données ajoutées sur les pages
-Web. Par exemple, un site web de restaurant va ajouter des données
-comme sa latitude et sa longitude qui permettront de calculer des
-distances et savoir si le restaurant est proche de votre
-géoloalisation ou encore des heures et jours d'ouverture pour que vous
-sachiez si le restaurant est ouvert.
+normaliser la description des données comme `foaf`. Ces bases ont été
+reprises (voire pillées) par les grands acteurs du domaine comme
+`Google`. L'idée est donc de construire des bases de données de
+connaissances exploitables sur le Web. Les données sont décrites sous
+forme de triplets de la forme **(sujet, propriété, objet)** comme, par
+exemple, `(Led Zeppelin, IsA, MusicGroup` ou `(Jimmy Page, IsMemberOf,
+Led Zeppelin)` qui peuvent être vues comme des phrases de la forme
+verbe sujet complément énonçant des faits comme `Led Zeppelin est un
+groupe de musique` et `Jimmy Page est membre de Led Zeppelin`. Ces
+bases, comme dit précédemment, ont été construites par des communautés
+et sont désormais possédées par les grands acteurs du domaine. Elles
+sont complétées par des données ajoutées sur les pages Web. Par
+exemple, un site web de restaurant va ajouter sur sa page Web des
+données comme sa latitude et sa longitude ou encore des heures et
+jours d'ouverture. Ces données récupérées vont permettre à des
+programmes (comme le navigateur) de calculer des distances et savoir
+si le restaurant est proche de votre géoloalisation ou encore de
+savoir si le restaurant est ouvert pour vous le proposer.
 
 ### Moteurs intelligents
 
