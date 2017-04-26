@@ -575,11 +575,11 @@ les données, les comprennent et les utilisent. Pour cela, s'est
 développé le Web des données et connaissances.
 
 Ceci a été réalisé conjointement par des communautés spécialisées
-comme en musique comme `MusicBrainz` et en géographie comme
-`GeoNames`, des communautés d'utilisateurs et de chercheurs pour des
-bases généralistes avec `Wikidata` et `DBpedia`, des bases pour
-normaliser la description des données comme `foaf`. Ces bases ont été
-reprises (voire pillées) par les grands acteurs du domaine comme
+comme en musique avec `MusicBrainz` ou en géographie avec `GeoNames`,
+des communautés d'utilisateurs et de chercheurs pour des bases
+généralistes avec `Wikidata` et `DBpedia`, des bases pour normaliser
+la description des données avec `foaf`. Ces bases ont été reprises
+(voire pillées) par les grands acteurs du domaine comme
 `Google`. L'idée est donc de construire des bases de données de
 connaissances exploitables sur le Web. Les données sont décrites sous
 forme de triplets de la forme **(sujet, propriété, objet)** comme, par
@@ -588,42 +588,154 @@ Led Zeppelin)` qui peuvent être vues comme des phrases de la forme
 verbe sujet complément énonçant des faits comme `Led Zeppelin est un
 groupe de musique` et `Jimmy Page est membre de Led Zeppelin`. Ces
 bases, comme dit précédemment, ont été construites par des communautés
-et sont désormais possédées par les grands acteurs du domaine. Elles
-sont complétées par des données ajoutées sur les pages Web. Par
-exemple, un site web de restaurant va ajouter sur sa page Web des
-données comme sa latitude et sa longitude ou encore des heures et
-jours d'ouverture. Ces données récupérées vont permettre à des
-programmes (comme le navigateur) de calculer des distances et savoir
-si le restaurant est proche de votre géoloalisation ou encore de
-savoir si le restaurant est ouvert pour vous le proposer.
+et sont désormais utilisées voire possédées par les grands acteurs du
+domaine.
+
+Une autre source de données est issue des pages Web construites par
+les utilisateurs du Web. Par exemple, un site web de restaurant va
+ajouter sur sa page Web des données comme sa latitude et sa longitude
+ou encore des heures et jours d'ouverture. Ces données doivent
+respecter des conventions d'écriture comme en `html`. Elles peuvent
+alors être utilisées par des programmes (comme le navigateur) pour
+calculer des distances et donc savoir si le restaurant est proche de
+votre géoloalisation ou encore pour savoir si le restaurant est ouvert
+pour vous le recommander.
 
 ### Moteurs intelligents
 
-WE à Londres, parole et langage naturel
+Si les moteurs de recherche d'information sont capables de vous
+suggérer des pages Web en réponse à une requête et de récupérer des
+données relatives à une question factuelle, ils sont encore**
+incapables de raisonner**. Pour nous en convaincre, supposons que vous
+souhaitiez aller passer en week-end à Paris. Vous allez utiliser un
+moteur de recherche d'information pour rechercher des horaires et
+tarifs de train ou d'avion ou de bus, éventuellement en utilisant des
+comparateurs, ou encore voir sur un site de covoiturage. Vous allez
+chercher une auberge de jeunesse, une chambre en résidence, un hôtel
+pour la nuit. Vous allez, éventuellement, rechercher des expositions,
+des spectacles, des musées pour vous occuper. Le moteur vous aide mais
+l'intelligence c'est vous ! Vous avez que pour vous rendre à Paris, il
+faut utiliser un moyen de transport, vous savez que les moyens de
+transport principaux sont le bus, le train, l'avion. Vous avez une
+connaissance du monde que ne possède pas la machine mais peut être le
+Web des données permettra d'avancer sur ce point. La deuxième
+difficulté est de choisir et raisonner. Choisir les meilleures options
+en fonction du lieu où vous rédidez de vos préférences
+connues. Raisonner pour être capable de chosir et d'enchaîner les
+transports pour, par exemple, si je choisis le train, se rendre à la
+gare avec un moyen de transport et un timing adéquat. De même pour me
+rendre de la gare d'arrivée au site de résidence choisi. Pour l'heure,
+nous ne sommes pas encore à l'époque où nous pouvons passer une
+requête de la forme `Organise moi un week end à Paris`.
+
+Cependant, il devient possible d'interroger votre ordinateur par la
+parole. Une première couche logicielle se charge de transformer les
+signaux acoustiques en une suite de mots de la langue utilisée. Pour
+un moteur de recherche d'information ceci amène à une requête
+textuelle en langage naturel. Vous pouvez d'ailleurs taper directement
+une telle requête dans la barre de saisie. Nous avons déja évoqué des
+requêtes comme `Quel est l'âge de François Hollande ?`. Comment est
+traité cette requête ? Tout d'abord, il y a des traitements pour
+reconnaître que c'est une question, le verbe, le sujet, le
+complément. Tous ces traitements ne sont pas connus et ils évoluent
+constamment car le nombre de questions auxquelles le moteur peut
+répondre grandit sans cesse. Lorsque ces traitements sont réalisés le
+moteur interroge le Web des données et le graphe du Web pour apporter
+réponse factuelle à la question et une liste de liens. Pour cette
+liste de liens, il est difficile de savoir comment sont calculés les
+scores de pertinence à cause des pré-traitements inconnus et du calcul
+de score dont nous avons déja signalé que beaucoup de points étaient
+secrets. Vous pouvez facilement imaginer des requêtes plus complexes
+comme `quels sont les cinémas proches ?` où il faut comprendre la
+sémantique du mot proche et savoir à partir de quel endroit on
+calcule.
 
 ## Conclusion et discussion
 
-### Le secret des moteurs
-
-formules cachées, formules qui évoluent, compréhension des scores de
-moins en moins faciles.
-
 ### Les liens payants
 
+La fenêtre de réponse contient une liste ordonnée par score de
+partinance de l'ensemble des pages web et éventuellement un cadre
+contenant des données factuelles relatives à la requête dont nous
+avons déja parlé dans ce cours. Vous avez également souvent des
+**liens sponsorisés**. Pour ces liens, seules apparaissent des
+entreprises qui rémunèrent l'entreprise associée au moteur de
+recherche d'information. La rémunération pouvant être basée sur le
+nombre d'utilisateurs cliquant sur les liens proposés.
 
+### Le secret des moteurs
+
+Nous avons vu dans ce cours que les formules de calcul de score pour
+un moteur de recherche d'information sont secrètes même si on en
+connaît les éléments principaux. De plus, ces formules évoluent et
+avec les évolutions comme le langage naturel, la compréhension du
+calcul du score et donc de l'ordre des réponses devient de plus en
+plus complexe. Retenez que **l'ordre des réponses est donné par un
+algorithme secret écrit par une entreprise commerciale**.
+
+Ceci pose des *questions éthiques* car les réponses proposées et leur
+ordre peuvent influencer votre vision sur une question et peuvent
+influencer vos achats. Certains militent pour que les formules de
+calcul de score soient publiées pour que l'utilisateur sache pourquoi
+certaines pages lui sont proposées plutôt que d'autres.  La réponse
+des entreprises et souvent de dire que la diffusion de ces formules
+permettraient de tricher plus facilement. Il faut savoir que, même
+avec des formules secrètes, il existe une forte concurrence entre les
+sites sur la question du référencement, c'est-à-dire sur la question
+d'être bien classé dans l'ordre des réponses. C'est le cas des
+entreprises commerciales qui veulent apparaître pour vous vendre des
+produits. C'est le cas de courants de pensée qui veulent imposer une
+opinion comme, par exemple, les courants anti-avortement qui luttent
+pour que les sites critiquant l'avortement apparaissent bien classés
+lorsque vous faîtes une requête sur l'avortement. Retenz que **vous
+devez toujours avoir un regard critique sur les réponses qui vous sont
+proposées et leur ordre**. Ceci est vrai pour les moteurs de recherche
+d'information mais aussi pour beaucoup d'applications Web vous
+suggérant ou vous recommandant des produits, des contacts, des
+informations, des restaurants et autres.
 
 # Le référencement
 
-objectifs et principes
+Nous ne parlons ici que du **référencement naturel** qui correspond
+aux liens non sponsorisés contrairement au **référencement payant**
+qui correspond aux liens sponsorisés. Nous avons vu que, pour de
+bonnes ou de mauvaises raisons, il est important d'apparaître bien
+classé en réponse à des requêtes mais nous nous plaçons dans le cas de
+bonnes raisons. La **lecture de cette section est
+facultative**. Considérons que vous êtes responsable d'une association
+et que vous souhaitez que son site Web soit bien classé, c'est-à-dire
+bien référencé, c'est-à-dire encore qu'un utilisateur va pouvoir
+trouver le site de votre association.
 
 ## Une bonne indexation des documents
 
-au niveau du site et de la page
+Pour assurer celà, il faut que le site Web soit bien conçu et facilite
+la visite des robots qui indexent le Web. Ceci est du ressort du
+gestionnaire du site Web et correspond à un certain nombre de
+préconisations techniques à respecter comme : nom unique du site, pas
+de lien menant sur une page inexistante, respect des normes `html`,
+fourniture d'un plan du site, ...
 
 ## Un bon score de pertinence
 
-bons mots aux bonxs endroits
+Il faut préciser les mots importants pour lesquels vous souhaitez être
+trouvés. Lorsque ces mots sont choisis, il est important de les faire
+figurer au bon endroit : dans l'adresse de la page, dans le titre de
+la page, dans les titres de section, dans les mots clé, dans le
+contenu. Bien évidemment ceci doit être fait en gardant un document
+bien structuré, clair et agréable à lire. Notez qu'un tel contenu va
+inciter ceux qui mettent des liens sur vos pages à mettre également
+les bons mots dans les textes des liens.
 
 ## Un bon score de notoriété
 
-bon contenu pour attirer les liens
+Il faut pour cela que beaucoup de pages à forte notoriété pointent sur
+vous. Ceci doit être réalisé sans tricher. Vous pouvez mettre des
+liens internes à votre site qui peuvent renforcer le score de
+notoriété de certaines pages. Vous pouvez suggérer à des associations
+partenaires de mettre des liens vers vos pages. Mais l'essentiel est
+d'avoir un contenu intéressant dans votre site qui incite d'autres
+usagers du Web à créer des liens vers vos pages.
+
+En conclusion, pour être bien référencé l'important est d'avoir **un
+site bien conçu avec un contenu structuré clair et pertinent**.
