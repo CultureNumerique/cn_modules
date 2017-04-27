@@ -372,27 +372,33 @@ documents.
 
 Nous avons présenté l'indexation et la calcul de score de pertinence
 d'un document textuel relativement à une requête. Nous allons voir
-comment ceci est réalisé sur le Web. Nous présentons ensuite le score
-de notoriété qui mesure l'importance d'un site Web. C'est ce score
-introduit par Google qui a donné un avantage significatif à `Google`
-dans les années 1990. Nous en déduirons les éléments principaux du
-calcul du score d'un document Web relativement à une requête.
+comment ce score est adapté aux documents du Web. Nous présentons
+ensuite le score de notoriété qui mesure l'importance d'une page
+Web. C'est ce score introduit par Google qui a donné un avantage
+significatif à `Google` dans les années 1990. La combinaison de ces
+deux scores est la base du score d'un document Web relativement à une
+requête.
 
 ## Indexation du web
 
-- l'**indexation du Web** est réalisé par des **programmes appelés
+Pour calculer un score de pertinence, il faut au préalable que les
+documents du Web soient indexés. Nous présentons quelques points
+essentiels :
+
+
+- L'**indexation du Web** est réalisé par des **programmes appelés
 robots** qui parcourent les sites Web et suivent les liens. Ces
 programmes récupèrent les informations utiles comme les mots qui
-apparaissent, leur nombre d'apparitions, ...
-- tous les documents du Web sont indexés quel que soit leur format :
+apparaissent, leur nombre d'apparitions, entre autres.
+- **Tous les documents du Web sont indexés** quel que soit leur format :
   pages Web au format `html`, documents imprimables au format `pdf`,
-  documents au format `doc`, ... ce qui mène à un **nombre de documents
-  de l'ordre de 60 000 milliards** en 2016
-- tous les mots qui apparaissent sur le Web sont indexés ce qui amène
-  à un dictionnaire contenant **plusieurs millions de mots**
-- ceci permet de construire un **index de très grande taille** qui est
+  documents au format `doc`, ... ce qui mène à un nombre de documents
+  de l'ordre de 60 000 milliards en 2016.
+- **Tous les mots qui apparaissent sur le Web sont indexés** ce qui amène
+  à un dictionnaire contenant plusieurs millions de mots.
+- Ceci permet de construire un **index de très grande taille** qui est
   mis à jour régulièrement avec les informations récupérées par les robots
-- l'index est réparti sur des fermes de calcul (un grand nombre
+- L'index est réparti sur des fermes de calcul (un grand nombre
   d'ordinateurs de grande capacité en réesau) réparties dans le monde
   entier. On peut noter que celà implique une très grande consommation
   d'énergie et donc le Web n'est pas si écologique qu'on pourrait le
@@ -401,7 +407,7 @@ apparaissent, leur nombre d'apparitions, ...
 ## Score de pertinence
 
 Considérons un document du Web -- une page web -- au format `html`. Un
-tel document a un contenu mais aussi une structure définie un titre
+tel document a un contenu mais aussi une structure avec un titre
 principal et des sections ayant des titres. L'apparition d'un mot de
 la requête dans un titre est plus important que son apparition dans le
 contenu. Ceci doit donc être pris en compte dans le calcul de
@@ -427,14 +433,14 @@ page Web** dont les principales sont :
 Pour chacune de ces vues, un score de pertinence peut être calculé
 avec la méthode introduite auparavant. Il reste à combiner ces scores
 avec une formule de la forme : un pourcentage du score de contenu + un
-pourcentage du score de titre + ... **La formule de combinaison est
+pourcentage du score des titres + ... **La formule de combinaison est
 secrète !**, c'est-à-dire que l'on ne connaît pas les pourcentages
 utilisés dans la formule. On sait qu'elle existe et qu'elle
 évolue. Par exemple, l'influence du score de pertinence des mots clés
 a été nettement diminuée suite à de nombreux abus de concepteurs de
 pages Web qui ajoutaient des mots clé fictifs sur leur page pour
 essayer d'améliorer artificiellement leur score, et donc on sait que
-le pourcentage pour le score de pertinence ds mots clé a été diminué.
+le pourcentage pour le score de pertinence des mots clé a été diminué.
 
 ## Score de notoriété
 
@@ -442,13 +448,13 @@ Le Web a une structure de réseau ou de graphe avec des pages Web qui
 pointent les unes vers les autres avec les hyperliens. L'idée est
 d'utiliser cette structure pour mesurer la **notoriété** des pages. On
 souhaite donc un **score de notoriété** qui va mesurer à quel point
-une page est souvent visitée par les internautes. Une première
-tentative de définition de score de notoriété d'une page pourrait être
-le nombre de pages qui pointent sur elle. Cette définition n'est pas
-robuste car on peut tricher (cela a été fait) : pour renforcer le
-score de notoriété de ma page, je crée des (beaucoup) de pages
-artificielles qui pointent sur ma page. La définition doit donc être
-plus intelligente et la bonne définition est la suivante :
+une page est importante les internautes. Une première tentative de
+définition de score de notoriété d'une page pourrait être le nombre de
+pages qui pointent sur elle. Cette définition n'est pas robuste car on
+peut tricher (cela a été fait) : pour renforcer le score de notoriété
+de ma page, je crée des (beaucoup) de pages artificielles qui pointent
+sur ma page. La définition doit donc être plus intelligente et la
+bonne définition est la suivante :
 
 > Une page a **une forte notoriété** si beaucoup de pages **ayant une
 > forte notoriété** pointent sur elle
@@ -496,15 +502,15 @@ scores pour obtenir un score de notoriété.
 
 Une requête sur le Web dans un moteur de recherche d'information est
 très souvent exprimée comme une suite de mots clés. Le **score Web
-d'un document Web relativement à une requête** est calculé comme  une
+d'un document Web relativement à une requête** est calculé comme une
 combinaison de la forme : un pourcentage du score de pertinence de la
 page relativement à la requête + un pourcentage du score de notoriété
 de la page. Ici encore la formule de combinaison n'est pas connue !
 Ici encore, on sait qu'elle existe et qu'elle évolue. Par exemple, on
 observe que le score de notoriété a pris ces dernières années une
-importance de plus en plus grande car les résultats en première page
-de réponse sont souvent des sites avec une forte notoriété comme
-Wikipedia, des sites de journaux et, plus généralement, des sites de
+importance de plus en plus grande car les pages les mieux classées ont
+souvent une forte notoriété comme les pages Wikipedia, des pages de
+sites de journaux et, plus généralement, des pages de sites de
 référence.
 
 Si les deux éléments essentiels sont le score de pertinence et le
@@ -515,13 +521,14 @@ du score web. Les éléments principaux intervenant dans le calcul sont :
 - la langue d'interrogation
 - le pays du site du moteur
 - le media d'interrogation (ordinateur ou téléphone portable)
-- la localisation du media d'interrogation
-- l'historique des recherches et des liens suivis quand on est identifié
 
-Rappelons également qu'il existe différents moteurs de recherche
-d'information et que chacun d'eux a développé ses propres algorithmes
-et formules de calcul et donc que les résultats proposés en une
-réponse à une requête peuvent différer selon le moteur choisi.
+D'autres éléments comme la localisation du media d'interrogation et
+l'historique des recherches et des liens suivis peuvent être pris en
+compte mais nous y reviendrons dans la conclusion. Rappelons également
+qu'il existe différents moteurs de recherche d'information et que
+chacun d'eux a développé ses propres algorithmes et formules de calcul
+et donc que **les résultats pour une requête peuvent différer selon le
+moteur choisi**.
 
 La plupart des requêtes posées sur le Web sont des requêtes avec une
 suite de mots clés mais un autre type de requête correspond aux
@@ -533,30 +540,58 @@ barre de saisie. Par exemple, on peut considérer la requête par phrase
 ordre de pertinence les documents contenant les trois mots
 consécutifs. Notez que cette requête donnera donc des résultats
 différents de la requête à trois mots clé `la révolution française`
-pour laquelle la position des mots n'intervient pas. Pour réaliser
-ceci, l'index contient également les positions des mots dans les
-documents où ils apparaissent. Souvent il existe des possibilités de
-requête avancée qui sont très peu utilisés en pratique.
+pour laquelle la position des mots n'intervient pas. Pour être capable
+de répondre aux requêtes par phrase, l'index contient également les
+positions des mots dans les documents où ils apparaissent. Souvent il
+existe aussi des possibilités de requête avancée qui sont très peu
+utilisées en pratique.
 
 # Evolutions, conclusion et discussion
 
 ## Evolutions en cours
 
+### Adaptation à l'utilisateur
+
+Les langues naturelles sont ambigues et un mot peu avoir plusieurs
+sens. Le mot `java` peut désigner une danse ou un langage de
+programmation. Un internaute informaticien souhaiterait voir
+apparaître des pages parlant du langage de programmation alors qu'un
+autre utilisateur préférera des informations sur la danse. Même si un
+mot n'est pas ambigue, un utilisateur préférera des sites
+d'information, un autre des articles scientifiques, un autre encore
+des blogs. Il semble pertinent d'adapter les réponses du moteur aux
+préférences de l'utilisateur. Ceci peut être réalisé si l'historique
+des recherches et des liens suivis est connu. Lorsque vous avez un
+compte et que vous êtes identifiés, le moteur peut mémoriser cet
+historique des recherches et des navigations et l'utiliser pour
+adapter son calcul de score. Ceci est réalisé par certains moteurs
+mais, ici encore, les formules et algorithmes utilisés ne sont pas
+connus. Notes bien que cette **adaptation à l'utilisateur se fait avec
+la contrepartie de la connaissance complète de votre historique de
+navigation** par le moteur.
+
+Un autre type d'adaptation est d'utiliser les **informations de
+géolocalisation** lorsque vous utilisez un téléphone portable et que
+vous avez activé la géolocalisation. Le score des pages portant sur
+des objets proches de vous peut alors être renforcé. Ici encore, les
+algorithmes sont spécifiques à chaque moteur et ne sont pas
+connues. Notez également que toutes les informations de
+géolocalisation sont connues et peuvent être historisées.
+
 ### Web des données
 
-Une première évolution est apparue en 2014. Vous avez certainement
-remarqué que lorsque vous tapez le nom d'une entité du monde que ce
-soit un groupe de musique (essayez `Led Zeppelin`), un personnage
-célèbre (essayez `Larry Page`), un lieu géographique (essayez
-`Middelburg`) ou encore un nom de fleur (essayez `rose`), vous voyez
-apparaître en résultat à votre requête un cadre présentant des
-informations factuelles sur l'entité. Par exemple, pour `Led
-Zeppelin`, vous trouvez une description du groupe, sa composition, le
-genre de musique, les principales chansons, les principaux albums,
-... Donc, contrairement au résultat qui fournit des liens vers des
-pages que vous pouvez aller lire dans le graphe des pages Web, ici on
-**extrait des données sur l'entité**. Ceci est rendu possible grace au
-*Web des données et connaissances* encore appelé *"knowledge graph"*.
+Une évolution, apparue en 2014, est que lorsque vous tapez le nom
+d'une entité du monde que ce soit un groupe de musique (essayez `Led
+Zeppelin`), un personnage célèbre (essayez `Larry Page`), un lieu
+géographique (essayez `Middelburg`) ou encore un nom de fleur (essayez
+`rose`), vous voyez apparaître en résultat à votre requête un cadre
+présentant des informations factuelles sur l'entité. Par exemple, pour
+`Led Zeppelin`, vous trouvez une description du groupe, sa
+composition, le genre de musique, les principales chansons, les
+principaux albums, ... Donc, contrairement au résultat qui fournit des
+liens vers des pages, ici on **extrait des données sur
+l'entité**. Ceci est rendu possible grace au *Web des données et
+connaissances* encore appelé *"knowledge graph"*.
 
 Le Web et les moteurs de recherche d'information étaient jusqu'alors
 destinés à des utilisateurs humains qui posaient des requêtes et
@@ -578,24 +613,22 @@ Ceci a été réalisé conjointement par des communautés spécialisées
 comme en musique avec `MusicBrainz` ou en géographie avec `GeoNames`,
 des communautés d'utilisateurs et de chercheurs pour des bases
 généralistes avec `Wikidata` et `DBpedia`, des bases pour normaliser
-la description des données avec `foaf`. Ces bases ont été reprises
-(voire pillées) par les grands acteurs du domaine comme
-`Google`. L'idée est donc de construire des bases de données de
-connaissances exploitables sur le Web. Les données sont décrites sous
-forme de triplets de la forme **(sujet, propriété, objet)** comme, par
-exemple, `(Led Zeppelin, IsA, MusicGroup` ou `(Jimmy Page, IsMemberOf,
-Led Zeppelin)` qui peuvent être vues comme des phrases de la forme
-verbe sujet complément énonçant des faits comme `Led Zeppelin est un
-groupe de musique` et `Jimmy Page est membre de Led Zeppelin`. Ces
-bases, comme dit précédemment, ont été construites par des communautés
-et sont désormais utilisées voire possédées par les grands acteurs du
-domaine.
+la description des données avec `foaf`. L'idée est de construire des
+bases de données de connaissances exploitables sur le Web. Les données
+sont décrites sous forme de triplets de la forme **(sujet, propriété,
+objet)** comme, par exemple, `(Led Zeppelin, IsA, MusicGroup` ou
+`(Jimmy Page, IsMemberOf, Led Zeppelin)` qui peuvent être vues comme
+des phrases de la forme verbe sujet complément énonçant des faits
+comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est
+membre de Led Zeppelin`. Ces bases de données ont été construites par
+des communautés et sont désormais utilisées voire possédées par les
+grands acteurs du domaine comme `Google`.
 
 Une autre source de données est issue des pages Web construites par
 les utilisateurs du Web. Par exemple, un site web de restaurant va
 ajouter sur sa page Web des données comme sa latitude et sa longitude
 ou encore des heures et jours d'ouverture. Ces données doivent
-respecter des conventions d'écriture comme en `html`. Elles peuvent
+respecter des conventions d'écriture  en `html`. Elles peuvent
 alors être utilisées par des programmes (comme le navigateur) pour
 calculer des distances et donc savoir si le restaurant est proche de
 votre géoloalisation ou encore pour savoir si le restaurant est ouvert
@@ -614,19 +647,20 @@ comparateurs, ou encore voir sur un site de covoiturage. Vous allez
 chercher une auberge de jeunesse, une chambre en résidence, un hôtel
 pour la nuit. Vous allez, éventuellement, rechercher des expositions,
 des spectacles, des musées pour vous occuper. Le moteur vous aide mais
-l'intelligence c'est vous ! Vous avez que pour vous rendre à Paris, il
-faut utiliser un moyen de transport, vous savez que les moyens de
+*l'intelligence c'est vous !* Vous savez que pour vous rendre à Paris,
+il faut utiliser un moyen de transport, vous savez que les moyens de
 transport principaux sont le bus, le train, l'avion. Vous avez une
-connaissance du monde que ne possède pas la machine mais peut être le
-Web des données permettra d'avancer sur ce point. La deuxième
-difficulté est de choisir et raisonner. Choisir les meilleures options
-en fonction du lieu où vous rédidez de vos préférences
-connues. Raisonner pour être capable de chosir et d'enchaîner les
-transports pour, par exemple, si je choisis le train, se rendre à la
-gare avec un moyen de transport et un timing adéquat. De même pour me
-rendre de la gare d'arrivée au site de résidence choisi. Pour l'heure,
-nous ne sommes pas encore à l'époque où nous pouvons passer une
-requête de la forme `Organise moi un week end à Paris`.
+connaissance du monde que ne possède pas la machine. Le Web des
+données a pour objectif d'apporter cette connaissance du monde eux
+machines et aux programmes. Mais cette connaissance n'est pas
+suffisante car il faut savoir l'utiliser et raisonner. Par exemple,
+pour choisir les meilleures options en fonction du lieu où vous
+résidez et de vos préférences. Raisonner pour, par exemple, être
+capable de chosir et d'enchaîner les transports pour, par exemple, si
+je choisis le train, se rendre à la gare avec un moyen de transport et
+un timing adéquat. De même pour me rendre de la gare d'arrivée au site
+de résidence choisi. Pour l'heure, les moteurs ne sont pas capables de
+répondre à des requêtes comme `Organise moi un week end à Paris`.
 
 Cependant, il devient possible d'interroger votre ordinateur par la
 parole. Une première couche logicielle se charge de transformer les
@@ -645,23 +679,27 @@ réponse factuelle à la question et une liste de liens. Pour cette
 liste de liens, il est difficile de savoir comment sont calculés les
 scores de pertinence à cause des pré-traitements inconnus et du calcul
 de score dont nous avons déja signalé que beaucoup de points étaient
-secrets. Vous pouvez facilement imaginer des requêtes plus complexes
-comme `quels sont les cinémas proches ?` où il faut comprendre la
-sémantique du mot proche et savoir à partir de quel endroit on
-calcule.
+secrets. Si on considère une requête comme `quels sont les cinémas
+proches ?`, le problème est plus difficile car il faut comprendre la
+sémantique du mot proche, en déduire qu'il faut calculer des distances
+à partir d'un point à choisir et adapter les réponses en
+conséquence. Le traitement des requêtes en langage naturel progresse
+mais toutes les questions sont loin d'être résolues.
 
 ## Conclusion et discussion
 
 ### Les liens payants
 
 La fenêtre de réponse contient une liste ordonnée par score de
-partinance de l'ensemble des pages web et éventuellement un cadre
+partinence de l'ensemble des pages Web et éventuellement un cadre
 contenant des données factuelles relatives à la requête dont nous
-avons déja parlé dans ce cours. Vous avez également souvent des
-**liens sponsorisés**. Pour ces liens, seules apparaissent des
-entreprises qui rémunèrent l'entreprise associée au moteur de
-recherche d'information. La rémunération pouvant être basée sur le
-nombre d'utilisateurs cliquant sur les liens proposés.
+avons déja parlé dans ce cours. Vous avez également souvent une liste
+ordonnée de **liens sponsorisés**. Pour ces liens, seules apparaissent
+des entreprises qui rémunèrent l'entreprise associée au moteur de
+recherche d'information. La rémunération peut être calculée sur le
+nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc
+que **l'apparition dans une liste de liens sponsorisés est lié à une
+rémunération**.
 
 ### Le secret des moteurs
 
@@ -678,21 +716,28 @@ ordre peuvent influencer votre vision sur une question et peuvent
 influencer vos achats. Certains militent pour que les formules de
 calcul de score soient publiées pour que l'utilisateur sache pourquoi
 certaines pages lui sont proposées plutôt que d'autres.  La réponse
-des entreprises et souvent de dire que la diffusion de ces formules
-permettraient de tricher plus facilement. Il faut savoir que, même
-avec des formules secrètes, il existe une forte concurrence entre les
-sites sur la question du référencement, c'est-à-dire sur la question
-d'être bien classé dans l'ordre des réponses. C'est le cas des
-entreprises commerciales qui veulent apparaître pour vous vendre des
+est souvent de dire que la diffusion de ces formules permettraient de
+tricher plus facilement. Il faut savoir que, même avec des formules
+secrètes, il existe une forte concurrence entre les sites sur la
+question du référencement, c'est-à-dire sur la question d'être bien
+classé dans l'ordre des réponses. C'est le cas des entreprises
+commerciales qui veulent apparaître pour vous vendre des
 produits. C'est le cas de courants de pensée qui veulent imposer une
 opinion comme, par exemple, les courants anti-avortement qui luttent
 pour que les sites critiquant l'avortement apparaissent bien classés
-lorsque vous faîtes une requête sur l'avortement. Retenz que **vous
+lorsque vous faîtes une requête sur l'avortement. Retenez que **vous
 devez toujours avoir un regard critique sur les réponses qui vous sont
-proposées et leur ordre**. Ceci est vrai pour les moteurs de recherche
-d'information mais aussi pour beaucoup d'applications Web vous
-suggérant ou vous recommandant des produits, des contacts, des
-informations, des restaurants et autres.
+proposées et leur ordre**.
+
+Ceci est vrai pour les moteurs de recherche d'information mais aussi
+pour beaucoup d'applications Web vous suggérant ou vous recommandant
+des produits, des contacts, des informations, des restaurants et
+autres. L'adaptation d'un logiciel à vos besoins implique que vos
+données historiques soient utilisées et donc soient mémorisées. De
+même, l'adaptation à votre localisation nécessite que vos données de
+géolocalisation soient utilisées et donc soient mémorisées. Retenez
+que **l'adaptation à votre profil et à votre localisation implique la
+mémorisation de données personnelles historiques**.
 
 # Le référencement
 
@@ -724,8 +769,8 @@ figurer au bon endroit : dans l'adresse de la page, dans le titre de
 la page, dans les titres de section, dans les mots clé, dans le
 contenu. Bien évidemment ceci doit être fait en gardant un document
 bien structuré, clair et agréable à lire. Notez qu'un tel contenu va
-inciter ceux qui mettent des liens sur vos pages à mettre également
-les bons mots dans les textes des liens.
+inciter à mettre des liens sur vos pages avec les bons mots dans les
+textes des liens.
 
 ## Un bon score de notoriété
 
