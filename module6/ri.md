@@ -17,12 +17,13 @@ scientifiques, des livres, ... Ils contiennent des informations
 textuelles mais aussi des dessins, des images et des videos. Ils
 proviennent de sources variées comme des administrations, des
 journaux, des entreprises commerciales mais aussi les réseaux sociaux
-et les capteurs. Ils sont en très grande quantité avec, par exemple,
-un nombre estimé de 60 000 milliards de documents Web en 2016. Cette
-masse de documents génère de nouveaux besoins comme pouvoir retrouver
-des documents concernant un sujet précis, pouvoir recevoir des
-suggestions d'articles de journaux ou encore pouvoir recevoir des
-recommandations de livres à lire ou de films à regarder.
+et les objets connectés (caméras, compteurs intelligents, gps,
+...). Ils sont en très grande quantité avec, par exemple, un nombre
+estimé de 60 000 milliards de documents Web en 2016. Cette masse de
+documents génère de nouveaux besoins comme pouvoir retrouver des
+documents concernant un sujet précis, pouvoir recevoir des suggestions
+d'articles de journaux ou encore pouvoir recevoir des recommandations
+de livres à lire ou de films à regarder.
 
 Nous allons considérer la recherche de documents et, pour cela, nous
 étudions un outil numérique utilisé quotidiennement par chacun d'entre
@@ -49,7 +50,7 @@ intelligent et averti de ces moteurs de recherche d'information.
 
 Dans cet objectif, nous allons présenter les algorithmes et structures
 de données utilisés pour calculer le score Web d'un document
-relativement à une requête composée de plusieurs mots. Nous commeçons
+relativement à une requête composée de plusieurs mots. Nous commençons
 par présenter les méthodes classiques de recherche d'information que
 sont la recherche séquentielle (comme la recherche de mails dans votre
 lecteur de mails) et la recherche Booléenne (comme la recherche de
@@ -62,12 +63,12 @@ entre elles par des hyperliens. C'est l'introduction de ce score de
 notoriété calculé par **l'algorithme PageRank** qui a contribué au
 succès de Google dès la fin du vingtième siècle. Nous montrons comment
 utiliser ces scores pour attribuer un score Web à un document Web
-relativement à une requête. Nous en déduisons de bonnes pratiques pour
-que vos documents soient bien classés par les moteurs de recherche. On
-parle aussi de documents bien référencés et le *référencement* étudie
-ces bonnes pratiques. Nous terminons par une discussion sur les
+relativement à une requête. Nous terminons par une discussion sur les
 problèmes éthiques et sociétaux posés par les moteurs de recherche et
-par une présentation des évolutions en cours.
+par une présentation des évolutions en cours. En complément, nous
+présentons succinctement les bonnes pratiques pour que vos documents
+soient bien classés par les moteurs de recherche. On parle aussi de
+documents bien référencés et le *référencement* étudie ces questions.
 
 # Les modèles de recherche d'information
 
@@ -101,12 +102,12 @@ exactement à la chaîne cherchée. C'est un *algorithme séquentiel* qui
 parcourt complètement le(s) texte(s) où l'on cherche.
 
 Le langage de requêtes peut être étendu avec des requêtes plus
-complexes. On peut introduire des jokers souvent notés `*`, + et ? où
-le `*` représente une suite de caractères quelconque, le `+` une suite de
-caractères non vide et le `?` n'importe quel caractère. Par exemple, la
-requête `pa*on` est satisfaite par des mots comme `paon`, `pantalon`
-ou `passion` ; ces deux derniers mots satisfont la requête `pa+on`
-alors que `paon` ne la satisfait pas ; la requête `pap?` est
+complexes. On peut introduire des jokers souvent notés `*`, `+` et `?`
+où le `*` représente une suite de caractères quelconque, le `+` une
+suite de caractères non vide et le `?` n'importe quel caractère. Par
+exemple, la requête `pa*on` est satisfaite par des mots comme `paon`,
+`pantalon` ou `passion` ; ces deux derniers mots satisfont la requête
+`pa+on` alors que `paon` ne la satisfait pas ; la requête `pap?` est
 satisfaite par des mots comme `pape` ou `papa`mais pas par
 `papillon`. On peut également étendre le langage de requêtes pour
 préciser qu'un caractère doit être dans un ensemble (par exemple un
@@ -134,51 +135,54 @@ immédiate !
 
 ## Le modèle Booléen : les documents satisfaisant un critère
 
-C'est le cas d'un recherche dans un fond documentaire comme une
+C'est le cas d'un recherche dans un fonds documentaire comme une
 bibliothèque. On dispose d'un grand nombre d'ouvrages et on recherche
 un ouvrage par l'intermédiaire d'une requête dans un formulaire.  Les
-ouvrages sont représentés par des notices écrites par des
-documentalistes et contenant le titre, les auteurs, les éditeurs, des
-mots-clés, un résumé, ... Parfois, les ouvrages ont été numérisés et
-on dispose alors aussi de leur contenu textuel et on pourra aussi
-rechercher dans ce contenu textuel (on parle parfois de recherche
-plein texte). Chaque ouvrage possède un *identifiant*, c'est-à-dire un
-numéro qui identifie le document. Nous considérons, dans un premier
-temps, des requêtes à un ou plusieurs mots clé. Dans le modèle
-Booléen, le système de recherche d'information doit renvoyer
-**l'ensemble des ouvrages dont la notice ou le contenu contiennent ces
-mots**. Parfois, on peut restreindre la requête à chercher seulement
-dans les titres. 
+ouvrages sont, en général, représentés par des notices. Une notice
+contient des méta-données sur le document comme le titre, les auteurs,
+les éditeurs et un résumé. Une notice contient également des mots-clés
+sur le document et son sujet qui sont renseignés par des
+documentalistes. Parfois, les ouvrages ont été numérisés, on dispose
+alors de leur contenu textuel dans lequel on peut chercher et on
+parle, dans ce cas, de *recherche plein texte*. Nous supposons que
+chaque ouvrage possède un *identifiant*, c'est-à-dire un numéro qui
+identifie le document. Nous considérons, dans un premier temps, des
+requêtes à un ou plusieurs mots clé. Dans le modèle Booléen, le
+système de recherche d'information doit renvoyer **l'ensemble des
+ouvrages dont la notice ou le contenu contiennent ces mots**.
 
 Quelle que soit la description d'un ouvrage (titre, notice, contenu
 textuel), c'est un texte. On suppose donc avoir un grand nombre de
 contenus textuels, éventuellement longs, dans lesquels chercher.  Par
-conséquent, une **recherche séquentielle est impossible** pour des
-raisons de temps de calcul. Plutôt que de parcourir l'ensemble des
-documents à chaque requête, l'idée est de le faire une fois pour
-construire une nouvelle représentation de l'ensemble des textes qui
-permette ensuite de répondre très rapidement aux requêtes. La phase de
-prétraitement est appelée **indexation** et amène à la construction
-d'une structure de données appelée **index** qui permettra de faire
-ces recherches rapides.  Nous expliquons cette étape d'indexation qui
-peut être décomposée en une phase de prétraitement des documents, la
-constitution d'un dictionnaire et la construction d'un index. Nous
-expliquons ensuite comment calculer des requêtes efficacement.
+conséquent, une **recherche séquentielle peut prendre un temps de
+calcul trop grand**. Plutôt que de parcourir l'ensemble des documents
+à chaque requête, l'idée est de le faire une fois et de construire une
+nouvelle représentation de l'ensemble des textes. Cette représentation
+permet alors de répondre très rapidement aux requêtes. Cette phase de
+prétraitement est appelée **indexation** et la représentation est une
+structure de données appelée **index**.  Nous expliquons cette étape
+d'indexation puis nous expliquons comment calculer des requêtes
+efficacement.
 
 Chaque texte est découpé en une séquence d'unités élémentaires appelés
-`tokens` en utilisant les espaces et les ponctuations. On peut penser
-à un token comme étant un mot mais il peut y avoir aussi des nombres,
-des dates, ... Enfin, différents traitements peuvent être considérés
-comme : considère-t-on différemment les majuscules et les minuscules ?
-considère-t-on les accents ? ... Selon les choix, on effectue les
-traitements adéquats. Par exemple, si on ne tient pas compte de la
-casse, on va transformer tous les mots comme des chaînes de
-minuscules. Ces choix étant effectués, les textes sont désormais des
-suites de mots. On considère alors l'ensemble des mots duquel on
-enlève parfois les mots très fréquents de la langue utilisée comme
-`et`, `le`, ... en français et ceci définit un **dictionnaire ou
+`tokens` qui sont des suites de caractères sans espace et sans symbole
+de ponctuation. Pour simplifier, on peut penser à un token comme étant
+un mot mais il peut y avoir aussi des nombres, des dates, ... Par
+exemple, un texte comme `La Révolution française, 1789-1799 : Une
+histoire socio-politique` sera transformé en la séquence `La
+Révolution française 1789 1799 Une histoire socio politique`. Enfin,
+différents traitements peuvent être considérés comme : considère-t-on
+différemment les majuscules et les minuscules ?  considère-t-on les
+accents ? Sur notre exemple, si on ne prend pas en compte les
+majuscules et si on conserve les accents, on arriverait au texte `la
+Révolution française 1789 1799 une histoire socio politique`. Ces
+choix étant effectués, les textes sont désormais des suites de
+mots. On considère alors l'ensemble des tous les mots apparaissant
+dans la base de textes ce qui définit un **dictionnaire ou
 vocabulaire** qui est l'ensemble des mots qui vont être considérés
-dans les requêtes.
+dans les requêtes. Parfois, les mots très fréquents de la langue
+utilisée comme `et`, `le`, ... en français sont retirés du
+dictionnaire.
 
 Le dictionnaire étant choisi, pour chaque mot du dictionnaire, on peut
 construire la liste des documents qui contiennent ce mot. Cette liste
@@ -190,19 +194,19 @@ est de pouvoir trouver rapidement un mot du dictionnaire avec la liste
 des documents associée car la taille d'un dictionnaire est de l'ordre
 de quelques centaines de milliers de mots. Pour cela, les
 informaticiens ont défini différentes méthodes d'accès rapides. Par
-exemple, si on trie le dictionnaire dans l'ordre lexicographique alors
-on peut accéder rapidement à un mot avec l'algorithme suivant illustré
-en cherchant le mot `rose` : on regarde le mot au milieu du
-dictionnaire, c'est `maman`, donc on cherche dans la seconde moitié ;
-on regarde le mot au milieu de la seconde moitié, c'est `savant`, donc
-on cherche entre `maman` et `savant` ; jusqu'à trouver le mot
-`rose`. On peut montrer qu'un tel algorithme est très efficace. Pour
-un dictionnaire de 500 000 mots, il suffit d'effectuer 19 accès, pour
-une dictionnaire de 1 million de mots, il suffit d'effectuer 20
-accès. On parle de *complexité logarithmique* car si la taille du
-dictionnaire double, on ne doit faire qu'un accès supplémentaire !
-Nous avons défini l'indexation et supposons avoir construit un index
-défini comme suit :
+exemple, on trie le dictionnaire dans l'ordre lexicographique (ordre
+usuel des mots d'un dictionnaire). On peut alors accéder rapidement à
+un mot avec l'algorithme suivant illustré en cherchant le mot `rose` :
+on regarde le mot au milieu du dictionnaire, c'est `maman`, donc on
+cherche dans la seconde moitié ; on regarde le mot au milieu de la
+seconde moitié, c'est `savant`, donc on cherche entre `maman` et
+`savant` ; jusqu'à trouver le mot `rose`. On peut montrer qu'un tel
+algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il
+suffit d'effectuer 19 accès, pour une dictionnaire de 1 million de
+mots, il suffit d'effectuer 20 accès. On parle de *complexité
+logarithmique* car si la taille du dictionnaire double, on ne doit
+faire qu'un accès supplémentaire !  Nous avons défini l'indexation et
+supposons avoir construit un index défini comme suit :
 
 > Un **index** est constitué d'un dictionnaire avec une méthode
 > d'accès rapide à un mot, et, pour chaque mot, on dispose de la liste
@@ -211,6 +215,7 @@ défini comme suit :
 
 Rappelons que l'objectif est de trouver l'ensemble des textes
 contenant les mots de la requête.
+
 - Pour *une requête à un mot clé*, c'est très facile avec l'index :
 chercher le mot dans le dictionnaire, renvoyer la liste des documents
 associée dans l'index.
@@ -227,23 +232,21 @@ requête à deux mots clés `rose` et `blanche`, on trouve la liste 125,
 - Ces principes peuvent être étendus pour des requêtes à plusieurs
 mots clés et même avec des requêtes contenant des opérateurs logiques
 `OU` et `NON`.
-- Les interfaces proposent souvent également des *requêtes par
-position*. Les **requêtes par phrase** sont souvent exprimées avec des
-guillemets comme la requête `"rose blanche"`. On recherche alors les
-documents qui contiennent les mots à deux positions consécutives. Ceci
-peut être réalisé en mémorisant dans l'index la position auxquelles
-apparaissent les mots. Il existe également des requêtes par position
-comme : les deux mots cherchés doivent être distants de moins de 3
-mots.
+- Les interfaces proposent également des *requêtes par position*. Les
+**requêtes par phrase** sont souvent exprimées avec des guillemets
+comme la requête `"rose blanche"`. On recherche alors les documents
+qui contiennent les mots à deux positions consécutives. Ceci peut être
+réalisé en mémorisant dans l'index la position auxquelles apparaissent
+les mots. Il existe également des requêtes par position comme : les
+deux mots cherchés doivent être distants de moins de 3 mots.
 
 Les systèmes étudiés jusqu'à présent dans ce module renvoient une
 liste de documents qui satisfont une propriété. C'est pour cette
 raison qu'on parle de modèle Booléen car la réponse est `VRAI` ou
 `FAUX` selon que le document satisfait ou ne satisfait pas la requête.
-Vous êtes habitués de la recherche sur le Web où on attribue des
-scores aux documents et nous allons donc maintenant introduire la
-notion de score de pertinence qui mesure la proximité entre un
-document et une requête. 
+Vous êtes habitués à la recherche sur le Web où on attribue des scores
+aux documents. Nous introduisons donc la notion de score de pertinence
+qui mesure la proximité entre un document et une requête.
 
 ## Le modèle vectoriel : attribuer un score de pertinence aux documents
 
@@ -254,7 +257,7 @@ considère une requête à plusieurs mots clé, nous allons expliquer
 comment **renvoyer une liste de documents ordonnée par un score de
 pertinence relativement à une requête**.  Pour cela, nous allons voir
 comment on représente un document et une requête par des vecteurs et
-comment on peut définir un score par un calcul sur ces vecteurs.
+comment un calul sur ces vecteurs définit un score de pertinence.
 
 ### Représenter des documents par des vecteurs
 
@@ -269,38 +272,37 @@ paris pendant la révolution française`. Ce document sera représenté
 par un vecteur avec une composante par mot du dictionnaire et toutes
 les composantes valent 0 sauf les composantes pour les mots `à`,
 `citoyennes`, ..., `tricoteuses` qui valent 1. On mémorise donc la
-*présence ou l'absence* d'un mot du dictionnaire dans le document. La
-seconde, appelée **Term frequency**, représente un document par
-vecteur où chaque composante du vecteur correspond à un mot du
-dictionnaire et la valeur est le nombre d'occurrences (d'apparitions)
-du mot dans le document. Par exemple, considérons le document
-`réflexions sur la révolution de france suivi d'un choix de textes de
-burke sur la révolution`.  Il sera représenté par un vecteur avec une
-composante par mot du dictionnaire et toutes les composantes valent 0
-sauf les composantes pour les mots `réflexions`, `france` qui valent 1
-et les composantes pour les mots `la`, `révolution` et `sur` qui
-valent 2 car ils apparaissent deux fois.
+*présence ou l'absence* d'un mot du dictionnaire dans le document.
+
+La seconde, appelée **Term frequency**, représente, de le même façon,
+un document par vecteur mais la valeur est le nombre d'occurrences
+(d'apparitions) du mot dans le document. Par exemple, considérons le
+document `réflexions sur la révolution de france suivi d'un choix de
+textes de burke sur la révolution`.  Il sera représenté par un vecteur
+avec une composante par mot du dictionnaire et toutes les composantes
+valent 0 sauf les composantes pour les mots `réflexions`, `france` qui
+valent 1 et les composantes pour les mots `la`, `révolution` et `sur`
+qui valent 2 car ils apparaissent deux fois.
 
 Mais, lorsque vous écrivez des requêtes sur le web, vous savez que des
-mots trop fréquents, vont vous retourner trop de réponses donc vous
-essayez de trouver des mots ou termes *plus pertinents* pour écrire
-votre requête. Cette notion de pertinence correspond à mieux préciser
-ce que je recherche, c'est-à-dire encore qu'il y a moins de documents
-contenant ce mot. Pour tenir compte de ceci, on peut intégrer dans la
-représentation vectorielle un facteur qui dépend de la fréquence du
-document dans la base de documents. C'est la représentation **term
-frequency -- inverse document frequency (tf-idf)**. dans cette
-représentation, on multiplie la fréquence d'apparition (le tf pour
-term frequency) par un facteur (l'idf ou inverse document
-frequency). Nous ne donnons pas la définition mathématique de l'idf
-mais il suffit de retenir que l'idf d'un mot 
+mots trop fréquents vont vous retourner trop de réponses donc vous
+essayez d'exprimer votre requête avec *des mots ou termes plus
+pertinents ou plus discriminants* dans le sens où vous savez qu'il y a
+moins de documents contenant ces mots. Pour tenir compte de ceci, on
+peut intégrer dans la représentation vectorielle un facteur qui dépend
+de la fréquence du mot dans la base de documents. C'est la
+représentation **term frequency -- inverse document frequency
+(tf-idf)**. Dans cette représentation, on multiplie la fréquence
+d'apparition (le tf pour term frequency) par un facteur (l'idf ou
+inverse document frequency). Nous ne donnons pas la définition
+mathématique de l'idf mais il suffit de retenir que l'idf d'un mot
 
 - est *grand pour un mot rare*, i.e. qui apparaît dans peu de documents
 - est *petit pour un mot fréquent*, i.e. qui apparaît dans beaucoup de
   documents
 
 Par conséquent, la multiplication par l'idf va augmenter la valeur
-pour les mots peu fréquents et la diminuer pour les mots
+pour les mots rares de la collection et la diminuer pour les mots
 fréquents. Par exemple, considérons le --très petit-- document `la
 révolution française`. Sa représentation tf avec les fréquences aurait
 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot
@@ -308,7 +310,7 @@ révolution française`. Sa représentation tf avec les fréquences aurait
 pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour
 le mot `française` disons 0,14 et plus grande pour le mot `révolution`
 disons 0,25 (révolution est le moins fréquent des 3 mots). La
-représentation tf-idf permet donc bien de renforcer la valeur pour les
+représentation tf-idf permet donc de renforcer la valeur pour les
 mots qui apparaissent dans peu de documents ce qui va aider à trouver
 les documents les plus pertinents.
 
@@ -622,7 +624,11 @@ des phrases de la forme verbe sujet complément énonçant des faits
 comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est
 membre de Led Zeppelin`. Ces bases de données ont été construites par
 des communautés et sont désormais utilisées voire possédées par les
-grands acteurs du domaine comme `Google`.
+grands acteurs du domaine comme `Google`. Des algorithmes sur ces
+bases de données permettent de chercher des informations et on pourra,
+par exemple, rechercher les informations factuelles sur `Led Zeppelin`
+qui pourront être affichés dans l'encadré sur la page de réponses à la
+requête.
 
 Une autre source de données est issue des pages Web construites par
 les utilisateurs du Web. Par exemple, un site web de restaurant va
@@ -727,17 +733,23 @@ opinion comme, par exemple, les courants anti-avortement qui luttent
 pour que les sites critiquant l'avortement apparaissent bien classés
 lorsque vous faîtes une requête sur l'avortement. Retenez que **vous
 devez toujours avoir un regard critique sur les réponses qui vous sont
-proposées et leur ordre**.
+proposées et leur ordre**. Ceci est vrai pour les moteurs de recherche
+d'information mais aussi pour beaucoup d'applications Web vous
+suggérant ou vous recommandant des produits, des contacts, des
+informations, des restaurants et autres.
 
-Ceci est vrai pour les moteurs de recherche d'information mais aussi
-pour beaucoup d'applications Web vous suggérant ou vous recommandant
-des produits, des contacts, des informations, des restaurants et
-autres. L'adaptation d'un logiciel à vos besoins implique que vos
-données historiques soient utilisées et donc soient mémorisées. De
-même, l'adaptation à votre localisation nécessite que vos données de
-géolocalisation soient utilisées et donc soient mémorisées. Retenez
-que **l'adaptation à votre profil et à votre localisation implique la
-mémorisation de données personnelles historiques**.
+Enfin, beaucoup de logiciels sur le Web disent s'adapter à vos
+besoins. Ils s'adaptent en réalité à votre profil qui est construit à
+partir de toutes les données qui ont pu être récupérées par le
+logiciel à votre inscription mais aussi auprès de logiciels
+partenaires mais surtout de toutes vos données historiques
+correspondant à toutes vos actions. Ces données sont donc mémorisées
+par l'entreprise concevant le logiciel et peuvent même être revendues
+à d'autres éditeurs de logiciel. De même, l'adaptation à votre
+localisation nécessite que vos données de géolocalisation soient
+utilisées et donc soient mémorisées. Retenez donc que **l'adaptation à
+votre profil et à votre localisation implique la mémorisation de
+données personnelles historiques**.
 
 # Le référencement
 
@@ -759,7 +771,8 @@ la visite des robots qui indexent le Web. Ceci est du ressort du
 gestionnaire du site Web et correspond à un certain nombre de
 préconisations techniques à respecter comme : nom unique du site, pas
 de lien menant sur une page inexistante, respect des normes `html`,
-fourniture d'un plan du site, ...
+fourniture d'un plan du site, pages simples à téléchargement rapide,
+format des pages adaptés au media d'interrogation. 
 
 ## Un bon score de pertinence
 
