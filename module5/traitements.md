@@ -361,7 +361,7 @@ Quelle est la dernière valeur lue dans l'algorithme suivant
 ```
 
 ## L'alternative
-[L'alternative](https://vimeo.com/199154451){: .cours_video}
+[L'alternative](https://vimeo.com/200177929){: .cours_video}
 
 L'ordinateur est une machine très obéissante qui exécute
 scrupuleusement les ordres qu'on lui donne. Le traitement précédent
@@ -442,7 +442,7 @@ Imaginons que Bertrand vient mais pas Yasmine, qui sera invité ?
 ```
 
 ## La répétition
-[La répétition](https://vimeo.com/199154451){: .cours_video}
+[La répétition](https://vimeo.com/200177944){: .cours_video}
 Nous souhaitons maintenant appliquer la transformation à tous les caractères d'un
 texte. Il faut d'abord choisir une représentation du texte. Nous
 supposons que notre texte est une suite de caractères. Tous les
