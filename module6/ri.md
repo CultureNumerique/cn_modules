@@ -70,6 +70,38 @@ présentons succinctement les bonnes pratiques pour que vos documents
 soient bien classés par les moteurs de recherche. On parle aussi de
 documents bien référencés et le *référencement* étudie ces questions.
 
+```compréhension
+::Des moteurs de recherche::
+[markdown]
+Il existe différents moteurs de recherche d'information{T}
+
+::Le coeur des moteurs::
+[markdown]
+Regardez [la page d'accueil de Google](http://www.google.fr) et [la page d'accueil de Qwant](http://www.qwant.com). Tout moteur de recherche
+d'information permet la saisie d'une requête composée de plusieurs
+mots dans une barre de saisie{T}
+
+::Les réponses du moteur Google::
+[markdown]
+Lancer la requête `apprentissage machine`. Le moteur Google renvoie
+{
+= une liste ordonée de réponses
+~ trois listes ordonnées de réponses
+#### Google a volontairement une interface simple pour ses réponses avec une seule liste de réponses. Nous verrons que d'autres éléments peuvent être ajoutés par la suite.}
+
+::Les réponses du moteur Qwant::
+[markdown]
+Lancer la requête `apprentissage machine`. Le moteur Qwant renvoie
+{
+~ une liste ordonée de réponses
+= trois listes ordonnées de réponses
+#### Qwant a une interface plus moderne pour ses réponses avec trois listes de réponses en trois rubriques Web, Actualités et Social.}
+
+::Une première comparaison::
+[markdown]
+En regardant les réponses de Google et de Qwant, les réponses à une requête sont les mêmes et dans le même ordre.{T}
+```
+
 # Les modèles de recherche d'information
 
 ## La recherche séquentielle ou "Grep Through text"
@@ -515,6 +547,15 @@ souvent une forte notoriété comme les pages Wikipedia, des pages de
 sites de journaux et, plus généralement, des pages de sites de
 référence.
 
+Rappelons également qu'il existe différents moteurs de recherche
+d'information comme, par exemple, `Qwant` et `Google`. Chaque moteur a
+développé ses propres algorithmes et ses propres formules de calcul
+basés sur la pertinence et la notoriété.  On peut penser à des
+recettes de cuisine utilisant les mêmes ingrédients mais avec des
+proportions et des modes de cuisson différents. Il est donc important
+de retenir que **les réponses et leur ordre à une même requête
+diffèrent selon le moteur choisi**.
+
 Si les deux éléments essentiels sont le score de pertinence et le
 score de notoriété, le score Web fait intervenir d'autres éléments
 sans qu'on sache exactement comment ils interviennent dans le calcul
@@ -526,11 +567,12 @@ du score web. Les éléments principaux intervenant dans le calcul sont :
 
 D'autres éléments comme la localisation du media d'interrogation et
 l'historique des recherches et des liens suivis peuvent être pris en
-compte mais nous y reviendrons dans la conclusion. Rappelons également
-qu'il existe différents moteurs de recherche d'information et que
-chacun d'eux a développé ses propres algorithmes et formules de calcul
-et donc que **les résultats pour une requête peuvent différer selon le
-moteur choisi**.
+compte mais nous y reviendrons dans la conclusion. Retenez que **le
+score Web est calculé à partir de la pertinence et de la notoriété et
+de nombreux autres éléments**. Il faut également être conscient que
+**les algorithmes de calcul de score évoluent continuellement** et
+donc les réponses et leur ordre à une moment donné ne seront peut-être
+pas identiques un mois plus tard.
 
 La plupart des requêtes posées sur le Web sont des requêtes avec une
 suite de mots clés mais un autre type de requête correspond aux
