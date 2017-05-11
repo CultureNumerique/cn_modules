@@ -85,7 +85,7 @@ mots dans une barre de saisie{T}
 [markdown]
 Lancer la requête `apprentissage machine`. Le moteur Google renvoie
 {
-= une liste ordonée de réponses
+= une liste ordonnée de réponses
 ~ trois listes ordonnées de réponses
 #### Google a volontairement une interface simple pour ses réponses avec une seule liste de réponses. Nous verrons que d'autres éléments peuvent être ajoutés par la suite.}
 
@@ -93,13 +93,17 @@ Lancer la requête `apprentissage machine`. Le moteur Google renvoie
 [markdown]
 Lancer la requête `apprentissage machine`. Le moteur Qwant renvoie
 {
-~ une liste ordonée de réponses
+~ une liste ordonnée de réponses
 = trois listes ordonnées de réponses
 #### Qwant a une interface plus moderne pour ses réponses avec trois listes de réponses en trois rubriques Web, Actualités et Social.}
 
 ::Une première comparaison::
 [markdown]
-En regardant les réponses de Google et de Qwant, les réponses à une requête sont les mêmes et dans le même ordre.{T}
+En comparant les réponses de
+Google et les réponses de Qwant dans la liste Web, on peut affirmer
+que les réponses à une requête sont toujours les mêmes
+et sont dans le même ordre.{T}
+
 ```
 
 # Les modèles de recherche d'information
@@ -120,7 +124,7 @@ de caractères. On peut exécuter une telle requête souvent en passant
 par un menu *Chercher* ou *Find* et en tapant la suite de caractères
 cherchée dans une zone de saisie. Un tel menu existe dans un éditeur
 ou traitement de textes pour chercher dans le contenu, dans votre
-navigateur pour chercher dans une page web, dans votre lecteur de
+navigateur pour chercher dans une page Web, dans votre lecteur de
 mails pour chercher dans les adresses ou les sujets ou les contenus de
 vos mails, dans un site de journaux pour chercher dans les articles,
 dans votre système d'exploitation pour chercher dans les noms des
@@ -316,7 +320,7 @@ valent 0 sauf les composantes pour les mots `réflexions`, `france` qui
 valent 1 et les composantes pour les mots `la`, `révolution` et `sur`
 qui valent 2 car ils apparaissent deux fois.
 
-Mais, lorsque vous écrivez des requêtes sur le web, vous savez que des
+Mais, lorsque vous écrivez des requêtes sur le Web, vous savez que des
 mots trop fréquents vont vous retourner trop de réponses donc vous
 essayez d'exprimer votre requête avec *des mots ou termes plus
 pertinents ou plus discriminants* dans le sens où vous savez qu'il y a
@@ -401,6 +405,37 @@ meilleur score. Le calcul de la pertinence fait donc intervenir une
 normalisation qui revient à considérer une même longueur pour tous les
 documents.
 
+```compréhension
+
+::Recherche séquentielle dans un texte::
+[markdown]
+Activer l'élément de menu **Rechercher** ou **Find** de votre navigateur préféré.
+\n
+- Décrire le résultat obtenu si vous entrez une suite de caractères
+- Donner les actions possibles sur le résultat
+{#### Selon le navigateur, on met en évidence par surbrillance ou par coloration soit la première occurrence de la chaîne cherchée, soit toutes les occurrences. On dispose toujours de suivant, précédent et parfois de premier, dernier, respecter la casse, mots entiers, ...}
+
+::Recherche séquentielle dans un ensemble de textes::
+[markdown]
+Activer l'élément de menu **Rechercher** ou **Find** de votre lecteur de mail préféré. 
+\n
+- Décrire le résultat obtenu si vous cherchez une suite de caractères
+- Décrire les zones de texte dans lesquelles on peut chercher
+{#### Si on recherche dans un mail, on a le même comportement que précédemment. Si on recherche dans un ensemble de mails, on a la liste de tous les mails dans lesquels le mot apparaît. On peut en général chercher dans le champ From, dans le champ to, dans le champ subject ou sujet, dans le corps du mail, et partout.}
+
+::Recherche Booléenne dans un catalogue de bibliothèque::
+[markdown]
+Vous pourrez adapter cet exercice à votre centre de documentation ou votre bibliothèque universitaire. Nous pouvons, par exemple, chercher dans le [catalogue du centre de documentation de l'université de Lille](https://scd-catalogue.univ-lille3.fr/). Lancer la requête simple `culture numérique`. Regarder et comprendre la notice du premier résultat présenté en cliquant sur le titre. Quelles affirmations suivantes sont vraies
+{
+~ on peut trier par score de pertinence
+~%50% on peut limiter la recherche au titre
+~%50% on peut trier par titre
+~ on peut faire une recherche plein texte dans le contenu du livre
+#### L'algorithme est une séquence de 2 instructions, la deuxième est un si que nous avons écrit sur 4 lignes. Dans ce si une autre séquence de deux instructions est imbriquée (lignes 3 et 4).}
+
+
+```
+
 
 # Recherche d'information sur le Web
 
@@ -413,7 +448,7 @@ significatif à `Google` dans les années 1990. La combinaison de ces
 deux scores est la base du score d'un document Web relativement à une
 requête.
 
-## Indexation du web
+## Indexation du Web
 
 Pour calculer un score de pertinence, il faut au préalable que les
 documents du Web soient indexés. Nous présentons quelques points
@@ -440,20 +475,20 @@ apparaissent, leur nombre d'apparitions, entre autres.
 
 ## Score de pertinence
 
-Considérons un document du Web -- une page web -- au format `html`. Un
+Considérons un document du Web -- une page Web -- au format `html`. Un
 tel document a un contenu mais aussi une structure avec un titre
 principal et des sections ayant des titres. L'apparition d'un mot de
 la requête dans un titre est plus important que son apparition dans le
 contenu. Ceci doit donc être pris en compte dans le calcul de
 pertinence. Un deuxième élément qui est spécifique au Web concerne les
-liens (ou hyperliens). En effet, lorsqu'un lien sur une page web est
+liens (ou hyperliens). En effet, lorsqu'un lien sur une page Web est
 créé, il est associé à un texte qui contient de l'information sur la
 page. Par exemple, un site Web qui souhaite mettre un lien sur ce
 module définira un texte cliquable comme `cours d'introduction à la
 recherche information` qui est très informatif sur le contenu de la
 page et doit être pris en compte pour le calcul de pertinence.
 
-Par conséquent, le score de pertinence d'une page web va prendre en
+Par conséquent, le score de pertinence d'une page Web va prendre en
 compte des scores de pertinence calculés sur **différentes vues sur la
 page Web** dont les principales sont :
 
@@ -508,7 +543,7 @@ Web. Pour cela,
 émettre une requête, choisir un lien pour arriver à une page
 - lorsqu'il est sur une page Web, il peut choisir et suivre un des
   liens présents sur la page d'où le nom de surfeur car il surfe sur
-  le web
+  le Web
 
 Le surfeur aléatoire choisit donc une page au hasard, il suit des
 liens en partant de cette page puis recommence en rechoisissant une
@@ -520,7 +555,7 @@ le surfeur alétaoire. Ceci peut être modélisé de façon mathématique et
 calculé par des algorithmes. Un algorithme pour calculer le score de
 notoriété, appelé **algorithme PageRank**, a été introduit par les
 fondateurs de Google au milieu des années 1990. Cet algorithme permet
-d'**attribuer à toute page web un score de notoriété**.
+d'**attribuer à toute page Web un score de notoriété**.
 
 C'est, en réalité, une amélioration de cet algorithme qui est utilisé
 pour lequel on distingue deux types de pages : les *"hubs"* et les
@@ -559,7 +594,7 @@ diffèrent selon le moteur choisi**.
 Si les deux éléments essentiels sont le score de pertinence et le
 score de notoriété, le score Web fait intervenir d'autres éléments
 sans qu'on sache exactement comment ils interviennent dans le calcul
-du score web. Les éléments principaux intervenant dans le calcul sont :
+du score Web. Les éléments principaux intervenant dans le calcul sont :
 
 - la langue d'interrogation
 - le pays du site du moteur
@@ -673,7 +708,7 @@ qui pourront être affichés dans l'encadré sur la page de réponses à la
 requête.
 
 Une autre source de données est issue des pages Web construites par
-les utilisateurs du Web. Par exemple, un site web de restaurant va
+les utilisateurs du Web. Par exemple, un site Web de restaurant va
 ajouter sur sa page Web des données comme sa latitude et sa longitude
 ou encore des heures et jours d'ouverture. Ces données doivent
 respecter des conventions d'écriture  en `html`. Elles peuvent
