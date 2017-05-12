@@ -947,7 +947,7 @@ a faire
 
 ::Algorithmes et recherche d'information::
 [markdown]
-Serge Abiteboul est membre de l'académie des sciences et parmi les brillants chercheurs français en informatique. Lisez son interview sur la création de Google et sur les problèmes éthiques liés aux algorithmes comme les algorithmes utilisés dans un moteur de recherche d'information. Quelles sont les  affirmations suivantes qui sont vraies
+Serge Abiteboul est membre de l'académie des sciences et parmi les brillants chercheurs français en informatique. Lisez [son interview](https://www.fabernovel.com/insights/cultures/il-a-assiste-a-la-premiere-demo-de-google-par-brin-et-page) sur la création de Google et sur les problèmes éthiques liés aux algorithmes comme les algorithmes utilisés dans un moteur de recherche d'information. Quelles sont les  affirmations suivantes qui sont vraies
 {
 ~ Google a été crée dans les années 1980
 ~%33% Google est issu de chercheurs universitaires
