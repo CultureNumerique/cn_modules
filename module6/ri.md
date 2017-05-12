@@ -208,17 +208,17 @@ exemple, un texte comme `La Révolution française, 1789-1799 : Une
 histoire socio-politique` sera transformé en la séquence `La
 Révolution française 1789 1799 Une histoire socio politique`. Enfin,
 différents traitements peuvent être considérés comme : considère-t-on
-différemment les majuscules et les minuscules ?  considère-t-on les
-accents ? Sur notre exemple, si on ne prend pas en compte les
-majuscules et si on conserve les accents, on arriverait au texte `la
-Révolution française 1789 1799 une histoire socio politique`. Ces
-choix étant effectués, les textes sont désormais des suites de
-mots. On considère alors l'ensemble des tous les mots apparaissant
-dans la base de textes ce qui définit un **dictionnaire ou
-vocabulaire** qui est l'ensemble des mots qui vont être considérés
+différemment les majuscules et les minuscules ?  Considère-t-on les
+accents ? Sur notre exemple, si on choisit de convertir en minuscules
+sans accent et sans caractère particulier (comme ç), on obtient le
+texte `la revolution francaise 1789 1799 une histoire socio
+politique`. Ces choix étant effectués, les textes sont désormais des
+suites de mots. On considère alors l'ensemble des tous les mots
+apparaissant dans la base de textes ce qui définit un **dictionnaire
+ou vocabulaire** qui est l'ensemble des mots qui vont être considérés
 dans les requêtes. Parfois, les mots très fréquents de la langue
-utilisée comme `et`, `le`, ... en français sont retirés du
-dictionnaire.
+utilisée sont retirés du dictionnaire, par exemple `et`, `le`, ... en
+français.
 
 Le dictionnaire étant choisi, pour chaque mot du dictionnaire, on peut
 construire la liste des documents qui contiennent ce mot. Cette liste
@@ -425,14 +425,33 @@ Activer l'élément de menu **Rechercher** ou **Find** de votre lecteur de mail 
 
 ::Recherche Booléenne dans un catalogue de bibliothèque::
 [markdown]
-Vous pourrez adapter cet exercice à votre centre de documentation ou votre bibliothèque universitaire. Nous pouvons, par exemple, chercher dans le [catalogue du centre de documentation de l'université de Lille](https://scd-catalogue.univ-lille3.fr/). Lancer la requête simple `culture numérique`. Regarder et comprendre la notice du premier résultat présenté en cliquant sur le titre. Quelles affirmations suivantes sont vraies
+Vous pourrez adapter cet exercice à votre centre de documentation ou votre bibliothèque universitaire. Nous pouvons, par exemple, chercher dans le [catalogue du centre de documentation de l'université de Lille](https://scd-catalogue.univ-lille3.fr/). Lancer la requête simple *culture numérique*. Regarder et comprendre la notice du premier résultat présenté en cliquant sur le titre. Quelles affirmations suivantes sont vraies
 {
 ~ on peut trier par score de pertinence
 ~%50% on peut limiter la recherche au titre
 ~%50% on peut trier par titre
 ~ on peut faire une recherche plein texte dans le contenu du livre
-#### L'algorithme est une séquence de 2 instructions, la deuxième est un si que nous avons écrit sur 4 lignes. Dans ce si une autre séquence de deux instructions est imbriquée (lignes 3 et 4).}
+#### On retourne une liste de documents contenant les mots-clé sans calculer de score de pertinence. On peut chercher dans les titres uniquement. On peut trier par titre si le nombre de documents n'est pas trop grand. On cherche dans la notice et pas dans les documents.}
 
+::Recherche Booléenne avancée::
+[markdown]
+Nous utilisons à titre d'exemple [catalogue du centre de documentation de l'université de Lille](https://scd-catalogue.univ-lille3.fr/). En utilisant recherche simple et recherche avancée, dites quelles affirmations suivantes sont vraies
+{
+~ la requête *culture numérique* et la requête par phrase *"culture numérique"* (ou expression exacte) donnent les mêmes réponses
+~%100% la requête *culture numérique* et la requête avancée *culture* ET *numérique*  donnent les mêmes réponses
+~ la requête *culture numérique* et la requête avancée *culture* OU *numérique*  donnent les mêmes réponses
+#### Une requête par phrase retourne un document seulement si les mots sont à eux positions consécutives donc on a moins de réponses à la requête par phrase. Une requête à deux mots clés renvoie les documents dont la notice contient les deux mots et est donc équivalente à une requête avec un ET. Elle n'est donc pas équivalent à une requête avec un OU pour laquelle il suffit que la notice contienne un des deux mots (ou les deux).}
+
+::Recherche dans le modèle vectoriel::
+[markdown]
+Nous utilisons à titre d'exemple [le site Gallica lié à la bibliothèque nationale de France](http://www.gallica.bnf.f). En utilisant recherche simple (bouton loupe) et recherche avancée (bouton +) et un exemple de requête comme *révolution française*, dites quelles affirmations suivantes sont vraies
+{
+~%33% on peut trier par score de pertinence
+~%33% on peut utiliser des opérations logiques avec des ET et des OU
+~ on peut faire des requêtes par position
+~%34% on peut faire des requêtes par phrase
+~ les mots clé apparaissent dans la notice
+#### Un score de pertinence est calculé donc on peut trier par pertinence mais on note que l'ordre obtenu n'est pas simple à interpréter. La requête avancée permet les expressions logiques. Elle ne permet pas de requête par position générale mais permet des requêtes par phrase en utilisant les guillemets. On voit des documents bien classés pour lesquels les mots clé n'apparaissent pas dans la notice.}
 
 ```
 
@@ -446,7 +465,7 @@ ensuite le score de notoriété qui mesure l'importance d'une page
 Web. C'est ce score introduit par Google qui a donné un avantage
 significatif à `Google` dans les années 1990. La combinaison de ces
 deux scores est la base du score d'un document Web relativement à une
-requête.
+requête quel que soit le moteur utilisé.
 
 ## Indexation du Web
 
@@ -468,10 +487,51 @@ apparaissent, leur nombre d'apparitions, entre autres.
 - Ceci permet de construire un **index de très grande taille** qui est
   mis à jour régulièrement avec les informations récupérées par les robots
 - L'index est réparti sur des fermes de calcul (un grand nombre
-  d'ordinateurs de grande capacité en réesau) réparties dans le monde
+  d'ordinateurs de grande capacité en réseau) réparties dans le monde
   entier. On peut noter que celà implique une très grande consommation
   d'énergie et donc le Web n'est pas si écologique qu'on pourrait le
   croire.
+
+```compréhension
+
+::Tout est indexé::
+[markdown]
+Utiliser, par exemple, le moteur Google pour tester vos hypothèses.
+Par exemple, lancer
+une requête comme *afggd* puis ajouter des lettres au mot clé.
+Quelles affirmations suivantes sont vraies
+{
+~%33% il existe des requêtes avec plusieurs millions de réponses
+~%33% il existe des requêtes à 1 mot clé avec moins de 10 réponses
+~%34% il existe des requêtes à 1 mot clé avec 0 réponse
+#### Une requête avec un mot courant comme *le*, *la*, *et* ou encore *and*  donne plusieurs millions de réponse. Sur mon ordinateur à un moment donné, la requête afggdfk donne 7 réponses et la requête afggdfkr donne 0 réponse.}
+
+::La casse et les accents::
+[markdown]
+Utiliser, par exemple, le moteur Google.fr pour tester. Pour les majuscules, vous pouvez prendre des mots ayant un sens différent selon qu'on les écrive avec ou sans majuscule, avec ou sans accent comme *Manche* (département) ou *manche*, comme *côté* et *cote* ou comme *jeûne* et *jeune* et d'autres exemples de votre choix. Comme il est impossible de regarder toutes les réponses, nous supposons que les réponses sont les mêmes si les nombres de réponses sont les mêmes et que les réponses en première page sont indentiques. Dire quelles affirmations suivantes sont vraies
+{
+~ la casse (majuscule ou minuscule) influe  sur les réponses du moteur
+~%100% deux requêtes avec ou sans accent donne toujours les mêmes réponses
+#### La casse ne semble pas influer sur les réponses même si les nombres de réponse peuvent être légèrement différents. Les accents changent les réponses. Le Web français évolue vers une prise en compte de plus en plus importante des accents.}
+
+::Requêtes par phrase et plagiat::
+[markdown]
+
+La plagiat consiste à copier une oeuvre en omettant de citer son
+auteur. Le numérique facilite le plagiat en copiant des documents du
+Web. Mais les moteurs permettent de retrouver des parties de textes
+copiés ce qui montre également que** tout est indexé**. Par exemple,
+nous avons copié sur le Web une phrase du module traitements
+numériques d'un cours culture numérique. Effectuez la requête par
+phrase *"Rappelons que machines, langages et algorithmes sont
+intimement liés et comprendre l'une de ces notions ne peut se faire
+indépendamment des autres"*.
+Le moteur permet de retrouver le site
+(ou les sites) contenant cette phrase{T}
+
+```
+
+
 
 ## Score de pertinence
 
@@ -625,6 +685,42 @@ positions des mots dans les documents où ils apparaissent. Souvent il
 existe aussi des possibilités de requête avancée qui sont très peu
 utilisées en pratique.
 
+```compréhension
+
+::Les pages bien classées::
+[markdown]
+Utiliser, par exemple, le moteur Google.fr. Lancer
+une requête comme *culture numérique*, regarder la première page de réponses et dites quelles affirmations suivantes sont vraies
+{
+~%33% les titres des pages contiennent souvent les deux mots
+~%33% l'adresse http des réponses contient souvent les deux mots
+~%34% les sites ont souvent une forte notoriété
+~ certains sites ne contiennent qu'un des deux mots
+#### tous les titres contiennent les deux mots, l'adresse http contient souvent les deux mots comme https://www.culture-numerique.fr, les sites ont une forte notoriété avec Wikipedia et eduscol mais aussi des sites de journaux et d'université. Toutes les réponses contiennent les deux mots.}
+
+::Tous les mots présents ?::
+[markdown]
+Rechercher une requête à trois mots pour laquelle des réponses en première page ne contiennent que deux des trois mots. Peut-on affirmer : une requête à plusieurs mots donne des réponses contenant tous les mots de la requête
+{F}
+
+::Requêtes par phrase sur le Web::
+[markdown]
+
+La requête *culture numérique* et la requête par phrase *"culture numérique"* donnent les mêmes réponses
+{T}
+
+::Notoriété versus diversité::
+[markdown]
+
+Vous pouvez comparer les moteurs Google et Qwant en effectuant quelques recherches dans les deux moteurs. Dites quelles affirmations suivantes sont vraies
+{
+~%33% Les réponses de Google et les réponses Web de Qwant sont souvent très proches
+~%33% Google valorise davantage la notoriété
+~%34% Qwant encourage la diversité
+#### les réponses en tête de classement sont très souvent les mêmes avec, parfois, un ordre légèrement différent et des réponses apparaissant dans l'un et pas dans l'autre. Google privilégie fortement la notoriété jusqu'à parfois oublier des mots de votre requête. Qwant essaie d'apporter de la diversité dans ses réponses Web mais aussi par les deux listes Actualités et Social.}
+
+```
+
 # Evolutions, conclusion et discussion
 
 ## Evolutions en cours
@@ -636,7 +732,7 @@ sens. Le mot `java` peut désigner une danse ou un langage de
 programmation. Un internaute informaticien souhaiterait voir
 apparaître des pages parlant du langage de programmation alors qu'un
 autre utilisateur préférera des informations sur la danse. Même si un
-mot n'est pas ambigue, un utilisateur préférera des sites
+mot n'est pas ambigü, un utilisateur préférera des sites
 d'information, un autre des articles scientifiques, un autre encore
 des blogs. Il semble pertinent d'adapter les réponses du moteur aux
 préférences de l'utilisateur. Ceci peut être réalisé si l'historique
@@ -645,7 +741,7 @@ compte et que vous êtes identifiés, le moteur peut mémoriser cet
 historique des recherches et des navigations et l'utiliser pour
 adapter son calcul de score. Ceci est réalisé par certains moteurs
 mais, ici encore, les formules et algorithmes utilisés ne sont pas
-connus. Notes bien que cette **adaptation à l'utilisateur se fait avec
+connus. Notez bien que cette **adaptation à l'utilisateur se fait avec
 la contrepartie de la connaissance complète de votre historique de
 navigation** par le moteur.
 
@@ -827,6 +923,41 @@ localisation nécessite que vos données de géolocalisation soient
 utilisées et donc soient mémorisées. Retenez donc que **l'adaptation à
 votre profil et à votre localisation implique la mémorisation de
 données personnelles historiques**.
+
+```compréhension
+
+::Web des données::
+[markdown]
+Tentez de deviner le personnage qui sera affiché dans l'encadré Web
+des données pour la requête *et*. Première aide : c'est un personnage
+cinématographique peut être daté pour les plus jeunes d'entre
+vous. Deuxième aide : pensez que le moteur ne tient pas compte de la
+casse et des symboles de ponctuation. Troisième aide : ce film daté
+est un film de science fiction.
+
+
+::Requêtes et (géo)localisation::
+[markdown]
+a faire{T}
+
+::Requêtes en langage naturel::
+[markdown]
+a faire
+{F}
+
+::Algorithmes et recherche d'information::
+[markdown]
+Serge Abiteboul est membre de l'académie des sciences et parmi les brillants chercheurs français en informatique. Lisez son interview sur la création de Google et sur les problèmes éthiques liés aux algorithmes comme les algorithmes utilisés dans un moteur de recherche d'information. Quelles sont les  affirmations suivantes qui sont vraies
+{
+~ Google a été crée dans les années 1980
+~%33% Google est issu de chercheurs universitaires
+~%33% Google était à l'origine sans liens payants et sans publicité
+~ Les algorithmes actuels de Google sont transparents
+~%34% Il faut être attentif et responsable devant les réponses d'un algorithme comme un moteur de recherche d'information.
+#### Google a été créé à la fin des années 90 par des universitaires et il était à l'origine transparent et sans publicité. Ce qui n'est plus le cas aujourd'hui. C'est un algorithme secret, même si on en connaît les principes, et écrit par une entreprise privée qui classe les réponses à vos requêtes et donc vous devez toujours regarder ces réponses en pensant que certaines réponses ont pu être oubliées car mal classées.}
+
+```
+
 
 # Le référencement
 
