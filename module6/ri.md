@@ -490,14 +490,17 @@ essentiels :
 
 - L'**indexation du Web** est réalisé par des **programmes appelés
 robots** qui parcourent les sites Web et suivent les liens. Ces
-programmes récupèrent les informations utiles comme les mots qui
-apparaissent, leur nombre d'apparitions, entre autres.
+programmes récupèrent les informations utiles pour construire
+l'index : identifiant des documents (adresse Web complète), les mots
+qui apparaissent et à quel endroit, le nombre d'apparitions, entre
+autres.
 - **Tous les documents du Web sont indexés** quel que soit leur format :
   pages Web au format `html`, documents imprimables au format `pdf`,
   documents au format `doc`, ... ce qui mène à un nombre de documents
   de l'ordre de 60 000 milliards en 2016.
-- **Tous les mots qui apparaissent sur le Web sont indexés** ce qui amène
-  à un dictionnaire contenant plusieurs millions de mots.
+- **Tous les mots qui apparaissent sur le Web sont indexés** quels que
+  soient leur fréquence, la langue, ..., ce qui amène à un
+  dictionnaire contenant plusieurs millions de mots.
 - Ceci permet de construire un **index de très grande taille** qui est
   **mis à jour régulièrement** avec les informations récupérées par les robots
 - L'index est réparti sur des fermes de calcul (un grand nombre
@@ -521,7 +524,8 @@ créé, il est associé à un texte qui contient de l'information sur la
 page. Par exemple, un site Web qui souhaite mettre un lien sur ce
 module définira un texte cliquable comme `cours d'introduction à la
 recherche information` qui est très informatif sur le contenu de la
-page et doit être pris en compte pour le calcul de pertinence.
+page. Il est donc intéressant de le prendre en compte dans le calcul
+du score de pertinence.
 
 Par conséquent, le score de pertinence d'une page Web va prendre en
 compte des scores de pertinence calculés sur **différentes vues sur la
@@ -538,27 +542,26 @@ Pour chacune de ces vues, un score de pertinence peut être calculé
 avec la méthode introduite auparavant. Il reste à combiner ces scores
 avec une formule de la forme : un pourcentage du score de contenu + un
 pourcentage du score des titres + ... **La formule de combinaison est
-secrète !**, c'est-à-dire que l'on ne connaît pas les pourcentages
-utilisés dans la formule. On sait qu'elle existe et qu'elle
-évolue. Par exemple, l'influence du score de pertinence des mots clés
-a été nettement diminuée suite à de nombreux abus de concepteurs de
-pages Web qui ajoutaient des mots clé fictifs sur leur page pour
-essayer d'améliorer artificiellement leur score, et donc on sait que
-le pourcentage pour le score de pertinence des mots clé a été diminué.
+secrète !**. C'est-à-dire que l'on ne connaît pas les pourcentages
+utilisés dans la formule. Par exemple, suite à de nombreux abus de
+concepteurs de pages Web qui ajoutaient des mots clé fictifs (sans
+rapport avec le contenu) pour essayer d'améliorer artificiellement
+leur score, l'influence du score de pertinence des mots clés a été
+diminuée.
 
 ## Score de notoriété
 
 Le Web a une structure de réseau ou de graphe avec des pages Web qui
 pointent les unes vers les autres avec les hyperliens. L'idée est
 d'utiliser cette structure pour mesurer *la notoriété* des pages. On
-souhaite donc un **score de notoriété** qui va mesurer à quel point
-une page est importante pour les internautes. Une première tentative de
-définition de score de notoriété d'une page pourrait être le nombre de
-pages qui pointent sur elle. Cette définition n'est pas robuste car on
-peut tricher (cela a été fait) : pour renforcer le score de notoriété
-de ma page, je crée des (beaucoup) de pages artificielles qui pointent
-sur ma page. La définition doit donc être plus intelligente et la
-bonne définition est la suivante :
+souhaite donc un *score de notoriété* qui va mesurer à quel point
+une page est importante pour les internautes. Une première tentative
+de définition de score de notoriété d'une page pourrait être le nombre
+de pages qui pointent sur elle. Cette définition n'est pas robuste car
+on peut tricher (cela a été fait). En effet, il suffirait pour
+renforcer le score de notoriété d'une de créer (en grand nombre) des 
+pages artificielles qui pointent sur cette page. La définition doit donc
+être plus intelligente et une bonne définition est la suivante :
 
 > Une page a **une forte notoriété** si beaucoup de pages **ayant une
 > forte notoriété** pointent sur elle
@@ -567,44 +570,43 @@ Définir la notoriété n'est pas si simple car on voit que pour définir
 une page de forte notoriété il faut déjà savoir calculer la
 notoriété. C'est un exemple de définition récursive où on définit la
 notoriété à partir d'elle-même. Mais ceci est fréquent en mathématique
-et en informatique. Il est donc possible de définir des objets
-mathématiques, des calculs et des algorithmes qui vont permettre de
-définir et de calculer la notoriété d'une page Web. Une autre vision
-de la notoriété peut être définie avec la notion de **surfeur
-aléatoire**. L'idée est d'imaginer qu'un surfeur se promène sur le
-Web. Pour cela,
+et en informatique. Il est donc possible de mettre cette définition en
+équations et de définir des algorithmes qui vont permettre de calculer
+la notoriété d'une page Web. Une autre vision de la notoriété peut
+être définie avec la notion de **surfeur aléatoire**. L'idée est
+d'imaginer qu'un surfeur se promène sur le Web. Pour cela,
 
-- il peut choisir une page au hasard sur le Web -- ce qui correspond à
+- il peut choisir une page au hasard sur le Web -- ceci correspond à
 émettre une requête et suivre un lien sur la page de réponse
 - lorsqu'il est sur une page Web, il peut choisir de suivre un des
   liens présents sur la page -- d'où le nom de surfeur car il surfe sur
   le Web
 
 Le surfeur aléatoire choisit donc une page au hasard, il suit des
-liens en partant de cette page puis recommence en rechoisissant une
-nouvelle page au hasard. Si on répète un très grand nombre de fois
-cette opération, toutes les pages Web seront visitées et plus souvent
-elles sont visitées plus elles sont importantes. Le score de notoriété
-d'une page correspond donc à la fréquence de visite de cette page par
-le surfeur aléatoire. Cette définition a été démontrée équivalente à
-la précédente. Un algorithme pour calculer le score de notoriété,
-appelé **algorithme PageRank**, a été introduit par les fondateurs de
-Google au milieu des années 1990 dans un moteur de recherche
-d'information. Si les principes de cet algorithme étaient connus,
-c'était un challenge de l'appliquer à la recherche d'information avec
-des tailles de données (dictionnaire et nombre de documents) très
-grands. Cet algorithme permet donc d'**attribuer à toute page Web un
-score de notoriété**.
+liens en partant de cette page puis, après avoir suivi quelques liens,
+il recommence en choisissant une nouvelle page au hasard. Si le
+surfeur réalise ceci un très grand nombre de fois, toutes les pages
+Web seront visitées et plus souvent elles sont visitées plus elles
+sont importantes. Le score de notoriété d'une page correspond donc à
+la fréquence de visite de cette page par le surfeur aléatoire. Cette
+définition a été démontrée équivalente à la précédente. Un algorithme
+pour calculer le score de notoriété, appelé **algorithme PageRank**, a
+été introduit par les fondateurs de Google au milieu des années 1990
+dans un moteur de recherche d'information. Si les principes de cet
+algorithme étaient connus, c'était un challenge de l'appliquer à la
+recherche d'information avec des tailles de données (dictionnaire et
+nombre de documents) très grands. Cet algorithme permet donc
+d'**attribuer à toute page Web un score de notoriété**.
 
-C'est, en réalité, une amélioration de cet algorithme qui est utilisée
-pour lequel on distingue deux types de pages : les *"hubs"* et les
+C'est, en réalité, une amélioration de cet algorithme qui est
+utilisée. On distingue deux types de pages : les *"hubs"* et les
 *"authorities"*. Un hub est une page qui contient beaucoup de liens
 comme une page de synthèse sur un sujet qui renvoie à toutes les pages
 sur ce sujet. Une authority est une page de référence sur laquelle
 beaucoup de pages pointent. Un exemple typique, dans le domaine des
-conaissances générales, est une page `Wikipedia`. On peut alors
-calculer un score de hub et un score d'authority et combiner ces deux
-scores pour obtenir un score de notoriété.
+conaissances générales, est une page `Wikipedia`. On peut calculer un
+score de "hub" et un score d'"authority" et les combiner pour obtenir
+un score de notoriété.
 
 ## Score Web
 
@@ -649,8 +651,9 @@ Il faut également être conscient que le Web est dynamique et évolue
 sans cesse ce qui va modifier les scores dans le temps. De même, les
 algorithmes de calcul de score Web des différents moteurs évoluent
 continuellement. Par conséquent, les réponses et l'ordre des réponses
-à une requête à une moment donné ne seront peut-être pas identiques un
-mois plus tard. Retenez que **le score Web évolue dans le temps**.
+à une requête à un moment donné ne seront peut-être pas identiques si
+elles sont exécutées à un autre moment. Retenez que **le score Web
+évolue dans le temps**.
 
 Nous avons essentiellement discuté des requêtes à plusieurs mots clé
 mais un autre type de requête important sur le Web (environ 15 pour
@@ -660,7 +663,7 @@ contenant exactement la phrase saisie. La convention usuelle est de
 mettre la phrase entre guillemets dans la barre de saisie. Par
 exemple, on peut considérer la requête par phrase `"la révolution
 française"`. Pour cette requête, on va retourner par ordre de
-pertinence les documents contenant les trois mots consécutifs. Notez
+score Web les documents contenant les trois mots consécutifs. Notez
 que cette requête donnera donc des résultats différents de la requête
 à trois mots clé `la révolution française` pour laquelle la position
 des mots n'intervient pas et dont les résultats ne contiennent pas
@@ -674,7 +677,7 @@ pratique.
 
 ::Tout est indexé::
 [markdown]
-Utilisez, par exemple, le moteur Google.fr. Pour se faire l'intuition que tout est indexé, vous pouvez tester une requête avec un mot très fréquent comme `le` et vérifier qu'il est bien indexé car on retrouve tous les documents contenant ce mot. Aussi, nous allons regarder si on trouve des pages pour des mots hétéroclites. Par exemple, lancer
+Utilisez, par exemple, le moteur Google.fr. Pour se faire une intuition que tout est indexé, vous pouvez tester une requête avec un mot très fréquent comme `le` et vérifier qu'il est bien indexé car on retrouve tous les documents contenant ce mot. Aussi, nous allons regarder si on trouve des pages pour des mots hétéroclites. Par exemple, lancer
 une requête comme *afggd* puis ajouter des lettres au mot clé.
 Quelles affirmations suivantes sont vraies
 {
@@ -685,24 +688,24 @@ Quelles affirmations suivantes sont vraies
 
 ::La casse et les accents::
 [markdown]
-Utiliser, par exemple, le moteur Google.fr pour tester. Pour les majuscules, vous pouvez prendre des mots ayant un sens différent selon qu'on les écrive avec ou sans majuscule, avec ou sans accent comme *Manche* (département) ou *manche*, comme *côté* et *cote* ou comme *jeûne* et *jeune* et d'autres exemples de votre choix. Comme il est impossible de regarder toutes les réponses, nous supposons que les réponses sont les mêmes si les nombres de réponses sont les mêmes et que les réponses en première page sont indentiques. Dire quelles affirmations suivantes sont vraies
+Utiliser, par exemple, le moteur Google.fr pour tester. Pour les majuscules, vous pouvez prendre des mots ayant un sens différent selon qu'on les écrive avec ou sans majuscule, avec ou sans accent comme *Manche* (département) ou *manche*, comme *côté* et *cote* ou comme *jeûne* et *jeune* et d'autres exemples de votre choix. Comme il est impossible de regarder toutes les réponses, nous supposons que les réponses sont les mêmes si les nombres de réponses sont les mêmes et que les réponses en première page sont identiques. Dire quelles affirmations suivantes sont vraies
 {
 ~ la casse (majuscule ou minuscule) influe  sur les réponses du moteur
 ~ deux requêtes avec ou sans accent donnent toujours les mêmes réponses
 #### La casse ne semble pas influer sur les réponses même si les nombres de réponse peuvent être légèrement différents. Les accents changent les réponses. Le Web français évolue vers une prise en compte de plus en plus importante des accents.}
 
-::Requêtes par phrase et plagiat::
-[markdown]
-La plagiat consiste à copier une oeuvre en omettant de citer son
-auteur. Le numérique facilite le plagiat car la copie est aisée. Mais
-les moteurs permettent de retrouver des parties de textes copiés ce
-qui montre également que **tout est indexé**. Par exemple, nous avons
-copié sur le Web une phrase du module traitements numériques de notre
-cours culture numérique. Effectuez la requête par phrase *"Rappelons
-que machines, langages et algorithmes sont intimement liés et
-comprendre l'une de ces notions ne peut se faire indépendamment des
-autres"*.  Le moteur permet de retrouver le site (ou les sites)
-contenant cette phrase{T}
+::Requêtes par phrase et plagiat:: [markdown] La plagiat consiste à
+copier une oeuvre en omettant de citer son auteur. Le numérique
+facilite le plagiat car la copie est aisée. Mais les moteurs
+permettent de retrouver des parties de textes copiées et donc de
+retrouver les plagieurs. Ceci montre également que **tout est indexé**
+car le moteur retrouve des phrases complètes où qu'elles soient sur le
+Web. Par exemple, nous avons copié une phrase du module
+traitements numériques de notre cours culture numérique. Effectuez la
+requête par phrase *"Rappelons que machines, langages et algorithmes
+sont intimement liés et comprendre l'une de ces notions ne peut se
+faire indépendamment des autres"*.  Le moteur permet de retrouver le
+site (ou les sites) contenant cette phrase{T}
 
 ::Les pages bien classées::
 [markdown]
@@ -715,9 +718,9 @@ une requête comme *culture numérique*, regarder la première page de réponses
 ~ certains sites ne contiennent qu'un des deux mots
 #### tous les titres contiennent les deux mots, l'adresse http contient souvent les deux mots comme https://www.culture-numerique.fr, les sites ont une forte notoriété avec Wikipedia et eduscol mais aussi des sites de journaux et d'université. Toutes les réponses contiennent les deux mots.}
 
-::Tous les mots présents ?::
+::Tous les mots sont-ils présents dans les pages de réponse ?::
 [markdown]
-Rechercher une requête à trois mots pour laquelle des réponses en première page ne contiennent que deux des trois mots. Peut-on affirmer : une requête à plusieurs mots donne des réponses contenant tous les mots de la requête
+Rechercher une requête à trois mots pour laquelle des réponses en première page ne contiennent que deux des trois mots. Peut-on affirmer qu'une requête à plusieurs mots donne des réponses contenant tous les mots de la requête ?
 {F}
 
 ::Requêtes par phrase sur le Web::
@@ -733,18 +736,19 @@ Vous pouvez comparer les moteurs Google et Qwant en effectuant quelques recherch
 ~%33% Les réponses de Google et les réponses Web de Qwant sont souvent très proches
 ~%33% Google valorise davantage la notoriété
 ~%34% Qwant encourage la diversité
-#### les réponses en tête de classement sont très souvent les mêmes avec, parfois, un ordre légèrement différent et des réponses apparaissant dans l'un et pas dans l'autre. Google privilégie fortement la notoriété jusqu'à parfois oublier des mots de votre requête. Qwant essaie d'apporter de la diversité dans ses réponses Web mais aussi par les deux listes Actualités et Social.}
+#### les réponses en tête de classement sont très souvent les mêmes avec, parfois, un ordre légèrement différent et des réponses apparaissant dans l'un et pas dans l'autre. Google privilégie fortement la notoriété jusqu'à parfois oublier des mots de votre requête. Qwant essaie d'apporter de la diversité dans ses réponses Web mais aussi avec les deux listes Actualités et Social.}
 
 ::Score Web::
 [markdown]
 On considère une requête à plusieurs mots clé. Dites quelles affirmations suivantes sont vraies
 {
-~%33% Les réponses et l'ordre peuvent être différents selon le moteur
-~ Les réponses et leur ordre sont les mêmes que que soit le media (ordinatuer ou téléphone)
-~%33% Les réponses et l'ordre peuvent être différents à 1 mois d'intervalle
-~%34% Les réponses et l'ordre peuvent être différents selon que je sois identifié ou pas
-~ Les réponses et leur ordre sont les mêmes quel que soit le lieu où je suis
+~%33% Les réponses et leur ordre peuvent être différents selon le moteur
+~ Les réponses et leur ordre sont les mêmes quel que soit le media (ordinateur ou téléphone)
+~%33% Les réponses et leur ordre peuvent être différents à 1 mois d'intervalle
+~%34% Les réponses et leur ordre peuvent être différents selon que je sois identifié ou pas
+~ Les réponses et leur ordre sont les mêmes quel que soit le lieu où je saisis ma requête
 #### les réponses différent selon le moteur, le media, le moment et le lieu.}
+
 ```
 
 # Evolutions, conclusion et discussion
