@@ -957,7 +957,7 @@ tout le monde numérique où on utilise des algorithmes pour vous
 affecter dans un établissement scolaire ou dans une filière de
 l'enseignement supérieur.
 
-## L'adaptation à l'utilisateur
+### L'adaptation à l'utilisateur
 
 Enfin, beaucoup de logiciels sur le Web disent s'adapter à vos
 besoins. Ils s'adaptent en réalité à votre profil qui est construit à
