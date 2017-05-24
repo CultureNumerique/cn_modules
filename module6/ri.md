@@ -894,12 +894,14 @@ réponse factuelle à la question et une liste de liens. Pour cette
 liste de liens, il est difficile de savoir comment sont calculés les
 scores de pertinence à cause des pré-traitements inconnus et du calcul
 de score dont nous avons déja signalé que beaucoup de points étaient
-secrets. Si on considère une requête comme `quels sont les cinémas
-proches ?`, le problème est plus difficile car il faut comprendre la
-sémantique du mot proche, en déduire qu'il faut calculer des distances
-à partir d'un point à choisir et adapter les réponses en
-conséquence. Le traitement des requêtes en langage naturel progresse
-mais toutes les questions sont loin d'être résolues.
+secrets. Si on considère une requête comme `Quel est le plus âgé des
+candidats aux élections présidentielles de 2017 ?`, le problème est
+plus difficile car, en plus des difficultés précédentes, il faut
+comprendre la sémantique de la question et faire un raisonnement :
+trouver l'âge des candidats, comprendre que l'on cherche l'âge le plus
+grand, comparer les âges et retourner le nom et l'âge du candidat
+trouvé.  Le traitement des requêtes en langage naturel progresse mais
+toutes les questions sont loin d'être résolues.
 
 ## Conclusion et discussion
 
@@ -916,7 +918,7 @@ nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc
 que **l'apparition dans une liste de liens sponsorisés est lié à une
 rémunération**.
 
-### Le secret des moteurs
+### L'équité des moteurs
 
 Nous avons vu dans ce cours que les formules de calcul de score pour
 un moteur de recherche d'information sont secrètes même si on en
@@ -944,7 +946,7 @@ question d'être bien classé dans l'ordre des réponses. C'est le cas
 des entreprises commerciales qui veulent apparaître pour vous vendre
 des produits. C'est le cas de courants de pensée qui veulent imposer
 une opinion comme, par exemple, les courants anti-avortement qui
-luttent pour que les sites critiquant l'avortement apparaissent bien
+agissent pour que les sites critiquant l'avortement apparaissent bien
 classés lorsque vous faîtes une requête sur l'avortement. Retenez que
 **vous devez toujours avoir un regard critique sur les réponses qui
 vous sont proposées et leur ordre**. Ceci est vrai pour les moteurs de
@@ -954,6 +956,8 @@ informations, des restaurants et autres. C'est vrai également dans
 tout le monde numérique où on utilise des algorithmes pour vous
 affecter dans un établissement scolaire ou dans une filière de
 l'enseignement supérieur.
+
+## L'adaptation à l'utilisateur
 
 Enfin, beaucoup de logiciels sur le Web disent s'adapter à vos
 besoins. Ils s'adaptent en réalité à votre profil qui est construit à
