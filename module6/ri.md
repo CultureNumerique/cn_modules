@@ -20,9 +20,9 @@ journaux, des entreprises commerciales mais aussi les réseaux sociaux
 et les objets connectés (caméras, compteurs intelligents, gps,
 ...). Ils sont en très grande quantité avec, par exemple, un nombre
 estimé de 60 000 milliards de documents Web en 2016. Cette masse de
-documents génère de nouveaux besoins comme pouvoir retrouver des
-documents concernant un sujet précis, pouvoir recevoir des suggestions
-d'articles de journaux ou encore pouvoir recevoir des recommandations
+documents génère de nouvelles posibilités comme pouvoir retrouver des
+documents concernant un sujet précis, pouvoir proposer des suggestions
+d'articles de journaux ou encore pouvoir faire des recommandations
 de livres à lire ou de films à regarder.
 
 Nous allons considérer la recherche de documents et, pour cela, nous
@@ -37,8 +37,8 @@ sphères d'influence comme **Yandex** en Russie et **Baidu** en
 Chine. La fonction première d'un moteur de recherche est de vous
 permettre de *poser une requête* constituée d'un ou plusieurs mots
 clés. En réponse, le moteur vous renvoie *une liste ordonnée de
-documents Web* souvent organisée en pages de 10 documents. Cet outil est
-devenu essentiel dans vos activités personnelles comme
+documents Web* ~~souvent organisée en pages de 10 documents~~. Cet outil est
+devenu essentiel dans nos activités personnelles comme
 professionnelles. L'ordre dans lequel les documents vous sont proposés
 est calculé par le moteur. Un utilisateur ne regarde souvent que les
 premières réponses et, par conséquent, l'ordre choisi peut orienter
@@ -99,6 +99,7 @@ Lancer la requête `apprentissage machine`. Le moteur Qwant renvoie
 
 ::Une première comparaison::
 [markdown]
+**pas clair**
 En comparant les réponses de
 Google et les réponses de Qwant dans la liste Web, on peut affirmer
 que les réponses à une requête sont toujours les mêmes
@@ -182,9 +183,9 @@ ouvrages sont, en général, décrits par des notices contenant des
 méta-données sur l'ouvrage comme le titre, les auteurs, les éditeurs
 et un résumé. Une notice contient également des mots-clés décrivant le
 contenu de l'ouvrage qui sont renseignés par des
-documentalistes. Parfois, les ouvrages ont été numérisés, on dispose
+documentalistes. ~~Parfois, les ouvrages ont été numérisés, on dispose
 alors de leur contenu textuel dans lequel on peut chercher et on
-parle, dans ce cas, de *recherche plein texte*.
+parle, dans ce cas, de *recherche plein texte*.~~
 
 On suppose que chaque ouvrage possède un *identifiant*, c'est-à-dire
 un numéro qui l'identifie. Quelle que soit la description choisie
@@ -240,10 +241,12 @@ seconde moitié, c'est `savant`, donc on cherche entre `maman` et
 `savant` ; jusqu'à trouver le mot `rose`. On peut montrer qu'un tel
 algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il
 suffit d'effectuer 19 accès, pour une dictionnaire de 1 million de
-mots, il suffit d'effectuer 20 accès. On parle de *complexité
-logarithmique* car si la taille du dictionnaire double, on ne doit
-faire qu'un accès supplémentaire !  Nous avons défini l'indexation et
-supposons avoir construit un index défini comme suit :
+mots, il suffit d'effectuer 20 accès. Notons que si la taille du dictionnaire double, on ne doit
+faire qu'un accès supplémentaire ! On parle dans ce cas de *complexité
+logarithmique*.
+
+ Nous avons défini l'indexation et
+supposons avoir construit un index défini de la manière suivante :
 
 > Un **index** est constitué d'un dictionnaire avec une méthode
 > d'accès rapide à un mot, et, pour chaque mot, on dispose de la liste
@@ -251,44 +254,46 @@ supposons avoir construit un index défini comme suit :
 > mot.
 
 Rappelons que l'objectif est de trouver l'ensemble des ouvrages dont
-les descriptions textuelles satisfont une requête. Montrons que
-**l'index construit permet au moteur de calculer très rapidement les
-réponses aux requêtes** : 
+les descriptions textuelles satisfont une requête.
 
-- Pour *une requête à un mot clé*, on cherche les ouvrages dont la
-description contient ce mot. Il suffit de chercher le mot dans le
-dictionnaire, renvoyer la liste des ouvrages associée dans l'index.
-- Pour *une requête à deux mots clés*, on cherche les ouvrages dont la
-description contient les deux mots. Le moteur procède comme suit :
-chercher le premier mot dans le dictionnaire et se mettre au début de
-la liste des identifiants des ouvrages ; chercher le deuxième mot dans
-le dictionnaire et se mettre au début de la liste des identifiants des
-ouvrages ; parcourir les deux listes et conserver les identifiants qui
-apparaissent dans les deux listes ; renvoyer la liste des ouvrages
-correspondante. Par exemple, considérons la requête à deux mots clés
-`rose` et `blanche`, on trouve la liste 125, 245, 567, ... pour
-`rose`, on trouve la liste 117, 176, 245, 312, ... pour `blanche`,
-dans la liste résultat on trouvera 245 et éventuellement d'autres
-identifiants, on renvoie les ouvrages correspondants.
-- Ces principes peuvent être étendus pour des requêtes à plusieurs
-mots clés
-- Une requête à plusieurs mots clés est interprétée avec un opérateur
-`ET` implicite car on souhaite que tous les mots soient présents. On
-peut aussi écrire des requêtes avec les opérateurs logiques `OU` et
-`NON`.
-- Les interfaces des moteurs documentaires proposent également des
-*requêtes par position*. La plus importante est la **requête par
-phrase** où on recherche les mots en respectant exactement les
-positions des mots de la requête. Une requête par phrase est souvent
-exprimée avec des guillemets. Par exemple, si on considère la requête
-par phrase `"rose blanche"`, le moteur doit renvoyer tous les ouvrages
-dont la description contient les deux mots `rose` et `blanche` à des
-positions consécutives. Ceci peut être réalisé en mémorisant dans
-l'index les positions auxquelles apparaissent les mots. Il existe
-d'autres requêtes par position exprimant des conditions sur les
-positions relatives de mots. Par exemple, on pourrait écrire une
-requête comme les mots `rose` et `blanche` où les deux mots sont
-distants de moins de 3 mots.
+> J'enlèverai cette partie qui me semble trop complexe - al1
+> Montrons que
+> **l'index construit permet au moteur de calculer très rapidement les
+> réponses aux requêtes** :
+> - Pour *une requête à un mot clé*, on cherche les ouvrages dont la
+> description contient ce mot. Il suffit de chercher le mot dans le
+> dictionnaire, renvoyer la liste des ouvrages associée dans l'index.
+> - Pour *une requête à deux mots clés*, on cherche les ouvrages dont la
+> description contient les deux mots. Le moteur procède comme suit :
+> chercher le premier mot dans le dictionnaire et se mettre au début de
+> la liste des identifiants des ouvrages ; chercher le deuxième mot dans
+> le dictionnaire et se mettre au début de la liste des identifiants des
+> ouvrages ; parcourir les deux listes et conserver les identifiants qui
+> apparaissent dans les deux listes ; renvoyer la liste des ouvrages
+> correspondante. Par exemple, considérons la requête à deux mots clés
+> `rose` et `blanche`, on trouve la liste 125, 245, 567, ... pour
+> `rose`, on trouve la liste 117, 176, 245, 312, ... pour `blanche`,
+> dans la liste résultat on trouvera 245 et éventuellement d'autres
+> identifiants, on renvoie les ouvrages correspondants.
+> - Ces principes peuvent être étendus pour des requêtes à plusieurs
+> mots clés
+> - Une requête à plusieurs mots clés est interprétée avec un opérateur
+> `ET` implicite car on souhaite que tous les mots soient présents. On
+> peut aussi écrire des requêtes avec les opérateurs logiques `OU` et
+> `NON`.
+> - Les interfaces des moteurs documentaires proposent également des
+> *requêtes par position*. La plus importante est la **requête par
+> phrase** où on recherche les mots en respectant exactement les
+> positions des mots de la requête. Une requête par phrase est souvent
+> exprimée avec des guillemets. Par exemple, si on considère la requête
+> par phrase `"rose blanche"`, le moteur doit renvoyer tous les ouvrages
+> dont la description contient les deux mots `rose` et `blanche` à des
+> positions consécutives. Ceci peut être réalisé en mémorisant dans
+> l'index les positions auxquelles apparaissent les mots. Il existe
+> d'autres requêtes par position exprimant des conditions sur les
+> positions relatives de mots. Par exemple, on pourrait écrire une
+> requête comme les mots `rose` et `blanche` où les deux mots sont
+> distants de moins de 3 mots.
 
 ## Le modèle vectoriel : attribuer un score de pertinence aux documents
 
@@ -296,12 +301,14 @@ Les systèmes étudiés jusqu'à présent renvoient une liste de documents
 qui satisfont une propriété alors que vous êtes habitués à la
 recherche sur le Web où, étant donné une requête, on ordonne la liste
 de résultats selon des scores attribués aux documents. Ceci nécessite
-d'avoir un score qui mesure la proximité entre un document et une
+d'avoir un score qui mesure la **proximité** entre un document et une
 requête. Nous expliquons dans cette section comment on peut calculer
 **un score de pertinence relativement à une requête** ce qui permettra
 d'ordonner la liste de réponses.
 
 ### Représenter des documents par des vecteurs
+
+**je pense qu'il faut remplacer ou traduire vecteur par tableau par exemple**
 
 On suppose toujours un grand ensemble de documents dont chacun d'eux
 possède un identifiant, on suppose que chaque document est décrit par
@@ -361,10 +368,10 @@ les documents les plus pertinents.
 
 Il existe de nombreuses variantes de ces représentations vectorielles
 qui ont été étudiées et dont on a comparé les performances en
-recherche d'information. 
+recherche d'information.
 
 ### Score de pertinence entre un document et une requête
-
+**oh c'est dur ça, on doit pouvoir simplifier le début, le cosinus de l'angle entre 2 vecteurs, ça va décrocher, .. -al1**
 Il faut définir une similarité entre un document et une requête
 composée de plusieurs mots clé. Intuitivement, un document sera
 similaire à une requête si il contient les mots de la requête et si
@@ -410,9 +417,12 @@ relativement à la requête. Le calcul de la Cosine similarity est, en
 réalité, un peu plus compliqué car il faut prendre en compte la
 longueur des documents. En effet, il faut interdire la tricherie qui
 consisterait à répéter beaucoup de fois certains mots dans des
-documents avec pour seul objectif d'obtenir un meilleur score. Le
+documents avec pour seul objectif d'obtenir un meilleur score.
+**Introduire cet enjeu économique plus précisément en intro - al1**
+Le
 calcul de la pertinence fait donc intervenir une normalisation qui
 revient à considérer une même longueur pour tous les documents.
+
 
 ```compréhension
 
@@ -426,7 +436,7 @@ Activer l'élément de menu **Rechercher** ou **Find** de votre navigateur préf
 
 ::Recherche séquentielle dans un ensemble de textes::
 [markdown]
-Activer l'élément de menu **Rechercher** ou **Find** de votre lecteur de mail préféré. 
+Activer l'élément de menu **Rechercher** ou **Find** de votre lecteur de mail préféré.
 \n
 - Décrire le résultat obtenu si vous cherchez une suite de caractères
 - Décrire les zones de texte dans lesquelles on peut chercher
@@ -559,7 +569,7 @@ une page est importante pour les internautes. Une première tentative
 de définition de score de notoriété d'une page pourrait être le nombre
 de pages qui pointent sur elle. Cette définition n'est pas robuste car
 on peut tricher (cela a été fait). En effet, il suffirait pour
-renforcer le score de notoriété d'une de créer (en grand nombre) des 
+renforcer le score de notoriété d'une de créer (en grand nombre) des
 pages artificielles qui pointent sur cette page. La définition doit donc
 être plus intelligente et une bonne définition est la suivante :
 
@@ -1024,7 +1034,7 @@ gestionnaire du site Web et correspond à un certain nombre de
 préconisations techniques à respecter comme : nom unique du site, pas
 de lien menant sur une page inexistante, respect des normes `html`,
 fourniture d'un plan du site, pages simples à téléchargement rapide,
-format des pages adaptés au media d'interrogation. 
+format des pages adaptés au media d'interrogation.
 
 ## Un bon score de pertinence
 
