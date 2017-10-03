@@ -1,0 +1,9 @@
+Premiers pas avec un logiciel de traitement de textes
+Structure, contenu, qualification et présentation
+Commencer avec de bonnes pratiques
+Les logiciels de traitement de textes ont été conçus pour… manipuler du texte. Comprendre comment on arrive à manipuler un texte avec un ordinateur, c’est avant tout comprendre ce qu’est un texte, définir les termes spécifiques à ce domaine : caractères, paragraphes, titres, sections, chapitres, police, typographie, alinéa, etc.
+Il faut aussi comprendre ce que traitement automatique signifie : copier, coller, numéroter, remplacer, indexer, échanger, imprimer…
+Il faut ensuite avoir quelques compétences à propos du monde numérique pour évaluer en quoi une pratique est bonne ou pas.
+Les documents sont le résultat d’une démarche. Le résultat est bien meilleur quand la démarche est réfléchie. Des questions générales contribuent à cette réflexion : quel type de document dois-je produire ? Avec quel plan ? Quelles structures le composent ? Quelles informations le désignent ?
+Il y a donc plus que des mots dans un texte. On distingue dans un document textuel numérisé des informations de structure, de contenu, de présentation et des méta-données. Une bonne pratique consiste à identifier et désigner toutes ces informations.
+Pour réaliser cette tâche de désignation, l’utilisateur interagit avec la machine par un langage formalisé : dans le cas du traitement de textes, c'est basé sur des interactions graphiques (en opposition à des langages de description, dans un fichier source…). La compréhension du langage d'interaction permet de faire un bon document. Mais distinguer un bon d’un mauvais document n’est pas si facile. Voici quelques règles que nous vous donnons en introduction.
