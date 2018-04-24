@@ -129,88 +129,36 @@ Comment l'index permet-il de répondre rapidement à des requêtes formulées da
 
 ## La recherche approximative avec un score de pertinence
 
-Les systèmes étudiés jusqu'à présent renvoient la liste complète des documents qui satisfont la requête. Lorsque le corpus de documents sur lequel porte les requêtes est trop grand, cette recherche est bien souvent inutile. Les moteurs de recherche du Web fonctionnent différemment et ordonnent la liste de résultats selon des scores attribués aux documents. Ceci permet d'effectuer des recherches approximatives mais aussi de faciliter la lecture du résultat. Il est donc alors nécessaire de définir et calculer **un score de pertinence relativement à une requête**.
+Les systèmes étudiés jusqu'à présent renvoient la liste complète des documents qui satisfont la requête. Lorsque le corpus de documents sur lequel porte les requêtes est trop grand, cette recherche est bien souvent inutile. Trop de documents satisfont la requête et le résultat devient illisible.  Les moteurs de recherche du Web fonctionnent différemment et ordonnent la liste de résultats selon des scores attribués aux documents. Ceci permet d'effectuer des recherches approximatives mais aussi de faciliter la lecture du résultat. Il est donc alors nécessaire de définir et calculer **un score de pertinence relativement à une requête**.
 
 ### Représenter des documents par des tableaux de nombres
 
-On suppose toujours un grand ensemble de documents textuels possèdant
-un numéro (un identifiant), on suppose avoir défini un dictionnaire et
-construit un index.  Pour calculer un score, il faut des valeurs
-numériques. Pour cela on va représenter un document par un tableau de
-nombres appelé *vecteur*. La plus simple des représentations consiste
-à représenter un document par un (très grand) vecteur. Chaque élément
-du vecteur, aussi appelé *composante*, correspond à un mot du
-dictionnaire et sa valeur est 1 si le mot apparaît dans le document et
-0 sinon. Prenons l'exemple d'un dictionnaire contenant les mots de
-langue française et du document textuel `citoyennes tricoteuses - les
-femmes du peuple à paris pendant la révolution française`. Ce document
-sera représenté par un vecteur avec une composante par mot du
-dictionnaire et toutes les composantes valent 0 sauf les composantes
-pour les mots `à`, `citoyennes`, ..., `tricoteuses` qui valent 1. On
-mémorise donc la *présence (valeur 1) ou l'absence (valeur 0)* d'un
-mot du dictionnaire dans le document. Cette représentation est appelée
-**Boolean frequency**,
+On suppose toujours qu'un grand ensemble de documents est à la disposition du moteur de recherche. Rappelons rapidement que dans le cas du web, ce sont les robots (ou crawlers en anglais) qui se chargent de collecter le plus grand nombre possible de documents disponibles sur internet. Ce grand corpus de documents est ensuite indexé selon des techniques similaires à celles expliquées précédemment. 
 
-Plutôt que de mémoriser simplement la présence ou l'absence, une
-extension est de compter combien de fois chaque mot apparaît. On
-obtient une seconde représentation, appelée **Term frequency**, pour
-laquelle un document est représenté par un vecteur où chaque
-composante correspond à un mot du dictionnaire et la valeur est le
-nombre d'occurrences (d'apparitions) du mot dans le document. Par
-exemple, considérons le document `réflexions sur la révolution de
-france suivi d'un choix de textes de burke sur la révolution`.  Il
-sera représenté par un vecteur dont toutes les composantes valent 0
-sauf les composantes pour les mots `réflexions`, `france`, ... qui
-valent 1 et les composantes pour les mots `de`, `la`, `révolution` et
-`sur` qui valent 2 car ils apparaissent deux fois.
+Pour calculer un score, la représentation numérique des documents est adaptée et plusieurs représentations ont été utilisées. Trouver une bonne représentation, adéquate pour la recherche d'information est toujours un sujet de recherche. Nous en présentons trois. 
 
-Mais, lorsque vous écrivez des requêtes sur le Web, vous savez que des
-mots trop fréquents vont vous retourner trop de réponses donc vous
-essayez d'exprimer votre requête avec *des mots ou termes plus
-pertinents ou plus discriminants* dans le sens où vous savez qu'il y a
-moins de documents contenant ces mots. Nous allons, par conséquent,
-présenter une troisième représentation, appelée **term
-frequency -- inverse document frequency (tf-idf)**, qui pénalise les
-mots fréquents et favorise les mots rares.  Dans cette représentation,
-on multiplie la fréquence d'apparition (*tf* pour term frequency) par
-un facteur (*idf* ou inverse document frequency). Nous ne donnons pas
-la définition mathématique de l'idf mais il suffit de retenir que
-l'idf d'un mot
+Dans la plus simple, un document sera représenté par une suite de 0 et de 1 correspondant à la présence ou l'absence dans ce document de  chaque token du vocabulaire considéré dans la phase d'indexation. On appelle un **vecteur** une telle suite de valeurs qu'on prend l'habitude de représenter comme un tableau d'une seule colonne. Chaque valeur 0 ou 1 se trouve dans une cellule de ce tableau qu'on appelle **composante** du vecteur et qui est ici associée à un token du vocabulaire. 
+Prenons l'exemple d'un vocabulaire contenant les mots de langue française et du document textuel `citoyennes tricoteuses - les femmes du peuple à paris pendant la révolution française`. Ce document sera représenté par un vecteur avec une composante par mot du vocabulaire et toutes les composantes valent 0 sauf les composantes pour les mots `à`, `citoyennes`, ..., `tricoteuses` qui valent 1.  Cette représentation qui ne représente un document que par la présence ou l'absence de certains tokens est appelée **Boolean frequency**. 
+
+Plutôt que de mémoriser simplement la présence ou l'absence, une extension est de compter combien de fois chaque token apparaît. On obtient une seconde représentation, appelée **Term frequency**, pour
+laquelle un document est représenté par un vecteur où chaque composante est le nombre de fois où un token apparaît dans le document. Par exemple, considérons le document `réflexions sur la révolution de france suivi d'un choix de textes de burke sur la révolution`.  Il sera représenté par un vecteur dont toutes les composantes valent 0 sauf les composantes pour les mots `réflexions`, `france`, ... qui valent 1 et les composantes pour les mots `de`, `la`, `révolution` et `sur` qui valent 2 car ils apparaissent deux fois.
+
+Mais, lorsque vous écrivez des requêtes, vous savez que des mots trop fréquents vont vous retourner trop de réponses donc vous essayez d'exprimer votre requête avec *des mots ou termes plus
+pertinents ou plus discriminants* dans le sens où vous savez qu'il y a moins de documents contenant ces mots. Une troisième représentation, appelée **term frequency -- inverse document frequency (tf-idf)**, pénalise les mots fréquents et favorise les mots rares.  Dans cette représentation,
+on multiplie la fréquence d'apparition (*tf* pour term frequency) par un facteur (*idf* ou inverse document frequency). Nous ne donnons pas la définition mathématique de l'idf mais il suffit de retenir que l'idf d'un mot
 
 - est *grand pour un mot rare* qui apparaît dans peu de documents
 - est *petit pour un mot fréquent* qui apparaît dans beaucoup de
   documents
 
-Par conséquent, la multiplication par l'idf va augmenter la valeur
-pour les mots rares de la collection et la diminuer pour les mots
-fréquents. Par exemple, considérons le --très petit-- document `la
-révolution française`. Sa représentation tf avec les fréquences aurait
-1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot
-`française` et 0 pour tous les autres mots du dictionnaire. Sa
-représentation tf-idf aurait une valeur très petite pour le mot `la`
-(car la est très fréquent) disons 0,01, moyenne pour le mot
-`française` disons 0,14 et plus grande pour le mot `révolution` disons
-0,25 (révolution est le moins fréquent des 3 mots). La représentation
-tf-idf permet donc de renforcer la valeur pour les mots qui
-apparaissent dans peu de documents ce qui va aider à trouver les
-documents les plus pertinents.
+Par conséquent, la multiplication par l'idf va augmenter la valeur pour les mots rares de la collection et la diminuer pour les mots fréquents. Par exemple, considérons le --très petit-- document `la révolution française`. Sa représentation tf avec les fréquences aurait 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot `française` et 0 pour tous les autres mots du vocabulaire. Sa représentation tf-idf aurait une valeur très petite pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour le mot `française` disons 0,14 et plus grande pour le mot `révolution` disons 0,25 (révolution est le moins fréquent des 3 mots). La représentation tf-idf permet donc de renforcer la valeur pour les mots qui apparaissent dans peu de documents ce qui va aider à trouver les documents les plus pertinents.
 
-Il existe de nombreuses variantes de ces représentations vectorielles
-qui ont été étudiées et dont on a comparé les performances en
-recherche d'information. Trouver la représentation vectorielle d'un
-texte la mieux adaptée à une tâche reste un sujet de recherche actuel.
 
 ### Score de pertinence entre un document et une requête
 
-Il faut définir un score qui doit mesurer à quel point un document
-correspond à une requête composée de plusieurs mots clé. Ce score sera
-grand si le document est très pertinent pour la
-requête. Intuitivement, un document est pertinent si il contient les
-mots de la requête et si ces mots apparaissent souvent dans le
-document. De plus, le score doit être renforcé pour les mots rares et
-diminué pour les mots fréquents. Pour cela, on représente, en général,
-un *document avec la représentation tf et la requête avec la
-représentation tf-idf*. Plusieurs formules de calcul de score de
+Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Intuitivement, un document est pertinent si il contient les mots de la requête et si ces mots apparaissent souvent dans le document. De plus, le score doit être renforcé pour les mots rares et diminué pour les mots fréquents. Pour cela, on représente, en général, un *document avec la représentation term-frequency et la requête avec la représentation tf-idf*. 
+
+Plusieurs formules de calcul de score de
 pertinence ont été proposées mais une des plus utilisées que nous
 expliquons ici est la **similarité cosinus ("Cosine similarity" en
 anglais)**. Le score exprime à quel point les deux représentations
