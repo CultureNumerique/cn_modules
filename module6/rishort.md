@@ -8,7 +8,7 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 <!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc ri.md -o ri.pdf -->
 
-# La recherche d'information : contexte et application au Web
+# Recherche d'information : contexte et application au Web
 
 Avec l'avènement du numérique et, en particulier, du Web, nous vivons dans un monde de documents, de ressources numériques. Ces documents sont divers comme des sms, des tweets, des mails, des pages Web, des articles journalistiques ou scientifiques, des livres, ... Ils contiennent des informations textuelles mais aussi des dessins, des images et des vidéos. Ils proviennent de sources variées comme des administrations, des journaux, des entreprises commerciales mais aussi les réseaux sociaux et les objets connectés (caméras, compteurs intelligents, gps, ...). Ils sont en très grande quantité avec, par exemple, un nombre estimé de 60 000 milliards de documents Web en 2016. Cette masse de documents génère de nouvelles possibilités comme pouvoir retrouver des documents concernant un sujet précis, pouvoir proposer des suggestions d'articles de journaux ou encore pouvoir faire des recommandations de livres à lire ou de films à regarder.
 
@@ -56,9 +56,9 @@ que les réponses à une requête sont toujours les mêmes
 et sont dans le même ordre.{T}
 ```
 
-# Les modes de recherche d'information
+# Modes de recherche d'information
 
-## La recherche exacte
+## Recherche exacte
 
 De nombreux logiciels comme les traitements de texte, les éditeurs, les outils de messagerie vous proposent une fonction de recherche lorsque vous visionnez un document, un texte, un message,... En actionnant le menu *Rechercher* voire un simple bouton, vous avez la possibilité de taper quelques caractères. Ces mots définiront une requête et dans le plus simple des cas, le logiciel vous dirigera vers (ou vous surlignera) chaque position ou ces quelques caractères apparaissent. 
 
@@ -97,19 +97,20 @@ Dans les expressions régulières, les caractères `^` et `$` représentent le d
 }
 ``` 
 
-## La recherche exacte rapide avec un index
+## Recherche exacte rapide avec un index
 
 Lorsque vous utilisez l'index d'un livre, d'un atlas ou d'une encyclopédie, vous utilisez la liste des mots indexés rangés alphabétiquement pour trouver les pages du livre où ces mots sont définis ou utilisés. L'ordre alphabétique permet également rechercher très rapidement dans cet index. Cette simple organisation est reproduite dans les moteurs de recherche d'information pour dépasser la simple recherche séquentielle qui peut prendre un temps de calcul trop grand. 
 
-Pour construire cet index, il faut choisir une représentation des documents. Dans les bibliothèques, les ouvrages sont  décrits ou représentés par des notices contenant des méta-données comme le titre, les auteurs, les éditeurs, une liste de mots-clés. L'index est alors construit à partir de ces informations collectées le plus souvent "à la main". Mais aujourd'hui, l'automatisation de cette phase d'indexation s'est généralisée.  Elle s'applique également sur le texte complet et donne alors la possibilité de *recherche plein texte*, à l'instar de ce qui est fait par les moteurs de recherche pour les documents du web. 
+### Construction d'un index
+
+Pour construire cet index, il faut choisir quels mots seront indexés et quelle sera la représentation des documents. Dans les bibliothèques, les ouvrages sont  décrits ou représentés par des notices contenant des méta-données comme le titre, les auteurs, les éditeurs, une liste de mots-clés. L'index est alors construit à partir de ces informations collectées le plus souvent "à la main". Mais aujourd'hui, l'automatisation de cette phase d'indexation s'est généralisée.  Elle s'applique sur le texte complet et donne alors la possibilité de *recherche plein texte*, à l'instar de ce qui est fait par les moteurs de recherche pour les documents du web. 
 
 Comment fonctionne cette indexation automatique ? Chaque texte est découpé en une séquence d'unités
-élémentaires, appelés `tokens`, qui sont des suites de caractères sans espace et sans symbole de ponctuation. Un token correspond à un mot de la langue ou un nombre ou une date ou un sigle.  De nombreux choix, parfois dépendants de la langue conditionnent ce découpage en tokens. Par exemple, considère-t-on différemment les majuscules et les minuscules ? Considère-t-on les accents ? Un texte comme  `La Révolution française, 1789-1799 : Une histoire socio-politique` pourrait alors être transformé en une suite de tokens `la revolution francaise 1789 1799 une histoire socio
-politique`. L'ensemble de tous les tokens possibles, ou plus précisément, rencontrés dans l'ensemble de tous les documents qui constituent la base documentaire à indexer forme le **vocabulaire**. Parfois, les mots très fréquents sont retirés du vocabulaire, par exemple en français le `et`, `le`, ...
+élémentaires, appelés `tokens`, qui sont des suites de caractères sans espace et sans symbole de ponctuation. Un token correspond à un mot de la langue ou un nombre ou une date ou un sigle.  De nombreux choix, parfois dépendants de la langue conditionnent ce découpage en tokens. Par exemple, considère-t-on différemment les majuscules et les minuscules ? Considère-t-on les accents ? Un texte comme `La Révolution française, 1789-1799 : Une histoire socio-politique` pourrait alors être transformé en une suite de tokens `la revolution francaise 1789 1799 une histoire socio politique`. L'ensemble de tous les tokens possibles, ou plus précisément, rencontrés dans l'ensemble de tous les documents qui constituent la base documentaire à indexer forme le **vocabulaire**. Parfois, les mots très fréquents sont retirés du vocabulaire, par exemple en français le `et`, `le`, ... Si le programme d'indexation automatique dispose de plus d'informations linguistiques, il est parfois possible d'inclure dans le vocabulaire, et donc dans l'index, des tokens qui sont composés comme `révolution française` ou `socio-politique`. 
 
-L'étape suivante pour la réalisation de l'index est maintenant d'associer à chaque token du vocabulaire l'ensemble des documents dans lesquels ce token apparaît. Pour cela on affecte un numéro unique, appelé identifiant, à chaque document de la base documentaire. La structure de l'index est alors simplement une liste de tokens avec pour chacun la liste des identifiants des documents où se token se trouve. Par exemple, l'index  mémorise que le mot `rose` apparaît dans les
-documents de numéro 125, 245, 567, ... ; que le mot `blanche` apparaît
-dans les documents de numéro 117, 176, 245, 312, ...
+L'étape suivante pour la réalisation de l'index est maintenant d'associer à chaque token du vocabulaire l'ensemble des documents dans lesquels ce token apparaît. Pour cela on affecte un numéro unique, appelé identifiant, à chaque document de la base documentaire. La structure de l'index est alors simplement une liste de tokens avec pour chacun, la liste des identifiants des documents où ce token se trouve. Par exemple, l'index  mémorise que le mot `rose` apparaît dans les documents de numéro 125, 245, 567, ... ; que le mot `blanche` apparaît dans les documents de numéro 117, 176, 245, 312, ...
+
+### Recherche à l'aide d'un index
 
 L'index peut avoir une taille de plusieurs centaines de milliers de tokens. Il est lui même organisé de façon à ce qu'une recherche soit rapide. Parmi les techniques utilisées, on peut décrire la plus simple. Il s'agit de s'assurer que l'index soit organisé par ordre alphabétique des tokens. Dans ce cas un algorithme de  *recherche dichotomique* peut être utilisé. La recherche dichotomique est illustrée en cherchant par exemple le mot `rose` : on regarde le mot au milieu du dictionnaire, c'est `maman`, donc on cherche dans la seconde moitié ; on regarde le mot au milieu de la seconde moitié, c'est `savant`, donc on cherche entre `maman` et `savant` ; jusqu'à trouver le mot `rose`. On peut montrer qu'un tel algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il suffit d'effectuer 19 accès, pour une dictionnaire de 1 million de mots, il suffit d'effectuer 20 accès. Notons que si la taille du dictionnaire double, on ne doit faire qu'un accès supplémentaire ! Ce
 qui explique la rapidité de ce mode de recherche. Terminons en signalant que des méthodes dites de hachage permettent d'effectuer des recherches plus rapides encore. 
@@ -118,18 +119,22 @@ Nous avons présenté la phase d'indexation qui fournit comme résultat un index
 
 > Un **index** est constitué d'un vocabulaire avec une méthode
 > d'accès rapide à un token, et, pour chaque token, on dispose de la liste
-> des identifiants des documents qui contiennent ce mot.
+> des identifiants des documents qui contiennent ce token.
 
 Comment l'index permet-il de répondre rapidement à des requêtes formulées dans un moteur de recherche exacte ?
 
 - Si la requête ne contient qu'un seul mot, on cherche si ce mot est un token dans l'index et on renvoie la liste des documents donnés par leurs identifiants associée dans l'index.
-- Si la requête est composée de deux mots, le moteur procède comme suit : chercher le premier mot dans l'index et renvoyer la liste des identifiants de documents ; faire de même pour le deuxième mot ;  construire la liste  des identifiants qui apparaissent dans les deux listes (c'est une simple intersection de listes) ; renvoyer cette  liste comme réponse à la requête. Ce principe peut être étendu pour des requêtes à  plusieurs mots clés
-- Une requête à plusieurs mots clés est interprétée avec un opérateur `ET` implicite car on souhaite que tous les mots soient présents. On  peut aussi écrire des requêtes avec les opérateurs logiques `OU` et `NON` qui correspondront à d'autres opérations simples sur les listes (union ou différence).
+- Si la requête est composée de deux mots, le moteur procède comme suit : chercher le premier mot dans l'index et renvoyer la liste des identifiants de documents ; faire de même pour le deuxième mot ;  construire la liste  des identifiants qui apparaissent dans les deux listes (c'est une intersection de listes) ; renvoyer cette  liste comme réponse à la requête. Ce principe peut être étendu pour des requêtes à  plusieurs mots
+- Une requête à plusieurs mots est interprétée avec un opérateur `ET` implicite car on souhaite que tous les mots soient présents. On  peut aussi écrire des requêtes avec les opérateurs logiques `OU` et `NON` qui correspondront à d'autres opérations sur les listes (union ou différence).
 - Les interfaces des moteurs documentaires proposent également des *requêtes par position*. La plus importante est la **requête par phrase** où on recherche les mots en respectant exactement les positions des mots de la requête. Une requête par phrase est souvent exprimée avec des guillemets. Par exemple, si on considère la requête par phrase `"rose blanche"`, le moteur doit renvoyer tous les documents contenant les deux mots `rose` et `blanche` à des positions consécutives. Ceci peut être réalisé grâce à un index plus complet  mémorisant également les positions auxquelles apparaissent les tokens. Il existe d'autres requêtes par position exprimant des conditions sur les positions relatives de mots. Par exemple, on pourrait écrire une requête demandant que les mots `rose` et `blanche` soient distants de moins de 3 mots.
+
+
 
 ## La recherche approximative avec un score de pertinence
 
 Les systèmes étudiés jusqu'à présent renvoient la liste complète des documents qui satisfont la requête. Lorsque le corpus de documents sur lequel porte les requêtes est trop grand, cette recherche est bien souvent inutile. Trop de documents satisfont la requête et le résultat devient illisible.  Les moteurs de recherche du Web fonctionnent différemment et ordonnent la liste de résultats selon des scores attribués aux documents. Ceci permet d'effectuer des recherches approximatives mais aussi de faciliter la lecture du résultat. Il est donc alors nécessaire de définir et calculer **un score de pertinence relativement à une requête**.
+
+À cause de cet ordonnancement des résultats, des questions éthiques d'accès à l'information se posent, et plus évidemment encore si la liste est tronquée aux quelques documents de plus haut score, ou même du premier document. Mais il faut remarquer que les mêmes questions éthiques se posent dans la recherche exacte suite aux choix réalisés dans la phase d'indexation, de collecte et de représentation des documents. 
 
 ### Représenter des documents par des tableaux de nombres
 
@@ -151,24 +156,16 @@ on multiplie la fréquence d'apparition (*tf* pour term frequency) par un facteu
 - est *petit pour un mot fréquent* qui apparaît dans beaucoup de
   documents
 
-Par conséquent, la multiplication par l'idf va augmenter la valeur pour les mots rares de la collection et la diminuer pour les mots fréquents. Par exemple, considérons le --très petit-- document `la révolution française`. Sa représentation tf avec les fréquences aurait 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot `française` et 0 pour tous les autres mots du vocabulaire. Sa représentation tf-idf aurait une valeur très petite pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour le mot `française` disons 0,14 et plus grande pour le mot `révolution` disons 0,25 (révolution est le moins fréquent des 3 mots). La représentation tf-idf permet donc de renforcer la valeur pour les mots qui apparaissent dans peu de documents ce qui va aider à trouver les documents les plus pertinents.
+Par conséquent, la multiplication par l'idf va augmenter la valeur pour les mots rares de la collection et la diminuer pour les mots fréquents. Par exemple, considérons le très petit document `la révolution française`. Sa représentation tf avec les fréquences aurait 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot `française` et 0 pour tous les autres mots du vocabulaire. Sa représentation tf-idf aurait une valeur très petite pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour le mot `française` disons 0,14 et plus grande pour le mot `révolution` disons 0,25 (révolution est le moins fréquent des 3 mots). La représentation tf-idf permet donc de renforcer la valeur pour les mots qui apparaissent dans peu de documents ce qui va aider à trouver les documents les plus pertinents.
 
 
 ### Score de pertinence entre un document et une requête
 
-Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Intuitivement, un document est pertinent si il contient les mots de la requête et si ces mots apparaissent souvent dans le document. De plus, le score doit être renforcé pour les mots rares et diminué pour les mots fréquents. Pour cela, on représente, en général, un *document avec la représentation term-frequency et la requête avec la représentation tf-idf*. 
+Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Plusieurs formules de calcul ont été proposées et traduisent la similarité entre la représentation du document et celle de la requête par des tableaux de nombre, c'est-à-dire représentés sous forme de vecteurs. Intuitivement, le score exprime à quel point les deux vecteurs, document et requête, sont proches. Le score de similarité le plus utilisé est la **similarité cosinus ("Cosine similarity" en anglais)** obtenue  en multipliant les composantes des vecteurs deux à deux (correspondant à un même mot) et en sommant les résultats. Notez que comme le 0 représente l'absence d'un mot dans ces représentations à base de vecteurs, seuls les mots à la fois présents dans la requête et dans le document contribuent au score.
 
-Plusieurs formules de calcul de score de
-pertinence ont été proposées mais une des plus utilisées que nous
-expliquons ici est la **similarité cosinus ("Cosine similarity" en
-anglais)**. Le score exprime à quel point les deux représentations
-vectorielles sont alignées en multipliant les composantes deux à deux
-(correspondant à un même mot) et en sommant les résultats. Pour une
-requête à plusieurs mots clés, sa représentation vectorielle est
-constituée de 0 partout sauf pour les mots de la requête. Par
-conséquent, seules les valeurs associées aux mots de la requête vont
-être utilisées dans le calcul du score. Illustrons par des exemples ce
-calcul de score de pertinence :
+Un bon choix pour la représentation sous forme de vecteurs des requêtes et documents est donc essentiel. Intuitivement, un document est pertinent si il contient les mots de la requête et si ces mots apparaissent souvent dans le document. De plus, le score doit être renforcé pour les mots rares et diminué pour les mots fréquents. Pour cela, on représente, en général, un *document avec la représentation term-frequency et la requête avec la représentation tf-idf*. 
+
+Illustrons par des exemples ce calcul de score de pertinence :
 
 - la requête `la révolution française` avec la représentation tf-idf
 est représenté par le vecteur (0,01 ; 0,25 ; 0,14) où les composantes
@@ -200,11 +197,11 @@ longueur des documents.  Le calcul de la pertinence fait donc
 intervenir une normalisation qui revient à ramener tous les documents
 à une même longueur.
 
-Notons enfin que les notices sont structurées, que les documents sont
-structurés avec titre, résumé, ... On peut calculer un score de
-pertinence pour chacun de ces éléments et combiner ces scores. Nous
-reparlons de ce point lorsque nous définirons le score de pertinence
-Web dans la suite.
+<!-- Notons enfin que les notices sont structurées, que les documents sont -->
+<!-- structurés avec titre, résumé, ... On peut calculer un score de -->
+<!-- pertinence pour chacun de ces éléments et combiner ces scores. Nous -->
+<!-- reparlons de ce point lorsque nous définirons le score de pertinence -->
+<!-- Web dans la suite. -->
 
 
 ```compréhension
@@ -274,204 +271,66 @@ Nous utilisons à titre d'exemple [le site Gallica lié à la bibliothèque nati
 
 # Recherche d'information sur le Web
 
-Nous avons présenté l'indexation et la calcul de score de pertinence
-d'un document textuel relativement à une requête. Nous allons voir
-comment ce score est adapté aux documents du Web. Nous présentons
-ensuite le score de notoriété qui mesure l'importance d'une page
-Web. C'est ce score introduit par `Google` qui lui a donné un avantage
-significatif sur ses concurrents dans les années 1990. La combinaison de ces
-deux scores est la base du score d'un document Web relativement à une
-requête quel que soit le moteur utilisé.
+Dans les années 1990, des travaux de recherche ont proposé une modification dans le calcul du score de pertinence en combinant le score avec une valeur reflétant la notoriété d'un document du web. Ces travaux ont été implantés et ont conduit à la création de Google. Ils sont aujourd'hui utilisés par tous les moteurs de recherche du web. Cette valeur de notoriété exploite la particularité des documents HTML du Web : l'existence de liens hypertexte entre documents.
+
+En résumé, le moteur de recherche du web doit indexer les documents du web, calculer un score web qui compose un score de pertinence et un score de notoriété. 
 
 ## Indexation du Web
 
-Pour calculer un score de pertinence, il faut au préalable que les
-documents du Web soient indexés. Nous présentons quelques points
-essentiels :
+L'**indexation du Web** est réalisé par des **programmes appelés robots** qui parcourent les sites Web et suivent les liens. Ces robots fonctionnent comme un navigateur automatique. Reportez-vous au cours sur le Web. À partir d'une URL, ils téléchargent un premier document HTML, extraient automatiquement toutes les URLs  qui s'y trouvent et recommencent ce même processus indéfiniment. De cette façon, ils  récupèrent le contenu des pages et la structure décrite par tous les liens. Le tout (donc une copie partielle du web) est stocké dans d'immenses serveurs. La constitution d'un index s'opère dans le même temps, et au bilan :
 
-
-- L'**indexation du Web** est réalisé par des **programmes appelés
-robots** qui parcourent les sites Web et suivent les liens. Ces
-programmes récupèrent le contenu des pages et la structure des sites
-(les hyperliens et l'organisation).
-- **Tous les documents du Web sont indexés** quel que soit leur format :
-  pages Web au format `html`, documents imprimables au format `pdf`,
-  documents au format `doc`, ... ce qui mène à un nombre de documents
-  de l'ordre de 60 000 milliards en 2016.
-- **Tous les mots qui apparaissent sur le Web sont indexés** quels que
-  soient leur fréquence, la langue, ..., ce qui amène à un
-  dictionnaire contenant plusieurs millions de mots.
-- Ceci permet de construire un **index de très grande taille** qui est
-  **mis à jour continûment** avec les informations récupérées par les robots
-- L'index est réparti sur des fermes de calcul (un grand nombre
-  d'ordinateurs de grande capacité en réseau) réparties dans le monde
-  entier. On peut noter que cela implique une très grande consommation
-  d'énergie et donc le Web n'est pas si écologique qu'on pourrait le
-  croire.
-
-
+- **Les documents du Web sont indexés** quel que soit leur format : pages Web au format `html`, documents imprimables au format `pdf`, documents au format `doc`, ... ce qui mène à un nombre de documents de l'ordre de 60 000 milliards en 2016.  
+- **Tous les mots qui apparaissent sur le Web sont indexés** quels que soient leur fréquence, la langue, ..., ce qui amène à un dictionnaire contenant plusieurs millions de mots.
+- Ceci permet de construire un **index de très grande taille** qui est **mis à jour continûment** avec les informations récupérées par les robots
+- L'index est réparti sur des fermes de calcul et de stockage (un grand nombre d'ordinateurs de grande capacité en réseau) réparties dans le monde entier. On peut noter que cela implique une très grande consommation d'énergie et donc le Web n'est pas si écologique qu'on pourrait le croire.
 
 ## Score de pertinence
 
-Considérons un document du Web -- une page Web -- au format `html`. Un
-tel document a un contenu mais aussi une structure avec un titre
-principal et des sections ayant des titres. L'apparition d'un mot de
-la requête dans un titre est plus important que son apparition dans le
-contenu. Ceci doit donc être pris en compte dans le calcul de
-pertinence. Un deuxième élément qui est spécifique au Web concerne les
-liens (ou hyperliens). En effet, lorsqu'un lien sur une page Web est
-créé, il est associé à un texte qui contient de l'information sur la
-page. Par exemple, un site Web qui souhaite mettre un lien sur ce
-module culture numérique définira un texte cliquable comme `cours
-d'introduction à la recherche information` qui est très informatif sur
-le contenu de la page. Il est donc intéressant de le prendre en compte
-dans le calcul du score de pertinence.
+Considérons un document du Web au format `html`. Un tel document a un contenu mais aussi des méta-données et une structure comme un titre principal et des titres de section. L'apparition d'un mot de la requête dans un titre est plus important que son apparition dans le contenu. Ceci doit donc être pris en compte dans le calcul de pertinence. Un deuxième élément qui est spécifique au Web concerne les liens composés par une URL et un texte de lien. Par exemple, un lien sur ce module culture numérique définira un texte cliquable comme `cours d'introduction à la recherche information` et l'URL reprendra peut être une partie de ces mots. Ces textes sont très informatifs sur le contenu de la page. Il est donc intéressant de les prendre en compte dans le calcul du score de pertinence.
 
-Par conséquent, le score de pertinence d'une page Web va prendre en
-compte des scores de pertinence calculés sur **différentes vues sur la
-page Web** dont les principales sont :
+Par conséquent, le score de pertinence d'une page Web va prendre en compte des scores de pertinence calculés sur **différentes vues sur la page Web** dont les principales sont :
 
 - le contenu textuel de la page
 - les titres de la page
-- les mots clé associés à la page définis dans son entête et plus
-  généralement les méta données de la page Web
-- l'adresse du document (un texte de la forme
-  `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
+- les mots clé associés à la page définis dans son entête et plus généralement les méta données de la page Web
+- l'adresse du document (un texte de la forme  `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
 - les textes des liens qui pointent sur la page
 
-Pour chacune de ces vues, un score de pertinence peut être calculé
-avec la méthode introduite auparavant. Il reste à combiner ces scores
-avec une formule de la forme : un pourcentage du score de contenu + un
-pourcentage du score des titres + ... **La formule de combinaison est
-secrète !**. C'est-à-dire que l'on ne connaît pas les pourcentages
-utilisés dans la formule. Par exemple, suite à de nombreux abus de
-concepteurs de pages Web qui ajoutaient des mots clé fictifs (sans
-rapport avec le contenu) pour essayer d'améliorer artificiellement
-leur score, on a pu constater que l'influence du score de pertinence
-des mots clés a été diminuée.
+Pour chacune de ces vues, un score de pertinence peut être calculé avec la méthode introduite auparavant. Il reste à combiner ces scores avec une formule de la forme : un pourcentage du score de contenu + un pourcentage du score des titres + ... **La formule de combinaison est secrète !**. C'est-à-dire que l'on ne connaît pas les pourcentages utilisés dans la formule. Par exemple, suite à de nombreux abus de concepteurs de pages Web qui ajoutaient des mots clé fictifs (sans rapport avec le contenu) pour essayer d'améliorer artificiellement leur score, on a pu constater que l'influence du score de pertinence des mots clés a été diminuée.
 
 ## Score de notoriété
 
-Le Web a une structure de réseau ou de graphe avec des pages Web qui
-pointent les unes vers les autres avec les hyperliens. L'idée est
-d'utiliser cette structure pour mesurer *la notoriété* des pages. On
-souhaite donc définir un *score de notoriété* qui va mesurer à quel
-point une page est importante pour les internautes. Une première
-tentative de définition de score de notoriété d'une page pourrait être
-le nombre de pages qui pointent sur elle. Cette définition n'est pas
-robuste car on peut tricher (cela a été fait). En effet, il suffirait
-pour renforcer le score de notoriété d'une page de créer (en grand nombre)
-des pages artificielles qui pointent sur cette page. La définition
-doit donc être plus intelligente et une bonne définition est la
-suivante :
+Le score de notoriété peut être basé sur la réflexion suivante : 
 
 > Une page a **une forte notoriété si beaucoup de pages ayant une
-> forte notoriété** pointent sur elle
+> forte notoriété** y font référence.
 
-Définir la notoriété n'est pas si simple car on voit que pour définir
-une page de forte notoriété il faut déjà savoir calculer la
-notoriété. C'est un exemple de définition récursive où on définit la
-notoriété à partir d'elle-même. Mais ceci est fréquent en mathématique
-et en informatique. Il est donc possible de mettre cette définition en
-équations et de définir des algorithmes qui vont permettre de calculer
-la notoriété d'une page Web. Une autre vision de la notoriété peut
-être définie avec la notion de **surfeur aléatoire**. L'idée est
-d'imaginer qu'un surfeur navigue sur le Web en suivant des liens. Pour
-cela,
+Puisque Le Web a une structure de réseau ou de graphe avec des pages Web qui pointent les unes vers les autres avec les hyperliens, l'idée est d'utiliser cette structure pour mesurer *la notoriété* des pages. Même cela peut paraître compliqué car la définition de notoriété utilise elle même la notoriété (on parle de définition récursive) il est possible de mettre cette définition en équations et de définir des algorithmes qui vont permettre de la calculer. L'idée est d'imaginer qu'un surfeur navigue sur le Web en suivant des liens au hasard. On définit en fait un **surfeur aléatoire** dans le graphe du web. Pour cela,
 
-- il peut choisir une page au hasard sur le Web -- ceci correspond à
-émettre une requête et suivre un lien sur la page de réponse
-- lorsqu'il est sur une page Web, il peut choisir au hasard un des
-  liens présents sur la page et le suivre
+- il peut choisir une page au hasard sur le Web
+- lorsqu'il est sur une page Web, il peut choisir au hasard un des liens présents sur la page et le suivre
 
-Le surfeur aléatoire choisit donc une page au hasard, il suit des
-liens en partant de cette page puis, après avoir suivi quelques liens,
-il recommence en choisissant une nouvelle page au hasard. Si le
-surfeur réalise ceci un très grand nombre de fois, toutes les pages
-Web seront visitées et plus souvent elles sont visitées plus elles
-sont importantes. Le score de notoriété d'une page correspond donc à
-la fréquence de visite de cette page par le surfeur aléatoire. Cette
-définition a été démontrée équivalente à la précédente. Un algorithme
-pour calculer le score de notoriété, appelé **algorithme PageRank**, a
-été introduit par les fondateurs de Google au milieu des années 1990
-dans un moteur de recherche d'information. Si les principes de cet
-algorithme étaient connus, c'était un challenge de l'appliquer à la
-recherche d'information avec des tailles de données (dictionnaire et
-nombre de documents) très grands. Cet algorithme permet donc
-d'**attribuer à toute page Web un score de notoriété**.
+Si le surfeur réalise ceci un très grand nombre de fois, toutes les pages Web seront visitées et plus souvent elles sont visitées plus elles sont importantes. Le score de notoriété d'une page correspond donc à la fréquence de visite de cette page par le surfeur aléatoire. Notez que pour qu'une page soit souvent visitée, il ne suffit pas qu'elle soit la cible de nombreux liens, mais que ces liens proviennent eux mêmes de pages fréquemment visitées. Sans se résumer à cela, l'algorithme appelé **PageRank**, introduit par les fondateurs de Google au milieu des années 1990, simule ce surfeur aléatoire pour calculer le score de notoriété. Si les principes de cet algorithme étaient connus, c'était un challenge de l'appliquer à la recherche d'information avec des tailles de données (dictionnaire et nombre de documents) très grands. 
 
 ## Score Web
 
-Une requête sur le Web dans un moteur de recherche d'information est
-très souvent exprimée comme une suite de mots clés. Le **score Web
-d'un document Web relativement à une requête** est calculé comme une
-combinaison de la forme : un pourcentage du score de pertinence de la
-page relativement à la requête + un pourcentage du score de notoriété
-de la page. Ici encore la formule de combinaison n'est pas connue !
-Ici encore, on sait qu'elle existe et qu'elle évolue. Par exemple, on
-observe chez `Google` que la part du score de notoriété est de plus en
-plus grande. En effet, les pages les mieux classées ont souvent une
-forte notoriété comme les pages Wikipedia, des pages de sites de
-journaux et, plus généralement, des pages de sites de
-référence. Retenez que **le score Web est calculé principalement à
-partir de la pertinence et de la notoriété**.
+Le **score Web d'un document Web relativement à une requête** est calculé comme une
+combinaison qui utilise un score de pertinence de la page relativement à la requête et un score de notoriété de la page. Ici encore la combinaison exacte utilisée par les acteurs comme Google, Bing, Qwant, Baidu ou Yandex,... (la liste est longue) n'est pas connue et chacun a la sienne! Elle reste secrète et évolue pour des raisons de compétition entre moteurs de recherche et sans doute aussi pour éviter aux concepteurs de sites de mettre en oeuvre des techniques pour augmenter artificiellement leur score. Mais il semble que la part du score de notoriété est de plus en plus grande. En effet, les pages les mieux classées ont souvent une forte notoriété comme les pages Wikipedia, des pages de sites de journaux et, plus généralement, des pages de sites de référence. Retenez que **le score Web est calculé principalement à partir de la pertinence et de la notoriété**, que **les réponses et l'ordre des réponses à une requête diffèrent selon le moteur choisi** et que **le score Web évolue dans le temps**.
 
-Rappelons également qu'il existe différents moteurs de recherche
-d'information comme, par exemple, `Qwant` et `Google`. Chaque moteur a
-développé ses propres algorithmes et ses propres formules de calcul
-basés sur la pertinence et la notoriété.  On peut penser à des
-recettes de cuisine utilisant les mêmes ingrédients mais avec des
-proportions et des modes de cuisson différents. Certains moteurs vont
-privilégier la notoriété alors que d'autres vont essayer d'introduire
-de la diversité dans les réponses. Il est donc important de retenir que
-**les réponses et l'ordre des réponses à une requête diffèrent selon
-le moteur choisi**.
+Si les deux éléments essentiels sont le score de pertinence et le score de notoriété, le score Web fait intervenir d'autres éléments sans qu'on sache exactement comment ils interviennent dans le calcul
+du score Web. Parmi les éléments principaux intervenant dans le calcul, on trouve :
 
-Si les deux éléments essentiels sont le score de pertinence et le
-score de notoriété, le score Web fait intervenir d'autres éléments
-sans qu'on sache exactement comment ils interviennent dans le calcul
-du score Web. Les éléments principaux intervenant dans le calcul sont :
+- des données d'usage
+- des données personnelles 
 
-- la langue d'interrogation
-- le pays du site du moteur
-- le média d'interrogation (ordinateur ou téléphone portable) et sa
-  localisation
-- les données d'usage
+Les données d'usage consistent à connaître par exemple le nombre de fois où les utilisateurs, considérés globalement et non individuellement, ont cliqué sur chaque lien fourni sur la page de résultat du moteur de recherche. Ces pages vont voir leur score renforcé ce qui contribue à renforcer encore le score des pages souvent visitées. Le score privilégie alors fortement la notoriété vue par la majorité des utilisateurs au détriment de la diversité. Notez également que ces données d'usage sont possédées par les grands acteurs du domaine ce qui leur donne un avantage concurrentiel important. 
 
-Pour ce dernier point, les données d'usage consiste à connaître les
-liens dans les pages de réponse sur lesquels les utilisateurs ont
-souvent cliqués. Ces pages vont voir leur score renforcé ce qui
-contribue à renforcer encore le score des pages souvent visitées. Le
-score privilégie alors fortement la notoriété vue par la majorité des
-utilisateurs au détriment de la diversité. Notez également que ces
-données d'usage sont possédées par les grands acteurs du domaine ce
-qui leur donne un avantage concurrentiel important. D'autres éléments
-sont certainement pris en compte.  Retenez que **le score Web est basé
-sur pertinence et notoriété mais il prend en compte de nombreux autres
-éléments**.
 
-Il faut également être conscient que le Web est dynamique et évolue
-sans cesse ce qui va modifier les scores dans le temps. De même, les
-algorithmes de calcul de score Web des différents moteurs évoluent
-continuellement. Par conséquent, les réponses et l'ordre des réponses
-à une requête à un moment donné ne seront peut-être pas identiques si
-elles sont exécutées à un autre moment. Retenez que **le score Web
-évolue dans le temps**.
+Les données personnelles sont attachées aux utilisateurs du moteur de recherche. Il peut s'agir de la langue d'interrogation, de la localisation de l'utilisateur, du média d'interrogation, autant d'informations qui accompagnent ou peuvent se déduire d'une requête HTTP (voir le cours sur le web). Mais grâce aux cookies et autres techniques de tracking, d'autres informations définissant un profil de l'utilisateur sont collectées par la plupart des moteurs de recherche. Il peut s'agir des requêtes passées, mais aussi d'informations bien plus personnelles comme le sexe ou l'âge ou les goût. 
+Elles peuvent alors être utilisées et modifier cette fois individuellement les résultats proposés par le moteur de recherche. Certains moteur comme *Qwant* ou *DuckDuckGo* s'engagent à ne pas user de cette pratique. Retenez donc que **le score Web est basé sur pertinence et notoriété mais il prend en compte de nombreux autres éléments**.
 
-Nous avons essentiellement discuté des requêtes à plusieurs mots clé
-mais un autre type de requête important sur le Web (environ 15 pour
-cent des requêtes) correspond aux requêtes par phrase. Rappelons
-qu'une requête par phrase consiste à rechercher les documents
-contenant exactement la phrase saisie. La convention usuelle est de
-mettre la phrase entre guillemets dans la barre de saisie. Par
-exemple, on peut considérer la requête par phrase `"la révolution
-française"`. Pour cette requête, on va retourner par ordre de score
-Web les documents contenant les trois mots consécutifs. Notez que
-cette requête donnera donc des résultats différents de la requête à
-trois mots clé `la révolution française` pour laquelle la position des
-mots n'intervient pas et dont les résultats ne contiennent pas
-nécessairement les trois mots.  Souvent les moteurs proposent des
-requêtes avancées mais elles sont très peu utilisées en pratique.
+
+<!-- Nous avons essentiellement discuté des requêtes à plusieurs mots clé mais un autre type de requête important sur le Web (environ 15 pour cent des requêtes) correspond aux requêtes par phrase. Rappelons qu'une requête par phrase consiste à rechercher les documents contenant exactement la phrase saisie. La convention usuelle est de mettre la phrase entre guillemets dans la barre de saisie. Par exemple, on peut considérer la requête par phrase `"la révolution française"`. Pour cette requête, on va retourner par ordre de score Web les documents contenant les trois mots consécutifs. Notez que cette requête donnera donc des résultats différents de la requête à trois mots clé `la révolution française` pour laquelle la position des mots n'intervient pas et dont les résultats ne contiennent pas nécessairement les trois mots.  Souvent les moteurs proposent des requêtes avancées mais elles sont très peu utilisées en pratique. --> 
 
 ```compréhension
 
