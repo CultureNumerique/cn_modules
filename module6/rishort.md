@@ -410,244 +410,73 @@ On considère une requête à plusieurs mots clé. Dites quelles affirmations su
 
 ```
 
-# Évolutions, conclusion et discussion
 
-## Évolutions en cours
+# Évolutions en cours
 
-### Adaptation à l'utilisateur
+## Web des données
 
-Les langues naturelles sont ambiguës et un mot peu avoir plusieurs
-sens. Par exemple, le mot `java` peut désigner un langage de
-programmation ou une danse ou une île. Un internaute informaticien
-souhaiterait voir apparaître des pages parlant du langage de
-programmation alors qu'un autre utilisateur préférera des informations
-sur la danse. Même si un mot n'est pas ambigu, un utilisateur
-préférera des sites d'information, un autre des articles
-scientifiques, un autre encore des blogs. Il semble pertinent
-d'adapter les réponses du moteur aux préférences de
-l'utilisateur. Ceci peut être réalisé si l'historique des recherches
-et des liens suivis est connu. Lorsque vous avez un compte et que vous
-êtes identifiés, le moteur peut mémoriser cet historique des
-recherches et des navigations, en déduire un profil et l'utiliser pour
-adapter son calcul de score. Ceci est réalisé par certains moteurs
-mais, ici encore, les formules et algorithmes utilisés ne sont pas
-connus. Notez bien que cette **adaptation à l'utilisateur se fait avec
-la contrepartie de la connaissance complète de votre historique de
-navigation** par le moteur. Rappelons que
-[Qwant affirme ne pas mémoriser les traces de navigation et ne pas créer de profil](https://about.qwant.com/fr/legal/confidentialite/à)
-de ses utilisateurs.
+Bien que depuis sa création le web ait été conçu comme un outil collaboratif de partage d'information, cet aspect s'est renforcé au fil des années. Des évolutions technologiques, l'extension d'internet et des ordinateurs domestiques ont permis la production de contenu web par tout un chacun, amplifiant le caractère participatif. C'est le Web 2.0 avec les wikis, blogs et forums. Dans certains domaines très organisés, avec parfois des règles de contribution strictes et des automatismes permettant d'en contrôler le sens et la forme, le web s'est transformé en énorme base de données. C'est le **web des données** avec Wikipedia comme illustration majeure, ou d'autres bien moins connus mais tout aussi importants dans des domaine spécifiques comme `MusicBrainz` (musique), `GeoNames` (géographie), `OpenStreetMap` (cartographie),... 
 
-Un autre type d'adaptation est d'utiliser les **informations de
-localisation** obtenues à partir d'un gps si vous êtes géolocalisés ou
-à partir d'informations sur l'ordinateur sur lequel vous faites cotre
-requête. Le score des pages portant sur des objets proches de vous
-peut alors être renforcé. Ici encore, les algorithmes sont spécifiques
-à chaque moteur et ne sont pas connus. Notez également, lorsque vous
-activez la géolocalisation, que les informations de géolocalisation
-sont connues et peuvent être historisées. Ici encore, l'adaptation se
-fait au détriment du respect de votre vie privée.
+Pour rendre ces données maintenant accessibles à des traitements automatiques et donc des applications, plusieurs initiatives de chercheurs et de communautés d'utilisateur ont vu le jour pour rassembler ces données dans des bases de données bien plus structurées.  L'idée est donc bien de construire des **bases de connaissances** en phase avec l'ambition d'un **Web sémantique**. Les bases `Wikidata` ou `DBpedia` ont ainsi été initiées.  Les données sont décrites sous forme de triplets de la forme **(sujet, propriété, objet)** comme, par exemple, `(Led Zeppelin, IsA, MusicGroup)` ou `(Jimmy Page, IsMemberOf, Led Zeppelin)` qui peuvent être vues comme des phrases de la forme sujet verbe complément énonçant des faits comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est membre de Led Zeppelin`. 
 
-### Web des données
 
-Une évolution, apparue en 2014, est que, lorsque vous tapez le nom
-d'une entité du monde, que ce soit un groupe de musique (essayez `Led
-Zeppelin`), un personnage célèbre (essayez `Larry Page`), un lieu
-géographique (essayez `Middelburg`) ou encore un nom de fleur (essayez
-`rose`), vous voyez apparaître en résultat à votre requête un cadre
-présentant des informations factuelles sur l'entité. Par exemple, pour
-`Led Zeppelin`, vous trouvez une description du groupe, sa
-composition, le genre de musique, les principales chansons, les
-principaux albums, et des images associées. Plutôt que de donner des
-liens vers des pages associées à la requête, pages que vous devez
-aller lire, ici on **extrait des données sur l'entité**. Ceci est
-rendu possible grâce au *Web des données et connaissances* encore
-appelé *"knowledge graph"*.
+Des recherches d'informations factuelles comme savoir quels sont les membres de `Led Zeppelin` deviennent alors possibles grâce à de simples requêtes dans ces bases de données. Cette évolution est en fait apparue en 2014 en premier lieu dans les résultats du moteur de recherche de Google. C'est le fameux cadre en colonne de droite présentant des informations factuelles sur l'entité. Par exemple, pour`Led Zeppelin`, vous trouvez une description du groupe, sa composition, le genre de musique, les principales chansons, les principaux albums, et des images associées. 
 
-Le Web et les moteurs de recherche d'information étaient jusqu'alors
-destinés à des utilisateurs humains qui posaient des requêtes et
-allaient consulter les pages en fonction des résultats. Pour trouver
-une réponse à une question factuelle comme `âge des candidats à la
-présidence aux élections françaises en 2017`, il fallait taper une
-requête puis aller lire la réponse sur la bonne page. Les moteurs ont
-souhaité pouvoir répondre à ces questions factuelles. Pour cela, il
-faut connaître les réponses. Sur notre exemple, il faut connaître
-l'âge des candidats. Vous pouvez taper une requête comme `âge de X` où
-vous remplacez X par votre candidat préféré ou détesté pour vérifier
-que la réponse est connue et affichée. Un deuxième objectif des
-moteurs, que nous verrons dans la section suivante, est de résoudre
-des tâches plus complexes. Il faut alors connaître les réponses mais
-aussi les comprendre et les utiliser. C'est avec ces objectifs que
-s'est développé le Web des données et connaissances.
+Les données issues de `Wikidata` ou `DBpedia` sont libres et ouvertes. De ce fait, chacun peut les utiliser et les exploiter et la plupart des moteurs de recherche le font. Toutefois, les données peuvent être enrichies et complétées seulement en interne de certains grands groupes (comme Google avec son Knowledge Graph).
 
-Ceci a été réalisé conjointement par des communautés spécialisées
-comme en musique avec `MusicBrainz` ou en géographie avec `GeoNames`,
-des communautés d'utilisateurs et de chercheurs pour des bases
-généralistes avec `Wikidata` et `DBpedia`, des bases pour normaliser
-la description des données avec `foaf`. L'idée est de construire des
-bases de données de connaissances exploitables sur le Web. Les données
-sont décrites sous forme de triplets de la forme **(sujet, propriété,
-objet)** comme, par exemple, `(Led Zeppelin, IsA, MusicGroup)` ou
-`(Jimmy Page, IsMemberOf, Led Zeppelin)` qui peuvent être vues comme
-des phrases de la forme sujet verbe complément énonçant des faits
-comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est
-membre de Led Zeppelin`. Ces bases de données ont été construites par
-ces communautés et sont désormais utilisées voire possédées par les
-grands acteurs du domaine. Des algorithmes sur ces
-bases de données permettent de chercher des informations et on pourra,
-par exemple, rechercher les informations factuelles sur `Led Zeppelin`
-qui pourront être affichés dans l'encadré sur la page de réponses à la
-requête.
 
-Une autre source de données est issue des pages Web construites par
-les utilisateurs du Web. Par exemple, un site Web de restaurant va
-ajouter sur sa page Web des données comme sa latitude et sa longitude
-ou encore des heures et jours d'ouverture. Ces données doivent
-respecter des conventions d'écriture en `html`. Elles peuvent alors
-être utilisées par des programmes (comme le navigateur) pour calculer
-des distances et donc savoir si le restaurant est proche de votre
-localisation ou encore pour savoir si le restaurant est ouvert afin de
-vous le proposer en réponse à une requête.
 
-### Parole et langage naturel
 
-Il devient possible d'interroger votre ordinateur par la parole. Une
-première couche logicielle se charge de transformer les signaux
-acoustiques en une suite de mots de la langue utilisée. Les logiciels
-de reconnaissance de la parole ont progressé très nettement ces
-dernières années avec l'utilisation de méthodes basées sur des réseaux
-de neurones profonds. Ce traitement étant réalisé, le moteur de
-recherche d'information doit alors traiter une requête en langage
-naturel.
+## Langage naturel et raisonnement
 
-Il est d'ailleurs possible de taper directement une requête en langage
-naturel dans la barre de saisie. Nous avons déjà évoqué des requêtes
-comme `Quel est l'âge de François Hollande ?`. Comment est traitée
-cette requête ? Tout d'abord, il y a des traitements pour reconnaître
-que c'est une question, en déterminer le verbe, le sujet, le
-complément. Le traitement de la langue comprend beaucoup de problèmes
-difficiles pour les machines. Seules certaines formes simples de
-question sont prises en compte par les moteurs. Cependant, les
-recherches progressent et les moteurs augmentent toujours leurs
-possibilités.
+L'interrogation du moteur à l'aide mots clefs est une évidente limitation. De nombreux travaux portent sur la possibilité d'écrire des requêtes en langage naturel, comme `Quel est l'âge de Robert Plant ?` ou `Quel temps fera-t-il demain ?` . À certains types simples de questions factuelles comme celles-ci, des moteurs de recherche sont capables de répondre.   Comment est traitée cette requête ? Tout d'abord, il y a des traitements pour reconnaître que c'est une question, en déterminer le verbe, le sujet, le complément. Le traitement de la langue comprend beaucoup de problèmes difficiles pour les machines. Mais avec une requête comme `Quel est le membre le plus âgé de Led Zeppelin ?`, en plus des difficultés précédentes, il faut comprendre la sémantique de la question et faire un raisonnement : trouver les membres, l'âge de chacun, comprendre que l'on cherche l'âge le plus élevé et comparer les âges. Même si ces requêtes ne donnent pas la réponse attendue aujourd'hui, les recherches progressent et les moteurs augmentent toujours leurs possibilités. Des avancées dans le traitement automatique des langues et dans la constitution de plus grands web des données contribuent à cette évolution. Mais, des requêtes plus complexes encore nécessitent d'enchaîner des recherches de faits, des raisonnements ou des traitements, et aujourd'hui et pour encore longtemps, c'est encore inaccessible à la machine. 
 
-Lorsque qu'une requête en langage naturel est posée, elle est traitée
-par le moteur, puis le moteur interroge le Web des données pour
-afficher une réponse factuelle à la question (si possible), il calcule
-également un score Web pour afficher une liste ordonnée de pages. Il
-est très difficile de savoir comment sont calculés ces scores à cause
-des nombreux pré-traitements inconnus sur la requête et du calcul de
-score Web dont nous avons déjà signalé que beaucoup de points étaient
-secrets.
 
-Enfin, si on considère une requête comme `Quel est le plus âgé des
-candidats aux élections présidentielles de 2017 ?`, en plus des
-difficultés précédentes, il faut comprendre la sémantique de la
-question et faire un raisonnement : trouver l'âge des candidats,
-comprendre que l'on cherche l'âge le plus élevé, comparer les âges et
-retourner le nom et l'âge du candidat trouvé. Ceci ouvre la question
-de l'intelligence des moteurs que nous discutons maintenant.
 
-### Moteurs intelligents
+# Questions éthiques
+## La loyauté des moteurs
 
-Si les moteurs de recherche d'information sont capables de vous
-suggérer des pages Web en réponse à une requête et de récupérer des
-données relatives à une question factuelle, ils sont encore
-**incapables de raisonner**. Pour nous en convaincre, supposons que
-vous souhaitiez aller passer en week-end à Paris. Vous allez utiliser
-un moteur de recherche d'information pour rechercher des horaires et
-tarifs de train ou d'avion ou de bus, éventuellement en utilisant des
-comparateurs, ou encore voir sur un site de covoiturage. Vous allez
-chercher une auberge de jeunesse, une chambre en résidence, un hôtel
-pour la nuit. Vous allez, éventuellement, rechercher des expositions,
-des spectacles, des musées pour vous occuper. Le moteur vous aide mais
-*l'intelligence c'est vous !* Vous savez que pour vous rendre à Paris,
-il faut utiliser un moyen de transport, vous savez que les moyens de
-transport principaux sont le bus, le train, l'avion. Vous avez une
-connaissance du monde que ne possède pas la machine. Le Web des
-données apporte cette connaissance aux machines et aux
-programmes. Mais cette connaissance n'est pas suffisante car il faut
-savoir l'utiliser et raisonner. Par exemple, pour choisir les
-meilleures options en fonction du lieu où vous résidez et de vos
-préférences. Raisonner pour être capable de choisir et d'enchaîner les
-transports pour, par exemple, si je choisis le train, se rendre à la
-gare avec un moyen de transport et un timing adéquat. De même pour me
-rendre de la gare d'arrivée au site de résidence choisi. Actuellement,
-les moteurs ne sont pas capables de répondre à des requêtes comme
-`Organise moi un week-end à Paris` mais la question est étudiée et des
-progrès sont attendus.
+Nous avons vu dans ce cours que les formules de calcul de score pour un moteur de recherche d'information évoluent et la compréhension du calcul du score et donc de l'ordre des réponses devient de plus en plus complexe. Ces formules, à l'exception de très peu de moteurs de recherche, parfois libres, sont secrètes même si on en connaît les éléments principaux.  Retenez que **l'ordre des réponses est donné par un algorithme secret écrit par une entreprise commerciale**.
 
-## Conclusion et discussion
+Ceci pose des *questions éthiques* car les réponses proposées et leur ordre peuvent manipuler l'opinion. Elles peuvent influencer votre vision sur une question et peuvent influencer vos achats.  Il existe une forte concurrence entre les sites sur la question du référencement, c'est-à-dire sur la question d'être bien classé dans 'ordre des réponses. C'est le cas des entreprises commerciales qui veulent apparaître pour vous vendre des produits. C'est le cas de courants de pensée qui veulent imposer une opinion comme, par exemple, les courants anti-avortement qui agissent pour que les sites critiquant l'avortement apparaissent bien classés lorsque vous faîtes une requête sur l'avortement. 
+Comment peut-on être sur que l'algorithme est loyal, que l'entreprise qui propose le moteur de recherche ne favorise pas certains produits ou certaines idées ?  C'est-à-dire comment savoir qu'elle respecte l'égalité de traitement entre les sites Web ?
 
+Retenez que **vous devez toujours avoir un regard critique sur les réponses qui vous sont proposées et leur ordre**. Ceci est vrai pour les moteurs de recherche d'information mais aussi pour beaucoup d'applications Web vous suggérant ou vous recommandant des produits, des contacts, des informations, des restaurants et autres. C'est vrai également dans tout le monde numérique où on utilise des algorithmes pour vous affecter dans un établissement scolaire ou dans une filière de l'enseignement supérieur.
+
+## Assistants personnels 
+
+La reconnaissance automatique de la parole qui consiste à transformer les signaux acoustiques en une suite de mots fonctionne aujourd'hui assez bien dans les langues les plus parlées. Il en est de même pour l'opération inverse de synthèse de la parole à partir de texte. Ces progrès assez fulgurants ont été réalisés grâce aux technique d'apprentissage machine et notamment aux réseaux profonds (Deep Learning). Les moteurs de recherche sont donc accessibles depuis des petits ordinateurs sans clavier (ou presque) tels que les assistants domestiques ou les smartphones. Mais dans ce cas la réponse se limite souvent à une liste très courte, voire même une seule réponse. L'impact du calcul du score, la question de la loyauté sont alors encore plus forts et peut devenir très conditionnant. 
+
+
+## Respect de la vie privée
+
+Les moteurs de recherche comme désormais beaucoup de logiciels sur le Web disent s'adapter à vos besoins. Les langues naturelles sont ambiguës et un mot peut avoir plusieurs sens. Par exemple, le mot `java` peut désigner un langage de programmation ou une danse ou une île. Un internaute informaticien souhaiterait voir apparaître des pages parlant du langage de programmation alors qu'un autre utilisateur préférera des informations sur la danse. Ceci peut être réalisé si l'historique des recherches et des liens suivis est connu. À l'aide de cookies et plus facilement encore lorsque vous avez un compte et que vous êtes identifiés, le moteur peut mémoriser cet **historique des recherches et des navigations**, en déduire un profil et l'utiliser pour adapter son calcul de score. Un autre type d'adaptation est d'utiliser les **informations de localisation** obtenues à partir d'un gps si vous êtes géolocalisés ou à partir d'informations sur l'ordinateur sur lequel vous faites votre requête. Le score des pages portant sur des objets proches de vous peut alors être renforcé. Mais ces informations historiques et de géolocalisation disent beaucoup de choses à votre sujet, de façon directe ou indirecte. Ce sont des **données personnelles**.  Retenez donc que **l'adaptation à vos besoins implique la mémorisation de données personnelles**.
+
+Mais même si l'objet n'est pas de personnaliser les réponses d'un moteur de recherche ou d'un service web, la collecte des données personnelles a bien lieu. Car en effet, ces données ont de la valeur, elles peuvent être un outil pour être plus compétitif vis à vis de la concurrence, elles peuvent être revendues à des tiers,... Le modèle dominant est alors de collecter toutes ces données personnelles et de les  mémoriser par l'entreprise concevant le logiciel.
+
+Le nouveau règlement général sur la protection des données personnelles qui s'applique désormais en Europe (le RGPD) définit des limites et des contraintes sur cette collecte et gestion des données personnelles. C'est un excellent outil de sensibilisation. Mais ce n'est pas la réponse définitive à cette question importante du respect de la vie privée car il ménage à la fois les intérêts commerciaux et ceux des utilisateurs et laisse une grande place à l'interprétation. 
+
+
+
+## Des réponses possibles ?
 ### Les liens payants
 
-La fenêtre de réponse contient une liste ordonnée par score de
-pertinence de l'ensemble des pages Web et éventuellement un cadre
-contenant des données factuelles relatives à la requête dont nous
-avons déjà parlé dans ce cours. Vous avez également souvent une liste
-ordonnée de **liens sponsorisés**. Pour ces liens, seules apparaissent
-des entreprises qui rémunèrent l'entreprise associée au moteur de
-recherche d'information. La rémunération peut être calculée sur le
-nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc
-que **l'apparition dans une liste de liens sponsorisés est lié à une
-rémunération**.
+La fenêtre de réponse des moteurs de recherche contient une liste ordonnée par score de pertinence de l'ensemble des pages Web et éventuellement un cadre contenant des données factuelles relatives à la requête dont nous avons déjà parlé dans ce cours. Vous avez également souvent une liste ordonnée de **liens sponsorisés**. Pour ces liens, seules apparaissent des entreprises qui rémunèrent l'entreprise associée au moteur de recherche d'information. La rémunération peut être calculée sur le nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc que **l'apparition dans une liste de liens sponsorisés est lié à une rémunération**.
 
-### La loyauté des moteurs
+Ces liens commerciaux sont donc une source de revenus pour le moteur de recherche. Ce n'est pas forcément un mal en soi, car le service coûte cher. Une formule doit être trouvée soit par des financements participatifs, par l'impôt ou par le commerce. Si ces liens commerciaux sont bien séparés et annoncés comme tels, ils peuvent contribuer à ne pas (ou modérer) les problèmes de loyauté et de respect de la vie privée. C'est par exemple la solution choisie par [Qwant qui affirme ne pas mémoriser les traces de navigation et ne pas créer de profil](https://about.qwant.com/fr/legal/confidentialite/à)
+de ses utilisateurs.
 
-Nous avons vu dans ce cours que les formules de calcul de score pour
-un moteur de recherche d'information sont secrètes même si on en
-connaît les éléments principaux. De plus, ces formules évoluent et
-avec les évolutions comme le langage naturel, la compréhension du
-calcul du score et donc de l'ordre des réponses devient de plus en
-plus complexe. Retenez que **l'ordre des réponses est donné par un
-algorithme secret écrit par une entreprise commerciale**.
+### Code source ouvert!
 
-Ceci pose des *questions éthiques* car les réponses proposées et leur
-ordre peuvent influencer votre vision sur une question et peuvent
-influencer vos achats. Comment peut-on être sur que l'algorithme est
-loyal, c'est-à-dire qu'il respecte l'égalité de traitement entre les
-sites Web ?  C'est une question très sensible actuellement et les lois
-évoluent pour que les algorithmes puissent expliquer leurs
-décisions. Pour les moteurs, cela signifie expliquer le calcul des
-scores pour vérifier sa loyauté. Certains militent donc pour que les
-formules de calcul de score soient publiées pour que l'utilisateur
-sache pourquoi certaines pages lui sont proposées plutôt que d'autres.
-La réponse des entreprises liées aux moteurs est souvent de dire que
-la diffusion de ces formules permettraient de tricher plus
-facilement. Mais, on peut noter que `Qwant` s'est engagé à diffuser
+C'est une question très sensible actuellement et les lois évoluent pour que les algorithmes puissent expliquer leurs décisions. Pour les moteurs, cela signifie expliquer le calcul des scores pour vérifier sa loyauté. Certains militent donc pour que les formules de calcul de score soient publiées pour que l'utilisateur sache pourquoi certaines pages lui sont proposées plutôt que d'autres. La réponse des entreprises liées aux moteurs est souvent de dire que la diffusion de ces formules permettraient de tricher plus facilement. Mais, on peut noter que `Qwant` s'est engagé à diffuser
 ses formules de calcul de score.
 
-Il faut savoir que, même avec des formules secrètes, il
-existe une forte concurrence entre les sites sur la question du
-référencement, c'est-à-dire sur la question d'être bien classé dans
-l'ordre des réponses. C'est le cas des entreprises commerciales qui
-veulent apparaître pour vous vendre des produits. C'est le cas de
-courants de pensée qui veulent imposer une opinion comme, par exemple,
-les courants anti-avortement qui agissent pour que les sites
-critiquant l'avortement apparaissent bien classés lorsque vous faîtes
-une requête sur l'avortement. Retenez que **vous devez toujours avoir
-un regard critique sur les réponses qui vous sont proposées et leur
-ordre**. Ceci est vrai pour les moteurs de recherche d'information
-mais aussi pour beaucoup d'applications Web vous suggérant ou vous
-recommandant des produits, des contacts, des informations, des
-restaurants et autres. C'est vrai également dans tout le monde
-numérique où on utilise des algorithmes pour vous affecter dans un
-établissement scolaire ou dans une filière de l'enseignement
-supérieur.
 
-### L'adaptation à l'utilisateur
+### Éducation 
 
-Enfin, beaucoup de logiciels sur le Web disent s'adapter à vos
-besoins. Ils s'adaptent en réalité à votre profil qui est construit à
-partir de toutes les données qui ont pu être récupérées par le
-logiciel à votre inscription mais aussi auprès d'entreprises
-partenaires mais surtout de toutes vos données historiques
-correspondant à toutes vos actions. Ces données sont donc mémorisées
-par l'entreprise concevant le logiciel et peuvent même être revendues
-à d'autres éditeurs de logiciel. De même, l'adaptation à votre
-localisation nécessite que vos données de géolocalisation soient
-utilisées et donc soient mémorisées. Retenez donc que **l'adaptation à
-votre profil et à votre localisation implique la mémorisation de
-données personnelles historiques**.
+Mais nous sommes convaincus qu'une réponse pérenne passe par l'éducation des citoyens, qu'ils soient responsables politiques, juristes, journalistes ou simplement usagers. Pour que ces questions soient abordées dans les lois, dans les médias et dans les esprits. 
+
+
 
 ```compréhension
 
