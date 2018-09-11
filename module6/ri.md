@@ -8,74 +8,38 @@ CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
 <!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc ri.md -o ri.pdf -->
 
-# La recherche d'information : contexte et application au Web
+# Recherche d'information : contexte et application au Web
 
-Avec l'avènement du numérique et, en particulier, du Web, nous vivons
-dans un monde de documents. Ces documents sont divers comme des sms,
-des tweets, des mails, des pages Web, des articles journalistiques ou
-scientifiques, des livres, ... Ils contiennent des informations
-textuelles mais aussi des dessins, des images et des vidéos. Ils
-proviennent de sources variées comme des administrations, des
-journaux, des entreprises commerciales mais aussi les réseaux sociaux
-et les objets connectés (caméras, compteurs intelligents, gps,
-...). Ils sont en très grande quantité avec, par exemple, un nombre
-estimé de 60 000 milliards de documents Web en 2016. Cette masse de
-documents génère de nouvelles possibilités comme pouvoir retrouver des
-documents concernant un sujet précis, pouvoir proposer des suggestions
-d'articles de journaux ou encore pouvoir faire des recommandations
-de livres à lire ou de films à regarder.
+Avec l'avènement du numérique et, en particulier, du Web, nous vivons dans un monde de documents, de ressources numériques. Ces documents sont divers comme des sms, des tweets, des mails, des pages Web, des articles journalistiques ou scientifiques, des livres, ... Ils contiennent des informations textuelles mais aussi des dessins, des images et des vidéos. Ils proviennent de sources variées comme des administrations, des journaux, des entreprises commerciales mais aussi les réseaux sociaux et les objets connectés (caméras, compteurs intelligents, gps, ...). Ils sont en très grande quantité avec, par exemple, un nombre estimé de 60 000 milliards de documents Web en 2016. Cette masse de documents génère de nouvelles possibilités et des besoins comme pouvoir rechercher rapidement des documents concernant un sujet précis. 
 
-Nous allons considérer la **recherche d'information** et, en
-particulier un outil numérique utilisé quotidiennement par chacun
-d'entre nous : le **moteur de recherche d'information Web**. L'exemple
-le plus connu et le plus utilisé dans le monde occidental est
-**Google**, mais vous utilisez peut-être **Bing** ou **Yahoo**. Un
-moteur français **Qwant**, qui promet la préservation de la
-confidentialité et le respect de la vie privée, connaît un essor
-intéressant et vous pouvez l'essayer. Notez également d'autres moteurs
-qui sont leaders dans leurs sphères d'influence comme **Yandex** en
-Russie et **Baidu** en Chine. La fonction première d'un moteur de
-recherche est de vous permettre de *poser une requête* constituée d'un
-ou plusieurs mots clés. En réponse, le moteur vous renvoie *une liste
-ordonnée de documents Web* ~~souvent organisée en pages de 10
-documents~~. Cet outil est devenu essentiel dans nos activités
-personnelles comme professionnelles.  Un utilisateur ne regarde
-souvent que les premières réponses et, par conséquent, l'ordre choisi
-peut orienter vos réflexions et vos activités. Cet ordre influe
-également sur l'activité économique en orientant les choix d'achats
-des utilisateurs. L'ordre des documents en réponse à une requête est
-basé sur un *score calculé par le moteur*. Il est donc important de
-comprendre les principes de ce calcul de score d'un document Web pour
-être un utilisateur intelligent et averti de ces moteurs de recherche
-d'information.
+C'est cette **recherche d'information** qui fait l'objet de ce cours. En particulier, nous allons étudier l'outil numérique utilisé quotidiennement par chacun d'entre nous : le **moteur de recherche d'information**. 
 
-Dans cet objectif, nous commençons par présenter les méthodes exactes
-de recherche d'information comme la recherche d'un mot dans un texte
-et la recherche rapide basée sur l'utilisation d'un index comme la
-recherche de livres dans un catalogue de bibliothèque.  Nous
-présentons ensuite les méthodes approximatives basées sur le calcul
-d'un score. En particulier, nous présentons deux composants essentiels
-du score Web : le **score de pertinence d'un document pour une
-requête** qui mesure la proximité entre une requête et un document et
-le **score de notoriété d'une page Web** qui mesure l'importance de la
-page dans le réseau constitué des pages Web reliées entre elles par
-des hyperliens. C'est l'introduction de ce score de notoriété calculé
-par **l'algorithme PageRank** qui a contribué à l'essor de `Google` à
-la fin du vingtième siècle. Nous montrons comment combiner ces scores
-pour attribuer un score Web à un document relativement à une
-requête. Nous présentons ensuite certaines évolutions en cours comme
-le traitement des requêtes en langage naturel et l'introduction de
-l'intelligence dans les moteurs. Nous concluons par une discussion sur
-les problèmes éthiques et sociétaux posés par les moteurs de
-recherche. En effet, chaque moteur utilise ses propres algorithmes
-pour répondre aux requêtes et beaucoup d'éléments du calcul de score
-ne sont pas connus des utilisateurs ce qui pose, en particulier, la
-question de la **loyauté des moteurs de recherche d'information**.
+```activite
+::popularité des moteurs de recherche:: 
+[markdown]
+L'exemple le plus connu et le plus utilisé dans le monde occidental est **Google**. Mais vous connaissez peut-être **Bing** ou **Yahoo**.  Notez également d'autres moteurs qui sont leaders dans leurs sphères d'influence. Lequel a la plus grande part de marché en France, en Russie, en Chine ? 
+{####Google en france, Yandex en Russie et Baidu en Chine}
+
+::Qwant::
+Que promeut le moteur français **Qwant**? 
+{####La préservation de la confidentialité et le respect de la vie privée}
+```
+
+La fonction première d'un moteur de recherche est de vous permettre de *poser une requête*  et recevoir en réponse une partie d'un ensemble de ressources (documents texte, images, vidéos,...).  L'ensemble des ressources sur lesquels les requêtes sont posées est accessible au moteur de recherche et organisé de façon à répondre efficacement. C'est la phase d'*indexation*, autrefois manuelle dans les bibliothèques et aujourd'hui largement automatisée qui est responsable de cette organisation. La réponse peut être exhaustive pour certaines requêtes simples et bien formalisées, mais le plus souvent le moteur  renvoie *une liste ordonnée de documents selon un score de pertinence*.
+
+Nous nous intéressons exclusivement aux ressources textuelles et aux moteurs de recherche du web dans le cadre de ce cours. Nous décrivons les méthodes de recherche approximatives utilisées qui combinent d'une part, une mesure de la proximité entre une requête et le contenu d'une page, avec d'autre part, un **score de notoriété**.  Ce score de notoriété mesure l'importance d'une page dans le réseau constitué des pages Web reliées entre elles par des hyperliens. Il calculé par le fameux algorithme **PageRank** qui a contribué à l'essor de `Google` à la fin du vingtième siècle. 
+
+Après un examen des tendances nouvelles, nous concluons par une discussion sur les problèmes éthiques et sociaux posés par les moteurs de recherche. En effet, chaque moteur utilise ses propres algorithmes pour répondre aux requêtes et beaucoup d'éléments du calcul de score ne sont pas connus des utilisateurs ce qui pose, en particulier, la question de la **loyauté des moteurs de recherche d'information**.
+
 
 ```compréhension
 ::Des moteurs de recherche::
 [markdown]
 Il existe différents moteurs de recherche d'information{T}
+
+::Des moteurs sur le Web et en entreprise::
+[markdown]
+Il existe des moteurs de recherche spécifiques d'entreprises, accessibles uniquement par les employés et ne portant que sur leur propres documents d'entreprise.{T}
 
 ::Le coeur des moteurs::
 [markdown]
@@ -106,292 +70,125 @@ En comparant les réponses de
 Google et les réponses de Qwant dans la liste Web, on peut affirmer
 que les réponses à une requête sont toujours les mêmes
 et sont dans le même ordre.{T}
-
 ```
 
-# Les modes de recherche d'information
+# Modes de recherche d'information
 
-## La recherche exacte
+## Recherche exacte
 
-On suppose disposer d'un ensemble de documents textuels, c'est-à-dire
-de documents qui sont des suites de caractères.  Une requête simple
-est constituée d'un mot, c'est-à-dire d'une suite de caractères. On
-peut exécuter une telle requête souvent en passant par un menu
-*Rechercher* ou *Chercher* ou *Find* et en tapant la suite de
-caractères cherchée dans une zone de saisie. Un tel menu existe dans
-un éditeur ou traitement de textes pour chercher dans le contenu
-textuel, dans votre navigateur pour chercher dans une page Web, dans
-votre lecteur de mails pour chercher dans les adresses ou les sujets
-ou les contenus de vos mails, dans un site de journaux pour chercher
-dans les articles, dans votre système d'exploitation pour chercher
-dans les noms des fichiers ou dans les contenus des fichiers. Le
-résultat de la requête est de sur-ligner toutes les occurrences de la
-chaîne cherchée ou de donner la liste des objets contenant la
-chaîne. Pour réaliser cela, un algorithme de recherche parcourt le ou
-les documents textes en déplaçant une fenêtre qui contient la chaîne
-cherchée et en gardant comme réponses correctes toutes les positions
-où le texte correspond exactement à la chaîne cherchée. C'est un
-*algorithme séquentiel* qui parcourt complètement le(s) texte(s) dans
-lequel on cherche. On parle de *recherche séquentielle*.
+De nombreux logiciels comme les traitements de texte, les éditeurs, les outils de messagerie vous proposent une fonction de recherche lorsque vous visionnez un document, un texte, un message,... En actionnant le menu *Rechercher* vous avez la possibilité de taper quelques caractères. Ces mots définiront une requête et dans le plus simple des cas, le logiciel vous dirigera vers (ou vous surlignera) chaque position ou ces quelques caractères apparaissent. 
 
-On peut effectuer des recherches plus complexes qui recherchent non
-plus un mot mais un motif comme un texte à trous. La définition des
-motifs possibles passe par la définition d'un langage de requêtes. Les
-trous dans les motifs sont représentés par des jokers souvent notés
-`*`, `+` et `?`. Le `*` représente une suite de caractères quelconque,
-le `+` une suite de caractères non vide et le `?` n'importe quel
-caractère. Par exemple, la requête `pa*on` est satisfaite par des mots
-comme `paon`, `pantalon` ou `passion` ; ces deux derniers mots
-satisfont la requête `pa+on` alors que `paon` ne la satisfait pas ; la
-requête `pap?` est satisfaite par des mots comme `pape` ou `papa`mais
-pas par `papillon`. On peut également étendre le langage de requêtes
-pour préciser qu'un caractère doit être dans un ensemble (par exemple
-un chiffre), ajouter des conditions comme `la ligne commence par` ou
-`se termine par` un caractère précis. On peut enfin ajouter des
-opérateurs logiques comme des `ET`, `OU`, `NON`. On obtient ainsi un
-langage de requête expressif où les requêtes sont des **expressions
-régulières**. Celles-co sont très utilisés par les informaticiens pour
-traiter des fichiers textes, les linguistes pour traiter des textes en
-langue naturelle, les biologistes pour rechercher dans les séquences
-génétiques, entre autres. Des algorithmes sophistiqués ont été
-proposés pour répondre à ces requêtes.
+Pour réaliser cela, un algorithme de recherche parcourt le document du début à la fin et  pour toutes les positions, il évalue si le texte commençant à cette position correspond exactement à la requête. On parle de *recherche séquentielle* car l'algorithme évalue séquentiellement (les unes après les autres) toutes les positions. Vous pouvez imaginer une petite fenêtre qui se déplace du début à la fin du document puis compare deux à deux les  caractères recherchés avec ceux dans la fenêtre. 
 
-**Critiques de la recherche séquentielle:** elle est utilisée dans de
-nombreuses applications. Le langage de requêtes est simple mais peut
-être enrichi et devenir très expressif. La représentation des textes
-comme une suite de caractères et les algorithmes qui lisent
-séquentiellement les données font que cette méthode de recherche est
-limitée à des volumes "raisonnables" de documents.  Une telle méthode
-est-elle envisageable pour un moteur de recherche Web ?  Certainement
-non, car parcourir les 60 000 milliards de documents du Web à chaque
-fois que l'on fait une recherche sur le Web prendrait un temps de
-calcul bien trop long alors que vous attendez une réponse immédiate !
+Des travaux maintenant anciens ont étendu la recherche séquentielle en définissant des langages de requêtes qui dépassent la simple comparaison deux à deux. Dans ces langages de requêtes certains caractères prennent un sens différent de leur usage habituel. Le `?` ne désigne plus le point d'interrogation mais une présence optionnelle, si bien que la requête `mal?in` permet de dire que le `l` est optionnel et trouvera donc les positions où se trouve  `main` ou `malin`.  Le `.` par exemple représente n'importe quel caractère (et non plus uniquement le point) et `*` n'est plus une étoile mais une répétition. La requête `le .* dort` fonctionne comme un texte à trous qui peut rechercher par exemple `le gros chat noir dort`. Un tel langage de requête étendu s'appelle le langage des *expressions régulières*.
 
-## La recherche exacte rapide avec un index
+```activité 
+::Expressions régulières::
+[markdown]
+Dans Libreoffice, créez un nouveau document contenant le texte de ce cours. Avec le menu /Rechercher et remplacer/, regardez les options de recherche (/autres options/) et placez une coche devant /Expressions régulières/. Effectuez ensuite des recherches avec ces symboles spéciaux. Par exemple, recherchez `m????n`, `e.e` et `e.*e`, `e$`. Donnez quelques exemples représentatifs de ce que vous avez trouvé. Que signfie le `$` dans ce langage ?
+{####le $ représente la fin de paragraphe.}
+```
 
-Nous allons voir comment on peut accélérer la recherche exacte en
-utilisant une autre représentation des documents et des mots. Nous
-considérons l'exemple de la recherche d'un ouvrage dans un catalogue
-de bibliothèque.  Il s'agit, par exemple, pour une requête à plusieurs
-mots clé de renvoyer **l'ensemble des ouvrages du catalogue contenant
-ces mots**. La recherche est exacte dans le sens où la réponse pour un
-ouvrage est soit `VRAI` si la description de l'ouvrage contient
-exactement les mots, soit `FAUX` sinon.  Les ouvrages sont, en
-général, décrits ou représentés par des notices contenant des
-méta-données sur l'ouvrage comme le titre, les auteurs, les éditeurs
-et un résumé. Une notice contient également une liste de mots-clés
-décrivant le contenu de l'ouvrage qui sont renseignés par des
-documentalistes. Parfois, les ouvrages ont été numérisés, on dispose
-alors de leur contenu textuel dans lequel on peut chercher et on
-parle, dans ce cas, de *recherche plein texte*.
+Évidemment tous ces langages  de requête plus ou moins expressifs sont facilement disponibles pour traiter non seulement un unique document mais des bases de données ou des corpus de documents. Ils sont par conséquent très utilisés en linguistique informatique, pour des textes en langue naturelle, les biologistes pour rechercher dans les séquences génétiques, entre autres. 
 
-Quelle que soit la représentation choisie d'un ouvrage (titre, notice,
-contenu textuel), c'est un texte avec une structure. On suppose donc
-avoir un très grand nombre de textes, éventuellement longs, dans
-lesquels chercher.  Par conséquent, une **recherche séquentielle peut
-prendre un temps de calcul trop grand**. Plutôt que de parcourir
-l'ensemble des documents à chaque requête, l'idée est de le faire une
-fois et de construire une nouvelle représentation de l'ensemble des
-textes qui permettra de faire des recherches plus rapides. Cette
-construction est appelée **indexation** et la représentation obtenue est
-appelée **index**.  Nous expliquons cette étape d'indexation puis nous
-expliquons comment utiliser l'index pour calculer des requêtes
-efficacement.
+Mais une une telle méthode de recherche séquentielle est-elle envisageable pour un moteur de recherche Web ?  Certainement non, car parcourir les 60 000 milliards de documents du Web à chaque fois que l'on fait une recherche sur le Web prendrait un temps de calcul bien trop long alors que vous attendez une réponse immédiate !
 
-Chaque description textuelle est découpée en une séquence d'unités
-élémentaires, appelés `tokens`, qui sont des suites de caractères sans
-espace et sans symbole de ponctuation. Un token correspond à un mot de
-la langue ou un nombre ou une date ou un sigle. Pour simplifier, nous
-utilisons le terme mot pour désigner un token. Par exemple, un texte
-comme `La Révolution française, 1789-1799 : Une histoire
-socio-politique` sera transformé en la séquence `La Révolution
-française 1789 1799 Une histoire socio politique`. Différents
-traitements peuvent être considérés comme : considère-t-on
-différemment les majuscules et les minuscules ?  Considère-t-on les
-accents ? Sur notre exemple, si on choisit de convertir en minuscules
-sans accent et sans caractère particulier (comme ç), on obtient le
-texte `la revolution francaise 1789 1799 une histoire socio
-politique`. Ces choix étant effectués, les textes sont désormais des
-suites de mots. On considère alors l'ensemble de tous les mots
-apparaissant dans les textes ce qui définit un **dictionnaire ou
-vocabulaire**. Parfois, les mots très fréquents de la langue utilisée
-sont retirés du dictionnaire, par exemple `et`, `le`, ... en français.
+```compréhension
+::Critiques de la recherche séquentielle::
+[markdown]
+Cochez les affirmations qui sont vraies à propos de la recherche séquentielle :
+{
+= Elle est utilisée dans de nombreuses applications. 
+= Le langage de requêtes est simple mais peut être enrichi et devenir très expressif. 
+~ Elle est réservée aux informaticiens
+}
+```
 
 
-Le dictionnaire étant choisi, pour chaque mot du dictionnaire, il faut
-pouvoir retrouver les ouvrages contenant ce mot. Pour cela, on suppose
-que chaque ouvrage possède un numéro appelé *identifiant*
-qui l'identifie de façon unique.  On peut alors construire, pour chaque mot du
-dictionnaire, la liste des numéros des documents qui contiennent ce
-mot. Par exemple, on mémorise que le mot `rose` apparaît dans les
-documents de numéro 125, 245, 567, ... ; que le mot `blanche` apparaît
-dans les documents de numéro 117, 176, 245, 312, ...
+```activité avancée 
+::Dans libreoffice::
+[markdown]
+Ouvrez le menu rechercher remplacer et regardez les options. Il est possible de faire une recherche avec des expressions régulières {T}
 
-Un dictionnaire a une taille de l'ordre de quelques centaines de
-milliers de mots. Il faut donc pouvoir trouver rapidement un mot du
-dictionnaire avec la liste des ouvrages associée.  Pour cela, les
-informaticiens ont défini différentes méthodes d'accès rapides. Par
-exemple, la *recherche dichotomique* nécessite de trier le
-dictionnaire dans l'ordre lexicographique (ordre usuel des mots d'un
-dictionnaire). Puis, pour accéder rapidement à un mot, on utilise
-l'algorithme de recherche dichotomique illustré en cherchant le mot
-`rose` : on regarde le mot au milieu du dictionnaire, c'est `maman`,
-donc on cherche dans la seconde moitié ; on regarde le mot au milieu
-de la seconde moitié, c'est `savant`, donc on cherche entre `maman` et
-`savant` ; jusqu'à trouver le mot `rose`. On peut montrer qu'un tel
-algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il
-suffit d'effectuer 19 accès, pour une dictionnaire de 1 million de
-mots, il suffit d'effectuer 20 accès. Notons que si la taille du
-dictionnaire double, on ne doit faire qu'un accès supplémentaire ! Ce
-qui explique la rapidité de ce mode de recherche.
+::Des lignes vides::
+[markdown]
+Dans les expressions régulières, les caractères `^` et `$` représentent le début et la find d'une ligne. Avec quelles expression peut-on donc rechercher 
+{
+=une ligne vide -> ^$
+=une ligne ne contenant que bonjour -> ^bonjour$
+=une ligne ne contenant que des espaces ->^ *$
+}
+``` 
 
-Nous avons présenté la phase d'indexation qui fournit comme résultat
-un index défini de la manière suivante :
+## Recherche exacte rapide avec un index
 
-> Un **index** est constitué d'un dictionnaire avec une méthode
-> d'accès rapide à un mot, et, pour chaque mot, on dispose de la liste
-> des numéros des ouvrages qui contiennent ce mot.
+Lorsque vous utilisez l'index d'un livre, d'un atlas ou d'une encyclopédie, vous utilisez la liste des mots indexés rangés alphabétiquement pour trouver les pages du livre où ces mots sont définis ou utilisés. L'ordre alphabétique permet également de rechercher très rapidement dans cet index. Cette organisation est reproduite dans les moteurs de recherche pour dépasser la simple recherche séquentielle qui peut prendre un temps de calcul trop grand. Étudions comment construire automatiquement des index pour les grand ensembles de documents numériques et comment les utiliser. Considérons pour cela que nous avons un corpus de documents fixé.
 
-Rappelons que l'objectif est de trouver l'ensemble des ouvrages dont
-les descriptions textuelles satisfont une requête. Montrons que
-**l'index construit permet au moteur de calculer très rapidement les
- réponses aux requêtes** :
+### Construction d'un index
 
-- Pour *une requête à un mot clé*, on cherche les ouvrages dont la
- description contient ce mot. Il suffit de chercher le mot dans le
- dictionnaire puis de renvoyer la liste des ouvrages donnés par leurs
- numéros associée dans l'index.
-- Pour *une requête à deux mots clés*, on cherche les ouvrages dont la
- description contient les deux mots. Le moteur procède comme suit :
- chercher le premier mot dans le dictionnaire et renvoyer la liste des
- numéros des ouvrages ; chercher le deuxième mot dans le dictionnaire
- et renvoyer la liste des numéros des ouvrages ; construire la liste
- des numéros qui apparaissent dans les deux listes ; renvoyer cette
- liste comme réponse à la requête. Par exemple, considérons la requête
- à deux mots clés `rose` et `blanche`, on trouve la liste 125, 245,
- 567, ... pour `rose`, on trouve la liste 117, 176, 245, 312, ... pour
- `blanche`, dans la liste résultat on trouvera 245 et éventuellement
- d'autres numéros d'ouvrages, on renvoie cette liste comme résultat de
- la requête. Ces principes peuvent être étendus pour des requêtes à
- plusieurs mots clés
-- Une requête à plusieurs mots clés est interprétée avec un opérateur
- `ET` implicite car on souhaite que tous les mots soient présents. On
- peut aussi écrire des requêtes avec les opérateurs logiques `OU` et
- `NON`.
-- Les interfaces des moteurs documentaires proposent également des
-*requêtes par position*. La plus importante est la **requête par
-phrase** où on recherche les mots en respectant exactement les
-positions des mots de la requête. Une requête par phrase est souvent
-exprimée avec des guillemets. Par exemple, si on considère la requête
-par phrase `"rose blanche"`, le moteur doit renvoyer tous les ouvrages
-dont la description contient les deux mots `rose` et `blanche` à des
-positions consécutives. Ceci peut être réalisé en mémorisant dans
-l'index les positions auxquelles apparaissent les mots. Il existe
-d'autres requêtes par position exprimant des conditions sur les
-positions relatives de mots. Par exemple, on pourrait écrire une
-requête demandant que les mots `rose` et `blanche` soient distants de
-moins de 3 mots.
+Pour construire cet index, il faut choisir quels mots seront indexés et quelle sera la représentation des documents, ou plus précisément, la représentation des textes dans ces documents. 
+
+Chaque texte est représenté par une séquence d'unités élémentaires, appelés `tokens` ou unités lexicales, qui sont des suites de caractères sans espace et sans symbole de ponctuation. Un token correspond à un mot de la langue ou un nombre ou une date ou un sigle.  De nombreux choix, parfois dépendants de la langue conditionnent ce découpage en tokens. Par exemple, considère-t-on différemment les majuscules et les minuscules ? Considère-t-on les accents ? Un texte comme `La Révolution française, 1789-1799 : Une histoire socio-politique` pourrait alors être transformé en une suite de tokens `la revolution francaise 1789 1799 une histoire socio politique`. L'ensemble de tous les tokens possibles, ou plus précisément, rencontrés dans l'ensemble de tous les documents qui constituent la base documentaire à indexer forme le **vocabulaire**. Parfois, les tokens très fréquents sont retirés du vocabulaire, par exemple en français le `et`, `le`, ... Si le programme d'indexation automatique dispose de plus d'informations linguistiques, il est parfois possible d'inclure dans le vocabulaire, et donc dans l'index, des tokens qui sont composés comme `révolution française` ou `socio-politique`. 
+
+
+L'étape suivante pour la réalisation de l'index est maintenant d'associer à chaque token du vocabulaire l'ensemble des documents dans lesquels ce token apparaît. Pour cela on associe un numéro unique, appelé identifiant, à chaque document de la base documentaire. La structure de l'index est alors simplement une liste de tokens avec pour chacun, la liste des identifiants des documents où ce token se trouve. Par exemple, l'index  mémorise que le mot `rose` apparaît dans les documents de numéro 125, 245, 567, ... ; que le mot `blanche` apparaît dans les documents de numéro 117, 176, 245, 312, ...
+
+### Recherche à l'aide d'un index
+
+La création d'un index est un processus assez long mais qui ne se fait qu'une seule fois quand l'ensemble des documents ne change pas. En revanche la recherche dans l'index doit être très rapide pour être opérationnelle. Mais l'index peut avoir une taille de plusieurs centaines de milliers de tokens. L'index est donc lui même organisé de façon à ce qu'une recherche soit rapide. Parmi les techniques utilisées, on peut décrire la plus simple. Il s'agit de s'assurer que l'index soit organisé par ordre alphabétique des tokens. Dans ce cas un algorithme de  *recherche dichotomique* peut être utilisé. La recherche dichotomique est illustrée en cherchant par exemple le mot `rose` : on regarde le mot au milieu du dictionnaire, c'est `maman`, donc on cherche dans la seconde moitié ; on regarde le mot au milieu de la seconde moitié, c'est `savant`, donc on cherche entre `maman` et `savant` ; jusqu'à trouver le mot `rose`. On peut montrer qu'un tel algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il suffit d'effectuer 19 accès, pour une dictionnaire de 1 million de mots, il suffit d'effectuer 20 accès. Notons que si la taille du dictionnaire double, on ne doit faire qu'un accès supplémentaire ! Ce
+qui explique la rapidité de ce mode de recherche. Terminons en signalant que des méthodes dites de hachage permettent d'effectuer des recherches plus rapides encore. 
+
+Nous avons présenté la phase d'indexation qui fournit comme résultat un index défini de la manière suivante :
+
+> Un **index** est constitué d'un vocabulaire avec une méthode
+> d'accès rapide à un token, et, pour chaque token, on dispose de la liste
+> des identifiants des documents qui contiennent ce token.
+
+Comment l'index permet-il de répondre rapidement à des requêtes formulées dans un moteur de recherche exacte ?
+
+- Si la requête ne contient qu'un seul mot, on cherche si ce mot est un token dans l'index et on renvoie la liste des documents donnés par leurs identifiants associée dans l'index.
+- Si la requête est composée de deux mots, le moteur procède comme suit : chercher le premier mot dans l'index et renvoyer la liste des identifiants de documents ; faire de même pour le deuxième mot ;  construire la liste  des identifiants qui apparaissent dans les deux listes (c'est une intersection de listes) ; renvoyer cette  liste comme réponse à la requête. Ce principe peut être étendu pour des requêtes à  plusieurs mots
+- Une requête à plusieurs mots est interprétée avec un opérateur `ET` implicite car on souhaite que tous les mots soient présents. On  peut aussi écrire des requêtes avec les opérateurs logiques `OU` et `NON` qui correspondront à d'autres opérations sur les listes (union ou différence).
+- Les moteurs de recherche proposent également des *requêtes par position*. La plus importante est la **requête par phrase** où on recherche les mots en respectant exactement les positions des mots de la requête. Une requête par phrase est souvent exprimée avec des guillemets. Par exemple, si on considère la requête par phrase `"rose blanche"`, le moteur doit renvoyer tous les documents contenant les deux mots `rose` et `blanche` à des positions consécutives. Ceci peut être réalisé grâce à un index plus complet  mémorisant également les positions auxquelles apparaissent les tokens. Il existe d'autres requêtes par position exprimant des conditions sur les positions relatives de mots. Par exemple, on pourrait écrire une requête demandant que les mots `rose` et `blanche` soient distants de moins de 3 mots.
+
+
 
 ## La recherche approximative avec un score de pertinence
 
-Les systèmes étudiés jusqu'à présent renvoient une liste de documents
-qui satisfont une propriété alors que vous êtes habitués à la
-recherche sur le Web où, étant donnée une requête, on ordonne la liste
-de résultats selon des scores attribués aux documents. Ceci nécessite
-d'avoir un score qui mesure la proximité entre un document et une
-requête. Nous expliquons comment définir et calculer **un score de
-pertinence relativement à une requête**.
+Les systèmes étudiés jusqu'à présent renvoient la liste complète des documents qui satisfont la requête. Lorsque le corpus de documents sur lequel porte les requêtes est trop grand, cette recherche est bien souvent inutile. Trop de documents satisfont la requête et le résultat devient illisible.  Les moteurs de recherche du Web fonctionnent différemment et ordonnent la liste de résultats selon des scores attribués aux documents. Ceci permet d'effectuer des recherches approximatives mais aussi de faciliter la lecture du résultat. Il est donc alors nécessaire de définir et calculer **un score de pertinence relativement à une requête**.
+
+À cause de cet ordonnancement des résultats, des questions éthiques d'accès à l'information se posent, et plus évidemment encore si la liste est tronquée aux quelques documents de plus haut score, ou même du premier document. Mais il faut remarquer que les mêmes questions éthiques se posent dans la recherche exacte suite aux choix réalisés dans la phase d'indexation, de collecte et de représentation des documents. 
 
 ### Représenter des documents par des tableaux de nombres
 
-On suppose toujours un grand ensemble de documents textuels possèdant
-un numéro (un identifiant), on suppose avoir défini un dictionnaire et
-construit un index.  Pour calculer un score, il faut des valeurs
-numériques. Pour cela on va représenter un document par un tableau de
-nombres appelé *vecteur*. La plus simple des représentations consiste
-à représenter un document par un (très grand) vecteur. Chaque élément
-du vecteur, aussi appelé *composante*, correspond à un mot du
-dictionnaire et sa valeur est 1 si le mot apparaît dans le document et
-0 sinon. Prenons l'exemple d'un dictionnaire contenant les mots de
-langue française et du document textuel `citoyennes tricoteuses - les
-femmes du peuple à paris pendant la révolution française`. Ce document
-sera représenté par un vecteur avec une composante par mot du
-dictionnaire et toutes les composantes valent 0 sauf les composantes
-pour les mots `à`, `citoyennes`, ..., `tricoteuses` qui valent 1. On
-mémorise donc la *présence (valeur 1) ou l'absence (valeur 0)* d'un
-mot du dictionnaire dans le document. Cette représentation est appelée
-**Boolean frequency**,
+On suppose toujours qu'un grand ensemble de documents est à la disposition du moteur de recherche. Rappelons rapidement que dans le cas du web, ce sont les robots (ou crawlers en anglais) qui se chargent de collecter le plus grand nombre possible de documents disponibles sur internet. Ce grand corpus de documents est ensuite indexé selon des techniques similaires à celles expliquées précédemment. 
 
-Plutôt que de mémoriser simplement la présence ou l'absence, une
-extension est de compter combien de fois chaque mot apparaît. On
-obtient une seconde représentation, appelée **Term frequency**, pour
-laquelle un document est représenté par un vecteur où chaque
-composante correspond à un mot du dictionnaire et la valeur est le
-nombre d'occurrences (d'apparitions) du mot dans le document. Par
-exemple, considérons le document `réflexions sur la révolution de
-france suivi d'un choix de textes de burke sur la révolution`.  Il
-sera représenté par un vecteur dont toutes les composantes valent 0
-sauf les composantes pour les mots `réflexions`, `france`, ... qui
-valent 1 et les composantes pour les mots `de`, `la`, `révolution` et
-`sur` qui valent 2 car ils apparaissent deux fois.
+Pour calculer un score, la représentation numérique des documents est adaptée et plusieurs représentations ont été utilisées. Trouver une bonne représentation, adéquate pour la recherche d'information est toujours un sujet de recherche. Nous en présentons trois. 
 
-Mais, lorsque vous écrivez des requêtes sur le Web, vous savez que des
-mots trop fréquents vont vous retourner trop de réponses donc vous
-essayez d'exprimer votre requête avec *des mots ou termes plus
-pertinents ou plus discriminants* dans le sens où vous savez qu'il y a
-moins de documents contenant ces mots. Nous allons, par conséquent,
-présenter une troisième représentation, appelée **term
-frequency -- inverse document frequency (tf-idf)**, qui pénalise les
-mots fréquents et favorise les mots rares.  Dans cette représentation,
-on multiplie la fréquence d'apparition (*tf* pour term frequency) par
-un facteur (*idf* ou inverse document frequency). Nous ne donnons pas
-la définition mathématique de l'idf mais il suffit de retenir que
-l'idf d'un mot
+Dans la plus simple, un document sera représenté par une suite de 0 et de 1 correspondant à la présence ou l'absence dans ce document de  chaque token du vocabulaire considéré dans la phase d'indexation. On appelle un **vecteur** une telle suite de valeurs qu'on prend l'habitude de représenter comme un tableau d'une seule colonne. Chaque valeur 0 ou 1 se trouve dans une cellule de ce tableau qu'on appelle **composante** du vecteur et qui est ici associée à un token du vocabulaire. 
+Prenons l'exemple d'un vocabulaire contenant les mots de langue française et du document textuel `citoyennes tricoteuses - les femmes du peuple à paris pendant la révolution française`. Ce document sera représenté par un vecteur avec une composante par mot du vocabulaire et toutes les composantes valent 0 sauf les composantes pour les mots `à`, `citoyennes`, ..., `tricoteuses` qui valent 1.  Cette représentation qui ne représente un document que par la présence ou l'absence de certains tokens est appelée **Boolean frequency**. 
+
+Plutôt que de mémoriser simplement la présence ou l'absence, une extension est de compter combien de fois chaque token apparaît. On obtient une seconde représentation, appelée **Term frequency**, pour
+laquelle un document est représenté par un vecteur où chaque composante est le nombre de fois où un token apparaît dans le document. Par exemple, considérons le document `réflexions sur la révolution de france suivi d'un choix de textes de burke sur la révolution`.  Il sera représenté par un vecteur dont toutes les composantes valent 0 sauf les composantes pour les mots `réflexions`, `france`, ... qui valent 1 et les composantes pour les mots `de`, `la`, `révolution` et `sur` qui valent 2 car ils apparaissent deux fois.
+
+Mais, lorsque vous écrivez des requêtes, vous savez que des mots trop fréquents vont vous retourner trop de réponses donc vous essayez d'exprimer votre requête avec *des mots ou termes plus
+pertinents ou plus discriminants* dans le sens où vous savez qu'il y a moins de documents contenant ces mots. Une troisième représentation, appelée **term frequency -- inverse document frequency (tf-idf)**, pénalise les mots fréquents et favorise les mots rares.  Dans cette représentation,
+on multiplie la fréquence d'apparition (*tf* pour term frequency) par un facteur (*idf* ou inverse document frequency). Nous ne donnons pas la définition mathématique de l'idf mais il suffit de retenir que l'idf d'un mot
 
 - est *grand pour un mot rare* qui apparaît dans peu de documents
 - est *petit pour un mot fréquent* qui apparaît dans beaucoup de
   documents
 
-Par conséquent, la multiplication par l'idf va augmenter la valeur
-pour les mots rares de la collection et la diminuer pour les mots
-fréquents. Par exemple, considérons le --très petit-- document `la
-révolution française`. Sa représentation tf avec les fréquences aurait
-1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot
-`française` et 0 pour tous les autres mots du dictionnaire. Sa
-représentation tf-idf aurait une valeur très petite pour le mot `la`
-(car la est très fréquent) disons 0,01, moyenne pour le mot
-`française` disons 0,14 et plus grande pour le mot `révolution` disons
-0,25 (révolution est le moins fréquent des 3 mots). La représentation
-tf-idf permet donc de renforcer la valeur pour les mots qui
-apparaissent dans peu de documents ce qui va aider à trouver les
-documents les plus pertinents.
+Par conséquent, la multiplication par l'idf va augmenter la valeur pour les mots rares de la collection et la diminuer pour les mots fréquents. Par exemple, considérons le très petit document `la révolution française`. Sa représentation tf avec les fréquences aurait 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot `française` et 0 pour tous les autres mots du vocabulaire. Sa représentation tf-idf aurait une valeur très petite pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour le mot `française` disons 0,14 et plus grande pour le mot `révolution` disons 0,25 (révolution est le moins fréquent des 3 mots). La représentation tf-idf permet donc de renforcer la valeur pour les mots qui apparaissent dans peu de documents ce qui va aider à trouver les documents les plus pertinents.
 
-Il existe de nombreuses variantes de ces représentations vectorielles
-qui ont été étudiées et dont on a comparé les performances en
-recherche d'information. Trouver la représentation vectorielle d'un
-texte la mieux adaptée à une tâche reste un sujet de recherche actuel.
 
 ### Score de pertinence entre un document et une requête
 
-Il faut définir un score qui doit mesurer à quel point un document
-correspond à une requête composée de plusieurs mots clé. Ce score sera
-grand si le document est très pertinent pour la
-requête. Intuitivement, un document est pertinent si il contient les
-mots de la requête et si ces mots apparaissent souvent dans le
-document. De plus, le score doit être renforcé pour les mots rares et
-diminué pour les mots fréquents. Pour cela, on représente, en général,
-un *document avec la représentation tf et la requête avec la
-représentation tf-idf*. Plusieurs formules de calcul de score de
-pertinence ont été proposées mais une des plus utilisées que nous
-expliquons ici est la **similarité cosinus ("Cosine similarity" en
-anglais)**. Le score exprime à quel point les deux représentations
-vectorielles sont alignées en multipliant les composantes deux à deux
-(correspondant à un même mot) et en sommant les résultats. Pour une
-requête à plusieurs mots clés, sa représentation vectorielle est
-constituée de 0 partout sauf pour les mots de la requête. Par
-conséquent, seules les valeurs associées aux mots de la requête vont
-être utilisées dans le calcul du score. Illustrons par des exemples ce
-calcul de score de pertinence :
+Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Plusieurs formules de calcul ont été proposées et traduisent la similarité entre la représentation du document et celle de la requête par des tableaux de nombre, c'est-à-dire représentés sous forme de vecteurs. Intuitivement, le score exprime à quel point les deux vecteurs, document et requête, sont proches. Le score de similarité le plus utilisé est obtenu  en multipliant les composantes des vecteurs deux à deux (correspondant à un même mot) et en sommant les résultats. Notez que comme le 0 représente l'absence d'un mot dans ces représentations à base de vecteurs, seuls les mots à la fois présents dans la requête et dans le document contribuent au score.
+
+Un bon choix pour la représentation sous forme de vecteurs des requêtes et documents est donc essentiel. Intuitivement, un document est pertinent si il contient les mots de la requête et si ces mots apparaissent souvent dans le document. De plus, le score doit être renforcé pour les mots rares et diminué pour les mots fréquents. Pour cela, on représente, en général, un *document avec la représentation term-frequency et la requête avec la représentation tf-idf*. 
+
+Illustrons par des exemples ce calcul de score de pertinence :
 
 - la requête `la révolution française` avec la représentation tf-idf
 est représenté par le vecteur (0,01 ; 0,25 ; 0,14) où les composantes
@@ -417,17 +214,16 @@ C'est ce dernier document qui l'emporte car, même si il ne contient
 pas le mot `française`, il contient deux occurrences du mot
 `révolution` qui est plus rare. Nous constatons bien, sur cet
 exemple, que le score mesure bien la pertinence des documents
-relativement à la requête. Le calcul de la Cosine similarity est, en
-réalité, un peu plus compliqué car il faut limiter l'influence de la
+relativement à la requête. Le calcul est en réalité, un peu plus compliqué car il faut limiter l'influence de la
 longueur des documents.  Le calcul de la pertinence fait donc
 intervenir une normalisation qui revient à ramener tous les documents
 à une même longueur.
 
-Notons enfin que les notices sont structurées, que les documents sont
-structurés avec titre, résumé, ... On peut calculer un score de
-pertinence pour chacun de ces éléments et combiner ces scores. Nous
-reparlons de ce point lorsque nous définirons le score de pertinence
-Web dans la suite.
+<!-- Notons enfin que les notices sont structurées, que les documents sont -->
+<!-- structurés avec titre, résumé, ... On peut calculer un score de -->
+<!-- pertinence pour chacun de ces éléments et combiner ces scores. Nous -->
+<!-- reparlons de ce point lorsque nous définirons le score de pertinence -->
+<!-- Web dans la suite. -->
 
 
 ```compréhension
@@ -497,204 +293,66 @@ Nous utilisons à titre d'exemple [le site Gallica lié à la bibliothèque nati
 
 # Recherche d'information sur le Web
 
-Nous avons présenté l'indexation et la calcul de score de pertinence
-d'un document textuel relativement à une requête. Nous allons voir
-comment ce score est adapté aux documents du Web. Nous présentons
-ensuite le score de notoriété qui mesure l'importance d'une page
-Web. C'est ce score introduit par `Google` qui lui a donné un avantage
-significatif sur ses concurrents dans les années 1990. La combinaison de ces
-deux scores est la base du score d'un document Web relativement à une
-requête quel que soit le moteur utilisé.
+Dans les années 1990, des travaux de recherche ont proposé une modification dans le calcul du score de pertinence en combinant le score avec une valeur reflétant la notoriété d'un document du web. Ces travaux ont été implantés et ont conduit à la création de Google. Ils sont aujourd'hui utilisés par tous les moteurs de recherche du web. Cette valeur de notoriété exploite la particularité des documents HTML du Web : l'existence de liens hypertexte entre documents.
+
+En résumé, le moteur de recherche du web doit indexer les documents du web, calculer un score web qui compose un score de pertinence et un score de notoriété. 
 
 ## Indexation du Web
 
-Pour calculer un score de pertinence, il faut au préalable que les
-documents du Web soient indexés. Nous présentons quelques points
-essentiels :
+L'**indexation du Web** est réalisé par des **programmes appelés robots** qui parcourent les sites Web et suivent les liens. Ces robots fonctionnent comme un navigateur automatique. Reportez-vous au cours sur le Web. À partir d'une URL, ils téléchargent un premier document HTML, extraient automatiquement toutes les URLs  qui s'y trouvent et recommencent ce même processus indéfiniment. De cette façon, ils  récupèrent le contenu des pages et la structure décrite par tous les liens. Le tout (donc une copie partielle du web) est stocké dans d'immenses serveurs. La constitution d'un index s'opère dans le même temps, et au bilan :
 
-
-- L'**indexation du Web** est réalisé par des **programmes appelés
-robots** qui parcourent les sites Web et suivent les liens. Ces
-programmes récupèrent le contenu des pages et la structure des sites
-(les hyperliens et l'organisation).
-- **Tous les documents du Web sont indexés** quel que soit leur format :
-  pages Web au format `html`, documents imprimables au format `pdf`,
-  documents au format `doc`, ... ce qui mène à un nombre de documents
-  de l'ordre de 60 000 milliards en 2016.
-- **Tous les mots qui apparaissent sur le Web sont indexés** quels que
-  soient leur fréquence, la langue, ..., ce qui amène à un
-  dictionnaire contenant plusieurs millions de mots.
-- Ceci permet de construire un **index de très grande taille** qui est
-  **mis à jour continûment** avec les informations récupérées par les robots
-- L'index est réparti sur des fermes de calcul (un grand nombre
-  d'ordinateurs de grande capacité en réseau) réparties dans le monde
-  entier. On peut noter que cela implique une très grande consommation
-  d'énergie et donc le Web n'est pas si écologique qu'on pourrait le
-  croire.
-
-
+- **Les documents du Web sont indexés** quel que soit leur format : pages Web au format `html`, documents imprimables au format `pdf`, documents au format `doc`, ... ce qui mène à un nombre de documents de l'ordre de 60 000 milliards en 2016.  
+- **Tous les mots qui apparaissent sur le Web sont indexés** quels que soient leur fréquence, la langue, ..., ce qui amène à un dictionnaire contenant plusieurs millions de mots.
+- Ceci permet de construire un **index de très grande taille** qui est **mis à jour continûment** avec les informations récupérées par les robots
+- L'index est réparti sur des fermes de calcul et de stockage (un grand nombre d'ordinateurs de grande capacité en réseau) réparties dans le monde entier. On peut noter que cela implique une très grande consommation d'énergie et donc le Web n'est pas si écologique qu'on pourrait le croire.
 
 ## Score de pertinence
 
-Considérons un document du Web -- une page Web -- au format `html`. Un
-tel document a un contenu mais aussi une structure avec un titre
-principal et des sections ayant des titres. L'apparition d'un mot de
-la requête dans un titre est plus important que son apparition dans le
-contenu. Ceci doit donc être pris en compte dans le calcul de
-pertinence. Un deuxième élément qui est spécifique au Web concerne les
-liens (ou hyperliens). En effet, lorsqu'un lien sur une page Web est
-créé, il est associé à un texte qui contient de l'information sur la
-page. Par exemple, un site Web qui souhaite mettre un lien sur ce
-module culture numérique définira un texte cliquable comme `cours
-d'introduction à la recherche information` qui est très informatif sur
-le contenu de la page. Il est donc intéressant de le prendre en compte
-dans le calcul du score de pertinence.
+Considérons un document du Web au format `html`. Un tel document a un contenu mais aussi des méta-données et une structure comme un titre principal et des titres de section. L'apparition d'un mot de la requête dans un titre est plus important que son apparition dans le contenu. Ceci doit donc être pris en compte dans le calcul de pertinence. Un deuxième élément qui est spécifique au Web concerne les liens composés par une URL et un texte de lien. Par exemple, un lien sur ce module culture numérique définira un texte cliquable comme `cours d'introduction à la recherche information` et l'URL reprendra peut être une partie de ces mots. Ces textes sont très informatifs sur le contenu de la page. Il est donc intéressant de les prendre en compte dans le calcul du score de pertinence.
 
-Par conséquent, le score de pertinence d'une page Web va prendre en
-compte des scores de pertinence calculés sur **différentes vues sur la
-page Web** dont les principales sont :
+Par conséquent, le score de pertinence d'une page Web va prendre en compte des scores de pertinence calculés sur **différentes vues sur la page Web** dont les principales sont :
 
 - le contenu textuel de la page
 - les titres de la page
-- les mots clé associés à la page définis dans son entête et plus
-  généralement les méta données de la page Web
-- l'adresse du document (un texte de la forme
-  `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
+- les mots clé associés à la page définis dans son entête et plus généralement les méta données de la page Web
+- l'adresse du document (un texte de la forme  `https://culturenumerique.univ-lille3.fr/modulerechercheinformation.html`)
 - les textes des liens qui pointent sur la page
 
-Pour chacune de ces vues, un score de pertinence peut être calculé
-avec la méthode introduite auparavant. Il reste à combiner ces scores
-avec une formule de la forme : un pourcentage du score de contenu + un
-pourcentage du score des titres + ... **La formule de combinaison est
-secrète !**. C'est-à-dire que l'on ne connaît pas les pourcentages
-utilisés dans la formule. Par exemple, suite à de nombreux abus de
-concepteurs de pages Web qui ajoutaient des mots clé fictifs (sans
-rapport avec le contenu) pour essayer d'améliorer artificiellement
-leur score, on a pu constater que l'influence du score de pertinence
-des mots clés a été diminuée.
+Pour chacune de ces vues, un score de pertinence peut être calculé avec la méthode introduite auparavant. Il reste à combiner ces scores avec une formule de la forme : un pourcentage du score de contenu + un pourcentage du score des titres + ... **La formule de combinaison est secrète !**. C'est-à-dire que l'on ne connaît pas les pourcentages utilisés dans la formule. Par exemple, suite à de nombreux abus de concepteurs de pages Web qui ajoutaient des mots clé fictifs (sans rapport avec le contenu) pour essayer d'améliorer artificiellement leur score, on a pu constater que l'influence du score de pertinence des mots clés a été diminuée.
 
 ## Score de notoriété
 
-Le Web a une structure de réseau ou de graphe avec des pages Web qui
-pointent les unes vers les autres avec les hyperliens. L'idée est
-d'utiliser cette structure pour mesurer *la notoriété* des pages. On
-souhaite donc définir un *score de notoriété* qui va mesurer à quel
-point une page est importante pour les internautes. Une première
-tentative de définition de score de notoriété d'une page pourrait être
-le nombre de pages qui pointent sur elle. Cette définition n'est pas
-robuste car on peut tricher (cela a été fait). En effet, il suffirait
-pour renforcer le score de notoriété d'une page de créer (en grand nombre)
-des pages artificielles qui pointent sur cette page. La définition
-doit donc être plus intelligente et une bonne définition est la
-suivante :
+Le score de notoriété peut être basé sur la réflexion suivante : 
 
 > Une page a **une forte notoriété si beaucoup de pages ayant une
-> forte notoriété** pointent sur elle
+> forte notoriété** y font référence.
 
-Définir la notoriété n'est pas si simple car on voit que pour définir
-une page de forte notoriété il faut déjà savoir calculer la
-notoriété. C'est un exemple de définition récursive où on définit la
-notoriété à partir d'elle-même. Mais ceci est fréquent en mathématique
-et en informatique. Il est donc possible de mettre cette définition en
-équations et de définir des algorithmes qui vont permettre de calculer
-la notoriété d'une page Web. Une autre vision de la notoriété peut
-être définie avec la notion de **surfeur aléatoire**. L'idée est
-d'imaginer qu'un surfeur navigue sur le Web en suivant des liens. Pour
-cela,
+Puisque Le Web a une structure de réseau ou de graphe avec des pages Web qui pointent les unes vers les autres avec les hyperliens, l'idée est d'utiliser cette structure pour mesurer *la notoriété* des pages. Même cela peut paraître compliqué car la définition de notoriété utilise elle même la notoriété (on parle de définition récursive) il est possible de mettre cette définition en équations et de définir des algorithmes qui vont permettre de la calculer. L'idée est d'imaginer qu'un surfeur navigue sur le Web en suivant des liens au hasard. On définit en fait un **surfeur aléatoire** dans le graphe du web. Pour cela,
 
-- il peut choisir une page au hasard sur le Web -- ceci correspond à
-émettre une requête et suivre un lien sur la page de réponse
-- lorsqu'il est sur une page Web, il peut choisir au hasard un des
-  liens présents sur la page et le suivre
+- il peut choisir une page au hasard sur le Web
+- lorsqu'il est sur une page Web, il peut choisir au hasard un des liens présents sur la page et le suivre
 
-Le surfeur aléatoire choisit donc une page au hasard, il suit des
-liens en partant de cette page puis, après avoir suivi quelques liens,
-il recommence en choisissant une nouvelle page au hasard. Si le
-surfeur réalise ceci un très grand nombre de fois, toutes les pages
-Web seront visitées et plus souvent elles sont visitées plus elles
-sont importantes. Le score de notoriété d'une page correspond donc à
-la fréquence de visite de cette page par le surfeur aléatoire. Cette
-définition a été démontrée équivalente à la précédente. Un algorithme
-pour calculer le score de notoriété, appelé **algorithme PageRank**, a
-été introduit par les fondateurs de Google au milieu des années 1990
-dans un moteur de recherche d'information. Si les principes de cet
-algorithme étaient connus, c'était un challenge de l'appliquer à la
-recherche d'information avec des tailles de données (dictionnaire et
-nombre de documents) très grands. Cet algorithme permet donc
-d'**attribuer à toute page Web un score de notoriété**.
+Si le surfeur réalise ceci un très grand nombre de fois, toutes les pages Web seront visitées et plus souvent elles sont visitées plus elles sont importantes. Le score de notoriété d'une page correspond donc à la fréquence de visite de cette page par le surfeur aléatoire. Notez que pour qu'une page soit souvent visitée, il ne suffit pas qu'elle soit la cible de nombreux liens, mais que ces liens proviennent eux mêmes de pages fréquemment visitées. Sans se résumer à cela, l'algorithme appelé **PageRank**, introduit par les fondateurs de Google au milieu des années 1990, simule ce surfeur aléatoire pour calculer le score de notoriété. Si les principes de cet algorithme étaient connus, c'était un challenge de l'appliquer à la recherche d'information avec des tailles de données (dictionnaire et nombre de documents) très grands. 
 
 ## Score Web
 
-Une requête sur le Web dans un moteur de recherche d'information est
-très souvent exprimée comme une suite de mots clés. Le **score Web
-d'un document Web relativement à une requête** est calculé comme une
-combinaison de la forme : un pourcentage du score de pertinence de la
-page relativement à la requête + un pourcentage du score de notoriété
-de la page. Ici encore la formule de combinaison n'est pas connue !
-Ici encore, on sait qu'elle existe et qu'elle évolue. Par exemple, on
-observe chez `Google` que la part du score de notoriété est de plus en
-plus grande. En effet, les pages les mieux classées ont souvent une
-forte notoriété comme les pages Wikipedia, des pages de sites de
-journaux et, plus généralement, des pages de sites de
-référence. Retenez que **le score Web est calculé principalement à
-partir de la pertinence et de la notoriété**.
+Le **score Web d'un document Web relativement à une requête** est calculé comme une
+combinaison qui utilise un score de pertinence de la page relativement à la requête et un score de notoriété de la page. Ici encore la combinaison exacte utilisée par les acteurs comme Google, Bing, Qwant, Baidu ou Yandex,... (la liste est longue) n'est pas connue et chacun a la sienne! Elle reste secrète et évolue pour des raisons de compétition entre moteurs de recherche et sans doute aussi pour éviter aux concepteurs de sites de mettre en oeuvre des techniques pour augmenter artificiellement leur score. Mais il semble que la part du score de notoriété est de plus en plus grande. En effet, les pages les mieux classées ont souvent une forte notoriété comme les pages Wikipedia, des pages de sites de journaux et, plus généralement, des pages de sites de référence. Retenez que **le score Web est calculé principalement à partir de la pertinence et de la notoriété**, que **les réponses et l'ordre des réponses à une requête diffèrent selon le moteur choisi** et que **le score Web évolue dans le temps**.
 
-Rappelons également qu'il existe différents moteurs de recherche
-d'information comme, par exemple, `Qwant` et `Google`. Chaque moteur a
-développé ses propres algorithmes et ses propres formules de calcul
-basés sur la pertinence et la notoriété.  On peut penser à des
-recettes de cuisine utilisant les mêmes ingrédients mais avec des
-proportions et des modes de cuisson différents. Certains moteurs vont
-privilégier la notoriété alors que d'autres vont essayer d'introduire
-de la diversité dans les réponses. Il est donc important de retenir que
-**les réponses et l'ordre des réponses à une requête diffèrent selon
-le moteur choisi**.
+Si les deux éléments essentiels sont le score de pertinence et le score de notoriété, le score Web fait intervenir d'autres éléments sans qu'on sache exactement comment ils interviennent dans le calcul
+du score Web. Parmi les éléments principaux intervenant dans le calcul, on trouve :
 
-Si les deux éléments essentiels sont le score de pertinence et le
-score de notoriété, le score Web fait intervenir d'autres éléments
-sans qu'on sache exactement comment ils interviennent dans le calcul
-du score Web. Les éléments principaux intervenant dans le calcul sont :
+- des données d'usage
+- des données personnelles 
 
-- la langue d'interrogation
-- le pays du site du moteur
-- le média d'interrogation (ordinateur ou téléphone portable) et sa
-  localisation
-- les données d'usage
+Les données d'usage consistent à connaître par exemple le nombre de fois où les utilisateurs, considérés globalement et non individuellement, ont cliqué sur chaque lien fourni sur la page de résultat du moteur de recherche. Ces pages vont voir leur score renforcé ce qui contribue à renforcer encore le score des pages souvent visitées. Le score privilégie alors fortement la notoriété vue par la majorité des utilisateurs au détriment de la diversité. Notez également que ces données d'usage sont possédées par les grands acteurs du domaine ce qui leur donne un avantage concurrentiel important. 
 
-Pour ce dernier point, les données d'usage consiste à connaître les
-liens dans les pages de réponse sur lesquels les utilisateurs ont
-souvent cliqués. Ces pages vont voir leur score renforcé ce qui
-contribue à renforcer encore le score des pages souvent visitées. Le
-score privilégie alors fortement la notoriété vue par la majorité des
-utilisateurs au détriment de la diversité. Notez également que ces
-données d'usage sont possédées par les grands acteurs du domaine ce
-qui leur donne un avantage concurrentiel important. D'autres éléments
-sont certainement pris en compte.  Retenez que **le score Web est basé
-sur pertinence et notoriété mais il prend en compte de nombreux autres
-éléments**.
 
-Il faut également être conscient que le Web est dynamique et évolue
-sans cesse ce qui va modifier les scores dans le temps. De même, les
-algorithmes de calcul de score Web des différents moteurs évoluent
-continuellement. Par conséquent, les réponses et l'ordre des réponses
-à une requête à un moment donné ne seront peut-être pas identiques si
-elles sont exécutées à un autre moment. Retenez que **le score Web
-évolue dans le temps**.
+Les données personnelles sont attachées aux utilisateurs du moteur de recherche. Il peut s'agir de la langue d'interrogation, de la localisation de l'utilisateur, du média d'interrogation, autant d'informations qui accompagnent ou peuvent se déduire d'une requête HTTP (voir le cours sur le web). Mais grâce aux cookies et autres techniques de tracking, d'autres informations définissant un profil de l'utilisateur sont collectées par la plupart des moteurs de recherche. Il peut s'agir des requêtes passées, mais aussi d'informations bien plus personnelles comme le sexe ou l'âge ou les goût. 
+Elles peuvent alors être utilisées et modifier cette fois individuellement les résultats proposés par le moteur de recherche. Certains moteur comme *Qwant* ou *DuckDuckGo* s'engagent à ne pas user de cette pratique. Retenez donc que **le score Web est basé sur pertinence et notoriété mais il prend en compte de nombreux autres éléments**.
 
-Nous avons essentiellement discuté des requêtes à plusieurs mots clé
-mais un autre type de requête important sur le Web (environ 15 pour
-cent des requêtes) correspond aux requêtes par phrase. Rappelons
-qu'une requête par phrase consiste à rechercher les documents
-contenant exactement la phrase saisie. La convention usuelle est de
-mettre la phrase entre guillemets dans la barre de saisie. Par
-exemple, on peut considérer la requête par phrase `"la révolution
-française"`. Pour cette requête, on va retourner par ordre de score
-Web les documents contenant les trois mots consécutifs. Notez que
-cette requête donnera donc des résultats différents de la requête à
-trois mots clé `la révolution française` pour laquelle la position des
-mots n'intervient pas et dont les résultats ne contiennent pas
-nécessairement les trois mots.  Souvent les moteurs proposent des
-requêtes avancées mais elles sont très peu utilisées en pratique.
+
+<!-- Nous avons essentiellement discuté des requêtes à plusieurs mots clé mais un autre type de requête important sur le Web (environ 15 pour cent des requêtes) correspond aux requêtes par phrase. Rappelons qu'une requête par phrase consiste à rechercher les documents contenant exactement la phrase saisie. La convention usuelle est de mettre la phrase entre guillemets dans la barre de saisie. Par exemple, on peut considérer la requête par phrase `"la révolution française"`. Pour cette requête, on va retourner par ordre de score Web les documents contenant les trois mots consécutifs. Notez que cette requête donnera donc des résultats différents de la requête à trois mots clé `la révolution française` pour laquelle la position des mots n'intervient pas et dont les résultats ne contiennent pas nécessairement les trois mots.  Souvent les moteurs proposent des requêtes avancées mais elles sont très peu utilisées en pratique. --> 
 
 ```compréhension
 
@@ -774,244 +432,73 @@ On considère une requête à plusieurs mots clé. Dites quelles affirmations su
 
 ```
 
-# Évolutions, conclusion et discussion
 
-## Évolutions en cours
+# Évolutions en cours
 
-### Adaptation à l'utilisateur
+## Web des données
 
-Les langues naturelles sont ambiguës et un mot peu avoir plusieurs
-sens. Par exemple, le mot `java` peut désigner un langage de
-programmation ou une danse ou une île. Un internaute informaticien
-souhaiterait voir apparaître des pages parlant du langage de
-programmation alors qu'un autre utilisateur préférera des informations
-sur la danse. Même si un mot n'est pas ambigu, un utilisateur
-préférera des sites d'information, un autre des articles
-scientifiques, un autre encore des blogs. Il semble pertinent
-d'adapter les réponses du moteur aux préférences de
-l'utilisateur. Ceci peut être réalisé si l'historique des recherches
-et des liens suivis est connu. Lorsque vous avez un compte et que vous
-êtes identifiés, le moteur peut mémoriser cet historique des
-recherches et des navigations, en déduire un profil et l'utiliser pour
-adapter son calcul de score. Ceci est réalisé par certains moteurs
-mais, ici encore, les formules et algorithmes utilisés ne sont pas
-connus. Notez bien que cette **adaptation à l'utilisateur se fait avec
-la contrepartie de la connaissance complète de votre historique de
-navigation** par le moteur. Rappelons que
-[Qwant affirme ne pas mémoriser les traces de navigation et ne pas créer de profil](https://about.qwant.com/fr/legal/confidentialite/à)
-de ses utilisateurs.
+Bien que depuis sa création le web ait été conçu comme un outil collaboratif de partage d'information, cet aspect s'est renforcé au fil des années. Des évolutions technologiques, l'extension d'internet et des ordinateurs domestiques ont permis la production de contenu web par tout un chacun, amplifiant le caractère participatif. C'est le Web 2.0 avec les wikis, blogs et forums. Dans certains domaines très organisés, avec parfois des règles de contribution strictes et des automatismes permettant d'en contrôler le sens et la forme, le web s'est transformé en énorme base de données. C'est le **web des données** avec Wikipedia comme illustration majeure, ou d'autres bien moins connus mais tout aussi importants dans des domaine spécifiques comme `MusicBrainz` (musique), `GeoNames` (géographie), `OpenStreetMap` (cartographie),... 
 
-Un autre type d'adaptation est d'utiliser les **informations de
-localisation** obtenues à partir d'un gps si vous êtes géolocalisés ou
-à partir d'informations sur l'ordinateur sur lequel vous faites cotre
-requête. Le score des pages portant sur des objets proches de vous
-peut alors être renforcé. Ici encore, les algorithmes sont spécifiques
-à chaque moteur et ne sont pas connus. Notez également, lorsque vous
-activez la géolocalisation, que les informations de géolocalisation
-sont connues et peuvent être historisées. Ici encore, l'adaptation se
-fait au détriment du respect de votre vie privée.
+Pour rendre ces données maintenant accessibles à des traitements automatiques et donc des applications, plusieurs initiatives de chercheurs et de communautés d'utilisateur ont vu le jour pour rassembler ces données dans des bases de données bien plus structurées.  L'idée est donc de construire des **bases de connaissances** en phase avec l'ambition d'un **Web sémantique**. Les bases `Wikidata` ou `DBpedia` ont ainsi été initiées.  Les données sont décrites sous forme de triplets de la forme **(sujet, propriété, objet)** comme, par exemple, `(Led Zeppelin, IsA, MusicGroup)` ou `(Jimmy Page, IsMemberOf, Led Zeppelin)` qui peuvent être vues comme des phrases de la forme sujet verbe complément énonçant des faits comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est membre de Led Zeppelin`. 
 
-### Web des données
 
-Une évolution, apparue en 2014, est que, lorsque vous tapez le nom
-d'une entité du monde, que ce soit un groupe de musique (essayez `Led
-Zeppelin`), un personnage célèbre (essayez `Larry Page`), un lieu
-géographique (essayez `Middelburg`) ou encore un nom de fleur (essayez
-`rose`), vous voyez apparaître en résultat à votre requête un cadre
-présentant des informations factuelles sur l'entité. Par exemple, pour
-`Led Zeppelin`, vous trouvez une description du groupe, sa
-composition, le genre de musique, les principales chansons, les
-principaux albums, et des images associées. Plutôt que de donner des
-liens vers des pages associées à la requête, pages que vous devez
-aller lire, ici on **extrait des données sur l'entité**. Ceci est
-rendu possible grâce au *Web des données et connaissances* encore
-appelé *"knowledge graph"*.
+Des recherches d'informations factuelles comme savoir quels sont les membres de `Led Zeppelin` deviennent alors possibles grâce à de simples requêtes dans ces bases de données. Cette évolution est en fait apparue en 2014 en premier lieu dans les résultats du moteur de recherche de Google. C'est le fameux cadre en colonne de droite présentant des informations factuelles sur l'entité. Par exemple, pour`Led Zeppelin`, vous trouvez une description du groupe, sa composition, le genre de musique, les principales chansons, les principaux albums, et des images associées. 
 
-Le Web et les moteurs de recherche d'information étaient jusqu'alors
-destinés à des utilisateurs humains qui posaient des requêtes et
-allaient consulter les pages en fonction des résultats. Pour trouver
-une réponse à une question factuelle comme `âge des candidats à la
-présidence aux élections françaises en 2017`, il fallait taper une
-requête puis aller lire la réponse sur la bonne page. Les moteurs ont
-souhaité pouvoir répondre à ces questions factuelles. Pour cela, il
-faut connaître les réponses. Sur notre exemple, il faut connaître
-l'âge des candidats. Vous pouvez taper une requête comme `âge de X` où
-vous remplacez X par votre candidat préféré ou détesté pour vérifier
-que la réponse est connue et affichée. Un deuxième objectif des
-moteurs, que nous verrons dans la section suivante, est de résoudre
-des tâches plus complexes. Il faut alors connaître les réponses mais
-aussi les comprendre et les utiliser. C'est avec ces objectifs que
-s'est développé le Web des données et connaissances.
+Les données issues de `Wikidata` ou `DBpedia` sont libres et ouvertes. De ce fait, chacun peut les utiliser et les exploiter et la plupart des moteurs de recherche le font. Toutefois, les données peuvent être enrichies et complétées seulement en interne de certains grands groupes (comme Google avec son Knowledge Graph).
 
-Ceci a été réalisé conjointement par des communautés spécialisées
-comme en musique avec `MusicBrainz` ou en géographie avec `GeoNames`,
-des communautés d'utilisateurs et de chercheurs pour des bases
-généralistes avec `Wikidata` et `DBpedia`, des bases pour normaliser
-la description des données avec `foaf`. L'idée est de construire des
-bases de données de connaissances exploitables sur le Web. Les données
-sont décrites sous forme de triplets de la forme **(sujet, propriété,
-objet)** comme, par exemple, `(Led Zeppelin, IsA, MusicGroup)` ou
-`(Jimmy Page, IsMemberOf, Led Zeppelin)` qui peuvent être vues comme
-des phrases de la forme sujet verbe complément énonçant des faits
-comme `Led Zeppelin est un groupe de musique` et `Jimmy Page est
-membre de Led Zeppelin`. Ces bases de données ont été construites par
-ces communautés et sont désormais utilisées voire possédées par les
-grands acteurs du domaine. Des algorithmes sur ces
-bases de données permettent de chercher des informations et on pourra,
-par exemple, rechercher les informations factuelles sur `Led Zeppelin`
-qui pourront être affichés dans l'encadré sur la page de réponses à la
-requête.
 
-Une autre source de données est issue des pages Web construites par
-les utilisateurs du Web. Par exemple, un site Web de restaurant va
-ajouter sur sa page Web des données comme sa latitude et sa longitude
-ou encore des heures et jours d'ouverture. Ces données doivent
-respecter des conventions d'écriture en `html`. Elles peuvent alors
-être utilisées par des programmes (comme le navigateur) pour calculer
-des distances et donc savoir si le restaurant est proche de votre
-localisation ou encore pour savoir si le restaurant est ouvert afin de
-vous le proposer en réponse à une requête.
 
-### Parole et langage naturel
 
-Il devient possible d'interroger votre ordinateur par la parole. Une
-première couche logicielle se charge de transformer les signaux
-acoustiques en une suite de mots de la langue utilisée. Les logiciels
-de reconnaissance de la parole ont progressé très nettement ces
-dernières années avec l'utilisation de méthodes basées sur des réseaux
-de neurones profonds. Ce traitement étant réalisé, le moteur de
-recherche d'information doit alors traiter une requête en langage
-naturel.
+## Langage naturel et raisonnement
 
-Il est d'ailleurs possible de taper directement une requête en langage
-naturel dans la barre de saisie. Nous avons déjà évoqué des requêtes
-comme `Quel est l'âge de François Hollande ?`. Comment est traitée
-cette requête ? Tout d'abord, il y a des traitements pour reconnaître
-que c'est une question, en déterminer le verbe, le sujet, le
-complément. Le traitement de la langue comprend beaucoup de problèmes
-difficiles pour les machines. Seules certaines formes simples de
-question sont prises en compte par les moteurs. Cependant, les
-recherches progressent et les moteurs augmentent toujours leurs
-possibilités.
+L'interrogation du moteur à l'aide mots clefs est une évidente limitation. De nombreux travaux portent sur la possibilité d'écrire des requêtes en langage naturel, comme `Quel est l'âge de Robert Plant ?` ou `Quel temps fera-t-il demain ?` . À certains types simples de questions factuelles comme celles-ci, des moteurs de recherche sont capables de répondre.   Comment est traitée cette requête ? Tout d'abord, il y a des traitements pour reconnaître que c'est une question, en déterminer le verbe, le sujet, le complément. Le traitement de la langue comprend beaucoup de problèmes difficiles pour les machines. Mais avec une requête comme `Quel est le membre le plus âgé de Led Zeppelin ?`, en plus des difficultés précédentes, il faut comprendre la sémantique de la question et faire un raisonnement : trouver les membres, l'âge de chacun, comprendre que l'on cherche l'âge le plus élevé et comparer les âges. Même si ces requêtes ne donnent pas la réponse attendue aujourd'hui, les recherches progressent et les moteurs augmentent toujours leurs possibilités. Des avancées dans le traitement automatique des langues et dans la constitution de plus grands web des données contribuent à cette évolution. Mais, des requêtes plus complexes encore nécessitent d'enchaîner des recherches de faits, des raisonnements ou des traitements, et aujourd'hui et pour encore longtemps, c'est  inaccessible à la machine. 
 
-Lorsque qu'une requête en langage naturel est posée, elle est traitée
-par le moteur, puis le moteur interroge le Web des données pour
-afficher une réponse factuelle à la question (si possible), il calcule
-également un score Web pour afficher une liste ordonnée de pages. Il
-est très difficile de savoir comment sont calculés ces scores à cause
-des nombreux pré-traitements inconnus sur la requête et du calcul de
-score Web dont nous avons déjà signalé que beaucoup de points étaient
-secrets.
 
-Enfin, si on considère une requête comme `Quel est le plus âgé des
-candidats aux élections présidentielles de 2017 ?`, en plus des
-difficultés précédentes, il faut comprendre la sémantique de la
-question et faire un raisonnement : trouver l'âge des candidats,
-comprendre que l'on cherche l'âge le plus élevé, comparer les âges et
-retourner le nom et l'âge du candidat trouvé. Ceci ouvre la question
-de l'intelligence des moteurs que nous discutons maintenant.
 
-### Moteurs intelligents
+# Questions éthiques
+## La loyauté des moteurs
 
-Si les moteurs de recherche d'information sont capables de vous
-suggérer des pages Web en réponse à une requête et de récupérer des
-données relatives à une question factuelle, ils sont encore
-**incapables de raisonner**. Pour nous en convaincre, supposons que
-vous souhaitiez aller passer en week-end à Paris. Vous allez utiliser
-un moteur de recherche d'information pour rechercher des horaires et
-tarifs de train ou d'avion ou de bus, éventuellement en utilisant des
-comparateurs, ou encore voir sur un site de covoiturage. Vous allez
-chercher une auberge de jeunesse, une chambre en résidence, un hôtel
-pour la nuit. Vous allez, éventuellement, rechercher des expositions,
-des spectacles, des musées pour vous occuper. Le moteur vous aide mais
-*l'intelligence c'est vous !* Vous savez que pour vous rendre à Paris,
-il faut utiliser un moyen de transport, vous savez que les moyens de
-transport principaux sont le bus, le train, l'avion. Vous avez une
-connaissance du monde que ne possède pas la machine. Le Web des
-données apporte cette connaissance aux machines et aux
-programmes. Mais cette connaissance n'est pas suffisante car il faut
-savoir l'utiliser et raisonner. Par exemple, pour choisir les
-meilleures options en fonction du lieu où vous résidez et de vos
-préférences. Raisonner pour être capable de choisir et d'enchaîner les
-transports pour, par exemple, si je choisis le train, se rendre à la
-gare avec un moyen de transport et un timing adéquat. De même pour me
-rendre de la gare d'arrivée au site de résidence choisi. Actuellement,
-les moteurs ne sont pas capables de répondre à des requêtes comme
-`Organise moi un week-end à Paris` mais la question est étudiée et des
-progrès sont attendus.
+Nous avons vu dans ce cours que les formules de calcul de score pour un moteur de recherche d'information évoluent et la compréhension du calcul du score et donc de l'ordre des réponses devient de plus en plus complexe. Ces formules, à l'exception de très peu de moteurs de recherche, parfois libres, sont secrètes même si on en connaît les éléments principaux.  Retenez que **l'ordre des réponses est donné par un algorithme secret écrit par une entreprise commerciale**.
 
-## Conclusion et discussion
+Ceci pose des *questions éthiques* car les réponses proposées et leur ordre peuvent manipuler l'opinion. Elles peuvent influencer votre vision sur une question et peuvent influencer vos achats.  Il existe une forte concurrence entre les sites sur la question du référencement, c'est-à-dire sur la question d'être bien classé dans 'ordre des réponses. C'est le cas des entreprises commerciales qui veulent apparaître pour vous vendre des produits. C'est le cas de courants de pensée qui veulent imposer une opinion comme, par exemple, les courants anti-avortement qui agissent pour que les sites critiquant l'avortement apparaissent bien classés lorsque vous faîtes une requête sur l'avortement. 
+Comment peut-on être sûr que l'algorithme est loyal, que l'entreprise qui propose le moteur de recherche ne favorise pas certains produits ou certaines idées ?  C'est-à-dire comment savoir qu'elle respecte l'égalité de traitement entre les sites Web ?
 
+Retenez que **vous devez toujours avoir un regard critique sur les réponses qui vous sont proposées et leur ordre**. Ceci est vrai pour les moteurs de recherche d'information mais aussi pour beaucoup d'applications Web vous suggérant ou vous recommandant des produits, des contacts, des informations, des restaurants et autres. C'est vrai également dans tout le monde numérique où on utilise des algorithmes pour vous affecter dans un établissement scolaire ou dans une filière de l'enseignement supérieur.
+
+## Assistants personnels 
+
+La reconnaissance automatique de la parole qui consiste à transformer les signaux acoustiques en une suite de mots fonctionne aujourd'hui assez bien dans les langues les plus parlées. Il en est de même pour l'opération inverse de synthèse de la parole à partir de texte. Ces progrès assez fulgurants ont été réalisés grâce aux technique d'apprentissage machine et notamment aux réseaux profonds (Deep Learning). Les moteurs de recherche sont donc accessibles depuis des petits ordinateurs sans clavier (ou presque) tels que les assistants domestiques ou les smartphones. Mais dans ce cas la réponse se limite souvent à une liste très courte, voire même une seule réponse. L'impact du calcul du score, la question de la loyauté sont alors encore plus forts et peut devenir très conditionnant. 
+
+
+## Respect de la vie privée
+
+Les moteurs de recherche comme désormais beaucoup de logiciels sur le Web disent s'adapter à vos besoins. Les langues naturelles sont ambiguës et un mot peut avoir plusieurs sens. Par exemple, le mot `java` peut désigner un langage de programmation ou une danse ou une île. Un internaute informaticien souhaiterait voir apparaître des pages parlant du langage de programmation alors qu'un autre utilisateur préférera des informations sur la danse. Ceci peut être réalisé si l'historique des recherches et des liens suivis est connu. À l'aide de cookies et plus facilement encore lorsque vous avez un compte et que vous êtes identifiés, le moteur peut mémoriser cet **historique des recherches et des navigations**, en déduire un profil et l'utiliser pour adapter son calcul de score. Un autre type d'adaptation est d'utiliser les **informations de localisation** obtenues à partir d'un gps si vous êtes géolocalisés ou à partir d'informations sur l'ordinateur sur lequel vous faites votre requête. Le score des pages portant sur des objets proches de vous peut alors être renforcé. Mais ces informations historiques et de géolocalisation disent beaucoup de choses à votre sujet, de façon directe ou indirecte. Ce sont des **données personnelles**.  Retenez donc que **l'adaptation à vos besoins implique la mémorisation de données personnelles**.
+
+Mais même si l'objet n'est pas de personnaliser les réponses d'un moteur de recherche ou d'un service web, la collecte des données personnelles a bien lieu. Car en effet, ces données ont de la valeur, elles peuvent être un outil pour être plus compétitif vis à vis de la concurrence, elles peuvent être revendues à des tiers,... Le modèle dominant est alors de collecter toutes ces données personnelles et de les  mémoriser par l'entreprise concevant le logiciel.
+
+Le nouveau règlement général sur la protection des données personnelles qui s'applique désormais en Europe (le RGPD) définit des limites et des contraintes sur cette collecte et gestion des données personnelles. C'est un excellent outil de sensibilisation. Mais ce n'est pas la réponse définitive à cette question importante du respect de la vie privée car il ménage à la fois les intérêts commerciaux et ceux des utilisateurs et laisse une grande place à l'interprétation. 
+
+
+
+## Des réponses possibles ?
 ### Les liens payants
 
-La fenêtre de réponse contient une liste ordonnée par score de
-pertinence de l'ensemble des pages Web et éventuellement un cadre
-contenant des données factuelles relatives à la requête dont nous
-avons déjà parlé dans ce cours. Vous avez également souvent une liste
-ordonnée de **liens sponsorisés**. Pour ces liens, seules apparaissent
-des entreprises qui rémunèrent l'entreprise associée au moteur de
-recherche d'information. La rémunération peut être calculée sur le
-nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc
-que **l'apparition dans une liste de liens sponsorisés est lié à une
-rémunération**.
+La fenêtre de réponse des moteurs de recherche contient une liste ordonnée par score de pertinence de l'ensemble des pages Web et éventuellement un cadre contenant des données factuelles relatives à la requête dont nous avons déjà parlé dans ce cours. Vous avez également souvent une liste ordonnée de **liens sponsorisés**. Pour ces liens, seules apparaissent des entreprises qui rémunèrent l'entreprise associée au moteur de recherche d'information. La rémunération peut être calculée sur le nombre d'utilisateurs cliquant sur les liens proposés. Retenez donc que **l'apparition dans une liste de liens sponsorisés est lié à une rémunération**.
 
-### La loyauté des moteurs
+Ces liens commerciaux sont donc une source de revenus pour le moteur de recherche. Ce n'est pas forcément un mal en soi, car le service coûte cher. Une formule doit être trouvée soit par des financements participatifs, par l'impôt ou par le commerce. Si ces liens commerciaux sont bien séparés et annoncés comme tels, ils peuvent contribuer à ne pas (ou modérer) les problèmes de loyauté et de respect de la vie privée. C'est par exemple la solution choisie par [Qwant qui affirme ne pas mémoriser les traces de navigation et ne pas créer de profil](https://about.qwant.com/fr/legal/confidentialite/à)
+de ses utilisateurs.
 
-Nous avons vu dans ce cours que les formules de calcul de score pour
-un moteur de recherche d'information sont secrètes même si on en
-connaît les éléments principaux. De plus, ces formules évoluent et
-avec les évolutions comme le langage naturel, la compréhension du
-calcul du score et donc de l'ordre des réponses devient de plus en
-plus complexe. Retenez que **l'ordre des réponses est donné par un
-algorithme secret écrit par une entreprise commerciale**.
+### Code source ouvert!
 
-Ceci pose des *questions éthiques* car les réponses proposées et leur
-ordre peuvent influencer votre vision sur une question et peuvent
-influencer vos achats. Comment peut-on être sur que l'algorithme est
-loyal, c'est-à-dire qu'il respecte l'égalité de traitement entre les
-sites Web ?  C'est une question très sensible actuellement et les lois
-évoluent pour que les algorithmes puissent expliquer leurs
-décisions. Pour les moteurs, cela signifie expliquer le calcul des
-scores pour vérifier sa loyauté. Certains militent donc pour que les
-formules de calcul de score soient publiées pour que l'utilisateur
-sache pourquoi certaines pages lui sont proposées plutôt que d'autres.
-La réponse des entreprises liées aux moteurs est souvent de dire que
-la diffusion de ces formules permettraient de tricher plus
-facilement. Mais, on peut noter que `Qwant` s'est engagé à diffuser
+C'est une question très sensible actuellement et les lois évoluent pour que les algorithmes puissent expliquer leurs décisions. Pour les moteurs, cela signifie expliquer le calcul des scores pour vérifier sa loyauté. Certains militent donc pour que les formules de calcul de score soient publiées pour que l'utilisateur sache pourquoi certaines pages lui sont proposées plutôt que d'autres. La réponse des entreprises liées aux moteurs est souvent de dire que la diffusion de ces formules permettraient de tricher plus facilement. Mais, on peut noter que `Qwant` s'est engagé à diffuser
 ses formules de calcul de score.
 
-Il faut savoir que, même avec des formules secrètes, il
-existe une forte concurrence entre les sites sur la question du
-référencement, c'est-à-dire sur la question d'être bien classé dans
-l'ordre des réponses. C'est le cas des entreprises commerciales qui
-veulent apparaître pour vous vendre des produits. C'est le cas de
-courants de pensée qui veulent imposer une opinion comme, par exemple,
-les courants anti-avortement qui agissent pour que les sites
-critiquant l'avortement apparaissent bien classés lorsque vous faîtes
-une requête sur l'avortement. Retenez que **vous devez toujours avoir
-un regard critique sur les réponses qui vous sont proposées et leur
-ordre**. Ceci est vrai pour les moteurs de recherche d'information
-mais aussi pour beaucoup d'applications Web vous suggérant ou vous
-recommandant des produits, des contacts, des informations, des
-restaurants et autres. C'est vrai également dans tout le monde
-numérique où on utilise des algorithmes pour vous affecter dans un
-établissement scolaire ou dans une filière de l'enseignement
-supérieur.
 
-### L'adaptation à l'utilisateur
+### Éducation 
 
-Enfin, beaucoup de logiciels sur le Web disent s'adapter à vos
-besoins. Ils s'adaptent en réalité à votre profil qui est construit à
-partir de toutes les données qui ont pu être récupérées par le
-logiciel à votre inscription mais aussi auprès d'entreprises
-partenaires mais surtout de toutes vos données historiques
-correspondant à toutes vos actions. Ces données sont donc mémorisées
-par l'entreprise concevant le logiciel et peuvent même être revendues
-à d'autres éditeurs de logiciel. De même, l'adaptation à votre
-localisation nécessite que vos données de géolocalisation soient
-utilisées et donc soient mémorisées. Retenez donc que **l'adaptation à
-votre profil et à votre localisation implique la mémorisation de
-données personnelles historiques**.
+Mais nous sommes convaincus qu'une réponse pérenne passe par l'éducation des citoyens, qu'ils soient responsables politiques, juristes, journalistes ou simplement usagers. Pour que ces questions soient abordées dans les lois, dans les médias et dans les esprits. 
+
+
 
 ```compréhension
 
