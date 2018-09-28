@@ -1,5 +1,5 @@
 LANGUAGE: fr
-CSS: http://culturenumerique.univ-lille3.fr/css/base.css" />
+CSS: http://culturenumerique.univ-lille.fr/css/base.css" />
 TITLE: Le Web
 MENUTITLE: Le Web
 AUTHOR: Culture Numérique
@@ -180,12 +180,12 @@ Son rôle est de distribuer les ressources dont il dispose, c'est-à-dire qui so
 Commençons par un exemple très simple pour comprendre le mécanisme de base. Si à l'aide d'un client web tel que Firefox, je saisis l'adresse :
 
 ```
- http://culturenumerique.univ-lille3.fr/PageExemple
+ http://culturenumerique.univ-lille.fr/PageExemple
 ```
 
 Que se passe -t-il ?
 
-Mon client interprète ma saisie comme l'interrogation par le protocole `http` du serveur situé sur la machine `culturenumerique.univ-lille3.fr` pour lui demander la ressource `/PageExemple`
+Mon client interprète ma saisie comme l'interrogation par le protocole `http` du serveur situé sur la machine `culturenumerique.univ-lille.fr` pour lui demander la ressource `/PageExemple`
 
 Comme nous l'avons vu précédemment, l'adresse `IP` de ma machine sera nécessaire pour communiquer avec le serveur. Mais mon navigateur va également réunir un certain nombre d'autres informations disponibles sur ma machine (informations que nous verrons plus loin) et les joindre à la requête envoyée au serveur qui héberge la ressource.
 Le serveur reçoit cette requête, la comprend car elle est formulée selon les règles définies dans ce fameux protocole `http`, norme utilisée pour que les clients web et les serveurs web puissent communiquer.
@@ -195,8 +195,8 @@ Une part du succès du web repose sur le fait que `http` est utilisé par TOUS l
 
 Le serveur fait alors une copie de la ressource demandée et la renvoie au client, celui-ci n'a plus qu'à afficher le contenu de la ressource dans la fenêtre du navigateur.
 
-Notons qu'une adresse du type : `http://culturenumerique.univ-lille3.fr/PageExemple`
-s'appelle une URL pour Uniform Resource Locator, c'est-à-dire en français l'adresse d'une ressource. Le mot uniform suggère une convention d'écriture de ces adresses et une uniformisation de l'écriture de ces adresses. Il est important de noter que cette URL contient à la fois le nom du serveur (la machine `culturenumerique.univ-lille3.fr` dans notre exemple) qui héberge la ressource ET le nom de la ressource sur ce serveur (ici `/PageExemple`).
+Notons qu'une adresse du type : `http://culturenumerique.univ-lille.fr/PageExemple`
+s'appelle une URL pour Uniform Resource Locator, c'est-à-dire en français l'adresse d'une ressource. Le mot uniform suggère une convention d'écriture de ces adresses et une uniformisation de l'écriture de ces adresses. Il est important de noter que cette URL contient à la fois le nom du serveur (la machine `culturenumerique.univ-lille.fr` dans notre exemple) qui héberge la ressource ET le nom de la ressource sur ce serveur (ici `/PageExemple`).
 
 ### Récapitulatif
 
@@ -313,7 +313,7 @@ Mais une bonne utilisation du traitement de texte passe également par la maîtr
 ```compréhension
 // Question vide de type description (sans {}) pour présenter le support des questions suivantes
 ::Exercice::[html]
-<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/html/">http://culturenumerique.univ-lille3.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant. Il n'y a rien à répondre ici, ... </p{}
+<p>Rendez-vous sur la page <a target="_blank" href="http://culturenumerique.univ-lille.fr/activitesWeb/html/">http://culturenumerique.univ-lille.fr/activitesWeb/html/</a> <br />Lisez, observez, gardez les pages ouvertes dans des onglets, puis répondez aux questions du quizz suivant. Il n'y a rien à répondre ici, ... </p{}
 
 // question: 276  name: Les balises HTML
 ::Les balises HTML::[html]<p>Quel est le rôle des balises en HTML ?</p>{
@@ -390,7 +390,7 @@ En HTML, les images sont représentées dans un format qui leur est propre. Elle
 ```activité-avancée
 ::Activité sur les serveurs::[markdown]
 Rendez-vous sur la page :
-[pageServeurs.html](http://culturenumerique.univ-lille3.fr/activitesWeb/html/pageServeurs.html)
+[pageServeurs.html](http://culturenumerique.univ-lille.fr/activitesWeb/html/pageServeurs.html)
 \n
 Lisez, observez et répondez aux questions posées...
 {}
@@ -481,8 +481,8 @@ Si bien que par exemple, le parlement a dû légiférer il y a plus de 30 ans po
 ```activité-avancée
 
 [html]<p>Rendez-vous sur les pages suivantes, lisez et effectuez les manipulations demandées :</p>
-<ul><li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookie.php</a></li>
-<li><a target="_blank" href="http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html">http://culturenumerique.univ-lille3.fr/activitesWeb/cookies/cookietiers.html</a></li></ul>
+<ul><li><a target="_blank" href="http://culturenumerique.univ-lille.fr/activitesWeb/cookies/cookie.php">http://culturenumerique.univ-lille.fr/activitesWeb/cookies/cookie.php</a></li>
+<li><a target="_blank" href="http://culturenumerique.univ-lille.fr/activitesWeb/cookies/cookietiers.html">http://culturenumerique.univ-lille.fr/activitesWeb/cookies/cookietiers.html</a></li></ul>
 Notez si vous le souhaitez vos remarques ci-dessous (réponse non obligatoire)
 {}
 ```
@@ -686,11 +686,11 @@ puis répondez à la question qui suit.</p>{}
  Prenons l'exemple de l'URL suivante :
 
  ```
- http://www.univ-lille3.fr/etudes/orientation-emploi/.
+ https://www.univ-lille.fr/etudes/decouvrir-loffre-de-formation/ 
 ```
 
- Rappelons que la partie `etudes/orientation-emploi` désigne une
- ressource sur le serveur web `www.univ-lille3.fr`.  Il est possible
+ Rappelons que la partie `etudes/decouvrir-loffre-de-formation/ ` désigne une
+ ressource sur le serveur web `www.univ-lille.fr`.  Il est possible
  que ce soit un document composé par une personne du service des études
  puis enregistré sur les disques durs de ce serveur web pour le mettre
  à disposition des internautes. Mais à vrai dire, c'est un processus de
@@ -826,15 +826,12 @@ puis répondez à la question qui suit.</p>{}
 ::Combien de sites Web ?::[html]<p>Quelle est l'estimation actuelle du nombre de sites Web dans le monde ?</p><p>Faites quelques recherches pour trouver un ordre de grandeur.</p>{}
 
 
-// question: 300  name: Recherche avancée 1
-::Recherche avancée 1::[markdown]Faites une recherche Google avec les deux mots `université Lille`. Notez le nombre de pages trouvées.
+// question: 300  name: Recherche avancée
+::Recherche avancée::[markdown]Faites une recherche Google avec les deux mots `université Lille`. Notez le nombre de pages trouvées.
 \n
 Faites maintenant une recherche avec `"université Lille"` (en incluant les guillemets). Avez vous autant de résultats ? Décrivez-les.
 {}
 
-
-// question: 301  name: Recherche avancée 2
-::Recherche avancée 2::[markdown]Faites une recherche avec `"université lille" -3 -2 -1`. Que se passe-t-il ?{}
 
 ```
 
@@ -860,7 +857,7 @@ Faites maintenant une recherche avec `"université Lille"` (en incluant les guil
 
 
 // question: 305  name: Conséquences d'une recherche
-::Conséquences d'une recherche::[html]<p>Comparez ces deux usages\:</p><p>1. Dans la barre de recherche (ou barre d'URL) je saisis \:<br></br><em>université de lille 3</em><br></br>et ensuite dans la page de résultats affichée je clique sur le lien vers l'université (lien vers http\://www.univ-lille3.fr)</p><p>2. Dans la barre d'URL (attention de ne pas confondre avec la barre de recherche !), je saisis \:<br></br><em>http\://www.univ-lille3.fr</em>.</p><p><strong>Questions</strong>\: Quelles sont les incidences de ces actions dans chacun des cas. Existe-t-il une différence en terme de consommation énergétique, ou de préservation de la vie privée ?</p>{}
+::Conséquences d'une recherche::[html]<p>Comparez ces deux usages\:</p><p>1. Dans la barre de recherche (ou barre d'URL) je saisis \:<br></br><em>université de lille</em><br></br>et ensuite dans la page de résultats affichée je clique sur le lien vers l'université (lien vers http\://www.univ-lille.fr)</p><p>2. Dans la barre d'URL (attention de ne pas confondre avec la barre de recherche !), je saisis \:<br></br><em>http\://www.univ-lille.fr</em>.</p><p><strong>Questions</strong>\: Quelles sont les incidences de ces actions dans chacun des cas. Existe-t-il une différence en terme de consommation énergétique, ou de préservation de la vie privée ?</p>{}
 
 
 ::Des moteurs de recherche moins intrusifs...::Attention, vous n'avez droit qu'à une seule tentative. Répondez d'abord dans un document séparé, puis collez les réponses dans la zone prévue une fois votre travail terminé.
