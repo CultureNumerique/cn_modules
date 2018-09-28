@@ -2,7 +2,7 @@ LANGUAGE:   fr
 TITLE:   Représentation numérique de l'information : les documents
 MENUTITLE: Les documents
 AUTHOR:     Culture numérique
-CSS: http://culturenumerique.univ-lille3.fr/css/base.css
+CSS: http://culturenumerique.univ-lille.fr/css/base.css
 
 # Représenter c'est choisir...
 
@@ -335,7 +335,7 @@ C'est le cas des notices bibliographiques des bibliothèques dont la plus grande
 [markdown]
 La structure arborescente est encore plus présente dans les documents au format `HTML`. Les balises sont imbriquées les unes dans les autres et l'ensemble peut être représenté par un arbre. Pour observer cela :
 \n
-- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille3.fr/activitesWeb/html).
+- Lancer `Firefox`, rendez-vous sur la [page exemple](http://culturenumerique.univ-lille.fr/activitesWeb/html).
 - Pressez les touches `CTRL-MAJ-C` (`alt-cmd-C` sur les Mac). La fenêtre de l'inspecteur de code `HTML` s'ouvre.
 - Dans cette fenêtre, observez la structure du document `HTML`. Cliquez sur les petites flèches pour découvrir ou cacher les parties de code `HTML` incluses les unes dans les autres.
 - Sur quelles petites flèches devez-vous cliquer pour arriver au texte *Vous pouvez changer la taille...* ?
