@@ -322,7 +322,7 @@ Faites une capture d'écran de la fenêtre où vous avez trouvé ces métadonné
 
 ::Un document peut être réduit à des métadonnées::
 [markdown]
-C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des métadonnées regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille 3](http://hip.scd.univ-lille3.fr/ipac20/ipac.jsp?profile=).
+C'est le cas des notices bibliographiques des bibliothèques dont la plus grande partie des fonds n'est pas numérisée. Par conséquent, le contenu des livres n'est pas représenté numériquement et chaque ouvrage est défini par des métadonnées regroupées dans une notice. Nous prenons en exemple le [Catalogue des bibliothèques du SCD de Lille ](http://hip.scd.univ-lille.fr/ipac20/ipac.jsp?profile=).
 \n
 - Faites une requête comme, par exemple, `représentation information`
 - Parcourez une ou plusieurs notices des ouvrages en réponse
