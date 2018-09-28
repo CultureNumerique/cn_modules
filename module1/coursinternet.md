@@ -1100,14 +1100,13 @@ du mode de connexion utilisé peut faire des miracles. Soyez agiles !!!
 
 ::eduroam::
 [markdown]**Eduroam**
-Pour utiliser le wifi à Lille 3 je dois :
+Pour utiliser le wifi à l'université, ( de l'aide ici : [https://intranet.univ-lille.fr/accueil/vie-pratique/numerique/] (https://intranet.univ-lille.fr/accueil/vie-pratique/numerique/)  )je dois :
 {
-=Avoir un compte Lille 3 ou un compte dans une autre université.#Exact !
+=Avoir un compte ULille ou un compte dans une autre université.#Exact !
 ~Payer un abonnement.#Absolument pas, c'est gratuit.
 ~Aller en cours.#Aucun rapport !
 ~Utiliser un smartphone produit en France.#Aucun rapport !
-~Signer la charte graphique de Lille 3.#Non mais signer la charte informatique Lille 3 est obligatoire...
-####Avoir un compte Lille 3 valide ou un compte dans une autre université. }
+~Aller en cours.#c'est mieux, mais pas nécessaire pour utiliser le wifi ;-) ! }
 ```
 
 ```activité
