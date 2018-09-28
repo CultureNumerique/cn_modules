@@ -867,19 +867,6 @@ tout...
 ####Parce que toutes les informations transitent par elle. }
 
 
-::La charte informatique de l'université::
-[markdown]**La charte informatique de l'université**
-Pour utiliser les *services numériques* de l'université, vous avez signé une **charte informatique** lors de votre inscription :
-Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du suivi des informations des utilisateurs.
-Si vous vous connectez avec la **4G** depuis l'université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
-{#### 1/ Quel paragraphe de la charte [http://www.univ-lille3.fr/portail/charte-informatique/](http://www.univ-lille3.fr/portail/charte-informatique/) met en lumière la question du filtrage et du suivi ?
-*Les engagements de l'Université*
-`Réglementairement, l'Université recueille et conserve les informations sur les accès à ses services numériques. L'Université peut être obligée de fournir ces informations lors d'une enquête judiciaire.`
-2/ Si vous vous connectez avec la **4G** depuis l'université, devez-vous respecter cette charte ? Et avec votre smartphone et une connexion wifi ?  
-OUI et OUI, les services numériques en particulier ceux accessibles depuis **l'ENT** sont soumis à cette charte **quel que soit le mode de connexion**. En revanche, si vous vous connectez en 4G à d'autres sites que ceux de l'université tout en étant physiquement dans les batiments de l'établissement, aucune information ne sera collectée par l'université.
-}
-
-
 ```
 
 ```activité
