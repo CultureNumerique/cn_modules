@@ -2,7 +2,7 @@ LANGUAGE:   fr
 TITLE:   Savoir-faire autour du traitement de texte et du tableur
 MENUTITLE: Traitement de texte et tableur
 AUTHOR:     Culture numérique
-CSS: http://culturenumerique.univ-lille3.fr/css/base.css
+CSS: http://culturenumerique.univ-lille.fr/css/base.css
 <!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
 - [Introduction](#introduction)   
@@ -327,7 +327,7 @@ Reproduire avec LibreOffice l'exemple décrit dans ces 2 vidéos: [La saisie](ht
 \n
 Une partie du texte est disponible en suivant ce [lien](./media/MonPremierPas-Master.txt).
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Nextcloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
 
@@ -403,7 +403,7 @@ sections entières ou de réorganiser le plan.
 
 ::Copier-coller::
 [markdown]
-Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page [https://www.univ-lille3.fr/portail/charte-informatique/](https://www.univ-lille3.fr/portail/charte-informatique/). Copiez le texte de la page et collez-le dans Libreoffice.
+Récupérer un texte d'une source par un copier/coller est une opération que chacun réalise régulièrement. Cette opération récupère en général de nombreuses mises en forme et styles. Par exemple, rendez-vous sur la page [https://www.univ-lille.fr/vie-des-campus/centre-de-sante-des-etudiants/](https://www.univ-lille.fr/vie-des-campus/centre-de-sante-des-etudiants/). Copiez le texte de la page et collez-le dans Libreoffice.
 {
 ~%33%Vous avez importé le contenu
 ~%33%Vous avez importé la structure
@@ -474,7 +474,7 @@ N'hésitez pas à échanger sur le forum du cours si vous rencontrez des difficu
 À la fin, pour vérifier que vous avez correctement utilisé les styles et non la mise en forme directe, sélectionner l'ensemble de votre texte (ctrl-A), aller dans le menu `format` et sélectionner `effacer le formatage direct`. Votre mise en forme ne doit pas bouger.
 \n
 
-  Enregistrer votre travail dans un fichier que vous déposerez sur votre compte owncloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+  Enregistrer votre travail dans un fichier que vous déposerez sur votre compte Nextcloud. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 ```
 
 
@@ -570,7 +570,7 @@ Dans ce document, nous avons utilisé :
 \n
 La police de caractère est sans doute différente sur votre machine. Ici ce sont les polices Latin Modern Roman et Latin Modern Sans pour les versions avec et sans serif. **Vous pouvez prendre celles de votre choix**. Bien-sûr tous les principes expliqués dans ce cours ont été appliqués.
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Nextcloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité. {}
 
 ```
 
@@ -675,13 +675,13 @@ Voici quelques activités que nous vous proposons pour découvrir d'autres fonct
 \n
 Ajouter des images ([image1 "image styles"](./media/styles.png), [image2 "image style général"](./media/styleGeneral.png)) dans un cadre avec une légende pour construire les illustrations du cours.
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Nextcloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Utiliser un modèle::
 [markdown]
 Reprendre le document de la charte graphique et appliquer le modèle donné [ici](./media/ModeleCN.ott).
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Nextcloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ```
 
@@ -691,7 +691,7 @@ Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *
 [markdown]
 Créer un document maître avec ce [modèle](./media/ModeleCN.ott). Inclure les différents chapitres de la charte comme autant de documents inclus dans le document maître. Le texte contenu dans le document MonPremierPas sur lequel vous avez déjà travaillé explique les principes, vous pouvez aussi lire [l'aide de LibreOffice](https://help.libreoffice.org/Writer/Working_with_Master_Documents_and_Subdocuments/fr) pour apprendre à maitriser de nouvelles notions en autodidacte.  Aidez-vous des forums et des ressources sur internet pour réaliser cet exercice.
 \n
-Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Owncloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
+Enregistrer votre travail dans un fichier que vous déposerez sur votre compte *Nextcloud*. Récupérez le lien de ce fichier et collez-le dans la zone de texte de cette activité.{}
 
 ::Commentaires::
 [markdown]
