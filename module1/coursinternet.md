@@ -2,7 +2,7 @@ TITLE: Internet: technologies, usages, société
 MENUTITLE: Internet
 AUTHOR: Culture Numérique Squad
 LANGUAGE: fr
-CSS: http://culturenumerique.univ-lille3.fr/css/base.css
+CSS: http://culturenumerique.univ-lille.fr/css/base.css
 
 # Informatique et numérique
 
@@ -114,8 +114,8 @@ Voici quelques exemples que nous vous proposons, n'hésitez pas à proposer d'au
 	* [Le Fresnoy](http://www.lefresnoy.net/fr/Le-Fresnoy/presentation)
 * Dans l'**enseignement** : (outils numérique d'accompagnement scolaire, MOOC,...):
 	* [FUN](https://www.france-universite-numerique-mooc.fr/cours/)
-* En fouille archéologique :  une réalisation prestigieuse réalisée à Lille3 :
-	* [vase qui parle](http://bsa.biblio.univ-lille3.fr/blog/2013/09/exposition-le-vase-qui-parle-au-palais-des-beaux-arts-de-lille/)
+* En fouille archéologique :  une réalisation prestigieuse réalisée à Lille :
+	* [vase qui parle](http://bsa.biblio.univ-lille.fr/blog/2013/09/exposition-le-vase-qui-parle-au-palais-des-beaux-arts-de-lille/)
 }
 ```
 
@@ -630,20 +630,20 @@ effet, ce sont des femmes et des hommes qui utilisent ces
 machines. Pour désigner un destinataire, personne ne manipule
 directement des adresses `IP` qui sont des numéros bien plus longs que
 les numéros de téléphone. Dans notre interface avec le monde
-d'internet nous connaissons plutôt des noms comme `www.univ-lille3.fr`
+d'internet nous connaissons plutôt des noms comme `www.univ-lille.fr`
 ou encore `www.service-public.fr`. Le lien entre adresses `IP` et noms
 se fait par le biais des *serveurs de noms* qui, à la manière d'une
 liste de contacts dans notre téléphone, stockent un ensemble de noms et
 d'adresses `IP`.
 
 Très concrètement, regardons par exemple ce qui se passe lorsque je
-veux consulter la page d'accueil de Lille 3.  Tout d'abord, je clique
+veux consulter la page d'accueil de l'université de Lille.  Tout d'abord, je clique
 sur un lien vers le site de l'université. Ce lien contient le nom de
 la machine capable de me fournir la page d'accueil :
-`www.univ-lille3.fr`. Mon ordinateur va donc contacter un serveur de
+`www.univ-lille.fr`. Mon ordinateur va donc contacter un serveur de
 noms pour connaître l'adresse `IP` de cette machine. Une fois que
 cette adresse `IP` est connue, il peut communiquer avec
-`www.univ-lille3.fr` et envoyer à cette machine un message qui demande
+`www.univ-lille.fr` et envoyer à cette machine un message qui demande
 le contenu de cette page d'accueil. Le message contient bien entendu
 l'adresse `IP` de mon ordinateur, ainsi la machine peut me répondre en
 renvoyant le contenu qui m'intéresse. Il ne reste plus alors à mon
@@ -887,9 +887,9 @@ D'après ce site, où se trouvent les machines suivantes :
   - [www.facebook.com](www.facebook.com)
   - [www.google.com](www.google.com)
   \n
-Quelle est l'adresse IP de la machine qui porte le nom [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr) ?
+Quelle est l'adresse IP de la machine qui porte le nom [www.univ-lille.fr](www.univ-lille.fr) ?
 \n
-**Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.grappa.univ-lille3.fr dans la barre d'adresse.
+**Copiez** l'adresse IP que vous venez de  trouver dans la **barre d'adresse de votre navigateur.** Dans un autre onglet, **copiez** le **nom** : www.univ-lille.fr dans la barre d'adresse.
 \n
 - Que constatez vous ?
 \n
@@ -922,12 +922,12 @@ Toutes les **lois** concernant la sécurisation de nos données et les respect d
 \n
 et oui, ce site est une version traduite en français d'un site Allemand.
 \n
-### www.grappa.univ-lille3.fr
+### www.univ-lille.fr
 \n
-l'adresse **IP** de l'équipe de recherche Grappa est : `194.254.132.190`
-Si vous copiez cette adresse dans dans la barre d'adresse de votre navigateur, vous tombez exactement sur la **même page** que si vous allez sur [www.grappa.univ-lille3.fr](www.grappa.univ-lille3.fr).
+l'adresse **IP** de l'université est : `194.254.129.22`
+Si vous copiez cette adresse dans dans la barre d'adresse de votre navigateur, vous tombez exactement sur la **même page** que si vous allez sur [www.univ-lille.fr](www.univ-lille.fr).
 Cela ne doit pas vous surprendre si vous avez compris l'objet de cette séquence.}
-```
+``
 
 
 
@@ -1298,10 +1298,10 @@ Pour les noms de l'internet l'organisation politique est très
 similaire, hiérarchique également avec au sommet encore une fois
 l'ICANN. On retrouve cette hiérarchie dans la façon avec laquelle sont
 construit les noms. Par exemple la machine appelée
-`www.univ-lille3.fr` désigne une machine appelée `www` dans un domaine
-de nommage plus grand, `univ-lille3.fr`, qui comprend également
-`live3.univ-lille3.fr` ou `formations.univ-lille3.fr` ... Le domaine
-`univ-lille3.fr` est lui même dans un domaine plus grand encore le
+`www.univ-lille.fr` désigne une machine appelée `www` dans un domaine
+de nommage plus grand, `univ-lille.fr`, qui comprend également
+`dsi.univ-lille3.fr` ou `clil.univ-lille.fr` ... Le domaine
+`univ-lille.fr` est lui même dans un domaine plus grand encore le
 `.fr`.
 
 L'université gère les noms dans son domaine alors que l'AFNIC gère
