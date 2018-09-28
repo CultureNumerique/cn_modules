@@ -4,9 +4,10 @@ MENUTITLE: Recherche d'information Web
 AUTHOR: Culture numérique
 CSS: http://culturenumerique.univ-lille3.fr/css/base.css
 
-<!-- pandoc -t latex -V geometry:margin=3cm --toc ri.md -o ri.pdf -->
+<!-- pandoc -t latex -V geometry:margin=3cm --from=markdown+pipe_tables -toc ri.md -o ri.pdf -->
 
-<!-- pandoc -F ext.py -t latex -V geometry:margin=3cm --toc ri.md -o ri.pdf -->
+<!-- pandoc -F ../ext.py -t latex -V geometry:margin=3cm --toc --from=markdown+pipe_tables ri.md  -o ri.pdf -->
+
 
 # Recherche d'information : contexte et application au Web
 
@@ -138,11 +139,11 @@ L'étape suivante pour la réalisation de l'index est maintenant d'associer à c
 
 La création d'un index est un processus assez long mais qui ne se fait qu'une seule fois quand l'ensemble des documents ne change pas. En revanche la recherche dans l'index doit être très rapide pour être opérationnelle. Mais l'index peut avoir une taille de plusieurs centaines de milliers de tokens. L'index est donc lui même organisé de façon à ce qu'une recherche soit rapide. Parmi les techniques utilisées, on peut décrire la plus simple. Il s'agit de s'assurer que l'index soit organisé par ordre alphabétique des tokens. Dans ce cas un algorithme de  *recherche dichotomique* peut être utilisé. Illustrons la recherche dichotomique en cherchant par exemple le mot `rose` : 
 
-- on regarde le mot au milieu du dictionnaire, c'est `maman` qui se trouve avant `rose` dans l'ordre alphabétique. Donc on poursuit la cherche dans la seconde moitié ;
+- on regarde le mot au milieu du vocabulaire, c'est `maman` qui se trouve avant `rose` dans l'ordre alphabétique. Donc on poursuit la cherche dans la seconde moitié ;
 - on regarde le mot au milieu de la seconde moitié, c'est `savant`. On poursuit donc la cherche entre `maman` et `savant` ; 
 - et ainsi de suite jusqu'à trouver le mot `rose`. 
 
-On peut montrer qu'un tel algorithme est très efficace. Pour un dictionnaire de 500 000 mots, il suffit d'effectuer 19 accès. Pour un dictionnaire de 1 million de mots, il suffit d'effectuer 20 accès. Notons que si la taille du dictionnaire double, on ne doit faire qu'un seul accès supplémentaire ! Ce qui explique la rapidité de ce mode de recherche. Terminons en signalant que des méthodes dites de hachage permettent d'effectuer des recherches plus rapides encore. 
+On peut montrer qu'un tel algorithme est très efficace. Pour un vocabulaire de 500 000 mots, il suffit d'effectuer 19 accès. Pour un vocabulaire de 1 million de mots, il suffit d'effectuer 20 accès. Notons que si la taille du vocabulaire double, on ne doit faire qu'un seul accès supplémentaire ! Ce qui explique la rapidité de ce mode de recherche. Terminons en signalant que des méthodes dites de hachage permettent d'effectuer des recherches plus rapides encore. 
 
 Nous avons présenté la phase d'indexation qui fournit comme résultat un index défini de la manière suivante :
 
@@ -180,10 +181,36 @@ Les systèmes étudiés jusqu'à présent renvoient la liste complète des docum
 
 On suppose toujours qu'un grand ensemble de documents est à la disposition du moteur de recherche. Rappelons rapidement que dans le cas du web, ce sont les robots (ou crawlers en anglais) qui se chargent de collecter le plus grand nombre possible de documents disponibles sur internet. Ce grand corpus de documents est ensuite indexé selon des techniques similaires à celles expliquées précédemment. 
 
-Pour calculer un score, la représentation numérique des documents est adaptée et plusieurs représentations ont été utilisées. Trouver une bonne représentation, adéquate pour la recherche d'information est toujours un sujet de recherche. Nous en présentons trois. 
-
-Dans la plus simple, un document sera représenté par une suite de 0 et de 1 correspondant à la présence ou l'absence dans ce document de  chaque token du vocabulaire considéré dans la phase d'indexation. On appelle un **vecteur** une telle suite de valeurs qu'on prend l'habitude de représenter comme un tableau d'une seule colonne. Chaque valeur 0 ou 1 se trouve dans une cellule de ce tableau qu'on appelle **composante** du vecteur et qui est ici associée à un token du vocabulaire. 
+Pour calculer un score, la représentation numérique des documents est adaptée et plusieurs représentations ont été utilisées. Trouver une bonne représentation, adéquate pour la recherche d'information est toujours un sujet de recherche.  Commençons par la plus simple. Un document sera représenté par une suite de 0 et de 1 correspondant à la présence ou l'absence dans ce document de  chaque token du vocabulaire considéré dans la phase d'indexation. On appelle un **vecteur** une telle suite de valeurs qu'on prend l'habitude de représenter comme un tableau d'une seule colonne. Chaque valeur 0 ou 1 se trouve dans une cellule de ce tableau qu'on appelle **composante** du vecteur et qui est ici associée à un token du vocabulaire. 
 Prenons l'exemple d'un vocabulaire contenant les mots de langue française et du document textuel `citoyennes tricoteuses - les femmes du peuple à paris pendant la révolution française`. Ce document sera représenté par un vecteur avec une composante par mot du vocabulaire et toutes les composantes valent 0 sauf les composantes pour les mots `à`, `citoyennes`, ..., `tricoteuses` qui valent 1.  Cette représentation qui ne représente un document que par la présence ou l'absence de certains tokens est appelée **Boolean frequency**. 
+
+
+### Score de pertinence entre un document et une requête
+
+Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Plusieurs formules de calcul ont été proposées. Elles traduisent la similarité entre la représentation du document et celle de la requête par des tableaux de nombre, c'est-à-dire représentés sous forme de vecteurs. Intuitivement, le score exprime à quel point les deux vecteurs, document et requête, sont proches. Le score de similarité le plus utilisé est obtenu  en multipliant les composantes des vecteurs deux à deux (correspondant à un même mot) et en sommant les résultats. Notez que comme le 0 représente l'absence d'un mot dans ces représentations à base de vecteurs, seuls les mots à la fois présents dans la requête et dans le document contribuent au score.
+
+Illustrons par un exemple ce calcul de score de pertinence. Considérons les trois documents A, B, C et la requête `la révolution française`. 
+
+- document A: `l'économie française dans la compétition internationale
+au XXe siècle` 
+- document B: `citoyennes tricoteuses - les femmes du peuple à paris
+pendant la révolution française` 
+- document C: `réflexions sur la révolution de france suivi d'un choix
+de textes de burke sur la révolution` 
+
+
+Chaque document est représenté par le vecteur où les composantes correspondant aux mots du vocabulaire présents dans le document valent 1 et 0 pour tous les autres mots du vocabulaire. 
+
+| **Vocabulaire** | ... | burke | ... | femme    | ... | française | ... | révolution | ... | XXe | ... |
+|-----------------|-----|-------|-----|----------|-----|-----------|-----|------------|-----|-----|-----|
+| **A**           | ... | 0     | ... | 0        | ... | 1         | ... | 0          | ... | 1   | ... |
+| **B**           | ... | 0     | ... | 1        | ... | 1         | ... | 1          | ... | 0   | ... |
+| **C**           | ... | 1     | ... | 0        | ... | 0         | ... | 1          | ... | 0   | ... |
+| **requête**     | ... | 0     | ... | 0        | ... | 1         | ... | 1          | ... | 0   | ... |
+
+La somme des produits deux à deux des composantes de chaque document avec la requête donnera 1 pour le document A, 2 pour le document B et 1 pour le document C. Le plus haut score de pertinence est donc obtenu par le document B. 
+
+### Variations sur la représentation des documents 
 
 Plutôt que de mémoriser simplement la présence ou l'absence, une extension est de compter combien de fois chaque token apparaît. On obtient une seconde représentation, appelée **Term frequency**, pour
 laquelle un document est représenté par un vecteur où chaque composante est le nombre de fois où un token apparaît dans le document. Par exemple, considérons le document `réflexions sur la révolution de france suivi d'un choix de textes de burke sur la révolution`.  Il sera représenté par un vecteur dont toutes les composantes valent 0 sauf les composantes pour les mots `réflexions`, `france`, ... qui valent 1 et les composantes pour les mots `de`, `la`, `révolution` et `sur` qui valent 2 car ils apparaissent deux fois.
@@ -197,10 +224,6 @@ pertinents*. En fait *plus pertinent* signifie ici *plus discriminants* dans le 
 Par conséquent, la multiplication par l'idf va augmenter la valeur pour les mots rares de la collection et la diminuer pour les mots fréquents. Par exemple, considérons le très petit document `la révolution française`. Sa représentation tf avec les fréquences aurait 1 pour le mot `la`, 1 pour le mot `révolution` et 1 pour le mot `française` et 0 pour tous les autres mots du vocabulaire. Sa représentation tf-idf aurait une valeur très petite pour le mot `la` (car la est très fréquent) disons 0,01, moyenne pour le mot `française` disons 0,14 et plus grande pour le mot `révolution` disons 0,25 (révolution est le moins fréquent des 3 mots). La représentation tf-idf permet donc de renforcer la valeur pour les mots qui apparaissent dans peu de documents ce qui va aider à trouver les documents les plus pertinents.
 
 
-### Score de pertinence entre un document et une requête
-
-Comment obtenir un score de pertinence d'un document vis à vis d'une requête ? Plusieurs formules de calcul ont été proposées. Elles traduisent la similarité entre la représentation du document et celle de la requête par des tableaux de nombre, c'est-à-dire représentés sous forme de vecteurs. Intuitivement, le score exprime à quel point les deux vecteurs, document et requête, sont proches. Le score de similarité le plus utilisé est obtenu  en multipliant les composantes des vecteurs deux à deux (correspondant à un même mot) et en sommant les résultats. Notez que comme le 0 représente l'absence d'un mot dans ces représentations à base de vecteurs, seuls les mots à la fois présents dans la requête et dans le document contribuent au score.
-
 Un bon choix pour la représentation sous forme de vecteurs des requêtes et documents est donc essentiel. Intuitivement, un document est pertinent si il contient les mots de la requête et si ces mots apparaissent souvent dans le document. De plus, le score doit être renforcé pour les mots rares et diminué pour les mots fréquents. Pour cela, on représente, en général, un *document avec la représentation term-frequency et la requête avec la représentation tf-idf*. 
 
 Illustrons par des exemples ce calcul de score de pertinence :
@@ -208,7 +231,7 @@ Illustrons par des exemples ce calcul de score de pertinence :
 - la requête `la révolution française` avec la représentation tf-idf
 est représenté par le vecteur (0,01 ; 0,25 ; 0,14) où les composantes
 correspondent dans l'ordre aux mots `la`, `révolution` et `française`
-et 0 pour tous les autres mots du dictionnaire.
+et 0 pour tous les autres mots du vocabulaire.
 - le document `l'économie française dans la compétition internationale
 au XXe siècle` avec la représentation tf est représenté par le vecteur
 (1 ; 0 ; 1) où les composantes correspondent dans l'ordre aux mots
@@ -317,7 +340,7 @@ En résumé, le moteur de recherche du web doit indexer les documents du web, ca
 L'**indexation du Web** est réalisé par des **programmes appelés robots** qui parcourent les sites Web et suivent les liens. Ces robots fonctionnent comme un navigateur automatique. Reportez-vous au cours sur le Web. À partir d'une URL, ils téléchargent un premier document HTML, extraient automatiquement toutes les URLs  qui s'y trouvent et recommencent ce même processus indéfiniment. De cette façon, ils  récupèrent le contenu des pages et la structure décrite par tous les liens. Le tout (donc une copie partielle du web) est stocké dans d'immenses serveurs. La constitution d'un index s'opère dans le même temps, et au bilan :
 
 - **Les documents du Web sont indexés** quel que soit leur format : pages Web au format `html`, documents imprimables au format `pdf`, documents au format `doc`, ... ce qui mène à un nombre de documents de l'ordre de 60 000 milliards en 2016. Mais notez que pour être indexés, il faut que leur contenu soit lisible, d'où l'importance de privilégier les formats libres et ouverts!
-- **Tous les mots qui apparaissent sur le Web sont indexés** quels que soient leur fréquence, la langue, ..., ce qui amène à un dictionnaire contenant plusieurs millions de mots.
+- **Tous les mots qui apparaissent sur le Web sont indexés** quels que soient leur fréquence, la langue, ..., ce qui amène à un vocabulaire contenant plusieurs millions de mots.
 - Ceci permet de construire un **index de très grande taille** qui est **mis à jour continûment** avec les informations récupérées par les robots
 - L'index est réparti sur des fermes de calcul et de stockage (un grand nombre d'ordinateurs de grande capacité en réseau) réparties dans le monde entier. On peut noter que cela implique une très grande consommation d'énergie et donc le Web n'est pas si écologique qu'on pourrait le croire.
 
@@ -347,7 +370,7 @@ Puisque Le Web a une structure de réseau ou de graphe avec des pages Web qui po
 - il peut choisir une page au hasard sur le Web
 - lorsqu'il est sur une page Web, il peut choisir au hasard un des liens présents sur la page et le suivre
 
-Si le surfeur réalise ceci un très grand nombre de fois, toutes les pages Web seront visitées et plus souvent elles sont visitées plus elles sont importantes. Le score de notoriété d'une page correspond donc à la fréquence de visite de cette page par le surfeur aléatoire. Notez que pour qu'une page soit souvent visitée, il ne suffit pas qu'elle soit la cible de nombreux liens, mais que ces liens proviennent eux mêmes de pages fréquemment visitées. Sans se résumer à cela, l'algorithme appelé **PageRank**, introduit par les fondateurs de Google au milieu des années 1990, simule ce surfeur aléatoire pour calculer le score de notoriété. Si les principes de cet algorithme étaient connus, c'était un challenge de l'appliquer à la recherche d'information avec des tailles de données (dictionnaire et nombre de documents) très grands. 
+Si le surfeur réalise ceci un très grand nombre de fois, toutes les pages Web seront visitées et plus souvent elles sont visitées plus elles sont importantes. Le score de notoriété d'une page correspond donc à la fréquence de visite de cette page par le surfeur aléatoire. Notez que pour qu'une page soit souvent visitée, il ne suffit pas qu'elle soit la cible de nombreux liens, mais que ces liens proviennent eux mêmes de pages fréquemment visitées. Sans se résumer à cela, l'algorithme appelé **PageRank**, introduit par les fondateurs de Google au milieu des années 1990, simule ce surfeur aléatoire pour calculer le score de notoriété. Si les principes de cet algorithme étaient connus, c'était un challenge de l'appliquer à la recherche d'information avec des tailles de données (vocabulaire et nombre de documents) très grands. 
 
 ## Score Web
 
