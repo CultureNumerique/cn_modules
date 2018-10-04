@@ -933,7 +933,7 @@ Les activités associées à ce module vont entre autre vous permettre de voir c
 
 ::L'intermédiation: votre analyse::[html]
 <p>Pour terminer ce cours, nous vous proposons de regarder une vidéo d'une présentation par Stéphane Grumbach qui explique les impacts du web et des données numériques d'un point de vue sociétal.</p>
-<p><a target="_blank" class="moz-txt-link-freetext" href="https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation">https://www.liglab.fr/evenements/keynote-speeches/stephane-grumbach-leconomie-lintermediation</a> (1h11mn).</p>
+<p><a target="_blank" class="moz-txt-link-freetext" href=" http://newstream.u-ga.fr/2014-05-15_Stephane-Grumbach_l-economie-de-l-intermediation_keynote-lig.mp4"> http://newstream.u-ga.fr/2014-05-15_Stephane-Grumbach_l-economie-de-l-intermediation_keynote-lig.mp4</a> (1h11mn).</p>
 <p>Citez les éléments dans ce séminaire de Stéphane Grumbach qui vous ont le plus surpris.<em>Remarque: cette question est ouverte, répondez d'abord dans un document séparé, puis collez votre réponse dans la zone prévue une fois votre travail terminé.</em></p>
 {}
 ```
